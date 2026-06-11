@@ -937,8 +937,8 @@ a:hover > .wh-link::after { transform: scaleX(1); }
 .footer .f-top {
   display: grid !important;
   grid-template-columns: 1.6fr 1fr 1fr 1fr !important;
-  gap: clamp(24px,3vw,48px) !important;
-  padding: clamp(48px,6vw,80px) 0 clamp(28px,3.5vw,48px) !important;
+  gap: clamp(16px,2.5vw,36px) !important;
+  padding: clamp(32px,4.5vw,56px) 0 clamp(20px,2.5vw,36px) !important;
   border-bottom: 1px solid rgba(244,238,227,.1) !important;
 }
 @media(max-width:860px){ .footer .f-top { grid-template-columns: 1fr 1fr !important; } }
@@ -953,10 +953,10 @@ a:hover > .wh-link::after { transform: scaleX(1); }
   letter-spacing: -.01em !important;
 }
 .footer .f-brand p { font-size: 13px !important; font-weight: 300 !important; line-height: 1.65 !important; color: rgba(244,238,227,.48) !important; max-width: 34ch !important; margin-bottom: 22px !important; }
-.footer h4 { font-family: var(--wh-sans) !important; font-size: 10px !important; font-weight: 500 !important; text-transform: uppercase !important; letter-spacing: .1em !important; color: rgba(244,238,227,.35) !important; margin-bottom: 18px !important; }
-.footer .f-col a { font-family: var(--wh-sans) !important; font-size: 13px !important; font-weight: 300 !important; color: rgba(244,238,227,.6) !important; display: block !important; margin-bottom: 10px !important; text-decoration: none !important; transition: color .2s !important; }
+.footer h4 { font-family: var(--wh-sans) !important; font-size: 10px !important; font-weight: 500 !important; text-transform: uppercase !important; letter-spacing: .1em !important; color: rgba(244,238,227,.35) !important; margin-bottom: 10px !important; }
+.footer .f-col a { font-family: var(--wh-sans) !important; font-size: 13px !important; font-weight: 300 !important; color: rgba(244,238,227,.6) !important; display: block !important; margin-bottom: 5px !important; text-decoration: none !important; transition: color .2s !important; }
 .footer .f-col a:hover { color: #F4EEE3 !important; }
-.footer .f-bot { display: flex !important; justify-content: space-between !important; flex-wrap: wrap !important; gap: 8px !important; padding: 18px 0 !important; font-size: 11px !important; font-weight: 300 !important; color: rgba(244,238,227,.25) !important; letter-spacing: .04em !important; }
+.footer .f-bot { display: flex !important; justify-content: space-between !important; flex-wrap: wrap !important; gap: 8px !important; padding: 12px 0 !important; font-size: 11px !important; font-weight: 300 !important; color: rgba(244,238,227,.25) !important; letter-spacing: .04em !important; }
 .footer .news {
   display: flex !important;
   border: 1px solid rgba(244,238,227,.18) !important;
@@ -2858,12 +2858,12 @@ body[data-page] .footer {
 }
 body[data-page] .footer .wrap {
   max-width: none !important;
-  padding: 1.5rem 1.25rem 1rem !important;
+  padding: .9rem 1.25rem .6rem !important;
 }
 body[data-page] .footer .f-top {
   display: grid !important;
   grid-template-columns: 1.25fr 1fr 1.15fr 1.2fr 1.75fr !important;
-  gap: 3rem !important;
+  gap: 2rem !important;
   align-items: start;
   padding: 0 !important;
   border-bottom: 0 !important;
@@ -2879,28 +2879,32 @@ body[data-page] .footer .display {
 }
 body[data-page] .footer h4 {
   font-family: var(--wh-serif) !important;
-  font-size: 24px !important;
+  font-size: 18px !important;
   font-weight: 500 !important;
   color: #fff !important;
-  margin: 0 0 1rem !important;
+  margin: 0 0 .55rem !important;
   text-transform: none !important;
-  letter-spacing: -.035em !important;
+  letter-spacing: -.03em !important;
 }
 body[data-page] .footer a,
 body[data-page] .footer p,
 body[data-page] .footer span {
   font-family: var(--wh-sans) !important;
-  font-size: 16px !important;
+  font-size: 13px !important;
   font-weight: 300 !important;
-  color: rgba(255,255,255,.68) !important;
+  color: rgba(255,255,255,.65) !important;
   text-transform: none !important;
   letter-spacing: 0 !important;
 }
+body[data-page] .footer .f-col a {
+  margin-bottom: 4px !important;
+  display: block !important;
+}
 body[data-page] .footer .f-col {
-  gap: .65rem !important;
+  gap: .4rem !important;
 }
 body[data-page] .footer .f-brand {
-  min-height: 190px;
+  min-height: auto;
 }
 body[data-page] .footer .f-mosaic {
   display: grid !important;

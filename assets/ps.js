@@ -49,6 +49,7 @@
           '<div class="f-col f-brand">'+
             '<div class="display ps-wordmark"><span class="ps-wordmark-ps">P.S.</span> <span class="ps-wordmark-coffee">Coffee.</span></div>'+
             '<a href="story.html">Story</a><a href="story.html">Journal</a><a href="join.html">Join Us</a><a href="partnership.html">Partner</a>'+
+            '<a href="https://www.thebarista.school" target="_blank" rel="noopener">Barista School ↗</a>'+
           '</div>'+
           '<div class="f-col"><h4>Pods.</h4>'+
             '<a href="about.html#pods">Visit us</a><a href="app.html">Order ahead</a><a href="partnership.html#host">Host a Pod</a>'+
