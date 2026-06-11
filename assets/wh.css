@@ -357,10 +357,6 @@ a:hover > .wh-link::after { transform: scaleX(1); }
 .ntool:hover { opacity: 1; }
 .ntool-text { /* text-style utility icons */ }
 .ntool .i { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; display: block; }
-.cart-tool { gap: 5px; }
-.cart-count { font-size: 11px; min-width: 14px; text-align: center; opacity: 0; transition: opacity .2s; }
-.cart-count.show { opacity: 1; }
-
 /* Burger */
 .nav-burger {
   display: none;
@@ -1159,21 +1155,6 @@ html, body {
   gap: clamp(16px, 1.4vw, 24px);
   padding-right: var(--wh-gut);
 }
-.cart-tool { white-space: nowrap !important; }
-.cart-count {
-  opacity: 1 !important;
-  transform: none !important;
-  position: static !important;
-  display: inline !important;
-  min-width: 0 !important;
-  height: auto !important;
-  padding: 0 !important;
-  background: transparent !important;
-  color: inherit !important;
-  font: inherit !important;
-}
-.cart-tool .i { display: none !important; }
-
 .wh-banners {
   display: grid;
   grid-template-columns: 1fr 1fr;

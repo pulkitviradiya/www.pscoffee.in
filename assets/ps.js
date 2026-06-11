@@ -16,13 +16,6 @@
   ];
   var here = (location.pathname.split("/").pop() || "index.html").toLowerCase();
 
-  /* ---------- svg icons ---------- */
-  var ICO = {
-    chat:'<svg class="i" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.6-.8L3 21l1.9-5.4A8.5 8.5 0 1 1 21 11.5z"/></svg>',
-    user:'<svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6.5 8-6.5S20 17 20 21"/></svg>',
-    heart:'<svg class="i" viewBox="0 0 24 24"><path d="M12 20s-7-4.4-9.2-8.5C1.2 8.3 2.6 5 6 5c2 0 3.2 1.2 4 2.4C10.8 6.2 12 5 14 5c3.4 0 4.8 3.3 3.2 6.5C19 15.6 12 20 12 20z"/></svg>',
-    cart:'<svg class="i" viewBox="0 0 24 24"><path d="M5 7h15l-1.5 9.5a2 2 0 0 1-2 1.7H9a2 2 0 0 1-2-1.7L5 4H2"/><circle cx="9.5" cy="21" r="1"/><circle cx="16.5" cy="21" r="1"/></svg>'
-  };
 
   function navHTML(){
     var links = PAGES.filter(function(p){return p.primary;}).map(function(p){
@@ -242,13 +235,6 @@
     });
   }
 
-  /* ---------- favourites ---------- */
-  function favs(){
-    document.querySelectorAll(".fav").forEach(function(f){
-      f.addEventListener("click", function(e){ e.preventDefault(); f.classList.toggle("on"); });
-    });
-  }
-
   /* ---------- add to cart (visual) ---------- */
   var cartN = 0;
   function ensureToast(){
@@ -418,7 +404,7 @@
   twApply(twRead());
   function init(){
     inject(); navBehaviour(); heroSlider(); faq(); reveal();
-    filters(); chips(); favs(); cart(); forms(); anchors(); buildPanel();
+    filters(); chips(); cart(); forms(); anchors(); buildPanel();
   }
   if(document.readyState==="loading") document.addEventListener("DOMContentLoaded", init);
   else init();
