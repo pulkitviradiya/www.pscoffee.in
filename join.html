@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>P.S. Coffee. | Join Us.</title>
+<meta name="description" content="Join the P.S. Coffee team. We are building Gujarat's specialty coffee chain from scratch. Baristas, operators, craft specialists, roasters, tech builders, and investors welcome.">
+<link rel="canonical" href="https://www.pscoffee.in/join">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23E8400C'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia,serif' font-size='24' font-weight='700' fill='%23FAF6EE'%3EP.S.%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/ps.css">
+<link rel="stylesheet" href="assets/wh.css">
+<script>(function(){try{var t=JSON.parse(localStorage.getItem('ps-tweaks')||'{}');var r=document.documentElement;if(t.tc){r.style.setProperty('--tc',t.tc);r.style.setProperty('--wh-tc',t.tc);}}catch(e){}})()</script>
+<style>
+/* ── Join Us page ── */
+
+/* category nav strip */
+.join-cats {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 var(--wh-gut);
+  margin-bottom: var(--wh-section-gap);
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+.join-cats a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex: 1;
+  min-width: 150px;
+  padding: 18px 20px;
+  border-right: 1px solid rgba(0,0,0,.14);
+  font-family: var(--wh-sans);
+  font-size: 13px;
+  font-weight: 300;
+  color: rgba(0,0,0,.62);
+  text-decoration: none;
+  transition: color .18s, background .18s;
+}
+.join-cats a:last-child { border-right: 0; }
+.join-cats a:hover { color: #000; background: rgba(0,0,0,.03); }
+.join-cats a .jc-n {
+  font-size: 10px;
+  font-weight: 300;
+  color: rgba(0,0,0,.3);
+  letter-spacing: .04em;
+}
+
+/* values section */
+.join-values {
+  background: #f0e9db;
+  padding: var(--wh-section-gap) var(--wh-gut);
+}
+.join-values-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2rem;
+  flex-wrap: wrap;
+  border-top: 1px solid #000;
+  padding-top: 12px;
+  margin-bottom: 48px;
+}
+.join-values-head h2 {
+  font-family: var(--wh-serif);
+  font-size: clamp(36px,4vw,60px);
+  font-weight: 500;
+  letter-spacing: -.045em;
+  margin: 0;
+  color: #000;
+}
+.join-values-head p {
+  font-family: var(--wh-sans);
+  font-size: 15px;
+  font-weight: 300;
+  color: rgba(0,0,0,.52);
+  max-width: 40ch;
+  margin: 0 0 .2rem;
+  line-height: 1.55;
+}
+.join-values-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: var(--wh-gut);
+}
+.join-val {
+  border-top: 1px solid rgba(0,0,0,.24);
+  padding-top: 18px;
+}
+.join-val .v-num {
+  font-family: var(--wh-sans);
+  font-size: 10px;
+  font-weight: 300;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: rgba(0,0,0,.35);
+  margin-bottom: 10px;
+}
+.join-val h3 {
+  font-family: var(--wh-serif);
+  font-size: clamp(22px,2.2vw,30px);
+  font-weight: 500;
+  color: #000;
+  margin: 0 0 12px;
+  letter-spacing: -.03em;
+}
+.join-val p {
+  font-family: var(--wh-sans);
+  font-size: 14px;
+  font-weight: 300;
+  color: rgba(0,0,0,.6);
+  line-height: 1.7;
+  max-width: 32ch;
+  margin: 0;
+}
+
+/* split block with image + form */
+.join-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--wh-gut);
+  margin: 0 var(--wh-gut) var(--wh-section-gap);
+  align-items: start;
+}
+.join-block.flip .join-block-img { order: 2; }
+.join-block.flip .join-block-content { order: 1; }
+
+.join-block-img {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: .82;
+  background: #ddd;
+}
+.join-block-img image-slot { display: block; width: 100%; height: 100%; }
+.join-block-img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,.18) 0%, transparent 50%);
+  pointer-events: none;
+}
+.join-block-img .j-tag {
+  position: absolute;
+  z-index: 1;
+  top: 14px;
+  left: 14px;
+  font-family: var(--wh-sans);
+  font-size: 10px;
+  font-weight: 300;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.9);
+  background: rgba(0,0,0,.3);
+  padding: 4px 10px;
+  backdrop-filter: blur(4px);
+}
+
+.join-block-content {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.join-block-copy {
+  border-top: 1px solid #000;
+  padding-top: 14px;
+}
+.join-block-copy .j-num {
+  font-family: var(--wh-sans);
+  font-size: 10px;
+  font-weight: 300;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: rgba(0,0,0,.38);
+  margin-bottom: 10px;
+}
+.join-block-copy h2 {
+  font-family: var(--wh-serif);
+  font-size: clamp(32px,3.2vw,50px);
+  font-weight: 500;
+  line-height: .96;
+  letter-spacing: -.04em;
+  color: #000;
+  margin: 0 0 16px;
+}
+.join-block-copy p {
+  font-family: var(--wh-sans);
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.7;
+  color: rgba(0,0,0,.65);
+  max-width: 44ch;
+  margin: 0 0 10px;
+}
+.join-block-copy p:last-child { margin-bottom: 0; }
+.join-ps {
+  display: inline-block;
+  margin-top: 14px;
+  font-family: var(--wh-sans);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--wh-tc);
+  letter-spacing: .01em;
+}
+
+/* form card overrides for join page */
+.join-formcard {
+  background: #f0e9db;
+  padding: 26px 24px 22px;
+  border: 1px solid rgba(0,0,0,.12);
+}
+.join-formcard h3 {
+  font-family: var(--wh-serif);
+  font-size: 22px;
+  font-weight: 500;
+  color: #000;
+  letter-spacing: -.03em;
+  margin: 0 0 5px;
+}
+.join-formcard .jf-sub {
+  font-family: var(--wh-sans);
+  font-size: 13px;
+  font-weight: 300;
+  color: rgba(0,0,0,.52);
+  margin-bottom: 22px;
+  line-height: 1.5;
+}
+
+/* success state */
+.join-formcard .form-success {
+  padding: 24px 0 8px;
+  display: none;
+  flex-direction: column;
+  gap: 12px;
+  animation: none;
+}
+.join-formcard .form-success.show { display: flex; }
+.join-formcard .form-success .fs-check {
+  width: 38px; height: 38px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px;
+}
+.join-formcard .form-success h4 {
+  font-family: var(--wh-serif);
+  font-size: 26px;
+  font-weight: 500;
+  color: #000;
+  margin: 0;
+  letter-spacing: -.03em;
+}
+.join-formcard .form-success p {
+  font-family: var(--wh-sans);
+  font-size: 14px;
+  font-weight: 300;
+  color: rgba(0,0,0,.62);
+  line-height: 1.65;
+  max-width: 38ch;
+  margin: 0;
+}
+.join-formcard .form-success .fs-ps {
+  font-family: var(--wh-sans);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--wh-tc);
+  margin-top: 4px;
+}
+
+/* email block */
+.join-email {
+  margin: 0 var(--wh-gut) var(--wh-section-gap);
+  padding: clamp(72px,9vw,128px) var(--wh-gut);
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+.join-email .je-eyebrow {
+  font-family: var(--wh-sans);
+  font-size: 10px;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: .18em;
+  color: rgba(255,255,255,.35);
+}
+.join-email h2 {
+  font-family: var(--wh-serif);
+  font-size: clamp(24px,2.6vw,38px);
+  font-weight: 400;
+  color: rgba(255,255,255,.55);
+  letter-spacing: -.025em;
+  margin: 0;
+  font-style: italic;
+}
+.join-email .je-addr {
+  font-family: var(--wh-serif);
+  font-size: clamp(38px,6vw,96px);
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: -.03em;
+  line-height: .88;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 6px;
+  border-bottom: 1.5px solid rgba(255,255,255,.22);
+  transition: border-color .22s;
+}
+.join-email .je-addr:hover { border-color: rgba(255,255,255,.7); }
+.join-email p {
+  font-family: var(--wh-sans);
+  font-size: clamp(14px,1.1vw,16px);
+  font-weight: 300;
+  color: rgba(255,255,255,.45);
+  line-height: 1.7;
+  max-width: 50ch;
+  margin: 0;
+}
+.join-email .je-ps {
+  font-family: var(--wh-sans);
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(232,64,12,.9);
+  letter-spacing: .01em;
+  margin-top: 4px;
+}
+
+@media(max-width:900px){
+  .join-block { grid-template-columns: 1fr; }
+  .join-block.flip .join-block-img { order: 0; }
+  .join-block.flip .join-block-content { order: 0; }
+  .join-block-img { aspect-ratio: 16/9; }
+  .join-values-grid { grid-template-columns: 1fr; }
+  .join-cats a { min-width: 140px; }
+}
+@media(max-width:600px){
+  .join-block, .join-email { margin-inline: 0; }
+  .join-cats { flex-direction: column; }
+  .join-cats a { border-right: 0; border-bottom: 1px solid rgba(0,0,0,.1); }
+  .join-cats a:last-child { border-bottom: 0; }
+  .join-email .je-addr { font-size: clamp(28px,10vw,56px); }
+}
+</style>
+</head>
+<body data-page="join">
+<div id="ps-nav"></div>
+<div class="page-top"></div>
+
+<main class="wh-page">
+
+  <!-- ── HERO ── -->
+  <section class="wh-page-hero">
+    <div class="wh-page-hero-copy">
+      <p class="wh-page-kicker">Join Us.</p>
+      <h1>Join the<br><em>P.S.</em> team.</h1>
+      <footer>
+        <p>We are building Gujarat's specialty coffee chain from scratch. That means we need baristas who care, operations people who move fast, and a founding team that can build something that outlasts the trend.</p>
+        <a href="#join-categories">See how to join</a>
+      </footer>
+    </div>
+    <div class="wh-page-hero-media">
+      <image-slot id="join-hero" shape="rect" src="https://images.unsplash.com/photo-1453614512568-c4024d13c247?auto=format&fit=crop&q=80&w=1600" placeholder="Barista carefully crafting espresso at a P.S. Coffee Pod, warm editorial light" fit="cover"></image-slot>
+    </div>
+  </section>
+
+  <!-- ── STATEMENT ── -->
+  <section class="wh-page-statement">
+    <p>Pretty Serious.</p>
+    <h2>We do not have ping-pong tables. We have good coffee and a clear mission. If that is the trade you would make, we would like to hear from you.</h2>
+  </section>
+
+  <!-- ── VALUES ── -->
+  <section class="join-values" id="what-we-value">
+    <div class="join-values-head">
+      <h2>What we value.</h2>
+      <p>Three things we look for in everyone who joins. No exceptions. In that order.</p>
+    </div>
+    <div class="join-values-grid">
+      <div class="join-val reveal" data-d="1">
+        <p class="v-num">01</p>
+        <h3>Craft without ego.</h3>
+        <p>You care about the quality of what you make. You do not care whether anyone notices. The cup is the proof.</p>
+      </div>
+      <div class="join-val reveal" data-d="2">
+        <p class="v-num">02</p>
+        <h3>Speed with care.</h3>
+        <p>QSR speed. Specialty standards. You do not let one cancel the other.</p>
+      </div>
+      <div class="join-val reveal" data-d="3">
+        <p class="v-num">03</p>
+        <h3>Directness.</h3>
+        <p>We say what we mean. We mean what we say. You will fit in here if you do the same.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CATEGORY NAV ── -->
+  <nav class="join-cats" id="join-categories" aria-label="Join Us categories">
+    <a href="#baristas"><span>Baristas &amp; Pod Staff</span><span class="jc-n">01 →</span></a>
+    <a href="#operations"><span>Operations &amp; Growth</span><span class="jc-n">02 →</span></a>
+    <a href="#specialists"><span>Craft Specialists</span><span class="jc-n">03 →</span></a>
+    <a href="#trade"><span>Roasters &amp; Vendors</span><span class="jc-n">04 →</span></a>
+    <a href="#founders"><span>Founders &amp; Builders</span><span class="jc-n">05 →</span></a>
+    <a href="#investors"><span>Investors</span><span class="jc-n">06 →</span></a>
+  </nav>
+
+  <!-- ── 01 · BARISTAS & POD STAFF ── -->
+  <section class="join-block reveal" id="baristas">
+    <div class="join-block-img">
+      <span class="j-tag">01 — Pod Staff</span>
+      <image-slot id="join-img-barista" shape="rect" src="https://images.unsplash.com/photo-1507133750040-4a8f57021571?auto=format&fit=crop&q=80&w=1200" placeholder="Barista pulling a precise espresso shot, warm editorial" fit="cover"></image-slot>
+    </div>
+    <div class="join-block-content">
+      <div class="join-block-copy">
+        <p class="j-num">01 — Baristas &amp; Pod Staff</p>
+        <h2>Work with us.</h2>
+        <p>You know how to pull a great shot. You are comfortable with speed. You understand that the person on the other side of the counter is in a hurry — and that their cup still matters.</p>
+        <p>We are looking for baristas, Pod operations leads, and counter staff across Ahmedabad and beyond.</p>
+        <span class="join-ps">P.S. — Barista training is on us. Bring the intention.</span>
+      </div>
+      <div class="join-formcard" data-form-wrap>
+        <h3>Tell us about yourself.</h3>
+        <p class="jf-sub">We read every submission. We will reach out if there is a fit.</p>
+        <form class="form" data-ps-form="join-barista" novalidate>
+          <div class="row-2">
+            <div class="field">
+              <label>Full name</label>
+              <input type="text" name="name" required placeholder="Your name">
+              <span class="err">Required</span>
+            </div>
+            <div class="field">
+              <label>Email</label>
+              <input type="email" name="email" required placeholder="you@email.com">
+              <span class="err">Valid email required</span>
+            </div>
+          </div>
+          <div class="field">
+            <label>City</label>
+            <input type="text" name="city" placeholder="Ahmedabad, Mumbai, Bengaluru…">
+          </div>
+          <div class="field">
+            <label>I'm interested in</label>
+            <div class="chips">
+              <span class="chip">Barista</span>
+              <span class="chip">Pod Operations</span>
+              <span class="chip">Counter Staff</span>
+              <span class="chip">Open to any role</span>
+            </div>
+          </div>
+          <div class="field">
+            <label>About you</label>
+            <textarea name="message" required placeholder="Your experience with coffee, what you love about the craft, and why P.S. Coffee interests you."></textarea>
+            <span class="err">Required</span>
+          </div>
+          <button type="submit" class="wh-btn dark">Submit interest →</button>
+        </form>
+        <div class="form-success" role="status">
+          <div class="fs-check">✓</div>
+          <h4>Received.</h4>
+          <p>We will get back to you if there is a fit. Thank you for showing interest.</p>
+          <span class="fs-ps">P.S. — We appreciate it. Genuinely.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 02 · OPERATIONS & GROWTH ── -->
+  <section class="join-block flip reveal" id="operations">
+    <div class="join-block-img">
+      <span class="j-tag">02 — Operations &amp; Growth</span>
+      <image-slot id="join-img-ops" shape="rect" src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=1200" placeholder="Modern office operations, open plan workspace" fit="cover"></image-slot>
+    </div>
+    <div class="join-block-content">
+      <div class="join-block-copy">
+        <p class="j-num">02 — Operations &amp; Growth</p>
+        <h2>Move things.</h2>
+        <p>You keep Pods running. You solve problems before they become problems. You know what QSR operations actually means at ground level.</p>
+        <p>Or: you understand the audience — co-working, campus, gym, corporate — and you know how to speak to them without performing.</p>
+      </div>
+      <div class="join-formcard" data-form-wrap>
+        <h3>Express your interest.</h3>
+        <p class="jf-sub">Operations and growth roles. Tell us where you would fit best.</p>
+        <form class="form" data-ps-form="join-ops" novalidate>
+          <div class="row-2">
+            <div class="field">
+              <label>Full name</label>
+              <input type="text" name="name" required placeholder="Your name">
+              <span class="err">Required</span>
+            </div>
+            <div class="field">
+              <label>Email</label>
+              <input type="email" name="email" required placeholder="you@email.com">
+              <span class="err">Valid email required</span>
+            </div>
+          </div>
+          <div class="field">
+            <label>I'd work best in</label>
+            <div class="chips">
+              <span class="chip">Pod Operations Lead</span>
+              <span class="chip">Growth &amp; Brand</span>
+              <span class="chip">Marketing</span>
+              <span class="chip">Partnerships</span>
+            </div>
+          </div>
+          <div class="field">
+            <label>LinkedIn or portfolio</label>
+            <input type="url" name="linkedin" placeholder="linkedin.com/in/…">
+          </div>
+          <div class="field">
+            <label>What you'd bring</label>
+            <textarea name="message" required placeholder="Your background, what you have built or run before, and why specialty coffee at this stage interests you."></textarea>
+            <span class="err">Required</span>
+          </div>
+          <button type="submit" class="wh-btn dark">Submit interest →</button>
+        </form>
+        <div class="form-success" role="status">
+          <div class="fs-check">✓</div>
+          <h4>Received.</h4>
+          <p>We will get back to you if there is a fit. Thank you for showing interest.</p>
+          <span class="fs-ps">P.S. — We appreciate it. Genuinely.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 03 · CRAFT SPECIALISTS ── -->
+  <section class="join-block reveal" id="specialists">
+    <div class="join-block-img">
+      <span class="j-tag">03 — Craft Specialists</span>
+      <image-slot id="join-img-craft" shape="rect" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=1200" placeholder="Craft beverage specialist working with ingredients, editorial styling" fit="cover"></image-slot>
+    </div>
+    <div class="join-block-content">
+      <div class="join-block-copy">
+        <p class="j-num">03 — Craft Specialists</p>
+        <h2>Bring your craft.</h2>
+        <p>Coffee consultant, food consultant, recipe developer, beverage specialist, mixologist — if your work intersects with specialty beverages, we want to know what you do.</p>
+        <p>We build menus and experiences with intention. Your craft belongs in that process.</p>
+      </div>
+      <div class="join-formcard" data-form-wrap>
+        <h3>Tell us your craft.</h3>
+        <p class="jf-sub">Portfolio and examples welcome. We review everything.</p>
+        <form class="form" data-ps-form="join-craft" novalidate>
+          <div class="row-2">
+            <div class="field">
+              <label>Full name</label>
+              <input type="text" name="name" required placeholder="Your name">
+              <span class="err">Required</span>
+            </div>
+            <div class="field">
+              <label>Email</label>
+              <input type="email" name="email" required placeholder="you@email.com">
+              <span class="err">Valid email required</span>
+            </div>
+          </div>
+          <div class="field">
+            <label>Your specialty</label>
+            <div class="chips">
+              <span class="chip">Coffee Consultant</span>
+              <span class="chip">Food Consultant</span>
+              <span class="chip">Recipe Developer</span>
+              <span class="chip">Beverage Specialist</span>
+              <span class="chip">Mixologist</span>
+            </div>
+          </div>
+          <div class="field">
+            <label>Portfolio / Website</label>
+            <input type="url" name="portfolio" placeholder="yourwork.com, Instagram, Behance…">
+          </div>
+          <div class="field">
+            <label>Tell us about your work</label>
+            <textarea name="message" required placeholder="What you do, what you have made, who you have worked with, and what about P.S. Coffee interests you."></textarea>
+            <span class="err">Required</span>
+          </div>
+          <button type="submit" class="wh-btn dark">Submit interest →</button>
+        </form>
+        <div class="form-success" role="status">
+          <div class="fs-check">✓</div>
+          <h4>Received.</h4>
+          <p>We will get back to you if there is a fit. Thank you for showing interest.</p>
+          <span class="fs-ps">P.S. — We appreciate it. Genuinely.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 04 · COFFEE ROASTERS & EQUIPMENT VENDORS ── -->
+  <section class="join-block flip reveal" id="trade">
+    <div class="join-block-img">
+      <span class="j-tag">04 — Roasters &amp; Vendors</span>
+      <image-slot id="join-img-trade" shape="rect" src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&q=80&w=1200" placeholder="Coffee roasting — beans in a drum roaster, warm golden light" fit="cover"></image-slot>
+    </div>
+    <div class="join-block-content">
+      <div class="join-block-copy">
+        <p class="j-num">04 — Coffee Roasters &amp; Equipment Vendors</p>
+        <h2>Supply the standard.</h2>
+        <p>We source with intention. 100% Arabica. No Robusta. No chicory. No asterisk. If you roast to that standard — or if you build equipment designed for consistency at volume — let's talk.</p>
+        <p>We are building a chain. We are looking for partners who will grow with it.</p>
+      </div>
+      <div class="join-formcard" data-form-wrap>
+        <h3>Introduce your product.</h3>
+        <p class="jf-sub">Company details and samples are welcome. We will review everything carefully.</p>
+        <form class="form" data-ps-form="join-trade" novalidate>
+          <div class="row-2">
+            <div class="field">
+              <label>Your name</label>
+              <input type="text" name="name" required placeholder="Full name">
+              <span class="err">Required</span>
+            </div>
+            <div class="field">
+              <label>Company / Brand</label>
+              <input type="text" name="company" placeholder="Company name">
+            </div>
+          </div>
+          <div class="field">
+            <label>Email</label>
+            <input type="email" name="email" required placeholder="you@company.com">
+            <span class="err">Valid email required</span>
+          </div>
+          <div class="field">
+            <label>You are</label>
+            <div class="chips">
+              <span class="chip">Coffee Roaster</span>
+              <span class="chip">Equipment Vendor</span>
+              <span class="chip">Packaging Supplier</span>
+              <span class="chip">Other Trade Partner</span>
+            </div>
+          </div>
+          <div class="field">
+            <label>Region / Location</label>
+            <input type="text" name="location" placeholder="Chikmagalur, Coorg, Pan-India…">
+          </div>
+          <div class="field">
+            <label>About your product</label>
+            <textarea name="message" required placeholder="Tell us about your beans, your roast profile, your equipment — and what separates it from the category standard."></textarea>
+            <span class="err">Required</span>
+          </div>
+          <button type="submit" class="wh-btn dark">Submit interest →</button>
+        </form>
+        <div class="form-success" role="status">
+          <div class="fs-check">✓</div>
+          <h4>Received.</h4>
+          <p>We will get back to you if there is a fit. Thank you for showing interest.</p>
+          <span class="fs-ps">P.S. — We appreciate it. Genuinely.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 05 · FOUNDERS & BUILDERS ── -->
+  <section class="join-block reveal" id="founders">
+    <div class="join-block-img">
+      <span class="j-tag">05 — Founders &amp; Builders</span>
+      <image-slot id="join-img-founders" shape="rect" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=1200" placeholder="Founders working at a table with laptops, startup energy" fit="cover"></image-slot>
+    </div>
+    <div class="join-block-content">
+      <div class="join-block-copy">
+        <p class="j-num">05 — Founders, Tech &amp; Marketing</p>
+        <h2>Build with us.</h2>
+        <p>App, ordering, loyalty, AI suggestions. You think about UX the way we think about coffee — simple on the surface, considered underneath.</p>
+        <p>Or: you are a marketing agency or consultant who understands the audience and knows how to build something without performing.</p>
+        <p>Or: you want to be part of the founding team. We are at the beginning. The work is real. So is the upside.</p>
+      </div>
+      <div class="join-formcard" data-form-wrap>
+        <h3>Let's build something.</h3>
+        <p class="jf-sub">Early stage. Real work. Real upside. Tell us what you would build.</p>
+        <form class="form" data-ps-form="join-founders" novalidate>
+          <div class="row-2">
+            <div class="field">
+              <label>Full name</label>
+              <input type="text" name="name" required placeholder="Your name">
+              <span class="err">Required</span>
+            </div>
+            <div class="field">
+              <label>Email</label>
+              <input type="email" name="email" required placeholder="you@email.com">
+              <span class="err">Valid email required</span>
+            </div>
+          </div>
+          <div class="field">
+            <label>You are</label>
+            <div class="chips">
+              <span class="chip">Web Developer</span>
+              <span class="chip">App Developer</span>
+              <span class="chip">Marketing Agency</span>
+              <span class="chip">Marketing Consultant</span>
+              <span class="chip">Founding Team</span>
+            </div>
+          </div>
+          <div class="field">
+            <label>GitHub / Portfolio / Agency site</label>
+            <input type="url" name="portfolio" placeholder="Link to your work">
+          </div>
+          <div class="field">
+            <label>What you'd build</label>
+            <textarea name="message" required placeholder="What you would work on, what you have shipped before, and why you want to build a specialty coffee brand from the ground up."></textarea>
+            <span class="err">Required</span>
+          </div>
+          <button type="submit" class="wh-btn dark">Submit interest →</button>
+        </form>
+        <div class="form-success" role="status">
+          <div class="fs-check">✓</div>
+          <h4>Received.</h4>
+          <p>We will get back to you if there is a fit. Thank you for showing interest.</p>
+          <span class="fs-ps">P.S. — We appreciate it. Genuinely.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 06 · INVESTORS ── -->
+  <section class="join-block flip reveal" id="investors">
+    <div class="join-block-img">
+      <span class="j-tag">06 — Investors</span>
+      <image-slot id="join-img-invest" shape="rect" src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=1200" placeholder="Investor meeting — two people at a clean table, editorial" fit="cover"></image-slot>
+    </div>
+    <div class="join-block-content">
+      <div class="join-block-copy">
+        <p class="j-num">06 — Investors</p>
+        <h2>Back the idea.</h2>
+        <p>We are building Gujarat's first specialty coffee chain with the economics of QSR and the standards of specialty. Same beans as the ₹320 café. Dramatically lower overhead. ₹89 to the customer.</p>
+        <p>If that concept interests you — as a category, as a model, as an investment — let's have a conversation.</p>
+      </div>
+      <div class="join-formcard" data-form-wrap>
+        <h3>Start a conversation.</h3>
+        <p class="jf-sub">No deck required to start. Just a note about who you are and what interests you.</p>
+        <form class="form" data-ps-form="join-investor" novalidate>
+          <div class="row-2">
+            <div class="field">
+              <label>Full name</label>
+              <input type="text" name="name" required placeholder="Your name">
+              <span class="err">Required</span>
+            </div>
+            <div class="field">
+              <label>Email</label>
+              <input type="email" name="email" required placeholder="you@email.com">
+              <span class="err">Valid email required</span>
+            </div>
+          </div>
+          <div class="field">
+            <label>Background</label>
+            <div class="chips">
+              <span class="chip">Angel Investor</span>
+              <span class="chip">VC / Fund</span>
+              <span class="chip">Strategic Investor</span>
+              <span class="chip">Interested to Learn More</span>
+            </div>
+          </div>
+          <div class="field">
+            <label>Tell us about your interest</label>
+            <textarea name="message" required placeholder="Who you are, what you have backed before, and what interests you about P.S. Coffee specifically."></textarea>
+            <span class="err">Required</span>
+          </div>
+          <button type="submit" class="wh-btn dark">Start the conversation →</button>
+        </form>
+        <div class="form-success" role="status">
+          <div class="fs-check">✓</div>
+          <h4>Received.</h4>
+          <p>We will get back to you if there is a fit. Thank you for your interest in P.S. Coffee.</p>
+          <span class="fs-ps">P.S. — We appreciate it. Genuinely.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── EMAIL BLOCK ── -->
+  <div class="join-email reveal">
+    <span class="je-eyebrow">Or just reach out directly.</span>
+    <h2>Prefer to send a note first?</h2>
+    <a href="mailto:hello@pscoffee.in" class="je-addr">hello@pscoffee.in</a>
+    <p>Share your portfolio, your CV, your idea, or just a note about what you do and why P.S. Coffee. We will read it. We will get back to you if it interests us.</p>
+    <span class="je-ps">P.S. — Thank you for showing interest. We appreciate it.</span>
+  </div>
+
+  <!-- ── MARQUEE SIGN-OFF ── -->
+  <div class="marquee">
+    <div class="marquee-track">
+      <span class="m-item">Craft without ego <span class="dot">·</span></span>
+      <span class="m-item">Speed with care <span class="dot">·</span></span>
+      <span class="m-item">Directness above all <span class="dot">·</span></span>
+      <span class="m-item">Join the P.S. team <span class="dot">·</span></span>
+      <span class="m-item">Craft without ego <span class="dot">·</span></span>
+      <span class="m-item">Speed with care <span class="dot">·</span></span>
+      <span class="m-item">Directness above all <span class="dot">·</span></span>
+      <span class="m-item">Join the P.S. team <span class="dot">·</span></span>
+    </div>
+  </div>
+
+</main>
+
+<div id="ps-footer"></div>
+<script src="assets/image-slot.js"></script>
+<script src="assets/ps.js"></script>
+</body>
+</html>

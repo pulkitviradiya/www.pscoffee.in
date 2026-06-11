@@ -11,7 +11,8 @@
     {href:"app.html",         label:"App",         n:"04", primary:true},
     {href:"story.html",       label:"About",       n:"05", primary:true},
     {href:"partnership.html", label:"Partner",     n:"06", primary:true},
-    {href:"about.html",       label:"Pods",        n:"07", primary:true}
+    {href:"about.html",       label:"Pods",        n:"07", primary:true},
+    {href:"join.html",        label:"Join us",     n:"08", primary:true}
   ];
   var here = (location.pathname.split("/").pop() || "index.html").toLowerCase();
 
@@ -56,7 +57,7 @@
         '<div class="f-top">'+
           '<div class="f-col f-brand">'+
             '<div class="display ps-wordmark"><span class="ps-wordmark-ps">P.S.</span> <span class="ps-wordmark-coffee">Coffee.</span></div>'+
-            '<a href="story.html">Story</a><a href="story.html">Journal</a><a href="partnership.html">Careers</a><a href="mailto:hello@pscoffee.in">Media &amp; PR</a><a href="partnership.html">Franchise</a>'+
+            '<a href="story.html">Story</a><a href="story.html">Journal</a><a href="join.html">Join Us</a><a href="mailto:hello@pscoffee.in">Media &amp; PR</a><a href="partnership.html">Partner</a>'+
           '</div>'+
           '<div class="f-col"><h4>Pods.</h4>'+
             '<a href="about.html#pods">Visit us</a><a href="app.html">Order ahead</a><a href="partnership.html#host">Host a Pod</a><a href="partnership.html">Corporate Packs</a>'+
