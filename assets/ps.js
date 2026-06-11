@@ -38,10 +38,8 @@
         '<a href="index.html" class="nav-logo" aria-label="P.S. Coffee home"><span class="ps-wordmark-ps">P.S.</span> <span class="ps-wordmark-coffee">Coffee.</span></a>'+
         '<div class="nav-links">'+links+'</div>'+
         '<div class="nav-tools">'+
-          '<a href="menu.html" class="ntool ntool-text" title="Search">Search.</a>'+
-          '<a href="app.html" class="ntool ntool-text" title="Login">Login.</a>'+
-          '<a href="pack.html" class="ntool ntool-text" title="Wishlist">Wishlist.</a>'+
-          '<a href="menu.html" class="ntool ntool-text cart-tool" title="Your cart" aria-label="Your cart">Cart [0]</a>'+
+          '<a href="join.html" class="ntool ntool-text" title="Join us">Join us.</a>'+
+          '<a href="partnership.html" class="ntool ntool-text" title="Partner">Partner.</a>'+
           '<button class="nav-burger" id="psBurger" aria-label="Menu"><span></span><span></span><span></span></button>'+
         '</div>'+
       '</nav>'+
@@ -57,13 +55,13 @@
         '<div class="f-top">'+
           '<div class="f-col f-brand">'+
             '<div class="display ps-wordmark"><span class="ps-wordmark-ps">P.S.</span> <span class="ps-wordmark-coffee">Coffee.</span></div>'+
-            '<a href="story.html">Story</a><a href="story.html">Journal</a><a href="join.html">Join Us</a><a href="mailto:hello@pscoffee.in">Media &amp; PR</a><a href="partnership.html">Partner</a>'+
+            '<a href="story.html">Story</a><a href="story.html">Journal</a><a href="join.html">Join Us</a><a href="partnership.html">Partner</a>'+
           '</div>'+
           '<div class="f-col"><h4>Pods.</h4>'+
-            '<a href="about.html#pods">Visit us</a><a href="app.html">Order ahead</a><a href="partnership.html#host">Host a Pod</a><a href="partnership.html">Corporate Packs</a>'+
+            '<a href="about.html#pods">Visit us</a><a href="app.html">Order ahead</a><a href="partnership.html#host">Host a Pod</a>'+
           '</div>'+
           '<div class="f-col"><h4>Help & Info.</h4>'+
-            '<a href="index.html#waitlist">FAQs</a><a href="story.html">Brew guides</a><a href="partnership.html">Shipping</a><a href="mailto:hello@pscoffee.in">Returns</a><a href="mailto:hello@pscoffee.in">Contact</a>'+
+            '<a href="index.html#waitlist">FAQs</a><a href="mailto:hello@pscoffee.in">Contact</a>'+
           '</div>'+
           '<div class="f-col f-mosaic" aria-label="P.S. Coffee imagery">'+
             '<span></span><span></span><span></span><span></span>'+
