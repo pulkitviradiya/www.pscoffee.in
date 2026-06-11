@@ -1,0 +1,16 @@
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+
+# Vercel
+.vercel
+
+# Logs
+*.log
+npm-debug.log*
+
+# Dependencies (none needed — this is a static site)
+node_modules/

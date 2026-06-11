@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>P.S. Coffee. | The P.S. Menu.</title>
+<meta name="description" content="The P.S. Menu. Nothing to hide. 100% Arabica coffee, ceremonial-grade matcha, and daily food from the Pod.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23000000'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia,serif' font-size='24' font-weight='700' fill='%23F9F4EE'%3EP.S.%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/ps.css">
+<link rel="stylesheet" href="assets/wh.css">
+</head>
+<body data-page="menu">
+
+<div id="ps-nav"></div>
+<div class="page-top"></div>
+
+<main class="menu-page">
+  <section class="menu-hero-wh">
+    <div class="menu-hero-copy">
+      <p>Menu.</p>
+      <h1>The P.S. Menu.<br>Nothing to hide.</h1>
+      <div>
+        <span>100% Arabica. Every drink. No exceptions.</span>
+        <a href="#menu-coffee">View menu</a>
+      </div>
+    </div>
+    <div class="menu-hero-image">
+      <image-slot id="menu-hero-cup" shape="rect" src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=1600" placeholder="P.S. Coffee menu hero" fit="cover"></image-slot>
+    </div>
+  </section>
+
+  <nav class="menu-filter-wh" data-filter-tabs data-target="#menuSections" aria-label="Menu categories">
+    <button class="active" data-filter="all" type="button">All.</button>
+    <button data-filter="coffee" type="button">Coffee.</button>
+    <button class="menu-highlight" data-filter="matcha" type="button">Matcha.<small>New</small></button>
+    <button data-filter="food" type="button">Food.</button>
+    <span>31 items. Pod-fresh. From ₹69.</span>
+  </nav>
+
+  <section class="menu-statement-wh">
+    <p>Proudly Specialty.</p>
+    <h2>Same beans. No asterisk. Every day. The cup is the explanation.</h2>
+  </section>
+
+  <div id="menuSections">
+    <section class="menu-category-wh" data-cat="coffee" id="menu-coffee">
+      <header>
+        <h2>Coffee.</h2>
+        <p>P.S. 100% Arabica. We checked. Twice.</p>
+      </header>
+      <div class="menu-products-wh">
+        <article class="menu-product-wh menu-product-drink">
+          <div class="menu-product-img"><image-slot id="menu-coffee-cappuccino" shape="rect" src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&q=80&w=900" placeholder="Cappuccino" fit="cover"></image-slot></div>
+          <h3>Cappuccino.</h3>
+          <dl><div><dt>Milk.</dt><dd>Steamed</dd></div></dl>
+          <p class="menu-product-note"><strong>P.S.</strong> Specialty grade should not be a weekend treat.</p>
+          <div class="menu-product-price"><span>Menu price</span><strong>₹89</strong></div>
+        </article>
+        <article class="menu-product-wh menu-product-drink">
+          <div class="menu-product-img"><image-slot id="menu-coffee-cafe-latte" shape="rect" src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&q=80&w=900" placeholder="Cafe Latte" fit="cover"></image-slot></div>
+          <h3>Cafe Latte.</h3>
+          <dl><div><dt>Milk.</dt><dd>Espresso milk</dd></div></dl>
+          <p class="menu-product-note"><strong>P.S.</strong> Silky, simple, built for the everyday run.</p>
+          <div class="menu-product-price"><span>Menu price</span><strong>₹140</strong></div>
+        </article>
+        <article class="menu-product-wh menu-product-drink">
+          <div class="menu-product-img"><image-slot id="menu-coffee-americano" shape="rect" src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=80&w=900" placeholder="Americano" fit="cover"></image-slot></div>
+          <h3>Americano.</h3>
+          <dl><div><dt>Brew.</dt><dd>Espresso, water</dd></div></dl>
+          <p class="menu-product-note"><strong>P.S.</strong> Our rent is lower. Our beans are not.</p>
+          <div class="menu-product-price"><span>Menu price</span><strong>₹120</strong></div>
+        </article>
+        <article class="menu-product-wh menu-product-drink">
+          <div class="menu-product-img"><image-slot id="menu-coffee-espresso-doppio" shape="rect" src="https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?auto=format&fit=crop&q=80&w=900" placeholder="Espresso Doppio" fit="cover"></image-slot></div>
+          <h3>Espresso/Doppio.</h3>
+          <dl><div><dt>Brew.</dt><dd>Double shot</dd></div></dl>
+          <p class="menu-product-note"><strong>P.S.</strong> Quick. Direct. No ceremony.</p>
+          <div class="menu-product-price"><span>Menu price</span><strong>₹100</strong></div>
+        </article>
+        <article class="menu-product-wh menu-product-drink">
+          <div class="menu-product-img"><image-slot id="menu-coffee-cold-coffee" shape="rect" src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&q=80&w=900" placeholder="Cold Coffee" fit="cover"></image-slot></div>
+          <h3>Cold Coffee.</h3>
+          <dl><div><dt>Cold.</dt><dd>Chilled coffee</dd></div></dl>
+          <p class="menu-product-note"><strong>P.S.</strong> Cold, creamy, and ready before your next meeting.</p>
+          <div class="menu-product-price"><span>Menu price</span><strong>₹150</strong></div>
+        </article>
+        <article class="menu-product-wh menu-product-drink">
+          <div class="menu-product-img"><image-slot id="menu-coffee-cold-brew" shape="rect" src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&q=80&w=900" placeholder="Cold Brew" fit="cover"></image-slot></div>
+          <h3>Cold Brew.</h3>
+          <dl><div><dt>Cold.</dt><dd>Slow steep</dd></div></dl>
+          <p class="menu-product-note"><strong>P.S.</strong> Cold. Strong. No ice bath required.</p>
+          <div class="menu-product-price"><span>Menu price</span><strong>₹150</strong></div>
+        </article>
+        <article class="menu-product-wh menu-product-drink">
+          <div class="menu-product-img"><image-slot id="menu-coffee-iced-latte" shape="rect" src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&q=80&w=900" placeholder="Iced Latte" fit="cover"></image-slot></div>
+          <h3>Iced Latte.</h3>
+          <dl><div><dt>Cold.</dt><dd>Milk, ice, espresso</dd></div></dl>
+          <p class="menu-product-note"><strong>P.S.</strong> The 3pm slump is a myth. Here is your coffee anyway.</p>
+          <div class="menu-product-price"><span>Menu price</span><strong>₹150</strong></div>
+        </article>
+        <article class="menu-product-wh menu-product-drink">
+          <div class="menu-product-img"><image-slot id="menu-coffee-iced-americano" shape="rect" src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=80&w=900" placeholder="Iced Americano" fit="cover"></image-slot></div>
+          <h3>Iced Americano.</h3>
+          <dl><div><dt>Cold.</dt><dd>Espresso, ice, water</dd></div></dl>
+          <p class="menu-product-note"><strong>P.S.</strong> Clean, cold, and not watered down.</p>
+          <div class="menu-product-price"><span>Menu price</span><strong>₹120</strong></div>
+        </article>
+        <article class="menu-product-wh menu-product-drink">
+          <div class="menu-product-img"><image-slot id="menu-coffee-mocha" shape="rect" src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=900" placeholder="Mocha" fit="cover"></image-slot></div>
+          <h3>Mocha.</h3>
+          <dl><div><dt>Comfort.</dt><dd>Espresso, cocoa</dd></div></dl>
+          <p class="menu-product-note"><strong>P.S.</strong> Chocolate with coffee discipline.</p>
+          <div class="menu-product-price"><span>Menu price</span><strong>₹180</strong></div>
+        </article>
+        <article class="menu-product-wh menu-product-drink">
+          <div class="menu-product-img"><image-slot id="menu-coffee-caramel-macchiato" shape="rect" src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&q=80&w=900" placeholder="Caramel Macchiato" fit="cover"></image-slot></div>
+          <h3>Caramel Macchiato.</h3>
+          <dl><div><dt>Sweet.</dt><dd>Caramel milk</dd></div></dl>
+          <p class="menu-product-note"><strong>P.S.</strong> Sweet enough. Still coffee first.</p>
+          <div class="menu-product-price"><span>Menu price</span><strong>₹150</strong></div>
+        </article>
+        <article class="menu-product-wh menu-product-drink">
+          <div class="menu-product-img"><image-slot id="menu-coffee-hazelnut-latte" shape="rect" src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&q=80&w=900" placeholder="Hazelnut Latte" fit="cover"></image-slot></div>
+          <h3>Hazelnut Latte.</h3>
+          <dl><div><dt>Sweet.</dt><dd>Hazelnut milk</dd></div></dl>
+          <p class="menu-product-note"><strong>P.S.</strong> Nutty, warm, and built on real espresso.</p>
+          <div class="menu-product-price"><span>Menu price</span><strong>₹150</strong></div>
+        </article>
+        <article class="menu-product-wh menu-product-drink">
+          <div class="menu-product-img"><image-slot id="menu-coffee-flat-white" shape="rect" src="https://images.unsplash.com/photo-1559496417-e7f25cb247f3?auto=format&fit=crop&q=80&w=900" placeholder="Flat white" fit="cover"></image-slot></div>
+          <h3>Flat White.</h3>
+          <dl><div><dt>Brew.</dt><dd>Double ristretto</dd></div></dl>
+          <p class="menu-product-note"><strong>P.S.</strong> Same beans. No asterisk. Every day.</p>
+          <div class="menu-product-price"><span>Menu price</span><strong>₹150</strong></div>
+        </article>
+        <article class="menu-product-wh menu-product-drink">
+          <div class="menu-product-img"><image-slot id="menu-coffee-espresso-tonic" shape="rect" src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&q=80&w=900" placeholder="Espresso Tonic" fit="cover"></image-slot></div>
+          <h3>Espresso Tonic.</h3>
+          <dl><div><dt>Sparkling.</dt><dd>Espresso, tonic</dd></div></dl>
+          <p class="menu-product-note"><strong>P.S.</strong> Bright fizz, sharp espresso, no excess.</p>
+          <div class="menu-product-price"><span>Menu price</span><strong>₹180</strong></div>
+        </article>
+        <article class="menu-product-wh menu-product-drink">
+          <div class="menu-product-img"><image-slot id="menu-coffee-hot-chocolate" shape="rect" src="https://images.unsplash.com/photo-1542990253-0d0f5be5f0ed?auto=format&fit=crop&q=80&w=900" placeholder="Hot Chocolate" fit="cover"></image-slot></div>
+          <h3>Hot Chocolate.</h3>
+          <dl><div><dt>Comfort.</dt><dd>Cocoa, milk</dd></div></dl>
+          <p class="menu-product-note"><strong>P.S.</strong> For the coffee break without the coffee.</p>
+          <div class="menu-product-price"><span>Menu price</span><strong>₹200</strong></div>
+        </article>
+        <article class="menu-product-wh menu-product-drink">
+          <div class="menu-product-img"><image-slot id="menu-coffee-pour-over" shape="rect" src="https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&q=80&w=900" placeholder="Pour Over" fit="cover"></image-slot></div>
+          <h3>Pour Over.</h3>
+          <dl><div><dt>Brew.</dt><dd>Manual brew</dd></div></dl>
+          <p class="menu-product-note"><strong>P.S.</strong> Slow brew, clear cup, no performance.</p>
+          <div class="menu-product-price"><span>Menu price</span><strong>₹160</strong></div>
+        </article>
+        <article class="menu-product-wh menu-product-drink">
+          <div class="menu-product-img"><image-slot id="menu-coffee-cortado" shape="rect" src="https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?auto=format&fit=crop&q=80&w=900" placeholder="Cortado" fit="cover"></image-slot></div>
+          <h3>Cortado.</h3>
+          <dl><div><dt>Milk.</dt><dd>Short milk</dd></div></dl>
+          <p class="menu-product-note"><strong>P.S.</strong> Small cup. Equal parts confidence and milk.</p>
+          <div class="menu-product-price"><span>Menu price</span><strong>₹150</strong></div>
+        </article>
+        <article class="menu-product-wh menu-product-drink">
+          <div class="menu-product-img"><image-slot id="menu-coffee-french-press-coffee" shape="rect" src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&q=80&w=900" placeholder="French Press Coffee" fit="cover"></image-slot></div>
+          <h3>French Press Coffee.</h3>
+          <dl><div><dt>Brew.</dt><dd>Full immersion</dd></div></dl>
+          <p class="menu-product-note"><strong>P.S.</strong> Full-bodied coffee without the rush.</p>
+          <div class="menu-product-price"><span>Menu price</span><strong>₹160</strong></div>
+        </article>
+        <article class="menu-product-wh menu-product-drink">
+          <div class="menu-product-img"><image-slot id="menu-coffee-south-indian-filter-coffee" shape="rect" src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&q=80&w=900" placeholder="South Indian Filter Coffee" fit="cover"></image-slot></div>
+          <h3>South Indian Filter Coffee.</h3>
+          <dl><div><dt>Brew.</dt><dd>Filter decoction</dd></div></dl>
+          <p class="menu-product-note"><strong>P.S.</strong> A familiar ritual with the P.S. standard.</p>
+          <div class="menu-product-price"><span>Menu price</span><strong>₹120</strong></div>
+        </article>
+        <article class="menu-product-wh menu-product-drink">
+          <div class="menu-product-img"><image-slot id="menu-coffee-dalgona-coffee" shape="rect" src="https://images.unsplash.com/photo-1589998896844-74f6f0f9f2bd?auto=format&fit=crop&q=80&w=900" placeholder="Dalgona Coffee" fit="cover"></image-slot></div>
+          <h3>Dalgona Coffee.</h3>
+          <dl><div><dt>Foam.</dt><dd>Whipped coffee</dd></div></dl>
+          <p class="menu-product-note"><strong>P.S.</strong> Foam, coffee, and just enough nostalgia.</p>
+          <div class="menu-product-price"><span>Menu price</span><strong>₹150</strong></div>
+        </article>
+        <article class="menu-product-wh menu-product-drink">
+          <div class="menu-product-img"><image-slot id="menu-coffee-vienna-coffee" shape="rect" src="https://images.unsplash.com/photo-1522992319-0365e5f11656?auto=format&fit=crop&q=80&w=900" placeholder="Vienna Coffee" fit="cover"></image-slot></div>
+          <h3>Vienna Coffee.</h3>
+          <dl><div><dt>Cream.</dt><dd>Espresso cream</dd></div></dl>
+          <p class="menu-product-note"><strong>P.S.</strong> Espresso lifted with cream, not drama.</p>
+          <div class="menu-product-price"><span>Menu price</span><strong>₹150</strong></div>
+        </article>
+        <article class="menu-product-wh menu-product-drink">
+          <div class="menu-product-img"><image-slot id="menu-coffee-cold-brew-tonic" shape="rect" src="https://images.unsplash.com/photo-1536256263959-770b48d82b0a?auto=format&fit=crop&q=80&w=900" placeholder="Cold Brew Tonic" fit="cover"></image-slot></div>
+          <h3>Cold Brew Tonic.</h3>
+          <dl><div><dt>Sparkling.</dt><dd>Cold brew tonic</dd></div></dl>
+          <p class="menu-product-note"><strong>P.S.</strong> Cold brew with a clean sparkling finish.</p>
+          <div class="menu-product-price"><span>Menu price</span><strong>₹200</strong></div>
+        </article>
+        <article class="menu-product-wh menu-product-drink">
+          <div class="menu-product-img"><image-slot id="menu-coffee-protein-coffee" shape="rect" src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&q=80&w=900" placeholder="Protein Coffee" fit="cover"></image-slot></div>
+          <h3>Protein Coffee.</h3>
+          <dl><div><dt>Fuel.</dt><dd>Protein blend</dd></div></dl>
+          <p class="menu-product-note"><strong>P.S.</strong> Coffee that keeps up with the day.</p>
+          <div class="menu-product-price"><span>Menu price</span><strong>₹220</strong></div>
+        </article>
+        <article class="menu-product-wh menu-product-drink">
+          <div class="menu-product-img"><image-slot id="menu-coffee-cola-coffee" shape="rect" src="https://images.unsplash.com/photo-1581006852262-e4307cf6283a?auto=format&fit=crop&q=80&w=900" placeholder="Cola Coffee" fit="cover"></image-slot></div>
+          <h3>Cola Coffee.</h3>
+          <dl><div><dt>Sparkling.</dt><dd>Coffee cola</dd></div></dl>
+          <p class="menu-product-note"><strong>P.S.</strong> A crisp coffee soda for the curious.</p>
+          <div class="menu-product-price"><span>Menu price</span><strong>₹140</strong></div>
+        </article>
+        <article class="menu-product-wh menu-product-drink">
+          <div class="menu-product-img"><image-slot id="menu-coffee-orangicano" shape="rect" src="https://images.unsplash.com/photo-1541658016709-82535e94bc69?auto=format&fit=crop&q=80&w=900" placeholder="Orangicano" fit="cover"></image-slot></div>
+          <h3>Orangicano.</h3>
+          <dl><div><dt>Citrus.</dt><dd>Orange espresso</dd></div></dl>
+          <p class="menu-product-note"><strong>P.S.</strong> Espresso and orange, brighter than expected.</p>
+          <div class="menu-product-price"><span>Menu price</span><strong>₹190</strong></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="menu-category-wh" data-cat="matcha" id="menu-matcha">
+      <header>
+        <h2>Matcha.</h2>
+        <p>P.S. Ceremonial grade. Not the powder. Not even close.</p>
+      </header>
+      <div class="menu-products-wh">
+        <article class="menu-product-wh menu-product-drink">
+          <div class="menu-product-img"><image-slot id="menu-matcha-hot" shape="rect" src="https://images.unsplash.com/photo-1515823662972-da6a2e4d3002?auto=format&fit=crop&q=80&w=900" placeholder="Hot matcha latte" fit="cover"></image-slot></div>
+          <h3>Hot Matcha Latte.</h3>
+          <dl><div><dt>Steep.</dt><dd>Precisely whisked</dd></div></dl>
+          <p class="menu-product-note"><strong>P.S.</strong> Matcha tonight. Coffee tomorrow.</p>
+          <div class="menu-product-price"><span>Menu price</span><strong>₹160</strong></div>
+        </article>
+        <article class="menu-product-wh menu-product-drink">
+          <div class="menu-product-img"><image-slot id="menu-matcha-iced" shape="rect" src="https://images.unsplash.com/photo-1558857563-b371033873b8?auto=format&fit=crop&q=80&w=900" placeholder="Iced matcha latte" fit="cover"></image-slot></div>
+          <h3>Iced Matcha Latte.</h3>
+          <dl><div><dt>Cold.</dt><dd>Milk, ice, matcha</dd></div></dl>
+          <p class="menu-product-note"><strong>P.S.</strong> You came for coffee. The matcha was the surprise.</p>
+          <div class="menu-product-price"><span>Menu price</span><strong>₹160</strong></div>
+        </article>
+        <article class="menu-product-wh menu-product-drink">
+          <div class="menu-product-img"><image-slot id="menu-matcha-dirty" shape="rect" src="https://images.unsplash.com/photo-1571934811356-5cc061b6821f?auto=format&fit=crop&q=80&w=900" placeholder="Dirty Matcha" fit="cover"></image-slot></div>
+          <h3>Dirty Matcha.</h3>
+          <dl><div><dt>Steep.</dt><dd>Matcha, espresso</dd></div></dl>
+          <p class="menu-product-note"><strong>P.S.</strong> Matcha meets espresso. No choosing sides.</p>
+          <div class="menu-product-price"><span>Menu price</span><strong>₹220</strong></div>
+        </article>
+        <article class="menu-product-wh menu-product-drink">
+          <div class="menu-product-img"><image-slot id="menu-matcha-vanilla-oat" shape="rect" src="https://images.unsplash.com/photo-1536256263959-770b48d82b0a?auto=format&fit=crop&q=80&w=900" placeholder="Vanilla Oat Matcha" fit="cover"></image-slot></div>
+          <h3>Vanilla Oat Matcha.</h3>
+          <dl><div><dt>Oat.</dt><dd>Vanilla oat milk</dd></div></dl>
+          <p class="menu-product-note"><strong>P.S.</strong> Soft vanilla, oat milk, ceremonial matcha.</p>
+          <div class="menu-product-price"><span>Menu price</span><strong>₹220</strong></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="menu-category-wh" data-cat="food" id="menu-food">
+      <header>
+        <h2>Food.</h2>
+        <p>No seat required. Just a bite.</p>
+      </header>
+      <div class="menu-products-wh">
+        <article class="menu-product-wh">
+          <div class="menu-product-img"><image-slot id="menu-food-croissant" shape="rect" src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80&w=900" placeholder="Croissant" fit="cover"></image-slot></div>
+          <h3>Butter Croissant.</h3>
+          <dl><div><dt>Baked.</dt><dd>Daily</dd></div><div><dt>P.S.</dt><dd>Lunch is optional. Coffee is not.</dd></div></dl>
+          <div class="menu-product-price"><span>Menu price</span><strong>₹99</strong></div>
+        </article>
+        <article class="menu-product-wh">
+          <div class="menu-product-img"><image-slot id="menu-food-cookie" shape="rect" src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&q=80&w=900" placeholder="Cookie" fit="cover"></image-slot></div>
+          <h3>Choc Chip Cookie.</h3>
+          <dl><div><dt>Sweet.</dt><dd>Dark chocolate</dd></div><div><dt>P.S.</dt><dd>You deserve this break.</dd></div></dl>
+          <div class="menu-product-price"><span>Menu price</span><strong>₹69</strong></div>
+        </article>
+        <article class="menu-product-wh">
+          <div class="menu-product-img"><image-slot id="menu-food-toastie" shape="rect" src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&q=80&w=900" placeholder="Toastie" fit="cover"></image-slot></div>
+          <h3>Cheese Toastie.</h3>
+          <dl><div><dt>Pressed.</dt><dd>Three cheese</dd></div><div><dt>P.S.</dt><dd>Made fresh. Grabbed fast.</dd></div></dl>
+          <div class="menu-product-price"><span>Menu price</span><strong>₹149</strong></div>
+        </article>
+      </div>
+    </section>
+  </div>
+
+  <section class="menu-board-wh">
+    <h2>Order. Pick up. Go.</h2>
+    <div class="menu-board-list">
+      <p><span>Three taps.</span><span>Open app. Pick drink. Confirm.</span></p>
+      <p><span>Pick-up time.</span><span>Made fresh to your arrival.</span></p>
+      <p><span>Your usual.</span><span>Remembered after the third order.</span></p>
+      <p><span>Nearest Pod.</span><span>Walk time, not driving time.</span></p>
+    </div>
+  </section>
+
+  <section class="menu-two-up-wh">
+    <a href="pack.html">
+      <image-slot id="menu-subscribe-panel" shape="rect" src="https://images.unsplash.com/photo-1522992319-0365e5f11656?auto=format&fit=crop&q=80&w=1200" placeholder="P.S. Pack" fit="cover"></image-slot>
+      <h2>Pay once.<br>Drink daily.</h2>
+      <span>Make it official →</span>
+    </a>
+    <a href="about.html#pods">
+      <image-slot id="menu-pod-panel" shape="rect" src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=1200" placeholder="Find a Pod" fit="cover"></image-slot>
+      <h2>Your nearest<br>Pod.</h2>
+      <span>Find it →</span>
+    </a>
+  </section>
+</main>
+
+<div id="ps-footer"></div>
+<script src="assets/image-slot.js"></script>
+<script src="assets/ps.js"></script>
+</body>
+</html>
