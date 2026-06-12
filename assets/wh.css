@@ -958,9 +958,13 @@ a:hover > .wh-link::after { transform: scaleX(1); }
 }
 .footer .f-brand p { font-size: 13px !important; font-weight: 300 !important; line-height: 1.65 !important; color: rgba(244,238,227,.48) !important; max-width: 34ch !important; margin-bottom: 22px !important; }
 .footer h4 { font-family: var(--wh-sans) !important; font-size: 10px !important; font-weight: 500 !important; text-transform: uppercase !important; letter-spacing: .1em !important; color: rgba(244,238,227,.35) !important; margin-bottom: 10px !important; }
-.footer .f-col a { font-family: var(--wh-sans) !important; font-size: 13px !important; font-weight: 300 !important; color: rgba(244,238,227,.6) !important; display: block !important; margin-bottom: 5px !important; text-decoration: none !important; transition: color .2s !important; }
+.footer .f-col a { font-family: var(--wh-sans) !important; font-size: 13px !important; font-weight: 300 !important; color: rgba(244,238,227,.6) !important; display: block !important; margin-bottom: 2px !important; text-decoration: none !important; transition: color .2s !important; }
 .footer .f-col a:hover { color: #F4EEE3 !important; }
-.footer .f-bot { display: flex !important; justify-content: space-between !important; flex-wrap: wrap !important; gap: 8px !important; padding: 12px 0 !important; font-size: 11px !important; font-weight: 300 !important; color: rgba(244,238,227,.25) !important; letter-spacing: .04em !important; }
+.footer .f-radhe { text-align: center; font-size: 12px; font-family: var(--wh-sans); color: rgba(244,238,227,.2); letter-spacing: .08em; padding: 10px 0 6px; }
+.footer .f-bot { display: flex !important; justify-content: space-between !important; flex-wrap: wrap !important; align-items: center !important; gap: 8px !important; padding: 10px 0 !important; font-size: 11px !important; font-weight: 300 !important; color: rgba(244,238,227,.25) !important; letter-spacing: .04em !important; border-top: 1px solid rgba(244,238,227,.08) !important; }
+.footer .f-socials { display: flex !important; align-items: center !important; gap: 14px !important; }
+.footer .f-socials a { display: flex !important; align-items: center !important; color: rgba(244,238,227,.3) !important; margin-bottom: 0 !important; transition: color .2s !important; }
+.footer .f-socials a:hover { color: #F4EEE3 !important; }
 .footer .news {
   display: flex !important;
   border: 1px solid rgba(244,238,227,.18) !important;
