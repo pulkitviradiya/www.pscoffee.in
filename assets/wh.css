@@ -2283,20 +2283,27 @@ body[data-page="menu"] .page-top {
 }
 .menu-recipe {
   font-family: var(--wh-sans);
-  font-size: 11.5px;
-  font-weight: 300;
-  color: var(--wh-muted);
-  line-height: 1.45;
-  margin: .35rem 0 .5rem;
-  font-style: italic;
+  font-size: 10px;
+  font-weight: 400;
+  color: rgba(0,0,0,.38);
+  line-height: 1.5;
+  margin: .2rem 0 .4rem;
 }
 .menu-kcal {
+  position: absolute;
+  bottom: .6rem;
+  left: .65rem;
+  z-index: 2;
   font-family: var(--wh-sans);
-  font-size: 10px;
-  font-weight: 500;
-  color: rgba(0,0,0,.35);
-  letter-spacing: .04em;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: .05em;
   text-transform: uppercase;
+  color: rgba(255,255,255,.9);
+  background: rgba(20,10,5,.52);
+  padding: 3px 8px;
+  border-radius: 20px;
+  pointer-events: none;
 }
 
 .menu-board-wh {
