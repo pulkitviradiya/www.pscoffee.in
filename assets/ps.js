@@ -38,7 +38,6 @@
       '</nav>'+
       '<div class="drawer" id="psDrawer">'+
         PAGES.map(function(p){return '<a href="'+p.href+'"><span>'+p.label+'.</span><span class="n">'+p.n+'</span></a>';}).join("")+
-        '<a href="index.html#waitlist"><span>Waitlist.</span><span class="n">→</span></a>'+
       '</div>';
   }
 
