@@ -38,6 +38,7 @@ h1,h2,h3,h4,
   font-weight: 500;
   line-height: .94;
   letter-spacing: -.015em;
+  word-spacing: .06em;
 }
 
 /* ── container ── */
@@ -2023,7 +2024,7 @@ body[data-page="menu"] .page-top {
   font-size: clamp(58px, 6vw, 110px);
   font-weight: 500;
   line-height: .88;
-  letter-spacing: -.055em;
+  letter-spacing: -.028em;
 }
 .menu-hero-copy div {
   display: grid;
@@ -2125,7 +2126,7 @@ body[data-page="menu"] .page-top {
   font-size: clamp(36px, 4vw, 64px);
   font-weight: 500;
   line-height: .94;
-  letter-spacing: -.05em;
+  letter-spacing: -.028em;
 }
 
 .menu-category-wh {
@@ -2506,7 +2507,7 @@ body[data-page="menu"] .footer {
   font-size: clamp(58px, 6vw, 110px);
   font-weight: 500;
   line-height: .88;
-  letter-spacing: -.055em;
+  letter-spacing: -.028em;
 }
 .wh-page-hero-copy footer {
   display: grid;
@@ -2558,7 +2559,7 @@ body[data-page="menu"] .footer {
   font-size: clamp(36px, 4vw, 64px);
   font-weight: 500;
   line-height: .94;
-  letter-spacing: -.05em;
+  letter-spacing: -.028em;
 }
 .wh-page-rail {
   padding: 0 var(--wh-gut) 132px;
