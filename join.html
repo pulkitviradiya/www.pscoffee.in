@@ -395,6 +395,35 @@
   color: rgba(250,246,238,.55);
 }
 
+/* section divider between join blocks */
+.jb-divider {
+  display: grid;
+  grid-template-columns: auto 1fr auto 1fr auto;
+  align-items: center;
+  gap: 16px;
+  margin: calc(-1 * var(--wh-section-gap) / 2 + 8px) var(--wh-gut) calc(var(--wh-section-gap) / 2 + 8px);
+}
+.jb-divider-n {
+  font-family: var(--wh-sans);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: rgba(0,0,0,.18);
+}
+.jb-divider-rule {
+  height: 1px;
+  background: rgba(0,0,0,.1);
+}
+.jb-divider-ps {
+  font-family: var(--wh-serif);
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: -.01em;
+  color: var(--wh-tc);
+  line-height: 1;
+}
+
 /* marquee override terracotta bg, steam text */
 body[data-page="join"] .marquee {
   background: var(--wh-tc);
@@ -569,6 +598,8 @@ body[data-page="join"] .marquee .m-item .dot {
     </div>
   </section>
 
+  <div class="jb-divider"><span class="jb-divider-n">01</span><div class="jb-divider-rule"></div><span class="jb-divider-ps">P.S.</span><div class="jb-divider-rule"></div><span class="jb-divider-n">02</span></div>
+
   <!-- ── 02 · OPERATIONS & GROWTH ── -->
   <section class="join-block flip reveal" id="operations">
     <div class="join-block-img">
@@ -638,6 +669,8 @@ body[data-page="join"] .marquee .m-item .dot {
       </div>
     </div>
   </section>
+
+  <div class="jb-divider"><span class="jb-divider-n">02</span><div class="jb-divider-rule"></div><span class="jb-divider-ps">P.S.</span><div class="jb-divider-rule"></div><span class="jb-divider-n">03</span></div>
 
   <!-- ── 03 · CRAFT SPECIALISTS ── -->
   <section class="join-block reveal" id="specialists">
@@ -709,6 +742,8 @@ body[data-page="join"] .marquee .m-item .dot {
       </div>
     </div>
   </section>
+
+  <div class="jb-divider"><span class="jb-divider-n">03</span><div class="jb-divider-rule"></div><span class="jb-divider-ps">P.S.</span><div class="jb-divider-rule"></div><span class="jb-divider-n">04</span></div>
 
   <!-- ── 04 · COFFEE ROASTERS & EQUIPMENT VENDORS ── -->
   <section class="join-block flip reveal" id="trade">
@@ -786,6 +821,8 @@ body[data-page="join"] .marquee .m-item .dot {
     </div>
   </section>
 
+  <div class="jb-divider"><span class="jb-divider-n">04</span><div class="jb-divider-rule"></div><span class="jb-divider-ps">P.S.</span><div class="jb-divider-rule"></div><span class="jb-divider-n">05</span></div>
+
   <!-- ── 05 · FOUNDERS & BUILDERS ── -->
   <section class="join-block reveal" id="founders">
     <div class="join-block-img">
@@ -857,6 +894,8 @@ body[data-page="join"] .marquee .m-item .dot {
       </div>
     </div>
   </section>
+
+  <div class="jb-divider"><span class="jb-divider-n">05</span><div class="jb-divider-rule"></div><span class="jb-divider-ps">P.S.</span><div class="jb-divider-rule"></div><span class="jb-divider-n">06</span></div>
 
   <!-- ── 06 · INVESTORS ── -->
   <section class="join-block flip reveal" id="investors">
