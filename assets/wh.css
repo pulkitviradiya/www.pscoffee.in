@@ -2441,10 +2441,30 @@ body[data-page="menu"] .footer {
     min-height: 420px;
   }
   .menu-products-wh {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: .6rem;
+  }
+  .menu-product-wh h3 {
+    font-size: 15px !important;
+    margin-top: .6rem !important;
+    margin-bottom: .4rem !important;
+  }
+  .menu-product-wh dl {
+    font-size: 11.5px !important;
+    gap: .5rem !important;
+    min-height: unset !important;
+  }
+  .menu-product-note {
+    font-size: 11px !important;
+  }
+  .menu-product-wh button,
+  .menu-product-price {
+    font-size: 12px !important;
+    padding: .45rem 0 !important;
   }
   .menu-category-wh {
-    padding-bottom: 92px;
+    padding-bottom: 72px;
+    padding-inline: calc(var(--wh-gut) * .75);
   }
   .menu-board-wh {
     margin-inline: 0;
