@@ -10,9 +10,9 @@
     {href:"about.html#pods",  label:"Visit us",    n:"03", primary:true},
     {href:"app.html",         label:"App",         n:"04", primary:true},
     {href:"story.html",       label:"About",       n:"05", primary:true},
-    {href:"partnership.html", label:"Partner",     n:"06", primary:true},
+    {href:"partnership.html", label:"Partner",     n:"06", primary:false},
     {href:"about.html",       label:"Pods",        n:"07", primary:true},
-    {href:"join.html",        label:"Join us",     n:"08", primary:true}
+    {href:"join.html",        label:"Join us",     n:"08", primary:false}
   ];
   var here = (location.pathname.split("/").pop() || "index.html").toLowerCase();
 
@@ -31,8 +31,8 @@
         '<a href="index.html" class="nav-logo" aria-label="P.S. Coffee home"><span class="ps-wordmark-ps">P.S.</span> <span class="ps-wordmark-coffee">Coffee.</span></a>'+
         '<div class="nav-links">'+links+'</div>'+
         '<div class="nav-tools">'+
-          '<a href="join.html" class="ntool ntool-text" title="Join us">Join us.</a>'+
-          '<a href="partnership.html" class="ntool ntool-text" title="Partner">Partner.</a>'+
+          '<a href="join.html" class="ntool ntool-text'+(here==='join.html'?' active':'')+'" title="Join us">Join us.</a>'+
+          '<a href="partnership.html" class="ntool ntool-text'+(here==='partnership.html'?' active':'')+'" title="Partner">Partner.</a>'+
           '<button class="nav-burger" id="psBurger" aria-label="Menu"><span></span><span></span><span></span></button>'+
         '</div>'+
       '</nav>'+

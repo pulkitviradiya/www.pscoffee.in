@@ -3086,6 +3086,7 @@ body[data-page="menu"] .page-top {
 }
 .nav-links a:hover,
 .nav-links a.active,
+.ntool.active,
 .drawer a:hover {
   color: var(--ps-terracotta) !important;
 }
