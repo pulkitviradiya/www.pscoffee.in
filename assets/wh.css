@@ -318,10 +318,12 @@ a:hover > .wh-link::after { transform: scaleX(1); }
   transform-origin: left !important;
   transition: transform .25s ease !important;
 }
-.nav-links a:hover { opacity: 1 !important; color: var(--wh-ink) !important; }
+.nav-links a:hover { opacity: 1 !important; color: var(--ps-terracotta) !important; }
 .nav-links a:hover::after,
 .nav-links a.active::after { transform: scaleX(1) !important; }
-.nav-links a.active { opacity: 1 !important; }
+.nav-links a.active { opacity: 1 !important; color: var(--ps-terracotta) !important; }
+.ntool:hover,
+.ntool.active { color: var(--ps-terracotta) !important; }
 /* Remove orange pack-link from ps.css */
 .nav-links a.pack-link { color: var(--wh-ink) !important; }
 .nav-links a.pack-link::after { background: var(--wh-ink) !important; width: auto !important; }
