@@ -2281,6 +2281,23 @@ body[data-page="menu"] .page-top {
 .menu-product-price strong {
   font-weight: 600;
 }
+.menu-recipe {
+  font-family: var(--wh-sans);
+  font-size: 11.5px;
+  font-weight: 300;
+  color: var(--wh-muted);
+  line-height: 1.45;
+  margin: .35rem 0 .5rem;
+  font-style: italic;
+}
+.menu-kcal {
+  font-family: var(--wh-sans);
+  font-size: 10px;
+  font-weight: 500;
+  color: rgba(0,0,0,.35);
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
 
 .menu-board-wh {
   display: grid;
