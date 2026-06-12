@@ -2176,6 +2176,11 @@ body[data-page="menu"] .page-top {
 }
 .menu-product-wh {
   min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+.menu-product-price {
+  margin-top: auto !important;
 }
 .menu-product-img {
   position: relative;
