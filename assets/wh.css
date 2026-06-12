@@ -3621,6 +3621,14 @@ body[data-page] .footer .ps-wordmark-coffee {
   color: var(--ps-steam) !important;
 }
 
+.wh-about-note {
+  margin-bottom: var(--wh-gut);
+}
+
+.wh-about-quality {
+  margin-bottom: var(--wh-section-gap);
+}
+
 .wh-page-hero:not(.is-light) h1,
 .wh-page-hero:not(.is-light) .wh-page-kicker {
   color: var(--ps-steam) !important;
