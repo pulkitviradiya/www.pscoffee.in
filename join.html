@@ -117,9 +117,9 @@
 .join-block {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: min(84vh, 800px);
   gap: var(--wh-gut);
   margin: 0 var(--wh-gut) var(--wh-section-gap);
-  align-items: start;
 }
 .join-block.flip .join-block-img { order: 2; }
 .join-block.flip .join-block-content { order: 1; }
@@ -127,8 +127,6 @@
 .join-block-img {
   position: relative;
   overflow: hidden;
-  aspect-ratio: .82;
-  max-height: 85vh;
   background: #e5e0da;
 }
 .join-block-img image-slot { display: block; width: 100%; height: 100%; }
@@ -149,6 +147,8 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+  height: 100%;
+  overflow: hidden;
 }
 .join-block-copy {
   /* no top border here — moved to h2 */
@@ -195,7 +195,13 @@
 .join-formcard {
   background: #e5e0da;
   padding: 24px 24px 20px;
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
 }
+.join-formcard::-webkit-scrollbar { width: 3px; }
+.join-formcard::-webkit-scrollbar-track { background: transparent; }
+.join-formcard::-webkit-scrollbar-thumb { background: rgba(0,0,0,.18); border-radius: 2px; }
 .join-formcard .field label {
   font-weight: 600;
   color: var(--wh-ink);
@@ -345,10 +351,12 @@
   .join-cats a:nth-child(6) { border-top: 1px solid rgba(255,255,255,.2); }
 }
 @media(max-width:900px){
-  .join-block { grid-template-columns: 1fr; }
+  .join-block { grid-template-columns: 1fr; grid-template-rows: auto; height: auto; }
   .join-block.flip .join-block-img { order: 0; }
   .join-block.flip .join-block-content { order: 0; }
-  .join-block-img { aspect-ratio: 16/9; }
+  .join-block-img { aspect-ratio: 16/9; height: auto; }
+  .join-block-content { height: auto; overflow: visible; }
+  .join-formcard { flex: none; overflow-y: visible; }
   .join-values-grid { grid-template-columns: 1fr 1fr; }
 }
 @media(max-width:600px){
