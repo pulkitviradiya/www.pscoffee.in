@@ -194,58 +194,80 @@
 /* form card — matches wh-page-list background */
 .join-formcard {
   background: #e5e0da;
-  padding: 24px 24px 20px;
+  padding: 0;          /* outer frame — no padding, inner wrapper handles it */
   flex: 1;
   min-height: 0;
   overflow-y: auto;
+  position: relative;
 }
 .join-formcard::-webkit-scrollbar { width: 3px; }
 .join-formcard::-webkit-scrollbar-track { background: transparent; }
-.join-formcard::-webkit-scrollbar-thumb { background: rgba(0,0,0,.18); border-radius: 2px; }
+.join-formcard::-webkit-scrollbar-thumb { background: rgba(0,0,0,.22); border-radius: 2px; }
+/* inner wrapper gives padding inside the scroll area */
+.join-formcard > h3,
+.join-formcard > .jf-sub,
+.join-formcard > .form,
+.join-formcard > .form-success {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.join-formcard > h3       { padding-top: 18px; }
+.join-formcard > .form    { padding-bottom: 20px; }
+/* compact form spacing */
+.join-formcard .form      { gap: 10px; }
+.join-formcard .field     { gap: 4px; }
+.join-formcard .row-2     { gap: 10px; }
 .join-formcard .field label {
   font-weight: 600;
   color: var(--wh-ink);
-  font-size: 11px;
-  letter-spacing: .05em;
+  font-size: 10px;
+  letter-spacing: .06em;
   text-transform: uppercase;
 }
 .join-formcard .field input,
 .join-formcard .field textarea,
 .join-formcard .field select {
   background: #fff;
-  border: 1px solid rgba(0,0,0,.22);
+  border: 1px solid rgba(0,0,0,.2);
+  border-radius: 3px !important;
+  padding: 8px 11px !important;
+  font-size: 14px !important;
   color: var(--wh-ink);
 }
+.join-formcard .field textarea { min-height: 72px !important; resize: none; }
 .join-formcard .field input:focus,
 .join-formcard .field textarea:focus {
   border-color: #000;
   outline: none;
   box-shadow: 0 0 0 2px rgba(0,0,0,.06);
 }
+.join-formcard .chips       { gap: 6px; }
+.join-formcard .chip        { padding: 5px 11px; font-size: 12px; border-radius: 20px; }
 .join-formcard .field input[type="file"] {
   background: #fff;
-  border: 1px dashed rgba(0,0,0,.3);
-  padding: 10px 12px;
+  border: 1px dashed rgba(0,0,0,.25) !important;
+  padding: 8px 11px !important;
   cursor: pointer;
-  font-size: 13px;
+  font-size: 12px;
   color: var(--wh-muted);
-  border-radius: 0;
 }
 .join-formcard h3 {
   font-family: var(--wh-serif);
-  font-size: clamp(26px,2.4vw,36px);
+  font-size: clamp(20px,1.8vw,26px);
   font-weight: 500;
   letter-spacing: -.04em;
   line-height: 1;
-  margin: 0 0 6px;
+  margin: 0 0 4px;
+  border-bottom: 1px solid rgba(0,0,0,.12);
+  padding-bottom: 10px;
 }
 .join-formcard .jf-sub {
   font-family: var(--wh-sans);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 300;
   color: var(--wh-muted);
-  margin-bottom: 1.5rem;
-  line-height: 1.45;
+  margin-bottom: .75rem;
+  line-height: 1.4;
 }
 
 /* success state */
