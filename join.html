@@ -153,14 +153,34 @@
 .join-block-copy {
   /* no top border here — moved to h2 */
 }
-.join-block-copy .j-num {
+/* heading row: h2 left, number right, both in bordered frame */
+.jb-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  padding: .4rem 0;
+  margin-bottom: .9rem;
+  gap: 1.5rem;
+}
+.jb-header h2 {
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.jb-header .j-num {
   font-family: var(--wh-sans);
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 600;
   letter-spacing: .1em;
   text-transform: uppercase;
-  color: var(--wh-ink);
-  margin-bottom: .3rem;
+  color: var(--wh-muted);
+  text-align: right;
+  margin: 0;
+  flex-shrink: 0;
+  line-height: 1.3;
+  padding-bottom: .1rem;
 }
 .join-block-copy h2 {
   font-family: var(--wh-serif);
@@ -191,31 +211,41 @@
   color: var(--wh-tc);
 }
 
-/* form card — matches wh-page-list background */
+/* form card — header fixed, only fields scroll */
 .join-formcard {
   background: #e5e0da;
-  padding: 0;          /* outer frame — no padding, inner wrapper handles it */
+  padding: 0;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+/* fixed header section */
+.join-formcard > h3 {
+  padding: 16px 20px 8px;
+  border-bottom: 1px solid rgba(0,0,0,.1);
+  flex-shrink: 0;
+}
+.join-formcard > .jf-sub {
+  padding: 8px 20px 10px;
+  border-bottom: 1px solid rgba(0,0,0,.1);
+  flex-shrink: 0;
+}
+/* scrollable fields area */
+.join-formcard > .form,
+.join-formcard > .form-success {
   flex: 1;
   min-height: 0;
   overflow-y: auto;
-  position: relative;
+  padding: 14px 20px 20px;
 }
-.join-formcard::-webkit-scrollbar { width: 3px; }
-.join-formcard::-webkit-scrollbar-track { background: transparent; }
-.join-formcard::-webkit-scrollbar-thumb { background: rgba(0,0,0,.22); border-radius: 2px; }
-/* inner wrapper gives padding inside the scroll area */
-.join-formcard > h3,
-.join-formcard > .jf-sub,
-.join-formcard > .form,
-.join-formcard > .form-success {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-.join-formcard > h3       { padding-top: 18px; }
-.join-formcard > .form    { padding-bottom: 20px; }
+.join-formcard > .form::-webkit-scrollbar { width: 3px; }
+.join-formcard > .form::-webkit-scrollbar-track { background: transparent; }
+.join-formcard > .form::-webkit-scrollbar-thumb { background: rgba(0,0,0,.22); border-radius: 2px; }
 /* compact form spacing */
-.join-formcard .form      { gap: 10px; }
-.join-formcard .field     { gap: 4px; }
+.join-formcard .form      { gap: 8px; }
+.join-formcard .field     { gap: 2px; }
 .join-formcard .row-2     { gap: 10px; }
 .join-formcard .field label {
   font-weight: 600;
@@ -465,8 +495,10 @@
     </div>
     <div class="join-block-content">
       <div class="join-block-copy">
-        <p class="j-num">01 — Baristas &amp; Pod Staff</p>
-        <h2>Work with us.</h2>
+        <div class="jb-header">
+          <h2>Work with us.</h2>
+          <p class="j-num">01 — Baristas &amp; Pod Staff</p>
+        </div>
         <p>You know how to pull a great shot. You are comfortable with speed. You understand that the person on the other side of the counter is in a hurry — and that their cup still matters.</p>
         <p>We are looking for baristas, Pod operations leads, and counter staff across Ahmedabad and beyond.</p>
         <span class="join-ps">P.S. — Barista training is on us. Bring the intention.</span>
@@ -536,8 +568,10 @@
     </div>
     <div class="join-block-content">
       <div class="join-block-copy">
-        <p class="j-num">02 — Operations &amp; Growth</p>
-        <h2>Move things.</h2>
+        <div class="jb-header">
+          <h2>Move things.</h2>
+          <p class="j-num">02 — Operations &amp; Growth</p>
+        </div>
         <p>You keep Pods running. You solve problems before they become problems. You know what QSR operations actually means at ground level.</p>
         <p>Or: you understand the audience — co-working, campus, gym, corporate — and you know how to speak to them without performing.</p>
       </div>
@@ -604,8 +638,10 @@
     </div>
     <div class="join-block-content">
       <div class="join-block-copy">
-        <p class="j-num">03 — Craft Specialists</p>
-        <h2>Bring your craft.</h2>
+        <div class="jb-header">
+          <h2>Bring your craft.</h2>
+          <p class="j-num">03 — Craft Specialists</p>
+        </div>
         <p>Coffee consultant, food consultant, recipe developer, beverage specialist, mixologist — if your work intersects with specialty beverages, we want to know what you do.</p>
         <p>We build menus and experiences with intention. Your craft belongs in that process.</p>
       </div>
@@ -673,8 +709,10 @@
     </div>
     <div class="join-block-content">
       <div class="join-block-copy">
-        <p class="j-num">04 — Coffee Roasters &amp; Equipment Vendors</p>
-        <h2>Supply the standard.</h2>
+        <div class="jb-header">
+          <h2>Supply the standard.</h2>
+          <p class="j-num">04 — Roasters &amp; Vendors</p>
+        </div>
         <p>We source with intention. 100% Arabica. No Robusta. No chicory. No asterisk. If you roast to that standard — or if you build equipment designed for consistency at volume — let's talk.</p>
         <p>We are building a chain. We are looking for partners who will grow with it.</p>
       </div>
@@ -747,8 +785,10 @@
     </div>
     <div class="join-block-content">
       <div class="join-block-copy">
-        <p class="j-num">05 — Founders, Tech &amp; Marketing</p>
-        <h2>Build with us.</h2>
+        <div class="jb-header">
+          <h2>Build with us.</h2>
+          <p class="j-num">05 — Founders &amp; Builders</p>
+        </div>
         <p>App, ordering, loyalty, AI suggestions. You think about UX the way we think about coffee — simple on the surface, considered underneath.</p>
         <p>Or: you are a marketing agency or consultant who understands the audience and knows how to build something without performing.</p>
         <p>Or: you want to be part of the founding team. We are at the beginning. The work is real. So is the upside.</p>
@@ -817,8 +857,10 @@
     </div>
     <div class="join-block-content">
       <div class="join-block-copy">
-        <p class="j-num">06 — Investors</p>
-        <h2>Back the idea.</h2>
+        <div class="jb-header">
+          <h2>Back the idea.</h2>
+          <p class="j-num">06 — Investors</p>
+        </div>
         <p>We are building Gujarat's first specialty coffee chain with the economics of QSR and the standards of specialty. Same beans as the ₹320 café. Dramatically lower overhead. ₹89 to the customer.</p>
         <p>If that concept interests you — as a category, as a model, as an investment — let's have a conversation.</p>
       </div>
