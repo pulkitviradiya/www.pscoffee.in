@@ -48,18 +48,17 @@
 /* values section — matches wh-page-list pattern */
 .join-values {
   margin: 0 var(--wh-gut) var(--wh-section-gap);
-  padding: 88px var(--wh-gut);
+  padding: 52px var(--wh-gut);
   background: #e5e0da;
 }
 .join-values-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  gap: 2rem;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--wh-gut);
+  align-items: end;
   border-top: 1px solid #000;
   padding-top: .65rem;
-  margin-bottom: 56px;
+  margin-bottom: 36px;
 }
 .join-values-head h2 {
   font-family: var(--wh-serif);
@@ -254,7 +253,7 @@
 /* email / contact block */
 .join-email {
   margin: 0 var(--wh-gut) var(--wh-section-gap);
-  padding: 88px var(--wh-gut);
+  padding: 52px var(--wh-gut);
   background: #000;
   display: flex;
   flex-direction: column;
