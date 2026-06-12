@@ -2920,6 +2920,10 @@ body[data-page="menu"] .footer {
   .wh-page-hero-media {
     min-height: 420px;
   }
+  .wh-page-kicker {
+    position: static;
+    margin: 0 0 1.25rem;
+  }
   .wh-page-cards {
     grid-template-columns: 1fr;
   }
@@ -3546,6 +3550,160 @@ body[data-page] .footer .ps-wordmark-coffee {
   color: var(--ps-roast) !important;
 }
 
+/* About page psychology and quality promise. */
+.wh-about-psychology {
+  margin: 0 var(--wh-gut) var(--wh-section-gap);
+  padding: clamp(56px, 7vw, 112px) var(--wh-gut);
+  background: var(--ps-oat);
+}
+
+.wh-about-psychology-head {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: var(--wh-grid-gap);
+  align-items: end;
+  margin-bottom: clamp(34px, 5vw, 72px);
+  border-top: 1px solid var(--ps-terracotta);
+  padding-top: .75rem;
+}
+
+.wh-about-psychology-head p {
+  grid-column: 1 / 5;
+  margin: 0;
+  color: var(--ps-terracotta) !important;
+  font-family: var(--wh-sans);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.wh-about-psychology-head h2 {
+  grid-column: 5 / 13;
+  margin: 0;
+  color: var(--ps-roast) !important;
+  font-family: var(--wh-serif);
+  font-size: clamp(58px, 7vw, 124px);
+  font-weight: 500;
+  line-height: .86;
+  letter-spacing: -.055em;
+}
+
+.wh-about-psychology-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--wh-gut);
+}
+
+.wh-about-psychology-grid article {
+  min-height: 360px;
+  padding: 16px;
+  border-top: 1px solid var(--ps-terracotta);
+  background: var(--ps-steam);
+  display: flex;
+  flex-direction: column;
+}
+
+.wh-about-psychology-grid span {
+  color: var(--ps-terracotta);
+  font-family: var(--wh-sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.wh-about-psychology-grid h3 {
+  margin: auto 0 18px;
+  color: var(--ps-roast) !important;
+  font-family: var(--wh-serif);
+  font-size: clamp(30px, 3.2vw, 54px);
+  font-weight: 500;
+  line-height: .9;
+  letter-spacing: -.045em;
+}
+
+.wh-about-psychology-grid p {
+  min-height: 84px;
+  margin: 0;
+  color: rgba(92, 53, 24, .78) !important;
+  font-family: var(--wh-sans);
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.45;
+}
+
+.wh-about-proof {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: var(--wh-grid-gap);
+  margin: 0 var(--wh-gut) var(--wh-section-gap);
+  padding: clamp(56px, 7vw, 104px) var(--wh-gut);
+  background: var(--ps-terracotta);
+  color: var(--ps-steam);
+}
+
+.wh-about-proof-copy {
+  grid-column: 1 / 6;
+}
+
+.wh-about-proof-copy p {
+  margin: 0 0 18px;
+  color: rgba(250, 246, 238, .78) !important;
+  font-family: var(--wh-sans);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.wh-about-proof-copy h2 {
+  margin: 0;
+  color: var(--ps-steam) !important;
+  font-family: var(--wh-serif);
+  font-size: clamp(42px, 4.6vw, 78px);
+  font-weight: 500;
+  line-height: .9;
+  letter-spacing: -.05em;
+}
+
+.wh-about-proof-copy span {
+  display: block;
+  max-width: 38ch;
+  margin-top: 28px;
+  color: rgba(250, 246, 238, .84);
+  font-family: var(--wh-sans);
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.45;
+}
+
+.wh-about-proof-table {
+  grid-column: 7 / 13;
+  align-self: end;
+}
+
+.wh-about-proof-table div {
+  display: grid;
+  grid-template-columns: minmax(130px, .6fr) 1fr;
+  gap: 1.25rem;
+  padding: 1rem 0;
+  border-top: 1px solid rgba(250, 246, 238, .58);
+  font-family: var(--wh-sans);
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+.wh-about-proof-table div:last-child {
+  border-bottom: 1px solid rgba(250, 246, 238, .58);
+}
+
+.wh-about-proof-table strong {
+  color: var(--ps-steam) !important;
+  font-weight: 600 !important;
+}
+
+.wh-about-proof-table span {
+  color: rgba(250, 246, 238, .82) !important;
+  font-weight: 300;
+}
+
 /* About page philosophy section. */
 .wh-pillars .wh-page-rail header {
   margin-bottom: clamp(34px, 5vw, 72px);
@@ -3636,6 +3794,12 @@ body[data-page] .footer .ps-wordmark-coffee {
 }
 
 @media (max-width: 1180px) {
+  .wh-about-psychology-grid {
+    grid-template-columns: 1fr;
+  }
+  .wh-about-psychology-grid article {
+    min-height: 280px;
+  }
   .wh-pillar-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
   }
@@ -3648,6 +3812,33 @@ body[data-page] .footer .ps-wordmark-coffee {
 }
 
 @media (max-width: 640px) {
+  .wh-about-psychology,
+  .wh-about-proof {
+    margin-inline: 0;
+  }
+  .wh-about-psychology-head,
+  .wh-about-proof {
+    grid-template-columns: 1fr;
+  }
+  .wh-about-psychology-head p,
+  .wh-about-psychology-head h2,
+  .wh-about-proof-copy,
+  .wh-about-proof-table {
+    grid-column: auto;
+  }
+  .wh-about-psychology-grid article {
+    min-height: auto;
+  }
+  .wh-about-psychology-grid h3 {
+    margin-top: 72px;
+  }
+  .wh-about-psychology-grid p {
+    min-height: 0;
+  }
+  .wh-about-proof-table div {
+    grid-template-columns: 1fr;
+    gap: .35rem;
+  }
   .wh-pillar-grid {
     grid-template-columns: 1fr !important;
   }
