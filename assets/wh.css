@@ -3569,6 +3569,246 @@ body[data-page] .footer .news button {
   color: var(--ps-linen) !important;
 }
 
+/* Journal article pages. */
+.journal-post {
+  background: var(--ps-steam);
+  color: var(--ps-roast);
+}
+
+.journal-post article {
+  padding: 0 var(--wh-gut) var(--wh-section-gap);
+}
+
+.journal-post-hero {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: var(--wh-grid-gap);
+  min-height: clamp(520px, 70vh, 780px);
+  align-items: end;
+  padding: clamp(84px, 10vw, 150px) 0 clamp(32px, 5vw, 72px);
+  border-bottom: 1px solid var(--ps-terracotta);
+}
+
+.journal-post-hero > p {
+  grid-column: 1 / 4;
+  align-self: start;
+  margin: 0;
+  color: var(--ps-terracotta);
+  font-family: var(--wh-sans);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.journal-post-hero h1 {
+  grid-column: 4 / 13;
+  max-width: 1080px;
+  margin: 0;
+  color: var(--ps-roast);
+  font-family: var(--wh-serif);
+  font-size: clamp(54px, 7.8vw, 126px);
+  font-weight: 500;
+  line-height: .86;
+  letter-spacing: -.06em;
+}
+
+.journal-post-meta {
+  grid-column: 4 / 13;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem 1.25rem;
+  margin-top: 1.25rem;
+  color: rgba(92, 53, 24, .72);
+  font-family: var(--wh-sans);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.journal-post-meta span:not(:last-child)::after {
+  content: "○";
+  margin-left: 1.25rem;
+  color: var(--ps-terracotta);
+  font-size: 10px;
+}
+
+.journal-post-lede,
+.journal-post-body {
+  width: min(860px, 100%);
+  margin-inline: auto;
+}
+
+.journal-post-lede {
+  padding: clamp(58px, 7vw, 100px) 0 clamp(22px, 4vw, 44px);
+}
+
+.journal-post-lede p,
+.journal-post-body p,
+.journal-post-body li,
+.journal-faq details p {
+  color: rgba(92, 53, 24, .82);
+  font-family: var(--wh-sans);
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.62;
+}
+
+.journal-post-lede p {
+  margin: 0 0 1.25rem;
+  font-size: clamp(20px, 2vw, 28px);
+  line-height: 1.38;
+}
+
+.journal-post strong {
+  color: var(--ps-roast);
+  font-weight: 600;
+}
+
+.journal-post-body h2 {
+  margin: clamp(58px, 7vw, 92px) 0 1.25rem;
+  color: var(--ps-roast);
+  font-family: var(--wh-serif);
+  font-size: clamp(38px, 4.6vw, 72px);
+  font-weight: 500;
+  line-height: .92;
+  letter-spacing: -.052em;
+}
+
+.journal-post-body > p {
+  margin: 0 0 1.15rem;
+}
+
+.journal-table-wrap {
+  margin: clamp(28px, 4vw, 48px) 0;
+  overflow-x: auto;
+}
+
+.journal-post table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--ps-oat);
+  font-family: var(--wh-sans);
+}
+
+.journal-post th,
+.journal-post td {
+  padding: 1rem 0;
+  border-top: 1px solid rgba(61, 32, 16, .22);
+  text-align: left;
+}
+
+.journal-post th {
+  color: var(--ps-terracotta);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.journal-post td {
+  color: rgba(92, 53, 24, .82);
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.journal-post th:last-child,
+.journal-post td:last-child {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.journal-callout,
+.journal-ps-line,
+.journal-post-cta {
+  margin: clamp(36px, 5vw, 64px) 0;
+  padding: clamp(24px, 4vw, 42px);
+  background: var(--ps-oat);
+  border-top: 1px solid var(--ps-terracotta);
+}
+
+.journal-callout p,
+.journal-ps-line p,
+.journal-post-cta p {
+  margin: 0;
+}
+
+.journal-ps-line p {
+  color: var(--ps-terracotta);
+  font-size: clamp(24px, 3vw, 42px);
+  line-height: 1.06;
+}
+
+.journal-post-cta {
+  display: grid;
+  grid-template-columns: 1fr minmax(180px, 280px);
+  gap: var(--wh-grid-gap);
+  align-items: end;
+}
+
+.journal-post-cta a {
+  display: flex;
+  justify-content: space-between;
+  padding: .75rem 0;
+  border-top: 1px solid rgba(61, 32, 16, .42);
+  border-bottom: 1px solid rgba(61, 32, 16, .42);
+  color: var(--ps-terracotta);
+  font-family: var(--wh-sans);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.journal-post-cta a::after {
+  content: "→";
+}
+
+.journal-faq {
+  margin-top: clamp(58px, 7vw, 96px);
+}
+
+.journal-faq h2 {
+  margin-bottom: clamp(22px, 4vw, 42px);
+}
+
+.journal-faq details {
+  border-top: 1px solid rgba(61, 32, 16, .34);
+}
+
+.journal-faq details:last-child {
+  border-bottom: 1px solid rgba(61, 32, 16, .34);
+}
+
+.journal-faq summary {
+  position: relative;
+  cursor: pointer;
+  list-style: none;
+  padding: 1.05rem 2.2rem 1.05rem 0;
+  color: var(--ps-roast);
+  font-family: var(--wh-sans);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.journal-faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.journal-faq summary::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 1.05rem;
+  color: var(--ps-terracotta);
+}
+
+.journal-faq details[open] summary::after {
+  content: "−";
+}
+
+.journal-faq details p {
+  margin: 0;
+  padding: 0 0 1.2rem;
+}
+
 body[data-page="about"] .wh-page-kicker,
 body[data-page="about"] .wh-page-card a,
 body[data-page="about"] .wh-page-card button,
@@ -3619,6 +3859,18 @@ body[data-page="matcha"] .wh-page-card button {
 
 body[data-page] .footer .ps-wordmark-coffee {
   color: var(--ps-steam) !important;
+}
+
+.wh-page-list-rows a {
+  color: var(--ps-roast);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(232, 64, 12, .42);
+  transition: color .2s, border-color .2s;
+}
+
+.wh-page-list-rows a:hover {
+  color: var(--ps-terracotta);
+  border-bottom-color: var(--ps-terracotta);
 }
 
 .wh-about-note {
@@ -3902,6 +4154,40 @@ body[data-page] .footer .ps-wordmark-coffee {
 }
 
 @media (max-width: 640px) {
+  .journal-post article {
+    padding-inline: calc(var(--wh-gut) * .75);
+  }
+  .journal-post-hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding-top: 72px;
+  }
+  .journal-post-hero > p,
+  .journal-post-hero h1,
+  .journal-post-meta {
+    grid-column: auto;
+  }
+  .journal-post-hero h1 {
+    font-size: clamp(48px, 14vw, 68px);
+  }
+  .journal-post-meta span:not(:last-child)::after {
+    margin-left: .7rem;
+  }
+  .journal-post-lede p,
+  .journal-post-body p,
+  .journal-post-body li,
+  .journal-faq details p {
+    font-size: 16px;
+  }
+  .journal-post-body h2 {
+    font-size: clamp(34px, 10vw, 48px);
+  }
+  .journal-post-cta {
+    grid-template-columns: 1fr;
+  }
+  .journal-faq summary {
+    font-size: 16px;
+  }
   .wh-about-psychology,
   .wh-about-proof {
     margin-inline: 0;

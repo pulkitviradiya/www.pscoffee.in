@@ -15,29 +15,35 @@
     {href:"join.html",        label:"Join us",     n:"08", primary:false}
   ];
   var here = (location.pathname.split("/").pop() || "index.html").toLowerCase();
+  var assetDepth = location.pathname.indexOf("/journal/") !== -1 ? "../" : "";
+
+  function localHref(href){
+    if(!href || href.indexOf("http") === 0 || href.indexOf("mailto:") === 0 || href.charAt(0) === "#") return href;
+    return assetDepth + href;
+  }
 
 
   function navHTML(){
     var links = PAGES.filter(function(p){return p.primary;}).map(function(p){
       var act = (p.href === here) ? " active" : "";
       var cls = p.cls ? (" "+p.cls) : "";
-      return '<a href="'+p.href+'" class="'+(act+cls).trim()+'">'+p.label+'.</a>';
+      return '<a href="'+localHref(p.href)+'" class="'+(act+cls).trim()+'">'+p.label+'.</a>';
     }).join("");
     return '<div class="wh-announce">'+
         '<span>○ 100% Arabica. From ₹89. Your coffee is ready before you arrive.</span>'+
         '<span class="wh-region">₹ INR&nbsp;&nbsp;|&nbsp;&nbsp;India</span>'+
       '</div>'+
       '<nav class="nav" id="psNav">'+
-        '<a href="index.html" class="nav-logo" aria-label="P.S. Coffee home"><span class="ps-wordmark-ps">P.S.</span> <span class="ps-wordmark-coffee">Coffee.</span></a>'+
+        '<a href="'+localHref("index.html")+'" class="nav-logo" aria-label="P.S. Coffee home"><span class="ps-wordmark-ps">P.S.</span> <span class="ps-wordmark-coffee">Coffee.</span></a>'+
         '<div class="nav-links">'+links+'</div>'+
         '<div class="nav-tools">'+
-          '<a href="join.html" class="ntool ntool-text'+(here==='join.html'?' active':'')+'" title="Join us">Join us.</a>'+
-          '<a href="partnership.html" class="ntool ntool-text'+(here==='partnership.html'?' active':'')+'" title="Partner">Partner.</a>'+
+          '<a href="'+localHref("join.html")+'" class="ntool ntool-text'+(here==='join.html'?' active':'')+'" title="Join us">Join us.</a>'+
+          '<a href="'+localHref("partnership.html")+'" class="ntool ntool-text'+(here==='partnership.html'?' active':'')+'" title="Partner">Partner.</a>'+
           '<button class="nav-burger" id="psBurger" aria-label="Menu"><span></span><span></span><span></span></button>'+
         '</div>'+
       '</nav>'+
       '<div class="drawer" id="psDrawer">'+
-        PAGES.map(function(p){return '<a href="'+p.href+'"><span>'+p.label+'.</span><span class="n">'+p.n+'</span></a>';}).join("")+
+        PAGES.map(function(p){return '<a href="'+localHref(p.href)+'"><span>'+p.label+'.</span><span class="n">'+p.n+'</span></a>';}).join("")+
       '</div>';
   }
 
@@ -47,14 +53,14 @@
         '<div class="f-top">'+
           '<div class="f-col f-brand">'+
             '<div class="display ps-wordmark"><span class="ps-wordmark-ps">P.S.</span> <span class="ps-wordmark-coffee">Coffee.</span></div>'+
-            '<a href="story.html">Story</a><a href="blogs.html">Blogs</a><a href="join.html">Join Us</a><a href="partnership.html">Partner</a>'+
+            '<a href="'+localHref("story.html")+'">Story</a><a href="'+localHref("blogs.html")+'">Blogs</a><a href="'+localHref("join.html")+'">Join Us</a><a href="'+localHref("partnership.html")+'">Partner</a>'+
             '<a href="https://www.thebarista.school" target="_blank" rel="noopener">Barista School ↗</a>'+
           '</div>'+
           '<div class="f-col"><h4>Pods.</h4>'+
-            '<a href="about.html#pods">Visit us</a><a href="app.html">Order ahead</a><a href="partnership.html#host">Host a Pod</a>'+
+            '<a href="'+localHref("about.html#pods")+'">Visit us</a><a href="'+localHref("app.html")+'">Order ahead</a><a href="'+localHref("partnership.html#host")+'">Host a Pod</a>'+
           '</div>'+
           '<div class="f-col"><h4>Help & Info.</h4>'+
-            '<a href="index.html#waitlist">FAQs</a><a href="mailto:hello@pscoffee.in">Contact</a>'+
+            '<a href="'+localHref("index.html#waitlist")+'">FAQs</a><a href="mailto:hello@pscoffee.in">Contact</a>'+
           '</div>'+
           '<div class="f-col f-mosaic" aria-label="P.S. Coffee imagery">'+
             '<span></span><span></span><span></span><span></span>'+
