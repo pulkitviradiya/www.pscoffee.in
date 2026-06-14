@@ -5,6 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>P.S. Coffee. | Blogs.</title>
 <meta name="description" content="The P.S. Journal: short reads on coffee, sourcing, habits, Pods, and Ahmedabad specialty coffee culture.">
+<link rel="canonical" href="https://www.pscoffee.in/blogs">
+<meta property="og:title" content="The P.S. Journal | P.S. Coffee.">
+<meta property="og:description" content="Plain notes on specialty coffee, Pods, pricing, habits, and the city we are building for.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.pscoffee.in/blogs">
 <link rel="stylesheet" href="assets/ps.css">
 <link rel="stylesheet" href="assets/wh.css">
 </head>
@@ -13,52 +18,131 @@
 <div class="page-top"></div>
 
 <main class="wh-page">
-  <section class="wh-page-hero is-light">
-    <div class="wh-page-hero-copy">
-      <p class="wh-page-kicker">Blogs.</p>
-      <h1>The P.S. Journal.</h1>
-      <footer>
-        <p>Where we write about coffee, sourcing, habits, and why Ahmedabad deserved specialty before now.</p>
-        <a href="#journal">Start reading</a>
-      </footer>
+  <section class="journal-index-hero">
+    <div class="journal-index-title">
+      <p>The P.S. Journal.</p>
+      <h1>Journal.</h1>
     </div>
-    <div class="wh-page-hero-media"><image-slot id="blogs-hero" shape="rect" src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&q=80&w=1600" placeholder="The P.S. Journal" fit="cover"></image-slot></div>
-  </section>
-
-  <section class="wh-page-statement">
-    <p>Short reads. Honest takes.</p>
-    <h2>No content-marketing cheerfulness. Just coffee, city, habit, and the occasional useful argument.</h2>
-  </section>
-
-  <section class="wh-page-rail" id="journal">
-    <header><h2>What we write about.</h2><p>Four lanes. Plain language. Written for the curious, not the expert.</p></header>
-    <div class="wh-page-cards">
-      <article class="wh-page-card"><div class="wh-page-card-img"><image-slot id="blogs-bean" shape="rect" src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=80&w=900" placeholder="Coffee beans and sourcing" fit="cover"></image-slot></div><h3>The bean.</h3><p>Origin stories, sourcing, and why Arabica matters without turning the reader into a Q-grader.</p><a href="#articles">Read titles</a></article>
-      <article class="wh-page-card"><div class="wh-page-card-img"><image-slot id="blogs-habit" shape="rect" src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=900" placeholder="Daily coffee habit" fit="cover"></image-slot></div><h3>The habit.</h3><p>Morning routines, daily loops, and why people reach for coffee before they reach for logic.</p><a href="#articles">Read titles</a></article>
-      <article class="wh-page-card"><div class="wh-page-card-img"><image-slot id="blogs-pod" shape="rect" src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=900" placeholder="P.S. Coffee Pod" fit="cover"></image-slot></div><h3>The Pod.</h3><p>Behind the counter: Pod days, barista profiles, systems, and new openings.</p><a href="about.html#pods">See Pods</a></article>
-      <article class="wh-page-card"><div class="wh-page-card-img"><image-slot id="blogs-city" shape="rect" src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&q=80&w=900" placeholder="Ahmedabad city" fit="cover"></image-slot></div><h3>The city.</h3><p>Ahmedabad coffee culture, what is changing, and where specialty is going in Gujarat.</p><a href="#articles">Read titles</a></article>
+    <div class="journal-index-intro">
+      <p>Notes on the cup, the format around it, and the small daily habit we are trying to make more honest.</p>
+      <a href="#latest">Read latest</a>
     </div>
   </section>
 
-  <section class="wh-page-list" id="articles">
-    <div class="wh-page-list-grid">
-      <div class="wh-page-list-copy"><h2>First notes.</h2></div>
-      <div class="wh-page-list-rows">
-        <p><span>The habit.</span><span><a href="journal/why-specialty-coffee-costs-300-rupees-india.html">Why your ₹89 cup is better than their ₹320 one.</a></span></p>
-        <p><span>The Pod.</span><span><a href="journal/why-we-built-pods-not-cafes.html">We are building a specialty coffee brand without a cafe. Here is why.</a></span></p>
-        <p><span>The bean.</span><span>What is Arabica, actually? Plain and simple.</span></p>
-        <p><span>The bean.</span><span>The Chikmagalur estate that supplies your morning.</span></p>
-        <p><span>The habit.</span><span>How we think about building a coffee habit in a chai city.</span></p>
-        <p><span>The city.</span><span>We tested 11 co-working spaces in Ahmedabad. Here is what we found.</span></p>
-        <p><span>The bean.</span><span>Matcha in Ahmedabad: why ceremonial grade matters.</span></p>
-        <p><span>The habit.</span><span>The 3pm slump is a myth. Here is what is actually happening.</span></p>
+  <section class="journal-topic-bar" aria-label="Journal topics">
+    <span>Topics:</span>
+    <a href="#latest" class="is-active">All</a>
+    <a href="#coffee">Coffee</a>
+    <a href="#pods">Pods</a>
+    <a href="#habit">Habit</a>
+    <a href="#city">City</a>
+  </section>
+
+  <section class="journal-feature-grid" id="latest" aria-label="Featured journal posts">
+    <article class="journal-feature-card is-large" id="coffee">
+      <a href="journal/why-specialty-coffee-costs-300-rupees-india.html" aria-label="Read why specialty coffee in India still costs 300 rupees">
+        <div class="journal-card-media">
+          <image-slot id="journal-card-01" shape="rect" src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=80&w=1400" placeholder="Arabica beans under soft morning light" fit="cover"></image-slot>
+        </div>
+        <div class="journal-card-copy">
+          <p><span>01</span><span>Coffee</span><span>7 min read</span></p>
+          <h2>Why specialty coffee in India still costs ₹300.</h2>
+          <small>Where the overhead actually goes, and why ₹89 can still mean serious coffee.</small>
+        </div>
+      </a>
+    </article>
+
+    <article class="journal-feature-card" id="pods">
+      <a href="journal/why-we-built-pods-not-cafes.html" aria-label="Read why P.S. Coffee built Pods, not cafes">
+        <div class="journal-card-media">
+          <image-slot id="journal-card-02" shape="rect" src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=1000" placeholder="Compact specialty coffee Pod counter" fit="cover"></image-slot>
+        </div>
+        <div class="journal-card-copy">
+          <p><span>02</span><span>Pods</span><span>6 min read</span></p>
+          <h2>Why we built Pods, not cafes.</h2>
+          <small>The format around the cup was the real problem.</small>
+        </div>
+      </a>
+    </article>
+  </section>
+
+  <section class="journal-index-note">
+    <p>Spotlight.</p>
+    <h2>The daily drinker is not looking for theatre. They are looking for a better usual.</h2>
+  </section>
+
+  <section class="journal-card-grid" aria-label="Journal archive">
+    <article class="journal-mini-card" id="habit">
+      <a href="journal/why-specialty-coffee-costs-300-rupees-india.html">
+        <div class="journal-mini-media">
+          <image-slot id="journal-mini-01" shape="rect" src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=900" placeholder="Morning coffee habit" fit="cover"></image-slot>
+        </div>
+        <p>Habit</p>
+        <h3>₹89 is not a discount. It is a different structure.</h3>
+        <small>Read more <span>→</span></small>
+      </a>
+    </article>
+
+    <article class="journal-mini-card">
+      <a href="journal/why-we-built-pods-not-cafes.html">
+        <div class="journal-mini-media">
+          <image-slot id="journal-mini-02" shape="rect" src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&q=80&w=900" placeholder="Barista preparing espresso" fit="cover"></image-slot>
+        </div>
+        <p>Format</p>
+        <h3>The queue was never part of the ritual.</h3>
+        <small>Read more <span>→</span></small>
+      </a>
+    </article>
+
+    <article class="journal-signup-card">
+      <div>
+        <p>Our notes. Your inbox.</p>
+        <h3>P.S. We write when there is something useful to say.</h3>
       </div>
-    </div>
+      <form class="journal-signup-form" data-ps-form="newsletter">
+        <input name="email" type="email" required placeholder="Email address" aria-label="Email address">
+        <button type="submit" aria-label="Subscribe">→</button>
+      </form>
+    </article>
+
+    <article class="journal-mini-card" id="city">
+      <a href="journal/why-we-built-pods-not-cafes.html">
+        <div class="journal-mini-media">
+          <image-slot id="journal-mini-03" shape="rect" src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&q=80&w=900" placeholder="Ahmedabad city in warm light" fit="cover"></image-slot>
+        </div>
+        <p>City</p>
+        <h3>Why Gujarat is still waiting for grab-and-go specialty coffee.</h3>
+        <small>Read more <span>→</span></small>
+      </a>
+    </article>
+
+    <article class="journal-mini-card">
+      <a href="menu.html?cat=matcha#menu-matcha">
+        <div class="journal-mini-media">
+          <image-slot id="journal-mini-04" shape="rect" src="https://images.unsplash.com/photo-1515823064-d6e0c04616a7?auto=format&fit=crop&q=80&w=900" placeholder="Matcha preparation with soft green colour" fit="cover"></image-slot>
+        </div>
+        <p>Matcha</p>
+        <h3>Ceremonial grade should not need a ceremony.</h3>
+        <small>Explore menu <span>→</span></small>
+      </a>
+    </article>
+
+    <article class="journal-mini-card">
+      <a href="story.html">
+        <div class="journal-mini-media">
+          <image-slot id="journal-mini-05" shape="rect" src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&q=80&w=900" placeholder="Simple cup of coffee" fit="cover"></image-slot>
+        </div>
+        <p>Plain & simple</p>
+        <h3>The postscript is the line that quietly becomes the point.</h3>
+        <small>Read story <span>→</span></small>
+      </a>
+    </article>
   </section>
 
-  <section class="wh-page-statement">
-    <p>Never miss a new post.</p>
-    <h2>P.S. We write when we have something worth saying. Which is not very often. Which is why it is worth reading when we do.</h2>
+  <section class="journal-pagination" aria-label="Journal pagination">
+    <span>01</span>
+    <span>02</span>
+    <a href="#latest">Next →</a>
   </section>
 </main>
 
