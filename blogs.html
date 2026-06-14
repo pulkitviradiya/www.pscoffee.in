@@ -20,12 +20,44 @@
 <main class="wh-page">
   <section class="journal-index-hero">
     <div class="journal-index-title">
-      <p>The P.S. Journal.</p>
       <h1>Journal.</h1>
     </div>
-    <div class="journal-index-intro">
-      <p>Notes on the cup, the format around it, and the small daily habit we are trying to make more honest.</p>
-      <a href="#latest">Read latest</a>
+    <div class="journal-hero-slider" data-journal-slider>
+      <a class="journal-hero-slide is-active" href="journal/why-specialty-coffee-costs-300-rupees-india.html" data-slide="0">
+        <image-slot id="journal-hero-01" shape="rect" src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=82&w=1800" placeholder="Arabica beans for P.S. Coffee journal" fit="cover"></image-slot>
+        <div class="journal-hero-overlay">
+          <h2>Why specialty coffee still costs ₹300.</h2>
+          <div>
+            <strong>Preview.</strong>
+            <p>The cup is not the expensive part. The room around it is.</p>
+          </div>
+        </div>
+      </a>
+      <a class="journal-hero-slide" href="journal/why-we-built-pods-not-cafes.html" data-slide="1">
+        <image-slot id="journal-hero-02" shape="rect" src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=82&w=1800" placeholder="P.S. Coffee Pod format" fit="cover"></image-slot>
+        <div class="journal-hero-overlay">
+          <h2>Why we built Pods, not cafes.</h2>
+          <div>
+            <strong>Preview.</strong>
+            <p>Same bean standard. Less rent, less theatre, fewer things you never asked for.</p>
+          </div>
+        </div>
+      </a>
+      <a class="journal-hero-slide" href="story.html#psychology" data-slide="2">
+        <image-slot id="journal-hero-03" shape="rect" src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&q=82&w=1800" placeholder="Simple P.S. Coffee cup" fit="cover"></image-slot>
+        <div class="journal-hero-overlay">
+          <h2>The line after the main message.</h2>
+          <div>
+            <strong>P.S. Psychology.</strong>
+            <p>A better cup, exactly when you need it, without arranging your life around it.</p>
+          </div>
+        </div>
+      </a>
+      <div class="journal-hero-count" aria-label="Featured journal slider">
+        <button class="is-active" type="button" data-journal-go="0" aria-label="Show first journal feature">01</button>
+        <button type="button" data-journal-go="1" aria-label="Show second journal feature">02</button>
+        <button type="button" data-journal-go="2" aria-label="Show third journal feature">03</button>
+      </div>
     </div>
   </section>
 
@@ -149,5 +181,41 @@
 <div id="ps-footer"></div>
 <script src="assets/image-slot.js"></script>
 <script src="assets/ps.js?v=5"></script>
+<script>
+(function(){
+  var slider = document.querySelector("[data-journal-slider]");
+  if(!slider) return;
+  var slides = Array.from(slider.querySelectorAll(".journal-hero-slide"));
+  var buttons = Array.from(slider.querySelectorAll("[data-journal-go]"));
+  var index = 0;
+  var timer = null;
+
+  function show(next){
+    index = (next + slides.length) % slides.length;
+    slides.forEach(function(slide, i){ slide.classList.toggle("is-active", i === index); });
+    buttons.forEach(function(button, i){ button.classList.toggle("is-active", i === index); });
+  }
+
+  function start(){
+    timer = window.setInterval(function(){ show(index + 1); }, 5200);
+  }
+
+  function restart(){
+    if(timer) window.clearInterval(timer);
+    start();
+  }
+
+  buttons.forEach(function(button){
+    button.addEventListener("click", function(){
+      show(parseInt(button.getAttribute("data-journal-go"), 10));
+      restart();
+    });
+  });
+
+  slider.addEventListener("mouseenter", function(){ if(timer) window.clearInterval(timer); });
+  slider.addEventListener("mouseleave", restart);
+  start();
+})();
+</script>
 </body>
 </html>
