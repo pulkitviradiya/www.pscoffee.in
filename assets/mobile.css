@@ -213,15 +213,15 @@
 
   .wh-home-shop {
     display: block !important;
-    padding-top: 6px !important;
-    padding-bottom: 38px !important;
+    padding-top: 0 !important;
+    padding-bottom: 34px !important;
   }
 
   .wh-home-shop h2 {
-    max-width: 13ch;
-    margin-bottom: 10px !important;
-    font-size: clamp(28px, 8.4vw, 38px) !important;
-    line-height: .94 !important;
+    max-width: none;
+    margin-bottom: 12px !important;
+    font-size: clamp(26px, 7.2vw, 32px) !important;
+    line-height: .98 !important;
   }
 
   .wh-home-cards {
@@ -393,6 +393,8 @@
   }
 
   .wh-product-card {
+    display: flex;
+    flex-direction: column;
     scroll-snap-align: start;
   }
 
@@ -470,7 +472,7 @@
   .wh-page-hero {
     grid-template-columns: 1fr !important;
     min-height: 0 !important;
-    margin: 0 var(--mobile-gut) 42px !important;
+    margin: 0 var(--mobile-gut) 30px !important;
   }
 
   .menu-hero-copy,
@@ -482,35 +484,39 @@
 
   .menu-hero-copy,
   .wh-page-hero-copy {
-    min-height: 286px !important;
-    padding: 18px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 244px !important;
+    padding: 20px 18px 18px !important;
   }
 
   .menu-hero-copy p,
   .wh-page-kicker {
     position: static !important;
-    margin: 0 0 auto !important;
+    margin: 0 0 28px !important;
     font-size: 13px !important;
   }
 
   .menu-hero-copy h1,
   .wh-page-hero h1,
   .journal-post-hero h1 {
-    font-size: clamp(36px, 10.5vw, 54px) !important;
-    line-height: .9 !important;
+    font-size: clamp(34px, 9.5vw, 46px) !important;
+    line-height: .92 !important;
     letter-spacing: -.055em !important;
-    margin-bottom: 16px !important;
+    margin: 0 0 16px !important;
   }
 
   .menu-hero-copy div,
   .wh-page-hero-copy footer {
+    display: grid !important;
     grid-template-columns: 1fr !important;
-    gap: 14px !important;
+    gap: 12px !important;
+    margin-top: auto !important;
   }
 
   .menu-hero-image,
   .wh-page-hero-media {
-    aspect-ratio: 16 / 9 !important;
+    aspect-ratio: 1 / .78 !important;
   }
 
   .menu-filter-wh,
@@ -532,7 +538,7 @@
   .journal-index-note {
     display: block !important;
     margin: 0 !important;
-    padding: 30px var(--mobile-gut) 42px !important;
+    padding: 26px var(--mobile-gut) 34px !important;
   }
 
   .menu-statement-wh p,
@@ -569,11 +575,14 @@
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     column-gap: 12px !important;
     row-gap: 20px !important;
+    align-items: stretch !important;
   }
 
   .menu-products-wh .menu-product-wh,
   .menu-products-wh .menu-product-wh:not(:nth-child(2n+1)),
   .menu-products-wh .menu-product-wh:not(:nth-child(3n+1)) {
+    display: flex !important;
+    flex-direction: column !important;
     border-left: 0 !important;
     padding-left: 0 !important;
   }
@@ -599,17 +608,18 @@
   }
 
   .menu-product-note {
-    min-height: 0 !important;
+    min-height: 52px !important;
     font-size: 10.5px !important;
     line-height: 1.25 !important;
     margin-top: 6px !important;
   }
 
   .menu-product-price {
-    min-height: 30px !important;
-    margin-top: 8px !important;
-    padding: 6px 0 !important;
+    min-height: 36px !important;
+    margin-top: auto !important;
+    padding: 8px 0 !important;
     font-size: 11px !important;
+    align-items: center !important;
   }
 
   .menu-product-img::before {
@@ -634,12 +644,12 @@
   .menu-board-wh,
   .wh-page-list {
     margin: 0 0 var(--mobile-section) !important;
-    padding: 38px var(--mobile-gut) !important;
+    padding: 30px var(--mobile-gut) !important;
   }
 
   .menu-board-wh h2,
   .wh-page-list-copy h2 {
-    font-size: clamp(38px, 11vw, 56px) !important;
+    font-size: clamp(34px, 9.5vw, 46px) !important;
   }
 
   .menu-board-list p,
@@ -672,6 +682,37 @@
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
+  }
+
+  body[data-page="about"] .wh-page-statement {
+    padding-bottom: 24px !important;
+  }
+
+  body[data-page="about"] .wh-page-rail {
+    padding-top: 0 !important;
+    padding-bottom: 32px !important;
+  }
+
+  body[data-page="about"] .wh-page-rail header {
+    margin-bottom: 10px !important;
+  }
+
+  body[data-page="about"] .wh-page-list {
+    margin-bottom: 34px !important;
+    padding-top: 26px !important;
+    padding-bottom: 28px !important;
+  }
+
+  body[data-page="about"] .wh-page-list-grid {
+    gap: 10px !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  body[data-page="about"] .wh-page-list-rows p {
+    grid-template-columns: 1fr !important;
+    gap: 4px !important;
+    padding: 8px 0 !important;
   }
 
   .wh-page-cards::-webkit-scrollbar {
