@@ -16,7 +16,7 @@
     {href:"join.html",        label:"Join us",     n:"09", primary:false}
   ];
   var here = (location.pathname.split("/").pop() || "index.html").toLowerCase();
-  var assetDepth = location.pathname.indexOf("/journal/") !== -1 ? "../" : "";
+  var assetDepth = location.pathname.indexOf("/blog/") !== -1 ? "../" : "";
 
   function localHref(href){
     if(!href || href.indexOf("http") === 0 || href.indexOf("mailto:") === 0 || href.charAt(0) === "#") return href;
