@@ -14,3 +14,6 @@ npm-debug.log*
 
 # Dependencies (none needed — this is a static site)
 node_modules/
+
+# Source image drops; optimized site images live in assets/photos/site/
+assets/photos/*.png

@@ -4824,6 +4824,16 @@ body[data-page] .footer .ps-wordmark-coffee {
   line-height: 1.45;
 }
 
+.wh-about-story-media {
+  margin-top: clamp(28px, 3vw, 44px);
+}
+
+.wh-about-story-media image-slot {
+  display: block;
+  width: 100%;
+  height: clamp(280px, 34vw, 560px);
+}
+
 .wh-about-story-body {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -4924,9 +4934,13 @@ body[data-page] .footer .ps-wordmark-coffee {
   background: var(--ps-oat);
 }
 
-.wh-founder-placeholder {
+.wh-founder-placeholder,
+.wh-about-founder-media image-slot {
   height: 100%;
   min-height: 430px;
+}
+
+.wh-founder-placeholder {
   padding: 18px;
   border-top: 1px solid var(--ps-terracotta);
   background:
@@ -5287,7 +5301,8 @@ body[data-page] .footer .ps-wordmark-coffee {
   }
   .wh-about-ps-panel,
   .wh-about-founder-media,
-  .wh-founder-placeholder {
+  .wh-founder-placeholder,
+  .wh-about-founder-media image-slot {
     min-height: 320px;
   }
   .wh-about-psychology-grid {
@@ -5425,6 +5440,9 @@ body[data-page] .footer .ps-wordmark-coffee {
   .wh-about-story-body {
     gap: 1.1rem;
   }
+  .wh-about-story-media image-slot {
+    height: 260px;
+  }
   .wh-about-story-body p,
   .wh-about-ps-copy div p,
   .wh-about-founder-copy p:not(:first-child) {
@@ -5444,7 +5462,8 @@ body[data-page] .footer .ps-wordmark-coffee {
   }
   .wh-about-ps-panel,
   .wh-about-founder-media,
-  .wh-founder-placeholder {
+  .wh-founder-placeholder,
+  .wh-about-founder-media image-slot {
     min-height: 280px;
   }
   .wh-about-quality {

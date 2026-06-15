@@ -603,7 +603,11 @@
       // (Claude wrote it into the HTML) so it passes through unchanged.
       let stored = this.id ? getSlot(this.id) : this._local;
       if (stored && stored.u && !/^data:image\//i.test(stored.u)) stored = null;
-      const srcAttr = this.getAttribute('src') || '';
+      const baseSrcAttr = this.getAttribute('src') || '';
+      const mobileSrcAttr = this.getAttribute('mobile-src') || this.getAttribute('data-mobile-src') || '';
+      const srcAttr = mobileSrcAttr && window.matchMedia && window.matchMedia('(max-width: 760px)').matches
+        ? mobileSrcAttr
+        : baseSrcAttr;
       this._userUrl = (stored && stored.u) || null;
       const url = this._userUrl || srcAttr;
       // Don't clobber an in-flight reframe with a store-triggered re-render.
