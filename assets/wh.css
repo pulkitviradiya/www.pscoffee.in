@@ -25,6 +25,158 @@
   --wh-sec-v:      clamp(72px,9vw,140px);
 }
 
+/* ============================================================
+   EVENTS PAGE
+   ============================================================ */
+body[data-page="events"] .wh-page {
+  background: var(--ps-steam) !important;
+}
+
+.events-hero .wh-page-hero-copy {
+  background: var(--ps-terracotta);
+}
+
+.events-statement p {
+  color: var(--ps-terracotta) !important;
+}
+
+.events-types {
+  padding-bottom: clamp(76px, 8vw, 118px);
+}
+
+.events-type-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.events-type-grid .wh-page-card p {
+  min-height: 78px;
+}
+
+.events-values {
+  background: var(--ps-oat) !important;
+}
+
+.events-showcase {
+  margin: 0 var(--wh-gut) var(--wh-section-gap);
+}
+
+.events-showcase header {
+  display: grid;
+  grid-template-columns: minmax(240px, .55fr) 1fr;
+  gap: var(--wh-grid-gap);
+  align-items: end;
+  margin-bottom: 18px;
+  padding-top: 12px;
+  border-top: 1px solid var(--ps-roast);
+}
+
+.events-showcase h2 {
+  margin: 0;
+  color: var(--ps-roast);
+  font-family: var(--wh-serif);
+  font-size: clamp(46px, 5vw, 86px);
+  font-weight: 500;
+  line-height: .9;
+  letter-spacing: -.055em;
+}
+
+.events-showcase header p {
+  justify-self: end;
+  max-width: 520px;
+  margin: 0 0 .35rem;
+  color: rgba(92, 53, 24, .78);
+  font-family: var(--wh-sans);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.35;
+}
+
+.events-slider {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(320px, 31vw);
+  grid-template-columns: none;
+  gap: var(--wh-grid-gap);
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+}
+
+.event-slide-card {
+  min-width: 0;
+  padding-top: 12px;
+  border-top: 1px solid var(--ps-roast);
+  scroll-snap-align: start;
+}
+
+.event-slide-card image-slot {
+  display: block;
+  width: 100%;
+  aspect-ratio: .92;
+  background: var(--ps-oat);
+}
+
+.event-slide-card p {
+  margin: .9rem 0 .55rem;
+  color: var(--ps-terracotta);
+  font-family: var(--wh-sans);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.event-slide-card h3 {
+  min-height: 2em;
+  margin: 0 0 .85rem;
+  color: var(--ps-roast);
+  font-family: var(--wh-serif);
+  font-size: clamp(30px, 3.2vw, 54px);
+  font-weight: 500;
+  line-height: .94;
+  letter-spacing: -.055em;
+}
+
+.event-slide-card a {
+  display: flex;
+  justify-content: space-between;
+  min-height: 36px;
+  padding: .58rem 0;
+  border-top: 1px solid var(--ps-linen);
+  border-bottom: 1px solid var(--ps-linen);
+  color: var(--ps-roast);
+  font-family: var(--wh-sans);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.events-cta {
+  margin-bottom: clamp(58px, 7vw, 96px);
+}
+
+.events-cta a:first-child::after {
+  background: rgba(232,64,12,.28);
+}
+
+@media(max-width: 960px) {
+  .events-type-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .events-showcase header {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .events-showcase header p {
+    justify-self: start;
+  }
+}
+
 /* ── global font override ── */
 body {
   font-family: var(--wh-sans);
@@ -4418,14 +4570,19 @@ body[data-page="about"] .wh-page-list-rows span:first-child,
 body[data-page="partnership"] .wh-page-kicker,
 body[data-page="partnership"] .wh-page-card a,
 body[data-page="partnership"] .wh-page-card button,
-body[data-page="partnership"] .wh-page-list-rows span:first-child {
+body[data-page="partnership"] .wh-page-list-rows span:first-child,
+body[data-page="events"] .wh-page-kicker,
+body[data-page="events"] .wh-page-card a,
+body[data-page="events"] .wh-page-card button,
+body[data-page="events"] .wh-page-list-rows span:first-child {
   color: var(--ps-terracotta) !important;
 }
 
 body[data-page="about"] .wh-page-hero,
 body[data-page="partnership"] .wh-page-hero,
 body[data-page="story"] .wh-page-hero,
-body[data-page="pack"] .wh-page-hero {
+body[data-page="pack"] .wh-page-hero,
+body[data-page="events"] .wh-page-hero {
   background: var(--ps-terracotta) !important;
 }
 

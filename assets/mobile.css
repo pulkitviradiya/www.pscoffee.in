@@ -727,6 +727,72 @@
     aspect-ratio: 1 / 1 !important;
   }
 
+  body[data-page="events"] .wh-page-hero {
+    margin-bottom: 24px !important;
+  }
+
+  body[data-page="events"] .wh-page-hero-copy {
+    min-height: 270px !important;
+  }
+
+  body[data-page="events"] .wh-page-hero-media {
+    aspect-ratio: 1 / .78 !important;
+  }
+
+  body[data-page="events"] .events-statement {
+    padding-top: 22px !important;
+  }
+
+  body[data-page="events"] .events-types {
+    padding-bottom: 34px !important;
+  }
+
+  body[data-page="events"] .events-type-grid .wh-page-card p {
+    min-height: 0 !important;
+  }
+
+  body[data-page="events"] .events-showcase {
+    margin: 0 var(--mobile-gut) var(--mobile-section) !important;
+  }
+
+  body[data-page="events"] .events-showcase header {
+    display: block !important;
+    margin-bottom: 12px !important;
+    padding-top: 10px !important;
+  }
+
+  body[data-page="events"] .events-showcase h2 {
+    font-size: clamp(34px, 10vw, 48px) !important;
+  }
+
+  body[data-page="events"] .events-showcase header p {
+    margin-top: 8px !important;
+    font-size: 13px !important;
+  }
+
+  body[data-page="events"] .events-slider {
+    grid-auto-columns: minmax(230px, calc(82vw - var(--mobile-gut))) !important;
+    gap: 14px !important;
+    scrollbar-width: none;
+  }
+
+  body[data-page="events"] .events-slider::-webkit-scrollbar {
+    display: none;
+  }
+
+  body[data-page="events"] .event-slide-card image-slot {
+    aspect-ratio: 1 / 1 !important;
+  }
+
+  body[data-page="events"] .event-slide-card h3 {
+    min-height: 0 !important;
+    font-size: clamp(28px, 8vw, 38px) !important;
+  }
+
+  body[data-page="events"] .event-slide-card a {
+    font-size: 11px !important;
+  }
+
   .journal-index-hero {
     display: block !important;
     min-height: 0 !important;
