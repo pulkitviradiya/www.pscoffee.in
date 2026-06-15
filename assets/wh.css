@@ -3572,10 +3572,10 @@ body[data-page] .footer .news button {
 /* Journal index. */
 .journal-index-hero {
   display: grid;
-  grid-template-columns: minmax(180px, .34fr) minmax(0, 1fr);
+  grid-template-columns: minmax(180px, .33fr) minmax(0, 1fr);
   gap: var(--wh-grid-gap);
   align-items: start;
-  padding: clamp(86px, 10vw, 142px) var(--wh-gut) clamp(54px, 7vw, 100px);
+  padding: clamp(42px, 5vw, 76px) var(--wh-gut) clamp(28px, 4vw, 54px);
   background: var(--ps-steam);
 }
 
@@ -3594,9 +3594,9 @@ body[data-page] .footer .news button {
 .journal-index-title h1 {
   margin: 0;
   color: var(--ps-roast);
-  padding-top: clamp(18px, 2vw, 28px);
+  padding-top: 14px;
   border-top: 1px solid var(--ps-roast);
-  font-size: clamp(30px, 2.7vw, 44px);
+  font-size: clamp(28px, 2.5vw, 38px);
   font-weight: 500;
   line-height: .92;
   letter-spacing: -.04em;
@@ -3614,7 +3614,7 @@ body[data-page] .footer .news button {
 
 .journal-hero-slider {
   position: relative;
-  min-height: clamp(520px, 52vw, 760px);
+  min-height: clamp(360px, 36vw, 560px);
   border-top: 1px solid var(--ps-roast);
   background: var(--ps-roast);
   overflow: hidden;
@@ -3654,7 +3654,7 @@ body[data-page] .footer .news button {
 
 .journal-hero-overlay {
   position: absolute;
-  inset: clamp(28px, 4vw, 58px);
+  inset: clamp(22px, 3vw, 42px);
   z-index: 2;
   display: grid;
   grid-template-rows: auto 1fr auto;
@@ -3662,13 +3662,13 @@ body[data-page] .footer .news button {
 }
 
 .journal-hero-overlay h2 {
-  max-width: 760px;
+  max-width: 690px;
   margin: 0;
   color: var(--ps-steam);
   font-family: var(--wh-serif);
-  font-size: clamp(52px, 6.2vw, 104px);
+  font-size: clamp(42px, 5.1vw, 78px);
   font-weight: 500;
-  line-height: .86;
+  line-height: .88;
   letter-spacing: -.06em;
 }
 
@@ -3682,25 +3682,25 @@ body[data-page] .footer .news button {
   margin-bottom: 4px;
   color: var(--ps-steam);
   font-family: var(--wh-sans);
-  font-size: clamp(18px, 1.4vw, 25px);
+  font-size: clamp(16px, 1.15vw, 21px);
   font-weight: 700;
 }
 
 .journal-hero-overlay p {
   margin: 0;
   color: rgba(250, 246, 238, .9);
-  font-size: clamp(16px, 1.35vw, 24px);
+  font-size: clamp(15px, 1.1vw, 20px);
   font-weight: 300;
   line-height: 1.35;
 }
 
 .journal-hero-count {
   position: absolute;
-  right: clamp(24px, 3vw, 46px);
-  bottom: clamp(24px, 3vw, 46px);
+  right: clamp(22px, 2.6vw, 38px);
+  bottom: clamp(22px, 2.6vw, 38px);
   z-index: 3;
   display: flex;
-  gap: clamp(14px, 1.8vw, 28px);
+  gap: clamp(12px, 1.4vw, 22px);
 }
 
 .journal-hero-count button {
@@ -3710,7 +3710,7 @@ body[data-page] .footer .news button {
   color: rgba(250, 246, 238, .52);
   cursor: pointer;
   font-family: var(--wh-serif);
-  font-size: clamp(20px, 1.6vw, 30px);
+  font-size: clamp(18px, 1.3vw, 25px);
   font-weight: 500;
   line-height: 1;
 }
@@ -3724,9 +3724,9 @@ body[data-page] .footer .news button {
   top: var(--wh-header-h);
   z-index: 7;
   display: flex;
-  gap: clamp(18px, 3vw, 42px);
+  gap: clamp(18px, 2.6vw, 36px);
   align-items: center;
-  padding: 18px var(--wh-gut);
+  padding: 14px var(--wh-gut);
   border-bottom: 1px solid var(--ps-linen);
   background: rgba(250, 246, 238, .94);
   backdrop-filter: blur(12px);
@@ -3735,7 +3735,7 @@ body[data-page] .footer .news button {
 .journal-topic-bar span,
 .journal-topic-bar a {
   color: rgba(61, 32, 16, .68);
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 700;
   text-decoration: none;
 }
@@ -3764,9 +3764,9 @@ body[data-page] .footer .news button {
 
 .journal-feature-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.55fr) minmax(280px, .75fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--wh-grid-gap);
-  padding: clamp(26px, 4vw, 58px) var(--wh-gut) clamp(54px, 7vw, 96px);
+  padding: clamp(16px, 2.4vw, 30px) var(--wh-gut) clamp(30px, 4vw, 58px);
 }
 
 .journal-feature-card,
@@ -3783,14 +3783,14 @@ body[data-page] .footer .news button {
 }
 
 .journal-card-media {
-  height: clamp(420px, 54vw, 720px);
+  height: clamp(300px, 28vw, 430px);
   margin-top: 10px;
   overflow: hidden;
   background: var(--ps-oat);
 }
 
 .journal-feature-card:not(.is-large) .journal-card-media {
-  height: clamp(300px, 34vw, 500px);
+  height: clamp(300px, 28vw, 430px);
 }
 
 .journal-card-media image-slot,
@@ -3802,9 +3802,9 @@ body[data-page] .footer .news button {
 
 .journal-card-copy {
   display: grid;
-  grid-template-columns: minmax(0, .62fr) minmax(0, 1fr);
-  gap: var(--wh-grid-gap);
-  padding-top: clamp(18px, 2vw, 28px);
+  grid-template-columns: 1fr;
+  gap: 10px;
+  padding-top: 14px;
 }
 
 .journal-feature-card:not(.is-large) .journal-card-copy {
@@ -3827,21 +3827,21 @@ body[data-page] .footer .news button {
   margin: 0;
   color: var(--ps-roast);
   font-family: var(--wh-serif);
-  font-size: clamp(42px, 5vw, 88px);
+  font-size: clamp(32px, 3.4vw, 56px);
   font-weight: 500;
-  line-height: .86;
+  line-height: .9;
   letter-spacing: -.055em;
 }
 
 .journal-feature-card:not(.is-large) .journal-card-copy h2 {
-  font-size: clamp(34px, 4vw, 58px);
+  font-size: clamp(32px, 3.4vw, 56px);
 }
 
 .journal-card-copy small {
-  grid-column: 2;
+  grid-column: auto;
   max-width: 42ch;
   color: rgba(92, 53, 24, .74);
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 300;
   line-height: 1.45;
 }
@@ -3854,8 +3854,8 @@ body[data-page] .footer .news button {
   display: grid;
   grid-template-columns: minmax(180px, .26fr) minmax(0, 1fr);
   gap: var(--wh-grid-gap);
-  margin: 0 var(--wh-gut) clamp(26px, 4vw, 58px);
-  padding: clamp(42px, 6vw, 82px) 0;
+  margin: 0 var(--wh-gut) clamp(18px, 3vw, 34px);
+  padding: clamp(26px, 3.5vw, 48px) 0;
   border-top: 1px solid var(--ps-roast);
   border-bottom: 1px solid var(--ps-linen);
 }
@@ -3869,21 +3869,21 @@ body[data-page] .footer .news button {
 }
 
 .journal-index-note h2 {
-  max-width: 1060px;
+  max-width: 900px;
   margin: 0;
   color: var(--ps-roast);
   font-family: var(--wh-serif);
-  font-size: clamp(44px, 5.8vw, 92px);
+  font-size: clamp(34px, 4.2vw, 66px);
   font-weight: 500;
-  line-height: .9;
+  line-height: .92;
   letter-spacing: -.055em;
 }
 
 .journal-card-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(38px, 4vw, 68px) var(--wh-grid-gap);
-  padding: 0 var(--wh-gut) clamp(58px, 8vw, 120px);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(26px, 3vw, 44px) var(--wh-grid-gap);
+  padding: 0 var(--wh-gut) clamp(44px, 6vw, 86px);
 }
 
 .journal-mini-card {
@@ -3891,7 +3891,7 @@ body[data-page] .footer .news button {
 }
 
 .journal-mini-media {
-  aspect-ratio: 1 / 1.18;
+  aspect-ratio: 1 / 1.28;
   margin-top: 10px;
   overflow: hidden;
   background: var(--ps-oat);
@@ -3899,7 +3899,7 @@ body[data-page] .footer .news button {
 
 .journal-mini-card p,
 .journal-signup-card p {
-  margin: 14px 0 10px;
+  margin: 12px 0 8px;
   color: var(--ps-terracotta);
   font-size: 11px;
   font-weight: 700;
@@ -3912,17 +3912,17 @@ body[data-page] .footer .news button {
   margin: 0;
   color: var(--ps-roast);
   font-family: var(--wh-serif);
-  font-size: clamp(30px, 3vw, 46px);
+  font-size: clamp(26px, 2.25vw, 38px);
   font-weight: 500;
-  line-height: .9;
+  line-height: .92;
   letter-spacing: -.05em;
 }
 
 .journal-mini-card small {
   display: flex;
   justify-content: space-between;
-  margin-top: clamp(28px, 4vw, 54px);
-  padding: 11px 0;
+  margin-top: clamp(18px, 2vw, 28px);
+  padding: 10px 0;
   border-top: 1px solid var(--ps-linen);
   border-bottom: 1px solid var(--ps-linen);
 }
@@ -3933,7 +3933,7 @@ body[data-page] .footer .news button {
 
 .journal-signup-card {
   min-height: 100%;
-  padding: 18px;
+  padding: 16px;
   background: var(--ps-roast);
   color: var(--ps-steam);
   display: flex;
@@ -3954,7 +3954,7 @@ body[data-page] .footer .news button {
   display: grid;
   grid-template-columns: 1fr 42px;
   gap: 0;
-  margin-top: clamp(60px, 10vw, 130px);
+  margin-top: clamp(42px, 6vw, 86px);
   border-top: 1px solid rgba(250, 246, 238, .45);
   border-bottom: 1px solid rgba(250, 246, 238, .2);
 }
@@ -3990,8 +3990,8 @@ body[data-page] .footer .news button {
   display: flex;
   justify-content: flex-end;
   gap: 18px;
-  margin: 0 var(--wh-gut) clamp(72px, 8vw, 110px);
-  padding-top: 14px;
+  margin: 0 var(--wh-gut) clamp(52px, 6vw, 80px);
+  padding-top: 12px;
   border-top: 1px solid var(--ps-roast);
 }
 
@@ -4796,7 +4796,7 @@ body[data-page] .footer .ps-wordmark-coffee {
     padding-top: 0;
   }
   .journal-hero-slider {
-    min-height: clamp(440px, 66vw, 640px);
+    min-height: clamp(360px, 56vw, 520px);
   }
   .journal-card-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -4845,21 +4845,21 @@ body[data-page] .footer .ps-wordmark-coffee {
 @media (max-width: 640px) {
   .journal-index-hero {
     min-height: auto;
-    gap: 22px;
-    padding: 76px calc(var(--wh-gut) * .75) 38px;
+    gap: 16px;
+    padding: 48px calc(var(--wh-gut) * .75) 28px;
   }
   .journal-index-title h1 {
     font-size: clamp(34px, 11vw, 48px);
     letter-spacing: -.045em;
   }
   .journal-hero-slider {
-    min-height: 430px;
+    min-height: 360px;
   }
   .journal-hero-overlay {
-    inset: 22px;
+    inset: 18px;
   }
   .journal-hero-overlay h2 {
-    font-size: clamp(42px, 13vw, 62px);
+    font-size: clamp(36px, 11vw, 52px);
   }
   .journal-hero-overlay strong {
     font-size: 16px;
@@ -4869,12 +4869,12 @@ body[data-page] .footer .ps-wordmark-coffee {
     font-size: 15px;
   }
   .journal-hero-count {
-    right: 22px;
-    bottom: 22px;
-    gap: 16px;
+    right: 18px;
+    bottom: 18px;
+    gap: 14px;
   }
   .journal-hero-count button {
-    font-size: 21px;
+    font-size: 19px;
   }
   .journal-topic-bar {
     position: static;
@@ -4895,21 +4895,21 @@ body[data-page] .footer .ps-wordmark-coffee {
   .journal-card-media,
   .journal-feature-card:not(.is-large) .journal-card-media {
     height: auto;
-    aspect-ratio: 1 / 1.08;
+    aspect-ratio: 1 / .88;
   }
   .journal-card-copy h2 {
-    font-size: clamp(40px, 13vw, 60px);
+    font-size: clamp(34px, 10vw, 48px);
   }
   .journal-index-note {
     grid-template-columns: 1fr;
     margin-inline: calc(var(--wh-gut) * .75);
-    padding-block: 42px;
+    padding-block: 30px;
   }
   .journal-index-note h2 {
-    font-size: clamp(40px, 12vw, 58px);
+    font-size: clamp(34px, 10vw, 48px);
   }
   .journal-mini-media {
-    aspect-ratio: 1 / .9;
+    aspect-ratio: 1 / .82;
   }
   .journal-pagination {
     margin-inline: calc(var(--wh-gut) * .75);
