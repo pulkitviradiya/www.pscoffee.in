@@ -4,6 +4,16 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/story",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/story.html",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
       "source": "/journal/why-specialty-coffee-costs-300-rupees-india",
       "destination": "/blog/why-specialty-coffee-costs-300-rupees-india",
       "permanent": true

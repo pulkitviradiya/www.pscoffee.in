@@ -7,12 +7,12 @@
   var PAGES = [
     {href:"pack.html",        label:"Subscribe",   n:"01", primary:true, cls:"pack-link"},
     {href:"menu.html",        label:"Menu",        n:"02", primary:true},
-    {href:"about.html#pods",  label:"Visit us",    n:"03", primary:true},
+    {href:"pods.html#pods",   label:"Visit us",    n:"03", primary:true},
     {href:"app.html",         label:"App",         n:"04", primary:true},
     {href:"events.html",      label:"Events",      n:"05", primary:true},
-    {href:"story.html",       label:"About",       n:"06", primary:true},
+    {href:"about.html",       label:"About",       n:"06", primary:true},
     {href:"partnership.html", label:"Partner",     n:"07", primary:false},
-    {href:"about.html",       label:"Pods",        n:"08", primary:true},
+    {href:"pods.html",        label:"Pods",        n:"08", primary:true},
     {href:"join.html",        label:"Join us",     n:"09", primary:false}
   ];
   var here = (location.pathname.split("/").pop() || "index.html").toLowerCase();
@@ -54,11 +54,11 @@
         '<div class="f-top">'+
           '<div class="f-col f-brand">'+
             '<div class="display ps-wordmark"><span class="ps-wordmark-ps">P.S.</span> <span class="ps-wordmark-coffee">Coffee.</span></div>'+
-            '<a href="'+localHref("story.html")+'">Story</a><a href="'+localHref("blogs.html")+'">Blogs</a><a href="'+localHref("events.html")+'">Events</a><a href="'+localHref("join.html")+'">Join Us</a><a href="'+localHref("partnership.html")+'">Partner</a>'+
+            '<a href="'+localHref("about.html")+'">Story</a><a href="'+localHref("blogs.html")+'">Blogs</a><a href="'+localHref("events.html")+'">Events</a><a href="'+localHref("join.html")+'">Join Us</a><a href="'+localHref("partnership.html")+'">Partner</a>'+
             '<a href="https://www.thebarista.school" target="_blank" rel="noopener">Barista School ↗</a>'+
           '</div>'+
           '<div class="f-col"><h4>Pods.</h4>'+
-            '<a href="'+localHref("about.html#pods")+'">Visit us</a><a href="'+localHref("app.html")+'">Order ahead</a><a href="'+localHref("partnership.html#host")+'">Host a Pod</a>'+
+            '<a href="'+localHref("pods.html#pods")+'">Visit us</a><a href="'+localHref("app.html")+'">Order ahead</a><a href="'+localHref("partnership.html#host")+'">Host a Pod</a>'+
           '</div>'+
           '<div class="f-col"><h4>Help & Info.</h4>'+
             '<a href="'+localHref("index.html#waitlist")+'">FAQs</a><a href="mailto:hello@pscoffee.in">Contact</a>'+
