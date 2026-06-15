@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "pscoffee",
+      "runtimeExecutable": "bash",
+      "runtimeArgs": ["-c", "cd /Users/pulkit/Code/pscoffee-repo && python3 -m http.server --bind 0.0.0.0 3456"],
+      "port": 3456
+    }
+  ]
+}
