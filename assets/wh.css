@@ -4235,25 +4235,41 @@ body[data-page="home"] .footer .f-socials svg {
 
 .journal-mini-card small {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  margin-top: clamp(18px, 2vw, 28px);
-  padding: 10px 0;
+  gap: 12px;
+  min-height: 48px;
+  margin-top: clamp(14px, 1.6vw, 22px);
+  padding: 12px 0 10px;
   border-top: 1px solid var(--ps-linen);
   border-bottom: 1px solid var(--ps-linen);
+  color: var(--ps-roast);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  line-height: 1;
+  text-transform: uppercase;
 }
 
 .journal-mini-card small span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   color: var(--ps-terracotta);
+  font-size: 18px;
+  line-height: 1;
 }
 
 .journal-signup-card {
   min-height: 100%;
-  padding: 16px;
-  background: var(--ps-roast);
+  padding: 18px 18px 16px;
+  background: rgba(61, 32, 16, .96);
+  border: 1px solid rgba(250, 246, 238, .12);
   color: var(--ps-steam);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
+  gap: 18px;
 }
 
 .journal-signup-card p,
@@ -4262,21 +4278,23 @@ body[data-page="home"] .footer .f-socials svg {
 }
 
 .journal-signup-card p {
-  opacity: .74;
+  margin: 0 0 10px;
+  color: rgba(250, 246, 238, .78);
+  opacity: 1;
 }
 
 .journal-signup-form {
   display: grid;
   grid-template-columns: 1fr 42px;
   gap: 0;
-  margin-top: clamp(42px, 6vw, 86px);
-  border-top: 1px solid rgba(250, 246, 238, .45);
-  border-bottom: 1px solid rgba(250, 246, 238, .2);
+  margin-top: 0;
+  border-top: 1px solid rgba(250, 246, 238, .42);
+  border-bottom: 1px solid rgba(250, 246, 238, .42);
 }
 
 .journal-signup-form input,
 .journal-signup-form button {
-  height: 48px;
+  height: 46px;
   border: 0;
   background: transparent;
   color: var(--ps-steam);
@@ -4292,13 +4310,13 @@ body[data-page="home"] .footer .f-socials svg {
 }
 
 .journal-signup-form input::placeholder {
-  color: rgba(250, 246, 238, .62);
+  color: rgba(250, 246, 238, .72);
 }
 
 .journal-signup-form button {
-  color: var(--ps-terracotta);
+  color: var(--ps-steam);
   cursor: pointer;
-  font-size: 22px;
+  font-size: 20px;
 }
 
 .journal-pagination {
@@ -4323,149 +4341,6 @@ body[data-page="home"] .footer .f-socials svg {
 .journal-pagination span:first-child,
 .journal-pagination a {
   color: var(--ps-roast);
-}
-
-.journal-footer-signup {
-  display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(360px, .85fr);
-  gap: var(--wh-grid-gap);
-  align-items: end;
-  margin: 0 var(--wh-gut) var(--wh-section-gap);
-  padding: clamp(36px, 5vw, 70px) var(--wh-gut);
-  background: var(--ps-roast);
-  color: var(--ps-steam);
-}
-
-.journal-footer-signup-copy > p,
-.journal-footer-form input,
-.journal-footer-form button,
-.journal-footer-socials a,
-.journal-footer-signup .form-success {
-  font-family: var(--wh-sans);
-}
-
-.journal-footer-signup-copy > p {
-  margin: 0 0 clamp(18px, 2vw, 28px);
-  color: rgba(250, 246, 238, .72);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: .16em;
-  text-transform: uppercase;
-}
-
-.journal-footer-signup h2 {
-  max-width: 850px;
-  margin: 0;
-  color: var(--ps-steam);
-  font-family: var(--wh-serif);
-  font-size: clamp(48px, 6.4vw, 106px);
-  font-weight: 500;
-  line-height: .86;
-  letter-spacing: -.065em;
-}
-
-.journal-footer-signup-copy div {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: clamp(18px, 2.4vw, 36px);
-  max-width: 820px;
-  margin-top: clamp(22px, 3vw, 44px);
-}
-
-.journal-footer-signup-copy div p {
-  margin: 0;
-  color: rgba(250, 246, 238, .78);
-  font-family: var(--wh-sans);
-  font-size: clamp(15px, 1vw, 18px);
-  font-weight: 300;
-  line-height: 1.42;
-}
-
-.journal-footer-signup-action {
-  display: grid;
-  gap: 16px;
-}
-
-.journal-footer-form {
-  display: grid;
-  gap: 12px;
-}
-
-.journal-footer-form input {
-  width: 100%;
-  min-height: 54px;
-  border: 1px solid rgba(250, 246, 238, .58);
-  border-radius: 0;
-  padding: 0 16px;
-  background: rgba(250, 246, 238, .96);
-  color: var(--ps-roast);
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-}
-
-.journal-footer-form input::placeholder {
-  color: rgba(61, 32, 16, .62);
-}
-
-.journal-footer-form button {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 54px;
-  border: 1px solid rgba(250, 246, 238, .72);
-  border-radius: 0;
-  padding: 0 16px;
-  background: transparent;
-  color: var(--ps-steam);
-  cursor: pointer;
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: .14em;
-  text-align: left;
-  text-transform: uppercase;
-}
-
-.journal-footer-form button:hover {
-  background: var(--ps-steam);
-  color: var(--ps-roast);
-}
-
-.journal-footer-form button span {
-  font-size: 20px;
-  line-height: 1;
-}
-
-.journal-footer-signup .form-success {
-  display: none;
-  margin: 0;
-  color: rgba(250, 246, 238, .76);
-  font-size: 13px;
-  line-height: 1.35;
-}
-
-.journal-footer-signup .form-success.show {
-  display: block;
-}
-
-.journal-footer-socials {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 18px;
-  padding-top: 18px;
-  border-top: 1px solid rgba(250, 246, 238, .28);
-}
-
-.journal-footer-socials a {
-  color: rgba(250, 246, 238, .82);
-  font-size: 14px;
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.journal-footer-socials a:hover {
-  color: var(--ps-steam);
 }
 
 /* Legal pages. */
@@ -5751,9 +5626,6 @@ body[data-page] .footer .ps-wordmark-coffee {
   .journal-card-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  .journal-footer-signup {
-    grid-template-columns: 1fr;
-  }
   .journal-card-copy {
     grid-template-columns: 1fr;
   }
@@ -5877,35 +5749,6 @@ body[data-page] .footer .ps-wordmark-coffee {
   }
   .journal-pagination {
     margin-inline: calc(var(--wh-gut) * .75);
-  }
-  .journal-footer-signup {
-    gap: 28px;
-    margin: 0 calc(var(--wh-gut) * .75) 44px;
-    padding: 28px 18px;
-  }
-  .journal-footer-signup-copy > p {
-    margin-bottom: 14px;
-    font-size: 10px;
-  }
-  .journal-footer-signup h2 {
-    font-size: clamp(42px, 13vw, 58px);
-    letter-spacing: -.06em;
-  }
-  .journal-footer-signup-copy div {
-    grid-template-columns: 1fr;
-    gap: 12px;
-    margin-top: 18px;
-  }
-  .journal-footer-signup-copy div p {
-    font-size: 14px;
-  }
-  .journal-footer-form input,
-  .journal-footer-form button {
-    min-height: 50px;
-  }
-  .journal-footer-socials {
-    gap: 14px;
-    padding-top: 14px;
   }
   .legal-hero {
     margin-inline: 0;
