@@ -47,6 +47,11 @@
       "source": "/journal/india-coffee-market-2030-opportunity",
       "destination": "/blog/india-coffee-market-2030-opportunity",
       "permanent": true
+    },
+    {
+      "source": "/journal/morning-coffee-ritual-vs-routine",
+      "destination": "/blog/morning-coffee-ritual-vs-routine",
+      "permanent": true
     }
   ],
   "headers": [
