@@ -118,10 +118,11 @@
     overflow: hidden;
   }
 
-  .ps-pack-card-media image-slot {
+  .ps-pack-card-bg {
     width: 100%;
     height: 100%;
     display: block;
+    object-fit: cover;
   }
 
   .ps-pack-card-media::after {
@@ -559,7 +560,7 @@
       <div class="ps-pack-grid">
         <article class="ps-pack-card">
           <div class="ps-pack-card-media">
-            <image-slot id="pack-first-sip" shape="rect" src="assets/photos/ps-pass-first-sip.png" placeholder="The First Sip background" fit="cover"></image-slot>
+            <img class="ps-pack-card-bg" src="assets/photos/ps-pass-first-sip.png" alt="">
             <div class="ps-pack-card-overlay">
               <div class="ps-pack-card-overlay-top">
                 <div class="ps-pack-card-overlay-title"><h4>The First Sip.</h4><p>Five cups. The whole menu.</p></div>
@@ -587,7 +588,7 @@
 
         <article class="ps-pack-card">
           <div class="ps-pack-card-media">
-            <image-slot id="pack-black" shape="rect" src="assets/photos/ps-pass-black.png" placeholder="The Black Pack background" fit="cover"></image-slot>
+            <img class="ps-pack-card-bg" src="assets/photos/ps-pass-black.png" alt="">
             <div class="ps-pack-card-overlay">
               <div class="ps-pack-card-overlay-top">
                 <div class="ps-pack-card-overlay-title"><h4>The Black Pack.</h4><p>No milk. No menu.</p></div>
@@ -615,7 +616,7 @@
 
         <article class="ps-pack-card">
           <div class="ps-pack-card-media">
-            <image-slot id="pack-starter" shape="rect" src="assets/photos/ps-pass-starter.png" placeholder="The Starter Pack background" fit="cover"></image-slot>
+            <img class="ps-pack-card-bg" src="assets/photos/ps-pass-starter.png" alt="">
             <div class="ps-pack-card-overlay">
               <div class="ps-pack-card-overlay-top">
                 <div class="ps-pack-card-overlay-title"><h4>The Starter Pack.</h4><p>Begin the habit.</p></div>
@@ -643,7 +644,7 @@
 
         <article class="ps-pack-card">
           <div class="ps-pack-card-media">
-            <image-slot id="pack-habit" shape="rect" src="assets/photos/ps-pass-habit.png" placeholder="The Habit Pack background" fit="cover"></image-slot>
+            <img class="ps-pack-card-bg" src="assets/photos/ps-pass-habit.png" alt="">
             <div class="ps-pack-card-overlay">
               <div class="ps-pack-card-overlay-top">
                 <div class="ps-pack-card-overlay-title"><h4>The Habit Pack.</h4><p>Same habit. Better maths.</p></div>
@@ -671,7 +672,7 @@
 
         <article class="ps-pack-card">
           <div class="ps-pack-card-media">
-            <image-slot id="pack-full-pour" shape="rect" src="assets/photos/ps-pass-full-pour.png" placeholder="The Full Pour background" fit="cover"></image-slot>
+            <img class="ps-pack-card-bg" src="assets/photos/ps-pass-full-pour.png" alt="">
             <div class="ps-pack-card-overlay">
               <div class="ps-pack-card-overlay-top">
                 <div class="ps-pack-card-overlay-title"><h4>The Full Pour.</h4><p>The whole menu, poured.</p></div>
@@ -707,7 +708,7 @@
       <div class="ps-pack-grid">
         <article class="ps-pack-card">
           <div class="ps-pack-card-media">
-            <image-slot id="pack-daily" shape="rect" src="assets/photos/ps-pass-daily.png" placeholder="The Daily background" fit="cover"></image-slot>
+            <img class="ps-pack-card-bg" src="assets/photos/ps-pass-daily.png" alt="">
             <div class="ps-pack-card-overlay">
               <div class="ps-pack-card-overlay-top">
                 <div class="ps-pack-card-overlay-title"><h4>The Daily.</h4><p>One a day. Already paid for.</p></div>
@@ -735,7 +736,7 @@
 
         <article class="ps-pack-card">
           <div class="ps-pack-card-media">
-            <image-slot id="pack-open-tab" shape="rect" src="assets/photos/ps-pass-open-tab.png" placeholder="The Open Tab background" fit="cover"></image-slot>
+            <img class="ps-pack-card-bg" src="assets/photos/ps-pass-open-tab.png" alt="">
             <div class="ps-pack-card-overlay">
               <div class="ps-pack-card-overlay-top">
                 <div class="ps-pack-card-overlay-title"><h4>The Open Tab.</h4><p>Two cups. Zero decisions.</p></div>
@@ -771,7 +772,7 @@
       <div class="ps-pack-grid">
         <article class="ps-pack-card">
           <div class="ps-pack-card-media">
-            <image-slot id="pack-week" shape="rect" src="assets/photos/ps-pass-week.png" placeholder="The Week background" fit="cover"></image-slot>
+            <img class="ps-pack-card-bg" src="assets/photos/ps-pass-week.png" alt="">
             <div class="ps-pack-card-overlay">
               <div class="ps-pack-card-overlay-top">
                 <div class="ps-pack-card-overlay-title"><h4>The Week.</h4><p>Seven days. Seven cups.</p></div>
@@ -799,7 +800,7 @@
 
         <article class="ps-pack-card">
           <div class="ps-pack-card-media">
-            <image-slot id="pack-green" shape="rect" src="assets/photos/ps-pass-green.png" placeholder="The Green Pack background" fit="cover"></image-slot>
+            <img class="ps-pack-card-bg" src="assets/photos/ps-pass-green.png" alt="">
             <div class="ps-pack-card-overlay">
               <div class="ps-pack-card-overlay-top">
                 <div class="ps-pack-card-overlay-title"><h4>The Green Pack.</h4><p>Ceremonial grade. Ten times over.</p></div>
@@ -835,7 +836,7 @@
       <div class="ps-pack-grid ps-pack-grid-three">
         <article class="ps-pack-card">
           <div class="ps-pack-card-media">
-            <image-slot id="pack-team" shape="rect" src="assets/photos/ps-pass-team.png" placeholder="The Team Pack background" fit="cover"></image-slot>
+            <img class="ps-pack-card-bg" src="assets/photos/ps-pass-team.png" alt="">
             <div class="ps-pack-card-overlay">
               <div class="ps-pack-card-overlay-top">
                 <div class="ps-pack-card-overlay-title"><h4>The Team Pack.</h4><p>Better than the vending machine.</p></div>
@@ -863,7 +864,7 @@
 
         <article class="ps-pack-card">
           <div class="ps-pack-card-media">
-            <image-slot id="pack-office-tab" shape="rect" src="assets/photos/ps-pass-office-tab.png" placeholder="The Office Tab background" fit="cover"></image-slot>
+            <img class="ps-pack-card-bg" src="assets/photos/ps-pass-office-tab.png" alt="">
             <div class="ps-pack-card-overlay">
               <div class="ps-pack-card-overlay-top">
                 <div class="ps-pack-card-overlay-title"><h4>The Office Tab.</h4><p>For the Pod inside your building.</p></div>
@@ -891,7 +892,7 @@
 
         <article class="ps-pack-card">
           <div class="ps-pack-card-media">
-            <image-slot id="pack-note" shape="rect" src="assets/photos/ps-pass-note.png" placeholder="The P.S. Note background" fit="cover"></image-slot>
+            <img class="ps-pack-card-bg" src="assets/photos/ps-pass-note.png" alt="">
             <div class="ps-pack-card-overlay">
               <div class="ps-pack-card-overlay-top">
                 <div class="ps-pack-card-overlay-title"><h4>The P.S. Note.</h4><p>A coffee, with a note attached.</p></div>
