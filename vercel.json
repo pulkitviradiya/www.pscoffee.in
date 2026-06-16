@@ -32,6 +32,21 @@
       "source": "/journal/why-we-built-pods-not-cafes.html",
       "destination": "/blog/why-we-built-pods-not-cafes",
       "permanent": true
+    },
+    {
+      "source": "/journal/building-specialty-coffee-brand-without-cafe",
+      "destination": "/blog/building-specialty-coffee-brand-without-cafe",
+      "permanent": true
+    },
+    {
+      "source": "/journal/what-is-arabica-coffee-india",
+      "destination": "/blog/what-is-arabica-coffee-india",
+      "permanent": true
+    },
+    {
+      "source": "/journal/india-coffee-market-2030-opportunity",
+      "destination": "/blog/india-coffee-market-2030-opportunity",
+      "permanent": true
     }
   ],
   "headers": [

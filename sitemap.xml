@@ -66,7 +66,22 @@
   <url>
     <loc>https://pscoffee.in/blog/why-specialty-coffee-costs-300-rupees-india</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pscoffee.in/blog/building-specialty-coffee-brand-without-cafe</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pscoffee.in/blog/what-is-arabica-coffee-india</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pscoffee.in/blog/india-coffee-market-2030-opportunity</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pscoffee.in/blog/why-we-built-pods-not-cafes</loc>
