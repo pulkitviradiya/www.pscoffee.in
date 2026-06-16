@@ -5524,3 +5524,224 @@ body[data-page] .footer .ps-wordmark-coffee {
     padding-top: 12px;
   }
 }
+
+/* App download strip
+   ============================================================ */
+.app-download-strip {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(380px, .95fr);
+  gap: var(--wh-grid-gap);
+  align-items: end;
+  margin: 0 var(--wh-gut) var(--wh-section-gap);
+  padding: clamp(34px, 5vw, 70px) var(--wh-gut);
+  background: var(--ps-terracotta);
+  color: var(--ps-steam);
+}
+
+.app-download-copy p {
+  margin: 0 0 clamp(18px, 2vw, 28px);
+  color: rgba(250, 246, 238, .72);
+  font-family: var(--wh-sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.app-download-copy h2 {
+  max-width: 960px;
+  margin: 0;
+  color: var(--ps-steam) !important;
+  font-family: var(--wh-serif);
+  font-size: clamp(48px, 6.7vw, 118px);
+  font-weight: 500;
+  letter-spacing: -.055em;
+  line-height: .86;
+}
+
+.app-download-action {
+  display: grid;
+  gap: clamp(20px, 2.2vw, 30px);
+}
+
+.app-store-badges {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.store-badge {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+  min-height: 68px;
+  padding: 12px 14px;
+  border: 1px solid rgba(250, 246, 238, .56);
+  color: var(--ps-steam);
+  font-family: var(--wh-sans);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.05;
+  text-decoration: none;
+  pointer-events: none;
+}
+
+.store-badge small {
+  display: block;
+  margin-bottom: 4px;
+  color: rgba(250, 246, 238, .76);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.store-icon {
+  position: relative;
+  display: block;
+  width: 34px;
+  height: 34px;
+}
+
+.store-icon-apple::before {
+  content: "";
+  position: absolute;
+  inset: 5px 7px 3px;
+  border-radius: 48% 48% 54% 54%;
+  background: var(--ps-steam);
+}
+
+.store-icon-apple::after {
+  content: "";
+  position: absolute;
+  left: 18px;
+  top: 0;
+  width: 10px;
+  height: 14px;
+  border-radius: 10px 0 10px 0;
+  background: var(--ps-steam);
+  transform: rotate(34deg);
+}
+
+.store-icon-play::before {
+  content: "";
+  position: absolute;
+  inset: 4px 3px 4px 6px;
+  clip-path: polygon(0 0, 0 100%, 100% 50%);
+  background: var(--ps-steam);
+}
+
+.app-waitlist-form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: end;
+}
+
+.app-waitlist-form .field {
+  display: grid;
+  gap: 8px;
+}
+
+.app-waitlist-form .field span {
+  color: rgba(250, 246, 238, .78);
+  font-family: var(--wh-sans);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.app-waitlist-form input {
+  width: 100%;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-bottom: 1px solid rgba(250, 246, 238, .68);
+  border-radius: 0;
+  outline: none;
+  background: transparent;
+  color: var(--ps-steam);
+  font-family: var(--wh-sans);
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.app-waitlist-form input::placeholder {
+  color: rgba(250, 246, 238, .52);
+}
+
+.app-waitlist-form .field.invalid input {
+  border-bottom-color: var(--ps-steam);
+  box-shadow: 0 1px 0 var(--ps-steam);
+}
+
+.app-waitlist-form button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  height: 44px;
+  min-width: 150px;
+  padding: 0;
+  border: 0;
+  border-bottom: 1px solid var(--ps-steam);
+  border-radius: 0;
+  background: transparent;
+  color: var(--ps-steam);
+  cursor: pointer;
+  font-family: var(--wh-sans);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.app-download-strip .form-success {
+  display: none;
+  margin: 0;
+  padding-top: 16px;
+  border-top: 1px solid rgba(250, 246, 238, .52);
+  color: var(--ps-steam);
+  font-family: var(--wh-serif);
+  font-size: clamp(28px, 3vw, 48px);
+  font-weight: 500;
+  letter-spacing: -.035em;
+  line-height: .96;
+}
+
+.app-download-strip .form-success.show {
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .app-download-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .app-waitlist-form {
+    grid-template-columns: 1fr;
+  }
+
+  .app-waitlist-form button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .app-download-strip {
+    margin: 0 calc(var(--wh-gut) * .75) 56px;
+    padding: 28px 18px 30px;
+  }
+
+  .app-download-copy h2 {
+    font-size: clamp(40px, 12vw, 58px);
+  }
+
+  .app-store-badges {
+    grid-template-columns: 1fr;
+  }
+}
