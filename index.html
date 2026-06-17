@@ -17,7 +17,7 @@
 <meta name="twitter:image" content="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=1200">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23E8400C'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia,serif' font-size='24' font-weight='700' fill='%23FAF6EE'%3EP.S.%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="assets/ps.css">
-<link rel="stylesheet" href="assets/wh.css?v=9">
+<link rel="stylesheet" href="assets/wh.css?v=10">
 <link rel="stylesheet" href="assets/mobile.css?v=5">
 <script>(function(){try{var t=JSON.parse(localStorage.getItem('ps-tweaks')||'{}');var r=document.documentElement;if(t.tc){r.style.setProperty('--tc',t.tc);r.style.setProperty('--wh-tc',t.tc);}}catch(e){}})()</script>
 </head>
@@ -222,14 +222,22 @@
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "P.S. Coffee",
+  "alternateName": "PS Coffee",
   "url": "https://pscoffee.in",
-  "description": "Specialty-grade Arabica coffee from ₹89, served fresh inside offices, campuses, and buildings across Gujarat.",
-  "foundingLocation": {
-    "@type": "Place",
-    "name": "Ahmedabad, Gujarat, India"
+  "description": "Specialty-grade 100% Arabica coffee from ₹89, served fresh inside offices, campuses, co-working spaces, and buildings across Gujarat. Order in three taps, pick up fresh.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Ahmedabad",
+    "addressRegion": "Gujarat",
+    "addressCountry": "IN"
   },
+  "areaServed": {
+    "@type": "State",
+    "name": "Gujarat, India"
+  },
+  "knowsAbout": ["Specialty Coffee", "Arabica Coffee", "Matcha", "Coffee Subscription"],
   "sameAs": [
-    "https://www.instagram.com/pscoffee_pods",
+    "https://www.instagram.com/cafepscoffee",
     "https://www.facebook.com/pscoffee",
     "https://www.linkedin.com/company/pscoffee"
   ]
@@ -240,7 +248,58 @@
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "P.S. Coffee",
-  "url": "https://pscoffee.in"
+  "url": "https://pscoffee.in",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://pscoffee.in/blogs?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "P.S. Coffee",
+  "url": "https://pscoffee.in",
+  "description": "Specialty-grade 100% Arabica coffee from ₹89. Pod-format coffee stations inside offices, campuses, and buildings across Ahmedabad.",
+  "servesCuisine": ["Coffee", "Specialty Coffee", "Matcha"],
+  "priceRange": "₹89–₹220",
+  "hasMenu": "https://pscoffee.in/menu",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Ahmedabad",
+    "addressRegion": "Gujarat",
+    "addressCountry": "IN"
+  },
+  "areaServed": {
+    "@type": "State",
+    "name": "Gujarat, India"
+  },
+  "sameAs": [
+    "https://www.instagram.com/cafepscoffee",
+    "https://www.facebook.com/pscoffee",
+    "https://www.linkedin.com/company/pscoffee"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SiteNavigationElement",
+  "name": ["Menu", "The P.S. Pack", "Pods", "Matcha", "Journal", "About", "App"],
+  "url": [
+    "https://pscoffee.in/menu",
+    "https://pscoffee.in/pack",
+    "https://pscoffee.in/pods",
+    "https://pscoffee.in/matcha",
+    "https://pscoffee.in/blogs",
+    "https://pscoffee.in/about",
+    "https://pscoffee.in/app"
+  ]
 }
 </script>
 <script>
