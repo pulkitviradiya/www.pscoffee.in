@@ -4538,7 +4538,7 @@ body[data-page="home"] .footer .f-socials svg {
 }
 
 .journal-post-body h2 {
-  margin: clamp(58px, 7vw, 92px) 0 1.25rem;
+  margin: 1.5rem 0 1rem;
   color: var(--ps-roast);
   font-family: var(--wh-serif);
   font-size: clamp(38px, 4.6vw, 72px);
