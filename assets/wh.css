@@ -2352,7 +2352,7 @@ body[data-page="menu"] .page-top {
 }
 .menu-product-img {
   position: relative;
-  aspect-ratio: .84;
+  aspect-ratio: 1;
   overflow: hidden;
   background: #eadfce;
 }
