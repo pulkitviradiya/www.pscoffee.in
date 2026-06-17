@@ -4704,6 +4704,15 @@ body[data-page="home"] .footer .f-socials svg {
   max-height: none;
   overflow: visible;
 }
+.journal-post-body .faqs {
+  margin: 3rem 0 2rem;
+}
+.journal-post-body .faqs h2 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 1.25rem;
+}
 
 body[data-page="about"] .wh-page-kicker,
 body[data-page="about"] .wh-page-card a,
