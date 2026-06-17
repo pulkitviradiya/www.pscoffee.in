@@ -4692,6 +4692,19 @@ body[data-page="home"] .footer .f-socials svg {
   padding: 0 0 1.2rem;
 }
 
+/* Reset ps.css home-page rules that bleed into blog posts */
+.journal-post-body .section {
+  padding: 0;
+}
+.journal-post-body .faq-q {
+  padding: 8px 0;
+  font-size: 15px;
+}
+.journal-post-body .faq-a {
+  max-height: none;
+  overflow: visible;
+}
+
 body[data-page="about"] .wh-page-kicker,
 body[data-page="about"] .wh-page-card a,
 body[data-page="about"] .wh-page-card button,
