@@ -5,6 +5,12 @@
 .vscode/
 .idea/
 
+# Claude Code internal config
+.claude/
+
+# Tool-generated state files
+.image-slots.state.json
+
 # Vercel
 .vercel
 

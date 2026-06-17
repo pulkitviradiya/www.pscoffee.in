@@ -1,27 +1,42 @@
 # P.S. Coffee Website
 
-Static multi-page website for P.S. Coffee.
+Static multi-page website for [pscoffee.in](https://pscoffee.in).
 
-No framework, no dependencies, no build step. Upload these files to a GitHub repository root, then import the repository into Vercel.
+No framework, no dependencies, no build step. Push files to GitHub → Vercel deploys automatically.
 
-## Files
+## Pages
 
 ```
-index.html
-menu.html
-pack.html
-matcha.html
-app.html
-story.html          # About page
-about.html          # Pods / locations page
-partnership.html
-vercel.json
-.image-slots.state.json
+index.html          Home
+menu.html           Menu (coffee, matcha, food)
+matcha.html         Matcha landing
+pack.html           P.S. Pack subscription
+app.html            App page
+pods.html           Pod model / locations
+about.html          Brand story
+partnership.html    Partner / host a Pod
+join.html           Join the build (investors, co-founders, etc.)
+events.html         Events (planned)
+blogs.html          Blog listing (planned)
+privacy.html        Privacy policy
+terms.html          Terms of service
+survey-disclosure.html  Survey disclosure
+blog/               Individual blog posts (6 posts)
+```
+
+## Assets
+
+```
 assets/
-  image-slot.js
-  ps.css
-  ps.js
-  wh.css
+  ps.css            Site-wide styles
+  ps.js             Site-wide scripts
+  wh.css            Blog/journal-specific styles
+  mobile.css        Mobile overrides
+  mobile.js         Mobile scripts
+  image-slot.js     Image slot utility
+  photos/site/      Optimised site images (webp)
+  photos/           P.S. Pass product images (webp)
+  icons/            App store badge icons
 ```
 
 ## Vercel Settings
@@ -31,7 +46,7 @@ assets/
 - Output Directory: leave empty or `./`
 - Root Directory: repository root
 
-`vercel.json` enables clean URLs and asset caching.
+`vercel.json` enables clean URLs (`/menu` not `/menu.html`) and cache headers.
 
 ## Local Preview
 
@@ -40,4 +55,3 @@ python3 -m http.server 8000
 ```
 
 Open `http://localhost:8000`.
-
