@@ -178,11 +178,9 @@
   function faq(){
     document.querySelectorAll(".faq-item").forEach(function(item){
       var q = item.querySelector(".faq-q");
-      var a = item.querySelector(".faq-a");
-      if(!q||!a) return;
+      if(!q) return;
       q.addEventListener("click", function(){
-        var open = item.classList.toggle("open");
-        a.style.maxHeight = open ? (a.scrollHeight+"px") : "0px";
+        item.classList.toggle("open");
       });
     });
   }

@@ -4547,6 +4547,14 @@ body[data-page="home"] .footer .f-socials svg {
   letter-spacing: -.052em;
 }
 
+.journal-post-body h2.st {
+  margin: 0 0 .6rem;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.28;
+  letter-spacing: -.2px;
+}
+
 .journal-post-body > p {
   margin: 0 0 1.15rem;
 }
