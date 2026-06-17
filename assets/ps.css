@@ -332,6 +332,7 @@ a{color:inherit;text-decoration:none}
 .faq-item.open .faq-q .pm::before,.faq-item.open .faq-q .pm::after{background:#fff}
 .faq-item.open .faq-q .pm::after{transform:scaleY(0)}
 .faq-a{overflow:hidden;max-height:0;transition:max-height .35s ease}
+.faq-item.open .faq-a{max-height:520px}
 .faq-a .inner{padding:0 4px 26px;color:var(--muted);font-size:15.5px;line-height:1.65;max-width:64ch}
 
 /* ---- editorial image grid ---- */

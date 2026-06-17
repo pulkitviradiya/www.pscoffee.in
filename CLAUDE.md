@@ -29,6 +29,7 @@ Live at: **https://www.pscoffee.in**
 | `join.html` | `/join` | Join the build |
 | `events.html` | `/events` | Events & collaborations |
 | `blogs.html` | `/blogs` | Blog listing page |
+| `faq.html` | `/faq` | Frequently asked questions |
 | `blog/*.html` | `/blog/slug` | Individual blog posts (6 posts) |
 | `privacy.html` | `/privacy` | Privacy policy |
 | `terms.html` | `/terms` | Terms of service |
@@ -54,7 +55,7 @@ var PAGES = [
 
 - `primary:true` → appears in the top nav bar
 - `primary:false` → only in the mobile drawer
-- Legal pages (privacy, terms, disclaimer, copyright, survey-disclosure) live in the **footer only** — do not add them to `PAGES`
+- Footer-only pages (faq, privacy, terms, disclaimer, copyright, survey-disclosure) live in the **footer only** — do not add them to `PAGES`
 
 ---
 
@@ -156,6 +157,6 @@ Already in `.gitignore` — but do not force-add them:
 - **Do not add FAQ click handlers inline in blog posts** — `ps.js` handles it
 - **Do not hardcode `padding-block` on `.section` in blog inline CSS** — wh.css already resets it
 - **Do not use `story.html`** — that page no longer exists; the URL is `about.html`
-- **Do not add legal pages to the top nav** — they belong in the footer only (already wired in `ps.js` `footHTML()`)
+- **Do not add footer-only pages to the top nav** — FAQ and legal pages belong in the footer only (already wired in `ps.js` `footHTML()`)
 - **Do not forget to bump `wh.css?v=N`** when editing `wh.css`
 - **Do not rename CSS classes** like `.journal-post-body`, `.journal-faq` — they are used across wh.css, mobile.css, and all blog HTML files

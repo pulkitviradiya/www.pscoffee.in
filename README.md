@@ -18,6 +18,7 @@ partnership.html    Partner / host a Pod
 join.html           Join the build (investors, co-founders, etc.)
 events.html         Events (planned)
 blogs.html          Blog listing (planned)
+faq.html            Frequently asked questions
 privacy.html        Privacy policy
 terms.html          Terms of service
 survey-disclosure.html  Survey disclosure
