@@ -123,21 +123,37 @@
 }
 
 /* ══ Rating ═══════════════════════════════════════════════════ */
-.fb-rating-btns{display:flex;gap:6px;flex-wrap:wrap;margin-top:.25rem}
+.fb-rating-btns{display:flex;gap:6px;flex-wrap:wrap;margin-top:.35rem}
 .fb-r{
-  min-width:44px;height:44px;padding:0 4px;
-  border:1.5px solid rgba(42,26,14,.18);border-radius:4px;background:#fff;
-  font-size:15px;font-weight:700;color:rgba(42,26,14,.45);
+  min-width:46px;height:46px;padding:0 4px;
+  border:2px solid var(--rc,rgba(42,26,14,.15));
+  border-radius:6px;background:#fff;
+  font-size:15px;font-weight:800;color:var(--rc,rgba(42,26,14,.35));
   cursor:pointer;font-family:inherit;
   display:flex;align-items:center;justify-content:center;
-  transition:all .16s
+  transition:all .15s
 }
-.fb-r:hover{border-color:var(--tc,#b04a24);color:var(--tc,#b04a24)}
-.fb-r.on{background:var(--roast,#2a1a0e);color:#fff;border-color:var(--roast,#2a1a0e)}
+.fb-r:hover{
+  background:var(--rc,#b04a24);
+  color:#fff;
+  border-color:var(--rc,#b04a24);
+  transform:translateY(-2px);
+  box-shadow:0 4px 12px rgba(0,0,0,.14)
+}
+.fb-r.on{
+  background:var(--rc,#2a1a0e);
+  color:#fff;
+  border-color:var(--rc,#2a1a0e);
+  transform:translateY(-2px);
+  box-shadow:0 4px 12px rgba(0,0,0,.18)
+}
 .fb-rating-key{
   display:flex;justify-content:space-between;
-  margin-top:7px;padding:0 2px;
-  font-size:11px;color:rgba(42,26,14,.4);font-style:italic;line-height:1.3
+  margin-top:10px;padding:0 2px;gap:8px;flex-wrap:wrap
+}
+.fb-rating-key span{
+  font-size:12px;font-weight:600;font-style:normal;line-height:1.4;
+  display:flex;align-items:center;gap:4px
 }
 
 /* ══ Submit ═══════════════════════════════════════════════════ */
@@ -157,32 +173,59 @@
 .fb-btn:disabled{opacity:.45;cursor:not-allowed}
 .fb-actions-note{font-size:13px;color:rgba(42,26,14,.45);line-height:1.5;max-width:40ch}
 
-/* ══ Success ══════════════════════════════════════════════════ */
-.fb-success{
-  display:none;text-align:center;
-  padding:clamp(56px,9vw,96px) clamp(20px,5vw,48px)
+/* ══ Success Modal ════════════════════════════════════════════ */
+.fb-success{display:none}
+.fb-modal-overlay{
+  position:fixed;inset:0;
+  background:rgba(42,26,14,.55);
+  backdrop-filter:blur(4px);
+  z-index:9000;
+  display:none;align-items:center;justify-content:center;
+  padding:20px
 }
-.fb-success.on{display:block}
-.fb-success-tick{
-  width:68px;height:68px;border-radius:50%;
-  background:var(--roast,#2a1a0e);color:#fff;
-  font-size:30px;font-weight:800;
-  display:flex;align-items:center;justify-content:center;
-  margin:0 auto 1.5rem
+.fb-modal-overlay.on{display:flex}
+.fb-modal-card{
+  background:var(--linen,#f5f0e8);
+  border-radius:12px;
+  max-width:480px;width:100%;
+  padding:clamp(36px,7vw,60px) clamp(28px,6vw,52px);
+  text-align:center;
+  position:relative;
+  box-shadow:0 24px 64px rgba(42,26,14,.22);
+  overflow:hidden
 }
-.fb-success h2{
-  font-size:clamp(28px,4vw,48px);font-weight:900;
-  color:var(--roast,#2a1a0e);margin:0 0 .75rem;line-height:1.05
+.fb-modal-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:6px;
+  background:linear-gradient(90deg,var(--tc,#b04a24),#e07a50,var(--tc,#b04a24))
 }
-.fb-success p{
-  font-size:16px;color:rgba(42,26,14,.55);
-  max-width:44ch;margin:0 auto 2rem;line-height:1.65
+.fb-modal-stamp{
+  font-size:48px;margin:0 0 1.25rem;line-height:1;
+  display:block
 }
-.fb-success a{
-  display:inline-block;background:var(--tc,#b04a24);color:#fff;
+.fb-modal-card h2{
+  font-size:clamp(22px,3.5vw,30px);font-weight:900;
+  color:var(--roast,#2a1a0e);margin:0 0 .75rem;line-height:1.15;
+  letter-spacing:-.02em
+}
+.fb-modal-card p{
+  font-size:15px;color:rgba(42,26,14,.6);
+  max-width:36ch;margin:0 auto 2rem;line-height:1.7
+}
+.fb-modal-home{
+  display:inline-block;background:var(--roast,#2a1a0e);color:var(--linen,#f5f0e8);
   padding:13px 28px;border-radius:4px;font-weight:700;
-  text-decoration:none;font-size:15px
+  text-decoration:none;font-size:15px;letter-spacing:.01em;
+  transition:opacity .15s
 }
+.fb-modal-home:hover{opacity:.8}
+.fb-modal-close{
+  position:absolute;top:14px;right:16px;
+  background:none;border:none;cursor:pointer;
+  font-size:20px;line-height:1;color:rgba(42,26,14,.35);
+  padding:4px 8px;border-radius:4px;
+  transition:color .15s
+}
+.fb-modal-close:hover{color:var(--roast,#2a1a0e)}
 
 </style>
 </head>
@@ -202,13 +245,8 @@
 <div class="fb-outer">
 <div class="fb-card">
 
-  <!-- SUCCESS STATE -->
-  <div class="fb-success" id="fbSuccess">
-    <div class="fb-success-tick">✓</div>
-    <h2>Got it. Thank you.</h2>
-    <p>We read every single note. If your feedback inspires something we build, we will track you down and make sure that first cup is on us.</p>
-    <a href="/">Back to P.S. Coffee →</a>
-  </div>
+  <!-- SUCCESS STATE (hidden, kept for legacy) -->
+  <div class="fb-success" id="fbSuccess"></div>
 
   <!--
     ════════════════════════════════════════════════════════
@@ -466,10 +504,10 @@
         <label class="fb-label" for="fb-rating-hidden">How would you rate the P.S. Coffee concept?</label>
         <div class="fb-rating-btns" id="fbRatingRow" role="group" aria-label="Rating 1 to 10"></div>
         <div class="fb-rating-key">
-          <span>1 — Bad idea</span>
-          <span>5 — Neutral</span>
-          <span>8 — Great idea</span>
-          <span>10 — Much needed!</span>
+          <span style="color:#d32f2f">😬 1 — Bad idea</span>
+          <span style="color:#fb8c00">😐 5 — Neutral</span>
+          <span style="color:#43a047">🙌 8 — Great idea</span>
+          <span style="color:#1b5e20">🤩 10 — Much needed!</span>
         </div>
         <input type="hidden" id="fb-rating-hidden" name="rating" value="">
       </div>
@@ -485,6 +523,17 @@
 </div><!-- /fb-card -->
 </div><!-- /fb-outer -->
 
+<!-- ══ SUCCESS MODAL ══════════════════════════════════════════════ -->
+<div class="fb-modal-overlay" id="fbModal" role="dialog" aria-modal="true" aria-labelledby="fbModalTitle">
+  <div class="fb-modal-card">
+    <button class="fb-modal-close" id="fbModalClose" aria-label="Close">✕</button>
+    <span class="fb-modal-stamp">☕</span>
+    <h2 id="fbModalTitle">Stay tuned for<br>your first coffee on us.</h2>
+    <p>Thanks for sharing your feedback. We read every note — and if yours inspires something we build, that first cup is waiting for you.</p>
+    <a href="/" class="fb-modal-home">Back to P.S. Coffee →</a>
+  </div>
+</div>
+
 <div id="ps-footer"></div>
 <script src="assets/image-slot.js"></script>
 <script src="assets/ps.js?v=11"></script>
@@ -495,12 +544,14 @@
   /* ── Rating buttons ─────────────────────────────────────── */
   var rRow = document.getElementById('fbRatingRow');
   var rInput = document.getElementById('fb-rating-hidden');
+  var rColors = ['#d32f2f','#e53935','#f4511e','#fb8c00','#fdd835','#c0ca33','#7cb342','#43a047','#2e7d32','#1b5e20'];
   for(var i=1;i<=10;i++){
     (function(n){
       var b = document.createElement('button');
       b.type = 'button';
       b.className = 'fb-r';
       b.textContent = n;
+      b.style.setProperty('--rc', rColors[n-1]);
       b.addEventListener('click', function(){
         document.querySelectorAll('.fb-r').forEach(function(x){x.classList.remove('on');});
         b.classList.add('on');
@@ -650,9 +701,14 @@
 
   function showSuccess(){
     form.style.display = 'none';
-    var s = document.getElementById('fbSuccess');
-    s.classList.add('on');
-    s.scrollIntoView({behavior:'smooth', block:'start'});
+    var modal = document.getElementById('fbModal');
+    modal.classList.add('on');
+    document.getElementById('fbModalClose').addEventListener('click', function(){
+      modal.classList.remove('on');
+    });
+    modal.addEventListener('click', function(e){
+      if(e.target === modal) modal.classList.remove('on');
+    });
   }
 
 })();
