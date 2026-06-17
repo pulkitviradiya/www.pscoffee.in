@@ -1,5 +1,5 @@
 /* ============================================================
-   P.S. Coffee — Shared behaviour  ·  v4
+   P.S. Coffee — Shared behaviour  ·  v5
    ============================================================ */
 (function(){
   "use strict";
@@ -291,7 +291,7 @@
           if(field){ field.classList.toggle("invalid", !good); }
           if(!good) ok = false;
         });
-        if(!ok){ var bad = form.querySelector(".field.invalid input,.field.invalid textarea"); if(bad) bad.focus(); return; }
+        if(!ok){ var bad = form.querySelector(".field.invalid input,.field.invalid textarea,.field.invalid select"); if(bad) bad.focus(); return; }
         if(form.getAttribute('data-ps-form')==='newsletter'){
           var emailInput = form.querySelector('input[name="email"]');
           if(emailInput) window.location.href='mailto:hello@pscoffee.in?subject=Subscribe&body='+encodeURIComponent(emailInput.value);
@@ -309,8 +309,9 @@
         if(success){ form.style.display="none"; success.classList.add("show"); }
         else { showToast('<span><b>Thank you.</b> Noted — genuinely.</span>'); form.reset(); }
       });
-      form.querySelectorAll("input,textarea").forEach(function(input){
+      form.querySelectorAll("input,textarea,select").forEach(function(input){
         input.addEventListener("input", function(){ var f=input.closest(".field"); if(f) f.classList.remove("invalid"); });
+        input.addEventListener("change", function(){ var f=input.closest(".field"); if(f) f.classList.remove("invalid"); });
       });
     });
   }

@@ -28,6 +28,7 @@ Live at: **https://www.pscoffee.in**
 | `partnership.html` | `/partnership` | Partner / host a Pod |
 | `join.html` | `/join` | Join the build |
 | `events.html` | `/events` | Events & collaborations |
+| `event-enquiry.html` | `/event-enquiry` | Event enquiry form |
 | `blogs.html` | `/blogs` | Blog listing page |
 | `faq.html` | `/faq` | Frequently asked questions |
 | `blog/*.html` | `/blog/slug` | Individual blog posts (6 posts) |

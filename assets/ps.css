@@ -368,7 +368,7 @@ a{color:inherit;text-decoration:none}
 .field textarea{resize:vertical;min-height:104px}
 .field input::placeholder,.field textarea::placeholder{color:var(--faint)}
 .field input:focus,.field textarea:focus,.field select:focus{outline:0;border-color:var(--tc);background:var(--surface)}
-.field.invalid input,.field.invalid textarea{border-color:#cf3b1c;background:#fdf1ee}
+.field.invalid input,.field.invalid textarea,.field.invalid select{border-color:#cf3b1c;background:#fdf1ee}
 .field .err{font-family:"Hanken Grotesk",sans-serif;font-weight:600;font-size:11px;letter-spacing:.04em;color:#cf3b1c;text-transform:uppercase;display:none}
 .field.invalid .err{display:block}
 .row-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}

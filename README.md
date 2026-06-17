@@ -17,6 +17,7 @@ about.html          Brand story
 partnership.html    Partner / host a Pod
 join.html           Join the build (investors, co-founders, etc.)
 events.html         Events (planned)
+event-enquiry.html  Event enquiry form
 blogs.html          Blog listing (planned)
 faq.html            Frequently asked questions
 privacy.html        Privacy policy
