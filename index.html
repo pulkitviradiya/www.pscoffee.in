@@ -93,6 +93,27 @@
 
 /* ── Homepage story cards 1:1 ─────────────────────────────── */
 body[data-page="home"] .wh-ms-card{height:auto;min-height:unset;aspect-ratio:1/1}
+
+/* ── Subscription + Pack — compact single section ─────────── */
+body[data-page="home"] .wh-subscription{
+  min-height:0;
+  gap:clamp(20px,2.5vw,36px);
+  padding:clamp(16px,2vw,28px);
+  margin-bottom:clamp(48px,7vw,96px);
+  border-radius:8px;
+  overflow:hidden
+}
+body[data-page="home"] .wh-sub-img image-slot{min-height:320px;max-height:380px}
+body[data-page="home"] .wh-sub-copy h2{
+  font-size:clamp(22px,2.4vw,34px);
+  margin-bottom:1.25rem
+}
+body[data-page="home"] .wh-sub-points{gap:1rem}
+body[data-page="home"] .wh-sub-points p{font-size:15px;padding-top:.5rem;padding-bottom:.6rem}
+body[data-page="home"] .ps-sub-packs{
+  padding:clamp(14px,1.8vw,22px) 0 clamp(4px,.6vw,8px)
+}
+body[data-page="home"] .ps-plan-card{aspect-ratio:3/4}
 </style>
 <script>(function(){try{var t=JSON.parse(localStorage.getItem('ps-tweaks')||'{}');var r=document.documentElement;if(t.tc){r.style.setProperty('--tc',t.tc);r.style.setProperty('--wh-tc',t.tc);}}catch(e){}})()</script>
 </head>
@@ -340,8 +361,8 @@ body[data-page="home"] .wh-ms-card{height:auto;min-height:unset;aspect-ratio:1/1
     <h2>Bring P.S. to your next event.</h2>
     <p class="sub">Pop-up Pods. Brand activations. Corporate offsites. Specialty coffee as part of the room.</p>
     <div class="ps-callout-btns">
-      <a href="events.html" class="btn-filled">Enquire now →</a>
-      <a href="events.html" class="btn-outline">What we do</a>
+      <a href="events.html#event-types" class="btn-filled">Enquire now →</a>
+      <a href="events.html#event-types" class="btn-outline">What we do</a>
     </div>
   </div>
 
