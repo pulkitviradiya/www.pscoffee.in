@@ -96,6 +96,14 @@ body[data-page="home"] .wh-ms-card{height:auto;min-height:unset;aspect-ratio:1/1
 
 /* ── House favourites — align price + CTA row ─────────────── */
 body[data-page="home"] .wh-product-card{display:flex;flex-direction:column}
+body[data-page="home"] .wh-product-card>div:last-child{
+  border-top:1px solid rgba(42,26,14,.15);
+  padding-top:10px !important
+}
+body[data-page="home"] .wh-product-card>div:last-child strong{
+  border-right:1px solid rgba(42,26,14,.15);
+  padding-right:10px
+}
 
 /* ── Subscription + Pack — compact single section ─────────── */
 body[data-page="home"] .wh-subscription{
