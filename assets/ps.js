@@ -10,7 +10,8 @@
     {href:"pods.html#pods",   label:"Visit us",    n:"03", primary:true},
     {href:"app.html",         label:"App",         n:"04", primary:true},
     {href:"events.html",      label:"Events",      n:"05", primary:true},
-    {href:"about.html",       label:"About",       n:"06", primary:true},
+    {href:"blogs.html",       label:"Journal",     n:"06", primary:true},
+    {href:"about.html",       label:"About",       n:"07", primary:true},
     {href:"partnership.html", label:"Partner",     n:"07", primary:false},
     {href:"pods.html",        label:"Pods",        n:"08", primary:true},
     {href:"join.html",        label:"Join us",     n:"09", primary:false}
