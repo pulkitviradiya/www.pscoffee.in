@@ -1,5 +1,5 @@
 /* ============================================================
-   P.S. Coffee — Shared behaviour  ·  v3
+   P.S. Coffee — Shared behaviour  ·  v4
    ============================================================ */
 (function(){
   "use strict";
@@ -36,7 +36,7 @@
         '<span class="wh-region">₹ INR&nbsp;&nbsp;|&nbsp;&nbsp;India</span>'+
       '</div>'+
       '<nav class="nav" id="psNav">'+
-        '<a href="'+localHref("index.html")+'" class="nav-logo" aria-label="P.S. Coffee home"><span class="ps-wordmark-ps">P.S.</span> <span class="ps-wordmark-coffee">Coffee.</span></a>'+
+        '<a href="'+localHref("index.html")+'" class="nav-logo" aria-label="P.S. Coffee home"><img class="ps-logo-img ps-logo-nav" src="'+localHref("assets/icons/ps-logo-2026.png")+'" alt="P.S. Coffee"></a>'+
         '<div class="nav-links">'+links+'</div>'+
         '<div class="nav-tools">'+
           '<a href="'+localHref("join.html")+'" class="ntool ntool-text'+(here==='join.html'?' active':'')+'" title="Join us">Join us.</a>'+
@@ -54,7 +54,7 @@
       '<div class="wrap">'+
         '<div class="f-top">'+
           '<div class="f-col f-brand">'+
-            '<div class="display ps-wordmark"><span class="ps-wordmark-ps">P.S.</span> <span class="ps-wordmark-coffee">Coffee.</span></div>'+
+            '<div class="display ps-wordmark"><img class="ps-logo-img ps-logo-footer" src="'+localHref("assets/icons/ps-logo-2026.png")+'" alt="P.S. Coffee"></div>'+
             '<a href="'+localHref("about.html")+'">Story</a><a href="'+localHref("blogs.html")+'">Blogs</a><a href="'+localHref("events.html")+'">Events</a><a href="'+localHref("join.html")+'">Join Us</a><a href="'+localHref("partnership.html")+'">Partner</a>'+
             '<a href="https://www.thebarista.school" target="_blank" rel="noopener">Barista School ↗</a>'+
           '</div>'+
