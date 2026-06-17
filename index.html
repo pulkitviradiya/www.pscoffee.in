@@ -21,69 +21,75 @@
 <link rel="stylesheet" href="assets/wh.css?v=17">
 <link rel="stylesheet" href="assets/mobile.css?v=5">
 <style>
-/* ── Pack tiers (overlay card style) ─────────────────────── */
-.ps-pack-tiers{padding:clamp(28px,4vw,52px) 0 clamp(40px,6vw,72px);background:#fff;border-top:1px solid rgba(42,26,14,.08)}
-.ps-pack-tiers .wrap{max-width:1200px;margin-inline:auto;padding-inline:clamp(20px,4vw,48px)}
-.ps-pack-tiers-head{display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:clamp(20px,3vw,32px)}
-.ps-pack-tiers-head p{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--tc,#b04a24);margin:0 0 .35rem}
-.ps-pack-tiers-head h2{font-size:clamp(20px,2.4vw,30px);font-weight:700;margin:0;line-height:1.2;color:var(--roast,#2a1a0e)}
-.ps-pack-tiers-head a{white-space:nowrap;font-size:13px;font-weight:600;color:var(--tc,#b04a24);text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px;flex-shrink:0}
-.ps-plan-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-/* overlay card */
-.ps-plan-card{position:relative;border-radius:8px;overflow:hidden;aspect-ratio:3/4;display:block;text-decoration:none;transition:transform .22s,box-shadow .22s}
-.ps-plan-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.18)}
+/* ── Pack tiers — embedded in wh-subscription ────────────── */
+.ps-sub-packs{grid-column:1/-1;padding:clamp(18px,2.5vw,28px) 0 clamp(6px,1vw,12px);border-top:1px solid rgba(42,26,14,.14)}
+.ps-sub-packs-head{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;margin-bottom:clamp(12px,1.8vw,20px)}
+.ps-sub-packs-head span{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--tc,#b04a24)}
+.ps-sub-packs-head a{font-size:13px;font-weight:600;color:var(--tc,#b04a24);text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:1px;flex-shrink:0}
+.ps-plan-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.ps-plan-card{position:relative;border-radius:6px;overflow:hidden;aspect-ratio:4/5;display:block;text-decoration:none;transition:transform .22s,box-shadow .22s}
+.ps-plan-card:hover{transform:translateY(-4px);box-shadow:0 10px 28px rgba(0,0,0,.2)}
 .ps-plan-card > img{width:100%;height:100%;object-fit:cover;display:block}
-.ps-plan-card::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(18,12,8,.82) 0%,rgba(18,12,8,.18) 55%,transparent 100%);pointer-events:none}
-.ps-plan-overlay{position:absolute;inset:0;z-index:1;display:flex;flex-direction:column;justify-content:space-between;padding:14px}
-.ps-plan-ov-top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
-.ps-plan-ov-top h3{font-size:clamp(15px,1.5vw,20px);font-weight:800;line-height:1.1;color:#fff;margin:0}
-.ps-plan-badge{background:rgba(255,248,238,.92);color:#2a1a0e;font-size:9px;font-weight:700;padding:4px 9px;border-radius:20px;letter-spacing:.06em;text-transform:uppercase;flex-shrink:0;white-space:nowrap}
-.ps-plan-ov-bot{display:flex;align-items:flex-end;justify-content:space-between;gap:8px}
-.ps-plan-price-block strong{font-size:clamp(22px,2.2vw,30px);font-weight:800;color:#fff;display:block;line-height:1}
-.ps-plan-price-block span{font-size:10px;color:rgba(255,248,238,.7);margin-top:3px;display:block}
-.ps-plan-get{background:var(--tc,#b04a24);color:#fff;font-size:12px;font-weight:700;padding:8px 14px;border-radius:4px;white-space:nowrap;flex-shrink:0}
+.ps-plan-card::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(18,12,8,.84) 0%,rgba(18,12,8,.16) 52%,transparent 100%);pointer-events:none}
+.ps-plan-overlay{position:absolute;inset:0;z-index:1;display:flex;flex-direction:column;justify-content:space-between;padding:12px}
+.ps-plan-ov-top{display:flex;justify-content:space-between;align-items:flex-start;gap:6px}
+.ps-plan-ov-top h3{font-size:clamp(13px,1.3vw,18px);font-weight:800;line-height:1.1;color:#fff;margin:0}
+.ps-plan-badge{background:rgba(255,248,238,.9);color:#2a1a0e;font-size:8px;font-weight:700;padding:3px 8px;border-radius:20px;letter-spacing:.06em;text-transform:uppercase;flex-shrink:0;white-space:nowrap}
+.ps-plan-ov-bot{display:flex;align-items:flex-end;justify-content:space-between;gap:6px}
+.ps-plan-price-block strong{font-size:clamp(20px,2vw,28px);font-weight:800;color:#fff;display:block;line-height:1}
+.ps-plan-price-block span{font-size:10px;color:rgba(255,248,238,.65);margin-top:2px;display:block}
+.ps-plan-get{background:var(--tc,#b04a24);color:#fff;font-size:11px;font-weight:700;padding:7px 12px;border-radius:3px;white-space:nowrap;flex-shrink:0}
 @media(max-width:900px){.ps-plan-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:480px){.ps-plan-grid{grid-template-columns:repeat(2,1fr);gap:10px}.ps-pack-tiers-head{flex-direction:column;align-items:flex-start}}
+@media(max-width:480px){.ps-plan-grid{grid-template-columns:repeat(2,1fr);gap:8px}}
 
-/* ── App callout (slim editorial strip) ──────────────────── */
-.ps-app-callout{position:relative;overflow:hidden;background:var(--roast,#2a1a0e);color:#fff}
-.ps-app-callout::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.055) 1px,transparent 0);background-size:26px 26px;pointer-events:none;z-index:0}
-.ps-app-inner{position:relative;z-index:1;max-width:1200px;margin-inline:auto;padding:clamp(28px,4vw,52px) clamp(20px,4vw,48px);display:grid;grid-template-columns:1fr auto 1fr;gap:clamp(24px,4vw,64px);align-items:center}
-.ps-app-left{}
-.ps-app-left .kicker{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--tc,#b04a24);margin:0 0 .5rem;display:block}
-.ps-app-left h2{font-size:clamp(24px,3vw,40px);font-weight:900;margin:0;line-height:1.05;color:#fff;letter-spacing:-.02em}
-.ps-app-divider{width:1px;background:rgba(255,255,255,.14);align-self:stretch}
-.ps-app-right{display:flex;flex-direction:column;gap:1.25rem}
-.ps-app-pills{display:flex;flex-wrap:wrap;gap:8px}
-.ps-app-pill{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);color:rgba(255,255,255,.82);font-size:12px;padding:6px 14px;border-radius:20px;white-space:nowrap}
-.ps-app-btns{display:flex;gap:10px;flex-wrap:wrap}
-.ps-app-btns a.primary{background:var(--tc,#b04a24);color:#fff;padding:11px 22px;border-radius:4px;font-weight:700;font-size:14px;text-decoration:none;white-space:nowrap}
-.ps-app-btns a.outline{border:1.5px solid rgba(255,255,255,.3);color:rgba(255,255,255,.85);padding:10px 22px;border-radius:4px;font-weight:600;font-size:14px;text-decoration:none;white-space:nowrap}
-@media(max-width:760px){.ps-app-inner{grid-template-columns:1fr;gap:20px}.ps-app-divider{display:none}}
+/* ── App callout (restored 2-col) ────────────────────────── */
+.ps-app-callout{padding:clamp(48px,7vw,96px) 0;background:var(--roast,#2a1a0e);color:#fff}
+.ps-app-callout .wrap{max-width:1200px;margin-inline:auto;padding-inline:clamp(20px,4vw,48px);display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,80px);align-items:center}
+.ps-app-copy p.kicker{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--tc,#b04a24);margin:0 0 .6rem}
+.ps-app-copy h2{font-size:clamp(26px,3.5vw,44px);font-weight:800;margin:0 0 1.25rem;line-height:1.15;color:#fff}
+.ps-app-features{list-style:none;padding:0;margin:0 0 2rem;display:flex;flex-direction:column;gap:.6rem}
+.ps-app-features li{font-size:15px;color:rgba(255,255,255,.75);padding-left:1.25rem;position:relative}
+.ps-app-features li::before{content:"→";position:absolute;left:0;color:var(--tc,#b04a24)}
+.ps-app-btns{display:flex;gap:12px;flex-wrap:wrap}
+.ps-app-btns a.primary{background:var(--tc,#b04a24);color:#fff;padding:12px 24px;border-radius:4px;font-weight:700;font-size:14px;text-decoration:none}
+.ps-app-btns a.outline{border:1.5px solid rgba(255,255,255,.4);color:#fff;padding:12px 24px;border-radius:4px;font-weight:600;font-size:14px;text-decoration:none}
+.ps-app-visual{border-radius:10px;overflow:hidden;aspect-ratio:4/5}
+.ps-app-visual img{width:100%;height:100%;object-fit:cover;display:block}
+@media(max-width:760px){.ps-app-callout .wrap{grid-template-columns:1fr}.ps-app-visual{display:none}}
 
-/* ── Page callouts strip ──────────────────────────────────── */
-.ps-callout-strip{display:grid;grid-template-columns:1fr 1fr;gap:0}
-.ps-callout{padding:clamp(40px,5.5vw,80px) clamp(24px,5vw,72px);display:flex;flex-direction:column;gap:1rem}
-.ps-callout:nth-child(odd){background:var(--linen,#f5f0e8)}
-.ps-callout:nth-child(even){background:#fff}
-.ps-callout p.kicker{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--tc,#b04a24);margin:0}
-.ps-callout h2{font-size:clamp(22px,2.5vw,34px);font-weight:800;margin:0;line-height:1.2;color:var(--roast,#2a1a0e);max-width:18ch}
-.ps-callout p.sub{font-size:15px;color:var(--muted,#7a6a5a);margin:0;max-width:40ch;line-height:1.6}
-.ps-callout-btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:.5rem}
-.ps-callout-btns a.btn-filled{background:var(--roast,#2a1a0e);color:#fff;padding:11px 22px;border-radius:4px;font-weight:700;font-size:14px;text-decoration:none;white-space:nowrap}
-.ps-callout-btns a.btn-outline{border:1.5px solid var(--roast,#2a1a0e);color:var(--roast,#2a1a0e);padding:10px 22px;border-radius:4px;font-weight:600;font-size:14px;text-decoration:none;white-space:nowrap}
-@media(max-width:760px){.ps-callout-strip{grid-template-columns:1fr}}
+/* ── Page callouts — slim editorial grid ─────────────────── */
+.ps-callout-strip{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid rgba(42,26,14,.1);border-left:1px solid rgba(42,26,14,.1)}
+.ps-callout{padding:clamp(20px,2.8vw,34px) clamp(20px,3.5vw,48px);display:flex;flex-direction:column;gap:.55rem;border-right:1px solid rgba(42,26,14,.1);border-bottom:1px solid rgba(42,26,14,.1);background:#fff;transition:background .18s}
+.ps-callout:hover{background:var(--linen,#f5f0e8)}
+.ps-callout p.kicker{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--tc,#b04a24);margin:0}
+.ps-callout h2{font-size:clamp(17px,1.9vw,24px);font-weight:800;margin:0;line-height:1.2;color:var(--roast,#2a1a0e)}
+.ps-callout p.sub{font-size:13px;color:var(--muted,#7a6a5a);margin:0;line-height:1.55}
+.ps-callout-btns{display:flex;gap:7px;flex-wrap:wrap;margin-top:.35rem}
+.ps-callout-btns a.btn-filled{background:var(--roast,#2a1a0e);color:#fff;padding:7px 16px;border-radius:3px;font-weight:700;font-size:12px;text-decoration:none;white-space:nowrap}
+.ps-callout-btns a.btn-outline{border:1px solid rgba(42,26,14,.3);color:var(--roast,#2a1a0e);padding:6px 15px;border-radius:3px;font-weight:600;font-size:12px;text-decoration:none;white-space:nowrap}
+@media(max-width:640px){.ps-callout-strip{grid-template-columns:1fr;border-left:none}.ps-callout{border-left:1px solid rgba(42,26,14,.1)}}
 
-/* ── Feedback banner ──────────────────────────────────────── */
-.ps-feedback{background:var(--roast,#2a1a0e);padding:clamp(48px,6vw,80px) clamp(20px,4vw,48px)}
-.ps-feedback-inner{max-width:1200px;margin-inline:auto;display:grid;grid-template-columns:1fr auto;gap:clamp(24px,5vw,72px);align-items:center}
-.ps-feedback-copy .kicker{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--tc,#b04a24);margin:0 0 .6rem;display:block}
-.ps-feedback-copy h2{font-size:clamp(28px,3.5vw,52px);font-weight:900;margin:0 0 .75rem;line-height:1.05;color:#fff;letter-spacing:-.02em}
-.ps-feedback-copy p{font-size:14px;color:rgba(255,255,255,.6);margin:0;max-width:42ch;line-height:1.55}
-.ps-feedback-btns{display:flex;flex-direction:column;gap:10px;align-items:flex-start;flex-shrink:0}
-.ps-feedback-btns a.btn-filled{background:#fff;color:var(--roast,#2a1a0e);padding:14px 28px;border-radius:4px;font-weight:800;font-size:15px;text-decoration:none;white-space:nowrap}
-.ps-feedback-btns a.btn-ghost{font-size:13px;color:rgba(255,255,255,.5);text-decoration:none;text-align:center}
-@media(max-width:760px){.ps-feedback-inner{grid-template-columns:1fr}.ps-feedback-btns{flex-direction:row;flex-wrap:wrap}}
+/* ── Our Story bold section ───────────────────────────────── */
+.ps-our-story{background:var(--roast,#2a1a0e);padding:clamp(56px,8vw,100px) clamp(20px,4vw,48px);text-align:center}
+.ps-our-story-inner{max-width:880px;margin-inline:auto}
+.ps-our-story .kicker{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--tc,#b04a24);margin:0 0 .9rem;display:block}
+.ps-our-story h2{font-size:clamp(52px,8vw,108px);font-weight:900;color:#fff;margin:0 0 1.5rem;line-height:.9;letter-spacing:-.03em;text-transform:uppercase}
+.ps-our-story p{font-size:clamp(15px,1.4vw,19px);color:rgba(255,255,255,.65);margin:0 auto 2.25rem;line-height:1.65;max-width:58ch}
+.ps-our-story a{display:inline-block;font-size:14px;font-weight:700;color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.35);padding-bottom:3px;letter-spacing:.04em}
+
+/* ── Feedback — playful FREE COFFEE hero ─────────────────── */
+.ps-feedback{background:var(--tc,#b04a24);display:grid;grid-template-columns:auto 1fr}
+.ps-feedback-ticket{padding:clamp(36px,5.5vw,72px) clamp(28px,4vw,56px);display:flex;flex-direction:column;justify-content:center;align-items:flex-start;border-right:2px dashed rgba(255,255,255,.28);min-width:220px;background:rgba(0,0,0,.12)}
+.ps-feedback-eyebrow{font-size:11px;color:rgba(255,255,255,.65);letter-spacing:.08em;margin:0 0 .35rem;text-transform:uppercase}
+.ps-feedback-hero{font-size:clamp(52px,8vw,108px);font-weight:900;color:#fff;line-height:.88;margin:0;letter-spacing:-.04em;text-transform:uppercase}
+.ps-feedback-hero em{font-style:normal;color:rgba(255,255,255,.45);font-size:.55em;display:block;letter-spacing:.02em;font-weight:700;margin-top:.25em}
+.ps-feedback-body{padding:clamp(36px,5.5vw,72px) clamp(24px,4vw,56px);display:flex;flex-direction:column;justify-content:center}
+.ps-feedback-body .kicker{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.55);margin:0 0 .6rem;display:block}
+.ps-feedback-body h3{font-size:clamp(20px,2.4vw,34px);font-weight:800;color:#fff;margin:0 0 .85rem;line-height:1.1}
+.ps-feedback-body p{font-size:14px;color:rgba(255,255,255,.78);margin:0 0 1.75rem;line-height:1.65;max-width:46ch}
+.ps-feedback-cta{display:inline-block;background:#fff;color:var(--tc,#b04a24);font-size:15px;font-weight:800;padding:14px 30px;border-radius:4px;text-decoration:none;letter-spacing:-.01em;transition:opacity .15s}
+.ps-feedback-cta:hover{opacity:.88}
+@media(max-width:700px){.ps-feedback{grid-template-columns:1fr}.ps-feedback-ticket{border-right:none;border-bottom:2px dashed rgba(255,255,255,.28)}}
 
 /* ── Homepage story cards 1:1 ─────────────────────────────── */
 body[data-page="home"] .wh-ms-card{height:auto;min-height:unset;aspect-ratio:1/1}
@@ -169,31 +175,12 @@ body[data-page="home"] .wh-ms-card{height:auto;min-height:unset;aspect-ratio:1/1
       <p>Subscription balance applied automatically.</p>
       <p>No bad coffee mornings.</p>
     </div>
-    <div class="wh-sub-options">
-      <h3>The P.S. Pack. Because some habits deserve a commitment.</h3>
-      <div class="wh-sub-tiles">
-        <a href="pack.html">
-          <image-slot id="home-sub-home" shape="rect" src="assets/photos/site/menu-coffee-cappuccino-desktop.webp" placeholder="Home subscription" fit="cover"></image-slot>
-          <span>Home</span>
-        </a>
-        <a href="partnership.html">
-          <image-slot id="home-sub-office" shape="rect" src="assets/photos/site/pillar-presence-desktop.webp" placeholder="Office subscription" fit="cover"></image-slot>
-          <span>Office</span>
-        </a>
-      </div>
-    </div>
     <a class="wh-line-cta wh-sub-build" href="pack.html">Make it official</a>
   </div>
-</section>
-
-<!-- ══ PACK TIERS ══ -->
-<section class="ps-pack-tiers">
-  <div class="wrap">
-    <div class="ps-pack-tiers-head">
-      <div>
-        <p>The P.S. Pack.</p>
-        <h2>Choose your Pack. Start the habit.</h2>
-      </div>
+  <!-- ── Pack cards spanning both columns ── -->
+  <div class="ps-sub-packs">
+    <div class="ps-sub-packs-head">
+      <span>The P.S. Pack. Because some habits deserve a commitment.</span>
       <a href="pack.html">Compare all Packs →</a>
     </div>
     <div class="ps-plan-grid">
@@ -286,23 +273,23 @@ body[data-page="home"] .wh-ms-card{height:auto;min-height:unset;aspect-ratio:1/1
 
 <!-- ══ APP CALLOUT ══ -->
 <section class="ps-app-callout">
-  <div class="ps-app-inner">
-    <div class="ps-app-left">
-      <span class="kicker">The P.S. App.</span>
-      <h2>Three taps.<br>Coffee waiting.</h2>
-    </div>
-    <div class="ps-app-divider"></div>
-    <div class="ps-app-right">
-      <div class="ps-app-pills">
-        <span class="ps-app-pill">Order ahead</span>
-        <span class="ps-app-pill">Save your usual</span>
-        <span class="ps-app-pill">Manage Pack balance</span>
-        <span class="ps-app-pill">Pod nearby alerts</span>
-      </div>
+  <div class="wrap">
+    <div class="ps-app-copy">
+      <p class="kicker">The P.S. App.</p>
+      <h2>Three taps. Your coffee is ready before you arrive.</h2>
+      <ul class="ps-app-features">
+        <li>Order ahead — skip the queue entirely</li>
+        <li>Save your usual — one tap reorder</li>
+        <li>Manage your Pack balance in real time</li>
+        <li>Get notified when your Pod opens nearby</li>
+      </ul>
       <div class="ps-app-btns">
         <a href="app.html" class="primary">Explore App →</a>
         <a href="app.html" class="outline">How it works</a>
       </div>
+    </div>
+    <div class="ps-app-visual">
+      <img src="assets/photos/site/pillar-technology-desktop.webp" alt="P.S. Coffee app">
     </div>
   </div>
 </section>
@@ -322,13 +309,13 @@ body[data-page="home"] .wh-ms-card{height:auto;min-height:unset;aspect-ratio:1/1
   </div>
 </section>
 
-<section class="wh-origin">
-  <image-slot id="home-origin-bg" shape="rect" src="assets/photos/site/story-split-origin-desktop.webp" placeholder="Coffee origin hills" fit="cover"></image-slot>
-  <div class="wh-origin-inner">
-    <h2>Perfectly Sourced.<br>Plain & Simple.</h2>
-    <image-slot id="home-origin-film" shape="rect" src="assets/photos/site/story-split-origin-desktop.webp" placeholder="Coffee origin film still" fit="cover"></image-slot>
-    <p>We did not lower the bean standard. We lowered the overhead. Specialty grade. Always.</p>
-    <a href="about.html">Read the story <span>→</span></a>
+<!-- ══ OUR STORY ══ -->
+<section class="ps-our-story">
+  <div class="ps-our-story-inner">
+    <span class="kicker">Our Story</span>
+    <h2>P.S. Story.</h2>
+    <p>We did not lower the bean standard. We lowered the overhead. The same specialty-grade Arabica that costs ₹400 at a sit-down café — pulled fresh, inside the buildings you already visit, from ₹89. No barista theatre. No premium-location rent passed to you. Just the coffee, plain and simple.</p>
+    <a href="about.html">Read the full story →</a>
   </div>
 </section>
 
@@ -412,16 +399,15 @@ body[data-page="home"] .wh-ms-card{height:auto;min-height:unset;aspect-ratio:1/1
 
 <!-- ══ FEEDBACK ══ -->
 <section class="ps-feedback">
-  <div class="ps-feedback-inner">
-    <div class="ps-feedback-copy">
-      <span class="kicker">Beta Community</span>
-      <h2>Help us make the first coffee right.</h2>
-      <p>We are building this before we open. Your input shapes what goes on the menu, what gets priced how, and how the Pod works. If we love your feedback, your first coffee is on us.</p>
-    </div>
-    <div class="ps-feedback-btns">
-      <a href="mailto:hello@pscoffee.in?subject=My%20Feedback%20for%20P.S.%20Coffee&body=Hi%20P.S.%2C%0A%0AHere%27s%20my%20honest%20feedback%3A%0A%0A" class="btn-filled">Share your thoughts →</a>
-      <a href="about.html" class="btn-ghost">Who is building this?</a>
-    </div>
+  <div class="ps-feedback-ticket">
+    <p class="ps-feedback-eyebrow">For your two cents —</p>
+    <h2 class="ps-feedback-hero">Free<br>Coffee.<em>For real.</em></h2>
+  </div>
+  <div class="ps-feedback-body">
+    <span class="kicker">Before we open</span>
+    <h3>Tell us what you want. We will brew it for you.</h3>
+    <p>We are building P.S. before the first Pod opens. Your feedback shapes what is on the menu, how it is priced, and how the whole experience feels. Send us a note — if we love what you say, your first cup is on us. No catch.</p>
+    <a href="mailto:hello@pscoffee.in?subject=My%20Feedback%20for%20P.S.%20Coffee&body=Hi%20P.S.%2C%0A%0AHere%27s%20what%20I%20think%3A%0A%0A" class="ps-feedback-cta">Share your thoughts →</a>
   </div>
 </section>
 
