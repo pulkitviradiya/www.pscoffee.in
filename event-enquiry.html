@@ -37,13 +37,16 @@ body[data-page="event-enquiry"] .event-form-page {
   top: calc(var(--wh-header-h) + 24px);
 }
 .event-inquiry-kicker {
-  margin: 0 0 clamp(30px, 4vw, 52px);
+  margin: 0 0 64px;
   color: var(--ps-terracotta);
   font-family: var(--wh-sans);
   font-size: 12px;
   font-weight: 700;
   letter-spacing: .14em;
   text-transform: uppercase;
+}
+.event-inquiry-copy > .event-inquiry-kicker {
+  margin: 0 0 64px;
 }
 .event-inquiry-copy h1 {
   max-width: 9ch;
@@ -55,7 +58,7 @@ body[data-page="event-enquiry"] .event-form-page {
   line-height: .86;
   letter-spacing: -.065em;
 }
-.event-inquiry-copy > p {
+.event-inquiry-copy > p:not(.event-inquiry-kicker) {
   max-width: 34ch;
   margin: 24px 0 0;
   color: rgba(92, 53, 24, .78);
@@ -78,13 +81,18 @@ body[data-page="event-enquiry"] .event-form-page {
 }
 .event-photo-strip {
   display: grid;
+  grid-column: 1 / -1;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
-  margin-top: clamp(34px, 4vw, 56px);
+  gap: 0;
+  margin-top: clamp(36px, 5vw, 72px);
+  width: 100%;
+  overflow: hidden;
 }
 .event-photo-strip image-slot {
   display: block;
-  aspect-ratio: 1.15;
+  width: 100%;
+  min-width: 0;
+  aspect-ratio: 1.6;
   background: var(--ps-oat);
 }
 .event-form-card {
@@ -258,11 +266,6 @@ body[data-page="event-enquiry"] .event-form-page {
       <h1>Tell us the room.</h1>
       <p>We will come back with what the setup, service layer, collaboration route, and pricing could look like.</p>
       <div class="event-inquiry-note"><strong>P.S.</strong> Weddings, functions, brand activity, campus days, corporate rooms. Same coffee. Different brief.</div>
-      <div class="event-photo-strip" aria-label="P.S. event references">
-        <image-slot id="event-form-hero" shape="rect" src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=82&w=1300" placeholder="P.S. Coffee event counter" fit="cover"></image-slot>
-        <image-slot id="event-form-brand" shape="rect" src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=82&w=900" placeholder="Brand preview coffee event" fit="cover"></image-slot>
-        <image-slot id="event-form-function" shape="rect" src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&q=82&w=900" placeholder="Wedding or private function setup" fit="cover"></image-slot>
-      </div>
     </div>
 
     <div class="event-form-card" data-form-wrap>
@@ -381,6 +384,11 @@ body[data-page="event-enquiry"] .event-form-page {
         <span>Functions</span>
         <span>Activations</span>
       </div>
+    </div>
+    <div class="event-photo-strip" aria-label="P.S. event references">
+      <image-slot id="event-form-hero" shape="rect" src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=82&w=1300" placeholder="P.S. Coffee event counter" fit="cover"></image-slot>
+      <image-slot id="event-form-brand" shape="rect" src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=82&w=900" placeholder="Brand preview coffee event" fit="cover"></image-slot>
+      <image-slot id="event-form-function" shape="rect" src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&q=82&w=900" placeholder="Wedding or private function setup" fit="cover"></image-slot>
     </div>
   </section>
 </main>
