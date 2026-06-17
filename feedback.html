@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="assets/icons/ps-favicon-2026.png">
+<link rel="apple-touch-icon" href="assets/icons/ps-favicon-2026.png">
+<title>Share Your Feedback — P.S. Coffee</title>
+<meta name="description" content="Help P.S. Coffee get the first cup right. Share your thoughts on the menu, pricing, subscription plans, the app, and more.">
+<link rel="canonical" href="https://pscoffee.in/feedback">
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="assets/ps.css">
+<link rel="stylesheet" href="assets/wh.css?v=17">
+<link rel="stylesheet" href="assets/mobile.css?v=5">
+<style>
+
+/* ══ Hero ═════════════════════════════════════════════════════ */
+.fb-hero{
+  background:var(--roast,#2a1a0e);
+  padding:clamp(52px,8vw,96px) clamp(20px,5vw,60px) clamp(44px,7vw,80px);
+  text-align:center
+}
+.fb-hero .kicker{
+  display:block;font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--tc,#b04a24);margin:0 0 .85rem
+}
+.fb-hero h1{
+  font-size:clamp(36px,6vw,76px);font-weight:900;color:#fff;
+  margin:0 0 1rem;line-height:.92;letter-spacing:-.03em
+}
+.fb-hero p{
+  font-size:clamp(15px,1.4vw,18px);color:rgba(255,255,255,.62);
+  margin:0 auto;max-width:50ch;line-height:1.65
+}
+
+/* ══ Wrap ═════════════════════════════════════════════════════ */
+.fb-outer{background:var(--linen,#f5f0e8);padding:clamp(40px,6vw,72px) clamp(20px,4vw,40px)}
+.fb-card{
+  background:#fff;max-width:860px;margin-inline:auto;
+  border-radius:8px;padding:clamp(28px,4.5vw,56px);
+  box-shadow:0 2px 24px rgba(42,26,14,.07)
+}
+
+/* ══ Section headers ══════════════════════════════════════════ */
+.fb-section{margin-bottom:clamp(32px,5vw,52px)}
+.fb-section:last-of-type{margin-bottom:0}
+.fb-section-label{
+  display:flex;align-items:center;gap:.65rem;
+  margin-bottom:clamp(16px,2.5vw,24px);
+  padding-bottom:.6rem;
+  border-bottom:2px solid rgba(42,26,14,.1)
+}
+.fb-section-num{
+  width:24px;height:24px;border-radius:50%;flex-shrink:0;
+  background:var(--tc,#b04a24);color:#fff;
+  font-size:11px;font-weight:800;letter-spacing:0;
+  display:inline-flex;align-items:center;justify-content:center
+}
+.fb-section-title{
+  font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+  font-weight:700;color:rgba(42,26,14,.55);margin:0
+}
+
+/* ══ Grid layouts ═════════════════════════════════════════════ */
+.fb-grid{display:grid;gap:clamp(14px,2vw,20px)}
+.fb-col-2{grid-template-columns:1fr 1fr}
+.fb-col-3{grid-template-columns:1fr 1fr 1fr}
+@media(max-width:600px){.fb-col-2,.fb-col-3{grid-template-columns:1fr}}
+
+/* ══ Form fields ══════════════════════════════════════════════ */
+.fb-field{display:flex;flex-direction:column;gap:.38rem}
+.fb-label{
+  font-size:13px;font-weight:600;color:var(--roast,#2a1a0e);
+  letter-spacing:.01em;user-select:none
+}
+.fb-label .req{color:var(--tc,#b04a24);margin-left:2px;font-weight:700}
+.fb-input,
+.fb-select,
+.fb-textarea{
+  width:100%;padding:11px 14px;
+  border:1.5px solid rgba(42,26,14,.18);border-radius:4px;
+  font-size:15px;font-family:inherit;color:var(--roast,#2a1a0e);
+  background:#fff;line-height:1.4;
+  transition:border-color .14s,box-shadow .14s;
+  box-sizing:border-box;-webkit-appearance:none;appearance:none
+}
+.fb-input:focus,.fb-select:focus,.fb-textarea:focus{
+  outline:none;border-color:var(--tc,#b04a24);
+  box-shadow:0 0 0 3px rgba(176,74,36,.11)
+}
+.fb-input.err,.fb-select.err,.fb-textarea.err{
+  border-color:#c0392b;box-shadow:0 0 0 3px rgba(192,57,43,.09)
+}
+.fb-textarea{min-height:130px;resize:vertical;line-height:1.6}
+.fb-select{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='7'%3E%3Cpath d='M1 1l4.5 4.5L10 1' stroke='%232a1a0e' stroke-width='1.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 13px center;
+  padding-right:36px;cursor:pointer
+}
+.fb-hint{font-size:12px;color:rgba(42,26,14,.45);margin:0;line-height:1.5}
+
+/* ══ Conditional rows ═════════════════════════════════════════ */
+.fb-cond{display:none}
+.fb-cond.on{display:flex;flex-direction:column;gap:.38rem}
+
+/* ══ Pill option groups (radio / checkbox) ════════════════════ */
+.fb-opts{display:flex;flex-wrap:wrap;gap:8px;margin-top:.15rem}
+.fb-opt{position:relative}
+.fb-opt input[type="radio"],
+.fb-opt input[type="checkbox"]{
+  position:absolute;opacity:0;width:0;height:0;pointer-events:none
+}
+.fb-opt label{
+  display:inline-block;padding:8px 16px;
+  border:1.5px solid rgba(42,26,14,.18);border-radius:4px;
+  font-size:13px;font-weight:500;cursor:pointer;
+  color:rgba(42,26,14,.68);background:#fff;
+  transition:border-color .14s,color .14s,background .14s
+}
+.fb-opt label:hover{border-color:var(--roast,#2a1a0e);color:var(--roast,#2a1a0e)}
+.fb-opt input:checked + label{
+  background:var(--roast,#2a1a0e);color:#fff;border-color:var(--roast,#2a1a0e)
+}
+
+/* ══ Rating ═══════════════════════════════════════════════════ */
+.fb-rating-btns{display:flex;gap:6px;flex-wrap:wrap;margin-top:.25rem}
+.fb-r{
+  min-width:44px;height:44px;padding:0 4px;
+  border:1.5px solid rgba(42,26,14,.18);border-radius:4px;background:#fff;
+  font-size:15px;font-weight:700;color:rgba(42,26,14,.45);
+  cursor:pointer;font-family:inherit;
+  display:flex;align-items:center;justify-content:center;
+  transition:all .16s
+}
+.fb-r:hover{border-color:var(--tc,#b04a24);color:var(--tc,#b04a24)}
+.fb-r.on{background:var(--roast,#2a1a0e);color:#fff;border-color:var(--roast,#2a1a0e)}
+.fb-rating-key{
+  display:flex;justify-content:space-between;
+  margin-top:7px;padding:0 2px;
+  font-size:11px;color:rgba(42,26,14,.4);font-style:italic;line-height:1.3
+}
+
+/* ══ Submit ═══════════════════════════════════════════════════ */
+.fb-actions{
+  display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap;
+  margin-top:clamp(24px,4vw,40px);padding-top:clamp(20px,3vw,32px);
+  border-top:1px solid rgba(42,26,14,.1)
+}
+.fb-btn{
+  background:var(--roast,#2a1a0e);color:#fff;border:none;
+  padding:14px 36px;border-radius:4px;
+  font-size:16px;font-weight:800;font-family:inherit;
+  cursor:pointer;letter-spacing:-.01em;transition:opacity .15s;
+  white-space:nowrap
+}
+.fb-btn:hover{opacity:.85}
+.fb-btn:disabled{opacity:.45;cursor:not-allowed}
+.fb-actions-note{font-size:13px;color:rgba(42,26,14,.45);line-height:1.5;max-width:40ch}
+
+/* ══ Success ══════════════════════════════════════════════════ */
+.fb-success{
+  display:none;text-align:center;
+  padding:clamp(56px,9vw,96px) clamp(20px,5vw,48px)
+}
+.fb-success.on{display:block}
+.fb-success-tick{
+  width:68px;height:68px;border-radius:50%;
+  background:var(--roast,#2a1a0e);color:#fff;
+  font-size:30px;font-weight:800;
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 1.5rem
+}
+.fb-success h2{
+  font-size:clamp(28px,4vw,48px);font-weight:900;
+  color:var(--roast,#2a1a0e);margin:0 0 .75rem;line-height:1.05
+}
+.fb-success p{
+  font-size:16px;color:rgba(42,26,14,.55);
+  max-width:44ch;margin:0 auto 2rem;line-height:1.65
+}
+.fb-success a{
+  display:inline-block;background:var(--tc,#b04a24);color:#fff;
+  padding:13px 28px;border-radius:4px;font-weight:700;
+  text-decoration:none;font-size:15px
+}
+
+</style>
+</head>
+<body data-page="feedback">
+
+<div id="ps-nav"></div>
+<div class="page-top"></div>
+
+<!-- ══ HERO ══════════════════════════════════════════════════════ -->
+<section class="fb-hero">
+  <span class="kicker">Before the first Pod opens</span>
+  <h1>Help us get<br>this right.</h1>
+  <p>Your feedback shapes what goes on the menu, how it is priced, and how the whole P.S. experience works. If we love your input, your first cup is on us.</p>
+</section>
+
+<!-- ══ FORM ══════════════════════════════════════════════════════ -->
+<div class="fb-outer">
+<div class="fb-card">
+
+  <!-- SUCCESS STATE -->
+  <div class="fb-success" id="fbSuccess">
+    <div class="fb-success-tick">✓</div>
+    <h2>Got it. Thank you.</h2>
+    <p>We read every single note. If your feedback inspires something we build, we will track you down and make sure that first cup is on us.</p>
+    <a href="/">Back to P.S. Coffee →</a>
+  </div>
+
+  <!--
+    ════════════════════════════════════════════════════════
+    SETUP: To receive responses by email, replace
+    YOUR_FORM_ID below with your Formspree form ID.
+    1. Go to https://formspree.io and sign up free
+    2. Create a new form — point it to hello@pscoffee.in
+    3. Copy the 8-char form ID from the URL
+    4. Replace YOUR_FORM_ID in the fetch() call below
+    ════════════════════════════════════════════════════════
+  -->
+  <form id="psFbForm" novalidate>
+
+    <!-- ── 1. About You ─────────────────────────────────── -->
+    <div class="fb-section">
+      <div class="fb-section-label">
+        <span class="fb-section-num">1</span>
+        <p class="fb-section-title">About You</p>
+      </div>
+      <div class="fb-grid fb-col-2">
+
+        <div class="fb-field">
+          <label class="fb-label" for="fb-name">Full Name <span class="req">*</span></label>
+          <input class="fb-input" type="text" id="fb-name" name="name"
+            placeholder="Your full name" autocomplete="name" required>
+        </div>
+
+        <div class="fb-field">
+          <label class="fb-label" for="fb-email">Email Address <span class="req">*</span></label>
+          <input class="fb-input" type="email" id="fb-email" name="email"
+            placeholder="you@example.com" autocomplete="email" required>
+        </div>
+
+        <div class="fb-field">
+          <label class="fb-label" for="fb-phone">Phone Number <span class="req">*</span></label>
+          <input class="fb-input" type="tel" id="fb-phone" name="phone"
+            placeholder="+91 98765 43210" autocomplete="tel" required>
+        </div>
+
+        <div class="fb-field">
+          <label class="fb-label" for="fb-pincode">Pincode <span class="req">*</span></label>
+          <input class="fb-input" type="text" id="fb-pincode" name="pincode"
+            placeholder="380001" maxlength="6" inputmode="numeric"
+            pattern="[0-9]{6}" autocomplete="postal-code" required>
+        </div>
+
+        <div class="fb-field" style="grid-column:1/-1">
+          <label class="fb-label" for="fb-area">Area / Neighbourhood <span class="req">*</span></label>
+          <input class="fb-input" type="text" id="fb-area" name="area"
+            placeholder="e.g. Prahladnagar, Bandra West, Koramangala" required>
+        </div>
+
+        <div class="fb-field">
+          <label class="fb-label" for="fb-city">City <span class="req">*</span></label>
+          <input class="fb-input" type="text" id="fb-city" name="city"
+            placeholder="e.g. Ahmedabad, Mumbai, Bengaluru" required>
+        </div>
+
+        <div class="fb-field">
+          <label class="fb-label" for="fb-state">State <span class="req">*</span></label>
+          <select class="fb-select" id="fb-state" name="state" required>
+            <option value="">Select your state</option>
+            <option>Andhra Pradesh</option>
+            <option>Arunachal Pradesh</option>
+            <option>Assam</option>
+            <option>Bihar</option>
+            <option>Chhattisgarh</option>
+            <option>Goa</option>
+            <option>Gujarat</option>
+            <option>Haryana</option>
+            <option>Himachal Pradesh</option>
+            <option>Jharkhand</option>
+            <option>Karnataka</option>
+            <option>Kerala</option>
+            <option>Madhya Pradesh</option>
+            <option>Maharashtra</option>
+            <option>Manipur</option>
+            <option>Meghalaya</option>
+            <option>Mizoram</option>
+            <option>Nagaland</option>
+            <option>Odisha</option>
+            <option>Punjab</option>
+            <option>Rajasthan</option>
+            <option>Sikkim</option>
+            <option>Tamil Nadu</option>
+            <option>Telangana</option>
+            <option>Tripura</option>
+            <option>Uttar Pradesh</option>
+            <option>Uttarakhand</option>
+            <option>West Bengal</option>
+            <option>Andaman and Nicobar Islands</option>
+            <option>Chandigarh</option>
+            <option>Dadra and Nagar Haveli and Daman and Diu</option>
+            <option>Delhi</option>
+            <option>Jammu and Kashmir</option>
+            <option>Ladakh</option>
+            <option>Lakshadweep</option>
+            <option>Puducherry</option>
+          </select>
+        </div>
+
+      </div>
+    </div><!-- /section 1 -->
+
+    <!-- ── 2. Feedback Topic ─────────────────────────────── -->
+    <div class="fb-section">
+      <div class="fb-section-label">
+        <span class="fb-section-num">2</span>
+        <p class="fb-section-title">What Is Your Feedback About?</p>
+      </div>
+      <div class="fb-grid">
+
+        <div class="fb-field">
+          <label class="fb-label" for="fb-cat">Feedback Topic <span class="req">*</span></label>
+          <select class="fb-select" id="fb-cat" name="feedback_topic" required>
+            <option value="">Select a topic</option>
+            <option value="menu">Menu &amp; What I Want to Drink</option>
+            <option value="pricing">Pricing Policy</option>
+            <option value="subscription">Subscription Plans — The P.S. Pack</option>
+            <option value="app">App Features</option>
+            <option value="recipe">Recipes, Add-ons &amp; Customisation</option>
+            <option value="food">Food Items</option>
+            <option value="events">Events &amp; Collaborations</option>
+            <option value="pod">I Want a Pod Near Me</option>
+            <option value="general">General Feedback</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <!-- Conditional: Menu drinks ──────────────────── -->
+        <div class="fb-field fb-cond" id="cond-menu">
+          <label class="fb-label">Which drinks are you most interested in? (select all that apply)</label>
+          <div class="fb-opts">
+            <div class="fb-opt"><input type="checkbox" id="d-capp" name="drinks" value="Cappuccino"><label for="d-capp">Cappuccino</label></div>
+            <div class="fb-opt"><input type="checkbox" id="d-latte" name="drinks" value="Café Latte"><label for="d-latte">Café Latte</label></div>
+            <div class="fb-opt"><input type="checkbox" id="d-esp" name="drinks" value="Espresso"><label for="d-esp">Espresso / Doppio</label></div>
+            <div class="fb-opt"><input type="checkbox" id="d-am" name="drinks" value="Americano"><label for="d-am">Americano</label></div>
+            <div class="fb-opt"><input type="checkbox" id="d-cob" name="drinks" value="Cold Brew"><label for="d-cob">Cold Brew</label></div>
+            <div class="fb-opt"><input type="checkbox" id="d-il" name="drinks" value="Iced Latte"><label for="d-il">Iced Latte</label></div>
+            <div class="fb-opt"><input type="checkbox" id="d-fw" name="drinks" value="Flat White"><label for="d-fw">Flat White</label></div>
+            <div class="fb-opt"><input type="checkbox" id="d-mo" name="drinks" value="Mocha"><label for="d-mo">Mocha</label></div>
+            <div class="fb-opt"><input type="checkbox" id="d-mat" name="drinks" value="Matcha"><label for="d-mat">Matcha</label></div>
+            <div class="fb-opt"><input type="checkbox" id="d-cc" name="drinks" value="Cold Coffee"><label for="d-cc">Cold Coffee</label></div>
+            <div class="fb-opt"><input type="checkbox" id="d-cm" name="drinks" value="Caramel Macchiato"><label for="d-cm">Caramel Macchiato</label></div>
+            <div class="fb-opt"><input type="checkbox" id="d-hl" name="drinks" value="Hazelnut Latte"><label for="d-hl">Hazelnut Latte</label></div>
+            <div class="fb-opt"><input type="checkbox" id="d-et" name="drinks" value="Espresso Tonic"><label for="d-et">Espresso Tonic</label></div>
+            <div class="fb-opt"><input type="checkbox" id="d-hc" name="drinks" value="Hot Chocolate"><label for="d-hc">Hot Chocolate</label></div>
+            <div class="fb-opt"><input type="checkbox" id="d-ne" name="drinks" value="Something new"><label for="d-ne">Something I don't see here</label></div>
+          </div>
+        </div>
+
+        <!-- Conditional: Subscription plan interest ──── -->
+        <div class="fb-field fb-cond" id="cond-subscription">
+          <label class="fb-label">Which Pack tier interests you most?</label>
+          <div class="fb-opts">
+            <div class="fb-opt"><input type="radio" id="p-black" name="pack_interest" value="The Black Pack — ₹749 / 10 cups"><label for="p-black">The Black Pack — ₹749</label></div>
+            <div class="fb-opt"><input type="radio" id="p-starter" name="pack_interest" value="The Starter Pack — ₹1,099 / 10 cups"><label for="p-starter">The Starter Pack — ₹1,099</label></div>
+            <div class="fb-opt"><input type="radio" id="p-habit" name="pack_interest" value="The Habit Pack — ₹1,899 / 20 cups"><label for="p-habit">The Habit Pack — ₹1,899</label></div>
+            <div class="fb-opt"><input type="radio" id="p-full" name="pack_interest" value="The Full Pour — ₹2,899 / 20 cups"><label for="p-full">The Full Pour — ₹2,899</label></div>
+            <div class="fb-opt"><input type="radio" id="p-none" name="pack_interest" value="None — pricing feels off"><label for="p-none">None — pricing feels off</label></div>
+          </div>
+        </div>
+
+        <!-- Conditional: App features ──────────────────── -->
+        <div class="fb-field fb-cond" id="cond-app">
+          <label class="fb-label">Which app features matter most to you?</label>
+          <div class="fb-opts">
+            <div class="fb-opt"><input type="checkbox" id="a-oa" name="app_features" value="Order ahead"><label for="a-oa">Order ahead</label></div>
+            <div class="fb-opt"><input type="checkbox" id="a-su" name="app_features" value="Save your usual"><label for="a-su">Save your usual</label></div>
+            <div class="fb-opt"><input type="checkbox" id="a-pb" name="app_features" value="Pack balance management"><label for="a-pb">Pack balance management</label></div>
+            <div class="fb-opt"><input type="checkbox" id="a-pn" name="app_features" value="Pod nearby notifications"><label for="a-pn">Pod nearby alerts</label></div>
+            <div class="fb-opt"><input type="checkbox" id="a-lo" name="app_features" value="Loyalty rewards"><label for="a-lo">Loyalty rewards</label></div>
+            <div class="fb-opt"><input type="checkbox" id="a-sc" name="app_features" value="Schedule ahead"><label for="a-sc">Schedule for tomorrow morning</label></div>
+            <div class="fb-opt"><input type="checkbox" id="a-pay" name="app_features" value="In-app payment"><label for="a-pay">In-app payment</label></div>
+            <div class="fb-opt"><input type="checkbox" id="a-other" name="app_features" value="Something else"><label for="a-other">Something else</label></div>
+          </div>
+        </div>
+
+        <!-- Conditional: Events ─────────────────────────── -->
+        <div class="fb-field fb-cond" id="cond-events">
+          <label class="fb-label">What kind of events or collaborations interest you?</label>
+          <div class="fb-opts">
+            <div class="fb-opt"><input type="checkbox" id="e-popup" name="event_types" value="Pop-up Pod at my event"><label for="e-popup">Pop-up Pod at my event</label></div>
+            <div class="fb-opt"><input type="checkbox" id="e-corp" name="event_types" value="Corporate offsite"><label for="e-corp">Corporate offsite</label></div>
+            <div class="fb-opt"><input type="checkbox" id="e-campus" name="event_types" value="Campus event"><label for="e-campus">Campus event</label></div>
+            <div class="fb-opt"><input type="checkbox" id="e-brand" name="event_types" value="Brand activation"><label for="e-brand">Brand activation</label></div>
+            <div class="fb-opt"><input type="checkbox" id="e-workshop" name="event_types" value="Coffee workshop"><label for="e-workshop">Coffee workshop</label></div>
+            <div class="fb-opt"><input type="checkbox" id="e-collab" name="event_types" value="Brand collab"><label for="e-collab">Brand collab</label></div>
+          </div>
+        </div>
+
+        <!-- Conditional: Pod location ───────────────────── -->
+        <div class="fb-field fb-cond" id="cond-pod">
+          <label class="fb-label" for="fb-pod-loc">Where should the Pod be? <span class="req">*</span></label>
+          <input class="fb-input" type="text" id="fb-pod-loc" name="pod_location"
+            placeholder="Building name, street, area, city — be as specific as you can">
+          <p class="fb-hint">We use this directly when choosing Pod placements. A specific address is gold.</p>
+        </div>
+
+        <!-- Conditional: Other ──────────────────────────── -->
+        <div class="fb-field fb-cond" id="cond-other">
+          <label class="fb-label" for="fb-other-label">What is your feedback about? <span class="req">*</span></label>
+          <input class="fb-input" type="text" id="fb-other-label" name="other_topic"
+            placeholder="In a few words…">
+        </div>
+
+        <!-- Always visible: Thoughts ────────────────────── -->
+        <div class="fb-field">
+          <label class="fb-label" for="fb-thoughts">Your Thoughts <span class="req">*</span></label>
+          <textarea class="fb-textarea" id="fb-thoughts" name="thoughts"
+            placeholder="Tell us everything — what you love, what is missing, what you would change, what you want to see…" required></textarea>
+        </div>
+
+      </div>
+    </div><!-- /section 2 -->
+
+    <!-- ── 3. Quick Takes ──────────────────────────────────── -->
+    <div class="fb-section">
+      <div class="fb-section-label">
+        <span class="fb-section-num">3</span>
+        <p class="fb-section-title">Quick Takes</p>
+      </div>
+      <div class="fb-grid">
+
+        <div class="fb-field">
+          <label class="fb-label">If a P.S. Pod opened near you, would you buy coffee or matcha?</label>
+          <div class="fb-opts">
+            <div class="fb-opt"><input type="radio" id="buy-y" name="would_buy" value="Yes, definitely"><label for="buy-y">Yes, definitely</label></div>
+            <div class="fb-opt"><input type="radio" id="buy-m" name="would_buy" value="Maybe"><label for="buy-m">Maybe</label></div>
+            <div class="fb-opt"><input type="radio" id="buy-n" name="would_buy" value="Not really"><label for="buy-n">Not really</label></div>
+          </div>
+        </div>
+
+        <div class="fb-field">
+          <label class="fb-label">How frequently would you visit?</label>
+          <div class="fb-opts">
+            <div class="fb-opt"><input type="radio" id="fr-d" name="visit_freq" value="Every day"><label for="fr-d">Every day</label></div>
+            <div class="fb-opt"><input type="radio" id="fr-w" name="visit_freq" value="2–3 times a week"><label for="fr-w">2–3 times a week</label></div>
+            <div class="fb-opt"><input type="radio" id="fr-1" name="visit_freq" value="Once a week"><label for="fr-1">Once a week</label></div>
+            <div class="fb-opt"><input type="radio" id="fr-o" name="visit_freq" value="Occasionally"><label for="fr-o">Occasionally</label></div>
+            <div class="fb-opt"><input type="radio" id="fr-s" name="visit_freq" value="On special days"><label for="fr-s">On special days</label></div>
+          </div>
+        </div>
+
+      </div>
+    </div><!-- /section 3 -->
+
+    <!-- ── 4. Rate the Concept ─────────────────────────────── -->
+    <div class="fb-section">
+      <div class="fb-section-label">
+        <span class="fb-section-num">4</span>
+        <p class="fb-section-title">Rate the Overall Concept</p>
+      </div>
+      <div class="fb-field">
+        <label class="fb-label" for="fb-rating-hidden">How would you rate the P.S. Coffee concept?</label>
+        <div class="fb-rating-btns" id="fbRatingRow" role="group" aria-label="Rating 1 to 10"></div>
+        <div class="fb-rating-key">
+          <span>1 — Bad idea</span>
+          <span>5 — Neutral</span>
+          <span>8 — Great idea</span>
+          <span>10 — Much needed!</span>
+        </div>
+        <input type="hidden" id="fb-rating-hidden" name="rating" value="">
+      </div>
+    </div><!-- /section 4 -->
+
+    <!-- ── Submit ──────────────────────────────────────────── -->
+    <div class="fb-actions">
+      <button type="submit" class="fb-btn" id="fbSubmitBtn">Send my feedback →</button>
+      <p class="fb-actions-note">We read every note. Your contact details are used only for P.S. Coffee planning — never shared.</p>
+    </div>
+
+  </form>
+</div><!-- /fb-card -->
+</div><!-- /fb-outer -->
+
+<div id="ps-footer"></div>
+<script src="assets/image-slot.js"></script>
+<script src="assets/ps.js?v=11"></script>
+<script src="assets/mobile.js?v=1"></script>
+<script>
+(function(){
+
+  /* ── Rating buttons ─────────────────────────────────────── */
+  var rRow = document.getElementById('fbRatingRow');
+  var rInput = document.getElementById('fb-rating-hidden');
+  for(var i=1;i<=10;i++){
+    (function(n){
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'fb-r';
+      b.textContent = n;
+      b.addEventListener('click', function(){
+        document.querySelectorAll('.fb-r').forEach(function(x){x.classList.remove('on');});
+        b.classList.add('on');
+        rInput.value = n;
+      });
+      rRow.appendChild(b);
+    })(i);
+  }
+
+  /* ── Category → conditional fields + textarea placeholder ── */
+  var catSel = document.getElementById('fb-cat');
+  var condMap = {
+    menu:         document.getElementById('cond-menu'),
+    subscription: document.getElementById('cond-subscription'),
+    app:          document.getElementById('cond-app'),
+    events:       document.getElementById('cond-events'),
+    pod:          document.getElementById('cond-pod'),
+    other:        document.getElementById('cond-other')
+  };
+  var placeholders = {
+    menu:         'Which drinks do you want every day? What is missing from the menu right now?',
+    pricing:      'What pricing feels right for daily specialty coffee? What would make it a no-brainer?',
+    subscription: 'What would make the P.S. Pack more appealing — size, validity, price, or something else?',
+    app:          'What would you use every single day? What would make you install it immediately?',
+    recipe:       'What customisations, syrups, or recipe tweaks would you want?',
+    food:         'What food items would pair perfectly with your P.S. coffee?',
+    events:       'What events or brand collaborations would make you excited about P.S.?',
+    pod:          'Tell us more about the location — why is it the right spot for a Pod?',
+    general:      'Share anything and everything on your mind.',
+    other:        'Tell us what you have in mind.'
+  };
+  var textarea = document.getElementById('fb-thoughts');
+
+  function refreshConds(){
+    var v = catSel.value;
+    Object.keys(condMap).forEach(function(k){
+      condMap[k].classList.toggle('on', k === v);
+    });
+    if(placeholders[v]) textarea.placeholder = placeholders[v];
+  }
+  catSel.addEventListener('change', refreshConds);
+
+  /* ── Validation ─────────────────────────────────────────── */
+  function markErr(el, bad){
+    el.classList.toggle('err', bad);
+  }
+
+  function validate(){
+    var ok = true;
+
+    var coreFields = [
+      {el: document.getElementById('fb-name'),    check: function(v){return v.trim()!==''}},
+      {el: document.getElementById('fb-email'),   check: function(v){return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim())}},
+      {el: document.getElementById('fb-phone'),   check: function(v){return v.trim()!==''}},
+      {el: document.getElementById('fb-pincode'), check: function(v){return /^\d{6}$/.test(v.trim())}},
+      {el: document.getElementById('fb-area'),    check: function(v){return v.trim()!==''}},
+      {el: document.getElementById('fb-city'),    check: function(v){return v.trim()!==''}},
+      {el: document.getElementById('fb-state'),   check: function(v){return v!==''}},
+      {el: catSel,                                check: function(v){return v!==''}},
+      {el: textarea,                              check: function(v){return v.trim().length >= 5}}
+    ];
+
+    coreFields.forEach(function(f){
+      var bad = !f.check(f.el.value);
+      markErr(f.el, bad);
+      if(bad) ok = false;
+    });
+
+    // Conditional required fields
+    if(catSel.value === 'pod'){
+      var podEl = document.getElementById('fb-pod-loc');
+      var podBad = podEl.value.trim() === '';
+      markErr(podEl, podBad);
+      if(podBad) ok = false;
+    }
+    if(catSel.value === 'other'){
+      var otherEl = document.getElementById('fb-other-label');
+      var otherBad = otherEl.value.trim() === '';
+      markErr(otherEl, otherBad);
+      if(otherBad) ok = false;
+    }
+
+    return ok;
+  }
+
+  /* ── Live blur removal ─────────────────────────────────── */
+  document.querySelectorAll('.fb-input,.fb-select,.fb-textarea').forEach(function(el){
+    el.addEventListener('blur', function(){
+      if(el.value.trim() !== '' && el.value !== '') el.classList.remove('err');
+    });
+  });
+
+  /* ── Submit ─────────────────────────────────────────────── */
+  var form = document.getElementById('psFbForm');
+  var submitBtn = document.getElementById('fbSubmitBtn');
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+
+    if(!validate()){
+      var first = form.querySelector('.err');
+      if(first) first.scrollIntoView({behavior:'smooth', block:'center'});
+      return;
+    }
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending…';
+
+    // Collect all data
+    var data = new FormData(form);
+
+    // Aggregate multi-check fields into comma-separated strings
+    ['drinks','app_features','event_types'].forEach(function(name){
+      var checked = [];
+      form.querySelectorAll('[name="'+name+'"]:checked').forEach(function(cb){
+        checked.push(cb.value);
+      });
+      if(checked.length) data.set(name, checked.join(', '));
+    });
+
+    // Formspree endpoint — replace YOUR_FORM_ID once set up at formspree.io
+    fetch('https://formspree.io/f/YOUR_FORM_ID', {
+      method: 'POST',
+      body: data,
+      headers: {'Accept': 'application/json'}
+    })
+    .then(function(r){
+      if(r.ok){
+        showSuccess();
+      } else {
+        r.json().then(function(d){
+          var msg = (d && d.errors) ? d.errors.map(function(x){return x.message;}).join(', ') : 'Something went wrong.';
+          alert(msg + '\n\nYou can also email us directly: hello@pscoffee.in');
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Send my feedback →';
+        });
+      }
+    })
+    .catch(function(){
+      // Formspree not set up yet — fall back to mailto
+      var lines = [];
+      data.forEach(function(v,k){ if(v) lines.push(k.replace(/_/g,' ')+': '+v); });
+      window.location.href = 'mailto:hello@pscoffee.in?subject=P.S.+Coffee+Feedback&body='+encodeURIComponent(lines.join('\n\n'));
+      showSuccess();
+    });
+  });
+
+  function showSuccess(){
+    form.style.display = 'none';
+    var s = document.getElementById('fbSuccess');
+    s.classList.add('on');
+    s.scrollIntoView({behavior:'smooth', block:'start'});
+  }
+
+})();
+</script>
+</body>
+</html>
