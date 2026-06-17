@@ -3,20 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>P.S. Coffee. | The P.S. Pack.</title>
-<meta name="description" content="The P.S. Pack. Prepay 10 or 20 cups. Save up to 20%. Pay once, drink daily, repeat.">
+<title>The P.S. Pack. | Subscribe | P.S. Coffee.</title>
+<meta name="description" content="The P.S. Pack. Prepay 5 to 200 cups of specialty coffee. Save up to 25%. Pay once, drink daily, repeat. No auto-renew, no lock-in.">
 <link rel="canonical" href="https://pscoffee.in/pack">
 <meta property="og:title" content="The P.S. Pack. | Pay Once, Drink Daily.">
-<meta property="og:description" content="Prepay 10 or 20 cups of specialty coffee. Save up to 20%. No subscriptions, no expiry pressure. Just your coffee, ready to go.">
+<meta property="og:description" content="Five core Packs, daily plans, short cycles, and team options. Save up to 25%. Your coffee, already paid for.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://pscoffee.in/pack">
-<meta property="og:image" content="https://images.unsplash.com/photo-1522992319-0365e5f11656?auto=format&fit=crop&q=80&w=1200">
+<meta property="og:image" content="https://www.pscoffee.in/assets/photos/ps-pass-full-pour.webp">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="The P.S. Pack. Pay once, drink daily.">
-<meta name="twitter:description" content="Prepay 10 or 20 cups. Save up to 20%. Specialty coffee, no compromise.">
-<meta name="twitter:image" content="https://images.unsplash.com/photo-1522992319-0365e5f11656?auto=format&fit=crop&q=80&w=1200">
+<meta name="twitter:description" content="5 to 200 cups prepaid. Save up to 25%. Specialty coffee, no compromise.">
+<meta name="twitter:image" content="https://www.pscoffee.in/assets/photos/ps-pass-full-pour.webp">
 <link rel="stylesheet" href="assets/ps.css">
-<link rel="stylesheet" href="assets/wh.css?v=9">
+<link rel="stylesheet" href="assets/wh.css?v=10">
 <link rel="stylesheet" href="assets/mobile.css?v=5">
 <style>
   .ps-pack-explorer {
@@ -98,8 +98,8 @@
     align-items: stretch;
   }
 
-  .ps-pack-grid.ps-pack-grid-three {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  .ps-pack-grid.ps-pack-grid-two {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .ps-pack-card {
@@ -422,8 +422,10 @@
       grid-template-columns: 1fr;
     }
 
-    .ps-pack-grid,
-    .ps-pack-grid.ps-pack-grid-three {
+    .ps-pack-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .ps-pack-grid.ps-pack-grid-two {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
@@ -458,7 +460,7 @@
     }
 
     .ps-pack-grid,
-    .ps-pack-grid.ps-pack-grid-three {
+    .ps-pack-grid.ps-pack-grid-two {
       grid-template-columns: 1fr;
     }
 
@@ -538,7 +540,7 @@
         <a href="#plans">Build your pack</a>
       </footer>
     </div>
-    <div class="wh-page-hero-media"><image-slot id="pack-hero" shape="rect" src="assets/photos/site/menu-subscribe-panel-desktop.webp" mobile-src="assets/photos/site/menu-subscribe-panel-mobile.webp" placeholder="P.S. Pack" fit="cover"></image-slot></div>
+    <div class="wh-page-hero-media"><image-slot id="pack-hero" shape="rect" src="assets/photos/ps-pass-full-pour.webp" mobile-src="assets/photos/ps-pass-habit.webp" placeholder="P.S. Pack — specialty coffee subscription" fit="cover"></image-slot></div>
   </section>
 
   <section class="wh-page-statement">
@@ -549,46 +551,18 @@
   <section class="ps-pack-explorer" id="plans">
     <header class="ps-pack-explorer-head">
       <h2>Explore Packs.</h2>
-      <p>Five core Packs. Two daily plans. Two short cycles. Three for teams and gifts. Each one is built around a real coffee habit.</p>
+      <p>Four core Packs. Two daily plans. Three short cycles. Three for teams and gifts. Each one is built around a real coffee habit.</p>
     </header>
 
     <section class="ps-pack-category">
       <header class="ps-pack-category-head">
         <h3>The Core Packs.</h3>
-        <p>5 Packs</p>
+        <p>4 Packs</p>
       </header>
-      <div class="ps-pack-grid">
+      <div class="ps-pack-grid ps-pack-grid-two">
         <article class="ps-pack-card">
           <div class="ps-pack-card-media">
-            <img class="ps-pack-card-bg" src="assets/photos/ps-pass-first-sip.webp" alt="">
-            <div class="ps-pack-card-overlay">
-              <div class="ps-pack-card-overlay-top">
-                <div class="ps-pack-card-overlay-title"><h4>The First Sip.</h4><p>Five cups. The whole menu.</p></div>
-                <span class="ps-pack-card-validity">7 days</span>
-              </div>
-              <div></div>
-              <div class="ps-pack-card-overlay-bottom">
-                <div class="ps-pack-card-price"><strong>₹599</strong><span>Avail any 5 items</span></div>
-                <p class="ps-pack-card-math">₹119.80 per item</p>
-              </div>
-            </div>
-          </div>
-          <div class="ps-pack-card-body">
-            <div class="ps-pack-card-meta"><span class="ps-pack-included"><strong>Included</strong>All Coffee · All Matcha</span></div>
-            <ul>
-              <li>Redeem any 5 items — any Coffee or any Matcha.</li>
-              <li>The whole menu is open. Ceremonial-grade Matcha included.</li>
-            </ul>
-            <p class="ps-pack-exclusions"><strong>Exclusions</strong>Retail beans, merchandise, packaged items.</p>
-            <p class="ps-pack-tax-note">Prices mentioned are exclusive of GST. GST will be applicable on all subscription card purchase.</p>
-            <p class="ps-pack-card-note">P.S. Five cups to find your usual. That is all this is.</p>
-            <a class="ps-pack-card-link" href="app.html">Get The First Sip</a>
-          </div>
-        </article>
-
-        <article class="ps-pack-card">
-          <div class="ps-pack-card-media">
-            <img class="ps-pack-card-bg" src="assets/photos/ps-pass-black.webp" alt="">
+            <img class="ps-pack-card-bg" src="assets/photos/ps-pass-black.webp" alt="The Black Pack — ten black coffees, no milk, no menu">
             <div class="ps-pack-card-overlay">
               <div class="ps-pack-card-overlay-top">
                 <div class="ps-pack-card-overlay-title"><h4>The Black Pack.</h4><p>No milk. No menu.</p></div>
@@ -616,7 +590,7 @@
 
         <article class="ps-pack-card">
           <div class="ps-pack-card-media">
-            <img class="ps-pack-card-bg" src="assets/photos/ps-pass-starter.webp" alt="">
+            <img class="ps-pack-card-bg" src="assets/photos/ps-pass-starter.webp" alt="The Starter Pack — ten classic coffees to begin the habit">
             <div class="ps-pack-card-overlay">
               <div class="ps-pack-card-overlay-top">
                 <div class="ps-pack-card-overlay-title"><h4>The Starter Pack.</h4><p>Begin the habit.</p></div>
@@ -644,7 +618,7 @@
 
         <article class="ps-pack-card">
           <div class="ps-pack-card-media">
-            <img class="ps-pack-card-bg" src="assets/photos/ps-pass-habit.webp" alt="">
+            <img class="ps-pack-card-bg" src="assets/photos/ps-pass-habit.webp" alt="The Habit Pack — twenty classic coffees at better per-cup pricing">
             <div class="ps-pack-card-overlay">
               <div class="ps-pack-card-overlay-top">
                 <div class="ps-pack-card-overlay-title"><h4>The Habit Pack.</h4><p>Same habit. Better maths.</p></div>
@@ -672,7 +646,7 @@
 
         <article class="ps-pack-card">
           <div class="ps-pack-card-media">
-            <img class="ps-pack-card-bg" src="assets/photos/ps-pass-full-pour.webp" alt="">
+            <img class="ps-pack-card-bg" src="assets/photos/ps-pass-full-pour.webp" alt="The Full Pour — twenty drinks across the entire P.S. menu">
             <div class="ps-pack-card-overlay">
               <div class="ps-pack-card-overlay-top">
                 <div class="ps-pack-card-overlay-title"><h4>The Full Pour.</h4><p>The whole menu, poured.</p></div>
@@ -708,7 +682,7 @@
       <div class="ps-pack-grid">
         <article class="ps-pack-card">
           <div class="ps-pack-card-media">
-            <img class="ps-pack-card-bg" src="assets/photos/ps-pass-daily.webp" alt="">
+            <img class="ps-pack-card-bg" src="assets/photos/ps-pass-daily.webp" alt="The Daily — one classic coffee every day for thirty days">
             <div class="ps-pack-card-overlay">
               <div class="ps-pack-card-overlay-top">
                 <div class="ps-pack-card-overlay-title"><h4>The Daily.</h4><p>One a day. Already paid for.</p></div>
@@ -736,7 +710,7 @@
 
         <article class="ps-pack-card">
           <div class="ps-pack-card-media">
-            <img class="ps-pack-card-bg" src="assets/photos/ps-pass-open-tab.webp" alt="">
+            <img class="ps-pack-card-bg" src="assets/photos/ps-pass-open-tab.webp" alt="The Open Tab — two classic coffees every day for thirty days">
             <div class="ps-pack-card-overlay">
               <div class="ps-pack-card-overlay-top">
                 <div class="ps-pack-card-overlay-title"><h4>The Open Tab.</h4><p>Two cups. Zero decisions.</p></div>
@@ -767,12 +741,40 @@
     <section class="ps-pack-category">
       <header class="ps-pack-category-head">
         <h3>Short &amp; specific.</h3>
-        <p>2 Packs</p>
+        <p>3 Packs</p>
       </header>
       <div class="ps-pack-grid">
         <article class="ps-pack-card">
           <div class="ps-pack-card-media">
-            <img class="ps-pack-card-bg" src="assets/photos/ps-pass-week.webp" alt="">
+            <img class="ps-pack-card-bg" src="assets/photos/ps-pass-first-sip.webp" alt="The First Sip Pack — five cups to explore the full P.S. menu">
+            <div class="ps-pack-card-overlay">
+              <div class="ps-pack-card-overlay-top">
+                <div class="ps-pack-card-overlay-title"><h4>The First Sip.</h4><p>Five cups. The whole menu.</p></div>
+                <span class="ps-pack-card-validity">7 days</span>
+              </div>
+              <div></div>
+              <div class="ps-pack-card-overlay-bottom">
+                <div class="ps-pack-card-price"><strong>₹599</strong><span>Avail any 5 items</span></div>
+                <p class="ps-pack-card-math">₹119.80 per item</p>
+              </div>
+            </div>
+          </div>
+          <div class="ps-pack-card-body">
+            <div class="ps-pack-card-meta"><span class="ps-pack-included"><strong>Included</strong>All Coffee · All Matcha</span></div>
+            <ul>
+              <li>Redeem any 5 items — any Coffee or any Matcha.</li>
+              <li>The whole menu is open. Ceremonial-grade Matcha included.</li>
+            </ul>
+            <p class="ps-pack-exclusions"><strong>Exclusions</strong>Retail beans, merchandise, packaged items.</p>
+            <p class="ps-pack-tax-note">Prices mentioned are exclusive of GST. GST will be applicable on all subscription card purchase.</p>
+            <p class="ps-pack-card-note">P.S. Five cups to find your usual. That is all this is.</p>
+            <a class="ps-pack-card-link" href="app.html">Get The First Sip</a>
+          </div>
+        </article>
+
+        <article class="ps-pack-card">
+          <div class="ps-pack-card-media">
+            <img class="ps-pack-card-bg" src="assets/photos/ps-pass-week.webp" alt="The Week — seven classic coffees across seven days">
             <div class="ps-pack-card-overlay">
               <div class="ps-pack-card-overlay-top">
                 <div class="ps-pack-card-overlay-title"><h4>The Week.</h4><p>Seven days. Seven cups.</p></div>
@@ -800,7 +802,7 @@
 
         <article class="ps-pack-card">
           <div class="ps-pack-card-media">
-            <img class="ps-pack-card-bg" src="assets/photos/ps-pass-green.webp" alt="">
+            <img class="ps-pack-card-bg" src="assets/photos/ps-pass-green.webp" alt="The Green Pack — ten ceremonial-grade Matcha and Hojicha drinks">
             <div class="ps-pack-card-overlay">
               <div class="ps-pack-card-overlay-top">
                 <div class="ps-pack-card-overlay-title"><h4>The Green Pack.</h4><p>Ceremonial grade. Ten times over.</p></div>
@@ -833,10 +835,10 @@
         <h3>Teams &amp; gifting.</h3>
         <p>3 Packs</p>
       </header>
-      <div class="ps-pack-grid ps-pack-grid-three">
+      <div class="ps-pack-grid">
         <article class="ps-pack-card">
           <div class="ps-pack-card-media">
-            <img class="ps-pack-card-bg" src="assets/photos/ps-pass-team.webp" alt="">
+            <img class="ps-pack-card-bg" src="assets/photos/ps-pass-team.webp" alt="The Team Pack — two hundred classic coffees pooled for your team">
             <div class="ps-pack-card-overlay">
               <div class="ps-pack-card-overlay-top">
                 <div class="ps-pack-card-overlay-title"><h4>The Team Pack.</h4><p>Better than the vending machine.</p></div>
@@ -858,13 +860,13 @@
             <p class="ps-pack-exclusions"><strong>Exclusions</strong>Matcha, retail beans, merchandise.</p>
             <p class="ps-pack-tax-note">Prices mentioned are exclusive of GST. GST will be applicable on all subscription card purchase.</p>
             <p class="ps-pack-card-note">P.S. Pretty serious about your team's coffee.</p>
-            <a class="ps-pack-card-link" href="events.html">Get The Team Pack</a>
+            <a class="ps-pack-card-link" href="partnership.html">Get The Team Pack</a>
           </div>
         </article>
 
         <article class="ps-pack-card">
           <div class="ps-pack-card-media">
-            <img class="ps-pack-card-bg" src="assets/photos/ps-pass-office-tab.webp" alt="">
+            <img class="ps-pack-card-bg" src="assets/photos/ps-pass-office-tab.webp" alt="The Office Tab — monthly-invoiced per-cup billing for a corporate Pod">
             <div class="ps-pack-card-overlay">
               <div class="ps-pack-card-overlay-top">
                 <div class="ps-pack-card-overlay-title"><h4>The Office Tab.</h4><p>For the Pod inside your building.</p></div>
@@ -886,13 +888,13 @@
             <p class="ps-pack-exclusions"><strong>Exclusions</strong>Retail, packaged items, and custom requests unless agreed.</p>
             <p class="ps-pack-tax-note">Prices mentioned are exclusive of GST. GST will be applicable on all subscription card purchase.</p>
             <p class="ps-pack-card-note">P.S. The team deserves better than the vending machine.</p>
-            <a class="ps-pack-card-link" href="partner.html">Talk to us</a>
+            <a class="ps-pack-card-link" href="partnership.html">Talk to us</a>
           </div>
         </article>
 
         <article class="ps-pack-card">
           <div class="ps-pack-card-media">
-            <img class="ps-pack-card-bg" src="assets/photos/ps-pass-note.webp" alt="">
+            <img class="ps-pack-card-bg" src="assets/photos/ps-pass-note.webp" alt="The P.S. Note — eight classic coffees with a personalised gift message">
             <div class="ps-pack-card-overlay">
               <div class="ps-pack-card-overlay-top">
                 <div class="ps-pack-card-overlay-title"><h4>The P.S. Note.</h4><p>A coffee, with a note attached.</p></div>
@@ -914,7 +916,7 @@
             <p class="ps-pack-exclusions"><strong>Exclusions</strong>Matcha, retail beans, merchandise.</p>
             <p class="ps-pack-tax-note">Prices mentioned are exclusive of GST. GST will be applicable on all subscription card purchase.</p>
             <p class="ps-pack-card-note">P.S. A coffee, with a note attached. The whole point of us.</p>
-            <a class="ps-pack-card-link" href="events.html">Send The P.S. Note</a>
+            <a class="ps-pack-card-link" href="app.html">Send The P.S. Note</a>
           </div>
         </article>
       </div>
