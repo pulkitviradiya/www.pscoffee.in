@@ -307,14 +307,17 @@
           arr.push({form:form.getAttribute("data-ps-form")||"form",t:Date.now()});
           localStorage.setItem(key,JSON.stringify(arr));
         }catch(err){}
-        // POST to Google Sheets
+        // POST to Google Sheets via Vercel API
         try{
-          var params = new URLSearchParams();
-          params.append('form_name', form.getAttribute('data-ps-form') || 'form');
+          var payload = { form_name: form.getAttribute('data-ps-form') || 'form' };
           new FormData(form).forEach(function(val, key){
-            if(typeof val === 'string') params.append(key, val);
+            if(typeof val === 'string') payload[key] = val;
           });
-          fetch(GS_URL, { method: 'POST', mode: 'no-cors', body: params });
+          fetch('/api/submit-form', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          });
         }catch(err){}
         var wrap = form.closest("[data-form-wrap]");
         var success = wrap ? wrap.querySelector(".form-success") : null;
