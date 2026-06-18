@@ -20,39 +20,197 @@
 <link rel="stylesheet" href="assets/ps.css">
 <link rel="stylesheet" href="assets/wh.css?v=17">
 <link rel="stylesheet" href="assets/mobile.css?v=5">
+<style>
+.partner-ps-note{
+  font-size:13px;font-style:italic;color:rgba(42,26,14,.55);
+  margin:clamp(8px,1.2vw,14px) 0 0;line-height:1.5
+}
+.partner-ps-note strong{color:var(--tc,#b04a24);font-style:normal;font-weight:800}
+
+/* ── Mini venue grid ── */
+.partner-more{
+  padding:clamp(40px,6vw,80px) var(--wh-gut);
+  background:var(--linen,#f5f0e8)
+}
+.partner-more-head{
+  display:flex;align-items:baseline;justify-content:space-between;gap:1rem;
+  margin-bottom:clamp(20px,2.8vw,36px)
+}
+.partner-more-head h2{
+  font-family:var(--wh-serif);font-size:clamp(22px,2.5vw,34px);
+  font-weight:500;color:var(--roast,#2a1a0e);margin:0;letter-spacing:-.03em
+}
+.partner-more-head p{
+  font-size:13px;color:rgba(42,26,14,.5);margin:0;text-align:right;max-width:28ch
+}
+.partner-mini-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  border-top:1px solid rgba(42,26,14,.12);
+  border-left:1px solid rgba(42,26,14,.12)
+}
+.partner-mini-card{
+  padding:clamp(18px,2.2vw,28px) clamp(16px,2vw,28px);
+  border-right:1px solid rgba(42,26,14,.12);
+  border-bottom:1px solid rgba(42,26,14,.12);
+  display:flex;flex-direction:column;gap:.4rem;
+  background:#fff;text-decoration:none;
+  transition:background .16s
+}
+.partner-mini-card:hover{background:var(--roast,#2a1a0e)}
+.partner-mini-card:hover .pmc-n,
+.partner-mini-card:hover h4,
+.partner-mini-card:hover p{color:#fff}
+.pmc-n{
+  font-size:10px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--tc,#b04a24);font-weight:700;margin:0
+}
+.partner-mini-card h4{
+  font-size:clamp(15px,1.4vw,19px);font-weight:800;
+  color:var(--roast,#2a1a0e);margin:0;line-height:1.15
+}
+.partner-mini-card p{
+  font-size:12px;color:rgba(42,26,14,.55);margin:0;
+  line-height:1.5;margin-top:.1rem
+}
+.partner-mini-cta{
+  margin-top:auto;padding-top:.6rem;
+  font-size:11px;font-weight:700;letter-spacing:.06em;
+  color:var(--tc,#b04a24);text-transform:uppercase
+}
+.partner-mini-card:hover .partner-mini-cta{color:rgba(255,255,255,.7)}
+@media(max-width:900px){.partner-mini-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.partner-mini-grid{grid-template-columns:1fr 1fr}}
+</style>
 </head>
 <body data-page="partnership">
 <div id="ps-nav"></div>
 <div class="page-top"></div>
 
 <main class="wh-page">
+
+  <!-- ── HERO ── -->
   <section class="wh-page-hero">
     <div class="wh-page-hero-copy">
       <p class="wh-page-kicker">Partnership.</p>
-      <h1>Let's see if your space is a fit.</h1>
+      <h1>Your team deserves better than the office vending machine.</h1>
       <footer>
-        <p>Gym. Boutique. Salon. Co-working. Hospital. University. Petrol pump. Corporate house. Food court. Metro station. If the footfall is there, a Pod probably belongs there too.</p>
-        <a href="partnership-enquiry.html">Start a conversation</a>
+        <p>A P.S. Pod inside your building. 100% Arabica, grab-and-go, in under 90 seconds. For co-working spaces, corporate campuses, and universities across Ahmedabad.</p>
+        <a href="partnership-enquiry.html">Enquire about a Pod →</a>
       </footer>
+      <p class="partner-ps-note"><strong>P.S.</strong> — Pretty Serious about this.</p>
     </div>
     <div class="wh-page-hero-media"><image-slot id="partner-hero" shape="rect" src="assets/photos/site/pods-cta-host-pod-desktop.webp" mobile-src="assets/photos/site/pods-cta-host-pod-mobile.webp" placeholder="Host a P.S. Pod" fit="cover"></image-slot></div>
   </section>
 
+  <!-- ── STATEMENT ── -->
   <section class="wh-page-statement">
     <p>Pretty Serious.</p>
-    <h2>A Pod is a complete specialty coffee operation in 50-200 sq ft.</h2>
+    <h2>A Pod is a complete specialty coffee operation in 50–200 sq ft.</h2>
   </section>
 
-  <section class="wh-page-rail">
-    <header><h2>Where Pods work.</h2><p>We place Pods where foot traffic already proves the habit.</p></header>
-    <div class="wh-page-cards">
-      <article class="wh-page-card"><div class="wh-page-card-img"><image-slot id="partner-card-office" shape="rect" src="assets/photos/site/pods-location-corporate-desktop.webp" mobile-src="assets/photos/site/pods-location-corporate-mobile.webp" placeholder="Office" fit="cover"></image-slot></div><h3>Corporate.</h3><p>Coffee is infrastructure. Your teams already drink it twice daily.</p><a href="#host">Host a Pod</a></article>
-      <article class="wh-page-card"><div class="wh-page-card-img"><image-slot id="partner-card-gym" shape="rect" src="assets/photos/site/pods-location-gym-desktop.webp" mobile-src="assets/photos/site/pods-location-gym-mobile.webp" placeholder="Gym" fit="cover"></image-slot></div><h3>Fitness.</h3><p>Pre-workout espresso. Post-workout cold brew. Done. Go.</p><a href="#host">Gym Pods</a></article>
-      <article class="wh-page-card"><div class="wh-page-card-img"><image-slot id="partner-card-campus" shape="rect" src="assets/photos/site/pods-location-university-desktop.webp" mobile-src="assets/photos/site/pods-location-university-mobile.webp" placeholder="Campus" fit="cover"></image-slot></div><h3>Campus.</h3><p>Budget-conscious, quality-aware, and always near a deadline.</p><a href="#host">Campus Pods</a></article>
-      <article class="wh-page-card"><div class="wh-page-card-img"><image-slot id="partner-card-retail" shape="rect" src="assets/photos/site/pods-what-is-a-pod-desktop.webp" mobile-src="assets/photos/site/pods-what-is-a-pod-mobile.webp" placeholder="Retail" fit="cover"></image-slot></div><h3>High-footfall.</h3><p>Measured foot traffic first. Neighbourhood romance later.</p><a href="#host">Retail Pods</a></article>
+  <!-- ── WHY HOST A POD (Block 07.02) ── -->
+  <section class="wh-page-list">
+    <div class="wh-page-list-grid">
+      <div class="wh-page-list-copy"><h2>Why host a Pod.</h2></div>
+      <div class="wh-page-list-rows">
+        <p><span>No setup complexity.</span><span>We bring the counter, the barista, and the beans. You provide 50–100 sq ft. We do everything else.</span></p>
+        <p><span>No Robusta in the cup.</span><span>Your people get 100% Arabica specialty coffee. Not a vending machine blend in a branded cup.</span></p>
+        <p><span>From ₹89 per cup.</span><span>Accessible enough to be a daily habit. Not a once-a-week treat that shows up in expense reports.</span></p>
+      </div>
     </div>
   </section>
 
+  <!-- ── WHO IS IT FOR (Block 07.03) ── -->
+  <section class="wh-page-rail">
+    <header><h2>Where Pods work.</h2><p>We place Pods where foot traffic already proves the habit.</p></header>
+    <div class="wh-page-cards">
+      <article class="wh-page-card">
+        <div class="wh-page-card-img"><image-slot id="partner-card-office" shape="rect" src="assets/photos/site/pods-location-corporate-desktop.webp" mobile-src="assets/photos/site/pods-location-corporate-mobile.webp" placeholder="Corporate office" fit="cover"></image-slot></div>
+        <h3>Corporate.</h3>
+        <p>Your team deserves better. The footprint is the same. Same space as a vending machine — real coffee instead. The P.S. Office Pack gives your team prepaid coffee at ₹75 per cup.</p>
+        <a href="partnership-enquiry.html">Host a Pod</a>
+      </article>
+      <article class="wh-page-card">
+        <div class="wh-page-card-img"><image-slot id="partner-card-gym" shape="rect" src="assets/photos/site/pods-location-gym-desktop.webp" mobile-src="assets/photos/site/pods-location-gym-mobile.webp" placeholder="Gym and fitness" fit="cover"></image-slot></div>
+        <h3>Fitness.</h3>
+        <p>Pre-workout espresso. Post-workout cold brew. Done. Go. Your members come in with a routine. Make coffee part of it.</p>
+        <a href="partnership-enquiry.html">Gym Pods</a>
+      </article>
+      <article class="wh-page-card">
+        <div class="wh-page-card-img"><image-slot id="partner-card-campus" shape="rect" src="assets/photos/site/pods-location-university-desktop.webp" mobile-src="assets/photos/site/pods-location-university-mobile.webp" placeholder="University campus" fit="cover"></image-slot></div>
+        <h3>Campus.</h3>
+        <p>Students are asking. You cannot afford a full cafe. A Pod fits in a corner of the food court. We handle operations, you provide the space. Specialty coffee without the capital expenditure.</p>
+        <a href="partnership-enquiry.html">Campus Pods</a>
+      </article>
+      <article class="wh-page-card">
+        <div class="wh-page-card-img"><image-slot id="partner-card-retail" shape="rect" src="assets/photos/site/pods-what-is-a-pod-desktop.webp" mobile-src="assets/photos/site/pods-what-is-a-pod-mobile.webp" placeholder="High-footfall retail" fit="cover"></image-slot></div>
+        <h3>Co-working.</h3>
+        <p>You want coffee as an amenity. You do not want to run a cafe. Your members expect great coffee — a P.S. Pod delivers specialty-grade Arabica without you hiring baristas or managing supply.</p>
+        <a href="partnership-enquiry.html">Co-working Pods</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- ── MORE VENUES (mini grid) ── -->
+  <section class="partner-more">
+    <div class="partner-more-head">
+      <h2>And everywhere else people need a good cup.</h2>
+      <p>If there's foot traffic, there's a case for a Pod.</p>
+    </div>
+    <div class="partner-mini-grid">
+      <a href="partnership-enquiry.html" class="partner-mini-card">
+        <p class="pmc-n">Healthcare</p>
+        <h4>Hospital &amp; Clinic</h4>
+        <p>Long waiting hours. Staff on long shifts. Coffee isn't a luxury here — it's infrastructure.</p>
+        <span class="partner-mini-cta">Enquire →</span>
+      </a>
+      <a href="partnership-enquiry.html" class="partner-mini-card">
+        <p class="pmc-n">F&amp;B Zone</p>
+        <h4>Food Court</h4>
+        <p>A Pod carves its own lane. Specialty coffee in a sea of everything else.</p>
+        <span class="partner-mini-cta">Enquire →</span>
+      </a>
+      <a href="partnership-enquiry.html" class="partner-mini-card">
+        <p class="pmc-n">On the Road</p>
+        <h4>Petrol Pump &amp; Fuel Station</h4>
+        <p>Captive dwell time. Real coffee while they wait — not a vending machine cup.</p>
+        <span class="partner-mini-cta">Enquire →</span>
+      </a>
+      <a href="partnership-enquiry.html" class="partner-mini-card">
+        <p class="pmc-n">Transit</p>
+        <h4>Metro &amp; Transit Station</h4>
+        <p>Thousands of commuters. 90 seconds to great coffee before they board.</p>
+        <span class="partner-mini-cta">Enquire →</span>
+      </a>
+      <a href="partnership-enquiry.html" class="partner-mini-card">
+        <p class="pmc-n">Lifestyle</p>
+        <h4>Boutique, Salon &amp; Spa</h4>
+        <p>Coffee as hospitality. Elevate the wait into something worth remembering.</p>
+        <span class="partner-mini-cta">Enquire →</span>
+      </a>
+      <a href="partnership-enquiry.html" class="partner-mini-card">
+        <p class="pmc-n">Retail</p>
+        <h4>Mall &amp; Retail Complex</h4>
+        <p>Dwell time is the product. A Pod turns browsers into buyers who stick around.</p>
+        <span class="partner-mini-cta">Enquire →</span>
+      </a>
+      <a href="partnership-enquiry.html" class="partner-mini-card">
+        <p class="pmc-n">Hospitality</p>
+        <h4>Hotel &amp; Serviced Stays</h4>
+        <p>Guests expect more. Specialty coffee in the lobby or room floor — no full cafe needed.</p>
+        <span class="partner-mini-cta">Enquire →</span>
+      </a>
+      <a href="partnership-enquiry.html" class="partner-mini-card">
+        <p class="pmc-n">Residential</p>
+        <h4>Housing Society &amp; Township</h4>
+        <p>Morning coffee downstairs. No commute to the nearest cafe. The Pod is the amenity.</p>
+        <span class="partner-mini-cta">Enquire →</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ── WHAT WE BRING ── -->
   <section class="wh-page-list" id="host">
     <div class="wh-page-list-grid">
       <div class="wh-page-list-copy"><h2>What we bring.</h2></div>
@@ -65,10 +223,27 @@
     </div>
   </section>
 
+  <!-- ── ENQUIRY CTA + SPLIT (Block 07.04) ── -->
   <section class="wh-page-split">
-    <a href="partnership-enquiry.html"><image-slot id="partner-split-contact" shape="rect" src="assets/photos/site/pods-cta-host-pod-desktop.webp" mobile-src="assets/photos/site/pods-cta-host-pod-mobile.webp" placeholder="Contact" fit="cover"></image-slot><h2>Tell us about the building.</h2><p>Location, footfall, audience, hours. We will do the rest.</p><span>Start the enquiry →</span></a>
-    <a href="pods.html#pods"><image-slot id="partner-split-pods" shape="rect" src="assets/photos/site/pods-hero-desktop.webp" mobile-src="assets/photos/site/pods-hero-mobile.webp" placeholder="P.S. Coffee Pod model small footprint, partnership page" fit="cover"></image-slot><h2>See the Pod model.</h2><p>Small footprint. Honest cup. Repeatable system.</p><span>View Pods →</span></a>
+    <a href="partnership-enquiry.html">
+      <image-slot id="partner-split-contact" shape="rect" src="assets/photos/site/pods-cta-host-pod-desktop.webp" mobile-src="assets/photos/site/pods-cta-host-pod-mobile.webp" placeholder="Host a P.S. Pod enquiry" fit="cover"></image-slot>
+      <h2>Let us put a P.S. Pod in your building.</h2>
+      <p>Tell us your location, your footfall estimate, and the space you have available. We will get back to you within one working day.</p>
+      <span>Submit enquiry →</span>
+    </a>
+    <a href="pods.html#pods">
+      <image-slot id="partner-split-pods" shape="rect" src="assets/photos/site/pods-hero-desktop.webp" mobile-src="assets/photos/site/pods-hero-mobile.webp" placeholder="P.S. Coffee Pod model small footprint, partnership page" fit="cover"></image-slot>
+      <h2>See the Pod model.</h2>
+      <p>Small footprint. Honest cup. Repeatable system.</p>
+      <span>View Pods →</span>
+    </a>
   </section>
+
+  <!-- ── P.S. SIGN-OFF (Block 07.04) ── -->
+  <div style="max-width:1200px;margin:0 auto clamp(48px,7vw,96px);padding-inline:clamp(20px,4vw,48px)">
+    <p class="partner-ps-note" style="font-size:clamp(15px,1.4vw,19px)"><strong>P.S.</strong> — We have never said no to a good location. Tell us about yours.</p>
+  </div>
+
 </main>
 
 <div id="ps-footer"></div>
