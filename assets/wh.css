@@ -4060,17 +4060,21 @@ body[data-page="home"] .footer .f-socials svg {
   color: var(--ps-roast);
 }
 
-.journal-topic-bar a:hover,
-.journal-topic-bar a[href="#coffee"] {
+.journal-topic-bar a:hover {
+  color: var(--ps-terracotta);
+}
+
+.journal-topic-bar a[href="#coffee"],
+.journal-topic-bar a[href="#brand"] {
   color: var(--ps-terracotta);
 }
 
 .journal-topic-bar a[href="#pods"] {
-  color: var(--ps-espresso);
+  color: #7a5230;
 }
 
 .journal-topic-bar a[href="#habit"] {
-  color: var(--ps-roast);
+  color: #7a5230;
 }
 
 .journal-topic-bar a[href="#city"] {
