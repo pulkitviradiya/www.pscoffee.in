@@ -672,30 +672,29 @@
       if(checked.length) data.set(name, checked.join(', '));
     });
 
-    // Formspree endpoint — replace YOUR_FORM_ID once set up at formspree.io
-    fetch('https://formspree.io/f/YOUR_FORM_ID', {
+    // Collect into plain object for our API
+    var payload = { form_name: 'feedback' };
+    data.forEach(function(v, k){ if(v) payload[k] = v; });
+
+    fetch('/api/submit-form', {
       method: 'POST',
-      body: data,
-      headers: {'Accept': 'application/json'}
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
     })
-    .then(function(r){
-      if(r.ok){
+    .then(function(r){ return r.json(); })
+    .then(function(d){
+      if(d.status === 'ok'){
         showSuccess();
       } else {
-        r.json().then(function(d){
-          var msg = (d && d.errors) ? d.errors.map(function(x){return x.message;}).join(', ') : 'Something went wrong.';
-          alert(msg + '\n\nYou can also email us directly: hello@pscoffee.in');
-          submitBtn.disabled = false;
-          submitBtn.textContent = 'Send my feedback →';
-        });
+        alert('Something went wrong. You can also email us: hello@pscoffee.in');
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Share my feedback →';
       }
     })
     .catch(function(){
-      // Formspree not set up yet — fall back to mailto
-      var lines = [];
-      data.forEach(function(v,k){ if(v) lines.push(k.replace(/_/g,' ')+': '+v); });
-      window.location.href = 'mailto:hello@pscoffee.in?subject=P.S.+Coffee+Feedback&body='+encodeURIComponent(lines.join('\n\n'));
-      showSuccess();
+      alert('Could not send. You can email us directly: hello@pscoffee.in');
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Share my feedback →';
     });
   });
 
