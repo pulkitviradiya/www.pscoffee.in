@@ -27,6 +27,11 @@
 }
 .partner-ps-note strong{color:var(--tc,#b04a24);font-style:normal;font-weight:800}
 
+/* ── Card CTA symmetry — pin all CTAs to card bottom ── */
+body[data-page="partnership"] .wh-page-card{display:flex;flex-direction:column}
+body[data-page="partnership"] .wh-page-card p{flex:1}
+body[data-page="partnership"] .wh-page-card a{margin-top:.85rem}
+
 /* ── Mini venue grid ── */
 .partner-more{
   padding:clamp(40px,6vw,80px) var(--wh-gut);
