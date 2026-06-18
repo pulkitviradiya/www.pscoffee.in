@@ -211,13 +211,12 @@ body[data-page="pack-enquiry"] .pe-page {
 .pe-business-fields { display: none; }
 .pe-business-fields.on { display: contents; }
 
-/* ── photo strip ── */
+/* ── photo strip — outside hero grid, full bleed ── */
 .pe-photo-strip {
   display: grid;
-  grid-column: 1 / -1;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0;
-  margin-top: clamp(36px, 5vw, 72px);
+  margin-top: clamp(48px, 7vw, 96px);
   width: 100%;
   overflow: hidden;
 }
@@ -424,12 +423,13 @@ body[data-page="pack-enquiry"] .pe-page {
       </div>
     </div>
 
-    <div class="pe-photo-strip" aria-label="P.S. Pack — prepaid specialty coffee">
-      <image-slot id="pe-photo-1" shape="rect" src="assets/photos/ps-pass-full-pour.webp" placeholder="P.S. Pack — The Full Pour" fit="cover"></image-slot>
-      <image-slot id="pe-photo-2" shape="rect" src="assets/photos/ps-pass-team.webp" placeholder="P.S. Pack — The Team Pack" fit="cover"></image-slot>
-      <image-slot id="pe-photo-3" shape="rect" src="assets/photos/ps-pass-habit.webp" placeholder="P.S. Pack — The Habit Pack" fit="cover"></image-slot>
-    </div>
   </section>
+
+  <div class="pe-photo-strip" aria-label="P.S. Pack — prepaid specialty coffee">
+    <image-slot id="pe-photo-1" shape="rect" src="assets/photos/ps-pass-full-pour.webp" placeholder="P.S. Pack — The Full Pour" fit="cover"></image-slot>
+    <image-slot id="pe-photo-2" shape="rect" src="assets/photos/ps-pass-team.webp" placeholder="P.S. Pack — The Team Pack" fit="cover"></image-slot>
+    <image-slot id="pe-photo-3" shape="rect" src="assets/photos/ps-pass-habit.webp" placeholder="P.S. Pack — The Habit Pack" fit="cover"></image-slot>
+  </div>
 </main>
 
 <!-- ── Success modal ── -->
