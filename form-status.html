@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Form Status · P.S. Coffee</title>
+<link rel="icon" type="image/png" href="assets/icons/ps-favicon-2026.png">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  background:#f5f0e8;color:#2a1a0e;
+  min-height:100vh;display:flex;align-items:center;justify-content:center;
+  padding:24px
+}
+.card{
+  background:#fff;border-radius:12px;
+  box-shadow:0 8px 32px rgba(42,26,14,.12);
+  padding:40px 48px;max-width:520px;width:100%;
+}
+.logo{
+  font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;
+  color:#b04a24;margin-bottom:32px
+}
+h1{font-size:28px;font-weight:700;line-height:1.15;margin-bottom:6px}
+.subtitle{font-size:14px;color:rgba(42,26,14,.5);margin-bottom:32px}
+
+.status-row{
+  display:flex;align-items:center;gap:12px;
+  padding:16px 18px;border-radius:8px;margin-bottom:12px;
+  font-size:14px;font-weight:600
+}
+.status-row.checking{background:#f0ece4;color:rgba(42,26,14,.5)}
+.status-row.ok{background:#eaf5ec;color:#1e6b35}
+.status-row.error{background:#fdecea;color:#b91c1c}
+.dot{
+  width:10px;height:10px;border-radius:50%;flex-shrink:0
+}
+.checking .dot{background:rgba(42,26,14,.25);animation:pulse 1.2s infinite}
+.ok .dot{background:#22c55e}
+.error .dot{background:#ef4444}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+
+.detail{font-size:12px;color:rgba(42,26,14,.45);margin-bottom:4px}
+.detail strong{color:#2a1a0e}
+
+.tabs{
+  margin-top:20px;border-top:1px solid rgba(42,26,14,.08);padding-top:16px
+}
+.tabs-label{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(42,26,14,.4);margin-bottom:10px}
+.tab-pill{
+  display:inline-block;background:#f0ece4;
+  padding:4px 10px;border-radius:999px;
+  font-size:12px;font-weight:600;color:#2a1a0e;
+  margin:0 4px 6px 0
+}
+.tab-pill.new{background:#b04a24;color:#fff}
+
+.recheck{
+  display:inline-flex;align-items:center;gap:6px;
+  margin-top:24px;padding:10px 18px;border-radius:6px;
+  background:#2a1a0e;color:#f5f0e8;
+  font-size:13px;font-weight:700;border:none;cursor:pointer;
+  transition:opacity .15s
+}
+.recheck:hover{opacity:.8}
+.recheck svg{width:14px;height:14px}
+
+.url-row{
+  margin-top:20px;padding:12px 14px;background:#f5f0e8;border-radius:6px;
+  font-size:11px;color:rgba(42,26,14,.45);word-break:break-all;line-height:1.5
+}
+.url-row strong{display:block;margin-bottom:2px;color:rgba(42,26,14,.6);font-size:10px;letter-spacing:.1em;text-transform:uppercase}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="logo">P.S. Coffee</div>
+  <h1>Form → Sheets status</h1>
+  <p class="subtitle">Checks whether form submissions are reaching Google Sheets.</p>
+
+  <div class="status-row checking" id="statusRow">
+    <div class="dot"></div>
+    <span id="statusText">Checking connection…</span>
+  </div>
+
+  <div id="details" style="display:none">
+    <p class="detail">Spreadsheet: <strong id="sheetName">—</strong></p>
+    <p class="detail">Form tabs found: <strong id="tabCount">—</strong></p>
+    <div class="tabs" id="tabsWrap" style="display:none">
+      <div class="tabs-label">Tabs in spreadsheet</div>
+      <div id="tabsList"></div>
+    </div>
+  </div>
+
+  <div id="errorDetail" style="display:none;margin-top:12px;font-size:12px;color:#b91c1c;line-height:1.5"></div>
+
+  <div class="url-row">
+    <strong>Endpoint</strong>
+    <span id="endpointUrl">—</span>
+  </div>
+
+  <button class="recheck" onclick="check()">
+    <svg viewBox="0 0 16 16" fill="currentColor"><path d="M13.65 2.35A8 8 0 1 0 15 8h-2a6 6 0 1 1-1.22-3.65L10 6h5V1l-1.35 1.35z"/></svg>
+    Re-check
+  </button>
+</div>
+
+<script src="assets/ps.js?v=14"></script>
+<script>
+/* Read GS_URL from ps.js — it's declared in the same scope via IIFE,
+   so we re-read it from the script tag src or derive from window */
+var GS_ENDPOINT = (function(){
+  /* ps.js exposes nothing, so grab from the known constant */
+  /* Fallback: user pastes their URL here if auto-detect fails */
+  return window.__GS_URL__ || 'https://script.google.com/macros/s/AKfycbwdB2ntsyFrSQXECHMIKER6P9ipGHWvZ0-CB-KaZj7e0A0M6sV2Vl-coKbvDEbMO1G6/exec';
+})();
+
+document.getElementById('endpointUrl').textContent = GS_ENDPOINT;
+
+function check(){
+  var row  = document.getElementById('statusRow');
+  var text = document.getElementById('statusText');
+  var det  = document.getElementById('details');
+  var err  = document.getElementById('errorDetail');
+  row.className = 'status-row checking';
+  text.textContent = 'Checking connection…';
+  det.style.display = 'none';
+  err.style.display = 'none';
+
+  fetch(GS_ENDPOINT, { cache: 'no-store' })
+    .then(function(r){ return r.json(); })
+    .then(function(data){
+      if(data.status === 'connected'){
+        row.className = 'status-row ok';
+        text.textContent = 'Connected — Google Sheets is receiving data';
+        document.getElementById('sheetName').textContent = data.spreadsheet || '—';
+        document.getElementById('tabCount').textContent = (data.tabs||[]).length;
+        det.style.display = 'block';
+        var tabs = data.tabs || [];
+        if(tabs.length){
+          var wrap = document.getElementById('tabsWrap');
+          var list = document.getElementById('tabsList');
+          wrap.style.display = 'block';
+          list.innerHTML = tabs.map(function(t){
+            var isNew = t !== 'Sheet1';
+            return '<span class="tab-pill'+(isNew?' new':'')+'">'+ t +'</span>';
+          }).join('');
+        }
+      } else {
+        row.className = 'status-row error';
+        text.textContent = 'Error — could not reach Google Sheets';
+        err.style.display = 'block';
+        err.textContent = data.message || 'Unknown error from Apps Script';
+      }
+    })
+    .catch(function(e){
+      row.className = 'status-row error';
+      text.textContent = 'Error — could not reach the endpoint';
+      err.style.display = 'block';
+      err.textContent = e.message || 'Network error. Check the Apps Script deployment.';
+    });
+}
+
+check();
+</script>
+</body>
+</html>
