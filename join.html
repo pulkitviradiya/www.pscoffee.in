@@ -1065,16 +1065,43 @@ body[data-page="join"] .form-success.show{display:none!important}
 <script>
 (function(){
   var modal=document.getElementById('joinModal');
-  function open(){modal.classList.add('on');}
-  function close(){modal.classList.remove('on');}
+  var activeSuccess=null;
+
+  function open(successEl){
+    activeSuccess=successEl;
+    modal.classList.add('on');
+  }
+
+  function close(){
+    modal.classList.remove('on');
+    if(activeSuccess){
+      // Find the sibling form
+      var formcard=activeSuccess.closest('[data-form-wrap]');
+      if(formcard){
+        var form=formcard.querySelector('form');
+        if(form){
+          form.reset();
+          // Remove chip selections
+          formcard.querySelectorAll('.chip.active').forEach(function(c){c.classList.remove('active');});
+          // Re-show the form (ps.js hides it with inline style)
+          form.style.display='';
+        }
+      }
+      // Remove .show so MutationObserver doesn't re-fire
+      activeSuccess.classList.remove('show');
+      activeSuccess=null;
+    }
+  }
+
   document.getElementById('joinModalClose').addEventListener('click',close);
   document.getElementById('joinModalX').addEventListener('click',close);
   modal.addEventListener('click',function(e){if(e.target===modal)close();});
   document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+
   // Watch every .form-success — when ps.js adds .show, open modal instead
   document.querySelectorAll('.form-success').forEach(function(el){
     new MutationObserver(function(){
-      if(el.classList.contains('show'))open();
+      if(el.classList.contains('show'))open(el);
     }).observe(el,{attributes:true,attributeFilter:['class']});
   });
 })();
