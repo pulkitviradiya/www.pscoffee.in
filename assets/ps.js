@@ -309,16 +309,12 @@
         }catch(err){}
         // POST to Google Sheets
         try{
-          var payload = { form_name: form.getAttribute('data-ps-form') || 'form' };
+          var params = new URLSearchParams();
+          params.append('form_name', form.getAttribute('data-ps-form') || 'form');
           new FormData(form).forEach(function(val, key){
-            if(typeof val === 'string') payload[key] = val; // skip file inputs
+            if(typeof val === 'string') params.append(key, val);
           });
-          fetch(GS_URL, {
-            method: 'POST',
-            mode: 'no-cors',
-            headers: { 'Content-Type': 'text/plain' },
-            body: JSON.stringify(payload)
-          });
+          fetch(GS_URL, { method: 'POST', mode: 'no-cors', body: params });
         }catch(err){}
         var wrap = form.closest("[data-form-wrap]");
         var success = wrap ? wrap.querySelector(".form-success") : null;
