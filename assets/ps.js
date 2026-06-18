@@ -97,6 +97,10 @@
     if(navMount) navMount.innerHTML = navHTML();
     var footMount = document.getElementById("ps-footer");
     if(footMount) footMount.innerHTML = footHTML();
+    var va = document.createElement('script');
+    va.defer = true;
+    va.src = '/_vercel/insights/script.js';
+    document.head.appendChild(va);
   }
 
   /* ---------- nav behaviour ---------- */
