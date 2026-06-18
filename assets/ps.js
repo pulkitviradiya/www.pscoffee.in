@@ -4,6 +4,8 @@
 (function(){
   "use strict";
 
+  var GS_URL = 'https://script.google.com/macros/s/AKfycbwdB2ntsyFrSQXECHMIKER6P9ipGHWvZ0-CB-KaZj7e0A0M6sV2Vl-coKbvDEbMO1G6/exec';
+
   var PAGES = [
     {href:"pack.html",        label:"Subscribe",   n:"01", primary:true, cls:"pack-link"},
     {href:"menu.html",        label:"Menu",        n:"02", primary:true},
@@ -298,11 +300,24 @@
           form.reset();
           return;
         }
+                // Save to localStorage as before
         try{
           var key="ps-submissions";
           var arr=JSON.parse(localStorage.getItem(key)||"[]");
           arr.push({form:form.getAttribute("data-ps-form")||"form",t:Date.now()});
           localStorage.setItem(key,JSON.stringify(arr));
+        }catch(err){}
+        // POST to Google Sheets
+        try{
+          var payload = { form_name: form.getAttribute('data-ps-form') || 'form' };
+          new FormData(form).forEach(function(val, key){
+            if(typeof val === 'string') payload[key] = val; // skip file inputs
+          });
+          fetch(GS_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          });
         }catch(err){}
         var wrap = form.closest("[data-form-wrap]");
         var success = wrap ? wrap.querySelector(".form-success") : null;
