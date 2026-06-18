@@ -1988,10 +1988,10 @@ body[data-page="home"] .footer .f-mosaic span {
   background-size: cover;
   background-position: center;
 }
-body[data-page="home"] .footer .f-mosaic span:nth-child(1) { background-image: url("photos/site/menu-coffee-cappuccino-desktop.webp"); }
+body[data-page="home"] .footer .f-mosaic span:nth-child(1) { background-image: url("photos/site/blog-coffee-spotlight-desktop.webp"); }
 body[data-page="home"] .footer .f-mosaic span:nth-child(2) { background-image: url("photos/site/story-hero-cafe-crop-desktop.webp"); }
 body[data-page="home"] .footer .f-mosaic span:nth-child(3) { background-image: url("photos/ps-pass-full-pour.webp"); }
-body[data-page="home"] .footer .f-mosaic span:nth-child(4) { background-image: url("photos/site/menu-pod-panel-desktop.webp"); }
+body[data-page="home"] .footer .f-mosaic span:nth-child(4) { background-image: url("photos/site/pods-hero-desktop.webp"); }
 body[data-page="home"] .footer .f-mosaic small {
   grid-column: 1 / -1;
   margin-top: .3rem;
@@ -3213,10 +3213,10 @@ body[data-page] .footer .f-mosaic span {
   background-size: cover;
   background-position: center;
 }
-body[data-page] .footer .f-mosaic span:nth-child(1) { background-image: url("photos/site/menu-coffee-cappuccino-desktop.webp"); }
+body[data-page] .footer .f-mosaic span:nth-child(1) { background-image: url("photos/site/blog-coffee-spotlight-desktop.webp"); }
 body[data-page] .footer .f-mosaic span:nth-child(2) { background-image: url("photos/site/story-hero-cafe-crop-desktop.webp"); }
 body[data-page] .footer .f-mosaic span:nth-child(3) { background-image: url("photos/ps-pass-full-pour.webp"); }
-body[data-page] .footer .f-mosaic span:nth-child(4) { background-image: url("photos/site/menu-pod-panel-desktop.webp"); }
+body[data-page] .footer .f-mosaic span:nth-child(4) { background-image: url("photos/site/pods-hero-desktop.webp"); }
 body[data-page] .footer .f-mosaic small {
   grid-column: 1 / -1;
   margin-top: .3rem;
