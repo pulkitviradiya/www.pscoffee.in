@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="assets/icons/ps-favicon-2026.png">
+<link rel="apple-touch-icon" href="assets/icons/ps-favicon-2026.png">
+<title>P.S. Coffee. | Host a Pod Enquiry.</title>
+<meta name="description" content="Tell us about your space. Gym, co-working, campus, corporate, hospital, food court, metro station — if the footfall is there, so are we.">
+<link rel="canonical" href="https://pscoffee.in/partnership-enquiry">
+<meta property="og:title" content="Host a Pod Enquiry. | P.S. Coffee.">
+<meta property="og:description" content="Share your space details and we will come back with whether a Pod fits, and what partnering would look like.">
+<meta property="og:url" content="https://pscoffee.in/partnership-enquiry">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://www.pscoffee.in/assets/photos/site/pods-cta-host-pod-desktop.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="assets/ps.css">
+<link rel="stylesheet" href="assets/wh.css?v=17">
+<link rel="stylesheet" href="assets/mobile.css?v=5">
+<style>
+body[data-page="partnership-enquiry"] {
+  background: var(--ps-steam);
+}
+body[data-page="partnership-enquiry"] .pq-page {
+  padding: calc(var(--wh-header-h) + clamp(32px, 5vw, 68px)) var(--wh-gut) clamp(72px, 8vw, 120px);
+}
+.pq-hero {
+  display: grid;
+  grid-template-columns: minmax(280px, .75fr) minmax(420px, 1fr);
+  gap: clamp(28px, 4vw, 64px);
+  align-items: start;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.pq-copy {
+  position: sticky;
+  top: calc(var(--wh-header-h) + 24px);
+}
+.pq-kicker {
+  margin: 0 0 64px;
+  color: var(--ps-terracotta);
+  font-family: var(--wh-sans);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+.pq-copy h1 {
+  max-width: 12ch;
+  margin: 0;
+  color: var(--ps-roast);
+  font-family: var(--wh-serif);
+  font-size: clamp(48px, 6.5vw, 100px);
+  font-weight: 500;
+  line-height: .88;
+  letter-spacing: -.065em;
+}
+.pq-copy > p.pq-sub {
+  max-width: 36ch;
+  margin: 24px 0 0;
+  color: rgba(92, 53, 24, .78);
+  font-family: var(--wh-sans);
+  font-size: clamp(15px, 1.3vw, 19px);
+  font-weight: 300;
+  line-height: 1.5;
+}
+.pq-note {
+  margin-top: clamp(30px, 4vw, 52px);
+  color: rgba(92, 53, 24, .82);
+  font-family: var(--wh-serif);
+  font-size: clamp(26px, 3vw, 48px);
+  font-weight: 600;
+  line-height: .98;
+  letter-spacing: -.045em;
+}
+.pq-note strong {
+  color: var(--ps-terracotta);
+}
+/* form card */
+.pq-form-card {
+  background: rgba(255, 252, 246, .9);
+  border: 1px solid rgba(61, 32, 16, .14);
+  box-shadow: 0 26px 60px rgba(61, 32, 16, .12);
+  padding: clamp(22px, 3.2vw, 42px);
+}
+.pq-form-card h2 {
+  margin: 0 0 8px;
+  color: var(--ps-roast);
+  font-family: var(--wh-serif);
+  font-size: clamp(32px, 3.4vw, 54px);
+  font-weight: 500;
+  line-height: .92;
+  letter-spacing: -.05em;
+}
+.pq-form-card > p {
+  max-width: 52ch;
+  margin: 0 0 24px;
+  color: rgba(92, 53, 24, .72);
+  font-family: var(--wh-sans);
+  font-size: 15px;
+  line-height: 1.5;
+}
+.pq-direct-email {
+  margin-top: -12px !important;
+  margin-bottom: 24px !important;
+  color: rgba(92, 53, 24, .78) !important;
+  font-size: 14px !important;
+}
+.pq-direct-email a {
+  color: var(--ps-terracotta);
+  font-weight: 800;
+  text-decoration: none;
+}
+.pq-form-card .form { gap: 14px; }
+.pq-form-card .field { gap: 5px; }
+.pq-form-card .field label {
+  color: rgba(61, 32, 16, .74);
+  font-family: var(--wh-sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+.pq-form-card input,
+.pq-form-card select,
+.pq-form-card textarea {
+  width: 100%;
+  min-height: 50px;
+  border: 1px solid rgba(61, 32, 16, .16);
+  border-radius: 0;
+  background: #EFE5D5;
+  color: var(--ps-roast);
+  font-family: var(--wh-sans);
+  font-size: 15px;
+  padding: 13px 15px;
+  outline: none;
+}
+.pq-form-card textarea { min-height: 120px; resize: vertical; }
+.pq-form-card input[type="file"] {
+  padding: 12px 15px;
+  border-style: dashed;
+  cursor: pointer;
+  font-size: 13px;
+}
+.pq-form-card input:focus,
+.pq-form-card select:focus,
+.pq-form-card textarea:focus {
+  border-color: var(--ps-terracotta);
+  background: #FFF9EF;
+  box-shadow: 0 0 0 3px rgba(232, 64, 12, .08);
+}
+.pq-form-card .err {
+  color: #cf3b1c;
+  font-family: var(--wh-sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.pq-section-label {
+  margin: 8px 0 -4px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(61, 32, 16, .12);
+  color: var(--ps-roast);
+  font-family: var(--wh-sans);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+.pq-form-card .form-submit {
+  min-height: 56px;
+  margin-top: 8px;
+  border: 0;
+  background: var(--ps-terracotta);
+  color: #fff;
+  cursor: pointer;
+  font-family: var(--wh-sans);
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: .02em;
+}
+.pq-form-card .form-success { padding: 20px 0 0; }
+.pq-form-card .form-success h3 {
+  margin: 0;
+  color: var(--ps-roast);
+  font-family: var(--wh-serif);
+  font-size: clamp(34px, 4vw, 58px);
+  font-weight: 500;
+  line-height: .9;
+  letter-spacing: -.055em;
+}
+.pq-form-card .form-success p {
+  max-width: 46ch;
+  color: rgba(92, 53, 24, .78);
+  font-family: var(--wh-sans);
+  font-size: 15px;
+  line-height: 1.55;
+}
+.pq-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+}
+.pq-meta span {
+  border: 1px solid rgba(61, 32, 16, .14);
+  padding: 7px 10px;
+  color: rgba(61, 32, 16, .72);
+  font-family: var(--wh-sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+/* photo strip */
+.pq-photo-strip {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+  margin-top: clamp(36px, 5vw, 72px);
+  width: 100%;
+  overflow: hidden;
+}
+.pq-photo-strip image-slot {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  aspect-ratio: 1.6;
+  background: var(--ps-oat);
+}
+/* modal */
+.pq-modal-overlay {
+  position: fixed; inset: 0;
+  background: rgba(42, 26, 14, .55);
+  backdrop-filter: blur(4px);
+  z-index: 9000;
+  display: none; align-items: center; justify-content: center;
+  padding: 20px;
+}
+.pq-modal-overlay.on { display: flex; }
+.pq-modal-card {
+  background: var(--linen, #f5f0e8);
+  border-radius: 12px;
+  max-width: 460px; width: 100%;
+  padding: clamp(36px, 6vw, 56px) clamp(28px, 5vw, 48px);
+  text-align: center;
+  position: relative;
+  box-shadow: 0 24px 64px rgba(42, 26, 14, .22);
+  overflow: hidden;
+}
+.pq-modal-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 5px;
+  background: linear-gradient(90deg, var(--tc, #b04a24), #e07a50, var(--tc, #b04a24));
+}
+.pq-modal-icon { font-size: 44px; display: block; margin: 0 0 1.1rem; line-height: 1; }
+.pq-modal-card h2 {
+  font-size: clamp(20px, 2.8vw, 28px); font-weight: 900;
+  color: var(--roast, #2a1a0e); margin: 0 0 .6rem; line-height: 1.15; letter-spacing: -.02em;
+}
+.pq-modal-card p {
+  font-size: 14px; color: rgba(42, 26, 14, .6);
+  max-width: 38ch; margin: 0 auto 1.75rem; line-height: 1.7;
+}
+.pq-modal-close-btn {
+  display: inline-block; background: var(--roast, #2a1a0e); color: var(--linen, #f5f0e8);
+  padding: 12px 26px; border-radius: 4px; font-weight: 700; font-size: 14px;
+  border: none; cursor: pointer; font-family: inherit; letter-spacing: .01em;
+  transition: opacity .15s;
+}
+.pq-modal-close-btn:hover { opacity: .8; }
+.pq-modal-x {
+  position: absolute; top: 13px; right: 14px;
+  background: none; border: none; cursor: pointer;
+  font-size: 18px; line-height: 1; color: rgba(42, 26, 14, .35);
+  padding: 4px 8px; border-radius: 4px; transition: color .15s;
+}
+.pq-modal-x:hover { color: var(--roast, #2a1a0e); }
+@media (max-width: 920px) {
+  .pq-hero { grid-template-columns: 1fr; }
+  .pq-copy { position: static; }
+  .pq-copy h1 { max-width: 13ch; }
+}
+@media (max-width: 640px) {
+  body[data-page="partnership-enquiry"] .pq-page { padding-inline: calc(var(--wh-gut) * .75); }
+  .pq-form-card { padding: 20px; }
+  .row-2 { grid-template-columns: 1fr; }
+  .pq-photo-strip { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body data-page="partnership-enquiry">
+<div id="ps-nav"></div>
+
+<main class="pq-page">
+  <section class="pq-hero">
+    <div class="pq-copy">
+      <p class="pq-kicker">Partnership.</p>
+      <h1>Let's see if your space is a fit.</h1>
+      <p class="pq-sub">Gym. Boutique. Salon. Co-working. Hospital. University campus. Petrol pump. Corporate house. Food court. Metro station. Or any premises where you think a Pod belongs — let's explore the footfall together and see how we partner.</p>
+      <div class="pq-note"><strong>P.S.</strong> Zero setup cost. Revenue share model. We handle everything.</div>
+    </div>
+
+    <div class="pq-form-card" data-form-wrap>
+      <h2>Space enquiry.</h2>
+      <p>Tell us about your premises. Name, email, and mobile are required. Attach a floor plan, photo, or layout if it helps us understand the space.</p>
+      <p class="pq-direct-email">Prefer email? <a href="mailto:hello@pscoffee.in?subject=P.S.%20Coffee%20Partnership%20Enquiry">hello@pscoffee.in</a></p>
+      <form class="form" data-ps-form="partnership-enquiry">
+
+        <p class="pq-section-label">Contact</p>
+        <div class="row-2">
+          <div class="field">
+            <label>Your name</label>
+            <input type="text" name="name" required placeholder="Full name">
+            <span class="err">Required</span>
+          </div>
+          <div class="field">
+            <label>Mobile</label>
+            <input type="tel" name="mobile" required placeholder="+91 98765 43210">
+            <span class="err">Required</span>
+          </div>
+        </div>
+        <div class="row-2">
+          <div class="field">
+            <label>Email</label>
+            <input type="email" name="email" required placeholder="you@company.com">
+            <span class="err">Valid email required</span>
+          </div>
+          <div class="field">
+            <label>Company / Organisation</label>
+            <input type="text" name="company" placeholder="Company or brand name">
+          </div>
+        </div>
+
+        <p class="pq-section-label">The Space</p>
+        <div class="row-2">
+          <div class="field">
+            <label>Space / Building name</label>
+            <input type="text" name="space_name" required placeholder="Name of your premises">
+            <span class="err">Required</span>
+          </div>
+          <div class="field">
+            <label>City / Area</label>
+            <input type="text" name="city" required placeholder="Ahmedabad, Surat, Mumbai…">
+            <span class="err">Required</span>
+          </div>
+        </div>
+        <div class="field">
+          <label>Full address</label>
+          <input type="text" name="address" placeholder="Street address, building, landmark">
+        </div>
+        <div class="row-2">
+          <div class="field">
+            <label>Type of space</label>
+            <select name="space_type" required>
+              <option value="">Select space type</option>
+              <option>Co-working Space</option>
+              <option>Corporate / Office Building</option>
+              <option>Gym / Fitness Studio</option>
+              <option>University / College Campus</option>
+              <option>Hospital / Clinic</option>
+              <option>Petrol Pump / Fuel Station</option>
+              <option>Food Court / Cloud Kitchen</option>
+              <option>Mall / Retail Complex</option>
+              <option>Metro / Transit Station</option>
+              <option>Boutique / Salon / Spa</option>
+              <option>Hotel / Hospitality</option>
+              <option>Residential Society / Apartment</option>
+              <option>Other</option>
+            </select>
+            <span class="err">Required</span>
+          </div>
+          <div class="field">
+            <label>Estimated daily footfall</label>
+            <select name="footfall">
+              <option>Under 200 people</option>
+              <option>200 – 500 people</option>
+              <option>500 – 1,000 people</option>
+              <option>1,000 – 2,500 people</option>
+              <option>2,500+ people</option>
+              <option>Not sure</option>
+            </select>
+          </div>
+        </div>
+        <div class="row-2">
+          <div class="field">
+            <label>Available space for Pod</label>
+            <select name="space_size">
+              <option>Under 50 sq ft</option>
+              <option>50 – 100 sq ft</option>
+              <option>100 – 200 sq ft</option>
+              <option>200+ sq ft</option>
+              <option>Flexible / not sure</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>What are you looking for?</label>
+            <select name="partnership_type">
+              <option>Host a Pod (revenue share)</option>
+              <option>Franchise / license model</option>
+              <option>Joint venture</option>
+              <option>Not sure — just exploring</option>
+            </select>
+          </div>
+        </div>
+
+        <p class="pq-section-label">About the Space</p>
+        <div class="field">
+          <label>Tell us about the premises</label>
+          <textarea name="message" placeholder="Who uses the space, peak hours, existing food & beverage setup, and why you think a P.S. Coffee Pod would work here."></textarea>
+        </div>
+
+        <p class="pq-section-label">Photos</p>
+        <div class="field">
+          <label>Upload photos of the space (optional)</label>
+          <input type="file" name="photos" accept="image/*,.pdf" multiple>
+        </div>
+        <div class="field">
+          <label>Floor plan / Layout (optional)</label>
+          <input type="file" name="floor_plan" accept=".pdf,image/*">
+        </div>
+
+        <button class="form-submit" type="submit">Send enquiry &nbsp;→</button>
+      </form>
+      <div class="form-success" role="status">
+        <h3>Received.</h3>
+        <p>We will review your space details and come back if there is a fit. For urgent enquiries, write directly to <a href="mailto:hello@pscoffee.in">hello@pscoffee.in</a>.</p>
+      </div>
+      <div class="pq-meta">
+        <span>Zero setup cost</span>
+        <span>Revenue share</span>
+        <span>We handle ops</span>
+        <span>50 – 200 sq ft</span>
+      </div>
+    </div>
+
+    <div class="pq-photo-strip" aria-label="P.S. Coffee Pod locations">
+      <image-slot id="pq-photo-1" shape="rect" src="assets/photos/site/pods-location-coworking-desktop.webp" placeholder="P.S. Coffee Pod inside co-working space" fit="cover"></image-slot>
+      <image-slot id="pq-photo-2" shape="rect" src="assets/photos/site/pods-location-corporate-desktop.webp" placeholder="P.S. Coffee Pod inside corporate office" fit="cover"></image-slot>
+      <image-slot id="pq-photo-3" shape="rect" src="assets/photos/site/pods-what-is-a-pod-desktop.webp" placeholder="P.S. Coffee Pod compact format" fit="cover"></image-slot>
+    </div>
+  </section>
+</main>
+
+<!-- ── Success modal ── -->
+<div class="pq-modal-overlay" id="pqModal" role="dialog" aria-modal="true" aria-labelledby="pqModalTitle">
+  <div class="pq-modal-card">
+    <button class="pq-modal-x" id="pqModalX" aria-label="Close">✕</button>
+    <span class="pq-modal-icon">🏢</span>
+    <h2 id="pqModalTitle">Thank you for sharing your space with us.</h2>
+    <p>We will review the details and get back to you in a while. Every enquiry is read — genuinely.</p>
+    <button class="pq-modal-close-btn" id="pqModalClose">Got it →</button>
+  </div>
+</div>
+
+<div id="ps-footer"></div>
+<script src="assets/image-slot.js"></script>
+<script src="assets/ps.js?v=11"></script>
+<script src="assets/mobile.js?v=1"></script>
+<script>
+(function(){
+  var modal = document.getElementById('pqModal');
+  function open(){ modal.classList.add('on'); }
+  function close(){ modal.classList.remove('on'); }
+  document.getElementById('pqModalClose').addEventListener('click', close);
+  document.getElementById('pqModalX').addEventListener('click', close);
+  modal.addEventListener('click', function(e){ if(e.target === modal) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') close(); });
+  document.querySelectorAll('.form-success').forEach(function(el){
+    new MutationObserver(function(){
+      if(el.classList.contains('show')) open();
+    }).observe(el, { attributes: true, attributeFilter: ['class'] });
+  });
+  /* suppress inline success on this page */
+  var s = document.createElement('style');
+  s.textContent = 'body[data-page="partnership-enquiry"] .form-success.show{display:none!important}';
+  document.head.appendChild(s);
+})();
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "P.S. Coffee Partnership Enquiry",
+  "url": "https://pscoffee.in/partnership-enquiry",
+  "description": "Space and Pod partnership enquiry for P.S. Coffee. Gyms, co-working spaces, campuses, corporate offices, hospitals, food courts, metro stations, and more.",
+  "about": {
+    "@type": "Service",
+    "name": "Host a P.S. Coffee Pod",
+    "provider": {
+      "@type": "Organization",
+      "name": "P.S. Coffee",
+      "url": "https://pscoffee.in",
+      "logo": "https://pscoffee.in/assets/icons/ps-logo-2026.png"
+    }
+  }
+}
+</script>
+</body>
+</html>
