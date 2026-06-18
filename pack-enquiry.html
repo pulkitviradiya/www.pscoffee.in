@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="assets/icons/ps-favicon-2026.png">
+<link rel="apple-touch-icon" href="assets/icons/ps-favicon-2026.png">
+<title>P.S. Coffee. | Get Your Pack.</title>
+<meta name="description" content="Tell us which Pack you want and we will sort it. Individual, team, or a customised corporate plan — your coffee, already paid for.">
+<link rel="canonical" href="https://pscoffee.in/pack-enquiry">
+<meta property="og:title" content="Get Your P.S. Pack. | P.S. Coffee.">
+<meta property="og:description" content="Pick your Pack. Individual or team. No auto-renew, no lock-in. Specialty coffee, already paid for.">
+<meta property="og:url" content="https://pscoffee.in/pack-enquiry">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://www.pscoffee.in/assets/photos/ps-pass-full-pour.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="assets/ps.css">
+<link rel="stylesheet" href="assets/wh.css?v=17">
+<link rel="stylesheet" href="assets/mobile.css?v=5">
+<style>
+body[data-page="pack-enquiry"] {
+  background: var(--ps-steam);
+}
+body[data-page="pack-enquiry"] .pe-page {
+  padding: calc(var(--wh-header-h) + clamp(32px, 5vw, 68px)) var(--wh-gut) clamp(72px, 8vw, 120px);
+}
+.pe-hero {
+  display: grid;
+  grid-template-columns: minmax(280px, .75fr) minmax(420px, 1fr);
+  gap: clamp(28px, 4vw, 64px);
+  align-items: start;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.pe-copy {
+  position: sticky;
+  top: calc(var(--wh-header-h) + 24px);
+}
+.pe-kicker {
+  margin: 0 0 64px;
+  color: var(--ps-terracotta);
+  font-family: var(--wh-sans);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+.pe-copy h1 {
+  max-width: 11ch;
+  margin: 0;
+  color: var(--ps-roast);
+  font-family: var(--wh-serif);
+  font-size: clamp(48px, 6.5vw, 100px);
+  font-weight: 500;
+  line-height: .88;
+  letter-spacing: -.065em;
+}
+.pe-copy > p.pe-sub {
+  max-width: 36ch;
+  margin: 24px 0 0;
+  color: rgba(92, 53, 24, .78);
+  font-family: var(--wh-sans);
+  font-size: clamp(15px, 1.3vw, 19px);
+  font-weight: 300;
+  line-height: 1.5;
+}
+.pe-note {
+  margin-top: clamp(30px, 4vw, 52px);
+  color: rgba(92, 53, 24, .82);
+  font-family: var(--wh-serif);
+  font-size: clamp(26px, 3vw, 48px);
+  font-weight: 600;
+  line-height: .98;
+  letter-spacing: -.045em;
+}
+.pe-note strong { color: var(--ps-terracotta); }
+
+/* ── form card ── */
+.pe-form-card {
+  background: rgba(255, 252, 246, .9);
+  border: 1px solid rgba(61, 32, 16, .14);
+  box-shadow: 0 26px 60px rgba(61, 32, 16, .12);
+  padding: clamp(22px, 3.2vw, 42px);
+}
+.pe-form-card h2 {
+  margin: 0 0 8px;
+  color: var(--ps-roast);
+  font-family: var(--wh-serif);
+  font-size: clamp(32px, 3.4vw, 54px);
+  font-weight: 500;
+  line-height: .92;
+  letter-spacing: -.05em;
+}
+.pe-form-card > p {
+  max-width: 52ch;
+  margin: 0 0 24px;
+  color: rgba(92, 53, 24, .72);
+  font-family: var(--wh-sans);
+  font-size: 15px;
+  line-height: 1.5;
+}
+.pe-direct-email {
+  margin-top: -12px !important;
+  margin-bottom: 24px !important;
+  color: rgba(92, 53, 24, .78) !important;
+  font-size: 14px !important;
+}
+.pe-direct-email a {
+  color: var(--ps-terracotta);
+  font-weight: 800;
+  text-decoration: none;
+}
+.pe-form-card .form { gap: 14px; }
+.pe-form-card .field { gap: 5px; }
+.pe-form-card .field label {
+  color: rgba(61, 32, 16, .74);
+  font-family: var(--wh-sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+.pe-form-card input,
+.pe-form-card select,
+.pe-form-card textarea {
+  width: 100%;
+  min-height: 50px;
+  border: 1px solid rgba(61, 32, 16, .16);
+  border-radius: 0;
+  background: #EFE5D5;
+  color: var(--ps-roast);
+  font-family: var(--wh-sans);
+  font-size: 15px;
+  padding: 13px 15px;
+  outline: none;
+}
+.pe-form-card textarea { min-height: 110px; resize: vertical; }
+.pe-form-card input:focus,
+.pe-form-card select:focus,
+.pe-form-card textarea:focus {
+  border-color: var(--ps-terracotta);
+  background: #FFF9EF;
+  box-shadow: 0 0 0 3px rgba(232, 64, 12, .08);
+}
+.pe-form-card .err {
+  color: #cf3b1c;
+  font-family: var(--wh-sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.pe-section-label {
+  margin: 8px 0 -4px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(61, 32, 16, .12);
+  color: var(--ps-roast);
+  font-family: var(--wh-sans);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+.pe-form-card .form-submit {
+  min-height: 56px;
+  margin-top: 8px;
+  border: 0;
+  background: var(--ps-terracotta);
+  color: #fff;
+  cursor: pointer;
+  font-family: var(--wh-sans);
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: .02em;
+}
+.pe-form-card .form-success { padding: 20px 0 0; }
+.pe-form-card .form-success h3 {
+  margin: 0;
+  color: var(--ps-roast);
+  font-family: var(--wh-serif);
+  font-size: clamp(34px, 4vw, 58px);
+  font-weight: 500;
+  line-height: .9;
+  letter-spacing: -.055em;
+}
+.pe-form-card .form-success p {
+  max-width: 46ch;
+  color: rgba(92, 53, 24, .78);
+  font-family: var(--wh-sans);
+  font-size: 15px;
+  line-height: 1.55;
+}
+.pe-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+}
+.pe-meta span {
+  border: 1px solid rgba(61, 32, 16, .14);
+  padding: 7px 10px;
+  color: rgba(61, 32, 16, .72);
+  font-family: var(--wh-sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+/* ── business fields toggle ── */
+.pe-business-fields { display: none; }
+.pe-business-fields.on { display: contents; }
+
+/* ── photo strip ── */
+.pe-photo-strip {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+  margin-top: clamp(36px, 5vw, 72px);
+  width: 100%;
+  overflow: hidden;
+}
+.pe-photo-strip image-slot {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  aspect-ratio: 1.6;
+  background: var(--ps-oat);
+}
+
+/* ── modal ── */
+.pe-modal-overlay {
+  position: fixed; inset: 0;
+  background: rgba(42, 26, 14, .55);
+  backdrop-filter: blur(4px);
+  z-index: 9000;
+  display: none; align-items: center; justify-content: center;
+  padding: 20px;
+}
+.pe-modal-overlay.on { display: flex; }
+.pe-modal-card {
+  background: var(--linen, #f5f0e8);
+  border-radius: 12px;
+  max-width: 460px; width: 100%;
+  padding: clamp(36px, 6vw, 56px) clamp(28px, 5vw, 48px);
+  text-align: center;
+  position: relative;
+  box-shadow: 0 24px 64px rgba(42, 26, 14, .22);
+  overflow: hidden;
+}
+.pe-modal-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 5px;
+  background: linear-gradient(90deg, var(--tc, #b04a24), #e07a50, var(--tc, #b04a24));
+}
+.pe-modal-icon { font-size: 44px; display: block; margin: 0 0 1.1rem; line-height: 1; }
+.pe-modal-card h2 {
+  font-size: clamp(20px, 2.8vw, 28px); font-weight: 900;
+  color: var(--roast, #2a1a0e); margin: 0 0 .6rem; line-height: 1.15; letter-spacing: -.02em;
+}
+.pe-modal-card p {
+  font-size: 14px; color: rgba(42, 26, 14, .6);
+  max-width: 38ch; margin: 0 auto 1.75rem; line-height: 1.7;
+}
+.pe-modal-close-btn {
+  display: inline-block; background: var(--roast, #2a1a0e); color: var(--linen, #f5f0e8);
+  padding: 12px 26px; border-radius: 4px; font-weight: 700; font-size: 14px;
+  border: none; cursor: pointer; font-family: inherit; letter-spacing: .01em;
+  transition: opacity .15s;
+}
+.pe-modal-close-btn:hover { opacity: .8; }
+.pe-modal-x {
+  position: absolute; top: 13px; right: 14px;
+  background: none; border: none; cursor: pointer;
+  font-size: 18px; line-height: 1; color: rgba(42, 26, 14, .35);
+  padding: 4px 8px; border-radius: 4px; transition: color .15s;
+}
+.pe-modal-x:hover { color: var(--roast, #2a1a0e); }
+
+@media (max-width: 920px) {
+  .pe-hero { grid-template-columns: 1fr; }
+  .pe-copy { position: static; }
+  .pe-copy h1 { max-width: 13ch; }
+}
+@media (max-width: 640px) {
+  body[data-page="pack-enquiry"] .pe-page { padding-inline: calc(var(--wh-gut) * .75); }
+  .pe-form-card { padding: 20px; }
+  .row-2 { grid-template-columns: 1fr; }
+  .pe-photo-strip { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body data-page="pack-enquiry">
+<div id="ps-nav"></div>
+
+<main class="pe-page">
+  <section class="pe-hero">
+    <div class="pe-copy">
+      <p class="pe-kicker">P.S. Pack.</p>
+      <h1>Your coffee, already paid for.</h1>
+      <p class="pe-sub">Individual habit or company-wide perk — tell us which Pack you want and we will sort it. No auto-renew. No lock-in. No bad coffee mornings.</p>
+      <div class="pe-note"><strong>P.S.</strong> Teams and co-working spaces get a customised plan. Prepay, pool, and skip the reimbursement headache.</div>
+    </div>
+
+    <div class="pe-form-card" data-form-wrap>
+      <h2>Get your Pack.</h2>
+      <p>Tell us which Pack you are after and whether it is for you personally or your team. We will come back with the next step.</p>
+      <p class="pe-direct-email">Prefer email? <a href="mailto:hello@pscoffee.in?subject=P.S.%20Pack%20Enquiry">hello@pscoffee.in</a></p>
+      <form class="form" data-ps-form="pack-enquiry">
+
+        <p class="pe-section-label">The Pack</p>
+        <div class="row-2">
+          <div class="field">
+            <label>Which Pack are you interested in?</label>
+            <select name="pack" id="pe-pack-select" required>
+              <option value="">Select a Pack</option>
+              <option value="black">The Black Pack — ₹749 · 10 cups</option>
+              <option value="starter">The Starter Pack — ₹1,099 · 10 cups</option>
+              <option value="habit">The Habit Pack — ₹1,899 · 20 cups</option>
+              <option value="full-pour">The Full Pour — ₹2,899 · 20 cups</option>
+              <option value="daily">The Daily — ₹1,299 · 1 cup/day</option>
+              <option value="open-tab">The Open Tab — ₹2,499 · 2 cups/day</option>
+              <option value="first-sip">The First Sip — ₹599 · 5 cups</option>
+              <option value="week">The Week — ₹549 · 7 cups</option>
+              <option value="green">The Green Pack — ₹1,399 · 10 Matcha</option>
+              <option value="team">The Team Pack — ₹14,999 · 200 cups</option>
+              <option value="office-tab">The Office Tab — Custom · monthly billing</option>
+              <option value="ps-note">The P.S. Note — ₹899 · 8 cups (gift)</option>
+              <option value="not-sure">Not sure yet — help me choose</option>
+            </select>
+            <span class="err">Required</span>
+          </div>
+          <div class="field">
+            <label>This Pack is for</label>
+            <select name="enquiry_type" id="pe-type-select" required>
+              <option value="">Select one</option>
+              <option value="individual">Just me — personal use</option>
+              <option value="business">My team / company / co-working space</option>
+              <option value="gift">A gift for someone</option>
+            </select>
+            <span class="err">Required</span>
+          </div>
+        </div>
+
+        <p class="pe-section-label">About You</p>
+        <div class="row-2">
+          <div class="field">
+            <label>Your name</label>
+            <input type="text" name="name" required placeholder="Full name">
+            <span class="err">Required</span>
+          </div>
+          <div class="field">
+            <label>Mobile</label>
+            <input type="tel" name="mobile" required placeholder="+91 98765 43210">
+            <span class="err">Required</span>
+          </div>
+        </div>
+        <div class="row-2">
+          <div class="field">
+            <label>Email</label>
+            <input type="email" name="email" required placeholder="you@company.com">
+            <span class="err">Valid email required</span>
+          </div>
+          <div class="field">
+            <label>City / Location</label>
+            <input type="text" name="city" required placeholder="Ahmedabad, Surat…">
+            <span class="err">Required</span>
+          </div>
+        </div>
+
+        <div class="pe-business-fields" id="peBusinessFields">
+          <p class="pe-section-label">Team &amp; Company Details</p>
+          <div class="row-2">
+            <div class="field">
+              <label>Company / Organisation name</label>
+              <input type="text" name="company_name" placeholder="Your company or co-working name">
+            </div>
+            <div class="field">
+              <label>Team size</label>
+              <select name="team_size">
+                <option value="">Select team size</option>
+                <option>Under 10 people</option>
+                <option>10 – 25 people</option>
+                <option>25 – 50 people</option>
+                <option>50 – 100 people</option>
+                <option>100 – 250 people</option>
+                <option>250+ people</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label>Office / Building address</label>
+            <input type="text" name="company_address" placeholder="Street, area, city">
+          </div>
+          <div class="field">
+            <label>What would work best for your team?</label>
+            <select name="business_need">
+              <option value="">Select one</option>
+              <option>Prepaid team pack (shared pool of cups)</option>
+              <option>Per-cup monthly billing (The Office Tab)</option>
+              <option>Individual packs for each employee</option>
+              <option>Not sure — open to a recommendation</option>
+            </select>
+          </div>
+        </div>
+
+        <p class="pe-section-label">Anything else?</p>
+        <div class="field">
+          <label>Notes (optional)</label>
+          <textarea name="notes" placeholder="Questions about the Pack, specific requests, or anything that helps us get back to you faster."></textarea>
+        </div>
+
+        <button class="form-submit" type="submit">Get my Pack &nbsp;→</button>
+      </form>
+      <div class="form-success" role="status">
+        <h3>We are on it.</h3>
+        <p>We have your details. We will get back to you with the next step. For anything urgent, write directly to <a href="mailto:hello@pscoffee.in">hello@pscoffee.in</a>.</p>
+      </div>
+      <div class="pe-meta">
+        <span>No auto-renew</span>
+        <span>No lock-in</span>
+        <span>Save up to 25%</span>
+        <span>Team plans available</span>
+      </div>
+    </div>
+
+    <div class="pe-photo-strip" aria-label="P.S. Pack — prepaid specialty coffee">
+      <image-slot id="pe-photo-1" shape="rect" src="assets/photos/ps-pass-full-pour.webp" placeholder="P.S. Pack — The Full Pour" fit="cover"></image-slot>
+      <image-slot id="pe-photo-2" shape="rect" src="assets/photos/ps-pass-team.webp" placeholder="P.S. Pack — The Team Pack" fit="cover"></image-slot>
+      <image-slot id="pe-photo-3" shape="rect" src="assets/photos/ps-pass-habit.webp" placeholder="P.S. Pack — The Habit Pack" fit="cover"></image-slot>
+    </div>
+  </section>
+</main>
+
+<!-- ── Success modal ── -->
+<div class="pe-modal-overlay" id="peModal" role="dialog" aria-modal="true" aria-labelledby="peModalTitle">
+  <div class="pe-modal-card">
+    <button class="pe-modal-x" id="peModalX" aria-label="Close">✕</button>
+    <span class="pe-modal-icon">☕</span>
+    <h2 id="peModalTitle">Your Pack is on its way.</h2>
+    <p>We have your details. We will be in touch with the next step shortly. Your coffee is basically already paid for.</p>
+    <button class="pe-modal-close-btn" id="peModalClose">Got it →</button>
+  </div>
+</div>
+
+<div id="ps-footer"></div>
+<script src="assets/image-slot.js"></script>
+<script src="assets/ps.js?v=11"></script>
+<script src="assets/mobile.js?v=1"></script>
+<script>
+(function(){
+  /* ── URL param pre-fill ── */
+  var params = new URLSearchParams(window.location.search);
+  var packParam = params.get('pack');
+  var typeParam = params.get('type');
+  var packSelect = document.getElementById('pe-pack-select');
+  var typeSelect = document.getElementById('pe-type-select');
+  var bizFields = document.getElementById('peBusinessFields');
+
+  if(packParam && packSelect){
+    var opt = packSelect.querySelector('option[value="' + packParam + '"]');
+    if(opt) packSelect.value = packParam;
+  }
+  if(typeParam === 'business' && typeSelect){
+    typeSelect.value = 'business';
+    bizFields.classList.add('on');
+  }
+
+  /* ── Show / hide business fields ── */
+  typeSelect.addEventListener('change', function(){
+    if(this.value === 'business'){
+      bizFields.classList.add('on');
+    } else {
+      bizFields.classList.remove('on');
+    }
+  });
+
+  /* ── Modal ── */
+  var modal = document.getElementById('peModal');
+  function open(){ modal.classList.add('on'); }
+  function close(){ modal.classList.remove('on'); }
+  document.getElementById('peModalClose').addEventListener('click', close);
+  document.getElementById('peModalX').addEventListener('click', close);
+  modal.addEventListener('click', function(e){ if(e.target === modal) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') close(); });
+  document.querySelectorAll('.form-success').forEach(function(el){
+    new MutationObserver(function(){
+      if(el.classList.contains('show')) open();
+    }).observe(el, { attributes: true, attributeFilter: ['class'] });
+  });
+
+  /* suppress inline success banner */
+  var s = document.createElement('style');
+  s.textContent = 'body[data-page="pack-enquiry"] .form-success.show{display:none!important}';
+  document.head.appendChild(s);
+})();
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "P.S. Coffee Pack Enquiry",
+  "url": "https://pscoffee.in/pack-enquiry",
+  "description": "Get your P.S. Pack — prepaid specialty coffee for individuals, teams, and co-working spaces. No auto-renew, no lock-in.",
+  "about": {
+    "@type": "Service",
+    "name": "The P.S. Pack",
+    "provider": {
+      "@type": "Organization",
+      "name": "P.S. Coffee",
+      "url": "https://pscoffee.in",
+      "logo": "https://pscoffee.in/assets/icons/ps-logo-2026.png"
+    }
+  }
+}
+</script>
+</body>
+</html>
