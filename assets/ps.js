@@ -4,8 +4,6 @@
 (function(){
   "use strict";
 
-  var GS_URL = 'https://script.google.com/macros/s/AKfycbwdB2ntsyFrSQXECHMIKER6P9ipGHWvZ0-CB-KaZj7e0A0M6sV2Vl-coKbvDEbMO1G6/exec';
-
   var PAGES = [
     {href:"pack.html",        label:"Subscribe",   n:"01", primary:true, cls:"pack-link"},
     {href:"menu.html",        label:"Menu",        n:"02", primary:true},
@@ -441,7 +439,10 @@
   twApply(twRead());
   function init(){
     inject(); navBehaviour(); heroSlider(); faq(); reveal();
-    filters(); chips(); cart(); forms(); anchors(); buildPanel();
+    filters(); chips(); cart(); forms(); anchors();
+    // Tweaks panel is only useful inside an edit/preview parent frame.
+    // Skip building it on regular page loads to avoid dead DOM overhead.
+    if(window.parent !== window) buildPanel();
   }
   if(document.readyState==="loading") document.addEventListener("DOMContentLoaded", init);
   else init();

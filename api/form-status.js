@@ -1,7 +1,14 @@
-const { google } = require('googleapis');
+import { google } from 'googleapis';
+
+const ALLOWED_ORIGINS = new Set([
+  'https://pscoffee.in',
+  'https://www.pscoffee.in',
+]);
 
 export default async function handler(req, res) {
-  res.setHeader('Access-Control-Allow-Origin', '*');
+  const origin = req.headers.origin || '';
+  const allowed = ALLOWED_ORIGINS.has(origin) ? origin : 'https://pscoffee.in';
+  res.setHeader('Access-Control-Allow-Origin', allowed);
 
   try {
     const credentials = JSON.parse(

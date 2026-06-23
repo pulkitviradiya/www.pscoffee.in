@@ -1,19 +1,61 @@
-const { google } = require('googleapis');
+import { google } from 'googleapis';
+
+const ALLOWED_ORIGINS = new Set([
+  'https://pscoffee.in',
+  'https://www.pscoffee.in',
+]);
+
+// Allowlist of every form name used in the HTML. Prevents user-supplied
+// strings from becoming arbitrary Google Sheet tab names.
+const ALLOWED_FORMS = new Set([
+  'newsletter',
+  'app-waitlist',
+  'event-enquiry',
+  'join-barista',
+  'join-ops',
+  'join-craft',
+  'join-trade',
+  'join-founders',
+  'join-investor',
+  'pack-enquiry',
+  'partnership-enquiry',
+]);
+
+const MAX_FIELDS = 30;
+const MAX_VALUE_LENGTH = 2000;
+
+function corsHeaders(origin) {
+  const allowed = ALLOWED_ORIGINS.has(origin) ? origin : 'https://pscoffee.in';
+  return {
+    'Access-Control-Allow-Origin': allowed,
+    'Access-Control-Allow-Methods': 'POST, OPTIONS',
+    'Access-Control-Allow-Headers': 'Content-Type',
+  };
+}
 
 export default async function handler(req, res) {
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  const origin = req.headers.origin || '';
+  Object.entries(corsHeaders(origin)).forEach(([k, v]) => res.setHeader(k, v));
 
   if (req.method === 'OPTIONS') return res.status(200).end();
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
-  try {
-    const data = req.body || {};
-    const formName = data.form_name || 'submissions';
-    delete data.form_name;
+  const data = req.body || {};
+  const formName = data.form_name;
 
-    // Authenticate with service account
+  if (!formName || !ALLOWED_FORMS.has(formName)) {
+    return res.status(400).json({ error: 'Unknown form' });
+  }
+
+  // Sanitise: drop form_name key, cap field count and value length
+  const fields = Object.fromEntries(
+    Object.entries(data)
+      .filter(([k]) => k !== 'form_name')
+      .slice(0, MAX_FIELDS)
+      .map(([k, v]) => [String(k).slice(0, 64), String(v ?? '').slice(0, MAX_VALUE_LENGTH)])
+  );
+
+  try {
     const credentials = JSON.parse(
       Buffer.from(process.env.GOOGLE_CREDENTIALS_B64, 'base64').toString('utf8')
     );
@@ -25,29 +67,23 @@ export default async function handler(req, res) {
     const sheets = google.sheets({ version: 'v4', auth });
     const spreadsheetId = process.env.GOOGLE_SHEETS_ID;
 
-    // Get existing sheet names
     const meta = await sheets.spreadsheets.get({ spreadsheetId });
     const existing = meta.data.sheets.map(s => s.properties.title);
 
-    // Create tab if it doesn't exist
     if (!existing.includes(formName)) {
       await sheets.spreadsheets.batchUpdate({
         spreadsheetId,
-        requestBody: {
-          requests: [{ addSheet: { properties: { title: formName } } }],
-        },
+        requestBody: { requests: [{ addSheet: { properties: { title: formName } } }] },
       });
     }
 
-    const keys = Object.keys(data);
+    const keys = Object.keys(fields);
 
-    // Write header row if sheet is empty
     const check = await sheets.spreadsheets.values.get({
       spreadsheetId,
       range: `${formName}!A1`,
     });
-    const isEmpty = !check.data.values || check.data.values.length === 0;
-    if (isEmpty) {
+    if (!check.data.values || check.data.values.length === 0) {
       await sheets.spreadsheets.values.append({
         spreadsheetId,
         range: `${formName}!A1`,
@@ -56,8 +92,7 @@ export default async function handler(req, res) {
       });
     }
 
-    // Append data row
-    const row = [new Date().toISOString(), ...keys.map(k => String(data[k] || ''))];
+    const row = [new Date().toISOString(), ...keys.map(k => fields[k])];
     await sheets.spreadsheets.values.append({
       spreadsheetId,
       range: `${formName}!A1`,
