@@ -17,16 +17,15 @@ in links between pages; use bare paths or relative `.html` refs (Vercel resolves
 
 ---
 
-## Asset versions — current as of last session
+## Asset versions
 
-| File | Current version | How to bump |
-|---|---|---|
-| `assets/ps.js` | v19 | `sed -i '' 's/ps.js?v=19/ps.js?v=20/g' $(find . -name "*.html")` |
-| `assets/wh.css` | v19 | `sed -i '' 's/wh.css?v=19/wh.css?v=20/g' $(find . -name "*.html")` |
-| `assets/mobile.css` | v12 | `sed -i '' 's/mobile.css?v=12/mobile.css?v=13/g' $(find . -name "*.html")` |
+Current version numbers are in memory (`project_pscoffee_mobile.md`). Always read the current N from any `*.html` file before bumping.
 
-**Always check the version in any HTML file before editing** to get the current N, then bump to N+1.
-All three files are referenced in every `*.html` page — bump all of them (`find . -name "*.html"`).
+Bump pattern (run from repo root, replace N and M):
+```bash
+sed -i '' 's/mobile.css?v=N/mobile.css?v=M/g' $(find . -name "*.html" | grep -v node_modules)
+```
+All three files (`ps.js`, `wh.css`, `mobile.css`) are referenced in every `*.html` — bump all three in the same commit.
 
 ---
 
@@ -124,25 +123,9 @@ body[data-page="menu"] .page-top { height: calc(var(--wh-header-h) + 28px) !impo
 The homepage body uses `display: flex; flex-direction: column` on mobile so sections can be
 reordered with `order` without touching the HTML (desktop unaffected).
 
-Current mobile order (inside `@media (max-width: 760px)`):
-```css
-body[data-page="home"] { display: flex; flex-direction: column; }
-body[data-page="home"] #ps-nav          { order: -10; }
-body[data-page="home"] .page-top        { order: -9; }
-body[data-page="home"] .wh-banners      { order: -8; }   /* Hero */
-body[data-page="home"] .wh-subscription { order: -7; }   /* P.S. Pass */
-body[data-page="home"] .wh-home-shop    { order: -6; }   /* At work / gym / campus */
-body[data-page="home"] .ps-app-callout  { order: -5; }   /* App */
-body[data-page="home"] .ps-our-story    { order: -4; }   /* Our Story */
-/* All other sections: default order 0, follow in DOM sequence */
-```
+Current section order values are in memory (`project_pscoffee_mobile.md`).
 
-Remaining sections (DOM order, all at `order: 0`):
-`.wh-modern` → `.wh-locations` → `.wh-favourites` → `.wh-menu-story` →
-`.ps-callout-strip` → `.ps-feedback` → `.wh-footer-banner` → `#ps-footer`
-
-To change the mobile order: adjust the `order` values. Use more negative numbers to move an
-element earlier; remove a rule to let it fall back into DOM sequence.
+To change the mobile order: adjust the `order` values in `mobile.css`. Use more negative numbers to move a section earlier; remove a rule entirely to let it fall back into DOM sequence. When inserting a new pinned section, assign it a value between two existing ones and leave a gap so future insertions don't require renumbering.
 
 ---
 
@@ -214,6 +197,7 @@ excluded from the sitemap.
 ## What NOT to do
 
 - **Do not edit `ps.css` for blog-only fixes** — use `.journal-post-body`-scoped overrides in `wh.css` instead
+- **Do not make mobile fixes in `ps.css`** — all responsive overrides belong in `mobile.css`; `ps.css` is desktop-only truth
 - **Do not add FAQ click handlers inline in blog posts** — `ps.js` handles it
 - **Do not hardcode `padding-block` on `.section` in blog inline CSS** — wh.css already resets it
 - **Do not use `story.html`** — that page no longer exists; the URL is `about.html`
