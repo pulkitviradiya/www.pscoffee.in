@@ -17,6 +17,19 @@ in links between pages; use bare paths or relative `.html` refs (Vercel resolves
 
 ---
 
+## Asset versions — current as of last session
+
+| File | Current version | How to bump |
+|---|---|---|
+| `assets/ps.js` | v19 | `sed -i '' 's/ps.js?v=19/ps.js?v=20/g' $(find . -name "*.html")` |
+| `assets/wh.css` | v19 | `sed -i '' 's/wh.css?v=19/wh.css?v=20/g' $(find . -name "*.html")` |
+| `assets/mobile.css` | v12 | `sed -i '' 's/mobile.css?v=12/mobile.css?v=13/g' $(find . -name "*.html")` |
+
+**Always check the version in any HTML file before editing** to get the current N, then bump to N+1.
+All three files are referenced in every `*.html` page — bump all of them (`find . -name "*.html"`).
+
+---
+
 ## Navigation — single source of truth
 
 **`assets/ps.js` is the only place to edit navigation.** The `PAGES` array at the top of `ps.js` drives
@@ -25,14 +38,16 @@ the nav must be listed here.
 
 ```js
 var PAGES = [
-  {href:"pack.html",        label:"Subscribe",  n:"01", primary:true, cls:"pack-link"},
-  {href:"menu.html",        label:"Menu",       n:"02", primary:true},
+  {href:"pack.html",  label:"P.S. Pass", n:"01", primary:true, cls:"pack-link"},
+  {href:"menu.html",  label:"Menu",      n:"02", primary:true},
   ...
 ];
 ```
 
 - `primary:true` → appears in the top nav bar
 - `primary:false` → only in the mobile drawer
+- `cls:"pack-link"` → adds that class to BOTH the desktop nav `<a>` and the mobile drawer `<a>`
+  (the drawer rendering was fixed in v19 to pass `cls` through — do not revert)
 - Footer-only pages (faq, privacy, terms, disclaimer, copyright, survey-disclosure) live in the
   **footer only** — do not add them to `PAGES`
 
@@ -65,6 +80,69 @@ files — wh.css handles them.
 **Every time you edit `wh.css`, bump the version number by 1 in all blog files** (`blog/*.html`).
 Check the current version in any `blog/*.html` before editing. Failing to bump means users see a
 cached old version.
+
+---
+
+## Mobile CSS — architecture & rules
+
+### All mobile changes go in `assets/mobile.css` only
+
+Zero desktop impact. The breakpoint is `@media (max-width: 760px)` for most rules.
+`@keyframes` blocks must live **outside** any `@media` block (browsers discard them otherwise).
+
+### Header height trap — critical
+
+`--wh-header-h` (62px) only captures the nav height. The announce bar above it adds **28px**.
+The true header bottom = **90px**. All `.page-top` spacers must account for both:
+
+```css
+/* Generic pages — inside @media (max-width: 760px) */
+.page-top {
+  height: calc(var(--wh-header-h) + 28px) !important;  /* 62 + 28 = 90px */
+}
+```
+
+The menu page has a competing rule in `wh.css` at higher specificity — it is overridden in
+`mobile.css` with a matching `body[data-page="menu"]` scoped rule. If you add a new page and
+the hero content is hidden under the header, check `wh.css` for a `body[data-page="X"] .page-top`
+rule and add a corresponding override in `mobile.css`.
+
+### wh.css specificity trap
+
+`wh.css` contains page-scoped rules like:
+```css
+body[data-page="menu"] .page-top { height: var(--wh-header-h) !important; }
+```
+This has specificity 0,2,0 — higher than mobile.css's `.page-top` (0,1,0) — so it wins even
+against `!important`. To beat it from mobile.css, match the specificity:
+```css
+body[data-page="menu"] .page-top { height: calc(var(--wh-header-h) + 28px) !important; }
+```
+
+### Mobile homepage section order
+
+The homepage body uses `display: flex; flex-direction: column` on mobile so sections can be
+reordered with `order` without touching the HTML (desktop unaffected).
+
+Current mobile order (inside `@media (max-width: 760px)`):
+```css
+body[data-page="home"] { display: flex; flex-direction: column; }
+body[data-page="home"] #ps-nav          { order: -10; }
+body[data-page="home"] .page-top        { order: -9; }
+body[data-page="home"] .wh-banners      { order: -8; }   /* Hero */
+body[data-page="home"] .wh-subscription { order: -7; }   /* P.S. Pass */
+body[data-page="home"] .wh-home-shop    { order: -6; }   /* At work / gym / campus */
+body[data-page="home"] .ps-app-callout  { order: -5; }   /* App */
+body[data-page="home"] .ps-our-story    { order: -4; }   /* Our Story */
+/* All other sections: default order 0, follow in DOM sequence */
+```
+
+Remaining sections (DOM order, all at `order: 0`):
+`.wh-modern` → `.wh-locations` → `.wh-favourites` → `.wh-menu-story` →
+`.ps-callout-strip` → `.ps-feedback` → `.wh-footer-banner` → `#ps-footer`
+
+To change the mobile order: adjust the `order` values. Use more negative numbers to move an
+element earlier; remove a rule to let it fall back into DOM sequence.
 
 ---
 
@@ -144,3 +222,8 @@ excluded from the sitemap.
 - **Do not forget to bump `wh.css?v=N`** when editing `wh.css`
 - **Do not rename CSS classes** like `.journal-post-body`, `.journal-faq` — they are used across
   wh.css, mobile.css, and all blog HTML files
+- **Do not set `.page-top` to `var(--wh-header-h)` alone** — the announce bar (28px) is not included
+  in that variable; always use `calc(var(--wh-header-h) + 28px)`
+- **Do not put `@keyframes` inside `@media` blocks** — they are silently ignored by browsers
+- **Do not make homepage section order changes in the HTML** — use CSS `order` in mobile.css;
+  the flex reorder system is already in place
