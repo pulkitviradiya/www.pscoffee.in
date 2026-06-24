@@ -1,14 +1,13 @@
 import { google } from 'googleapis';
 
-const ALLOWED_ORIGINS = new Set([
-  'https://pscoffee.in',
-  'https://www.pscoffee.in',
-]);
-
 export default async function handler(req, res) {
-  const origin = req.headers.origin || '';
-  const allowed = ALLOWED_ORIGINS.has(origin) ? origin : 'https://pscoffee.in';
-  res.setHeader('Access-Control-Allow-Origin', allowed);
+  // Debug-only endpoint — must be called with the admin key
+  if (req.method !== 'GET') return res.status(405).json({ error: 'Method not allowed' });
+
+  const adminKey = process.env.ADMIN_KEY;
+  if (!adminKey || req.headers['x-admin-key'] !== adminKey) {
+    return res.status(401).json({ error: 'Unauthorized' });
+  }
 
   try {
     const credentials = JSON.parse(
@@ -32,6 +31,7 @@ export default async function handler(req, res) {
     });
 
   } catch (err) {
-    return res.status(500).json({ status: 'error', message: err.message });
+    console.error('form-status error:', err.message);
+    return res.status(500).json({ status: 'error', message: 'Internal server error' });
   }
 }

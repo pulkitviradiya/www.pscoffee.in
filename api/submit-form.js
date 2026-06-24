@@ -104,6 +104,6 @@ export default async function handler(req, res) {
 
   } catch (err) {
     console.error('submit-form error:', err.message);
-    return res.status(500).json({ status: 'error', message: err.message });
+    return res.status(500).json({ status: 'error', message: 'Internal server error' });
   }
 }

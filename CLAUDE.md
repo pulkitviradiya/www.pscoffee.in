@@ -12,39 +12,16 @@ Live at: **https://www.pscoffee.in**
 
 **Always `git pull` before starting any work** — the other agent may have pushed since your last session.
 
----
-
-## Page map
-
-| File | URL | Purpose |
-|---|---|---|
-| `index.html` | `/` | Home |
-| `menu.html` | `/menu` | Menu (coffee, matcha, food) |
-| `matcha.html` | `/matcha` | Matcha landing |
-| `pack.html` | `/pack` | P.S. Pack subscription |
-| `app.html` | `/app` | App page |
-| `pods.html` | `/pods` | Pod model / locations |
-| `about.html` | `/about` | Brand story |
-| `partnership.html` | `/partnership` | Partner / host a Pod |
-| `join.html` | `/join` | Join the build |
-| `events.html` | `/events` | Events & collaborations |
-| `event-enquiry.html` | `/event-enquiry` | Event enquiry form |
-| `blogs.html` | `/blogs` | Blog listing page |
-| `faq.html` | `/faq` | Frequently asked questions |
-| `blog/*.html` | `/blog/slug` | Individual blog posts (6 posts) |
-| `privacy.html` | `/privacy` | Privacy policy |
-| `terms.html` | `/terms` | Terms of service |
-| `disclaimer.html` | `/disclaimer` | General disclaimer |
-| `copyright.html` | `/copyright` | Copyright notice |
-| `survey-disclosure.html` | `/survey-disclosure` | Survey disclosure |
-
-**Vercel uses `cleanUrls: true`** — URLs are `/menu`, not `/menu.html`. Never hardcode `.html` extensions in links between pages; use bare paths or relative `.html` refs (Vercel resolves both).
+**Vercel uses `cleanUrls: true`** — URLs are `/menu`, not `/menu.html`. Never hardcode `.html` extensions
+in links between pages; use bare paths or relative `.html` refs (Vercel resolves both).
 
 ---
 
 ## Navigation — single source of truth
 
-**`assets/ps.js` is the only place to edit navigation.** The `PAGES` array at the top of `ps.js` drives both the desktop nav bar and the mobile drawer. Every page (except legal pages) that should appear in the nav must be listed here.
+**`assets/ps.js` is the only place to edit navigation.** The `PAGES` array at the top of `ps.js` drives
+both the desktop nav bar and the mobile drawer. Every page (except legal pages) that should appear in
+the nav must be listed here.
 
 ```js
 var PAGES = [
@@ -56,7 +33,8 @@ var PAGES = [
 
 - `primary:true` → appears in the top nav bar
 - `primary:false` → only in the mobile drawer
-- Footer-only pages (faq, privacy, terms, disclaimer, copyright, survey-disclosure) live in the **footer only** — do not add them to `PAGES`
+- Footer-only pages (faq, privacy, terms, disclaimer, copyright, survey-disclosure) live in the
+  **footer only** — do not add them to `PAGES`
 
 ---
 
@@ -72,24 +50,21 @@ Three stylesheets load in this order on every page:
 
 ### The #1 rule: ps.css bleeds into blog pages
 
-`ps.css` has rules that affect class names also used in blog posts. Known conflicts:
-
-| ps.css rule | Effect on blogs | Override in wh.css |
-|---|---|---|
-| `.section { padding-block: clamp(64px,9vw,124px) }` | Huge spacing on every `.section` div | `.journal-post-body .section { padding: 0 }` ✓ already in wh.css |
-| `.faq-q { padding: 24px 4px }` | FAQ rows too tall | `.journal-post-body .faq-q { padding: 8px 0 }` ✓ already in wh.css |
-| `.faq-a { max-height:0; overflow:hidden }` | FAQ answers invisible even when open | `.journal-post-body .faq-a { max-height:none; overflow:visible }` ✓ already in wh.css |
-
-**These are already fixed in wh.css.** Do not re-add inline `padding-block`, `max-height`, or `overflow` overrides to blog files — wh.css handles them.
+`ps.css` has rules that affect class names also used in blog posts — spacing, FAQ heights, and
+visibility. All known conflicts are already fixed in `wh.css` using `.journal-post-body`-scoped
+overrides. Do not re-add inline `padding-block`, `max-height`, or `overflow` overrides to blog
+files — wh.css handles them.
 
 ### wh.css version bumping
 
 `wh.css` is cache-busted with a `?v=N` query string in every blog HTML file:
 ```html
-<link rel="stylesheet" href="../assets/wh.css?v=16">
+<link rel="stylesheet" href="../assets/wh.css?v=N">
 ```
 
-**Every time you edit `wh.css`, bump the version number by 1 in all 6 blog files** (`blog/*.html`). Current version: **v=16**. Failing to bump means users see a cached old version.
+**Every time you edit `wh.css`, bump the version number by 1 in all blog files** (`blog/*.html`).
+Check the current version in any `blog/*.html` before editing. Failing to bump means users see a
+cached old version.
 
 ---
 
@@ -103,7 +78,9 @@ Each blog post in `blog/` follows this structure:
 - FAQ at the bottom in `<div class="faqs">` with `.faq-item / .faq-q / .faq-a` elements
 
 ### FAQ toggle
-The FAQ toggle is handled by `assets/ps.js` (`faq()` function). It adds/removes the `.open` class on `.faq-item`. **Do not add an inline `<script>` in blog posts to handle FAQ clicks** — it will fire twice and break the toggle. This bug was fixed; don't reintroduce it.
+The FAQ toggle is handled by `assets/ps.js` (`faq()` function). It adds/removes the `.open` class on
+`.faq-item`. **Do not add an inline `<script>` in blog posts to handle FAQ clicks** — it will fire
+twice and break the toggle. This bug was fixed; don't reintroduce it.
 
 ### Blog kicker line
 Every blog post has a kicker paragraph that reads: `The P.S. Blog. · [category] · [topic]`
@@ -111,18 +88,21 @@ Use "The P.S. Blog." — not "The P.S. Journal." (renamed).
 
 ### Naming
 - "Blogs" / "Blog" everywhere user-visible — not "Journal"
-- CSS class names still use `journal-` prefix internally (`.journal-post-body`, `.journal-faq`, etc.) — do not rename these, it would break all styles
+- CSS class names still use `journal-` prefix internally (`.journal-post-body`, `.journal-faq`, etc.)
+  — do not rename these, it would break all styles
 
 ---
 
 ## Photos — rules
 
-All site images live in `assets/photos/site/` (webp format, naming convention: `{page}-{description}-{desktop|mobile}.webp`).
+All site images live in `assets/photos/site/` (webp format, naming convention:
+`{page}-{description}-{desktop|mobile}.webp`).
 
 - Every image added must be referenced in an HTML file. **No orphan images.**
 - When replacing a hero image with a cropped version, **delete the old file** — don't just add the new one.
 - `assets/photos/*.webp` (root level, no `/site/` subfolder) = P.S. Pass product images used on `pack.html`.
-- Images in `assets/photos/site/` are cached for 1 year by Vercel (immutable). If you replace a file, rename it or Vercel will serve the old cached version.
+- Images in `assets/photos/site/` are cached immutably by Vercel for 1 year. If you replace a file,
+  **rename it** — Vercel will serve the old cached version otherwise.
 
 ---
 
@@ -139,7 +119,9 @@ Already in `.gitignore` — but do not force-add them:
 
 ## Sitemap
 
-`sitemap.xml` must be updated when adding or removing pages. Each `<url>` entry uses the clean URL (no `.html`). Legal pages (privacy, terms, disclaimer, copyright, survey-disclosure) are intentionally excluded from the sitemap.
+`sitemap.xml` must be updated when adding or removing pages. Each `<url>` entry uses the clean URL
+(no `.html`). Legal pages (privacy, terms, disclaimer, copyright, survey-disclosure) are intentionally
+excluded from the sitemap.
 
 ---
 
@@ -147,7 +129,6 @@ Already in `.gitignore` — but do not force-add them:
 
 - Push to `main` → Vercel auto-deploys. No manual deploy needed.
 - `vercel.json` sets: `cleanUrls: true`, `trailingSlash: false`, cache headers.
-- Cache headers: HTML = `max-age=0, must-revalidate` (always fresh). Photos/icons = `max-age=31536000, immutable` (1 year).
 - The `/story` and `/story.html` URLs redirect to `/about` (legacy redirects — do not remove).
 
 ---
@@ -158,6 +139,8 @@ Already in `.gitignore` — but do not force-add them:
 - **Do not add FAQ click handlers inline in blog posts** — `ps.js` handles it
 - **Do not hardcode `padding-block` on `.section` in blog inline CSS** — wh.css already resets it
 - **Do not use `story.html`** — that page no longer exists; the URL is `about.html`
-- **Do not add footer-only pages to the top nav** — FAQ and legal pages belong in the footer only (already wired in `ps.js` `footHTML()`)
+- **Do not add footer-only pages to the top nav** — FAQ and legal pages belong in the footer only
+  (already wired in `ps.js` `footHTML()`)
 - **Do not forget to bump `wh.css?v=N`** when editing `wh.css`
-- **Do not rename CSS classes** like `.journal-post-body`, `.journal-faq` — they are used across wh.css, mobile.css, and all blog HTML files
+- **Do not rename CSS classes** like `.journal-post-body`, `.journal-faq` — they are used across
+  wh.css, mobile.css, and all blog HTML files

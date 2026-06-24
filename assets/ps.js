@@ -261,9 +261,14 @@
     }
     return t;
   }
-  function showToast(msg){
+  function showToast(name){
     var t = ensureToast();
-    t.querySelector("#ps-toast-msg").innerHTML = msg;
+    var msg = t.querySelector("#ps-toast-msg");
+    // Build DOM nodes instead of injecting raw HTML so this can never be an XSS sink
+    msg.textContent = '';
+    var b = document.createElement('b'); b.textContent = name;
+    var dim = document.createElement('span'); dim.style.opacity = '.7'; dim.textContent = ' added — visual demo, not live yet';
+    msg.appendChild(b); msg.appendChild(dim);
     t.classList.add("show");
     clearTimeout(t._tm); t._tm = setTimeout(function(){ t.classList.remove("show"); }, 2600);
   }
@@ -275,7 +280,7 @@
         cartN++;
         if(count){ count.textContent = cartN; count.classList.add("show"); }
         var name = btn.getAttribute("data-add") || "Item";
-        showToast('<span><b>'+name+'</b> added — <span style="opacity:.7">visual demo, not live yet</span></span>');
+        showToast(name);
       });
     });
   }
@@ -428,6 +433,8 @@
       try{ window.parent.postMessage({type:"__edit_mode_dismissed"},"*"); }catch(e){}
     });
     window.addEventListener("message", function(e){
+      // Only accept messages from the same origin or the known preview host
+      if(e.origin !== window.location.origin && e.origin !== 'https://pscoffee.in' && e.origin !== 'https://www.pscoffee.in') return;
       var ty=e && e.data && e.data.type;
       if(ty==="__activate_edit_mode") panel.classList.add("open");
       else if(ty==="__deactivate_edit_mode") panel.classList.remove("open");
