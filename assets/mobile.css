@@ -84,10 +84,13 @@
     display: flex;
     flex-direction: column;
   }
-  body[data-page="home"] #ps-nav     { order: -4; }
-  body[data-page="home"] .page-top   { order: -3; }
-  body[data-page="home"] .wh-banners { order: -2; }
-  body[data-page="home"] .wh-subscription { order: -1; }
+  body[data-page="home"] #ps-nav          { order: -10; }
+  body[data-page="home"] .page-top        { order: -9; }
+  body[data-page="home"] .wh-banners      { order: -8; }
+  body[data-page="home"] .wh-subscription { order: -7; }
+  body[data-page="home"] .wh-home-shop    { order: -6; }
+  body[data-page="home"] .ps-app-callout  { order: -5; }
+  body[data-page="home"] .ps-our-story    { order: -4; }
 
   body[data-page="home"] .wh-banners {
     position: relative;
