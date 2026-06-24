@@ -197,8 +197,8 @@
   }
 
   .wh-modern h1 {
-    font-size: clamp(26px, 7.8vw, 34px) !important;
-    line-height: .96 !important;
+    font-size: clamp(30px, 9vw, 36px) !important;
+    line-height: .95 !important;
   }
 
   .wh-home-shop,
@@ -266,7 +266,7 @@
 
   .wh-sub-img image-slot {
     min-height: 0 !important;
-    aspect-ratio: 4 / 5 !important;
+    aspect-ratio: 3 / 2 !important;
   }
 
   .wh-sub-copy {
@@ -443,7 +443,7 @@
   .wh-menu-story {
     grid-template-columns: 1fr !important;
     gap: 14px !important;
-    margin: 0 var(--mobile-gut) var(--mobile-section) !important;
+    margin: 0 var(--mobile-gut) 24px !important;
   }
 
   .wh-ms-card {
@@ -1003,6 +1003,147 @@
   body[data-page] .footer .f-bot span:nth-child(3) {
     grid-column: 1 / -1;
     text-align: left !important;
+  }
+
+  /* ─── Pack cards: horizontal scroll carousel ─── */
+  body[data-page="home"] .ps-plan-grid {
+    display: grid !important;
+    grid-template-columns: none !important;
+    grid-auto-flow: column !important;
+    grid-auto-columns: minmax(148px, 40vw) !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory !important;
+    scrollbar-width: none !important;
+    gap: 10px !important;
+    padding-bottom: 2px !important;
+  }
+
+  body[data-page="home"] .ps-plan-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  body[data-page="home"] .ps-plan-card {
+    scroll-snap-align: start !important;
+    min-width: 0 !important;
+  }
+
+  /* ─── App callout: tighter padding + bolder heading ─── */
+  .ps-app-callout {
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+  }
+
+  .ps-app-callout .wrap {
+    padding-inline: var(--mobile-gut) !important;
+    gap: 24px !important;
+  }
+
+  .ps-app-copy h2 {
+    font-size: clamp(26px, 8vw, 34px) !important;
+    line-height: 1.08 !important;
+    margin-bottom: .9rem !important;
+  }
+
+  .ps-app-features li {
+    font-size: 14px !important;
+  }
+
+  /* ─── Our Story: reduce padding, left-align body copy ─── */
+  .ps-our-story {
+    padding: 44px var(--mobile-gut) !important;
+    margin-bottom: 0 !important;
+  }
+
+  .ps-our-story h2 {
+    font-size: clamp(48px, 14vw, 68px) !important;
+    line-height: .88 !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .ps-our-story p {
+    font-size: 14px !important;
+    line-height: 1.65 !important;
+    margin: 0 0 1.25rem !important;
+    max-width: none !important;
+    text-align: left !important;
+  }
+
+  /* ─── Callout strip: restore 2-col on mobile (overrides inline 1-col at 640px) ─── */
+  .ps-callout-strip {
+    grid-template-columns: 1fr 1fr !important;
+    border-left: 1px solid rgba(42,26,14,.1) !important;
+  }
+
+  .ps-callout {
+    padding: 18px 14px !important;
+    gap: .3rem !important;
+    border-left: 0 !important;
+  }
+
+  .ps-callout p.kicker {
+    font-size: 9px !important;
+    margin-bottom: 2px !important;
+  }
+
+  .ps-callout h2 {
+    font-size: clamp(14px, 4vw, 18px) !important;
+    line-height: 1.15 !important;
+    margin-bottom: .15rem !important;
+  }
+
+  .ps-callout p.sub {
+    display: none !important;
+  }
+
+  .ps-callout-btns {
+    flex-direction: column !important;
+    gap: 5px !important;
+    margin-top: .25rem !important;
+  }
+
+  .ps-callout-btns a.btn-filled,
+  .ps-callout-btns a.btn-outline {
+    font-size: 10px !important;
+    padding: 5px 8px !important;
+    text-align: center !important;
+    white-space: normal !important;
+  }
+
+  /* ─── Feedback: tighter padding + fix h3 font size ─── */
+  .ps-feedback {
+    margin-bottom: 0 !important;
+  }
+
+  .ps-feedback-ticket {
+    padding: 28px var(--mobile-gut) !important;
+    min-width: 0 !important;
+  }
+
+  .ps-feedback-hero {
+    font-size: clamp(52px, 15vw, 72px) !important;
+    line-height: .84 !important;
+  }
+
+  .ps-feedback-body {
+    padding: 24px var(--mobile-gut) 28px !important;
+  }
+
+  .ps-feedback-body h3 {
+    font-size: clamp(22px, 6vw, 30px) !important;
+    line-height: 1.1 !important;
+    margin-bottom: .75rem !important;
+  }
+
+  .ps-feedback-body p {
+    font-size: 14px !important;
+    line-height: 1.65 !important;
+    margin-bottom: 1.25rem !important;
+    max-width: none !important;
+  }
+
+  .ps-feedback-cta {
+    font-size: 14px !important;
+    padding: 12px 22px !important;
   }
 }
 
