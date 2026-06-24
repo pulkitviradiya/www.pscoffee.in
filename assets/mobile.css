@@ -980,6 +980,10 @@
     margin-bottom: 2px !important;
   }
 
+  .ps-logo-footer {
+    width: 95px !important;
+  }
+
   body[data-page] .footer .f-mosaic,
   body[data-page="home"] .footer .f-mosaic {
     max-width: none !important;
