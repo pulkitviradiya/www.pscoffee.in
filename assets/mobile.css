@@ -73,7 +73,7 @@
   }
 
   body[data-page="home"] .page-top {
-    height: var(--wh-header-h) !important;
+    height: calc(var(--wh-header-h) + 28px) !important;
   }
 
   body[data-page="home"] .wh-banners {
