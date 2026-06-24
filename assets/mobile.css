@@ -23,7 +23,11 @@
   }
 
   .page-top {
-    height: calc(var(--wh-header-h) + 18px) !important;
+    height: calc(var(--wh-header-h) + 28px) !important;
+  }
+
+  body[data-page="menu"] .page-top {
+    height: calc(var(--wh-header-h) + 28px) !important;
   }
 
   .wh-announce {
