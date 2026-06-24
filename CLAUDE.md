@@ -5,6 +5,25 @@ Read it fully before making any change. Both agents push to the same GitHub repo
 
 ---
 
+## Memory & session rules
+
+At the start of every session, read MEMORY.md before responding. Use what you find to inform your work. Don't announce what you found, just be informed by it.
+
+When told "remember this," write the information to MEMORY.md immediately and confirm you've done it.
+
+**Where things go:** Apply two tests when deciding where to save something.
+- Test 1: Does it prescribe behaviour? Look for words like "always," "never," "before doing X, do Y." If yes, add it to this file (CLAUDE.md) under the appropriate section.
+- Test 2: Does it describe a fact about the world that could change? Contact details, project status, decisions, things explicitly asked to be remembered. If yes, add it to MEMORY.md. When unsure, suggest which file you think it belongs in and ask to confirm.
+
+**Memory hygiene rules:**
+1. Keep each memory entry to two sentences max.
+2. Keep root MEMORY.md under 150 lines; if it exceeds 150, compress verbose entries first, then archive the overflow to ARCHIVE.md.
+3. Current-state content (active projects, contact info, working conventions) stays in MEMORY.md regardless of age.
+4. When a project completes or an entry becomes outdated, move it from MEMORY.md to ARCHIVE.md automatically.
+5. ARCHIVE.md is reference-only: never read at session start, only pulled up when asked about something historical.
+
+---
+
 ## Site overview
 
 Static HTML/CSS/JS site. No framework, no build step. Files are served directly by Vercel.
