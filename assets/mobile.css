@@ -80,6 +80,15 @@
     height: calc(var(--wh-header-h) + 28px) !important;
   }
 
+  body[data-page="home"] {
+    display: flex;
+    flex-direction: column;
+  }
+  body[data-page="home"] #ps-nav     { order: -4; }
+  body[data-page="home"] .page-top   { order: -3; }
+  body[data-page="home"] .wh-banners { order: -2; }
+  body[data-page="home"] .wh-subscription { order: -1; }
+
   body[data-page="home"] .wh-banners {
     position: relative;
     display: block !important;
