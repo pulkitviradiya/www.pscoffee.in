@@ -188,17 +188,23 @@
   .wh-modern {
     display: block !important;
     margin: 0 !important;
-    padding: 24px var(--mobile-gut) 42px !important;
+    padding: 22px var(--mobile-gut) 28px !important;
   }
 
   .wh-modern p {
-    margin-bottom: 14px !important;
-    font-size: 14px !important;
+    font-size: 10px !important;
+    font-weight: 600 !important;
+    letter-spacing: .12em !important;
+    text-transform: uppercase !important;
+    color: var(--tc, #b04a24) !important;
+    margin-bottom: 10px !important;
   }
 
   .wh-modern h1 {
-    font-size: clamp(30px, 9vw, 36px) !important;
-    line-height: .95 !important;
+    font-size: clamp(28px, 8.5vw, 34px) !important;
+    font-weight: 400 !important;
+    line-height: 1.08 !important;
+    letter-spacing: -.015em !important;
   }
 
   .wh-home-shop,
