@@ -1193,28 +1193,28 @@ a:hover > .wh-link::after { transform: scaleX(1); }
    ============================================================ */
 @font-face {
   font-family: "Balto";
-  src: url("https://watchhouse.com/cdn/shop/t/221/assets/Balto-Book.otf?v=160914856282604254941761664540") format("opentype");
+  src: url("fonts/Balto-Book.otf") format("opentype");
   font-style: normal;
   font-weight: 300;
   font-display: swap;
 }
 @font-face {
   font-family: "Balto";
-  src: url("https://watchhouse.com/cdn/shop/t/221/assets/Balto-Medium.otf?v=44404204925061886291761664541") format("opentype");
+  src: url("fonts/Balto-Medium.otf") format("opentype");
   font-style: normal;
   font-weight: 500;
   font-display: swap;
 }
 @font-face {
   font-family: "Tiempos Headline";
-  src: url("https://watchhouse.com/cdn/shop/t/221/assets/TiemposHeadline-Medium.otf?v=94275543287697449091761664542") format("opentype");
+  src: url("fonts/TiemposHeadline-Medium.otf") format("opentype");
   font-style: normal;
   font-weight: 500;
   font-display: swap;
 }
 @font-face {
   font-family: "WatchHouse Serif";
-  src: url("https://watchhouse.com/cdn/shop/t/221/assets/WatchHouseSerif-Medium.otf?v=166239723909511043981761664542") format("opentype");
+  src: url("fonts/WatchHouseSerif-Medium.otf") format("opentype");
   font-style: normal;
   font-weight: 500;
   font-display: swap;
