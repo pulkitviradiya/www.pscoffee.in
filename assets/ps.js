@@ -261,14 +261,19 @@
     }
     return t;
   }
-  function showToast(name){
+  // showToast(boldText, dimSuffix) — two text-only args, no HTML accepted
+  // showToast(plainText)           — single plain string
+  function showToast(boldPart, dimPart){
     var t = ensureToast();
     var msg = t.querySelector("#ps-toast-msg");
-    // Build DOM nodes instead of injecting raw HTML so this can never be an XSS sink
     msg.textContent = '';
-    var b = document.createElement('b'); b.textContent = name;
-    var dim = document.createElement('span'); dim.style.opacity = '.7'; dim.textContent = ' added — visual demo, not live yet';
-    msg.appendChild(b); msg.appendChild(dim);
+    if(dimPart !== undefined){
+      var b = document.createElement('b'); b.textContent = boldPart;
+      var dim = document.createElement('span'); dim.style.opacity = '.7'; dim.textContent = dimPart;
+      msg.appendChild(b); msg.appendChild(dim);
+    } else {
+      msg.textContent = boldPart;
+    }
     t.classList.add("show");
     clearTimeout(t._tm); t._tm = setTimeout(function(){ t.classList.remove("show"); }, 2600);
   }
@@ -280,7 +285,7 @@
         cartN++;
         if(count){ count.textContent = cartN; count.classList.add("show"); }
         var name = btn.getAttribute("data-add") || "Item";
-        showToast(name);
+        showToast(name, ' added — visual demo, not live yet');
       });
     });
   }
@@ -329,7 +334,7 @@
         var wrap = form.closest("[data-form-wrap]");
         var success = wrap ? wrap.querySelector(".form-success") : null;
         if(success){ form.style.display="none"; success.classList.add("show"); }
-        else { showToast('<span><b>Thank you.</b> Noted — genuinely.</span>'); form.reset(); }
+        else { showToast('Thank you.', ' Noted — genuinely.'); form.reset(); }
       });
       form.querySelectorAll("input,textarea,select").forEach(function(input){
         input.addEventListener("input", function(){ var f=input.closest(".field"); if(f) f.classList.remove("invalid"); });
