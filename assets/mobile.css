@@ -6,6 +6,11 @@
   display: none;
 }
 
+@keyframes passLight {
+  0%      { transform: translateX(-140%); }
+  55%, 100% { transform: translateX(220%); }
+}
+
 @media (max-width: 760px) {
   :root {
     --mobile-gut: 16px;
@@ -1174,5 +1179,41 @@
 
   .wh-favourites h2 {
     font-size: clamp(31px, 9vw, 40px) !important;
+  }
+}
+
+@media (max-width: 760px) {
+  /* ─── P.S. Pass: animated membership card in the mobile drawer ─── */
+  #psDrawer a.pack-link {
+    background: linear-gradient(128deg, #1a0e06 0%, var(--tc, #b04a24) 52%, #7e2c14 100%) !important;
+    border-radius: 12px !important;
+    margin: 4px 0 8px !important;
+    padding: 18px 20px 16px !important;
+    position: relative !important;
+    overflow: hidden !important;
+  }
+
+  #psDrawer a.pack-link span:first-child {
+    color: #fff !important;
+  }
+
+  #psDrawer a.pack-link .n {
+    color: rgba(255,255,255,.42) !important;
+  }
+
+  #psDrawer a.pack-link::after {
+    content: '' !important;
+    position: absolute !important;
+    inset: 0 !important;
+    background: linear-gradient(
+      110deg,
+      transparent 22%,
+      rgba(255,255,255,.14) 46%,
+      rgba(255,255,255,.07) 54%,
+      transparent 78%
+    ) !important;
+    transform: translateX(-140%) !important;
+    animation: passLight 2.8s ease-in-out infinite !important;
+    pointer-events: none !important;
   }
 }

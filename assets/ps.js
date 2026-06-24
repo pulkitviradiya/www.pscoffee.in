@@ -5,7 +5,7 @@
   "use strict";
 
   var PAGES = [
-    {href:"pack.html",        label:"Subscribe",   n:"01", primary:true, cls:"pack-link"},
+    {href:"pack.html",        label:"P.S. Pass",   n:"01", primary:true, cls:"pack-link"},
     {href:"menu.html",        label:"Menu",        n:"02", primary:true},
     {href:"pods.html#pods",   label:"Visit us",    n:"03", primary:true},
     {href:"app.html",         label:"App",         n:"04", primary:true},
@@ -45,7 +45,7 @@
         '</div>'+
       '</nav>'+
       '<div class="drawer" id="psDrawer">'+
-        PAGES.map(function(p){return '<a href="'+localHref(p.href)+'"><span>'+p.label+'.</span><span class="n">'+p.n+'</span></a>';}).join("")+
+        PAGES.map(function(p){var dc=p.cls?' class="'+p.cls+'"':'';return '<a href="'+localHref(p.href)+'"'+dc+'><span>'+p.label+'.</span><span class="n">'+p.n+'</span></a>';}).join("")+
       '</div>';
   }
 
