@@ -4,6 +4,26 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/careers",
+      "destination": "/join",
+      "permanent": true
+    },
+    {
+      "source": "/careers.html",
+      "destination": "/join",
+      "permanent": true
+    },
+    {
+      "source": "/jobs",
+      "destination": "/join",
+      "permanent": true
+    },
+    {
+      "source": "/jobs.html",
+      "destination": "/join",
+      "permanent": true
+    },
+    {
       "source": "/story",
       "destination": "/about",
       "permanent": true

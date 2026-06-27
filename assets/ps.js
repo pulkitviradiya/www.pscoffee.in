@@ -55,7 +55,7 @@
         '<div class="f-top">'+
           '<div class="f-col f-brand">'+
             '<div class="display ps-wordmark"><img class="ps-logo-img ps-logo-footer" src="'+localHref("assets/icons/ps-logo-2026.png")+'" alt="P.S. Coffee"></div>'+
-            '<a href="'+localHref("about.html")+'">Story</a><a href="'+localHref("blogs.html")+'">Blogs</a><a href="'+localHref("events.html")+'">Events</a><a href="'+localHref("join.html")+'">Join Us</a><a href="'+localHref("partnership.html")+'">Partner</a>'+
+            '<a href="'+localHref("about.html")+'">Story</a><a href="'+localHref("blogs.html")+'">Blogs</a><a href="'+localHref("events.html")+'">Events</a><a href="'+localHref("join.html")+'">Join Us</a><a href="'+localHref("join.html")+'">Careers</a><a href="'+localHref("partnership.html")+'">Partner</a>'+
             '<a href="https://www.thebarista.school" target="_blank" rel="noopener">Barista School ↗</a>'+
           '</div>'+
           '<div class="f-col"><h4>Pods.</h4>'+
