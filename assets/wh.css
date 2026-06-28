@@ -2328,6 +2328,19 @@ body[data-page="menu"] .page-top {
   color: var(--wh-tc);
   font-weight: 600;
 }
+.menu-subcat-label {
+  margin: 2.5rem 0 1rem;
+  padding-bottom: .5rem;
+  border-bottom: 1px solid rgba(61, 32, 16, .18);
+  font-family: var(--wh-serif);
+  font-size: clamp(20px, 1.8vw, 28px);
+  font-weight: 500;
+  letter-spacing: -.03em;
+  color: var(--wh-tc);
+}
+.menu-subcat-label:first-child {
+  margin-top: 1rem;
+}
 .menu-products-wh {
   display: grid;
   grid-template-columns: repeat(6, minmax(190px, 1fr));
@@ -2553,7 +2566,14 @@ body[data-page="menu"] .page-top {
   border-bottom: 1px solid #000;
 }
 .menu-board-list span:first-child {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
   font-weight: 500;
+}
+.menu-board-list span:first-child svg {
+  flex-shrink: 0;
+  opacity: .75;
 }
 
 .menu-two-up-wh {
