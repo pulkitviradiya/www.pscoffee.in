@@ -2220,7 +2220,7 @@ body[data-page="menu"] .page-top {
   top: var(--wh-header-h);
   z-index: 20;
   display: grid;
-  grid-template-columns: auto auto auto auto 1fr;
+  grid-template-columns: auto auto auto auto auto 1fr;
   gap: 2rem;
   align-items: center;
   padding: .8rem var(--wh-gut);
@@ -2360,8 +2360,11 @@ body[data-page="menu"] .page-top {
 .menu-product-wh:nth-child(n+7) {
   padding-top: .75rem;
 }
-.menu-product-price {
+.menu-product-note {
   margin-top: auto !important;
+}
+.menu-product-price {
+  margin-top: .85rem !important;
 }
 .menu-product-img {
   position: relative;
@@ -3448,6 +3451,11 @@ body[data-page="menu"] .page-top {
 .wh-favourites nav a[href*="cat=coffee"],
 .wh-favourites nav a.on {
   color: var(--ps-terracotta) !important;
+}
+.menu-filter-wh button[data-filter="protein"],
+#menu-protein h2,
+.wh-favourites nav a[href*="cat=protein"] {
+  color: var(--ps-roast) !important;
 }
 .menu-filter-wh button[data-filter="food"] {
   color: var(--ps-espresso) !important;
