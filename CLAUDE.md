@@ -194,6 +194,7 @@ Already in `.gitignore` — but do not force-add them:
 - `.image-slots.state.json` — tool-generated state file
 - `.DS_Store` — macOS metadata
 - `node_modules/` — no dependencies exist, but just in case
+- `*.xlsx` — financial workbooks copied temporarily for reading; delete before committing
 
 ---
 
@@ -210,6 +211,25 @@ excluded from the sitemap.
 - Push to `main` → Vercel auto-deploys. No manual deploy needed.
 - `vercel.json` sets: `cleanUrls: true`, `trailingSlash: false`, cache headers.
 - The `/story` and `/story.html` URLs redirect to `/about` (legacy redirects — do not remove).
+
+---
+
+## Menu — rules
+
+### Source of truth for items and prices
+The COGS_Master xlsx is authoritative for menu items and selling prices. Before any menu update, read `MEMORY.md` for the file path. Claude sandbox cannot read from `~/Documents` directly — copy the xlsx to the repo root, use it, then delete it before committing.
+
+### Adding or removing a menu filter category
+Do all five steps in one commit:
+1. Add/remove the `<section class="menu-category-wh" data-cat="X" id="menu-X">` block in `menu.html`
+2. Add/remove the `<button data-filter="X">` in the `.menu-filter-wh` nav in `menu.html`
+3. Bump `grid-template-columns` in `.menu-filter-wh` in `wh.css` — one `auto` per button, plus `1fr` at the end for the span (e.g. 5 buttons = `auto auto auto auto auto 1fr`)
+4. Add/remove the `<a data-fav-cat="X">` tab in `.wh-favourites nav` in `index.html`
+5. Add/remove `'X'` in the `['coffee','matcha','protein','food']` fetch array in `index.html`
+6. Add a colour rule for `button[data-filter="X"]` and `#menu-X h2` in the theme block in `wh.css`
+
+### Card P.S. note alignment
+`margin-top: auto` must be on `.menu-product-note`, **not** `.menu-product-price`. This pins the P.S. note + price row to the bottom of every card, keeping adjacent cards visually level regardless of title or recipe text length.
 
 ---
 
