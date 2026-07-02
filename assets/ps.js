@@ -36,7 +36,7 @@
         '<span class="wh-region">₹ INR&nbsp;&nbsp;|&nbsp;&nbsp;India</span>'+
       '</div>'+
       '<nav class="nav" id="psNav">'+
-        '<a href="'+localHref("index.html")+'" class="nav-logo" aria-label="P.S. Coffee home"><img class="ps-logo-img ps-logo-nav" src="'+localHref("assets/icons/ps-logo-2026.png")+'" alt="P.S. Coffee"></a>'+
+        '<a href="'+localHref("index.html")+'" class="nav-logo" aria-label="P.S. Coffee home"><img class="ps-logo-img ps-logo-nav" src="'+localHref("assets/icons/ps-coffee_wordmark_terracotta.png")+'" alt="P.S. Coffee"></a>'+
         '<div class="nav-links">'+links+'</div>'+
         '<div class="nav-tools">'+
           '<a href="'+localHref("join.html")+'" class="ntool ntool-text'+(here==='join.html'?' active':'')+'" title="Join us">Join us.</a>'+
@@ -54,7 +54,7 @@
       '<div class="wrap">'+
         '<div class="f-top">'+
           '<div class="f-col f-brand">'+
-            '<div class="display ps-wordmark"><img class="ps-logo-img ps-logo-footer" src="'+localHref("assets/icons/ps-logo-2026.png")+'" alt="P.S. Coffee"></div>'+
+            '<div class="display ps-wordmark"><img class="ps-logo-img ps-logo-footer" src="'+localHref("assets/icons/ps-coffee_wordmark_terracotta.png")+'" alt="P.S. Coffee"></div>'+
             '<a href="'+localHref("about.html")+'">Story</a><a href="'+localHref("blogs.html")+'">Blogs</a><a href="'+localHref("events.html")+'">Events</a><a href="'+localHref("join.html")+'">Join Us</a><a href="'+localHref("join.html")+'">Careers</a><a href="'+localHref("partnership.html")+'">Partner</a>'+
             '<a href="https://www.thebarista.school" target="_blank" rel="noopener">Barista School ↗</a>'+
           '</div>'+
@@ -358,6 +358,121 @@
     });
   }
 
+  /* ---------- Brand Kit 2A: Nectar signature move ---------- */
+  var NECTAR_PHRASES = [
+    "already paid for",
+    "Drink daily",
+    "Plain and Simple",
+    "Spot On Quality",
+    "Spot On Pricing",
+    "Spot On Reachability",
+    "100% Arabica",
+    "P.S. Coffee",
+    "P.S. Pack",
+    "P.S. Pass",
+    "No bad coffee mornings",
+    "specialty coffee",
+    "Specialty Coffee",
+    "Specialty",
+    "Matcha",
+    "Coffee",
+    "Packs",
+    "Pack",
+    "Pods",
+    "Pod",
+    "App",
+    "Events",
+    "Blogs",
+    "Story",
+    "Partner",
+    "Feedback",
+    "FAQ"
+  ];
+
+  function escapeRegExp(s){
+    return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  }
+
+  function wrapPhraseInTextNode(node, phrase){
+    var text = node.nodeValue;
+    var re = new RegExp(escapeRegExp(phrase), "i");
+    var match = text.match(re);
+    if(!match) return false;
+    var before = text.slice(0, match.index);
+    var hit = text.slice(match.index, match.index + match[0].length);
+    var after = text.slice(match.index + match[0].length);
+    var frag = document.createDocumentFragment();
+    if(before) frag.appendChild(document.createTextNode(before));
+    var mark = document.createElement("span");
+    mark.className = "nectar-highlight";
+    mark.textContent = hit;
+    frag.appendChild(mark);
+    if(after) frag.appendChild(document.createTextNode(after));
+    node.parentNode.replaceChild(frag, node);
+    return true;
+  }
+
+  function highlightPhrase(el, phrase){
+    var walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, {
+      acceptNode: function(node){
+        if(!node.nodeValue || !node.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
+        var p = node.parentElement;
+        if(!p || p.closest(".nectar-highlight, a, button, script, style")) return NodeFilter.FILTER_REJECT;
+        return node.nodeValue.toLowerCase().indexOf(phrase.toLowerCase()) !== -1 ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
+      }
+    });
+    var node = walker.nextNode();
+    return node ? wrapPhraseInTextNode(node, phrase) : false;
+  }
+
+  function highlightLeadPhrase(el){
+    var walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, {
+      acceptNode: function(node){
+        if(!node.nodeValue || !node.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
+        var p = node.parentElement;
+        if(!p || p.closest(".nectar-highlight, a, button, script, style")) return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    var node = walker.nextNode();
+    if(!node) return false;
+    var text = node.nodeValue;
+    var match = text.match(/[A-Za-z0-9₹][A-Za-z0-9₹.'%-]*(?:\\s+[A-Za-z0-9₹][A-Za-z0-9₹.'%-]*)?/);
+    return match ? wrapPhraseInTextNode(node, match[0]) : false;
+  }
+
+  function nectarSignature(){
+    var selector = [
+      "h1",
+      "section > h2",
+      "header > h2",
+      ".wh-banner-heading",
+      ".wh-modern h1",
+      ".wh-sub-copy h2",
+      ".wh-page-statement h2",
+      ".wh-page-hero h1",
+      ".wh-page-hero h2",
+      ".wh-page-list-copy h2",
+      ".wh-page-card h2",
+      ".journal-hero-title",
+      ".journal-post-body h2",
+      ".journal-index h1"
+    ].join(",");
+    document.querySelectorAll(selector).forEach(function(el){
+      if(el.closest("#ps-nav, .footer, .drawer, .ps-pack-card, .menu-product-wh, .wh-fav-card")) return;
+      if(el.querySelector(".nectar-highlight")) return;
+      var text = (el.textContent || "").replace(/\s+/g, " ").trim();
+      if(text.length < 10) return;
+      for(var i=0; i<NECTAR_PHRASES.length; i++){
+        if(text.toLowerCase().indexOf(NECTAR_PHRASES[i].toLowerCase()) !== -1){
+          highlightPhrase(el, NECTAR_PHRASES[i]);
+          return;
+        }
+      }
+      highlightLeadPhrase(el);
+    });
+  }
+
   /* ============================================================
      TWEAKS PANEL (vanilla) — host protocol + localStorage
      ============================================================ */
@@ -451,7 +566,7 @@
   twApply(twRead());
   function init(){
     inject(); navBehaviour(); heroSlider(); faq(); reveal();
-    filters(); chips(); cart(); forms(); anchors();
+    filters(); chips(); cart(); forms(); anchors(); nectarSignature();
     // Tweaks panel is only useful inside an edit/preview parent frame.
     // Skip building it on regular page loads to avoid dead DOM overhead.
     if(window.parent !== window) buildPanel();

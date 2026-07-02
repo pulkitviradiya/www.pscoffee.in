@@ -6275,3 +6275,1016 @@ body[data-page] .footer .ps-wordmark-coffee {
     line-height: 1.3 !important;
   }
 }
+
+/* ============================================================
+   Brand Kit 2A alignment layer
+   ============================================================ */
+:root {
+  --ps-terracotta: #E8400C;
+  --ps-terracotta-pressed: #B8300A;
+  --ps-steam: #FAF6EE;
+  --ps-oat: #F2EBD9;
+  --ps-linen: #E8DCC8;
+  --ps-linen-strong: #E4D9C4;
+  --ps-espresso: #5C3518;
+  --ps-roast: #3D2010;
+  --ps-matcha-deep: #3D6B4A;
+  --ps-matcha-grove: #5A8C5E;
+  --ps-matcha-bright: #8FB87A;
+  --ps-matcha-light: #C8DDB8;
+  --ps-matcha-froth: #EAF2E0;
+  --ps-nectar: #D98F1F;
+  --ps-nectar-deep: #A66815;
+  --ps-nectar-bright: #F0B44A;
+  --ps-nectar-cream: #F6D998;
+  --ps-nectar-wash: #FBEFD4;
+  --ps-success: #7A8B3E;
+  --wh-serif: "Bricolage Grotesque", system-ui, sans-serif;
+  --wh-sans: "Space Grotesk", system-ui, sans-serif;
+  --ps-serif: "Instrument Serif", Georgia, serif;
+  --wh-bg: var(--ps-steam);
+  --wh-surface: var(--ps-oat);
+  --wh-line: var(--ps-linen);
+  --wh-ink: var(--ps-roast);
+  --wh-ink-2: var(--ps-espresso);
+  --wh-muted: rgba(92, 53, 24, .72);
+  --wh-border: rgba(92, 53, 24, .18);
+  --wh-bstrong: rgba(61, 32, 16, .42);
+  --wh-tc: var(--ps-terracotta);
+  --wh-matcha: var(--ps-matcha-deep);
+}
+
+body {
+  background: var(--ps-steam) !important;
+  color: var(--ps-roast) !important;
+  font-family: var(--wh-sans) !important;
+  font-weight: 400 !important;
+}
+
+body * {
+  letter-spacing: 0 !important;
+}
+
+h1, h2, h3, h4,
+.display,
+.wh-h1, .wh-h2, .wh-h3,
+.wh-intro h1,
+.wh-page h1,
+.wh-page h2,
+.wh-page h3,
+.journal-hero-title,
+.journal-card h2,
+.journal-card h3,
+.menu-product-wh h3,
+.menu-product-price strong,
+.wh-fav-card h3 {
+  font-family: var(--wh-serif) !important;
+  font-weight: 800 !important;
+  letter-spacing: 0 !important;
+}
+
+p, li, dd, dt, input, textarea, select, button,
+.wh-body-text,
+.wh-page p,
+.journal-post-body,
+.menu-product-wh,
+.footer,
+.nav-links a,
+.ntool {
+  font-family: var(--wh-sans) !important;
+}
+
+em, blockquote, .wh-h2 em, .wh-intro h1 em, .journal-pullquote {
+  font-family: var(--ps-serif) !important;
+  font-style: italic !important;
+  font-weight: 400 !important;
+}
+
+body:not([data-page="matcha"]) .bg-ink,
+body:not([data-page="matcha"]) .ps-app-callout,
+body:not([data-page="matcha"]) .ps-our-story {
+  background: var(--ps-terracotta) !important;
+  color: var(--ps-steam) !important;
+}
+
+body[data-page="matcha"] .wh-page-hero,
+body[data-page="matcha"] .bg-ink,
+body[data-page="matcha"] .ps-app-callout,
+body[data-page="matcha"] .ps-our-story,
+#menu-matcha .menu-section-footer-matcha {
+  background: var(--ps-matcha-deep) !important;
+  color: var(--ps-steam) !important;
+}
+
+.nav {
+  background: rgba(250, 246, 238, .96) !important;
+  border-bottom: 1px solid var(--ps-linen) !important;
+  box-shadow: none !important;
+  backdrop-filter: blur(14px);
+}
+
+.nav-logo {
+  min-width: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  overflow: visible !important;
+}
+
+.ps-logo-nav {
+  height: 34px !important;
+  max-width: 150px !important;
+}
+
+.nav-links a {
+  color: var(--ps-espresso) !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+}
+
+.nav-links a::after {
+  height: 2px !important;
+  background: var(--ps-terracotta) !important;
+}
+
+.nav-links a:hover,
+.nav-links a.active,
+.ntool.active {
+  color: var(--ps-terracotta) !important;
+}
+
+body[data-page="matcha"] .nav-links a:hover,
+body[data-page="matcha"] .nav-links a.active,
+body[data-page="matcha"] .ntool.active {
+  color: var(--ps-matcha-deep) !important;
+}
+
+body[data-page="matcha"] .nav-links a::after {
+  background: var(--ps-matcha-deep) !important;
+}
+
+.ntool,
+.wh-btn,
+.btn,
+.wh-page-card a,
+.wh-page-card button,
+.menu-product-wh button,
+.journal-signup-form button,
+.app-waitlist-form button,
+.news button {
+  border-radius: 10px !important;
+  box-shadow: none !important;
+  font-family: var(--wh-sans) !important;
+  font-weight: 600 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+}
+
+.wh-btn.dark,
+.btn.accent,
+.wh-page-card a:hover,
+.wh-page-card button:hover,
+.menu-product-wh button:hover {
+  background: var(--ps-terracotta) !important;
+  border-color: var(--ps-terracotta) !important;
+  color: var(--ps-steam) !important;
+}
+
+.wh-btn.dark:hover,
+.btn.accent:hover {
+  background: var(--ps-terracotta-pressed) !important;
+  border-color: var(--ps-terracotta-pressed) !important;
+}
+
+body[data-page="matcha"] .wh-btn.dark,
+body[data-page="matcha"] .btn.accent,
+body[data-page="matcha"] .wh-page-card a:hover,
+body[data-page="matcha"] .wh-page-card button:hover,
+body[data-page="matcha"] .menu-product-wh button:hover,
+.wh-btn.matcha {
+  background: var(--ps-matcha-deep) !important;
+  border-color: var(--ps-matcha-deep) !important;
+  color: var(--ps-steam) !important;
+}
+
+.wh-btn.white,
+.btn.ghost,
+.wh-btn.outline-dark,
+.wh-page-card a,
+.wh-page-card button,
+.menu-product-wh button {
+  background: transparent !important;
+  border-color: var(--ps-linen-strong) !important;
+  color: var(--ps-terracotta) !important;
+}
+
+body[data-page="matcha"] .wh-btn.white,
+body[data-page="matcha"] .btn.ghost,
+body[data-page="matcha"] .wh-btn.outline-dark,
+body[data-page="matcha"] .wh-page-card a,
+body[data-page="matcha"] .wh-page-card button,
+#menu-matcha .menu-product-wh button {
+  color: var(--ps-matcha-deep) !important;
+}
+
+.badge.accent,
+.tag,
+.journal-card-tag,
+.menu-kcal,
+.wh-fav-badge,
+.ps-plan-badge {
+  background: var(--ps-nectar) !important;
+  color: var(--ps-roast) !important;
+  border-color: transparent !important;
+}
+
+mark,
+.nectar-highlight,
+.display .highlight,
+.wh-h1 .highlight,
+.wh-h2 .highlight {
+  display: inline;
+  padding: .02em .16em .08em;
+  border-radius: 6px;
+  background: var(--ps-nectar) !important;
+  color: var(--ps-roast) !important;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.nectar-ramp-gold,
+.nectar-ramp-1 {
+  background: var(--ps-nectar) !important;
+  color: var(--ps-roast) !important;
+}
+
+.nectar-ramp-bright,
+.nectar-ramp-2 {
+  background: var(--ps-nectar-bright) !important;
+  color: var(--ps-roast) !important;
+}
+
+.nectar-ramp-cream,
+.nectar-ramp-3 {
+  background: var(--ps-nectar-cream) !important;
+  color: var(--ps-roast) !important;
+}
+
+.nectar-ramp-wash,
+.nectar-ramp-4 {
+  background: var(--ps-nectar-wash) !important;
+  color: var(--ps-espresso) !important;
+}
+
+.ps-plan-card:nth-child(4n+1) .ps-plan-badge,
+.ps-pack-card:nth-child(4n+1) .ps-pack-card-validity {
+  background: var(--ps-nectar) !important;
+  color: var(--ps-roast) !important;
+}
+
+.ps-plan-card:nth-child(4n+2) .ps-plan-badge,
+.ps-pack-card:nth-child(4n+2) .ps-pack-card-validity {
+  background: var(--ps-nectar-bright) !important;
+  color: var(--ps-roast) !important;
+}
+
+.ps-plan-card:nth-child(4n+3) .ps-plan-badge,
+.ps-pack-card:nth-child(4n+3) .ps-pack-card-validity {
+  background: var(--ps-nectar-cream) !important;
+  color: var(--ps-roast) !important;
+}
+
+.ps-plan-card:nth-child(4n+4) .ps-plan-badge,
+.ps-pack-card:nth-child(4n+4) .ps-pack-card-validity {
+  background: var(--ps-nectar-wash) !important;
+  color: var(--ps-espresso) !important;
+  border: 1px solid var(--ps-nectar-cream) !important;
+}
+
+.ps-pack-card-math,
+.ps-plan-price-block span {
+  color: var(--ps-nectar-deep) !important;
+}
+
+.ps-pack-card-link,
+.wh-line-cta {
+  text-decoration-color: var(--ps-nectar) !important;
+  text-decoration-thickness: 2px !important;
+  text-underline-offset: .24em !important;
+}
+
+.wh-home-card:nth-child(4n+1) span,
+.journal-card:nth-child(4n+1) .journal-card-tag,
+.journal-mini-card:nth-child(4n+1) .journal-card-tag,
+.menu-product-wh:nth-child(4n+1) .menu-kcal,
+.wh-fav-card:nth-child(4n+1) .wh-fav-badge {
+  background: var(--ps-nectar) !important;
+  color: var(--ps-roast) !important;
+  border-color: transparent !important;
+}
+
+.wh-home-card:nth-child(4n+2) span,
+.journal-card:nth-child(4n+2) .journal-card-tag,
+.journal-mini-card:nth-child(4n+2) .journal-card-tag,
+.menu-product-wh:nth-child(4n+2) .menu-kcal,
+.wh-fav-card:nth-child(4n+2) .wh-fav-badge {
+  background: var(--ps-nectar-bright) !important;
+  color: var(--ps-roast) !important;
+  border-color: transparent !important;
+}
+
+.wh-home-card:nth-child(4n+3) span,
+.journal-card:nth-child(4n+3) .journal-card-tag,
+.journal-mini-card:nth-child(4n+3) .journal-card-tag,
+.menu-product-wh:nth-child(4n+3) .menu-kcal,
+.wh-fav-card:nth-child(4n+3) .wh-fav-badge {
+  background: var(--ps-nectar-cream) !important;
+  color: var(--ps-roast) !important;
+  border-color: transparent !important;
+}
+
+.wh-home-card:nth-child(4n+4) span,
+.journal-card:nth-child(4n+4) .journal-card-tag,
+.journal-mini-card:nth-child(4n+4) .journal-card-tag,
+.menu-product-wh:nth-child(4n+4) .menu-kcal,
+.wh-fav-card:nth-child(4n+4) .wh-fav-badge {
+  background: var(--ps-nectar-wash) !important;
+  color: var(--ps-espresso) !important;
+  border: 1px solid var(--ps-nectar-cream) !important;
+}
+
+.wh-announce,
+.form-success,
+.journal-post-body .key-takeaway,
+.journal-post-body .takeaway,
+.journal-callout,
+.faq-item.open {
+  background: var(--ps-nectar-wash) !important;
+}
+
+.menu-filter-wh button.menu-highlight,
+.toast-warning,
+.status-preparing,
+.ps-pack-card-note strong,
+.ps-pack-included strong {
+  color: var(--ps-nectar-deep) !important;
+}
+
+.wh-page,
+.wh-sec,
+.journal-post-body,
+.journal-index,
+.menu-page-wh {
+  background: var(--ps-steam) !important;
+}
+
+.wh-sec.bg-alt,
+.wh-page-card,
+.wh-page-list,
+.wh-page-card-img,
+.menu-product-wh,
+.wh-fav-card,
+.journal-card,
+.journal-mini-card,
+.journal-post-body .section:nth-of-type(even),
+.faq-section {
+  background: var(--ps-oat) !important;
+}
+
+.wh-page-card,
+.menu-product-wh,
+.wh-fav-card,
+.journal-card,
+.journal-mini-card,
+.faq-item,
+.app-waitlist-form input,
+.journal-signup-form input,
+.news input,
+input,
+textarea,
+select {
+  border-color: var(--ps-linen-strong) !important;
+}
+
+input,
+textarea,
+select,
+.news input,
+.journal-signup-form input,
+.app-waitlist-form input {
+  background: var(--ps-steam) !important;
+  color: var(--ps-roast) !important;
+  border: 1px solid var(--ps-linen-strong) !important;
+  border-radius: 10px !important;
+  outline: none !important;
+  caret-color: var(--ps-terracotta) !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+.news input:focus,
+.journal-signup-form input:focus,
+.app-waitlist-form input:focus {
+  border-color: var(--ps-terracotta) !important;
+  box-shadow: 0 0 0 1px var(--ps-terracotta) !important;
+}
+
+body[data-page="matcha"] input:focus,
+body[data-page="matcha"] textarea:focus,
+body[data-page="matcha"] select:focus {
+  border-color: var(--ps-matcha-deep) !important;
+  box-shadow: 0 0 0 1px var(--ps-matcha-deep) !important;
+}
+
+.field.invalid input,
+input[aria-invalid="true"],
+textarea[aria-invalid="true"] {
+  border-color: var(--ps-terracotta-pressed) !important;
+  box-shadow: 0 0 0 1px var(--ps-terracotta-pressed) !important;
+}
+
+.form-success,
+.toast-success,
+.status-ready {
+  border-left: 4px solid var(--ps-success) !important;
+  background: var(--ps-steam) !important;
+  color: var(--ps-roast) !important;
+}
+
+.toast-warning,
+.status-preparing {
+  border-left: 4px solid var(--ps-nectar) !important;
+  background: var(--ps-nectar-wash) !important;
+  color: var(--ps-roast) !important;
+}
+
+.faq-item.open,
+.journal-post-body .faq-item.open {
+  background: var(--ps-nectar-wash) !important;
+  border-left: 4px solid var(--ps-terracotta) !important;
+}
+
+.faq-q,
+.journal-faq summary {
+  color: var(--ps-roast) !important;
+  font-family: var(--wh-sans) !important;
+  font-weight: 600 !important;
+}
+
+.faq-a,
+.faq-a .inner,
+.journal-faq details p {
+  color: var(--ps-espresso) !important;
+  font-family: var(--wh-sans) !important;
+  font-weight: 400 !important;
+}
+
+.faq-q .pm {
+  border-color: var(--ps-linen-strong) !important;
+  color: var(--ps-espresso) !important;
+}
+
+.faq-item.open .faq-q .pm {
+  background: var(--ps-terracotta) !important;
+  border-color: var(--ps-terracotta) !important;
+  color: var(--ps-steam) !important;
+}
+
+.journal-post-body .key-takeaway,
+.journal-post-body .takeaway,
+.journal-post-body aside,
+.journal-callout {
+  background: var(--ps-oat) !important;
+  border-left: 4px solid var(--ps-terracotta) !important;
+  color: var(--ps-roast) !important;
+}
+
+.journal-post-body table tr:nth-child(even),
+.journal-post-body table tbody tr:nth-child(even) {
+  background: var(--ps-oat) !important;
+}
+
+.journal-post-body table th,
+.journal-post-body table td {
+  border-color: var(--ps-linen-strong) !important;
+}
+
+.journal-post-body table th:first-child,
+.journal-post-body table td:first-child {
+  border-top: 2px solid var(--ps-terracotta) !important;
+}
+
+.footer {
+  background: var(--ps-oat) !important;
+  color: var(--ps-roast) !important;
+}
+
+.footer h4,
+.footer .ps-wordmark {
+  color: var(--ps-roast) !important;
+}
+
+.footer a {
+  color: var(--ps-espresso) !important;
+}
+
+.footer a:hover {
+  color: var(--ps-terracotta) !important;
+}
+
+.ps-logo-footer {
+  width: min(178px, 100%) !important;
+  height: auto !important;
+}
+
+.f-email {
+  background: var(--ps-terracotta) !important;
+  color: var(--ps-steam) !important;
+  border-radius: 10px !important;
+  padding: 18px !important;
+}
+
+.f-email h4,
+.f-email p {
+  color: var(--ps-steam) !important;
+}
+
+.f-email .news button {
+  background: var(--ps-nectar) !important;
+  color: var(--ps-roast) !important;
+  border-color: var(--ps-nectar) !important;
+}
+
+/* Brand Kit 2A: UI Buttons & Links */
+.btn.accent,
+.wh-btn.dark,
+.journal-signup-form button,
+.app-waitlist-form button,
+.wh-page-card a,
+.wh-page-card button,
+.menu-product-wh button {
+  background: var(--ps-terracotta) !important;
+  border: 1.5px solid var(--ps-terracotta) !important;
+  color: var(--ps-steam) !important;
+  box-shadow: none !important;
+}
+
+.btn.accent:hover,
+.btn.accent:active,
+.wh-btn.dark:hover,
+.wh-btn.dark:active,
+.journal-signup-form button:hover,
+.journal-signup-form button:active,
+.app-waitlist-form button:hover,
+.app-waitlist-form button:active,
+.wh-page-card a:hover,
+.wh-page-card a:active,
+.wh-page-card button:hover,
+.wh-page-card button:active,
+.menu-product-wh button:hover,
+.menu-product-wh button:active {
+  background: var(--ps-terracotta-pressed) !important;
+  border-color: var(--ps-terracotta-pressed) !important;
+  color: var(--ps-steam) !important;
+  transform: translateY(-1px);
+}
+
+.btn.ghost,
+.wh-btn.white,
+.wh-btn.outline-dark,
+.wh-btn.outline-white,
+.wh-line-cta,
+.ps-pack-card-link {
+  background: transparent !important;
+  border-color: var(--ps-terracotta) !important;
+  color: var(--ps-terracotta) !important;
+}
+
+.btn.ghost:hover,
+.btn.ghost:active,
+.wh-btn.white:hover,
+.wh-btn.white:active,
+.wh-btn.outline-dark:hover,
+.wh-btn.outline-dark:active,
+.wh-btn.outline-white:hover,
+.wh-btn.outline-white:active,
+.wh-line-cta:hover,
+.ps-pack-card-link:hover {
+  background: var(--ps-nectar-wash) !important;
+  border-color: var(--ps-terracotta) !important;
+  color: var(--ps-terracotta-pressed) !important;
+}
+
+a:not(.btn):not(.wh-btn):not(.wh-page-card):not(.menu-product-wh button) {
+  text-decoration-color: transparent;
+}
+
+a:not(.btn):not(.wh-btn):hover {
+  color: var(--ps-terracotta) !important;
+}
+
+button:disabled,
+.btn[aria-disabled="true"],
+.wh-btn[aria-disabled="true"],
+.store-badge[aria-disabled="true"],
+input[type="submit"]:disabled {
+  background: var(--ps-oat) !important;
+  border-color: var(--ps-linen-strong) !important;
+  color: rgba(92, 53, 24, .48) !important;
+  cursor: not-allowed !important;
+  transform: none !important;
+}
+
+.btn:focus-visible,
+.wh-btn:focus-visible,
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--ps-terracotta) !important;
+  outline-offset: 3px !important;
+  box-shadow: none !important;
+}
+
+body[data-page="matcha"] .btn.accent,
+body[data-page="matcha"] .wh-btn.dark,
+body[data-page="matcha"] .journal-signup-form button,
+body[data-page="matcha"] .app-waitlist-form button,
+body[data-page="matcha"] .wh-page-card a,
+body[data-page="matcha"] .wh-page-card button,
+#menu-matcha .menu-product-wh button {
+  background: var(--ps-matcha-deep) !important;
+  border-color: var(--ps-matcha-deep) !important;
+  color: var(--ps-steam) !important;
+}
+
+body[data-page="matcha"] .btn.accent:hover,
+body[data-page="matcha"] .btn.accent:active,
+body[data-page="matcha"] .wh-btn.dark:hover,
+body[data-page="matcha"] .wh-btn.dark:active,
+body[data-page="matcha"] .journal-signup-form button:hover,
+body[data-page="matcha"] .app-waitlist-form button:hover,
+body[data-page="matcha"] .wh-page-card a:hover,
+body[data-page="matcha"] .wh-page-card button:hover,
+#menu-matcha .menu-product-wh button:hover,
+#menu-matcha .menu-product-wh button:active {
+  background: #2C4F37 !important;
+  border-color: #2C4F37 !important;
+}
+
+body[data-page="matcha"] .btn.ghost,
+body[data-page="matcha"] .wh-btn.white,
+body[data-page="matcha"] .wh-btn.outline-dark,
+body[data-page="matcha"] .wh-btn.outline-white {
+  background: transparent !important;
+  border-color: var(--ps-matcha-deep) !important;
+  color: var(--ps-matcha-deep) !important;
+}
+
+body[data-page="matcha"] .btn.ghost:hover,
+body[data-page="matcha"] .wh-btn.white:hover,
+body[data-page="matcha"] .wh-btn.outline-dark:hover,
+body[data-page="matcha"] .wh-btn.outline-white:hover {
+  background: var(--ps-matcha-pale) !important;
+  border-color: var(--ps-matcha-deep) !important;
+  color: #2C4F37 !important;
+}
+
+body[data-page="matcha"] .btn:focus-visible,
+body[data-page="matcha"] .wh-btn:focus-visible,
+body[data-page="matcha"] button:focus-visible,
+body[data-page="matcha"] a:focus-visible,
+#menu-matcha button:focus-visible {
+  outline-color: var(--ps-matcha-deep) !important;
+}
+
+body[data-page="matcha"] .wh-page-kicker,
+body[data-page="matcha"] .wh-page-statement p,
+body[data-page="matcha"] .wh-page-rail header p,
+body[data-page="matcha"] .wh-page-list header p,
+body[data-page="matcha"] .wh-page-card-img::before {
+  color: var(--ps-matcha-deep) !important;
+}
+
+@media (max-width: 479px) {
+  .ps-logo-nav {
+    height: 29px !important;
+    max-width: 118px !important;
+  }
+}
+
+/* Brand Kit 2A: Typography + Colour Ratios & Contrast */
+:root {
+  --ps-type-display-max: 82px;
+  --ps-type-h1-max: 56px;
+  --ps-type-h2-max: 30px;
+  --ps-type-card-max: 22px;
+}
+
+body,
+.wh-page,
+.journal-post-body,
+.menu-page-wh {
+  background: var(--ps-steam) !important;
+  color: var(--ps-roast) !important;
+}
+
+.wh-page h1,
+.wh-page-hero h1,
+.journal-hero-title,
+.journal-index h1,
+.display {
+  font-family: var(--wh-serif) !important;
+  font-size: clamp(32px, 5vw, var(--ps-type-h1-max)) !important;
+  font-weight: 800 !important;
+  letter-spacing: -1px !important;
+  line-height: 1.02 !important;
+  color: var(--ps-roast) !important;
+}
+
+.wh-modern h1,
+.hero h1 {
+  font-family: var(--wh-serif) !important;
+  font-size: clamp(48px, 7vw, var(--ps-type-display-max)) !important;
+  font-weight: 800 !important;
+  letter-spacing: -2.5px !important;
+  line-height: .98 !important;
+}
+
+.wh-page h2,
+.wh-page-statement h2,
+.wh-page-rail h2,
+.wh-page-list h2,
+.pods-format-copy h2,
+.pods-why-copy h2,
+.wh-page-split h2,
+.journal-post-body h2,
+.journal-card h2,
+.ps-pack-explorer-head h2 {
+  font-family: var(--wh-serif) !important;
+  font-size: clamp(22px, 3vw, var(--ps-type-h2-max)) !important;
+  font-weight: 800 !important;
+  letter-spacing: -.5px !important;
+  line-height: 1.12 !important;
+  color: var(--ps-roast) !important;
+}
+
+.wh-page-card h3,
+.menu-product-wh h3,
+.wh-fav-card h3,
+.journal-card h3,
+.ps-pack-card h4 {
+  font-family: var(--wh-serif) !important;
+  font-size: clamp(18px, 1.7vw, var(--ps-type-card-max)) !important;
+  font-weight: 700 !important;
+  letter-spacing: -.35px !important;
+  line-height: 1.15 !important;
+  color: var(--ps-roast) !important;
+}
+
+p,
+li,
+dd,
+dt,
+.wh-page p,
+.wh-page-card p,
+.wh-page-list-rows span,
+.journal-post-body p,
+.journal-post-body li,
+.menu-product-wh p,
+.menu-product-note,
+.faq-a,
+.faq-a .inner {
+  font-family: var(--wh-sans) !important;
+  font-size: clamp(14px, 1vw, 16px) !important;
+  font-weight: 400 !important;
+  letter-spacing: 0 !important;
+  line-height: 1.55 !important;
+  color: var(--ps-espresso) !important;
+}
+
+.wh-page-kicker,
+.wh-page-statement p,
+.wh-page-rail header p,
+.wh-page-list header p,
+.pods-format-copy > p,
+.pods-why-label,
+.kicker,
+.eyebrow,
+.tag,
+.badge,
+.journal-card-tag,
+.menu-kcal,
+.ps-plan-badge,
+.ps-pack-card-validity,
+.wh-fav-badge {
+  font-family: var(--wh-sans) !important;
+  font-size: clamp(10px, .85vw, 12px) !important;
+  font-weight: 700 !important;
+  letter-spacing: 3px !important;
+  line-height: 1.2 !important;
+  text-transform: uppercase !important;
+}
+
+.price,
+.menu-product-price,
+.ps-pack-card-price strong,
+.ps-plan-price-block strong,
+.wh-stat strong {
+  font-family: var(--wh-serif) !important;
+  font-weight: 800 !important;
+  letter-spacing: -.5px !important;
+  color: var(--ps-roast) !important;
+}
+
+.pullquote,
+blockquote,
+.testimonial,
+.journal-post-body blockquote,
+.ps-serif-accent {
+  font-family: var(--ps-serif) !important;
+  font-style: italic !important;
+  font-size: clamp(18px, 2.4vw, 34px) !important;
+  line-height: 1.18 !important;
+  color: var(--ps-roast) !important;
+}
+
+.wh-page-card,
+.menu-product-wh,
+.wh-fav-card,
+.journal-card,
+.journal-mini-card,
+.wh-page-list,
+.pods-format,
+.pods-why,
+.faq-item {
+  background: var(--ps-oat) !important;
+  color: var(--ps-roast) !important;
+}
+
+.wh-page-card p,
+.menu-product-wh p,
+.wh-fav-card p,
+.journal-card p,
+.journal-mini-card p,
+.pods-format-copy div p,
+.pods-why-copy p,
+.faq-a,
+.faq-a .inner {
+  color: var(--ps-espresso) !important;
+}
+
+body:not([data-page="matcha"]) .wh-page-hero,
+body:not([data-page="matcha"]) .legal-hero .wh-page-hero-copy {
+  background: var(--ps-terracotta) !important;
+  color: var(--ps-steam) !important;
+}
+
+body:not([data-page="matcha"]) .wh-page-hero h1,
+body:not([data-page="matcha"]) .wh-page-hero .wh-page-kicker,
+body:not([data-page="matcha"]) .wh-page-hero footer,
+body:not([data-page="matcha"]) .wh-page-hero footer p,
+body:not([data-page="matcha"]) .wh-page-hero footer a {
+  color: var(--ps-steam) !important;
+}
+
+body[data-page="matcha"] .wh-page-hero {
+  background: var(--ps-matcha-deep) !important;
+  color: var(--ps-steam) !important;
+}
+
+body[data-page="matcha"] .wh-page-hero h1,
+body[data-page="matcha"] .wh-page-hero .wh-page-kicker,
+body[data-page="matcha"] .wh-page-hero footer,
+body[data-page="matcha"] .wh-page-hero footer p,
+body[data-page="matcha"] .wh-page-hero footer a {
+  color: var(--ps-steam) !important;
+}
+
+.wh-page-kicker,
+.wh-page-statement p,
+.wh-page-rail header p,
+.wh-page-list header p,
+.wh-page-list-rows span:first-child,
+.pods-format-copy > p,
+.pods-why-label {
+  color: var(--ps-espresso) !important;
+}
+
+body[data-page="matcha"] .wh-page-kicker,
+body[data-page="matcha"] .wh-page-statement p,
+body[data-page="matcha"] .wh-page-rail header p,
+body[data-page="matcha"] .wh-page-list header p,
+body[data-page="matcha"] .wh-page-list-rows span:first-child {
+  color: var(--ps-matcha-deep) !important;
+}
+
+body:not([data-page="matcha"]) .wh-page-hero footer p,
+body:not([data-page="matcha"]) .wh-page-hero footer a,
+body[data-page="matcha"] .wh-page-hero footer p,
+body[data-page="matcha"] .wh-page-hero footer a {
+  font-size: clamp(19px, 1.45vw, 22px) !important;
+  font-weight: 600 !important;
+  line-height: 1.45 !important;
+}
+
+.wh-page-list-rows p {
+  background: transparent !important;
+  border-color: var(--ps-linen-strong) !important;
+}
+
+.wh-page-split,
+.wh-page-rail,
+.wh-page-statement,
+.pods-specs,
+.pods-highlighted {
+  background: var(--ps-steam) !important;
+}
+
+.wh-page-split a,
+.wh-page-split article {
+  background: var(--ps-oat) !important;
+  color: var(--ps-roast) !important;
+}
+
+.wh-page-split p,
+.wh-page-split span {
+  color: var(--ps-espresso) !important;
+}
+
+.wh-about-quality,
+.dark-panel,
+[class*="dark-panel"] {
+  background: var(--ps-terracotta) !important;
+  color: var(--ps-steam) !important;
+}
+
+.wh-about-quality p,
+.wh-about-quality li,
+.dark-panel p,
+.dark-panel li,
+[class*="dark-panel"] p,
+[class*="dark-panel"] li {
+  color: rgba(250, 246, 238, .86) !important;
+}
+
+.nectar-highlight {
+  color: var(--ps-roast) !important;
+}
+
+.wh-page-hero .nectar-highlight {
+  background: transparent !important;
+  color: inherit !important;
+  padding: 0 !important;
+}
+
+/* About: day loop must stay on neutral ground, not a Dark Roast panel */
+.wh-about-day {
+  background: var(--ps-oat) !important;
+  color: var(--ps-roast) !important;
+}
+
+.wh-about-day-inner > p {
+  color: var(--ps-espresso) !important;
+}
+
+.wh-about-day-inner h2 {
+  color: var(--ps-roast) !important;
+  font-family: var(--wh-serif) !important;
+  font-size: clamp(32px, 5vw, 56px) !important;
+  font-weight: 800 !important;
+  letter-spacing: -1px !important;
+  line-height: 1.02 !important;
+}
+
+.wh-about-day-grid article {
+  background: var(--ps-steam) !important;
+  border-color: var(--ps-linen-strong) !important;
+  color: var(--ps-roast) !important;
+}
+
+.wh-about-day-grid span {
+  color: var(--ps-terracotta) !important;
+  font-family: var(--wh-serif) !important;
+  font-weight: 800 !important;
+  letter-spacing: -.5px !important;
+}
+
+.wh-about-day-grid strong {
+  color: var(--ps-espresso) !important;
+  font-family: var(--wh-sans) !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: 3px !important;
+}
+
+.wh-about-day-grid p {
+  color: var(--ps-espresso) !important;
+  font-family: var(--wh-sans) !important;
+  font-size: clamp(14px, 1vw, 16px) !important;
+  font-weight: 400 !important;
+  line-height: 1.55 !important;
+}

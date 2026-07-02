@@ -1237,3 +1237,133 @@
     pointer-events: none !important;
   }
 }
+
+/* Brand Kit 2A mobile alignment */
+@media (max-width: 760px) {
+  .nav {
+    background: var(--ps-steam, #FAF6EE) !important;
+    border-bottom: 1px solid var(--ps-linen, #E8DCC8) !important;
+    box-shadow: none !important;
+  }
+
+  .ps-logo-nav {
+    height: 29px !important;
+    max-width: 120px !important;
+    object-fit: contain !important;
+  }
+
+  .navlinks a,
+  .drawer a {
+    font-family: var(--font-body, "Space Grotesk", sans-serif) !important;
+    color: var(--ps-espresso, #5C3518) !important;
+    letter-spacing: 0 !important;
+  }
+
+  .drawer,
+  .mobile-menu {
+    background: var(--ps-steam, #FAF6EE) !important;
+    color: var(--ps-dark-roast, #3D2010) !important;
+  }
+
+  .btn,
+  .wh-btn,
+  button,
+  input,
+  textarea,
+  select {
+    border-radius: 10px !important;
+  }
+}
+
+/* Brand Kit 2A mobile typography and contrast */
+@media (max-width: 760px) {
+  .wh-page h1,
+  .wh-page-hero h1,
+  .journal-hero-title,
+  .journal-index h1 {
+    font-family: var(--font-display, "Bricolage Grotesque", sans-serif) !important;
+    font-size: clamp(32px, 10vw, 48px) !important;
+    font-weight: 800 !important;
+    letter-spacing: -1px !important;
+    line-height: 1.02 !important;
+  }
+
+  .wh-page h2,
+  .wh-page-statement h2,
+  .wh-page-rail h2,
+  .wh-page-list h2,
+  .wh-page-split h2,
+  body[data-page="pods"] .pods-format-copy h2,
+  body[data-page="pods"] .pods-why-copy h2 {
+    font-family: var(--font-display, "Bricolage Grotesque", sans-serif) !important;
+    font-size: clamp(24px, 7vw, 30px) !important;
+    font-weight: 800 !important;
+    letter-spacing: -.5px !important;
+    line-height: 1.12 !important;
+  }
+
+  .wh-page-card h3,
+  .menu-product-wh h3,
+  .wh-fav-card h3,
+  .journal-card h3 {
+    font-family: var(--font-display, "Bricolage Grotesque", sans-serif) !important;
+    font-size: clamp(18px, 5vw, 22px) !important;
+    letter-spacing: -.35px !important;
+    line-height: 1.15 !important;
+  }
+
+  .wh-page p,
+  .wh-page-card p,
+  .wh-page-list-rows span,
+  .journal-post-body p,
+  .journal-post-body li,
+  .menu-product-wh p {
+    font-family: var(--font-body, "Space Grotesk", sans-serif) !important;
+    font-size: 15px !important;
+    letter-spacing: 0 !important;
+    line-height: 1.55 !important;
+    color: var(--ps-espresso, #5C3518) !important;
+  }
+
+  .wh-page-kicker,
+  .wh-page-statement p,
+  .wh-page-rail header p,
+  .wh-page-list header p,
+  .tag,
+  .badge,
+  .menu-kcal {
+    font-family: var(--font-body, "Space Grotesk", sans-serif) !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    letter-spacing: 2.5px !important;
+    text-transform: uppercase !important;
+  }
+
+  body:not([data-page="matcha"]) .wh-page-hero,
+  body:not([data-page="matcha"]) .wh-page-hero-copy {
+    background: var(--ps-terracotta, #E8400C) !important;
+    color: var(--ps-steam, #FAF6EE) !important;
+  }
+
+  body[data-page="matcha"] .wh-page-hero,
+  body[data-page="matcha"] .wh-page-hero-copy {
+    background: var(--ps-matcha-deep, #3D6B4A) !important;
+    color: var(--ps-steam, #FAF6EE) !important;
+  }
+
+  .wh-page-hero h1,
+  .wh-page-hero .wh-page-kicker,
+  .wh-page-hero footer,
+  .wh-page-hero footer p,
+  .wh-page-hero footer a {
+    color: var(--ps-steam, #FAF6EE) !important;
+  }
+
+  #psDrawer a.pack-link span:first-child {
+    color: var(--ps-steam, #FAF6EE) !important;
+  }
+
+  #psDrawer a.pack-link .n {
+    color: rgba(250, 246, 238, .52) !important;
+  }
+}
