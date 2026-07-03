@@ -1367,3 +1367,91 @@
     color: rgba(250, 246, 238, .52) !important;
   }
 }
+
+/* Menu: mobile product cards stay readable without cropping photos */
+@media (max-width: 760px) {
+  body[data-page="menu"] .menu-products-wh {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+  }
+
+  body[data-page="menu"] .menu-products-wh .menu-product-wh,
+  body[data-page="menu"] .menu-products-wh .menu-product-wh:not(:nth-child(2n+1)),
+  body[data-page="menu"] .menu-products-wh .menu-product-wh:not(:nth-child(3n+1)),
+  body[data-page="menu"] .menu-products-wh .menu-product-wh:not(:nth-child(6n+1)) {
+    padding: 10px !important;
+    border: 1px solid var(--ps-linen-strong, #D7C5A8) !important;
+  }
+
+  body[data-page="menu"] .menu-product-img {
+    aspect-ratio: 4 / 3 !important;
+    padding: 0 !important;
+  }
+
+  body[data-page="menu"] .menu-product-img image-slot,
+  body[data-page="menu"] .menu-product-img image-slot img {
+    object-fit: cover !important;
+    object-position: center center !important;
+  }
+
+  body[data-page="menu"] .menu-product-wh h3 {
+    margin: 9px 0 6px !important;
+    font-size: 16px !important;
+    line-height: 1.08 !important;
+    letter-spacing: -.2px !important;
+  }
+
+  body[data-page="menu"] .menu-product-wh dl {
+    display: block !important;
+    margin-bottom: 6px !important;
+    font-size: 11px !important;
+    line-height: 1.28 !important;
+  }
+
+  body[data-page="menu"] .menu-product-wh dt {
+    font-size: 8.5px !important;
+    letter-spacing: 1px !important;
+  }
+
+  body[data-page="menu"] .menu-product-wh dd {
+    font-size: 10.5px !important;
+    line-height: 1.3 !important;
+  }
+
+  body[data-page="menu"] .menu-recipe {
+    -webkit-line-clamp: 2 !important;
+    margin-bottom: 6px !important;
+    font-size: 10.5px !important;
+    line-height: 1.35 !important;
+  }
+
+  body[data-page="menu"] .menu-product-note {
+    -webkit-line-clamp: 2 !important;
+    padding-top: 7px !important;
+    font-size: 10.5px !important;
+    line-height: 1.3 !important;
+  }
+
+  body[data-page="menu"] .menu-product-note strong,
+  body[data-page="menu"] .menu-product-price span {
+    font-size: 8.5px !important;
+    letter-spacing: 1px !important;
+  }
+
+  body[data-page="menu"] .menu-product-price {
+    margin-top: 8px !important;
+    padding-top: 7px !important;
+  }
+
+  body[data-page="menu"] .menu-product-price strong {
+    font-size: 18px !important;
+  }
+
+  body[data-page="menu"] .menu-kcal {
+    right: 7px !important;
+    bottom: 7px !important;
+    padding: 4px 5px !important;
+    font-size: 8px !important;
+    letter-spacing: .8px !important;
+  }
+}

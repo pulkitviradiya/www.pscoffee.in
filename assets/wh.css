@@ -7288,3 +7288,137 @@ body[data-page="matcha"] .wh-page-hero footer a {
   font-weight: 400 !important;
   line-height: 1.55 !important;
 }
+
+/* Menu: keep product photography intact and give card text a clearer hierarchy */
+body[data-page="menu"] .menu-products-wh {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+  gap: 22px !important;
+}
+
+body[data-page="menu"] .menu-products-wh .menu-product-wh {
+  gap: 0 !important;
+  min-height: 100% !important;
+  padding: 14px !important;
+  border: 1px solid var(--ps-linen-strong) !important;
+  background: var(--ps-oat) !important;
+}
+
+body[data-page="menu"] .menu-products-wh .menu-product-wh:not(:nth-child(6n+1)) {
+  border-left: 1px solid var(--ps-linen-strong) !important;
+  padding-left: 14px !important;
+}
+
+body[data-page="menu"] .menu-product-img {
+  aspect-ratio: 1 / 1 !important;
+  padding: 0 !important;
+  background: var(--ps-oat) !important;
+  border: 0 !important;
+}
+
+body[data-page="menu"] .menu-product-img image-slot,
+body[data-page="menu"] .menu-product-img image-slot img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+}
+
+body[data-page="menu"] .menu-product-img::before,
+body[data-page="menu"] .menu-product-img::after {
+  display: none !important;
+}
+
+body[data-page="menu"] .menu-product-wh h3 {
+  margin: 12px 0 8px !important;
+  font-size: clamp(18px, 1.35vw, 21px) !important;
+  line-height: 1.08 !important;
+  letter-spacing: -.25px !important;
+}
+
+body[data-page="menu"] .menu-product-wh dl {
+  min-height: 0 !important;
+  gap: 8px !important;
+  margin: 0 0 8px !important;
+  font-size: 12px !important;
+  line-height: 1.32 !important;
+}
+
+body[data-page="menu"] .menu-product-wh dt {
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  letter-spacing: 1.2px !important;
+  line-height: 1.15 !important;
+  text-transform: uppercase !important;
+}
+
+body[data-page="menu"] .menu-product-wh dd {
+  margin-top: 3px !important;
+  font-size: 12px !important;
+  line-height: 1.32 !important;
+}
+
+body[data-page="menu"] .menu-recipe,
+body[data-page="menu"] .menu-product-note {
+  display: -webkit-box !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+  color: rgba(92, 53, 24, .78) !important;
+}
+
+body[data-page="menu"] .menu-recipe {
+  -webkit-line-clamp: 2 !important;
+  margin: 0 0 8px !important;
+  font-size: 12px !important;
+  line-height: 1.38 !important;
+}
+
+body[data-page="menu"] .menu-product-note {
+  -webkit-line-clamp: 3 !important;
+  min-height: auto !important;
+  margin: auto 0 0 !important;
+  padding-top: 10px !important;
+  border-top: 1px solid rgba(61, 32, 16, .16) !important;
+  font-size: 12px !important;
+  line-height: 1.35 !important;
+}
+
+body[data-page="menu"] .menu-product-note strong {
+  margin-bottom: 2px !important;
+  font-size: 10px !important;
+  letter-spacing: 1.4px !important;
+  line-height: 1.1 !important;
+  text-transform: uppercase !important;
+}
+
+body[data-page="menu"] .menu-product-price {
+  min-height: 0 !important;
+  margin-top: 12px !important;
+  padding: 9px 0 0 !important;
+  border-bottom: 0 !important;
+  font-size: 12px !important;
+  line-height: 1.1 !important;
+}
+
+body[data-page="menu"] .menu-product-price span {
+  font-family: var(--wh-sans) !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  letter-spacing: 1.4px !important;
+  line-height: 1.1 !important;
+  text-transform: uppercase !important;
+}
+
+body[data-page="menu"] .menu-product-price strong {
+  font-size: 21px !important;
+  line-height: 1 !important;
+}
+
+body[data-page="menu"] .menu-kcal {
+  right: 10px !important;
+  bottom: 10px !important;
+  padding: 5px 7px !important;
+  background: rgba(250, 246, 238, .9) !important;
+  color: var(--ps-roast) !important;
+  font-size: 9px !important;
+  letter-spacing: 1.1px !important;
+}
