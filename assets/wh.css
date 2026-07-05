@@ -3331,21 +3331,22 @@ body[data-page] .footer .f-bot span:nth-child(3) {
 
 /* ============================================================
    P.S. COFFEE BRAND PALETTE IMPLEMENTATION
-   Source: Brand Identity Brief v2, Colour Palette only.
+   Aliases of the canonical design-system tokens in ps.css
+   (ps.css always loads before this file).
    ============================================================ */
 :root {
-  --ps-terracotta: #E8400C;
-  --ps-steam: #FAF6EE;
-  --ps-oat: #F2EBD9;
-  --ps-linen: #E8DCC8;
-  --ps-brick: #B8300A;
-  --ps-espresso: #5C3518;
-  --ps-roast: #3D2010;
-  --ps-matcha-deep: #3D6B4A;
-  --ps-matcha-grove: #5A8C5E;
-  --ps-matcha-bright: #8FB87A;
-  --ps-matcha-light: #C8DDB8;
-  --ps-matcha-froth: #EAF2E0;
+  --ps-terracotta: var(--color-terracotta);
+  --ps-steam: var(--color-steam-cream);
+  --ps-oat: var(--color-oat);
+  --ps-linen: var(--color-linen);
+  --ps-brick: var(--color-terracotta-hover);
+  --ps-espresso: var(--color-espresso);
+  --ps-roast: var(--color-dark-roast);
+  --ps-matcha-deep: var(--color-ceremonial);
+  --ps-matcha-grove: var(--color-shade-grove);
+  --ps-matcha-bright: var(--color-bright-whisk);
+  --ps-matcha-light: var(--color-light-pour);
+  --ps-matcha-froth: var(--color-pale-froth);
 
   --wh-bg: var(--ps-steam);
   --wh-surface: var(--ps-oat);
@@ -6278,27 +6279,29 @@ body[data-page] .footer .ps-wordmark-coffee {
 
 /* ============================================================
    Brand Kit 2A alignment layer
+   Aliases of the canonical design-system tokens in ps.css
+   (ps.css always loads before this file).
    ============================================================ */
 :root {
-  --ps-terracotta: #E8400C;
-  --ps-terracotta-pressed: #B8300A;
-  --ps-steam: #FAF6EE;
-  --ps-oat: #F2EBD9;
-  --ps-linen: #E8DCC8;
+  --ps-terracotta: var(--color-terracotta);
+  --ps-terracotta-pressed: var(--color-terracotta-hover);
+  --ps-steam: var(--color-steam-cream);
+  --ps-oat: var(--color-oat);
+  --ps-linen: var(--color-linen);
   --ps-linen-strong: #E4D9C4;
-  --ps-espresso: #5C3518;
-  --ps-roast: #3D2010;
-  --ps-matcha-deep: #3D6B4A;
-  --ps-matcha-grove: #5A8C5E;
-  --ps-matcha-bright: #8FB87A;
-  --ps-matcha-light: #C8DDB8;
-  --ps-matcha-froth: #EAF2E0;
-  --ps-nectar: #D98F1F;
-  --ps-nectar-deep: #A66815;
-  --ps-nectar-bright: #F0B44A;
-  --ps-nectar-cream: #F6D998;
-  --ps-nectar-wash: #FBEFD4;
-  --ps-success: #7A8B3E;
+  --ps-espresso: var(--color-espresso);
+  --ps-roast: var(--color-dark-roast);
+  --ps-matcha-deep: var(--color-ceremonial);
+  --ps-matcha-grove: var(--color-shade-grove);
+  --ps-matcha-bright: var(--color-bright-whisk);
+  --ps-matcha-light: var(--color-light-pour);
+  --ps-matcha-froth: var(--color-pale-froth);
+  --ps-nectar: var(--color-nectar-gold);
+  --ps-nectar-deep: var(--color-toffee-deep);
+  --ps-nectar-bright: var(--color-honey-bright);
+  --ps-nectar-cream: var(--color-nectar-cream);
+  --ps-nectar-wash: var(--color-nectar-wash);
+  --ps-success: var(--color-success);
   --wh-serif: "Bricolage Grotesque", system-ui, sans-serif;
   --wh-sans: "Space Grotesk", system-ui, sans-serif;
   --ps-serif: "Instrument Serif", Georgia, serif;
@@ -6433,7 +6436,7 @@ body[data-page="matcha"] .nav-links a::after {
 .journal-signup-form button,
 .app-waitlist-form button,
 .news button {
-  border-radius: 10px !important;
+  border-radius: var(--radius-md, 9px) !important;
   box-shadow: none !important;
   font-family: var(--wh-sans) !important;
   font-weight: 600 !important;
@@ -6506,7 +6509,7 @@ mark,
 .wh-h2 .highlight {
   display: inline;
   padding: .02em .16em .08em;
-  border-radius: 6px;
+  border-radius: var(--radius-sm, 6px);
   background: var(--ps-nectar) !important;
   color: var(--ps-roast) !important;
   box-decoration-break: clone;
@@ -6676,7 +6679,7 @@ select,
   background: var(--ps-steam) !important;
   color: var(--ps-roast) !important;
   border: 1px solid var(--ps-linen-strong) !important;
-  border-radius: 10px !important;
+  border-radius: var(--radius-md, 9px) !important;
   outline: none !important;
   caret-color: var(--ps-terracotta) !important;
 }
@@ -6802,7 +6805,7 @@ textarea[aria-invalid="true"] {
 .f-email {
   background: var(--ps-terracotta) !important;
   color: var(--ps-steam) !important;
-  border-radius: 10px !important;
+  border-radius: var(--radius-md, 9px) !important;
   padding: 18px !important;
 }
 
@@ -7301,6 +7304,7 @@ body[data-page="menu"] .menu-products-wh .menu-product-wh {
   padding: 14px !important;
   border: 1px solid var(--ps-linen-strong) !important;
   background: var(--ps-oat) !important;
+  border-radius: var(--radius-lg, 14px) !important;
 }
 
 body[data-page="menu"] .menu-products-wh .menu-product-wh:not(:nth-child(6n+1)) {
@@ -7313,6 +7317,8 @@ body[data-page="menu"] .menu-product-img {
   padding: 0 !important;
   background: var(--ps-oat) !important;
   border: 0 !important;
+  border-radius: var(--radius-md, 9px) !important;
+  overflow: hidden !important;
 }
 
 body[data-page="menu"] .menu-product-img image-slot,
@@ -7421,4 +7427,122 @@ body[data-page="menu"] .menu-kcal {
   color: var(--ps-roast) !important;
   font-size: 9px !important;
   letter-spacing: 1.1px !important;
+}
+
+/* ============================================================
+   Design-system contrast layer (P.S. Coffee — Design system)
+   Rule 1: any text on a Terracotta/Ceremonial fill is Steam
+           Cream — never pure white, never Espresso/Dark Roast.
+   Rule 2: a button fill never matches the section fill — on a
+           coloured section, primary buttons flip to Steam Cream.
+   Rule 3: radii come from the token scale (sm 6 / md 9 / lg 14).
+   ============================================================ */
+
+/* Hero banner tiles (photo over terracotta placeholder, dark scrim) */
+.wh-banner-caption,
+.wh-banner-heading,
+.wh-banner-cta {
+  color: var(--color-steam-cream) !important;
+}
+.wh-banner-cta {
+  border-bottom-color: rgba(250, 246, 238, .72) !important;
+}
+.wh-banners {
+  background: var(--color-steam-cream) !important;
+}
+
+/* App callout — terracotta section */
+.ps-app-callout,
+.ps-app-copy h2,
+.ps-app-copy p.kicker,
+.ps-app-features li {
+  color: var(--color-steam-cream) !important;
+}
+.ps-app-copy p.kicker { opacity: .85; }
+.ps-app-features li::before {
+  color: var(--color-honey-bright) !important;
+}
+.ps-app-btns a.primary {
+  background: var(--color-steam-cream) !important;
+  color: var(--color-terracotta) !important;
+  border-radius: var(--radius-md, 9px) !important;
+}
+.ps-app-btns a.outline {
+  border-color: rgba(250, 246, 238, .55) !important;
+  color: var(--color-steam-cream) !important;
+  border-radius: var(--radius-md, 9px) !important;
+}
+
+/* Our story — terracotta section */
+.ps-our-story h2,
+.ps-our-story p,
+.ps-our-story a,
+.ps-our-story .kicker {
+  color: var(--color-steam-cream) !important;
+}
+.ps-our-story .kicker { opacity: .85; }
+.ps-our-story p { opacity: .88; }
+.ps-our-story a {
+  border-bottom-color: rgba(250, 246, 238, .5) !important;
+}
+
+/* Page callout strip — light ground */
+.ps-callout {
+  background: var(--color-steam-cream) !important;
+}
+.ps-callout:hover {
+  background: var(--color-oat) !important;
+}
+.ps-callout h2 {
+  color: var(--color-dark-roast) !important;
+}
+.ps-callout-btns a.btn-filled {
+  background: var(--color-terracotta) !important;
+  color: var(--color-steam-cream) !important;
+  border-radius: var(--radius-md, 9px) !important;
+}
+.ps-callout-btns a.btn-filled:hover {
+  background: var(--color-terracotta-hover) !important;
+}
+.ps-callout-btns a.btn-outline {
+  border: 1.5px solid var(--color-terracotta) !important;
+  color: var(--color-terracotta) !important;
+  border-radius: var(--radius-md, 9px) !important;
+}
+
+/* Plan cards — photo cards with scrim */
+.ps-plan-card {
+  border-radius: var(--radius-lg, 14px) !important;
+}
+.ps-plan-ov-top h3,
+.ps-plan-price-block strong {
+  color: var(--color-steam-cream) !important;
+}
+.ps-plan-get {
+  color: var(--color-steam-cream) !important;
+  border-radius: var(--radius-md, 9px) !important;
+}
+.ps-plan-badge {
+  color: var(--color-dark-roast) !important;
+}
+
+/* Matcha hero — subline and link sit on the Ceremonial fill.
+   The hero keeps the .is-light class from its oat-background days,
+   so the is-light -> Dark Roast text mapping must be beaten here. */
+body[data-page="matcha"] .wh-page-hero .wh-page-hero-copy,
+body[data-page="matcha"] .wh-page-hero.is-light .wh-page-hero-copy,
+body[data-page="matcha"] .wh-page-hero.is-light .wh-page-hero-copy footer p,
+body[data-page="matcha"] .wh-page-hero.is-light .wh-page-hero-copy footer a {
+  color: var(--color-steam-cream) !important;
+}
+body[data-page="matcha"] .wh-page-hero.is-light .wh-page-hero-copy footer a {
+  border-bottom-color: rgba(250, 246, 238, .6) !important;
+}
+
+/* Pack cards — card tokens: radius-lg, Linen border, Steam Cream ground */
+.ps-pack-card {
+  border-radius: var(--radius-lg, 14px) !important;
+  border-color: var(--color-linen) !important;
+  background: var(--color-steam-cream) !important;
+  overflow: hidden !important;
 }

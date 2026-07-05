@@ -8,9 +8,9 @@ Read this at the start of every session. Use silently to inform work.
 
 | File | Version |
 |---|---|
-| `assets/ps.js` | v19 |
-| `assets/wh.css` | v22 |
-| `assets/mobile.css` | v12 |
+| `assets/ps.js` | v31 |
+| `assets/wh.css` | v34 |
+| `assets/mobile.css` | v24 |
 
 Always read the current version from any `*.html` before bumping.
 
@@ -51,6 +51,9 @@ Always read the current version from any `*.html` before bumping.
 ---
 
 ## Session Decisions
+
+### 2026-07-05
+- Implemented the canonical design-system token layer (from the Claude Design "P.S. Coffee - Design system" project, local export in `~/Downloads/design-system-export/`): `--color-*`, `--space-*`, `--radius-*`, `--text-*` tokens live in `ps.css` and all site palettes (`--tc`, `--ps-*`) alias them. Radii now come from the token scale (buttons 9px, cards 14px, panels 16px) and a "Design-system contrast layer" at the end of `wh.css` enforces Steam-Cream-on-colour text and button flips.
 
 ### 2026-06-29
 - Synced menu to COGS_Master v20: 43 items, removed 5 (Pour Over, French Press, South Indian Filter Coffee, Vienna Coffee, Cheese Toastie), added 16 new items

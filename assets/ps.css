@@ -33,34 +33,102 @@
   font-display:swap;
 }
 
-/* ---- tokens · Steam Cream direction ---- */
+/* ---- tokens · canonical design-system layer (P.S. Coffee — Design system) ---- */
 :root{
-  --tc:#E8400C;
-  --tc-deep:#B8300A;
-  --tc-tint:#FBEFD4;
+  /* Primary: Coffee & Bakery profile */
+  --color-terracotta:#E8400C;       /* hero fills, CTAs, primary brand colour */
+  --color-terracotta-hover:#B8300A; /* Brick Deep — hover/pressed, also Error */
 
-  --paper:#FAF6EE;
-  --surface:#F2EBD9;
-  --panel:#F2EBD9;
-  --panel-2:#E8DCC8;
-  --ink:#3D2010;
-  --ink-2:#5C3518;
+  /* Neutrals (shared across both profiles) */
+  --color-steam-cream:#FAF6EE;  /* default page background — never pure white */
+  --color-oat:#F2EBD9;          /* cards, panels, alternating rows */
+  --color-linen:#E8DCC8;        /* borders, dividers only */
+
+  /* Type-only darks (never a fill/background) */
+  --color-espresso:#5C3518;   /* body copy */
+  --color-dark-roast:#3D2010; /* headlines, labels */
+
+  /* Matcha profile: Deep Ceremonial */
+  --color-ceremonial:#3D6B4A;   /* matcha hero fills */
+  --color-shade-grove:#5A8C5E;  /* matcha hover / mid-tone */
+  --color-bright-whisk:#8FB87A; /* accent ONLY — tags, badges, never a large fill */
+  --color-light-pour:#C8DDB8;   /* matcha card backgrounds */
+  --color-pale-froth:#EAF2E0;   /* matcha section wash */
+
+  /* Nectar: the cross-profile highlight family */
+  --color-nectar-gold:#D98F1F;   /* core accent — secondary CTAs, warning state */
+  --color-toffee-deep:#A66815;   /* nectar hover / pressed */
+  --color-honey-bright:#F0B44A;  /* badges */
+  --color-nectar-cream:#F6D998;  /* card wash */
+  --color-nectar-wash:#FBEFD4;   /* section wash */
+
+  /* Semantic states */
+  --color-success:#7A8B3E;       /* Sprout — olive, never ceremonial green */
+  --color-success-bg:#EAF2E0;
+  --color-warning:var(--color-nectar-gold);
+  --color-error:var(--color-terracotta-hover);
+  --color-info-text:var(--color-espresso);
+  --color-info-bg:var(--color-oat);
+
+  /* Spacing — 4px scale */
+  --space-1:4px;
+  --space-2:8px;
+  --space-3:12px;
+  --space-4:16px;
+  --space-5:20px;
+  --space-6:24px;
+  --space-8:32px;
+  --space-10:40px;
+  --space-14:56px;
+  --space-16:64px;
+
+  /* Radius */
+  --radius-sm:6px;     /* nectar highlight chip */
+  --radius-md:9px;     /* buttons */
+  --radius-lg:14px;    /* cards */
+  --radius-xl:16px;    /* panels, images */
+  --radius-pill:999px; /* badges, tags */
+
+  /* Type scale (desktop reference sizes) */
+  --text-display:56px;      /* Bricolage 800 */
+  --text-h1:40px;           /* Bricolage 800 */
+  --text-h2:28px;           /* Bricolage 700 */
+  --text-accent-quote:26px; /* Instrument Serif italic */
+  --text-body:16px;         /* Space Grotesk 400 */
+  --text-micro-label:12px;  /* Space Grotesk 600, uppercase */
+  --leading-tight:1;
+  --leading-heading:1.25;
+  --leading-body:1.5;
+}
+
+/* ---- site shorthands · aliases of the canonical layer ---- */
+:root{
+  --tc:var(--color-terracotta);
+  --tc-deep:var(--color-terracotta-hover);
+  --tc-tint:var(--color-nectar-wash);
+
+  --paper:var(--color-steam-cream);
+  --surface:var(--color-oat);
+  --panel:var(--color-oat);
+  --panel-2:var(--color-linen);
+  --ink:var(--color-dark-roast);
+  --ink-2:var(--color-espresso);
   --muted:rgba(92,53,24,.72);
   --faint:#A08A6E;
-  --line:#E8DCC8;
+  --line:var(--color-linen);
   --line-2:#E4D9C4;
 
   /* matcha sub-palette — matcha contexts only */
-  --matcha:#3D6B4A;
-  --matcha-2:#5A8C5E;
-  --matcha-tint:#EAF2E0;
+  --matcha:var(--color-ceremonial);
+  --matcha-2:var(--color-shade-grove);
+  --matcha-tint:var(--color-pale-froth);
 
-  --nectar:#D98F1F;
-  --nectar-deep:#A66815;
-  --nectar-bright:#F0B44A;
-  --nectar-cream:#F6D998;
-  --nectar-wash:#FBEFD4;
-  --success:#7A8B3E;
+  --nectar:var(--color-nectar-gold);
+  --nectar-deep:var(--color-toffee-deep);
+  --nectar-bright:var(--color-honey-bright);
+  --nectar-cream:var(--color-nectar-cream);
+  --nectar-wash:var(--color-nectar-wash);
+  --success:var(--color-success);
 
   --font-display:"Bricolage Grotesque",system-ui,sans-serif;
   --font-body:"Space Grotesk",system-ui,sans-serif;
@@ -68,9 +136,9 @@
 
   --maxw:1240px;
   --gut:clamp(20px,5vw,72px);
-  --type-scale:1;        /* tweakable */
-  --radius:16px;         /* card radius */
-  --btn-radius:10px;     /* button radius (tweakable shape) */
+  --type-scale:1;                 /* tweakable */
+  --radius:var(--radius-lg);      /* card radius — 14px per design system */
+  --btn-radius:var(--radius-md);  /* button radius — 9px per design system */
   --nav-h:84px;
   --shadow:0 30px 70px -28px rgba(22,20,15,.30);
   --shadow-sm:0 12px 34px -18px rgba(22,20,15,.24);
@@ -290,7 +358,7 @@ a{color:inherit;text-decoration:none}
 
 /* ---- feature block (meet the product) ---- */
 .feature{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,70px);align-items:center}
-.feature-fig{border-radius:var(--radius);overflow:hidden;background:var(--panel);aspect-ratio:4/3;box-shadow:var(--shadow);position:relative}
+.feature-fig{border-radius:var(--radius-xl);overflow:hidden;background:var(--panel);aspect-ratio:4/3;box-shadow:var(--shadow);position:relative}
 .feature-fig image-slot{width:100%;height:100%}
 .value-list{display:flex;flex-direction:column;gap:22px;margin-top:30px}
 .value{display:flex;gap:18px;align-items:flex-start}
@@ -380,7 +448,7 @@ a{color:inherit;text-decoration:none}
 
 /* ---- editorial image grid ---- */
 .editorial{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;gap:clamp(10px,1.4vw,18px)}
-.ed-cell{border-radius:var(--radius);overflow:hidden;background:var(--panel);position:relative}
+.ed-cell{border-radius:var(--radius-xl);overflow:hidden;background:var(--panel);position:relative}
 .ed-cell image-slot{width:100%;height:100%}
 .ed-cell .ed-cap{position:absolute;left:14px;bottom:12px;font-family:"Hanken Grotesk",sans-serif;font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:#fff;z-index:2;text-shadow:0 1px 8px rgba(0,0,0,.5)}
 .ed-cell.wide{grid-column:span 2}

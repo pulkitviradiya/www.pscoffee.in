@@ -477,7 +477,7 @@
      TWEAKS PANEL (vanilla) — host protocol + localStorage
      ============================================================ */
   var TW_KEY = "ps-tweaks";
-  var TW_DEFAULT = { tc:"#E8400C", paper:"#F4EEE3", scale:1, btn:"10px" };
+  var TW_DEFAULT = { tc:"#E8400C", paper:"#FAF6EE", scale:1, btn:"9px" };
   var ACCENTS = [
     {v:"#E8400C", name:"Electric Terracotta"},
     {v:"#C8431F", name:"Burnt Clay"},
@@ -491,7 +491,7 @@
   ];
   var SHAPES = [
     {v:"4px", label:"Sharp"},
-    {v:"10px", label:"Soft"},
+    {v:"9px", label:"Soft"},
     {v:"999px", label:"Pill"}
   ];
 
@@ -500,8 +500,15 @@
     var r=document.documentElement;
     r.style.setProperty("--tc", t.tc);
     r.style.setProperty("--wh-tc", t.tc);
-    r.style.setProperty("--tc-deep", shade(t.tc,-14));
-    r.style.setProperty("--tc-tint", tint(t.tc));
+    /* brand terracotta uses the canonical Brick Deep hover + Nectar wash tint;
+       computed shade/tint only for custom accents picked in the panel */
+    if(t.tc === "#E8400C"){
+      r.style.setProperty("--tc-deep", "#B8300A");
+      r.style.setProperty("--tc-tint", "#FBEFD4");
+    }else{
+      r.style.setProperty("--tc-deep", shade(t.tc,-14));
+      r.style.setProperty("--tc-tint", tint(t.tc));
+    }
     r.style.setProperty("--paper", t.paper);
     r.style.setProperty("--type-scale", t.scale);
     r.style.setProperty("--btn-radius", t.btn);

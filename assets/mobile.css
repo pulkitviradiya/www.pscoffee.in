@@ -1206,7 +1206,7 @@
   /* ─── P.S. Pass: animated membership card in the mobile drawer ─── */
   #psDrawer a.pack-link {
     background: linear-gradient(128deg, #1a0e06 0%, var(--tc, #b04a24) 52%, #7e2c14 100%) !important;
-    border-radius: 12px !important;
+    border-radius: var(--radius-lg, 14px) !important;
     margin: 4px 0 8px !important;
     padding: 18px 20px 16px !important;
     position: relative !important;
@@ -1271,7 +1271,7 @@
   input,
   textarea,
   select {
-    border-radius: 10px !important;
+    border-radius: var(--radius-md, 9px) !important;
   }
 }
 
