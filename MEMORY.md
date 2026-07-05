@@ -9,8 +9,8 @@ Read this at the start of every session. Use silently to inform work.
 | File | Version |
 |---|---|
 | `assets/ps.js` | v31 |
-| `assets/wh.css` | v34 |
-| `assets/mobile.css` | v24 |
+| `assets/wh.css` | v35 |
+| `assets/mobile.css` | v25 |
 
 Always read the current version from any `*.html` before bumping.
 
@@ -51,6 +51,9 @@ Always read the current version from any `*.html` before bumping.
 ---
 
 ## Session Decisions
+
+### 2026-07-05 (second pass)
+- Purged all off-system colours from rendered pages: no pure white/black text or fills, no dark-roast/espresso background fills anywhere (footer is now Oat per the kit's Footer spec, announce bar is nectar-wash + espresso). Verified with a computed-style audit across all 14 key pages.
 
 ### 2026-07-05
 - Implemented the canonical design-system token layer (from the Claude Design "P.S. Coffee - Design system" project, local export in `~/Downloads/design-system-export/`): `--color-*`, `--space-*`, `--radius-*`, `--text-*` tokens live in `ps.css` and all site palettes (`--tc`, `--ps-*`) alias them. Radii now come from the token scale (buttons 9px, cards 14px, panels 16px) and a "Design-system contrast layer" at the end of `wh.css` enforces Steam-Cream-on-colour text and button flips.

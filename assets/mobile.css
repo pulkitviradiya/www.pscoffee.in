@@ -153,7 +153,7 @@
     width: 100% !important;
     height: 38px !important;
     align-items: center;
-    border-top: 1px solid rgba(255,255,255,.72);
+    border-top: 1px solid rgba(250, 246, 238,.72);
     border-bottom: 0 !important;
     font-size: 15px !important;
     text-transform: none !important;
@@ -168,7 +168,7 @@
     bottom: auto;
     display: flex;
     gap: 18px;
-    color: #fff;
+    color: var(--color-steam-cream);
     font-family: var(--wh-sans);
     font-size: 17px;
     line-height: 1;
@@ -178,12 +178,12 @@
     border: 0;
     background: transparent;
     padding: 0;
-    color: rgba(255,255,255,.46);
+    color: rgba(250, 246, 238,.46);
     font: inherit;
   }
 
   .mobile-hero-count button.is-active {
-    color: #fff;
+    color: var(--color-steam-cream);
   }
 
   .mobile-hero-progress {
@@ -194,14 +194,14 @@
     bottom: 52px;
     height: 1px;
     display: block;
-    background: rgba(255,255,255,.36);
+    background: rgba(250, 246, 238,.36);
   }
 
   .mobile-hero-progress span {
     display: block;
     width: 50%;
     height: 100%;
-    background: #fff;
+    background: var(--color-steam-cream);
     transform-origin: left center;
     transition: transform .5s ease;
   }
@@ -217,7 +217,7 @@
     font-weight: 600 !important;
     letter-spacing: .12em !important;
     text-transform: uppercase !important;
-    color: var(--tc, #b04a24) !important;
+    color: var(--tc, #E8400C) !important;
     margin-bottom: 10px !important;
   }
 
@@ -1205,7 +1205,7 @@
 @media (max-width: 760px) {
   /* ─── P.S. Pass: animated membership card in the mobile drawer ─── */
   #psDrawer a.pack-link {
-    background: linear-gradient(128deg, #1a0e06 0%, var(--tc, #b04a24) 52%, #7e2c14 100%) !important;
+    background: var(--color-terracotta, #E8400C) !important;
     border-radius: var(--radius-lg, 14px) !important;
     margin: 4px 0 8px !important;
     padding: 18px 20px 16px !important;
@@ -1214,11 +1214,11 @@
   }
 
   #psDrawer a.pack-link span:first-child {
-    color: #fff !important;
+    color: var(--color-steam-cream) !important;
   }
 
   #psDrawer a.pack-link .n {
-    color: rgba(255,255,255,.42) !important;
+    color: rgba(250, 246, 238,.42) !important;
   }
 
   #psDrawer a.pack-link::after {
@@ -1228,8 +1228,8 @@
     background: linear-gradient(
       110deg,
       transparent 22%,
-      rgba(255,255,255,.14) 46%,
-      rgba(255,255,255,.07) 54%,
+      rgba(250, 246, 238,.14) 46%,
+      rgba(250, 246, 238,.07) 54%,
       transparent 78%
     ) !important;
     transform: translateX(-140%) !important;
@@ -1380,7 +1380,7 @@
   body[data-page="menu"] .menu-products-wh .menu-product-wh:not(:nth-child(3n+1)),
   body[data-page="menu"] .menu-products-wh .menu-product-wh:not(:nth-child(6n+1)) {
     padding: 10px !important;
-    border: 1px solid var(--ps-linen-strong, #D7C5A8) !important;
+    border: 1px solid var(--ps-linen-strong, #E4D9C4) !important;
   }
 
   body[data-page="menu"] .menu-product-img {
