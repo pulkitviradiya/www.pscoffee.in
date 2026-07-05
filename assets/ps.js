@@ -7,13 +7,12 @@
   var PAGES = [
     {href:"pack.html",        label:"P.S. Pass",   n:"01", primary:true, cls:"pack-link"},
     {href:"menu.html",        label:"Menu",        n:"02", primary:true},
-    {href:"pods.html#pods",   label:"Visit us",    n:"03", primary:true},
-    {href:"app.html",         label:"App",         n:"04", primary:true},
-    {href:"events.html",      label:"Events",      n:"05", primary:true},
-    {href:"blogs.html",       label:"Blogs",     n:"06", primary:true},
-    {href:"about.html",       label:"About",       n:"07", primary:true},
+    {href:"app.html",         label:"App",         n:"03", primary:true},
+    {href:"events.html",      label:"Events",      n:"04", primary:false},
+    {href:"blogs.html",       label:"Blogs",       n:"05", primary:false},
+    {href:"about.html",       label:"About",       n:"06", primary:true},
     {href:"partnership.html", label:"Partner",     n:"07", primary:false},
-    {href:"pods.html",        label:"Pods",        n:"08", primary:true},
+    {href:"pods.html#pods",   label:"Pods",        n:"08", primary:true},
     {href:"join.html",        label:"Join us",     n:"09", primary:false}
   ];
   var here = (location.pathname.split("/").pop() || "index.html").toLowerCase();
@@ -32,7 +31,8 @@
       return '<a href="'+localHref(p.href)+'" class="'+(act+cls).trim()+'">'+p.label+'.</a>';
     }).join("");
     return '<div class="wh-announce">'+
-        '<span>○ 100% Arabica. From ₹89. Your coffee is ready before you arrive.</span>'+
+        '<span class="wh-announce-full">○ 100% Arabica. From ₹89. Your coffee is ready before you arrive.</span>'+
+        '<span class="wh-announce-short">○ 100% Arabica. From ₹89.</span>'+
         '<span class="wh-region">₹ INR&nbsp;&nbsp;|&nbsp;&nbsp;India</span>'+
       '</div>'+
       '<nav class="nav" id="psNav">'+

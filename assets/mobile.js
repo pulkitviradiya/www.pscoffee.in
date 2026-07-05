@@ -15,9 +15,12 @@
     var slides = Array.prototype.slice.call(wrap.querySelectorAll(".wh-banner"));
     if(slides.length < 2) return;
 
+    var firstIdx = slides.findIndex(function(slide){ return slide.hasAttribute("data-mobile-first"); });
+    if(firstIdx < 0) firstIdx = 0;
+
     wrap.setAttribute("data-mobile-slider-ready", "true");
     slides.forEach(function(slide, idx){
-      slide.classList.toggle("is-active", idx === 0);
+      slide.classList.toggle("is-active", idx === firstIdx);
       slide.setAttribute("data-mobile-slide", String(idx));
     });
 
@@ -29,7 +32,7 @@
       var button = document.createElement("button");
       button.type = "button";
       button.textContent = String(idx + 1).padStart(2, "0");
-      button.className = idx === 0 ? "is-active" : "";
+      button.className = idx === firstIdx ? "is-active" : "";
       button.setAttribute("aria-label", "Show slide " + (idx + 1));
       button.addEventListener("click", function(){ show(idx, true); });
       count.appendChild(button);
@@ -41,7 +44,7 @@
     wrap.appendChild(count);
     wrap.appendChild(progress);
 
-    var active = 0;
+    var active = firstIdx;
     var timer = null;
 
     function setProgress(){

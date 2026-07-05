@@ -36,11 +36,12 @@
     font-size: 12px !important;
   }
 
-  .wh-announce span:first-child {
-    max-width: calc(100vw - 122px);
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+  .wh-announce-full {
+    display: none !important;
+  }
+
+  .wh-announce-short {
+    display: inline !important;
   }
 
   .wh-announce .wh-region {
@@ -87,16 +88,19 @@
   body[data-page="home"] #ps-nav          { order: -10; }
   body[data-page="home"] .page-top        { order: -9; }
   body[data-page="home"] .wh-banners      { order: -8; }
-  body[data-page="home"] .wh-subscription { order: -7; }
+  body[data-page="home"] .wh-modern       { order: -7; }
   body[data-page="home"] .wh-home-shop    { order: -6; }
-  body[data-page="home"] .ps-app-callout  { order: -5; }
-  body[data-page="home"] .ps-our-story    { order: -4; }
+  body[data-page="home"] .wh-favourites   { order: -5; }
+  body[data-page="home"] .wh-subscription { order: -4; }
+  body[data-page="home"] .wh-locations    { order: -3; }
+  body[data-page="home"] .ps-app-callout  { order: -2; }
+  body[data-page="home"] .ps-our-story    { order: -1; }
 
   body[data-page="home"] .wh-banners {
     position: relative;
     display: block !important;
-    height: min(94vw, 430px);
-    min-height: 342px;
+    height: min(160vw, 640px);
+    min-height: 480px;
     margin: 0 var(--mobile-gut) 22px;
     overflow: hidden;
     background: var(--ps-roast);
@@ -149,15 +153,14 @@
     font-weight: 500 !important;
   }
 
-  body[data-page="home"] .wh-banner-cta {
+  body[data-page="home"] .wh-banner-price {
+    margin-bottom: 10px !important;
+  }
+
+  body[data-page="home"] .wh-banner-cta-btn {
     width: 100% !important;
-    height: 38px !important;
-    align-items: center;
-    border-top: 1px solid rgba(250, 246, 238,.72);
-    border-bottom: 0 !important;
-    font-size: 15px !important;
-    text-transform: none !important;
-    letter-spacing: 0 !important;
+    justify-content: center;
+    height: 44px !important;
   }
 
   .mobile-hero-count {

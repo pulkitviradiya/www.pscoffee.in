@@ -18,8 +18,8 @@
 <meta name="twitter:description" content="100% Arabica specialty coffee from ₹89. Inside offices, gyms, and co-working spaces across Ahmedabad. Order in three taps. Ready before you arrive.">
 <meta name="twitter:image" content="https://www.pscoffee.in/assets/photos/site/menu-hero-cups-cropped-desktop.webp">
 <link rel="stylesheet" href="assets/ps.css">
-<link rel="stylesheet" href="assets/wh.css?v=35">
-<link rel="stylesheet" href="assets/mobile.css?v=25">
+<link rel="stylesheet" href="assets/wh.css?v=38">
+<link rel="stylesheet" href="assets/mobile.css?v=27">
 <style>
 /* ── Pack tiers — embedded in wh-subscription ────────────── */
 .ps-sub-packs{grid-column:1/-1;padding:clamp(18px,2.5vw,28px) 0 clamp(6px,1vw,12px);border-top:1px solid rgba(42,26,14,.14)}
@@ -58,7 +58,7 @@
 @media(max-width:760px){.ps-app-callout .wrap{grid-template-columns:1fr}.ps-app-visual{display:none}}
 
 /* ── Page callouts — slim editorial grid ─────────────────── */
-.ps-callout-strip{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid rgba(42,26,14,.1);border-left:1px solid rgba(42,26,14,.1)}
+.ps-callout-strip{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(42,26,14,.1);border-left:1px solid rgba(42,26,14,.1)}
 .ps-callout{padding:clamp(20px,2.8vw,34px) clamp(20px,3.5vw,48px);display:flex;flex-direction:column;gap:.55rem;border-right:1px solid rgba(42,26,14,.1);border-bottom:1px solid rgba(42,26,14,.1);background:#FAF6EE;transition:background .18s}
 .ps-callout:hover{background:var(--linen,#f5f0e8)}
 .ps-callout p.kicker{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--tc,#E8400C);margin:0}
@@ -142,19 +142,20 @@ body[data-page="home"] .ps-plan-card{aspect-ratio:3/2}
       <image-slot id="home-hero-coffee" shape="rect" src="assets/photos/site/menu-coffee-cappuccino-desktop.webp" placeholder="P.S. Coffee hero terracotta cup sleeve, specialty espresso on Steam Cream counter, editorial" fit="cover"></image-slot>
     </div>
     <div class="wh-banner-body">
+      <span class="wh-banner-price">From ₹89</span>
       <p class="wh-banner-caption">An instant coffee brand without instant coffee as an ingredient. 100% espresso from genuine specialty beans.</p>
-      <span class="wh-banner-cta">Discover &nbsp;→</span>
+      <span class="wh-banner-cta-btn">See the Menu &nbsp;→</span>
     </div>
   </a>
 
   <!-- Right: large-heading panel WatchHouse "Our Houses." style -->
-  <a class="wh-banner" href="pods.html#pods">
+  <a class="wh-banner" href="pods.html#pods" data-mobile-first>
     <div class="wh-banner-img">
       <image-slot id="home-hero-pod" shape="rect" src="assets/photos/site/pods-hero-desktop.webp" mobile-src="assets/photos/site/pods-hero-mobile.webp" placeholder="P.S. Pod compact terracotta coffee deck inside a modern co-working lobby, barista, warm light" fit="cover"></image-slot>
     </div>
     <div class="wh-banner-body">
       <h2 class="wh-banner-heading">Your coffee is ready.</h2>
-      <span class="wh-banner-cta">Find your nearest Pod &nbsp;→</span>
+      <span class="wh-banner-cta-btn">Find your nearest Pod &nbsp;→</span>
     </div>
   </a>
 
@@ -193,6 +194,22 @@ body[data-page="home"] .ps-plan-card{aspect-ratio:3/2}
       <strong>Pods.</strong>
       <span>Discover</span>
     </a>
+  </div>
+</section>
+
+<section class="wh-favourites">
+  <header>
+    <h2>House favourites.</h2>
+    <nav aria-label="House favourites categories">
+      <a class="on" href="menu.html?cat=coffee#menu-coffee" data-fav-cat="coffee">Coffee.</a>
+      <a href="menu.html?cat=matcha#menu-matcha" data-fav-cat="matcha">Matcha.</a>
+      <a href="menu.html?cat=protein#menu-protein" data-fav-cat="protein">Protein.</a>
+      <a href="menu.html?cat=food#menu-food" data-fav-cat="food">Food.</a>
+    </nav>
+    <a href="menu.html">View all</a>
+  </header>
+  <div class="wh-fav-row" id="js-fav-row">
+    <!-- populated from menu.html via JS -->
   </div>
 </section>
 
@@ -325,22 +342,6 @@ body[data-page="home"] .ps-plan-card{aspect-ratio:3/2}
   </div>
 </section>
 
-<section class="wh-favourites">
-  <header>
-    <h2>House favourites.</h2>
-    <nav aria-label="House favourites categories">
-      <a class="on" href="menu.html?cat=coffee#menu-coffee" data-fav-cat="coffee">Coffee.</a>
-      <a href="menu.html?cat=matcha#menu-matcha" data-fav-cat="matcha">Matcha.</a>
-      <a href="menu.html?cat=protein#menu-protein" data-fav-cat="protein">Protein.</a>
-      <a href="menu.html?cat=food#menu-food" data-fav-cat="food">Food.</a>
-    </nav>
-    <a href="menu.html">View all</a>
-  </header>
-  <div class="wh-fav-row" id="js-fav-row">
-    <!-- populated from menu.html via JS -->
-  </div>
-</section>
-
 <!-- ══ OUR STORY ══ -->
 <section class="ps-our-story">
   <div class="ps-our-story-inner">
@@ -357,10 +358,10 @@ body[data-page="home"] .ps-plan-card{aspect-ratio:3/2}
     <span>The P.S. Menu.</span>
     <em>Nothing to hide →</em>
   </a>
-  <a class="wh-ms-card" href="about.html">
-    <image-slot id="home-story-card" shape="rect" src="assets/photos/site/story-hero-cafe-crop-desktop.webp" placeholder="Our story" fit="cover"></image-slot>
-    <span>Our story.</span>
-    <em>We lowered rent. Not beans →</em>
+  <a class="wh-ms-card" href="menu.html?cat=matcha#menu-matcha">
+    <image-slot id="home-matcha-card" shape="rect" src="assets/photos/site/menu-matcha-hot-desktop.webp" placeholder="Matcha, ceremonial grade" fit="cover"></image-slot>
+    <span>Matcha, ceremonial grade.</span>
+    <em>Not the powder →</em>
   </a>
 </section>
 
@@ -373,7 +374,6 @@ body[data-page="home"] .ps-plan-card{aspect-ratio:3/2}
     <p class="sub">Pop-up Pods. Brand activations. Corporate offsites. Specialty coffee as part of the room.</p>
     <div class="ps-callout-btns">
       <a href="events.html#event-types" class="btn-filled">Enquire now →</a>
-      <a href="events.html#event-types" class="btn-outline">What we do</a>
     </div>
   </div>
 
@@ -383,7 +383,6 @@ body[data-page="home"] .ps-plan-card{aspect-ratio:3/2}
     <p class="sub">Co-working spaces, gyms, campuses, corporates. A Pod runs on 4 sq ft and serves 100+ cups a day.</p>
     <div class="ps-callout-btns">
       <a href="partnership.html#host" class="btn-filled">Become a host →</a>
-      <a href="partnership.html" class="btn-outline">The Pod model</a>
     </div>
   </div>
 
@@ -393,37 +392,6 @@ body[data-page="home"] .ps-plan-card{aspect-ratio:3/2}
     <p class="sub">The first Pod is being planned. We are looking for people who see what we see.</p>
     <div class="ps-callout-btns">
       <a href="join.html" class="btn-filled">Join us →</a>
-      <a href="about.html" class="btn-outline">Our story</a>
-    </div>
-  </div>
-
-  <div class="ps-callout">
-    <p class="kicker">The P.S. Blog</p>
-    <h2>Reads on coffee, pricing, habits, and the Pod model.</h2>
-    <p class="sub">Short, honest essays on why specialty coffee costs what it costs — and what we are doing about it.</p>
-    <div class="ps-callout-btns">
-      <a href="blogs.html" class="btn-filled">Read the blog →</a>
-      <a href="faq.html" class="btn-outline">FAQ</a>
-    </div>
-  </div>
-
-  <div class="ps-callout">
-    <p class="kicker">Our Story</p>
-    <h2>We lowered the rent. Not the beans.</h2>
-    <p class="sub">No barista theatre, no premium location markup. Just 100% Arabica at a price that makes daily sense.</p>
-    <div class="ps-callout-btns">
-      <a href="about.html" class="btn-filled">Read our story →</a>
-      <a href="faq.html" class="btn-outline">Why P.S.?</a>
-    </div>
-  </div>
-
-  <div class="ps-callout">
-    <p class="kicker">Matcha</p>
-    <h2>Ceremonial grade. Not the powder.</h2>
-    <p class="sub">Sourced from Japan. No cut corners, no Robusta equivalent hiding in a blend. The real thing, at Pod pricing.</p>
-    <div class="ps-callout-btns">
-      <a href="menu.html?cat=matcha#menu-matcha" class="btn-filled">See Matcha menu →</a>
-      <a href="matcha.html" class="btn-outline">About our matcha</a>
     </div>
   </div>
 
@@ -449,8 +417,8 @@ body[data-page="home"] .ps-plan-card{aspect-ratio:3/2}
 
 <div id="ps-footer"></div>
 <script src="assets/image-slot.js"></script>
-<script src="assets/ps.js?v=31"></script>
-<script src="assets/mobile.js?v=1"></script>
+<script src="assets/ps.js?v=33"></script>
+<script src="assets/mobile.js?v=3"></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
