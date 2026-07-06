@@ -17,6 +17,9 @@
   ];
   var here = (location.pathname.split("/").pop() || "index.html").toLowerCase();
   var assetDepth = location.pathname.indexOf("/blog/") !== -1 ? "../" : "";
+  var isMatcha = document.body.getAttribute("data-page") === "matcha";
+  var navWordmark = isMatcha ? "ps-coffee_wordmark_ceremonial.png" : "ps-coffee_wordmark_terracotta.png";
+  var navMonogram = isMatcha ? "ps-coffee_monogram_ceremonial_flat.png" : "ps-coffee_monogram_terracotta_flat.png";
 
   function localHref(href){
     if(!href || href.indexOf("http") === 0 || href.indexOf("mailto:") === 0 || href.charAt(0) === "#") return href;
@@ -37,7 +40,10 @@
         '</div>'+
       '</div>'+
       '<nav class="nav" id="psNav">'+
-        '<a href="'+localHref("index.html")+'" class="nav-logo" aria-label="P.S. Coffee home"><img class="ps-logo-img ps-logo-nav" src="'+localHref("assets/icons/ps-coffee_wordmark_terracotta.png")+'" alt="P.S. Coffee"></a>'+
+        '<a href="'+localHref("index.html")+'" class="nav-logo" aria-label="P.S. Coffee home">'+
+          '<img class="ps-logo-img ps-logo-nav ps-logo-nav-word" src="'+localHref("assets/icons/"+navWordmark)+'" alt="P.S. Coffee">'+
+          '<img class="ps-logo-img ps-logo-nav ps-logo-nav-mono" src="'+localHref("assets/icons/"+navMonogram)+'" alt="P.S. Coffee">'+
+        '</a>'+
         '<div class="nav-links">'+links+'</div>'+
         '<div class="nav-tools">'+
           '<a href="'+localHref("join.html")+'" class="ntool ntool-text'+(here==='join.html'?' active':'')+'" title="Join us">Join us.</a>'+
@@ -55,7 +61,10 @@
       '<div class="wrap">'+
         '<div class="f-top">'+
           '<div class="f-col f-brand">'+
-            '<div class="display ps-wordmark"><img class="ps-logo-img ps-logo-footer" src="'+localHref("assets/icons/ps-coffee_wordmark_terracotta.png")+'" alt="P.S. Coffee"></div>'+
+            '<div class="display ps-wordmark">'+
+              '<img class="ps-logo-img ps-logo-footer-mono" src="'+localHref("assets/icons/ps-coffee_monogram_terracotta_flat.png")+'" alt="">'+
+              '<img class="ps-logo-img ps-logo-footer" src="'+localHref("assets/icons/ps-coffee_wordmark_terracotta.png")+'" alt="P.S. Coffee">'+
+            '</div>'+
             '<a href="'+localHref("about.html")+'">Story</a><a href="'+localHref("blogs.html")+'">Blogs</a><a href="'+localHref("events.html")+'">Events</a><a href="'+localHref("join.html")+'">Join Us</a><a href="'+localHref("join.html")+'">Careers</a><a href="'+localHref("partnership.html")+'">Partner</a>'+
             '<a href="https://www.thebarista.school" target="_blank" rel="noopener">Barista School ↗</a>'+
           '</div>'+

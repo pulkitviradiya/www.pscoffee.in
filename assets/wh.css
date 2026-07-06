@@ -2472,26 +2472,6 @@ body[data-page="menu"] .page-top {
   line-height: 1;
   letter-spacing: -.04em;
 }
-.menu-product-wh dl {
-  display: grid;
-  grid-template-columns: 1fr 1.25fr;
-  gap: 1rem;
-  min-height: 46px;
-  margin: 0;
-  font-family: var(--wh-sans);
-  font-size: 13px;
-  line-height: 1.25;
-}
-.menu-product-drink dl {
-  grid-template-columns: 1fr;
-}
-.menu-product-wh dt {
-  font-weight: 500;
-}
-.menu-product-wh dd {
-  margin: .18rem 0 0;
-  font-weight: 300;
-}
 .menu-product-note {
   min-height: 52px;
   margin: .7rem 0 0;
@@ -2795,11 +2775,6 @@ body[data-page="menu"] .footer {
     font-size: 15px !important;
     margin-top: .6rem !important;
     margin-bottom: .4rem !important;
-  }
-  .menu-product-wh dl {
-    font-size: 11.5px !important;
-    gap: .5rem !important;
-    min-height: unset !important;
   }
   .menu-product-note {
     font-size: 11px !important;
@@ -3545,7 +3520,6 @@ body[data-page="menu"] .page-top {
 }
 .menu-category-wh header p,
 .menu-product-note,
-.menu-product-wh dd,
 .menu-product-price span {
   color: rgba(92, 53, 24, .72) !important;
 }
@@ -3559,7 +3533,6 @@ body[data-page="menu"] .page-top {
 .menu-product-img::before,
 .menu-product-img::after,
 .menu-product-wh h3,
-.menu-product-wh dt,
 .menu-product-price {
   color: var(--ps-roast) !important;
 }
@@ -3603,7 +3576,6 @@ body[data-page="menu"] .page-top {
 #menu-matcha h2,
 #menu-matcha header p,
 #menu-matcha .menu-product-wh h3,
-#menu-matcha .menu-product-wh dt,
 #menu-matcha .menu-product-price strong {
   color: var(--ps-matcha-deep) !important;
 }
@@ -3616,7 +3588,6 @@ body[data-page="menu"] .page-top {
   color: var(--ps-matcha-deep) !important;
 }
 #menu-matcha .menu-product-note,
-#menu-matcha .menu-product-wh dd,
 #menu-matcha .menu-product-price span {
   color: rgba(61, 107, 74, .72) !important;
 }
@@ -6366,6 +6337,7 @@ body[data-page] .footer .ps-wordmark-coffee {
   --ps-success: var(--color-success);
   --wh-serif: "Bricolage Grotesque", system-ui, sans-serif;
   --wh-sans: "Space Grotesk", system-ui, sans-serif;
+  --wh-logo-serif: "Bricolage Grotesque", system-ui, sans-serif;
   --ps-serif: "Instrument Serif", Georgia, serif;
   --wh-bg: var(--ps-steam);
   --wh-surface: var(--ps-oat);
@@ -7050,8 +7022,8 @@ body[data-page="matcha"] .wh-page-card-img::before {
 
 @media (max-width: 479px) {
   .ps-logo-nav {
-    height: 29px !important;
-    max-width: 118px !important;
+    height: 32px !important;
+    max-width: 130px !important;
   }
 }
 
@@ -7105,7 +7077,7 @@ body,
 .ps-pack-explorer-head h2 {
   font-family: var(--wh-serif) !important;
   font-size: clamp(22px, 3vw, var(--ps-type-h2-max)) !important;
-  font-weight: 800 !important;
+  font-weight: 700 !important;
   letter-spacing: -.5px !important;
   line-height: 1.12 !important;
   color: var(--ps-roast) !important;
@@ -7417,28 +7389,6 @@ body[data-page="menu"] .menu-product-wh h3 {
   letter-spacing: -.25px !important;
 }
 
-body[data-page="menu"] .menu-product-wh dl {
-  min-height: 0 !important;
-  gap: 8px !important;
-  margin: 0 0 8px !important;
-  font-size: 12px !important;
-  line-height: 1.32 !important;
-}
-
-body[data-page="menu"] .menu-product-wh dt {
-  font-size: 10px !important;
-  font-weight: 700 !important;
-  letter-spacing: 1.2px !important;
-  line-height: 1.15 !important;
-  text-transform: uppercase !important;
-}
-
-body[data-page="menu"] .menu-product-wh dd {
-  margin-top: 3px !important;
-  font-size: 12px !important;
-  line-height: 1.32 !important;
-}
-
 body[data-page="menu"] .menu-recipe,
 body[data-page="menu"] .menu-product-note {
   display: -webkit-box !important;
@@ -7448,7 +7398,7 @@ body[data-page="menu"] .menu-product-note {
 }
 
 body[data-page="menu"] .menu-recipe {
-  -webkit-line-clamp: 2 !important;
+  -webkit-line-clamp: 3 !important;
   margin: 0 0 8px !important;
   font-size: 12px !important;
   line-height: 1.38 !important;
