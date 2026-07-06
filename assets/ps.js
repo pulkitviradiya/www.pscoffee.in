@@ -266,7 +266,7 @@
     var t = document.getElementById("ps-toast");
     if(!t){
       t = document.createElement("div"); t.id="ps-toast";
-      t.innerHTML = '<span class="t-ico"><svg class="i" viewBox="0 0 24 24" style="width:18px;height:18px;stroke:#fff"><path d="M20 6L9 17l-5-5"/></svg></span><span id="ps-toast-msg"></span>';
+      t.innerHTML = '<span class="t-ico"><svg class="i" viewBox="0 0 24 24" style="width:18px;height:18px;stroke:var(--color-success)"><path d="M20 6L9 17l-5-5"/></svg></span><span id="ps-toast-msg"></span>';
       document.body.appendChild(t);
     }
     return t;
@@ -370,6 +370,14 @@
 
   /* ---------- Brand Kit 2A: Nectar signature move ---------- */
   var NECTAR_PHRASES = [
+    "Nothing to hide",
+    "the surprise",
+    "a question",
+    "Three taps",
+    "the office vending machine",
+    "closer than you think",
+    "Matcha tonight",
+    "Make it official",
     "already paid for",
     "Drink daily",
     "Plain and Simple",
@@ -435,6 +443,10 @@
     return node ? wrapPhraseInTextNode(node, phrase) : false;
   }
 
+  // No curated phrase matched: fall back to the sentence's last clause
+  // (after the final comma/period), since the trade-off or twist a
+  // headline is "really about" tends to land in the second half of a
+  // two-part sentence, not the opening word — see sec-10.
   function highlightLeadPhrase(el){
     var walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, {
       acceptNode: function(node){
@@ -447,8 +459,36 @@
     var node = walker.nextNode();
     if(!node) return false;
     var text = node.nodeValue;
-    var match = text.match(/[A-Za-z0-9₹][A-Za-z0-9₹.'%-]*(?:\\s+[A-Za-z0-9₹][A-Za-z0-9₹.'%-]*)?/);
-    return match ? wrapPhraseInTextNode(node, match[0]) : false;
+    var clauses = text.split(/[.,;]+/).map(function(s){ return s.trim(); }).filter(Boolean);
+    var clause = clauses.length ? clauses[clauses.length - 1] : text.trim();
+    var words = clause.split(/\s+/).filter(Boolean);
+    var phrase = words.slice(-4).join(" ");
+    if(!phrase) return false;
+    return wrapPhraseInTextNode(node, phrase);
+  }
+
+  // sec-10 "neutral ground only": the highlight must never land on a bold
+  // Terracotta/Ceremonial/Dark-Roast fill, whatever component produced it.
+  // Checking the live computed background (rather than hand-maintaining a
+  // list of "bold" class names) means new bold sections don't need a new
+  // exclusion added here every time one is built.
+  var BOLD_GROUND_COLORS = [
+    "rgb(232, 64, 12)",  // Terracotta
+    "rgb(184, 48, 10)",  // Brick Deep / Terracotta hover
+    "rgb(61, 107, 74)",  // Deep Ceremonial
+    "rgb(44, 79, 55)",   // Ceremonial deep (footer body row)
+    "rgb(61, 32, 16)"    // Dark Roast — type-only, never a real fill, guarded anyway
+  ];
+  function sitsOnBoldGround(el){
+    var node = el;
+    while(node && node !== document.documentElement){
+      var bg = getComputedStyle(node).backgroundColor;
+      if(bg && bg !== "rgba(0, 0, 0, 0)" && bg !== "transparent"){
+        return BOLD_GROUND_COLORS.indexOf(bg) !== -1;
+      }
+      node = node.parentElement;
+    }
+    return false;
   }
 
   function nectarSignature(){
@@ -471,6 +511,7 @@
     document.querySelectorAll(selector).forEach(function(el){
       if(el.closest("#ps-nav, .footer, .drawer, .ps-pack-card, .menu-product-wh, .wh-fav-card")) return;
       if(el.querySelector(".nectar-highlight")) return;
+      if(sitsOnBoldGround(el)) return;
       var text = (el.textContent || "").replace(/\s+/g, " ").trim();
       if(text.length < 10) return;
       for(var i=0; i<NECTAR_PHRASES.length; i++){

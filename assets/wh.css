@@ -317,7 +317,7 @@ h1,h2,h3,h4,
 .wh-btn.outline-white { background: transparent; color: var(--color-steam-cream); border-color: rgba(250, 246, 238,.4); }
 .wh-btn.outline-white:hover { border-color: var(--color-steam-cream); background: rgba(250, 246, 238,.08); }
 .wh-btn.matcha { background: var(--wh-matcha); color: var(--color-steam-cream); border-color: var(--wh-matcha); }
-.wh-btn.matcha:hover { background: var(--color-shade-grove); border-color: var(--color-shade-grove); }
+.wh-btn.matcha:hover { background: var(--color-ceremonial-deep); border-color: var(--color-ceremonial-deep); }
 
 /* ── discover / inline link ── */
 .wh-link {
@@ -1225,20 +1225,21 @@ body:has(.drawer.open)::before {
   position: fixed;
   bottom: 24px; left: 50%;
   transform: translateX(-50%) translateY(14px);
-  background: var(--wh-tc);
-  color: var(--color-steam-cream);
+  background: var(--color-oat);
+  color: var(--color-dark-roast);
   font-family: var(--wh-sans);
   font-size: 13px;
   font-weight: 300;
-  padding: 12px 20px;
-  border: 1px solid rgba(250, 246, 238,.14);
+  padding: 12px 20px 12px 16px;
+  border: 1px solid var(--ps-linen-strong, #E4D9C4);
+  border-left: 4px solid var(--color-success);
   display: flex; align-items: center; gap: 10px;
   opacity: 0;
   transition: opacity .3s, transform .3s;
   z-index: 1000;
   white-space: nowrap;
   pointer-events: none;
-  border-radius: 0;
+  border-radius: var(--radius-md, 9px);
 }
 #ps-toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 
@@ -1289,13 +1290,8 @@ body:has(.drawer.open)::before {
   --wh-announce-h: 20px;
   --wh-nav-h: 42px;
   --wh-header-h: 62px;
-  --wh-gut: .625rem;
   --wh-grid-gap: 1.25rem;
   --wh-section-gap: clamp(72px, 7vw, 128px);
-}
-
-@media(min-width:768px) {
-  :root { --wh-gut: 1.25rem; }
 }
 
 html, body {
@@ -2533,7 +2529,7 @@ body[data-page="menu"] .page-top {
   color: rgba(250, 246, 238,.9);
   background: rgba(20,10,5,.52);
   padding: 3px 8px;
-  border-radius: 20px;
+  border-radius: 999px;
   pointer-events: none;
 }
 
@@ -2541,8 +2537,8 @@ body[data-page="menu"] .page-top {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   margin-top: clamp(28px, 3vw, 52px);
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000;
+  border-top: 1px solid var(--ps-linen-strong, #E4D9C4);
+  border-bottom: 1px solid var(--ps-linen-strong, #E4D9C4);
   padding: .9rem 0;
 }
 .menu-section-footer p {
@@ -3481,31 +3477,25 @@ body[data-page="menu"] .page-top {
 }
 .menu-filter-wh button,
 .menu-filter-wh span {
-  color: rgba(92, 53, 24, .62) !important;
+  color: var(--ps-espresso) !important;
 }
-.menu-filter-wh button[data-filter="coffee"],
+.menu-filter-wh button[data-filter="coffee"].active,
 #menu-coffee h2,
 #menu-coffee .menu-product-price strong,
 .wh-favourites nav a[href*="cat=coffee"],
 .wh-favourites nav a.on {
   color: var(--ps-terracotta) !important;
 }
-.menu-filter-wh button[data-filter="protein"],
 #menu-protein h2,
 .wh-favourites nav a[href*="cat=protein"] {
   color: var(--ps-roast) !important;
-}
-.menu-filter-wh button[data-filter="food"] {
-  color: var(--ps-espresso) !important;
 }
 .menu-filter-wh button.active,
 .menu-filter-wh button:hover {
   color: var(--ps-roast) !important;
 }
 
-.menu-filter-wh button.menu-highlight,
-.menu-filter-wh button.menu-highlight small,
-.menu-filter-wh button[data-filter="matcha"],
+.menu-filter-wh button[data-filter="matcha"].active,
 .wh-favourites nav a[href*="cat=matcha"] {
   color: var(--ps-matcha-deep) !important;
 }
@@ -3760,6 +3750,10 @@ body[data-page="home"] .footer .news button {
   width: 30px !important;
   min-width: 30px !important;
   max-width: 30px !important;
+  background: var(--ps-steam) !important;
+  border: 0 !important;
+  border-radius: var(--radius-md, 9px) !important;
+  margin-left: 6px !important;
 }
 
 body[data-page] .footer .news input,
@@ -4781,16 +4775,10 @@ body[data-page="home"] .footer .f-socials svg {
 }
 
 body[data-page="about"] .wh-page-kicker,
-body[data-page="about"] .wh-page-card a,
-body[data-page="about"] .wh-page-card button,
 body[data-page="about"] .wh-page-list-rows span:first-child,
 body[data-page="partnership"] .wh-page-kicker,
-body[data-page="partnership"] .wh-page-card a,
-body[data-page="partnership"] .wh-page-card button,
 body[data-page="partnership"] .wh-page-list-rows span:first-child,
 body[data-page="events"] .wh-page-kicker,
-body[data-page="events"] .wh-page-card a,
-body[data-page="events"] .wh-page-card button,
 body[data-page="events"] .wh-page-list-rows span:first-child {
   color: var(--ps-terracotta) !important;
 }
@@ -6412,6 +6400,12 @@ body[data-page="matcha"] .ps-our-story,
   background: var(--ps-matcha-deep) !important;
   color: var(--ps-steam) !important;
 }
+#menu-matcha .menu-section-footer-matcha,
+#menu-matcha .menu-section-footer-matcha p,
+#menu-matcha .menu-section-footer-matcha strong {
+  border-color: transparent !important;
+  color: var(--ps-steam) !important;
+}
 
 .nav {
   background: rgba(250, 246, 238, .96) !important;
@@ -6536,10 +6530,18 @@ body[data-page="matcha"] .wh-page-card button,
 .badge.accent,
 .tag,
 .journal-card-tag,
-.menu-kcal,
 .wh-fav-badge,
 .ps-plan-badge {
   background: var(--ps-nectar) !important;
+  color: var(--ps-roast) !important;
+  border-color: transparent !important;
+}
+
+/* Routine nutritional info, not a promotional tag — kept off the
+   Nectar ramp per sec-15 (Nectar reserved for moments that earn an
+   accent, not every card in a 40+ item grid). */
+.menu-kcal {
+  background: rgba(250, 246, 238, .9) !important;
   color: var(--ps-roast) !important;
   border-color: transparent !important;
 }
@@ -6550,12 +6552,20 @@ mark,
 .wh-h1 .highlight,
 .wh-h2 .highlight {
   display: inline;
-  padding: .02em .16em .08em;
+  padding: 3px 10px 4px;
   border-radius: var(--radius-sm, 6px);
   background: var(--ps-nectar) !important;
   color: var(--ps-roast) !important;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
+}
+
+body[data-page="matcha"] mark,
+body[data-page="matcha"] .nectar-highlight,
+body[data-page="matcha"] .display .highlight,
+body[data-page="matcha"] .wh-h1 .highlight,
+body[data-page="matcha"] .wh-h2 .highlight {
+  background: var(--color-bright-whisk) !important;
 }
 
 .nectar-ramp-gold,
@@ -6622,7 +6632,6 @@ mark,
 .wh-home-card:nth-child(4n+1) span,
 .journal-card:nth-child(4n+1) .journal-card-tag,
 .journal-mini-card:nth-child(4n+1) .journal-card-tag,
-.menu-product-wh:nth-child(4n+1) .menu-kcal,
 .wh-fav-card:nth-child(4n+1) .wh-fav-badge {
   background: var(--ps-nectar) !important;
   color: var(--ps-roast) !important;
@@ -6632,7 +6641,6 @@ mark,
 .wh-home-card:nth-child(4n+2) span,
 .journal-card:nth-child(4n+2) .journal-card-tag,
 .journal-mini-card:nth-child(4n+2) .journal-card-tag,
-.menu-product-wh:nth-child(4n+2) .menu-kcal,
 .wh-fav-card:nth-child(4n+2) .wh-fav-badge {
   background: var(--ps-nectar-bright) !important;
   color: var(--ps-roast) !important;
@@ -6642,7 +6650,6 @@ mark,
 .wh-home-card:nth-child(4n+3) span,
 .journal-card:nth-child(4n+3) .journal-card-tag,
 .journal-mini-card:nth-child(4n+3) .journal-card-tag,
-.menu-product-wh:nth-child(4n+3) .menu-kcal,
 .wh-fav-card:nth-child(4n+3) .wh-fav-badge {
   background: var(--ps-nectar-cream) !important;
   color: var(--ps-roast) !important;
@@ -6652,7 +6659,6 @@ mark,
 .wh-home-card:nth-child(4n+4) span,
 .journal-card:nth-child(4n+4) .journal-card-tag,
 .journal-mini-card:nth-child(4n+4) .journal-card-tag,
-.menu-product-wh:nth-child(4n+4) .menu-kcal,
 .wh-fav-card:nth-child(4n+4) .wh-fav-badge {
   background: var(--ps-nectar-wash) !important;
   color: var(--ps-espresso) !important;
@@ -6674,7 +6680,6 @@ body[data-page="matcha"] .wh-announce {
   background: var(--color-ceremonial) !important;
 }
 
-.menu-filter-wh button.menu-highlight,
 .toast-warning,
 .status-preparing,
 .ps-pack-card-note strong,
@@ -6752,8 +6757,8 @@ body[data-page="matcha"] select:focus {
 .field.invalid input,
 input[aria-invalid="true"],
 textarea[aria-invalid="true"] {
-  border-color: var(--ps-terracotta-pressed) !important;
-  box-shadow: 0 0 0 1px var(--ps-terracotta-pressed) !important;
+  border-color: var(--color-error) !important;
+  box-shadow: 0 0 0 1px var(--color-error) !important;
 }
 
 .form-success,
@@ -6851,7 +6856,6 @@ textarea[aria-invalid="true"] {
 }
 
 .f-email {
-  background: var(--ps-terracotta) !important;
   color: var(--ps-steam) !important;
   border-radius: var(--radius-md, 9px) !important;
   padding: 18px !important;
@@ -6982,8 +6986,8 @@ body[data-page="matcha"] .wh-page-card a:hover,
 body[data-page="matcha"] .wh-page-card button:hover,
 #menu-matcha .menu-product-wh button:hover,
 #menu-matcha .menu-product-wh button:active {
-  background: var(--color-shade-grove) !important;
-  border-color: var(--color-shade-grove) !important;
+  background: var(--color-ceremonial-deep) !important;
+  border-color: var(--color-ceremonial-deep) !important;
 }
 
 body[data-page="matcha"] .btn.ghost,
@@ -7115,6 +7119,17 @@ dt,
   letter-spacing: 0 !important;
   line-height: 1.55 !important;
   color: var(--ps-espresso) !important;
+}
+
+/* .wh-loc-list sits on a dark photo scrim (homepage locations module) —
+   the blanket p{color:espresso} rule above would otherwise make its
+   text unreadable against the photo. */
+.wh-loc-list p,
+.wh-loc-list p span {
+  color: rgba(250, 246, 238, .82) !important;
+}
+.wh-loc-list p span:first-child {
+  color: var(--color-steam-cream) !important;
 }
 
 .wh-page-kicker,
@@ -7286,7 +7301,12 @@ body[data-page="matcha"] .wh-page-hero footer a {
   color: var(--ps-roast) !important;
 }
 
-.wh-page-hero .nectar-highlight {
+.wh-page-hero:not(.is-light) .nectar-highlight,
+.wh-banner-heading .nectar-highlight,
+.menu-hero-wh .nectar-highlight,
+body[data-page="matcha"] .wh-page-hero .nectar-highlight,
+body[data-page="matcha"] .wh-banner-heading .nectar-highlight,
+body[data-page="matcha"] .menu-hero-wh .nectar-highlight {
   background: transparent !important;
   color: inherit !important;
   padding: 0 !important;
@@ -7628,20 +7648,24 @@ body[data-page] .footer .f-radhe,
 body[data-page="home"] .footer .f-radhe {
   font-family: var(--ps-serif, "Instrument Serif", Georgia, serif) !important;
   font-style: italic !important;
-  color: var(--color-bright-whisk) !important;
-  opacity: .9 !important;
+  color: var(--color-light-pour) !important;
+  opacity: 1 !important;
 }
 
 /* Newsletter panel: Steam Cream type on the Ceremonial footer ground */
 body[data-page] .footer .f-email h4,
 body[data-page] .footer .f-email p,
 body[data-page] .footer .f-email .news input,
-body[data-page] .footer .f-email .news button,
 body[data-page="home"] .footer .f-email h4,
 body[data-page="home"] .footer .f-email p,
-body[data-page="home"] .footer .f-email .news input,
-body[data-page="home"] .footer .f-email .news button {
+body[data-page="home"] .footer .f-email .news input {
   color: var(--color-steam-cream) !important;
+}
+/* Submit button is a solid Steam Cream chip (sec-22 "submit = filled
+   button"); its arrow needs a dark-on-cream colour, not cream-on-cream. */
+body[data-page] .footer .f-email .news button,
+body[data-page="home"] .footer .f-email .news button {
+  color: var(--ps-matcha-deep) !important;
 }
 body[data-page] .footer .f-email .news input::placeholder,
 body[data-page="home"] .footer .f-email .news input::placeholder {

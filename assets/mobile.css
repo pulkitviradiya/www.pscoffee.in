@@ -80,8 +80,9 @@
   body[data-page="home"] .wh-favourites   { order: -5; }
   body[data-page="home"] .wh-subscription { order: -4; }
   body[data-page="home"] .wh-locations    { order: -3; }
-  body[data-page="home"] .ps-app-callout  { order: -2; }
-  body[data-page="home"] .ps-our-story    { order: -1; }
+  body[data-page="home"] .ps-app-callout    { order: -2; }
+  body[data-page="home"] .ps-section-buffer { order: -1; }
+  body[data-page="home"] .ps-our-story      { order: 0; }
 
   body[data-page="home"] .wh-banners {
     position: relative;
@@ -485,11 +486,22 @@
     height: 220px !important;
   }
 
-  .menu-hero-wh,
-  .wh-page-hero {
+  .wh-page-hero.is-light {
     grid-template-columns: 1fr !important;
     min-height: 0 !important;
     margin: 0 var(--mobile-gut) 30px !important;
+  }
+
+  /* Bold (non-light) heroes and the menu hero are a full-bleed
+     Terracotta/Ceremonial block per sec-11 — they stay edge-to-edge
+     on mobile, never inset like a card. Light heroes above keep the
+     side gutter. */
+  .menu-hero-wh,
+  .wh-page-hero:not(.is-light) {
+    grid-template-columns: 1fr !important;
+    min-height: 0 !important;
+    margin: 0 0 30px !important;
+    padding-inline: var(--mobile-gut) !important;
   }
 
   .menu-hero-copy,

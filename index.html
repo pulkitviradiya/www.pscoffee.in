@@ -18,8 +18,8 @@
 <meta name="twitter:description" content="100% Arabica specialty coffee from ₹89. Inside offices, gyms, and co-working spaces across Ahmedabad. Order in three taps. Ready before you arrive.">
 <meta name="twitter:image" content="https://www.pscoffee.in/assets/photos/site/menu-hero-cups-cropped-desktop.webp">
 <link rel="stylesheet" href="assets/ps.css">
-<link rel="stylesheet" href="assets/wh.css?v=41">
-<link rel="stylesheet" href="assets/mobile.css?v=30">
+<link rel="stylesheet" href="assets/wh.css?v=50">
+<link rel="stylesheet" href="assets/mobile.css?v=32">
 <style>
 /* ── Pack tiers — embedded in wh-subscription ────────────── */
 .ps-sub-packs{grid-column:1/-1;padding:clamp(18px,2.5vw,28px) 0 clamp(6px,1vw,12px);border-top:1px solid rgba(42,26,14,.14)}
@@ -41,6 +41,10 @@
 .ps-plan-get{background:var(--tc,#E8400C);color:#FAF6EE;font-size:11px;font-weight:700;padding:7px 12px;border-radius:3px;white-space:nowrap;flex-shrink:0}
 @media(max-width:900px){.ps-plan-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:480px){.ps-plan-grid{grid-template-columns:repeat(2,1fr);gap:8px}}
+
+/* ── Cream buffer between bold Terracotta blocks (sec-11: bold blocks
+   touch neutral, never each other) ──────────────────────── */
+.ps-section-buffer{height:clamp(40px,6vw,72px);background:var(--paper)}
 
 /* ── App callout (restored 2-col) ────────────────────────── */
 .ps-app-callout{padding:clamp(48px,7vw,96px) 0;background:var(--roast,#2a1a0e);color:#FAF6EE}
@@ -342,6 +346,8 @@ body[data-page="home"] .ps-plan-card{aspect-ratio:3/2}
   </div>
 </section>
 
+<div class="ps-section-buffer"></div>
+
 <!-- ══ OUR STORY ══ -->
 <section class="ps-our-story">
   <div class="ps-our-story-inner">
@@ -417,7 +423,7 @@ body[data-page="home"] .ps-plan-card{aspect-ratio:3/2}
 
 <div id="ps-footer"></div>
 <script src="assets/image-slot.js"></script>
-<script src="assets/ps.js?v=35"></script>
+<script src="assets/ps.js?v=37"></script>
 <script src="assets/mobile.js?v=3"></script>
 <script type="application/ld+json">
 {
