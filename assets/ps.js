@@ -31,9 +31,10 @@
       return '<a href="'+localHref(p.href)+'" class="'+(act+cls).trim()+'">'+p.label+'.</a>';
     }).join("");
     return '<div class="wh-announce">'+
-        '<span class="wh-announce-full">○ 100% Arabica. From ₹89. Your coffee is ready before you arrive.</span>'+
-        '<span class="wh-announce-short">○ 100% Arabica. From ₹89.</span>'+
-        '<span class="wh-region">₹ INR&nbsp;&nbsp;|&nbsp;&nbsp;India</span>'+
+        '<div class="wh-announce-track">'+
+          '<span class="wh-announce-msg">100% Arabica<span class="sep">&#10022;</span>From &#8377;89<span class="sep">&#10022;</span>Ready before you arrive<span class="sep">&#10022;</span>New Pods every month<span class="sep">&#10022;</span></span>'+
+          '<span class="wh-announce-msg" aria-hidden="true">100% Arabica<span class="sep">&#10022;</span>From &#8377;89<span class="sep">&#10022;</span>Ready before you arrive<span class="sep">&#10022;</span>New Pods every month<span class="sep">&#10022;</span></span>'+
+        '</div>'+
       '</div>'+
       '<nav class="nav" id="psNav">'+
         '<a href="'+localHref("index.html")+'" class="nav-logo" aria-label="P.S. Coffee home"><img class="ps-logo-img ps-logo-nav" src="'+localHref("assets/icons/ps-coffee_wordmark_terracotta.png")+'" alt="P.S. Coffee"></a>'+

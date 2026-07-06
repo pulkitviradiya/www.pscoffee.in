@@ -36,19 +36,6 @@
     font-size: 12px !important;
   }
 
-  .wh-announce-full {
-    display: none !important;
-  }
-
-  .wh-announce-short {
-    display: inline !important;
-  }
-
-  .wh-announce .wh-region {
-    display: block !important;
-    font-size: 11px !important;
-  }
-
   .nav {
     min-height: 62px !important;
     padding: 0 var(--mobile-gut) !important;
@@ -115,7 +102,7 @@
     opacity: 0;
     pointer-events: none;
     transform: translateX(8%);
-    transition: opacity .55s ease, transform .55s ease;
+    transition: opacity .4s cubic-bezier(.2,0,0,1), transform .4s cubic-bezier(.2,0,0,1);
   }
 
   body[data-page="home"] .wh-banner.is-active {
@@ -206,7 +193,7 @@
     height: 100%;
     background: var(--color-steam-cream);
     transform-origin: left center;
-    transition: transform .5s ease;
+    transition: transform .4s cubic-bezier(.2,0,0,1);
   }
 
   .wh-modern {
