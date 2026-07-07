@@ -4,7 +4,8 @@ Static multi-page website for [pscoffee.in](https://pscoffee.in).
 
 No framework, no dependencies, no build step. Push files to GitHub → Vercel deploys automatically.
 See `CLAUDE.md` (or `AGENTS.md` — same content, mirrored for the two agents that work on this repo)
-for the full contributor guide, and `MEMORY.md` for current project state and asset versions.
+for the contributor guide and its reference map, `docs/` for architecture/API/conventions/design
+detail, and `MEMORY.md` for current project state and asset versions.
 
 ## Pages
 

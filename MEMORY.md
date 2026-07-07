@@ -9,7 +9,7 @@ Read this at the start of every session. Use silently to inform work.
 | File | Version |
 |---|---|
 | `assets/ps.js` | v37 |
-| `assets/wh.css` | v51 |
+| `assets/wh.css` | v52 |
 | `assets/mobile.css` | v33 |
 
 Always read the current version from any `*.html` before bumping.
@@ -51,6 +51,64 @@ Always read the current version from any `*.html` before bumping.
 ---
 
 ## Session Decisions
+
+### 2026-07-07 (docs-flagged cleanup)
+- Fixed the 3 items flagged in the documentation audit as needing a decision, not just a doc note.
+  (1) Removed the 4 dead legacy font files (`assets/fonts/Balto-Book.otf`, `Balto-Medium.otf`,
+  `TiemposHeadline-Medium.otf`, `WatchHouseSerif-Medium.otf`) plus their `@font-face` blocks and
+  the 3 font-token lines (`--wh-serif`/`--wh-logo-serif`/`--wh-sans`) that fed them in `wh.css` —
+  confirmed dead first via the cascade methodology (grepped every `--wh-serif`/`--wh-sans`/
+  `--wh-logo-serif` declaration; all 3 in this block were always beaten by a later, unconditional
+  `:root` block at ~line 6291 resolving to Bricolage Grotesque/Space Grotesk). Left the rest of
+  that same `:root` block untouched (`--wh-announce-h`, `--wh-nav-h`, `--wh-header-h`,
+  `--wh-grid-gap`, `--wh-section-gap` have no later override and are genuinely load-bearing —
+  confirmed before touching anything nearby, not just the flagged lines). (2) Investigated the
+  "matcha button hover unreachable" item and found it wasn't just unreachable — `.wh-btn.matcha`/
+  `.wh-btn.matcha:hover` (wh.css) is never applied by any HTML in the repo (grepped `wh-btn` across
+  every page and `ps.js`) and even if it were, a later `!important`, higher-specificity
+  `body[data-page="matcha"] .wh-btn.dark:hover` rule already wins and correctly darkens to
+  `--color-ceremonial-deep` for any real matcha-context button (confirmed live on `matcha.html`'s
+  actual "Add to cart" buttons: `rgb(61,107,74)`, the Ceremonial token, both before and after this
+  change). Removed the dead `.wh-btn.matcha` rule and its selector from the shared group rule
+  instead of leaving it as a no-op — the real matcha button styling doesn't depend on it. (3)
+  Committed the 12 previously-untracked, live-referenced `assets/photos/site/ps-pass-*.webp`
+  files. Bumped `wh.css` v51→v52 (only file touched this round) across all 32 HTML files; verified
+  live via browser preview (no console errors, no 404s on the removed .otf files, matcha button
+  colour unchanged). Updated `docs/tasks.md` to move these three items from "flagged" to
+  "completed."
+
+### 2026-07-07 (documentation restructure)
+- Audited the repo's documentation structure end-to-end and found `CLAUDE.md`/`AGENTS.md` had
+  grown into a single 371-line file holding architecture, API, conventions, and design-system
+  detail all at once — no `docs/` split existed, and `ARCHIVE.md` was referenced by CLAUDE.md's
+  own memory-hygiene rules but never actually created. Restructured into the standard set: created
+  `docs/architecture.md` (tech stack + reasons, folder structure, data model, third-party
+  services), `docs/api-reference.md` (both Vercel functions — `POST /api/submit-form`,
+  `GET /api/form-status` — with full request/response contracts), `docs/conventions.md` (naming
+  rules, nav/blog/menu/form structure patterns, the CSS cascade-resolution methodology, mobile
+  traps, and the full "What NOT to do" list), `docs/design.md` (colour/typography/spacing/motion
+  tokens, split into Common/Desktop/Tablet/Mobile/App sections as requested), and `ARCHIVE.md`
+  (empty stub, ready for MEMORY.md overflow). Slimmed `CLAUDE.md`/`AGENTS.md` down to a lean
+  pointer file: one-paragraph project description, tech stack summary, exact run/build/deploy
+  commands, an `@`-syntax reference map to each `docs/` file, and the standing instructions —
+  all the detailed rules that used to live inline now live in the matching `docs/` file so a
+  future session can fetch only what's relevant instead of reading the whole history. Mirrored
+  identically into `AGENTS.md` (Codex's copy), matching this repo's established Claude/Codex
+  naming-substitution pattern. Updated `README.md`'s pointer line to mention `docs/`. Deviated
+  from the requested reference-map text in one place: used `@docs/design.md` instead of the
+  literal `@DESIGN.md` given in the instructions, since the design content was written to
+  `docs/design.md` per the file-creation spec earlier in the same instructions — keeping both
+  the location and the reference map internally consistent seemed more useful than a literal
+  match; flagged to the user for review.
+- Extracted from the codebase directly (no invention): no `TODO`/`FIXME` comments exist anywhere
+  in the repo (grepped `*.js`/`*.html`/`*.css`); the matcha solid-button hover fix is wired but
+  currently unreachable (no live `<button>` in matcha context yet); 4 legacy font files
+  (`Balto-*.otf`, `TiemposHeadline-Medium.otf`, `WatchHouseSerif-Medium.otf`) are still
+  `@font-face`'d in `wh.css` but fully masked by a later `:root` override — dead weight, flagged
+  as a cleanup candidate in `docs/tasks.md` rather than removed (out of scope for a docs-only
+  pass). 12 `assets/photos/site/ps-pass-*.webp` files are untracked but live-referenced in HTML —
+  flagged in `docs/tasks.md` as needing a `git add`, not fixed automatically since it wasn't part
+  of this task.
 
 ### 2026-07-07
 - Audited Content & Layout (kit sections 37-38: Blog Section Types, Applied Sample Layouts) across the 8 blog posts sharing an identical inline-`<style>` structure (`why-specialty-coffee-costs-300-rupees-india`, `building-specialty-coffee-brand-without-cafe`, `morning-coffee-ritual-vs-routine`, `pre-workout-coffee-gym-ahmedabad`, `what-we-are-building-ps-coffee-gujarat`, `india-coffee-market-2030-opportunity`, `why-coworking-spaces-ahmedabad-need-better-coffee`, `what-is-arabica-coffee-india`). Fixed: `.kt` "Key Takeaway" box was a plain Linen block with no accent — rebuilt to match the already-correct `.qa` pattern (Oat fill + 4px Terracotta left border, asymmetric radius). Added a `.ctab-vs` marker class + Terracotta top-border rule to the 2 posts with a genuine head-to-head "P.S. vs competitor" comparison table (the other `.ctab` tables are data/market tables, not a which-one-is-us comparison, so left unmarked) — needed `!important` since wh.css's blanket `.journal-post-body table th,td{border-color:...!important}` otherwise wins. Replaced 11 hardcoded `font-family:'Lora',Georgia,serif`/`'Inter',sans-serif` declarations per file (`.vv` stat values, `.toc-num`, `.div-ps .mark`, `h2.st`, `h3.sub`, `.stat-num`, `.imgph .ico`, `.psline`, `.faqs h2`, `.pncard .pn-title`, `.ctab-box h2`) with the correct token per component — mostly `var(--font-display)` for headings/stat emphasis, `var(--font-body)` for labels, and `var(--font-accent)` + `font-style:italic` for `.psline`'s tagline (matching the footer's `.f-radhe` pattern). Verified live via `getComputedStyle` on multiple posts. Investigated `.pnnav`/`.pncard` (blog prev/next nav) reported as "unstyled" by an earlier audit pass — false alarm, it already has full inline styling (background/border/hover/disabled/mobile-stack) in all 8 files that use it; confirmed rendering correctly via `getComputedStyle` and screenshot, no fix needed. These are inline blog-post `<style>` edits, not wh.css — no version bump required this round.

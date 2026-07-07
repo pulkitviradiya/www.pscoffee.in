@@ -316,8 +316,6 @@ h1,h2,h3,h4,
 .wh-btn.outline-dark:hover  { background: var(--wh-ink); color: var(--color-steam-cream); }
 .wh-btn.outline-white { background: transparent; color: var(--color-steam-cream); border-color: rgba(250, 246, 238,.4); }
 .wh-btn.outline-white:hover { border-color: var(--color-steam-cream); background: rgba(250, 246, 238,.08); }
-.wh-btn.matcha { background: var(--wh-matcha); color: var(--color-steam-cream); border-color: var(--wh-matcha); }
-.wh-btn.matcha:hover { background: var(--color-ceremonial-deep); border-color: var(--color-ceremonial-deep); }
 
 /* ── discover / inline link ── */
 .wh-link {
@@ -1219,39 +1217,7 @@ body:has(.drawer.open)::before {
    shallow white nav, compact split hero, sparse statement band,
    and right-aligned at-home product cards.
    ============================================================ */
-@font-face {
-  font-family: "Balto";
-  src: url("fonts/Balto-Book.otf") format("opentype");
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Balto";
-  src: url("fonts/Balto-Medium.otf") format("opentype");
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Tiempos Headline";
-  src: url("fonts/TiemposHeadline-Medium.otf") format("opentype");
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-}
-@font-face {
-  font-family: "WatchHouse Serif";
-  src: url("fonts/WatchHouseSerif-Medium.otf") format("opentype");
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-}
-
 :root {
-  --wh-serif: "Tiempos Headline", Georgia, "Times New Roman", serif;
-  --wh-logo-serif: "WatchHouse Serif", "Tiempos Headline", Georgia, serif;
-  --wh-sans: "Balto", Arial, Helvetica, sans-serif;
   --wh-bg: rgb(249, 244, 238);
   --wh-ink: #060606;
   --wh-ink-2: #171717;
@@ -6465,8 +6431,7 @@ body[data-page="matcha"] .wh-btn.dark,
 body[data-page="matcha"] .btn.accent,
 body[data-page="matcha"] .wh-page-card a:hover,
 body[data-page="matcha"] .wh-page-card button:hover,
-body[data-page="matcha"] .menu-product-wh button:hover,
-.wh-btn.matcha {
+body[data-page="matcha"] .menu-product-wh button:hover {
   background: var(--ps-matcha-deep) !important;
   border-color: var(--ps-matcha-deep) !important;
   color: var(--ps-steam) !important;
