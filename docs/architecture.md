@@ -55,8 +55,9 @@ assets/
   photos/ (root)           P.S. Pass product images (webp), used only on pack.html.
 blog/                     10 individual blog post HTML files (flat, no further nesting).
 docs/                     This documentation set.
-Logo Files/               Untracked raw logo-source drop (PNGs) — kept out of git deliberately,
-                          not part of the deployed site.
+Logo Files/               Raw logo-source drop (PNGs) — tracked in git for provenance, but not
+                          part of the deployed site (nothing here is referenced by any HTML/CSS;
+                          production lockups live in assets/icons/).
 ```
 
 ## Data model / schema
