@@ -23,6 +23,7 @@ by Vercel, plus two serverless functions for form submission.
 ```
 /                       Every page as a flat .html file (index, menu, pack, about, join, etc.)
 api/                    Vercel serverless functions (Node ESM) — form submission + admin status
+  google-sheets.js       Shared Google Sheets client/meta helpers used by the API routes.
 assets/
   ps.css                Canonical design-system layer: :root tokens (colour/spacing/radius/type),
                          @font-face declarations, nav/footer base structure, buttons, badges, forms
@@ -37,7 +38,8 @@ assets/
                          forms, the Nectar auto-highlight system (nectarSignature()). Cache-busted
                          with ?v=N.
   mobile.js               Mobile-only scripts.
-  image-slot.js           Responsive image-loading utility.
+  image-slot.js           Responsive image-loading utility. Cache-busted with ?v=N on pages that
+                          use <image-slot>.
   fonts/brand/             Self-hosted Bricolage Grotesque / Space Grotesk / Instrument Serif (woff2) —
                            the 3 fonts actually in use, referenced by ps.css @font-face. (4 dead
                            legacy .otf files that lived at assets/fonts/ root — Balto, Tiempos
@@ -90,6 +92,7 @@ See [api-reference.md](api-reference.md) for the full request/response contract.
 <link rel="stylesheet" href="assets/ps.css">
 <link rel="stylesheet" href="assets/wh.css?v=N">
 <link rel="stylesheet" href="assets/mobile.css?v=N">
+<script src="assets/image-slot.js?v=N"></script> <!-- only on pages using <image-slot> -->
 <script src="assets/ps.js?v=N"></script>
 ```
 Later files win ties in the cascade — see [conventions.md](conventions.md) for the full cascade

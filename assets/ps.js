@@ -105,10 +105,14 @@
     if(navMount) navMount.innerHTML = navHTML();
     var footMount = document.getElementById("ps-footer");
     if(footMount) footMount.innerHTML = footHTML();
-    var va = document.createElement('script');
-    va.defer = true;
-    va.src = '/_vercel/insights/script.js';
-    document.head.appendChild(va);
+    onIdle(function(){
+      if(location.hostname === "localhost" || location.hostname === "127.0.0.1") return;
+      if(document.querySelector('script[src="/_vercel/insights/script.js"]')) return;
+      var va = document.createElement('script');
+      va.defer = true;
+      va.src = '/_vercel/insights/script.js';
+      document.head.appendChild(va);
+    });
   }
 
   /* ---------- nav behaviour ---------- */
@@ -131,10 +135,16 @@
     }
     if(nav && wrap){
       var last = 0;
+      var ticking = false;
       window.addEventListener("scroll", function(){
-        var y = window.scrollY;
-        if(y > last && y > 260){ wrap.classList.add("hide"); } else { wrap.classList.remove("hide"); }
-        last = y;
+        if(ticking) return;
+        ticking = true;
+        requestAnimationFrame(function(){
+          var y = window.scrollY || window.pageYOffset || 0;
+          if(y > last && y > 260){ wrap.classList.add("hide"); } else { wrap.classList.remove("hide"); }
+          last = y;
+          ticking = false;
+        });
       }, {passive:true});
     }
   }
@@ -620,11 +630,20 @@
     try{ window.parent.postMessage({type:"__edit_mode_available"},"*"); }catch(e){}
   }
 
+  function onIdle(fn, timeout){
+    if("requestIdleCallback" in window){
+      window.requestIdleCallback(fn, {timeout: timeout || 1800});
+    }else{
+      window.setTimeout(fn, timeout || 120);
+    }
+  }
+
   /* ---------- boot ---------- */
   twApply(twRead());
   function init(){
     inject(); navBehaviour(); heroSlider(); faq(); reveal();
-    filters(); chips(); cart(); forms(); anchors(); nectarSignature();
+    filters(); chips(); cart(); forms(); anchors();
+    onIdle(nectarSignature, 1200);
     // Tweaks panel is only useful inside an edit/preview parent frame.
     // Skip building it on regular page loads to avoid dead DOM overhead.
     if(window.parent !== window) buildPanel();

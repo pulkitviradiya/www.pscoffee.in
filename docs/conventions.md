@@ -101,15 +101,16 @@ when adding a new form.
   check — this local preview setup has shown stale renders even after a cache-busted reload.
 
 ### Asset version bumping
-`wh.css`, `mobile.css`, and `ps.js` are each cache-busted independently with their own `?v=N` in
-every HTML file (`ps.css` is not versioned — it never needs a bump). **Every time you edit one of
-the three, bump only that file's version number by 1 across every HTML file that references it**:
+`wh.css`, `mobile.css`, `ps.js`, and `image-slot.js` are each cache-busted independently with
+their own `?v=N` (`ps.css` is not versioned — it never needs a bump). **Every time you edit one
+of those four versioned assets, bump only that file's version number by 1 across every HTML file
+that references it**:
 ```bash
 sed -i '' 's/wh.css?v=N/wh.css?v=M/g' $(find . -name "*.html" | grep -v node_modules)
 ```
 Always read the current N from any live `*.html` file first — [MEMORY.md](../MEMORY.md)'s
-version table can lag by one commit if a fix landed without updating it. Don't bump the other two
-files just because one changed.
+version table can lag by one commit if a fix landed without updating it. Don't bump unrelated
+versioned files just because one changed.
 
 ---
 

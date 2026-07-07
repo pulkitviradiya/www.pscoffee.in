@@ -1,4 +1,4 @@
-import { google } from 'googleapis';
+import { getSheetsClient, getSheetTitles, getSpreadsheetMeta } from './google-sheets.js';
 
 export default async function handler(req, res) {
   // Debug-only endpoint — must be called with the admin key
@@ -10,19 +10,11 @@ export default async function handler(req, res) {
   }
 
   try {
-    const credentials = JSON.parse(
-      Buffer.from(process.env.GOOGLE_CREDENTIALS_B64, 'base64').toString('utf8')
-    );
-    const auth = new google.auth.GoogleAuth({
-      credentials,
-      scopes: ['https://www.googleapis.com/auth/spreadsheets.readonly'],
-    });
-
-    const sheets = google.sheets({ version: 'v4', auth });
+    const sheets = getSheetsClient(['https://www.googleapis.com/auth/spreadsheets.readonly']);
     const spreadsheetId = process.env.GOOGLE_SHEETS_ID;
 
-    const meta = await sheets.spreadsheets.get({ spreadsheetId });
-    const tabNames = meta.data.sheets.map(s => s.properties.title);
+    const meta = await getSpreadsheetMeta(sheets, spreadsheetId);
+    const tabNames = getSheetTitles(meta);
 
     return res.status(200).json({
       status: 'connected',

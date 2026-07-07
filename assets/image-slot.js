@@ -15,7 +15,7 @@
 
   class ImageSlot extends HTMLElement {
     static get observedAttributes() {
-      return ['src', 'mobile-src', 'data-mobile-src', 'placeholder', 'fit'];
+      return ['src', 'mobile-src', 'data-mobile-src', 'placeholder', 'fit', 'loading', 'fetchpriority'];
     }
 
     connectedCallback() {
@@ -48,16 +48,28 @@
       const src = (isMobile && mobileSrc) || this.getAttribute('src') || '';
       const placeholder = this.getAttribute('placeholder') || '';
       const fit = this.getAttribute('fit') || 'cover';
+      const explicitLoading = this.getAttribute('loading');
+      const rect = this.getBoundingClientRect();
+      const nearViewport = rect.top < window.innerHeight * 1.4 && rect.bottom > -120;
+      const loadingMode = explicitLoading || (nearViewport ? 'eager' : 'lazy');
 
       if (src) {
         this._clearPlaceholder();
         if (!this._img) {
           this._img = document.createElement('img');
           this._img.style.cssText = 'width:100%;height:100%;display:block';
+          this._img.decoding = 'async';
+          this._img.loading = loadingMode;
+          if (this.hasAttribute('fetchpriority')) {
+            this._img.fetchPriority = this.getAttribute('fetchpriority');
+          }
           this.appendChild(this._img);
         }
         this._img.style.objectFit = fit;
         this._img.alt = placeholder;
+        if (this._img.loading !== loadingMode) this._img.loading = loadingMode;
+        const priority = this.getAttribute('fetchpriority');
+        if (priority && this._img.fetchPriority !== priority) this._img.fetchPriority = priority;
         if (this._img.getAttribute('src') !== src) this._img.setAttribute('src', src);
       } else {
         this._clearImage();

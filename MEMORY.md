@@ -8,7 +8,8 @@ Read this at the start of every session. Use silently to inform work.
 
 | File | Version |
 |---|---|
-| `assets/ps.js` | v37 |
+| `assets/ps.js` | v38 |
+| `assets/image-slot.js` | v3 |
 | `assets/wh.css` | v52 |
 | `assets/mobile.css` | v33 |
 
