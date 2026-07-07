@@ -1330,7 +1330,6 @@
   .wh-page-rail header p,
   .wh-page-list header p,
   .tag,
-  .badge,
   .menu-kcal {
     font-family: var(--font-body, "Space Grotesk", sans-serif) !important;
     font-size: 11px !important;

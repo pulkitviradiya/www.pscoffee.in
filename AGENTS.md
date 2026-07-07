@@ -1,6 +1,6 @@
-# P.S. Coffee — Contributor Guide (Claude & Codex)
+# P.S. Coffee — Contributor Guide (Codex & Codex)
 
-This file is the source of truth for both Claude Code and Codex when working on this repo.
+This file is the source of truth for both Codex and Codex when working on this repo.
 Read it fully before making any change. Both agents push to the same GitHub repo → Vercel.
 
 ---
@@ -12,7 +12,7 @@ At the start of every session, read MEMORY.md before responding. Use what you fi
 When told "remember this," write the information to MEMORY.md immediately and confirm you've done it.
 
 **Where things go:** Apply two tests when deciding where to save something.
-- Test 1: Does it prescribe behaviour? Look for words like "always," "never," "before doing X, do Y." If yes, add it to this file (CLAUDE.md) under the appropriate section.
+- Test 1: Does it prescribe behaviour? Look for words like "always," "never," "before doing X, do Y." If yes, add it to this file (AGENTS.md) under the appropriate section.
 - Test 2: Does it describe a fact about the world that could change? Contact details, project status, decisions, things explicitly asked to be remembered. If yes, add it to MEMORY.md. When unsure, suggest which file you think it belongs in and ask to confirm.
 
 **Memory hygiene rules:**
@@ -291,7 +291,7 @@ All site images live in `assets/photos/site/` (webp format, naming convention:
 
 Already in `.gitignore` — but do not force-add them:
 
-- `.claude/` — Claude Code internal session config
+- `.Codex/` — Codex internal session config
 - `.image-slots.state.json` — tool-generated state file
 - `.DS_Store` — macOS metadata
 - `node_modules/` — no dependencies exist, but just in case
@@ -318,7 +318,7 @@ excluded from the sitemap.
 ## Menu — rules
 
 ### Source of truth for items and prices
-The COGS_Master xlsx is authoritative for menu items and selling prices. Before any menu update, read `MEMORY.md` for the file path. Claude sandbox cannot read from `~/Documents` directly — copy the xlsx to the repo root, use it, then delete it before committing.
+The COGS_Master xlsx is authoritative for menu items and selling prices. Before any menu update, read `MEMORY.md` for the file path. Codex sandbox cannot read from `~/Documents` directly — copy the xlsx to the repo root, use it, then delete it before committing.
 
 ### Adding or removing a menu filter category
 Do all five steps in one commit:

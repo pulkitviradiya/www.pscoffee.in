@@ -208,27 +208,6 @@ a{color:inherit;text-decoration:none}
 .sec-head h2 .tc{color:var(--tc)}
 .sec-head p{color:var(--muted);max-width:60ch}
 
-/* ---- badges & pills ---- */
-.badge{
-  display:inline-flex;align-items:center;gap:10px;
-  font-family:var(--font-body);font-weight:700;font-size:12px;
-  padding:9px 15px;border:1px solid var(--line-2);border-radius:999px;
-  background:var(--surface);color:var(--ink);
-}
-.badge .b-ico{width:18px;height:18px;display:grid;place-items:center;color:var(--tc)}
-.badge .b-sub{color:var(--muted);text-transform:uppercase;letter-spacing:.12em;font-size:10px}
-.badge.solid{background:var(--ink);color:var(--color-steam-cream);border-color:var(--ink)}
-.badge.accent{background:var(--tc-tint);border-color:transparent;color:var(--tc-deep)}
-
-.callout{
-  position:absolute;display:grid;place-items:center;text-align:center;
-  width:118px;height:118px;border-radius:50%;background:var(--tc);color:var(--color-steam-cream);
-  font-family:var(--font-display);line-height:1.05;padding:10px;
-  box-shadow:0 14px 30px -10px rgba(232,64,12,.55);transform:rotate(-8deg);
-}
-.callout .big{font-weight:800;font-size:26px}
-.callout .sm{font-size:9px;text-transform:uppercase;letter-spacing:.12em;opacity:.92;margin-top:3px}
-
 .tag{
   display:inline-flex;font-family:var(--font-body);font-weight:700;font-size:10px;
   text-transform:uppercase;letter-spacing:.06em;padding:5px 9px;border-radius:999px;
@@ -311,29 +290,6 @@ a{color:inherit;text-decoration:none}
 .drawer a .n{font-family:var(--font-body);font-weight:600;font-size:13px;color:var(--tc);letter-spacing:.1em}
 .drawer a:hover{color:var(--tc)}
 .page-top{height:var(--nav-h)}
-
-/* ---- hero slider ---- */
-.hero{position:relative;background:linear-gradient(180deg,var(--panel) 0%,var(--paper) 100%)}
-.hero-slides{position:relative}
-.hero-slide{display:none}
-.hero-slide.on{display:block}
-@media (prefers-reduced-motion:no-preference){
-  .hero-slide.on{animation:heroIn .6s cubic-bezier(.2,0,0,1)}
-}
-@keyframes heroIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
-.hero-grid{display:grid;grid-template-columns:1.04fr .96fr;gap:clamp(28px,4vw,56px);align-items:center;min-height:min(72vh,640px)}
-.hero h1{font-family:var(--font-display);font-weight:800;font-stretch:expanded;font-size:clamp(40px,6.4vw,82px);line-height:.96;letter-spacing:-.03em}
-.hero h1 .tc{color:var(--tc)}
-.hero .lede{margin-top:24px;max-width:46ch}
-.hero .cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px}
-.hero-figure{position:relative;border-radius:24px;background:radial-gradient(120% 120% at 70% 20%,var(--surface) 0%,var(--panel-2) 100%);aspect-ratio:1/1;overflow:hidden;box-shadow:var(--shadow)}
-.hero-figure image-slot{width:100%;height:100%}
-.hero-badges{position:absolute;inset:0;pointer-events:none}
-.hero-badges .badge{position:absolute;top:22px;left:22px;pointer-events:auto;box-shadow:var(--shadow-sm)}
-.hero-badges .callout{top:24px;right:24px}
-.hero-dots{display:flex;gap:9px;margin-top:30px}
-.hero-dots button{width:34px;height:4px;border-radius:99px;border:0;background:var(--line-2);cursor:pointer;transition:.25s;padding:0}
-.hero-dots button.on{background:var(--ink);width:54px}
 
 /* ---- trust strip ---- */
 .trust{border-block:1px solid var(--line);background:var(--paper)}
