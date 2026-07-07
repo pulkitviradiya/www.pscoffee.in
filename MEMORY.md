@@ -10,7 +10,7 @@ Read this at the start of every session. Use silently to inform work.
 |---|---|
 | `assets/ps.js` | v38 |
 | `assets/image-slot.js` | v3 |
-| `assets/wh.css` | v52 |
+| `assets/wh.css` | v57 |
 | `assets/mobile.css` | v33 |
 
 Always read the current version from any `*.html` before bumping.
@@ -52,6 +52,10 @@ Always read the current version from any `*.html` before bumping.
 ---
 
 ## Session Decisions
+
+### 2026-07-08 (wh.css cleanup)
+- Cleaned `assets/wh.css` in safe, computed-style-verified slices: removed dead legacy WatchHouse sections plus redundant legal/blog, homepage banner, menu-card, and about-pillar duplicate rules without changing rendered computed styles.
+- Bumped `wh.css` through v57 and verified brace balance plus exact duplicate scan (`exactDuplicateRuleGroups: 0`); `docs/architecture.md` and `docs/tasks.md` now reflect the cleanup.
 
 ### 2026-07-07 (full design-system reference doc)
 - User had attached the "P.S. Coffee - Design system" brand kit (a 45-section Claude Design

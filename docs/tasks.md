@@ -19,6 +19,9 @@ matches as of 2026-07-07.
 _(none open)_
 
 ## Completed (recent, for context — see MEMORY.md for full history)
+- Cleaned `wh.css` in safe, computed-style-verified slices: removed dead legacy WatchHouse
+  sections and exact duplicate live selector groups; `wh.css` duplicate scan now reports zero
+  exact duplicate rule groups — 2026-07-08.
 - Full brand-kit audit across colour system, typography, iconography, components, and content
   layout (blog post structure) — completed across sessions 2026-07-05 through 2026-07-07.
 - `Logo Files/` (root) is now tracked in git (2026-07-07) — reverses the earlier 2026-07-06

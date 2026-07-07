@@ -28,7 +28,8 @@ assets/
   ps.css                Canonical design-system layer: :root tokens (colour/spacing/radius/type),
                          @font-face declarations, nav/footer base structure, buttons, badges, forms
                          (~600 lines, NOT cache-bust versioned)
-  wh.css                The dominant stylesheet (~7,600 lines). Named after the "WatchHouse"
+  wh.css                The dominant stylesheet (~6,900 lines after the 2026-07-08 cleanup).
+                         Named after the "WatchHouse"
                          template this site was originally built on — despite the name it drives
                          most real layout: heroes, page cards, menu, footer overrides, blog posts,
                          matcha colour swaps. Cache-busted with ?v=N in every blog HTML file.
