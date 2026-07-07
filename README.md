@@ -15,7 +15,9 @@ menu.html                Menu (coffee, matcha, protein, food)
 matcha.html              Matcha landing
 pack.html                P.S. Pack subscription
 pack-enquiry.html        Pack enquiry form
-app.html                 App page
+app.html                 Marketing landing page for the not-yet-shipped native mobile app
+                         (App Store / Google Play badges) — not the app itself; no native
+                         app codebase exists in this repo
 pods.html                Pod model / locations
 about.html               Brand story
 partnership.html         Partner / host a Pod

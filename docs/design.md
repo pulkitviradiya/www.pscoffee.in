@@ -3,7 +3,12 @@
 Canonical tokens live in `assets/ps.css`'s `:root` block (~lines 37-154) — that block is the
 single source of truth for colour, spacing, radius, and type scale. Don't hardcode a hex/px value
 if a token already exists for it. This file summarizes the *rules* around those tokens (not
-obvious from the token names alone).
+obvious from the token names alone), as they're currently **implemented in this codebase**.
+
+For the complete, un-abridged brand kit (all 45 sections — brand voice, full colour/type/spacing
+specs, logo system, photography direction, digital/motion rules, print collateral) see
+[design-system.md](design-system.md). That file is the spec this implementation is measured
+against; audit against it directly rather than asking for the brand kit to be re-attached.
 
 ---
 
@@ -47,6 +52,9 @@ obvious from the token names alone).
 - All three are self-hosted `.woff2` in `assets/fonts/brand/`. If you see `"Archivo"`,
   `"Hanken Grotesk"`, `'Lora'`, `'Inter'`, or any other family name hardcoded anywhere, it's a
   leftover from the original template — replace with the matching `var(--font-*)` token.
+- Original Google Fonts source (variable `.ttf` + SIL OFL licence + readme) lives in
+  `assets/fonts/source/` for provenance — not loaded by any CSS; regenerate the `brand/` woff2s
+  from there if a different subset/format is ever needed.
 
 ### Spacing & radius scale
 - Spacing: 8px-based scale, `--space-1`(4px) through `--space-16`(64px).
@@ -98,9 +106,18 @@ Transition durations are capped at 400ms.
   reordering the HTML — current order values documented there, re-read before editing.
 - Bold (non-`.is-light`) mobile heroes render edge-to-edge rather than card-inset.
 
-## App (app.html)
-`app.html` is a marketing landing page promoting a not-yet-shipped native mobile app (App Store /
-Google Play badges in `assets/icons/app-store-icon.png` and `google-play-store-icon.webp`) — it
-is not a separate native app codebase in this repo. It follows the same design system, tokens,
-and page-template structure (`.wh-page-hero`) as every other content page; no app-specific design
-rules exist beyond what's documented above.
+## App (native mobile app — iOS/Android)
+This section is reserved for the design system of the actual P.S. Coffee **native mobile app**
+(the ordering app promoted on `app.html`'s marketing page) — a distinct product from this
+repo's responsive website. **No native app codebase exists in this repo yet**, so there are no
+real app-specific tokens, components, or platform (iOS/Android) conventions to document here —
+nothing below is invented. Once app design work starts, its tokens/components/platform rules
+belong here, not in the Mobile (web) section above, which covers the responsive breakpoint of
+*this* website, not the app.
+
+_(empty — fill in once native app design work begins)_
+
+> Note: `app.html` itself (the marketing page advertising the app) is a normal content page of
+> this website, not the app — see [README.md](../README.md#pages) for that page's description.
+> Don't confuse the two: "Mobile" above = this site's small-viewport responsive layout; "App"
+> here = the separate native product that doesn't exist in this codebase yet.

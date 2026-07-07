@@ -39,15 +39,18 @@ assets/
   mobile.js               Mobile-only scripts.
   image-slot.js           Responsive image-loading utility.
   fonts/brand/             Self-hosted Bricolage Grotesque / Space Grotesk / Instrument Serif (woff2) —
-                           the 3 fonts actually in use, referenced by ps.css @font-face.
-  fonts/ (root)            4 legacy .otf files (Balto-Book, Balto-Medium, TiemposHeadline-Medium,
-                           WatchHouseSerif-Medium) left over from the original template. Still
-                           @font-face'd in wh.css and fed into --wh-serif/--wh-sans/--wh-logo-serif,
-                           but a later :root block in wh.css (~line 6291) overrides all three
-                           tokens back to Bricolage/Space Grotesk — so these 4 files are currently
-                           unused in the rendered site. See docs/tasks.md.
-  icons/                   Favicons, app-store badges, logo/monogram lockups (Terracotta + Ceremonial
-                           colour profiles).
+                           the 3 fonts actually in use, referenced by ps.css @font-face. (4 dead
+                           legacy .otf files that lived at assets/fonts/ root — Balto, Tiempos
+                           Headline, WatchHouse Serif — were removed 2026-07-07; see MEMORY.md.)
+  fonts/source/            Original Google Fonts source drop for the 3 brand fonts (variable
+                           .ttf + OFL.txt licence + README per family) — provenance/licence
+                           reference only, NOT loaded by any CSS. The actual production files
+                           are the subset .woff2s in fonts/brand/ above; if those ever need to be
+                           regenerated (e.g. a different subset/format), this is the source to
+                           regenerate them from. Added 2026-07-07.
+  icons/                   Favicons, app-store/Google-Play badges (app-store-icon.png,
+                           google-play-store-icon.webp — used on app.html, see below), logo/
+                           monogram lockups (Terracotta + Ceremonial colour profiles).
   photos/site/             Optimised site images, webp, cached immutably by Vercel for 1 year.
   photos/ (root)           P.S. Pass product images (webp), used only on pack.html.
 blog/                     10 individual blog post HTML files (flat, no further nesting).
