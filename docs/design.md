@@ -42,6 +42,15 @@ against; audit against it directly rather than asking for the brand kit to be re
   `--color-bright-whisk` on matcha pages. If a highlight looks wrong, fix the phrase list or the
   bold-ground colour list in `ps.js` — don't add a CSS-only exception (tried three times before
   landing on this runtime check).
+- Any inline text highlight/mark with background + padding must include both
+  `box-decoration-break:clone` and `-webkit-box-decoration-break:clone`. This is mandatory, not a
+  polish detail: without it, a wrapped highlight paints as one merged box and bleeds vertically
+  into adjacent lines.
+- Price currency has its own colour rule: wrap only the `₹` glyph in a span and leave the
+  numeric price colour untouched. On Steam Cream, Oat, and other light neutral grounds, the glyph
+  is Deep Ceremonial `#3D6B4A`; on Dark Roast, Terracotta, Deep Ceremonial, or other bold/dark
+  grounds, it is Steam Cream `#FAF6EE`. Existing all-Steam-Cream price lines on dark panels are
+  already compliant and do not need extra wrapping.
 
 ### Typography — three fonts, no exceptions
 - `--font-display` → **Bricolage Grotesque** — headlines, prices, hero numbers. Weight 800

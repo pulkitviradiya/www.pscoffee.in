@@ -83,6 +83,9 @@ Mark the one word/phrase a headline is *really about*, like a highlighter, not a
 - **Pick the argument, not the first word.** Read the whole sentence for what it's actually arguing, then mark that phrase (the twist, the trade-off, the number) — defaulting to the first word/noun is the most common misuse.
 - **Matcha context**: swap fill to Bright Whisk `#8FB87A` + Dark Roast text (never Nectar Gold on matcha content).
 - **Neutral ground only**: never on a Terracotta/Ceremonial bold panel — fights the reversed cream type instead of joining it. This is implemented at runtime in this repo via `nectarSignature()`/`sitsOnBoldGround()` in `ps.js` — see [conventions.md](conventions.md).
+- **Wrapped-line safety**: every inline highlight/mark that uses background + padding must include
+  `box-decoration-break:clone` and `-webkit-box-decoration-break:clone`. Without both properties,
+  wrapped phrases can paint as one merged box instead of clean per-line rounded boxes.
 
 ### 11 · Terracotta × Ceremonial in Practice
 1. One full-bleed bold block per screen, maximum (hero counts as one; one mid-page callout can be the second — that's the ceiling).
@@ -121,6 +124,13 @@ Three typefaces, clearly ranked:
 
 ### 17 · Typography by Component
 Hero H1: Bricolage 800, 32–56px · Section H2/card H3: Bricolage 700–800, 18–30px · Nav/buttons/labels/table cells/menu items: Space Grotesk 500–600, 13–15px · Body paragraphs: Space Grotesk 400, 14–16px, 1.5–1.6 line-height · Eyebrow/tag/badge: Space Grotesk 600–700, 10–12px tracked uppercase · Pull-quote/tagline: Instrument Serif italic, 18–34px (the only serif use) · Price/stat/number: Bricolage 800 + small Space Grotesk unit label · FAQ Q: Space Grotesk 600 Dark Roast, A: Space Grotesk 400 Espresso Brown.
+
+**Price currency glyph**: the `₹` symbol is treated separately from the number. Wrap only the
+glyph, for example `<span class="ps-price-currency">₹</span>89`, and keep the rest of the number in
+its original price colour. On Steam Cream, Oat, and light neutral grounds, the glyph is Deep
+Ceremonial `#3D6B4A`; on Dark Roast, Terracotta, Deep Ceremonial, and other bold/dark grounds, it is
+Steam Cream `#FAF6EE`. If the whole price line is already Steam Cream on a dark panel, leave it as
+is.
 
 **Menu card cap**: four levels max — name (Bricolage 700) → one-line description (Space Grotesk 400) → one Terracotta P.S. note (Space Grotesk 600) → divider + price row. Fold any second subtitle into the single description line.
 

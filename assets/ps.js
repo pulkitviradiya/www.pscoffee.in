@@ -62,8 +62,7 @@
         '<div class="f-top">'+
           '<div class="f-col f-brand">'+
             '<div class="display ps-wordmark">'+
-              '<img class="ps-logo-img ps-logo-footer-mono" src="'+localHref("assets/icons/ps-coffee_monogram_terracotta_flat.png")+'" alt="">'+
-              '<img class="ps-logo-img ps-logo-footer" src="'+localHref("assets/icons/ps-coffee_wordmark_terracotta.png")+'" alt="P.S. Coffee">'+
+              '<img class="ps-logo-img ps-logo-footer" src="'+localHref("assets/icons/ps-coffee_wordmark_steam%20cream.png")+'" alt="P.S. Coffee">'+
             '</div>'+
             '<a href="'+localHref("about.html")+'">Story</a><a href="'+localHref("blogs.html")+'">Blogs</a><a href="'+localHref("events.html")+'">Events</a><a href="'+localHref("join.html")+'">Join Us</a><a href="'+localHref("join.html")+'">Careers</a><a href="'+localHref("partnership.html")+'">Partner</a>'+
             '<a href="https://www.thebarista.school" target="_blank" rel="noopener">Barista School ↗</a>'+
@@ -433,11 +432,22 @@
     if(before) frag.appendChild(document.createTextNode(before));
     var mark = document.createElement("span");
     mark.className = "nectar-highlight";
+    hardenInlineHighlight(mark);
     mark.textContent = hit;
     frag.appendChild(mark);
     if(after) frag.appendChild(document.createTextNode(after));
     node.parentNode.replaceChild(frag, node);
     return true;
+  }
+
+  function hardenInlineHighlight(mark){
+    if(!mark || !mark.style) return;
+    mark.style.boxDecorationBreak = "clone";
+    mark.style.setProperty("-webkit-box-decoration-break", "clone");
+  }
+
+  function hardenAllInlineHighlights(){
+    document.querySelectorAll(".nectar-highlight, mark, .display .highlight, .wh-h1 .highlight, .wh-h2 .highlight").forEach(hardenInlineHighlight);
   }
 
   function highlightPhrase(el, phrase){
@@ -518,6 +528,7 @@
       ".journal-post-body h2",
       ".journal-index h1"
     ].join(",");
+    hardenAllInlineHighlights();
     document.querySelectorAll(selector).forEach(function(el){
       if(el.closest("#ps-nav, .footer, .drawer, .ps-pack-card, .menu-product-wh, .wh-fav-card")) return;
       if(el.querySelector(".nectar-highlight")) return;
@@ -532,6 +543,7 @@
       }
       highlightLeadPhrase(el);
     });
+    hardenAllInlineHighlights();
   }
 
   /* ============================================================

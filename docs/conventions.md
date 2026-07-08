@@ -175,3 +175,24 @@ versioned files just because one changed.
 Colour, typography, spacing/radius, and button/form rules are documented in
 [design.md](design.md) — check it before hardcoding a hex value, font name, or px value that
 already has a token.
+
+### Inline highlights
+
+Any inline text highlight/mark with a background and padding must include both
+`box-decoration-break:clone` and `-webkit-box-decoration-break:clone` in the rule or inline style
+that owns the highlight. This is non-negotiable: once a marked phrase wraps, browsers without
+these properties paint one merged background box that bleeds into adjacent lines.
+
+### Price currency glyphs
+
+When a visible price needs the rupee symbol styled independently, wrap only the `₹` glyph and leave
+the rest of the number in its original price colour. Use the shared currency class where possible:
+
+```html
+<strong><span class="ps-price-currency">₹</span>89</strong>
+```
+
+On light neutral grounds (`#FAF6EE`, `#F2EBD9`, or equivalent), the glyph is Deep Ceremonial
+`#3D6B4A`. On dark or bold grounds (`#3D2010`, `#E8400C`, `#3D6B4A`, or equivalent), the glyph is
+Steam Cream `#FAF6EE`. If the entire price line is already Steam Cream on a dark background, leave
+it unchanged.

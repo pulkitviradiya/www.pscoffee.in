@@ -1158,20 +1158,30 @@ body[data-page="home"] .footer {
   background: var(--color-linen);
   overflow: hidden;
 }
-.wh-product-img image-slot {
+.wh-product-img image-slot,
+.wh-product-img img {
   display: block;
   width: 100%;
   height: 100%;
 }
 .wh-product-img::before {
-  content: "○  Brew.   Filter";
+  content: "Brew / Filter";
   position: absolute;
   z-index: 1;
-  top: .75rem;
-  left: .85rem;
+  top: 12px;
+  left: 12px;
+  padding: 5px 10px;
+  border: 1px solid rgba(232, 220, 200, .72);
+  border-radius: var(--radius-pill);
+  background: rgba(250, 246, 238, .88);
+  color: var(--color-dark-roast);
   font-family: var(--wh-sans);
-  font-size: 12px;
-  font-weight: 500;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  line-height: 1;
+  text-transform: uppercase;
+  backdrop-filter: blur(8px);
 }
 .wh-product-img::after {
   content: "♡";
@@ -1731,21 +1741,29 @@ body[data-page="menu"] .page-top {
   height: 100%;
 }
 .menu-product-img::before {
-  content: "○  Brew.   House favourite.";
+  content: "Brew / Favourite";
   position: absolute;
   z-index: 1;
-  top: .75rem;
-  left: .85rem;
+  top: 12px;
+  left: 12px;
+  padding: 5px 10px;
+  border: 1px solid rgba(232, 220, 200, .72);
+  border-radius: var(--radius-pill);
+  background: rgba(250, 246, 238, .88);
   color: var(--color-dark-roast);
   font-family: var(--wh-sans);
-  font-size: 12px;
-  font-weight: 500;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  line-height: 1;
+  text-transform: uppercase;
+  backdrop-filter: blur(8px);
 }
 #menu-matcha .menu-product-img::before {
-  content: "○  Steep.   Matcha.";
+  content: "Steep / Matcha";
 }
 #menu-food .menu-product-img::before {
-  content: "○  Baked.   Food.";
+  content: "Baked / Food";
 }
 .menu-product-img::after {
   content: "♡";
@@ -2838,10 +2856,6 @@ body[data-page="menu"] .page-top {
 #menu-coffee header {
   border-top-color: var(--ps-terracotta) !important;
 }
-#menu-coffee .menu-product-img::before {
-  color: var(--ps-terracotta) !important;
-}
-
 #menu-matcha {
   margin-inline: var(--wh-gut);
   padding-inline: 0;
@@ -5489,6 +5503,127 @@ body[data-page] .footer .ps-wordmark-coffee {
   display: block;
 }
 
+/* App marketing page typography
+   ============================================================ */
+body[data-page="app"] .wh-page-hero.is-light,
+body[data-page="app"] .wh-page-hero.is-light .wh-page-hero-copy {
+  background: var(--color-terracotta) !important;
+  color: var(--color-steam-cream) !important;
+}
+
+body[data-page="app"] .wh-page-hero .wh-page-kicker {
+  color: rgba(250, 246, 238, .82) !important;
+  font-family: var(--font-body) !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  letter-spacing: .13em !important;
+  line-height: 1 !important;
+  text-transform: uppercase !important;
+}
+
+body[data-page="app"] .wh-page-hero h1 {
+  max-width: 660px;
+  color: var(--color-steam-cream) !important;
+  font-family: var(--font-display) !important;
+  font-size: clamp(54px, 5vw, 86px) !important;
+  font-weight: 800 !important;
+  letter-spacing: 0 !important;
+  line-height: .92 !important;
+}
+
+body[data-page="app"] .wh-page-hero-copy footer {
+  max-width: 740px;
+}
+
+body[data-page="app"] .wh-page-hero-copy footer p,
+body[data-page="app"] .wh-page-hero-copy footer a {
+  color: var(--color-steam-cream) !important;
+  font-family: var(--font-body) !important;
+  font-size: clamp(18px, 1.35vw, 22px) !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+}
+
+body[data-page="app"] .wh-page-hero-copy footer a {
+  border-bottom-color: rgba(250, 246, 238, .74);
+  text-decoration: none;
+}
+
+body[data-page="app"] .app-download-strip {
+  align-items: center;
+  padding-block: clamp(44px, 5.5vw, 80px);
+  background: var(--color-terracotta);
+  color: var(--color-steam-cream);
+}
+
+body[data-page="app"] .app-download-copy h2 {
+  max-width: 720px;
+  color: var(--color-steam-cream) !important;
+  font-family: var(--font-display) !important;
+  font-size: clamp(42px, 4.8vw, 76px);
+  font-weight: 800;
+  letter-spacing: 0;
+  line-height: .96;
+}
+
+body[data-page="app"] .app-store-badges {
+  gap: var(--space-3);
+}
+
+body[data-page="app"] .store-badge {
+  min-height: 68px;
+  border: 1px solid rgba(250, 246, 238, .62);
+  border-radius: var(--radius-md);
+  background: var(--color-steam-cream);
+  color: var(--color-dark-roast) !important;
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+body[data-page="app"] .store-badge small {
+  color: rgba(61, 32, 16, .64);
+  font-family: var(--font-body);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .11em;
+}
+
+body[data-page="app"] .app-waitlist-form .field span {
+  color: rgba(250, 246, 238, .82);
+  font-family: var(--font-body);
+  font-weight: 700;
+  letter-spacing: .12em;
+}
+
+body[data-page="app"] .app-waitlist-form input {
+  border-color: rgba(250, 246, 238, .74);
+  border-radius: var(--radius-md);
+  background: var(--color-steam-cream);
+  color: var(--color-dark-roast);
+  font-family: var(--font-body);
+  font-weight: 600;
+}
+
+body[data-page="app"] .app-waitlist-form input:focus {
+  border-color: var(--color-steam-cream);
+  box-shadow: 0 0 0 2px rgba(250, 246, 238, .38);
+}
+
+body[data-page="app"] .app-waitlist-form button {
+  border-color: var(--color-steam-cream);
+  border-radius: var(--radius-md);
+  background: var(--color-steam-cream);
+  color: var(--color-terracotta);
+  font-family: var(--font-body);
+  font-weight: 800;
+}
+
+body[data-page="app"] .app-waitlist-form button span {
+  color: var(--color-terracotta);
+}
+
 @media (max-width: 900px) {
   .app-download-strip {
     grid-template-columns: 1fr;
@@ -5690,6 +5825,8 @@ body[data-page="matcha"] .ps-our-story,
   font-size: 13px !important;
   font-weight: 600 !important;
   letter-spacing: 0 !important;
+  margin-inline: 0 !important;
+  padding-inline: 2px !important;
   text-transform: none !important;
 }
 
@@ -6539,6 +6676,8 @@ body[data-page="matcha"] .wh-page-hero footer a {
 
 .nectar-highlight {
   color: var(--ps-roast) !important;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
 
 .wh-page-hero:not(.is-light) .nectar-highlight,
@@ -6705,6 +6844,12 @@ body[data-page="menu"] .menu-product-price strong {
   line-height: 1 !important;
 }
 
+body[data-page="menu"] .menu-product-price strong .ps-price-currency,
+body[data-page="home"] .wh-product-card .ps-price-currency,
+.ps-price-currency {
+  color: var(--color-ceremonial-deep) !important;
+}
+
 body[data-page="menu"] .menu-kcal {
   right: 10px !important;
   bottom: 10px !important;
@@ -6801,7 +6946,8 @@ body[data-page="menu"] .menu-kcal {
   border-radius: var(--radius-lg, 14px) !important;
 }
 .ps-plan-ov-top h3,
-.ps-plan-price-block strong {
+.ps-plan-price-block strong,
+.ps-plan-price-block span {
   color: var(--color-steam-cream) !important;
 }
 .ps-plan-get {
@@ -6831,6 +6977,29 @@ body[data-page="matcha"] .wh-page-hero.is-light .wh-page-hero-copy footer a {
   border-color: var(--color-linen) !important;
   background: var(--color-steam-cream) !important;
   overflow: hidden !important;
+}
+
+/* Pack media overlays: reversed text on photography must stay Steam Cream.
+   Later generic price/stat and Nectar rules are correct elsewhere, but not
+   on top of the pass artwork. */
+body[data-page="pack"] .ps-pack-card-overlay,
+body[data-page="pack"] .ps-pack-card-overlay-title h4,
+body[data-page="pack"] .ps-pack-card-overlay-title p,
+body[data-page="pack"] .ps-pack-card-overlay .ps-pack-card-price strong,
+body[data-page="pack"] .ps-pack-card-overlay .ps-pack-card-price span,
+body[data-page="pack"] .ps-pack-card-overlay .ps-pack-card-math {
+  color: var(--color-steam-cream) !important;
+  text-shadow: 0 1px 18px rgba(26, 13, 8, .34) !important;
+}
+
+body[data-page="pack"] .ps-pack-card-overlay-title p,
+body[data-page="pack"] .ps-pack-card-overlay .ps-pack-card-price span,
+body[data-page="pack"] .ps-pack-card-overlay .ps-pack-card-math {
+  opacity: .86 !important;
+}
+
+body[data-page="pack"] .ps-pack-card-overlay .ps-pack-card-validity {
+  text-shadow: none !important;
 }
 
 /* ============================================================
@@ -6882,7 +7051,8 @@ body[data-page] .footer .f-mosaic small {
 }
 body[data-page] .footer .f-bot,
 body[data-page="home"] .footer .f-bot {
-  border-top: 1px solid var(--color-ceremonial-deep) !important;
+  border-top: 1px solid var(--color-steam-cream) !important;
+  padding-top: 12px !important;
 }
 body[data-page] .footer .f-radhe,
 body[data-page="home"] .footer .f-radhe {
@@ -6916,4 +7086,529 @@ body[data-page] .footer .f-email .news button,
 body[data-page="home"] .footer .f-email .news input,
 body[data-page="home"] .footer .f-email .news button {
   border-color: rgba(250, 246, 238, .35) !important;
+}
+
+/* Homepage feedback panel: neutral ground, Nectar emphasis, and a
+   moving prompt strip so the section feels like the rest of the system. */
+body[data-page="home"] .ps-feedback {
+  position: relative;
+  display: grid !important;
+  grid-template-columns: minmax(260px, .7fr) minmax(0, 1fr) !important;
+  gap: 0 !important;
+  margin: clamp(44px, 5vw, 76px) var(--wh-gut) clamp(64px, 7vw, 104px) !important;
+  border: 1px solid var(--ps-linen) !important;
+  border-radius: var(--radius-lg, 14px) !important;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgba(251, 239, 212, .72), rgba(242, 235, 217, .9) 46%, rgba(250, 246, 238, .86) 100%),
+    var(--ps-oat) !important;
+  color: var(--ps-roast) !important;
+}
+
+body[data-page="home"] .ps-feedback::before {
+  content: "P.S.";
+  position: absolute;
+  right: clamp(22px, 4vw, 58px);
+  top: clamp(18px, 3vw, 42px);
+  color: rgba(232, 64, 12, .09);
+  font-family: var(--wh-serif);
+  font-size: clamp(80px, 13vw, 170px);
+  font-weight: 800;
+  letter-spacing: -.08em;
+  line-height: .8;
+  pointer-events: none;
+}
+
+body[data-page="home"] .ps-feedback-ticket {
+  position: relative;
+  min-width: 0 !important;
+  padding: clamp(38px, 5vw, 74px) clamp(24px, 4vw, 56px) !important;
+  border-right: 1px solid var(--ps-linen) !important;
+  background:
+    linear-gradient(180deg, rgba(251, 239, 212, .72), rgba(250, 246, 238, .96) 64%),
+    var(--ps-steam) !important;
+}
+
+body[data-page="home"] .ps-feedback-eyebrow,
+body[data-page="home"] .ps-feedback-body .kicker {
+  color: var(--ps-terracotta) !important;
+  font-family: var(--wh-sans) !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: .14em !important;
+  line-height: 1.2 !important;
+  text-transform: uppercase !important;
+}
+
+body[data-page="home"] .ps-feedback-hero {
+  margin: 0 !important;
+  color: var(--ps-roast) !important;
+  font-family: var(--wh-serif) !important;
+  font-size: clamp(58px, 8.5vw, 128px) !important;
+  font-weight: 800 !important;
+  line-height: .86 !important;
+  letter-spacing: -.055em !important;
+}
+
+body[data-page="home"] .ps-feedback-hero em {
+  display: inline-block !important;
+  margin-top: .18em !important;
+  padding: 5px 12px 7px !important;
+  border-radius: var(--radius-sm, 6px) !important;
+  background: var(--ps-nectar) !important;
+  color: var(--ps-roast) !important;
+  font-family: var(--ps-serif, "Instrument Serif", Georgia, serif) !important;
+  font-size: .42em !important;
+  font-style: italic !important;
+  font-weight: 400 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+}
+
+body[data-page="home"] .ps-feedback-body {
+  position: relative;
+  z-index: 1;
+  padding: clamp(42px, 5vw, 78px) clamp(28px, 5vw, 72px) !important;
+}
+
+body[data-page="home"] .ps-feedback-body h3 {
+  max-width: 22ch;
+  margin: 0 0 1rem !important;
+  color: var(--ps-roast) !important;
+  font-family: var(--wh-serif) !important;
+  font-size: clamp(32px, 4.3vw, 66px) !important;
+  font-weight: 800 !important;
+  line-height: .95 !important;
+  letter-spacing: -.045em !important;
+}
+
+body[data-page="home"] .ps-feedback-body p {
+  max-width: 58ch !important;
+  margin: 0 0 1.6rem !important;
+  color: var(--ps-espresso) !important;
+  font-size: clamp(15px, 1.15vw, 17px) !important;
+  font-weight: 400 !important;
+  line-height: 1.58 !important;
+}
+
+body[data-page="home"] .ps-feedback-cta {
+  display: inline-flex !important;
+  justify-content: space-between !important;
+  min-width: min(360px, 100%) !important;
+  padding: 14px 18px !important;
+  border: 1.5px solid var(--ps-terracotta) !important;
+  border-radius: var(--radius-md, 9px) !important;
+  background: var(--ps-terracotta) !important;
+  color: var(--ps-steam) !important;
+  font-family: var(--wh-sans) !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+}
+
+body[data-page="home"] .ps-feedback-marquee {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 0;
+  padding: 13px 0;
+  border-top: 1px solid var(--ps-linen);
+  background: var(--ps-nectar-wash);
+  color: var(--ps-roast);
+  font-family: var(--wh-sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .16em;
+  line-height: 1;
+  overflow: hidden;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+body[data-page="home"] .ps-feedback-marquee-track {
+  flex: 0 0 auto;
+  display: flex;
+  gap: clamp(22px, 2.6vw, 36px);
+  min-width: max-content;
+  padding-inline: clamp(22px, 2.6vw, 36px);
+  animation: ps-feedback-marquee 9s linear infinite;
+  will-change: transform;
+}
+
+body[data-page="home"] .ps-feedback-marquee span {
+  flex: 0 0 auto;
+}
+
+@keyframes ps-feedback-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body[data-page="home"] .ps-feedback-marquee-track {
+    animation: none;
+  }
+}
+
+/* Footer image reveal: let the photo scroll almost fully into view, then
+   float the footer over only the lower edge instead of hiding the image. */
+body[data-page="home"] .wh-footer-banner {
+  height: clamp(560px, 64vh, 760px) !important;
+}
+
+body[data-page="home"] #ps-footer {
+  margin-top: clamp(-72px, -8vh, -52px) !important;
+  position: relative;
+  z-index: 2;
+  padding: 0 var(--wh-gut) var(--wh-gut) !important;
+}
+
+body[data-page="home"] #ps-footer .footer {
+  border-radius: var(--radius-lg, 14px) var(--radius-lg, 14px) 0 0 !important;
+  transform-origin: center bottom;
+  transition: box-shadow 280ms ease, transform 280ms ease;
+  will-change: transform;
+  box-shadow: 0 -18px 44px rgba(20, 11, 6, .16) !important;
+}
+
+@supports (animation-timeline: view()) {
+  body[data-page="home"] .wh-footer-banner image-slot img {
+    animation: ps-footer-photo-drift linear both;
+    animation-range: entry 0% exit 100%;
+    animation-timeline: view();
+    transform-origin: center;
+    will-change: transform;
+  }
+
+  body[data-page="home"] #ps-footer .footer {
+    animation: ps-footer-float-in linear both;
+    animation-range: entry 0% entry 76%;
+    animation-timeline: view();
+  }
+}
+
+@keyframes ps-footer-float-in {
+  0% {
+    opacity: .82;
+    transform: translateY(42px) scale(.982);
+    box-shadow: 0 -6px 22px rgba(20, 11, 6, .08);
+  }
+  55% {
+    opacity: .96;
+    transform: translateY(14px) scale(.994);
+    box-shadow: 0 -14px 34px rgba(20, 11, 6, .13);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    box-shadow: 0 -18px 44px rgba(20, 11, 6, .16);
+  }
+}
+
+@keyframes ps-footer-photo-drift {
+  from { transform: scale(1.045) translateY(-12px); }
+  to { transform: scale(1.02) translateY(12px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body[data-page="home"] .wh-footer-banner image-slot img,
+  body[data-page="home"] #ps-footer .footer {
+    animation: none !important;
+    transform: none !important;
+  }
+}
+
+@media (max-width: 760px) {
+  body[data-page="home"] .ps-feedback {
+    grid-template-columns: 1fr !important;
+    margin-inline: var(--mobile-gut, 16px) !important;
+  }
+  body[data-page="home"] .ps-feedback-ticket {
+    border-right: 0 !important;
+    border-bottom: 1px solid var(--ps-linen) !important;
+  }
+  body[data-page="home"] .ps-feedback-cta {
+    width: 100%;
+  }
+  body[data-page="home"] .wh-footer-banner {
+    height: 360px !important;
+  }
+  body[data-page="home"] #ps-footer {
+    margin-top: -54px !important;
+  }
+}
+
+/* App page final layer: keep the marketing form on the Terracotta profile after
+   the global button/input normalizers later in wh.css. */
+body[data-page="app"] .app-download-strip {
+  background: var(--color-terracotta) !important;
+  color: var(--color-steam-cream) !important;
+}
+
+body[data-page="app"] .app-download-copy h2 {
+  color: var(--color-steam-cream) !important;
+  font-family: var(--font-display) !important;
+  font-size: clamp(42px, 4.8vw, 76px) !important;
+  font-weight: 800 !important;
+  letter-spacing: 0 !important;
+  line-height: .96 !important;
+}
+
+body[data-page="app"] .wh-page-hero.is-light .wh-page-hero-copy footer p,
+body[data-page="app"] .wh-page-hero.is-light .wh-page-hero-copy footer a {
+  color: var(--color-steam-cream) !important;
+  font-family: var(--font-body) !important;
+  font-size: clamp(18px, 1.35vw, 22px) !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+}
+
+body[data-page="app"] .wh-page-hero.is-light .wh-page-hero-copy footer a {
+  border-bottom-color: rgba(250, 246, 238, .74) !important;
+}
+
+body[data-page="app"] .store-badge {
+  border: 1px solid rgba(250, 246, 238, .62) !important;
+  border-radius: var(--radius-md) !important;
+  background: var(--color-steam-cream) !important;
+  color: var(--color-dark-roast) !important;
+  font-family: var(--font-body) !important;
+  font-weight: 700 !important;
+}
+
+body[data-page="app"] .store-badge small {
+  color: rgba(61, 32, 16, .64) !important;
+  font-family: var(--font-body) !important;
+  font-weight: 700 !important;
+}
+
+body[data-page="app"] .app-waitlist-form .field span {
+  color: rgba(250, 246, 238, .82) !important;
+  font-family: var(--font-body) !important;
+  font-weight: 700 !important;
+  letter-spacing: .12em !important;
+}
+
+body[data-page="app"] .app-waitlist-form input {
+  border-color: rgba(250, 246, 238, .74) !important;
+  border-radius: var(--radius-md) !important;
+  background: var(--color-steam-cream) !important;
+  color: var(--color-dark-roast) !important;
+  font-family: var(--font-body) !important;
+  font-weight: 600 !important;
+}
+
+body[data-page="app"] .app-waitlist-form input:focus {
+  border-color: var(--color-steam-cream) !important;
+  box-shadow: 0 0 0 2px rgba(250, 246, 238, .38) !important;
+}
+
+body[data-page="app"] .app-waitlist-form button,
+body[data-page="app"] .app-waitlist-form button:hover,
+body[data-page="app"] .app-waitlist-form button:active {
+  border-color: var(--color-steam-cream) !important;
+  border-radius: var(--radius-md) !important;
+  background: var(--color-steam-cream) !important;
+  color: var(--color-terracotta) !important;
+  font-family: var(--font-body) !important;
+  font-weight: 800 !important;
+}
+
+body[data-page="app"] .app-waitlist-form button span {
+  color: var(--color-terracotta) !important;
+}
+
+body[data-page="app"] #features .wh-page-card a,
+body[data-page="app"] #features .wh-page-card button {
+  background: var(--color-terracotta) !important;
+  border-color: var(--color-terracotta) !important;
+  color: var(--color-steam-cream) !important;
+  font-family: var(--font-body) !important;
+  font-weight: 700 !important;
+}
+
+body[data-page="app"] #features .wh-page-card a::after,
+body[data-page="app"] #features .wh-page-card button::after {
+  color: var(--color-steam-cream) !important;
+}
+
+body[data-page="app"] #features .wh-page-card a:hover,
+body[data-page="app"] #features .wh-page-card a:active,
+body[data-page="app"] #features .wh-page-card button:hover,
+body[data-page="app"] #features .wh-page-card button:active {
+  background: var(--color-terracotta-hover) !important;
+  border-color: var(--color-terracotta-hover) !important;
+  color: var(--color-steam-cream) !important;
+}
+
+/* About page final layer: page-scoped type and colour tokens after global
+   wh.css normalizers. */
+body[data-page="about"] .wh-page-hero,
+body[data-page="about"] .wh-page-hero-copy {
+  background: var(--color-terracotta) !important;
+  color: var(--color-steam-cream) !important;
+}
+
+body[data-page="about"] .wh-page-hero .wh-page-kicker {
+  color: rgba(250, 246, 238, .82) !important;
+  font-family: var(--font-body) !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  letter-spacing: .13em !important;
+  line-height: 1 !important;
+  text-transform: uppercase !important;
+}
+
+body[data-page="about"] .wh-page-hero h1 {
+  max-width: 760px;
+  color: var(--color-steam-cream) !important;
+  font-family: var(--font-display) !important;
+  font-size: clamp(54px, 5vw, 86px) !important;
+  font-weight: 800 !important;
+  letter-spacing: 0 !important;
+  line-height: .92 !important;
+}
+
+body[data-page="about"] .wh-page-hero-copy footer p,
+body[data-page="about"] .wh-page-hero-copy footer a {
+  color: var(--color-steam-cream) !important;
+  font-family: var(--font-body) !important;
+  font-size: clamp(18px, 1.35vw, 22px) !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+}
+
+body[data-page="about"] .wh-page-hero-copy footer a {
+  border-bottom-color: rgba(250, 246, 238, .74) !important;
+}
+
+body[data-page="about"] .wh-about-ps-panel {
+  background: var(--color-terracotta) !important;
+  color: var(--color-steam-cream) !important;
+}
+
+body[data-page="about"] .wh-about-ps-panel span {
+  color: rgba(250, 246, 238, .82) !important;
+  font-family: var(--font-body) !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: .14em !important;
+  text-transform: uppercase !important;
+}
+
+body[data-page="about"] .wh-about-ps-panel p {
+  color: var(--color-steam-cream) !important;
+  font-family: var(--font-display) !important;
+  font-size: clamp(40px, 4.2vw, 72px) !important;
+  font-weight: 800 !important;
+  letter-spacing: 0 !important;
+  line-height: .94 !important;
+}
+
+body[data-page="about"] .wh-about-founder-copy {
+  background: var(--color-steam-cream) !important;
+  color: var(--color-dark-roast) !important;
+}
+
+body[data-page="about"] .wh-about-founder-copy > p:first-child {
+  color: var(--color-terracotta) !important;
+  font-family: var(--font-body) !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  letter-spacing: .13em !important;
+  text-transform: uppercase !important;
+}
+
+body[data-page="about"] .wh-about-founder-copy h2 {
+  color: var(--color-dark-roast) !important;
+  font-family: var(--font-display) !important;
+  font-size: clamp(42px, 4.6vw, 74px) !important;
+  font-weight: 700 !important;
+  letter-spacing: 0 !important;
+  line-height: .98 !important;
+}
+
+body[data-page="about"] .wh-about-founder-copy p:not(:first-child) {
+  color: var(--color-espresso) !important;
+  font-family: var(--font-body) !important;
+  font-size: clamp(16px, 1.2vw, 18px) !important;
+  font-weight: 500 !important;
+  line-height: 1.55 !important;
+}
+
+body[data-page="about"] .wh-about-quality {
+  background: var(--color-terracotta) !important;
+  color: var(--color-steam-cream) !important;
+}
+
+body[data-page="about"] .wh-about-quality .wh-page-list-copy h2 {
+  color: var(--color-steam-cream) !important;
+  font-family: var(--font-display) !important;
+  font-size: clamp(42px, 4.6vw, 76px) !important;
+  font-weight: 700 !important;
+  letter-spacing: 0 !important;
+  line-height: .98 !important;
+}
+
+body[data-page="about"] .wh-about-quality .wh-page-list-rows p {
+  border-color: rgba(250, 246, 238, .58) !important;
+}
+
+body[data-page="about"] .wh-about-quality .wh-page-list-rows span {
+  color: rgba(250, 246, 238, .84) !important;
+  font-family: var(--font-body) !important;
+  font-size: clamp(15px, 1.12vw, 17px) !important;
+  line-height: 1.45 !important;
+}
+
+body[data-page="about"] .wh-about-quality .wh-page-list-rows span:first-child {
+  color: var(--color-steam-cream) !important;
+  font-weight: 700 !important;
+}
+
+body[data-page="about"] .wh-about-mini-icon {
+  border-color: transparent !important;
+}
+
+body[data-page="about"] .wh-about-mini-icon img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+body[data-page="about"] #connect {
+  background: var(--color-steam-cream) !important;
+  color: var(--color-dark-roast) !important;
+}
+
+body[data-page="about"] #connect .wh-page-list-copy h2 {
+  color: var(--color-dark-roast) !important;
+  font-family: var(--font-display) !important;
+  font-size: clamp(42px, 4.8vw, 78px) !important;
+  font-weight: 700 !important;
+  letter-spacing: 0 !important;
+  line-height: .98 !important;
+}
+
+body[data-page="about"] #connect .wh-page-list-rows p {
+  border-color: var(--color-linen-strong) !important;
+}
+
+body[data-page="about"] #connect .wh-page-list-rows span:first-child {
+  color: var(--color-terracotta) !important;
+  font-family: var(--font-body) !important;
+  font-weight: 700 !important;
+}
+
+body[data-page="about"] #connect .wh-page-list-rows span:last-child {
+  color: var(--color-espresso) !important;
+  font-family: var(--font-body) !important;
+  font-weight: 500 !important;
+  line-height: 1.55 !important;
+}
+
+body[data-page="about"] #connect a {
+  color: var(--color-dark-roast) !important;
+  border-bottom: 1px solid var(--color-terracotta);
+  text-decoration: none;
 }

@@ -8,9 +8,9 @@ Read this at the start of every session. Use silently to inform work.
 
 | File | Version |
 |---|---|
-| `assets/ps.js` | v38 |
+| `assets/ps.js` | v40 |
 | `assets/image-slot.js` | v3 |
-| `assets/wh.css` | v57 |
+| `assets/wh.css` | v71 |
 | `assets/mobile.css` | v33 |
 
 Always read the current version from any `*.html` before bumping.

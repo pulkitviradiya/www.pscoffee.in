@@ -1,0 +1,89 @@
+{
+  "inputPath": "/Users/pulkit/Downloads/P.S. Coffee App Prototype (standalone).html",
+  "pngCount": 15,
+  "gifCount": 5,
+  "pngs": [
+    {
+      "label": "Home A The Usual",
+      "png": "/Users/pulkit/Code/pscoffee-repo/output/prototype-mobile-exports/01-home-a-the-usual.png"
+    },
+    {
+      "label": "Home B The Board",
+      "png": "/Users/pulkit/Code/pscoffee-repo/output/prototype-mobile-exports/02-home-b-the-board.png"
+    },
+    {
+      "label": "Home C The Tab",
+      "png": "/Users/pulkit/Code/pscoffee-repo/output/prototype-mobile-exports/03-home-c-the-tab.png"
+    },
+    {
+      "label": "S7 Product detail",
+      "png": "/Users/pulkit/Code/pscoffee-repo/output/prototype-mobile-exports/04-s7-product-detail.png"
+    },
+    {
+      "label": "S6 Customise sheet",
+      "png": "/Users/pulkit/Code/pscoffee-repo/output/prototype-mobile-exports/05-s6-customise-sheet.png"
+    },
+    {
+      "label": "S8 Confirm",
+      "png": "/Users/pulkit/Code/pscoffee-repo/output/prototype-mobile-exports/06-s8-confirm.png"
+    },
+    {
+      "label": "S9 On it",
+      "png": "/Users/pulkit/Code/pscoffee-repo/output/prototype-mobile-exports/07-s9-on-it.png"
+    },
+    {
+      "label": "S9 Ready",
+      "png": "/Users/pulkit/Code/pscoffee-repo/output/prototype-mobile-exports/08-s9-ready.png"
+    },
+    {
+      "label": "S1 Welcome",
+      "png": "/Users/pulkit/Code/pscoffee-repo/output/prototype-mobile-exports/09-s1-welcome.png"
+    },
+    {
+      "label": "S2 Phone",
+      "png": "/Users/pulkit/Code/pscoffee-repo/output/prototype-mobile-exports/10-s2-phone.png"
+    },
+    {
+      "label": "S3 OTP",
+      "png": "/Users/pulkit/Code/pscoffee-repo/output/prototype-mobile-exports/11-s3-otp.png"
+    },
+    {
+      "label": "S4 Your Pod",
+      "png": "/Users/pulkit/Code/pscoffee-repo/output/prototype-mobile-exports/12-s4-your-pod.png"
+    },
+    {
+      "label": "S11 Buy a Pack",
+      "png": "/Users/pulkit/Code/pscoffee-repo/output/prototype-mobile-exports/13-s11-buy-a-pack.png"
+    },
+    {
+      "label": "S12 Pods",
+      "png": "/Users/pulkit/Code/pscoffee-repo/output/prototype-mobile-exports/14-s12-pods.png"
+    },
+    {
+      "label": "S13 You",
+      "png": "/Users/pulkit/Code/pscoffee-repo/output/prototype-mobile-exports/15-s13-you.png"
+    }
+  ],
+  "gifs": [
+    {
+      "label": "all-mobile-frames",
+      "gif": "/Users/pulkit/Code/pscoffee-repo/output/prototype-mobile-exports/all-mobile-frames.gif"
+    },
+    {
+      "label": "home-flow",
+      "gif": "/Users/pulkit/Code/pscoffee-repo/output/prototype-mobile-exports/home-flow.gif"
+    },
+    {
+      "label": "order-loop",
+      "gif": "/Users/pulkit/Code/pscoffee-repo/output/prototype-mobile-exports/order-loop.gif"
+    },
+    {
+      "label": "onboarding-flow",
+      "gif": "/Users/pulkit/Code/pscoffee-repo/output/prototype-mobile-exports/onboarding-flow.gif"
+    },
+    {
+      "label": "money-places-flow",
+      "gif": "/Users/pulkit/Code/pscoffee-repo/output/prototype-mobile-exports/money-places-flow.gif"
+    }
+  ]
+}
