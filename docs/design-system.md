@@ -150,6 +150,8 @@ Six steps, chosen by element size: `6px` (highlight mark/chip) · `9px` (buttons
 ### 20 · Buttons: Variants & Sizes
 Variants: Primary · Secondary · Ghost/Text · Disabled. Sizes: Large 48px/14px label · Medium 40px/13px · Small 32px/12px · Icon-only 40px square.
 **Website placement**: Large for hero CTAs, Medium everywhere else, Ghost for inline "Learn more."
+**Website hover rule**: solid Terracotta CTAs darken the fill to the Terracotta hover token and
+keep Steam Cream label/arrow text. Never invert a pressed Terracotta button to Terracotta text.
 
 ### 21 · Badges, Icon Buttons, Avatars & Eyebrow
 - **Badge**: pill radius, uppercase tracked label. Two sizes only — standard (5px/10px) and status (6px/12px).
@@ -191,6 +193,10 @@ Which lockup for which background (Cream / Terracotta / Deep Ceremonial / Photog
 
 ### 27 · Logo by Touchpoint
 Nav bar: wordmark ≥480px viewport, monogram only below it · Favicon: monogram, cream on Terracotta · App splash: monogram only, centred, no spinner · Footer: monogram + wordmark, small, always Terracotta · Email/transactional: monogram only, 32px · Social avatar: square logo lockup, monogram centred · Empty states: monogram at ~40% opacity, never full wordmark or an illustration · 404/error page: monogram + one honest line of copy, no illustration/mascot · Print (receipts/invoices): rectangle logo lockup.
+**Website implementation note**: the live footer uses the served Steam Cream wordmark file
+`assets/icons/ps-coffee_wordmark_steam cream.png` on the Deep Ceremonial footer. The about
+manifesto's first card uses the served Terracotta circle-outline monogram file, not live "PS"
+text, so the mark remains optically consistent with the logo suite.
 
 ### 28 · Iconography & Graphic Language
 No dedicated icon font/SVG set exists in the source materials. Three recurring motifs built from the monogram/seal's circle-and-rule vocabulary: **Grid Overlay** (faint ruled grid — menu boards, packaging, dividers), **Ruled Lockup** (hairline rules bracketing the wordmark — stationery), **Circle Motif** (tonal dot field — cup sleeves, wrapping, loyalty cards). If real icons are ever needed, match the brand's confident/geometric character (e.g. Lucide/Phosphor at a consistent stroke weight) and flag the substitution rather than hand-drawing bespoke ones.
@@ -227,6 +233,10 @@ A thin, continuously-scrolling announcement strip, one glyph (✦) apart. Never 
 
 ### 33 · Web: Breakpoints, Grid & Page States
 - **Breakpoints**: Desktop ≥1280 (max-width 1180, 12-col, 24px gutter, 64px side padding) · Laptop 1024–1279 (12-col, 20px gutter, 48px padding) · Tablet 768–1023 (6-col, 16px gutter, 32px padding, cards drop to two-up) · Mobile <768 (4-col, 16px gutter, 24px padding, single-column, display type caps 40px, bold heroes 60–70vh edge-to-edge).
+- **Marketing page bold panels**: coffee-profile page heroes, quality/promise panels, app
+  download strips, and pass/pack overlays use Terracotta or image-backed bold grounds with Steam
+  Cream type. If body copy or labels compute to Dark Roast/Espresso on those grounds, it is a
+  defect even if the source rule appears lower in the file.
 - **404**: Cream page, one Bricolage headline with the one highlight mark, an Instrument Serif "P.S.: The coffee's this way," one primary button home — never an illustration hunt.
 - **Loading**: Oat skeleton blocks matching final layout shapes, gentle opacity pulse — no spinners, no blue progress bars.
 - **Empty states**: Bricolage one-liner + Space Grotesk explanation + one action, warm tone, never apologetic.

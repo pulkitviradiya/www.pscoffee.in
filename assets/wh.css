@@ -271,15 +271,15 @@ h1,h2,h3,h4,
   font-size: 12px;
   letter-spacing: .06em;
   text-transform: uppercase;
-  padding-right: 26px;
+  padding-right: 0;
 }
-.wh-announce-msg .sep { margin: 0 22px; opacity: .6; }
+.wh-announce-msg .sep { margin: 0 12px; opacity: .6; }
 @media (prefers-reduced-motion: reduce) {
   .wh-announce-track { animation: none; }
 }
 @media(max-width:600px){
   .wh-announce-msg { font-size: 11px; }
-  .wh-announce-msg .sep { margin: 0 16px; }
+  .wh-announce-msg .sep { margin: 0 10px; }
 }
 
 /* ══════════════════════════════════════════════
@@ -4326,19 +4326,57 @@ body[data-page] .footer .ps-wordmark-coffee {
 .wh-about-story-body {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: var(--wh-grid-gap);
+  column-gap: var(--wh-grid-gap);
+  row-gap: clamp(18px, 2vw, 28px);
   margin-top: clamp(34px, 4vw, 58px);
 }
 
 .wh-about-story-body p {
+  display: grid;
+  grid-template-columns: 46px minmax(0, 1fr);
+  gap: 16px;
+  align-items: start;
   margin: 0;
-  padding-top: 14px;
-  border-top: 1px solid var(--ps-linen);
+  padding-top: 16px;
+  border-top: 1px solid rgba(61, 32, 16, .16);
   color: rgba(92, 53, 24, .78) !important;
   font-family: var(--wh-sans);
   font-size: 16px;
   font-weight: 300;
   line-height: 1.48;
+}
+
+.wh-about-story-body p::before {
+  color: var(--ps-terracotta);
+  font-family: var(--wh-sans);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .16em;
+  line-height: 1.2;
+}
+
+.wh-about-story-body p:nth-child(1)::before { content: "01"; }
+.wh-about-story-body p:nth-child(2)::before { content: "02"; }
+.wh-about-story-body p:nth-child(3)::before { content: "03"; }
+
+.wh-about-story-body p:last-child {
+  grid-column: 1 / -1;
+  grid-template-columns: 46px minmax(0, 1fr);
+  min-height: auto;
+  padding: clamp(18px, 2vw, 24px) 0;
+  border-top-color: var(--ps-terracotta);
+  border-bottom: 1px solid rgba(61, 32, 16, .12);
+  color: var(--ps-roast) !important;
+  font-family: var(--font-display, var(--wh-sans));
+  font-size: clamp(28px, 3.2vw, 48px);
+  font-weight: 800;
+  letter-spacing: -.03em;
+  line-height: 1.06;
+}
+
+.wh-about-story-body p:last-child::before {
+  content: "P.S.";
+  padding-top: .45em;
 }
 
 .wh-about-audience {
@@ -5202,6 +5240,13 @@ body[data-page] .footer .ps-wordmark-coffee {
   .wh-about-ps-copy div p,
   .wh-about-founder-copy p:not(:first-child) {
     font-size: 15px;
+  }
+  .wh-about-story-body p {
+    grid-template-columns: 38px minmax(0, 1fr);
+  }
+  .wh-about-story-body p:last-child {
+    grid-template-columns: 38px minmax(0, 1fr);
+    font-size: clamp(28px, 8vw, 38px);
   }
   .wh-about-audience {
     margin: 44px 0;
@@ -6634,9 +6679,71 @@ body[data-page="matcha"] .wh-page-hero footer a {
   line-height: 1.45 !important;
 }
 
+body:not([data-page="matcha"]) .wh-page-hero footer a:hover,
+body:not([data-page="matcha"]) .wh-page-hero footer a:active,
+body[data-page="matcha"] .wh-page-hero footer a:hover,
+body[data-page="matcha"] .wh-page-hero footer a:active {
+  background: transparent !important;
+  border-color: currentColor !important;
+  color: var(--ps-steam) !important;
+  transform: none !important;
+}
+
 .wh-page-list-rows p {
   background: transparent !important;
   border-color: var(--ps-linen-strong) !important;
+}
+
+body[data-page="pods"] .pods-hero .wh-page-hero-copy {
+  justify-content: center !important;
+  padding-top: clamp(48px, 7vw, 92px) !important;
+  padding-bottom: clamp(48px, 7vw, 92px) !important;
+}
+
+body[data-page="pods"] .pods-hero h1 {
+  max-width: 760px !important;
+  margin-bottom: clamp(26px, 3vw, 42px) !important;
+}
+
+body[data-page="pods"] .pods-hero footer {
+  display: grid !important;
+  grid-template-columns: minmax(0, 760px) !important;
+  gap: clamp(18px, 2vw, 26px) !important;
+  align-items: start !important;
+  max-width: 760px !important;
+}
+
+body[data-page="pods"] .pods-hero footer p,
+body[data-page="pods"] .pods-hero footer a {
+  max-width: 760px !important;
+}
+
+body[data-page="pods"] .pods-hero footer a {
+  width: min(100%, 360px) !important;
+  padding-bottom: 6px !important;
+}
+
+body[data-page="pods"] .pods-place-grid .wh-page-card {
+  display: grid !important;
+  grid-template-rows: auto auto 1fr auto !important;
+}
+
+body[data-page="pods"] .pods-place-grid .wh-page-card h3 {
+  min-height: calc(2 * 1.15em) !important;
+}
+
+body[data-page="pods"] .pods-place-grid .wh-page-card p {
+  min-height: 0 !important;
+  max-width: 34ch !important;
+}
+
+body[data-page="pods"] .pods-place-grid .wh-page-card a {
+  align-self: end !important;
+  margin-top: clamp(18px, 2vw, 26px) !important;
+}
+
+body[data-page="pods"] .pods-format-copy div p {
+  border-top-color: var(--ps-terracotta) !important;
 }
 
 .wh-page-split,
@@ -7339,6 +7446,122 @@ body[data-page="home"] #ps-footer .footer {
 
 /* App page final layer: keep the marketing form on the Terracotta profile after
    the global button/input normalizers later in wh.css. */
+body[data-page="app"] .app-motion-strip {
+  margin: clamp(52px, 6vw, 86px) var(--wh-gut);
+}
+
+body[data-page="app"] .app-motion-strip header {
+  display: grid;
+  grid-template-columns: minmax(0, .36fr) minmax(0, .64fr);
+  gap: var(--wh-grid-gap);
+  align-items: end;
+  margin-bottom: clamp(22px, 2.4vw, 34px);
+}
+
+body[data-page="app"] .app-motion-strip header p {
+  margin: 0;
+  color: var(--color-terracotta) !important;
+  font-family: var(--font-body) !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  letter-spacing: .18em !important;
+  line-height: 1.2 !important;
+  text-transform: uppercase !important;
+}
+
+body[data-page="app"] .app-motion-strip h2 {
+  margin: 0;
+  color: var(--color-dark-roast) !important;
+  font-family: var(--font-display) !important;
+  font-size: clamp(42px, 5vw, 82px) !important;
+  font-weight: 800 !important;
+  letter-spacing: -.04em !important;
+  line-height: .95 !important;
+}
+
+body[data-page="app"] .app-motion-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: clamp(12px, 1.2vw, 18px);
+}
+
+body[data-page="app"] .app-motion-card {
+  min-width: 0;
+  margin: 0;
+}
+
+body[data-page="app"] .app-motion-card figcaption {
+  margin-bottom: 10px;
+  color: var(--color-dark-roast) !important;
+  font-family: var(--font-body) !important;
+  font-size: 13px !important;
+  font-weight: 800 !important;
+  letter-spacing: .02em !important;
+  line-height: 1.15 !important;
+}
+
+body[data-page="app"] .app-motion-media {
+  display: block;
+  overflow: hidden;
+  aspect-ratio: 804 / 1750;
+  border: 1px solid rgba(61, 32, 16, .14);
+  border-radius: 18px;
+  background: var(--color-steam-cream);
+}
+
+body[data-page="app"] .app-motion-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 1020px) {
+  body[data-page="app"] .app-motion-strip {
+    margin-inline: 0;
+    padding-inline: var(--wh-gut);
+  }
+
+  body[data-page="app"] .app-motion-strip header {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  body[data-page="app"] .app-motion-grid {
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(220px, 34vw);
+    grid-template-columns: none;
+    overflow-x: auto;
+    padding-bottom: 12px;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  body[data-page="app"] .app-motion-card {
+    scroll-snap-align: start;
+  }
+}
+
+@media (max-width: 640px) {
+  body[data-page="app"] .app-motion-strip {
+    margin-top: 42px;
+    padding-inline: calc(var(--wh-gut) * .75);
+  }
+
+  body[data-page="app"] .app-motion-strip h2 {
+    font-size: clamp(34px, 11vw, 48px) !important;
+    letter-spacing: -.035em !important;
+  }
+
+  body[data-page="app"] .app-motion-grid {
+    grid-auto-columns: minmax(232px, 78vw);
+  }
+
+  body[data-page="app"] .app-motion-media {
+    border-radius: 14px;
+  }
+}
+
 body[data-page="app"] .app-download-strip {
   background: var(--color-terracotta) !important;
   color: var(--color-steam-cream) !important;
@@ -7611,4 +7834,427 @@ body[data-page="about"] #connect a {
   color: var(--color-dark-roast) !important;
   border-bottom: 1px solid var(--color-terracotta);
   text-decoration: none;
+}
+
+/* Design-system hero and overlay hardening
+   Keep this final: older WatchHouse layers above still redeclare the same
+   hero, body, and card-overlay selectors with !important. */
+.menu-hero-wh,
+.wh-page-hero {
+  background: var(--color-terracotta) !important;
+  color: var(--color-steam-cream) !important;
+}
+
+body[data-page="matcha"] .wh-page-hero {
+  background: var(--color-ceremonial) !important;
+}
+
+body:not([data-page="app"]) .wh-page-hero.is-light:not(.legal-hero) {
+  background: var(--color-oat) !important;
+  color: var(--color-dark-roast) !important;
+}
+
+.menu-hero-copy h1,
+.wh-page-hero h1,
+body[data-page="app"] .wh-page-hero h1,
+body[data-page="pack"] .wh-page-hero-copy h1 {
+  max-width: 12ch !important;
+  color: var(--color-steam-cream) !important;
+  font-family: var(--font-display) !important;
+  font-size: clamp(42px, 4vw, 56px) !important;
+  font-weight: 800 !important;
+  letter-spacing: -1px !important;
+  line-height: 1.02 !important;
+  text-wrap: balance;
+}
+
+body:not([data-page="app"]) .wh-page-hero.is-light:not(.legal-hero) h1 {
+  color: var(--color-dark-roast) !important;
+}
+
+body[data-page="app"] .wh-page-hero.is-light h1,
+body[data-page="matcha"] .wh-page-hero h1 {
+  color: var(--color-steam-cream) !important;
+}
+
+body[data-page="matcha"] .wh-page-hero.is-light h1 {
+  color: var(--color-steam-cream) !important;
+}
+
+.menu-hero-copy p,
+.wh-page-hero .wh-page-kicker,
+body[data-page="app"] .wh-page-hero .wh-page-kicker,
+body[data-page="pack"] .wh-page-hero-copy .wh-page-kicker,
+.ps-cap89-copy .eyebrow,
+.ps-app-callout .kicker {
+  display: inline-flex !important;
+  align-items: center !important;
+  width: max-content !important;
+  max-width: min(100%, 34ch) !important;
+  padding: 6px 10px !important;
+  border-radius: var(--radius-sm) !important;
+  background: var(--color-steam-cream) !important;
+  color: var(--color-dark-roast) !important;
+  font-family: var(--font-body) !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  letter-spacing: .14em !important;
+  line-height: 1 !important;
+  text-transform: uppercase !important;
+}
+
+body[data-page="matcha"] .wh-page-hero .wh-page-kicker {
+  color: var(--color-ceremonial) !important;
+}
+
+body[data-page="home"] .ps-app-callout .ps-app-copy p.kicker,
+body[data-page="pack"] .ps-cap89-copy .eyebrow,
+body[data-page="about"] .wh-page-hero .wh-page-kicker,
+body[data-page="pods"] .wh-page-hero .wh-page-kicker,
+body[data-page="partnership"] .wh-page-hero .wh-page-kicker,
+body[data-page="join"] .wh-page-hero .wh-page-kicker,
+body[data-page="events"] .wh-page-hero .wh-page-kicker,
+body[data-page="blogs"] .wh-page-hero .wh-page-kicker,
+.legal-hero .wh-page-kicker {
+  display: inline-flex !important;
+  align-items: center !important;
+  width: max-content !important;
+  max-width: min(100%, 34ch) !important;
+  padding: 6px 10px !important;
+  border-radius: var(--radius-sm) !important;
+  background: var(--color-steam-cream) !important;
+  color: var(--color-dark-roast) !important;
+  font-family: var(--font-body) !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  letter-spacing: .14em !important;
+  line-height: 1 !important;
+  text-transform: uppercase !important;
+}
+
+.legal-hero.wh-page-hero .wh-page-kicker,
+.wh-page-hero.is-light.legal-hero .wh-page-kicker {
+  background: var(--color-steam-cream) !important;
+  color: var(--color-dark-roast) !important;
+}
+
+.menu-hero-copy span,
+.menu-hero-copy a,
+.wh-page-hero-copy footer p,
+.wh-page-hero-copy footer a,
+body[data-page="app"] .wh-page-hero-copy footer p,
+body[data-page="app"] .wh-page-hero-copy footer a,
+body[data-page="pack"] .wh-page-hero-copy footer p:not(.wh-page-ps-note),
+body[data-page="pack"] .wh-page-hero-copy footer a {
+  color: var(--color-steam-cream) !important;
+  font-family: var(--font-body) !important;
+  font-size: clamp(19px, 1.35vw, 22px) !important;
+  font-weight: 700 !important;
+  letter-spacing: 0 !important;
+  line-height: 1.45 !important;
+}
+
+body:not([data-page="app"]) .wh-page-hero.is-light:not(.legal-hero) .wh-page-hero-copy footer p,
+body:not([data-page="app"]) .wh-page-hero.is-light:not(.legal-hero) .wh-page-hero-copy footer a {
+  color: var(--color-dark-roast) !important;
+}
+
+body[data-page="app"] .wh-page-hero.is-light .wh-page-hero-copy footer p,
+body[data-page="app"] .wh-page-hero.is-light .wh-page-hero-copy footer a,
+body[data-page="matcha"] .wh-page-hero .wh-page-hero-copy footer p,
+body[data-page="matcha"] .wh-page-hero .wh-page-hero-copy footer a {
+  color: var(--color-steam-cream) !important;
+}
+
+.legal-hero .wh-page-hero-copy footer p,
+.legal-hero .wh-page-hero-copy footer a,
+body[data-page="matcha"] .wh-page-hero.is-light .wh-page-hero-copy footer p,
+body[data-page="matcha"] .wh-page-hero.is-light .wh-page-hero-copy footer a {
+  color: var(--color-steam-cream) !important;
+  font-family: var(--font-body) !important;
+  font-size: clamp(19px, 1.35vw, 22px) !important;
+  font-weight: 700 !important;
+  line-height: 1.45 !important;
+}
+
+.legal-hero,
+.legal-hero .wh-page-hero-copy {
+  color: var(--color-steam-cream) !important;
+  font-family: var(--font-body) !important;
+  font-size: clamp(19px, 1.35vw, 22px) !important;
+  font-weight: 700 !important;
+  line-height: 1.45 !important;
+}
+
+body[data-page="pods"] .wh-page-hero .wh-page-hero-copy footer p,
+body[data-page="pods"] .wh-page-hero .wh-page-hero-copy footer a,
+body[data-page="partnership"] .wh-page-hero .wh-page-hero-copy footer p,
+body[data-page="partnership"] .wh-page-hero .wh-page-hero-copy footer a,
+body[data-page="join"] .wh-page-hero .wh-page-hero-copy footer p,
+body[data-page="join"] .wh-page-hero .wh-page-hero-copy footer a,
+body[data-page="events"] .wh-page-hero .wh-page-hero-copy footer p,
+body[data-page="events"] .wh-page-hero .wh-page-hero-copy footer a,
+body[data-page="about"] .wh-page-hero .wh-page-hero-copy footer p,
+body[data-page="about"] .wh-page-hero .wh-page-hero-copy footer a,
+body[data-page="faq"] .wh-page-hero.legal-hero .wh-page-hero-copy footer p,
+body[data-page="faq"] .wh-page-hero.legal-hero .wh-page-hero-copy footer a {
+  color: var(--color-steam-cream) !important;
+  font-family: var(--font-body) !important;
+  font-size: clamp(19px, 1.35vw, 22px) !important;
+  font-weight: 700 !important;
+  line-height: 1.45 !important;
+}
+
+.legal-hero .legal-hero-note,
+.legal-hero .legal-hero-note p,
+.legal-hero .legal-hero-note h2 {
+  color: var(--color-dark-roast) !important;
+}
+
+.menu-hero-copy a,
+.wh-page-hero-copy footer a {
+  border-bottom-color: currentColor !important;
+  text-decoration: none !important;
+}
+
+.menu-hero-copy a:hover,
+.menu-hero-copy a:active,
+.wh-page-hero-copy footer a:hover,
+.wh-page-hero-copy footer a:active {
+  background: transparent !important;
+  color: currentColor !important;
+  transform: none !important;
+}
+
+.ps-cap89-banner,
+.ps-app-callout {
+  background: var(--color-terracotta) !important;
+  color: var(--color-steam-cream) !important;
+  font-family: var(--font-body) !important;
+  font-size: clamp(19px, 1.35vw, 22px) !important;
+  font-weight: 700 !important;
+  line-height: 1.45 !important;
+}
+
+.ps-app-callout,
+.ps-app-callout .wrap,
+.ps-app-callout .ps-app-copy,
+.ps-app-callout .ps-app-features,
+.ps-app-callout .ps-app-btns {
+  color: var(--color-steam-cream) !important;
+  font-family: var(--font-body) !important;
+  font-size: clamp(19px, 1.35vw, 22px) !important;
+  font-weight: 700 !important;
+  line-height: 1.45 !important;
+}
+
+.ps-cap89-copy p,
+.ps-app-callout li,
+.ps-app-callout .outline {
+  color: var(--color-steam-cream) !important;
+  font-family: var(--font-body) !important;
+  font-size: clamp(19px, 1.35vw, 22px) !important;
+  font-weight: 700 !important;
+  line-height: 1.45 !important;
+}
+
+.ps-app-callout .primary,
+.ps-app-callout .ps-app-btns a.primary,
+.app-waitlist-form button {
+  background: var(--color-steam-cream) !important;
+  color: var(--color-dark-roast) !important;
+  border-color: var(--color-steam-cream) !important;
+  font-size: clamp(19px, 1.35vw, 22px) !important;
+  font-weight: 800 !important;
+}
+
+.ps-app-callout .primary:hover,
+.ps-app-callout .ps-app-btns a.primary:hover,
+.app-waitlist-form button:hover {
+  background: var(--color-oat) !important;
+  color: var(--color-dark-roast) !important;
+}
+
+.ps-pack-card-media,
+.ps-pack-card-media::before {
+  background-color: var(--color-dark-roast) !important;
+}
+
+.ps-pass-card {
+  color: var(--color-steam-cream) !important;
+  font-size: 24px !important;
+  font-weight: 800 !important;
+}
+
+.ps-pack-card-overlay,
+.ps-pack-card-overlay h4,
+.ps-pack-card-overlay p,
+.ps-pack-card-overlay span,
+.ps-pack-card-overlay strong,
+.ps-pack-card-overlay small,
+.ps-pack-card-math,
+.ps-pack-card-overlay .ps-pack-card-price span {
+  color: var(--color-steam-cream) !important;
+}
+
+.ps-pack-card-overlay h4,
+.ps-pack-card-overlay .ps-pack-card-price strong {
+  font-family: var(--font-display) !important;
+  font-weight: 800 !important;
+}
+
+.ps-pack-card-overlay p,
+.ps-pack-card-overlay span,
+.ps-pack-card-math {
+  font-family: var(--font-body) !important;
+  font-weight: 700 !important;
+}
+
+.ps-pack-card-validity {
+  background: var(--color-steam-cream) !important;
+  color: var(--color-dark-roast) !important;
+  text-shadow: none !important;
+}
+
+.wh-loc-list {
+  background: rgba(61, 32, 16, .72) !important;
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+}
+
+.wh-loc-list h2,
+.wh-loc-list p,
+.wh-loc-list p span,
+.wh-loc-list a {
+  color: var(--color-steam-cream) !important;
+}
+
+/* Blogs newsletter signup: bold Terracotta card with readable Steam typography. */
+body[data-page="blogs"] .journal-signup-card {
+  background: var(--color-terracotta) !important;
+  border-color: rgba(250, 246, 238, .28) !important;
+  color: var(--color-steam-cream) !important;
+}
+
+body[data-page="blogs"] .journal-signup-card p {
+  display: inline-flex !important;
+  width: max-content !important;
+  max-width: min(100%, 34ch) !important;
+  margin: 0 0 12px !important;
+  padding: 6px 10px !important;
+  border-radius: var(--radius-sm) !important;
+  background: var(--color-steam-cream) !important;
+  color: var(--color-dark-roast) !important;
+  font-family: var(--font-body) !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  letter-spacing: .14em !important;
+  line-height: 1 !important;
+  text-transform: uppercase !important;
+}
+
+body[data-page="blogs"] .journal-signup-card h3 {
+  color: var(--color-steam-cream) !important;
+  font-family: var(--font-display) !important;
+  font-size: clamp(28px, 2.45vw, 42px) !important;
+  font-weight: 800 !important;
+  letter-spacing: -1px !important;
+  line-height: .98 !important;
+}
+
+body[data-page="blogs"] .journal-signup-form {
+  border-color: rgba(250, 246, 238, .48) !important;
+}
+
+body[data-page="blogs"] .journal-signup-form input {
+  background: var(--color-steam-cream) !important;
+  border-color: var(--color-steam-cream) !important;
+  color: var(--color-dark-roast) !important;
+  font-family: var(--font-body) !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  letter-spacing: .12em !important;
+}
+
+body[data-page="blogs"] .journal-signup-form input::placeholder {
+  color: rgba(61, 32, 16, .72) !important;
+  opacity: 1 !important;
+}
+
+body[data-page="blogs"] .journal-signup-form button,
+body[data-page="blogs"] .journal-signup-form button:hover,
+body[data-page="blogs"] .journal-signup-form button:active {
+  background: var(--color-steam-cream) !important;
+  border-color: var(--color-steam-cream) !important;
+  color: var(--color-terracotta) !important;
+  font-family: var(--font-body) !important;
+  font-size: 24px !important;
+  font-weight: 800 !important;
+  line-height: 1 !important;
+  transform: none !important;
+}
+
+/* Blog post CTA block: Terracotta panels require Steam-first typography. */
+body[data-page="blog-post"] .journal-post-body .ctab-box {
+  background: var(--color-terracotta) !important;
+  border: 1px solid rgba(250, 246, 238, .22) !important;
+  color: var(--color-steam-cream) !important;
+}
+
+body[data-page="blog-post"] .journal-post-body .ctab-box::before {
+  background: rgba(250, 246, 238, .08) !important;
+}
+
+body[data-page="blog-post"] .journal-post-body .ctab-box .cta-tag {
+  background: var(--color-steam-cream) !important;
+  color: var(--color-terracotta) !important;
+  font-family: var(--font-body) !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  letter-spacing: .12em !important;
+  line-height: 1 !important;
+}
+
+body[data-page="blog-post"] .journal-post-body .ctab-box h2 {
+  color: var(--color-steam-cream) !important;
+  font-family: var(--font-display) !important;
+  font-weight: 800 !important;
+  letter-spacing: -.02em !important;
+}
+
+body[data-page="blog-post"] .journal-post-body .ctab-box p {
+  color: rgba(250, 246, 238, .86) !important;
+  font-family: var(--font-body) !important;
+  font-weight: 600 !important;
+}
+
+body[data-page="blog-post"] .journal-post-body .ctab-box .cta-sub {
+  color: rgba(250, 246, 238, .68) !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+}
+
+body[data-page="blog-post"] .journal-post-body .ctab-box .cta-btn.primary {
+  background: var(--color-steam-cream) !important;
+  border-color: var(--color-steam-cream) !important;
+  color: var(--color-terracotta) !important;
+}
+
+body[data-page="blog-post"] .journal-post-body .ctab-box .cta-btn.outline {
+  background: transparent !important;
+  border-color: rgba(250, 246, 238, .72) !important;
+  color: var(--color-steam-cream) !important;
+}
+
+body[data-page="blog-post"] .journal-post-body .ctab-box .cta-btn.primary:hover,
+body[data-page="blog-post"] .journal-post-body .ctab-box .cta-btn.primary:focus-visible {
+  background: var(--color-oat) !important;
+  border-color: var(--color-oat) !important;
+  color: var(--color-dark-roast) !important;
+}
+
+body[data-page="blog-post"] .journal-post-body .ctab-box .cta-btn.outline:hover,
+body[data-page="blog-post"] .journal-post-body .ctab-box .cta-btn.outline:focus-visible {
+  background: rgba(250, 246, 238, .12) !important;
+  color: var(--color-steam-cream) !important;
 }

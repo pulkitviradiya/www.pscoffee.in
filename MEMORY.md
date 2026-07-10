@@ -10,8 +10,8 @@ Read this at the start of every session. Use silently to inform work.
 |---|---|
 | `assets/ps.js` | v40 |
 | `assets/image-slot.js` | v3 |
-| `assets/wh.css` | v71 |
-| `assets/mobile.css` | v33 |
+| `assets/wh.css` | v79 |
+| `assets/mobile.css` | v36 |
 
 Always read the current version from any `*.html` before bumping.
 
@@ -52,6 +52,10 @@ Always read the current version from any `*.html` before bumping.
 ---
 
 ## Session Decisions
+
+### 2026-07-08 (design-system polish slices)
+- Applied browser-reviewed design-system slices across home/menu/pack/app/about/footer: `wh.css` is now v71, `ps.js` v40 hardens Nectar highlights at runtime, menu/home prices wrap the `₹` glyph, and final page-scoped CSS layers are required when fixing late-cascade typography/colour bugs.
+- Added the served footer wordmark `assets/icons/ps-coffee_wordmark_steam cream.png`, the about manifesto monogram `assets/icons/ps-coffee_monogram_terracotta_Circle-outline.png`, and committed desktop/mobile app prototype exports under `output/` as reference artifacts.
 
 ### 2026-07-08 (wh.css cleanup)
 - Cleaned `assets/wh.css` in safe, computed-style-verified slices: removed dead legacy WatchHouse sections plus redundant legal/blog, homepage banner, menu-card, and about-pillar duplicate rules without changing rendered computed styles.

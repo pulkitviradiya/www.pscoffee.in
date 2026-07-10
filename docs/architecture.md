@@ -28,7 +28,8 @@ assets/
   ps.css                Canonical design-system layer: :root tokens (colour/spacing/radius/type),
                          @font-face declarations, nav/footer base structure, buttons, badges, forms
                          (~600 lines, NOT cache-bust versioned)
-  wh.css                The dominant stylesheet (~6,900 lines after the 2026-07-08 cleanup).
+  wh.css                The dominant stylesheet (~7,600 lines after the 2026-07-08 cleanup and
+                         page-polish pass).
                          Named after the "WatchHouse"
                          template this site was originally built on — despite the name it drives
                          most real layout: heroes, page cards, menu, footer overrides, blog posts,
@@ -53,14 +54,18 @@ assets/
                            regenerate them from. Added 2026-07-07.
   icons/                   Favicons, app-store/Google-Play badges (app-store-icon.png,
                            google-play-store-icon.webp — used on app.html, see below), logo/
-                           monogram lockups (Terracotta + Ceremonial colour profiles).
+                           monogram lockups (Terracotta + Ceremonial colour profiles). Served
+                           site-specific lockups include the footer Steam Cream wordmark and the
+                           Terracotta circle-outline monogram used in about.html.
   photos/site/             Optimised site images, webp, cached immutably by Vercel for 1 year.
   photos/ (root)           P.S. Pass product images (webp), used only on pack.html.
 blog/                     10 individual blog post HTML files (flat, no further nesting).
 docs/                     This documentation set.
 Logo Files/               Raw logo-source drop (PNGs) — tracked in git for provenance, but not
-                          part of the deployed site (nothing here is referenced by any HTML/CSS;
-                          production lockups live in assets/icons/).
+                          part of the deployed site (production lockups live in assets/icons/).
+output/                   Generated app-prototype export artifacts. These are committed reference
+                          outputs only; they are not part of the live static-page flow unless a
+                          page explicitly links to them.
 ```
 
 ## Data model / schema

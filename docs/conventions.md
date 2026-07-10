@@ -99,6 +99,11 @@ when adding a new form.
   were a later blanket rule silently overriding an earlier component-specific one that looked
   correct in isolation. Don't trust a screenshot alone if it disagrees with a computed-style
   check — this local preview setup has shown stale renders even after a cache-busted reload.
+- **Page-polish pattern**: when fixing browser-reviewed typography/colour bugs on `about.html`,
+  `app.html`, `pack.html`, or similar shared `.wh-page` screens, expect earlier component rules to
+  be overridden later in `wh.css`. Use narrowly page-scoped final-layer selectors such as
+  `body[data-page="about"] ...` and verify the exact selected elements with computed styles before
+  declaring the slice done.
 
 ### Asset version bumping
 `wh.css`, `mobile.css`, `ps.js`, and `image-slot.js` are each cache-busted independently with
@@ -168,6 +173,10 @@ versioned files just because one changed.
   committing.
 - `sitemap.xml` must be updated when adding/removing a page (clean URL, no `.html`); legal pages
   (privacy/terms/disclaimer/copyright/survey-disclosure) are intentionally excluded from it.
+- `output/prototype-exports/` and `output/prototype-mobile-exports/` are generated prototype
+  reference artifacts, not normal site source. Do not regenerate or edit them casually; commit
+  them only when the user explicitly asks to include all pending artifacts or to preserve a new
+  prototype export.
 
 ---
 

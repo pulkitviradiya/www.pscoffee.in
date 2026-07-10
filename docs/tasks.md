@@ -19,6 +19,11 @@ matches as of 2026-07-07.
 _(none open)_
 
 ## Completed (recent, for context — see MEMORY.md for full history)
+- Browser-reviewed design-system polish pass across homepage/menu/pack/app/about/footer: rupee
+  glyph colour rule, Nectar highlight clone hardening, footer wordmark/monogram assets, pack/app/
+  about typography and CTA hover computed-style fixes — 2026-07-08.
+- Desktop and mobile app prototype export artifacts committed under `output/` as reference
+  material — 2026-07-08.
 - Cleaned `wh.css` in safe, computed-style-verified slices: removed dead legacy WatchHouse
   sections and exact duplicate live selector groups; `wh.css` duplicate scan now reports zero
   exact duplicate rule groups — 2026-07-08.

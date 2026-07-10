@@ -76,6 +76,9 @@ only, never read at session start).
 - **Never commit:** `.claude/`/`.codex/` (session config), `.image-slots.state.json`, `.DS_Store`,
   `node_modules/`, or a `*.xlsx` workbook (delete temporary copies before committing) — all
   already in `.gitignore`, don't force-add them.
+- `output/prototype-exports/` and `output/prototype-mobile-exports/` are committed prototype
+  reference artifacts, not normal page source. Do not regenerate or edit them unless the user
+  explicitly asks for prototype output work or to include all pending artifacts.
 - Asset versions (`ps.js`/`wh.css`/`mobile.css` cache-bust numbers) are tracked in MEMORY.md —
   always re-read the current N from a live HTML file before bumping; see
   [docs/conventions.md](docs/conventions.md) for the bump procedure.

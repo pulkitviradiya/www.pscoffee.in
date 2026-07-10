@@ -76,6 +76,10 @@ against; audit against it directly rather than asking for the brand kit to be re
 - Primary buttons: solid Terracotta fill + Steam Cream label + `--radius-md`. On matcha pages the
   same shape mirrors in Deep Ceremonial (hover-darkens to `--color-ceremonial-deep`, never
   `--color-shade-grove` — that token is a lighter mid-tone for other uses).
+- Solid Terracotta buttons must keep Steam Cream text and arrow/icon pseudo-elements in both
+  default and hover/active states; hover changes the fill to the Terracotta hover token, not the
+  label colour. This was a real cascade bug on the app feature cards, so verify button text and
+  `::after` colour with computed styles when touching CTA rules.
 - Forms: default state is a Linen border on Steam Cream; focus is a 1.5px Terracotta border
   (never a browser-default blue ring); error is a 1.5px `--color-chilli` border with small Chilli
   helper text below the field (never a generic/hardcoded red); disabled is Oat fill with muted
@@ -94,6 +98,16 @@ Transition durations are capped at 400ms.
 - Nav bar shows the `primary:true` pages from `ps.js`'s `PAGES` array horizontally; wordmark logo
   (not monogram) in the nav.
 - Homepage sections render in DOM order (no CSS `order` needed — that's a mobile-only concern).
+- Coffee-profile marketing page heroes and bold panels (`about.html`, `app.html`, `pack.html`,
+  quality/promise panels, download strips) use Terracotta fills with Steam Cream text. Display
+  headings use `--font-display` at 700/800; functional text, labels, CTAs, form labels, and card
+  copy use `--font-body`; never leave Espresso/Dark Roast text on Terracotta just because an
+  earlier `.wh-page` rule appears correct in source.
+- The footer is always Deep Ceremonial, with the footer wordmark served from
+  `assets/icons/ps-coffee_wordmark_steam cream.png`. The about manifesto uses the served
+  Terracotta circle-outline monogram from
+  `assets/icons/ps-coffee_monogram_terracotta_Circle-outline.png`; do not substitute live text
+  for that first manifesto mark.
 
 ## Tablet
 - No dedicated tablet-specific stylesheet or systematic breakpoint exists. A small number of
