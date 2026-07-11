@@ -578,15 +578,15 @@
   }
 
   body[data-page="pack"] .wh-page-list > p.ps-convenience-note {
-    margin: 18px 0 0;
-    padding: 14px 0 0;
+    margin: 20px 0 0;
+    padding: 16px 0 0;
     border-top: 1px solid var(--color-linen);
     font-family: var(--font-accent) !important;
     font-size: clamp(17px, 1.45vw, 22px) !important;
     font-weight: 400 !important;
     line-height: 1.35 !important;
     font-style: italic !important;
-    color: var(--color-espresso) !important;
+    color: var(--color-dark-roast) !important;
   }
 
   /* ── Pass decision banner ── */
@@ -813,9 +813,424 @@
 
   .ps-coming-soon-consolidated {
     margin: 0 26px;
-    padding: 14px 0 30px;
+    padding: 18px 0 30px;
     text-align: center;
     border-bottom: 1px solid var(--color-linen);
+    color: var(--color-terracotta) !important;
+    font-family: var(--font-body) !important;
+    font-size: clamp(12px, 1vw, 14px) !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.16em !important;
+    line-height: 1.2 !important;
+  }
+
+  /* ── Dedicated Pass category selector ── */
+  .ps-pack-category-pass {
+    position: relative;
+    margin-top: clamp(22px, 3vw, 42px);
+    padding-top: clamp(22px, 2.4vw, 34px);
+    border-top: 1px solid var(--color-linen);
+  }
+
+  .ps-pack-category-pass:first-of-type {
+    margin-top: 26px;
+  }
+
+  .ps-pack-category-pass .ps-pack-category-head {
+    margin-bottom: clamp(16px, 2vw, 24px);
+  }
+
+  .ps-pack-category-pass .ps-pack-category-head h3 {
+    color: var(--color-dark-roast);
+    font-family: var(--font-display);
+    font-size: clamp(34px, 3.8vw, 64px);
+    font-weight: 800;
+    letter-spacing: -0.045em;
+    line-height: 0.96;
+  }
+
+  .ps-pack-category-pass .ps-pack-category-head p {
+    color: var(--color-terracotta) !important;
+    font-weight: 800;
+  }
+
+  .ps-pack-category-pass .ps-pack-category-head div > p {
+    max-width: 46ch;
+    margin-top: 8px;
+    color: var(--color-espresso) !important;
+    font-size: clamp(14px, 1.05vw, 16px);
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 1.45;
+    text-transform: none;
+  }
+
+  .ps-pack-category-pass .ps-pack-category-head > p {
+    flex: 0 0 auto;
+  }
+
+  .ps-pack-pass-stage {
+    display: grid;
+    grid-template-columns: minmax(118px, 168px) minmax(0, 1fr);
+    gap: clamp(16px, 2vw, 28px);
+    align-items: center;
+  }
+
+  .ps-pack-pass-tabs {
+    display: grid;
+    gap: 8px;
+    align-self: center;
+  }
+
+  .ps-pack-pass-tabs button {
+    min-height: 34px;
+    border: 1px solid rgba(66, 37, 24, 0.22);
+    border-radius: var(--radius-pill);
+    background: transparent;
+    color: var(--color-dark-roast);
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 1;
+    text-align: left;
+    padding: 0 16px;
+    cursor: pointer;
+    transition: background 180ms var(--ease-standard), color 180ms var(--ease-standard), border-color 180ms var(--ease-standard);
+  }
+
+  .ps-pack-pass-tabs button[aria-selected="true"],
+  .ps-pack-pass-tabs button:hover,
+  .ps-pack-pass-tabs button:focus-visible {
+    background: var(--color-terracotta);
+    border-color: var(--color-terracotta);
+    color: var(--color-steam-cream);
+    outline: none;
+  }
+
+  .ps-pack-pass-rail {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(282px, 24vw);
+    gap: clamp(12px, 1.5vw, 20px);
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    padding: 8px 8px 18px;
+  }
+
+  .ps-pack-pass-rail::-webkit-scrollbar {
+    display: none;
+  }
+
+  .ps-pack-pass-item {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 8px;
+    min-width: 0;
+    color: inherit;
+    text-decoration: none;
+    scroll-snap-align: center;
+  }
+
+  .ps-pack-pass-card {
+    position: relative;
+    aspect-ratio: 9 / 15;
+    min-height: 416px;
+    border-radius: 24px;
+    overflow: hidden;
+    background: var(--color-dark-roast);
+    box-shadow: 0 18px 52px rgba(42, 26, 14, 0.16);
+    transform: scale(0.94);
+    opacity: 0.7;
+    transition: transform 240ms var(--ease-standard), opacity 240ms var(--ease-standard), box-shadow 240ms var(--ease-standard);
+  }
+
+  .ps-pack-pass-item.is-active .ps-pack-pass-card {
+    transform: scale(1);
+    opacity: 1;
+    box-shadow: 0 24px 68px rgba(42, 26, 14, 0.24);
+  }
+
+  .ps-pack-pass-card img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+  }
+
+  .ps-pack-pass-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(20, 11, 6, 0.38) 0%, rgba(20, 11, 6, 0.06) 42%, rgba(20, 11, 6, 0.86) 100%);
+  }
+
+  .ps-pack-pass-card-top,
+  .ps-pack-pass-card-bottom {
+    position: absolute;
+    z-index: 1;
+    left: 22px;
+    right: 22px;
+    color: var(--color-steam-cream) !important;
+  }
+
+  .ps-pack-pass-card-top {
+    top: clamp(24px, 3.8vw, 50px);
+    min-height: 30%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .ps-pack-pass-card-top strong {
+    display: grid;
+    justify-items: center;
+    width: 100%;
+    color: var(--color-steam-cream) !important;
+    font-family: var(--font-display);
+    font-weight: 900;
+    letter-spacing: -0.065em;
+    line-height: 0.78;
+  }
+
+  .ps-pack-pass-title-kicker {
+    display: block;
+    font-size: clamp(38px, 3.6vw, 62px);
+    line-height: 0.82;
+  }
+
+  .ps-pack-pass-title-main {
+    display: block;
+    max-width: 7ch;
+    font-size: clamp(58px, 5.3vw, 94px);
+    line-height: 0.78;
+  }
+
+  .ps-pack-pass-card-bottom {
+    bottom: 18px;
+    display: grid;
+    justify-items: center;
+    gap: 8px;
+    text-align: center;
+  }
+
+  .ps-pack-pass-card-bottom em {
+    display: block;
+    margin: 0;
+    color: var(--color-steam-cream) !important;
+    font-family: var(--font-display);
+    font-size: clamp(48px, 5vw, 70px);
+    font-style: normal;
+    font-weight: 900;
+    letter-spacing: -0.06em;
+    line-height: 0.86;
+  }
+
+  .ps-pack-pass-tags {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 5px;
+    width: min(100%, 292px);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .ps-pack-pass-tags li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 26px;
+    border: 1px solid rgba(250, 246, 238, 0.82);
+    border-radius: var(--radius-sm);
+    background: var(--color-steam-cream);
+    color: var(--color-dark-roast);
+    font-family: var(--font-body);
+    font-size: 8px !important;
+    font-weight: 900 !important;
+    letter-spacing: 0.025em;
+    line-height: 1.05 !important;
+    padding: 0 6px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .ps-pack-pass-detail {
+    display: grid;
+    grid-template-rows: auto auto auto 1fr auto;
+    gap: 6px;
+    min-height: 192px;
+    padding: 8px 0 0;
+    border-top: 1px solid rgba(66, 37, 24, 0.14);
+  }
+
+  .ps-pack-pass-detail h4 {
+    margin: 0;
+    color: var(--color-dark-roast);
+    font-family: var(--font-display);
+    font-size: clamp(16px, 1.05vw, 19px);
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    line-height: 0.95;
+  }
+
+  .ps-pack-pass-detail > p,
+  .ps-pack-pass-detail-body p,
+  .ps-pack-pass-detail-body li {
+    margin: 0;
+    color: var(--color-espresso);
+    font-family: var(--font-body);
+    font-size: 10.5px;
+    line-height: 1.24;
+  }
+
+  .ps-pack-pass-detail-grid {
+    display: grid;
+    align-content: start;
+    gap: 4px;
+  }
+
+  .ps-pack-pass-detail-row {
+    display: block;
+    min-height: 0;
+    border-top: 1px solid rgba(66, 37, 24, 0.1);
+  }
+
+  .ps-pack-pass-detail-row summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    min-height: 24px;
+    padding: 6px 0 5px;
+    color: var(--color-terracotta);
+    font-family: var(--font-body);
+    font-size: 7.5px;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    line-height: 1;
+    text-transform: uppercase;
+    cursor: pointer;
+    list-style: none;
+  }
+
+  .ps-pack-pass-detail-row:first-child summary {
+    color: var(--color-ceremonial-deep);
+  }
+
+  .ps-pack-pass-detail-row summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .ps-pack-pass-detail-row summary::after {
+    content: "+";
+    color: var(--color-dark-roast);
+    font-family: var(--font-display);
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 1;
+  }
+
+  .ps-pack-pass-detail-row[open] summary::after {
+    content: "−";
+  }
+
+  .ps-pack-pass-detail-body {
+    padding: 0 0 8px;
+  }
+
+  .ps-pack-pass-detail-body ul {
+    display: grid;
+    gap: 2px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .ps-pack-pass-detail-body li {
+    position: relative;
+    padding-left: 8px;
+  }
+
+  .ps-pack-pass-detail-body li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.72em;
+    width: 3px;
+    height: 3px;
+    border-radius: var(--radius-pill);
+    background: var(--color-terracotta);
+  }
+
+  .ps-pack-pass-note {
+    margin: 2px 0 0 !important;
+    padding: 8px 10px;
+    border-left: 3px solid var(--color-terracotta);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    background: rgba(232, 64, 12, 0.06);
+    color: var(--color-dark-roast) !important;
+    font-family: var(--font-accent) !important;
+    font-size: 13px !important;
+    font-style: italic;
+    font-weight: 400 !important;
+    line-height: 1.18 !important;
+  }
+
+  .ps-pack-pass-tax {
+    color: rgba(92, 53, 24, 0.72) !important;
+    font-size: 10.25px !important;
+  }
+
+  .ps-pack-pass-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    align-self: end;
+    min-height: 28px;
+    margin-top: 0;
+    border-bottom: 1px solid currentColor;
+    color: var(--color-terracotta) !important;
+    font-family: var(--font-body);
+    font-size: 9.5px;
+    font-weight: 900;
+    letter-spacing: 0.07em;
+    line-height: 1;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .ps-pack-pass-link:hover,
+  .ps-pack-pass-link:focus-visible {
+    color: var(--color-dark-roast) !important;
+    outline: none;
+  }
+
+  .ps-pack-pass-dots {
+    display: flex;
+    gap: 8px;
+    margin: 12px 0 0 calc(min(168px, 14vw) + clamp(16px, 2vw, 28px));
+  }
+
+  .ps-pack-pass-dots button {
+    width: 9px;
+    height: 9px;
+    border: 0;
+    border-radius: var(--radius-pill);
+    background: rgba(66, 37, 24, 0.24);
+    cursor: pointer;
+  }
+
+  .ps-pack-pass-dots button[aria-current="true"] {
+    width: 26px;
+    background: var(--color-terracotta);
+  }
+
+  .ps-pack-pass-mobile-detail {
+    display: none;
   }
 
   @media (max-width: 720px) {
@@ -963,6 +1378,147 @@
       padding-left: 16px;
       padding-right: 16px;
     }
+
+    .ps-pack-category-pass .ps-pack-category-head {
+      display: grid;
+      gap: 8px;
+      align-items: start;
+    }
+
+    .ps-pack-category-pass .ps-pack-category-head h3 {
+      font-size: 34px;
+      letter-spacing: -0.04em;
+    }
+
+    .ps-pack-category-pass .ps-pack-category-head div > p {
+      font-size: 14px;
+      line-height: 1.45;
+      letter-spacing: 0;
+      text-transform: none;
+    }
+
+    .ps-pack-pass-stage {
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+
+    .ps-pack-pass-tabs {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .ps-pack-pass-tabs::-webkit-scrollbar {
+      display: none;
+    }
+
+    .ps-pack-pass-tabs button {
+      flex: 0 0 auto;
+      min-width: 112px;
+      min-height: 38px;
+      text-align: center;
+      padding: 0 14px;
+    }
+
+    .ps-pack-pass-rail {
+      grid-auto-columns: minmax(260px, 78vw);
+      gap: 12px;
+      padding: 6px max(24px, calc((100% - min(78vw, 300px)) / 2)) 14px;
+      scroll-padding-inline: max(24px, calc((100% - min(78vw, 300px)) / 2));
+    }
+
+    .ps-pack-pass-card {
+      min-height: 374px;
+      border-radius: 22px;
+    }
+
+    .ps-pack-pass-card-top {
+      top: 28px;
+      left: 18px;
+      right: 18px;
+    }
+
+    .ps-pack-pass-title-kicker {
+      font-size: clamp(34px, 11vw, 48px);
+    }
+
+    .ps-pack-pass-title-main {
+      font-size: clamp(48px, 15vw, 68px);
+    }
+
+    .ps-pack-pass-card-bottom {
+      left: 18px;
+      right: 18px;
+      bottom: 16px;
+    }
+
+    .ps-pack-pass-card-bottom em {
+      font-size: clamp(44px, 12vw, 58px);
+    }
+
+    .ps-pack-pass-tags {
+      gap: 5px;
+      width: min(100%, 260px);
+    }
+
+    .ps-pack-pass-tags li {
+      min-height: 24px;
+      padding: 0 5px;
+      font-size: 8px !important;
+      letter-spacing: 0;
+    }
+
+    .ps-pack-pass-detail {
+      gap: 5px;
+      min-height: 186px;
+      padding-top: 8px;
+    }
+
+    .ps-pack-pass-rail .ps-pack-pass-detail {
+      display: none;
+    }
+
+    .ps-pack-pass-mobile-detail {
+      display: block;
+      margin: 2px 0 0;
+      padding: 0 max(24px, calc((100% - min(78vw, 300px)) / 2));
+    }
+
+    .ps-pack-pass-mobile-detail .ps-pack-pass-detail {
+      display: grid;
+    }
+
+    .ps-pack-pass-mobile-detail:empty {
+      display: none;
+    }
+
+    .ps-pack-pass-detail > p,
+    .ps-pack-pass-detail-body p,
+    .ps-pack-pass-detail-body li {
+      font-size: 10.5px;
+      line-height: 1.24;
+    }
+
+    .ps-pack-pass-detail-row summary {
+      min-height: 24px;
+      padding: 6px 0 5px;
+      font-size: 7.5px;
+    }
+
+    .ps-pack-pass-note {
+      padding: 8px 9px;
+      font-size: 12.5px !important;
+    }
+
+    .ps-pack-pass-link {
+      min-height: 28px;
+      font-size: 9.5px;
+    }
+
+    .ps-pack-pass-dots {
+      margin-left: 0;
+    }
   }
 </style>
 </head>
@@ -1050,372 +1606,371 @@
       <p>Pick the pack that matches your habit. The card shows the price, the cups, and the saving. You decide once; the mornings get lighter.</p>
     </header>
 
-    <section class="ps-pack-category">
+    <section class="ps-pack-category ps-pack-category-pass" data-pack-pass-category>
       <header class="ps-pack-category-head">
-        <h3>The Core Packs.</h3>
+        <div>
+          <h3>The Core Packs.</h3>
+          <p>Built for the regular cup. Price, cups, validity, and saving stay visible together.</p>
+        </div>
         <p>4 Packs</p>
       </header>
-      <div class="ps-pack-grid">
-        <article class="ps-pack-card">
-          <div class="ps-pack-card-media">
-            <img class="ps-pack-card-bg" src="assets/photos/ps-pass-black.webp" alt="The Black Pack ten black coffees, no milk, no menu">
-            <div class="ps-pack-card-overlay">
-              <div class="ps-pack-card-overlay-top">
-                <div class="ps-pack-card-overlay-title"><h4>The Black Pack.</h4><p>No milk. No menu.</p></div>
-                <span class="ps-pack-card-validity">30 days</span>
-              </div>
-              <div></div>
-              <div class="ps-pack-card-overlay-bottom">
-                <div class="ps-pack-card-price"><strong>₹749</strong><span>Avail 10 items</span></div>
-                <p class="ps-pack-card-math">₹74.90 per item</p>
-              </div>
+      <div class="ps-pack-pass-stage">
+        <div class="ps-pack-pass-tabs" role="tablist" aria-label="Choose from The Core Packs.">
+        <button type="button" role="tab" aria-selected="true" data-pack-pass-go="0">Black</button>
+        <button type="button" role="tab" aria-selected="false" data-pack-pass-go="1">Starter</button>
+        <button type="button" role="tab" aria-selected="false" data-pack-pass-go="2">Habit</button>
+        <button type="button" role="tab" aria-selected="false" data-pack-pass-go="3">Full Pour</button>
+        </div>
+        <div class="ps-pack-pass-rail" tabindex="0" aria-label="The Core Packs. pass cards">
+        <article class="ps-pack-pass-item is-active" data-pack-pass-card>
+          <div class="ps-pack-pass-card">
+            <img src="assets/photos/site/ps-pass-black.webp" alt="The Black Pack vertical pass placeholder">
+            <div class="ps-pack-pass-card-top"><strong><span class="ps-pack-pass-title-kicker">The</span><span class="ps-pack-pass-title-main">Black Pack.</span></strong></div>
+            <div class="ps-pack-pass-card-bottom">
+              <em>₹749</em>
+              <ul class="ps-pack-pass-tags" aria-label="The Black Pack. quick details"><li>10 cups</li><li>30 days</li><li>₹75 per item</li></ul>
             </div>
           </div>
-          <div class="ps-pack-card-body">
-            <div class="ps-pack-card-meta"><span class="ps-pack-included"><strong>Included</strong>Espresso · Americano · Iced Americano</span></div>
-            <ul>
-              <li>Redeem 10 black coffees from the included list.</li>
-              <li>Espresso, Americano and iced Americano. Nothing hiding in it.</li>
-            </ul>
-            <p class="ps-pack-exclusions"><strong>Exclusions</strong>Milk coffee, Matcha, retail / packaged items.</p>
-            <p class="ps-pack-tax-note">Prices mentioned are exclusive of GST. GST will be applicable on all subscription card purchase.</p>
-            <p class="ps-pack-card-note">P.S. No milk. No menu to scroll. The honest black cup, ten times over.</p>
-            <a class="ps-pack-card-link" href="pack-enquiry.html?pack=black">Get The Black Pack</a>
+          <div class="ps-pack-pass-detail">
+            <h4>The Black Pack.</h4>
+            <p>Black coffee only. Minimal. Direct.</p>
+            <div class="ps-pack-pass-detail-grid">
+              <details class="ps-pack-pass-detail-row"><summary>Included</summary><div class="ps-pack-pass-detail-body"><p>Espresso · Americano · Iced Americano</p></div></details>
+              <details class="ps-pack-pass-detail-row"><summary>Use it for</summary><div class="ps-pack-pass-detail-body"><ul><li>Redeem 10 black coffees from the included list.</li><li>Espresso, Americano and iced Americano. Nothing hiding in it.</li></ul></div></details>
+              <details class="ps-pack-pass-detail-row"><summary>Exclusions</summary><div class="ps-pack-pass-detail-body"><p>Milk coffee, Matcha, retail / packaged items.</p></div></details>
+              <details class="ps-pack-pass-detail-row"><summary>GST</summary><div class="ps-pack-pass-detail-body"><p class="ps-pack-pass-tax">Prices are exclusive of GST. GST applies at purchase.</p></div></details>
+            </div>
+            <p class="ps-pack-pass-note">P.S. No milk. No menu to scroll. The honest black cup, ten times over.</p>
+            <a class="ps-pack-pass-link" href="pack-enquiry.html?pack=black">Get The Black Pack →</a>
           </div>
         </article>
 
-        <article class="ps-pack-card ps-pack-card-featured">
-          <div class="ps-pack-card-media">
-            <img class="ps-pack-card-bg" src="assets/photos/ps-pass-starter.webp" alt="The Starter Pack ten classic coffees to begin the habit">
-            <span class="ps-pack-card-popular">Most popular</span>
-            <div class="ps-pack-card-overlay">
-              <div class="ps-pack-card-overlay-top">
-                <div class="ps-pack-card-overlay-title"><h4>The Starter Pack.</h4><p>Begin the habit.</p></div>
-                <span class="ps-pack-card-validity">30 days</span>
-              </div>
-              <div></div>
-              <div class="ps-pack-card-overlay-bottom">
-                <div class="ps-pack-card-price"><strong>₹1,099</strong><span>Avail 10 items</span></div>
-                <p class="ps-pack-card-math">₹109.90 per item</p>
-              </div>
+        <article class="ps-pack-pass-item" data-pack-pass-card>
+          <div class="ps-pack-pass-card">
+            <img src="assets/photos/site/ps-pass-starter.webp" alt="The Starter Pack vertical pass placeholder">
+            <div class="ps-pack-pass-card-top"><strong><span class="ps-pack-pass-title-kicker">The</span><span class="ps-pack-pass-title-main">Starter Pack.</span></strong></div>
+            <div class="ps-pack-pass-card-bottom">
+              <em>₹1,099</em>
+              <ul class="ps-pack-pass-tags" aria-label="The Starter Pack. quick details"><li>10 cups</li><li>30 days</li><li>₹110 per item</li></ul>
             </div>
           </div>
-          <div class="ps-pack-card-body">
-            <div class="ps-pack-card-meta"><span class="ps-pack-included"><strong>Included</strong>All Classic coffee hot &amp; iced</span></div>
-            <ul>
-              <li>Redeem any 10 Classic coffees of your choice, hot or iced.</li>
-              <li>Every espresso, cappuccino, flat white, latte and cold brew.</li>
-            </ul>
-            <p class="ps-pack-exclusions"><strong>Exclusions</strong>Matcha, retail beans, merchandise, packaged items.</p>
-            <p class="ps-pack-tax-note">Prices mentioned are exclusive of GST. GST will be applicable on all subscription card purchase.</p>
-            <p class="ps-pack-card-note">P.S. You will top up before it runs out.</p>
-            <a class="ps-pack-card-link" href="pack-enquiry.html?pack=starter">Get The Starter Pack</a>
+          <div class="ps-pack-pass-detail">
+            <h4>The Starter Pack.</h4>
+            <p>Classic coffee. A simple way to begin.</p>
+            <div class="ps-pack-pass-detail-grid">
+              <details class="ps-pack-pass-detail-row"><summary>Included</summary><div class="ps-pack-pass-detail-body"><p>All Classic coffee hot &amp; iced</p></div></details>
+              <details class="ps-pack-pass-detail-row"><summary>Use it for</summary><div class="ps-pack-pass-detail-body"><ul><li>Redeem any 10 Classic coffees of your choice, hot or iced.</li><li>Every espresso, cappuccino, flat white, latte and cold brew.</li></ul></div></details>
+              <details class="ps-pack-pass-detail-row"><summary>Exclusions</summary><div class="ps-pack-pass-detail-body"><p>Matcha, retail beans, merchandise, packaged items.</p></div></details>
+              <details class="ps-pack-pass-detail-row"><summary>GST</summary><div class="ps-pack-pass-detail-body"><p class="ps-pack-pass-tax">Prices are exclusive of GST. GST applies at purchase.</p></div></details>
+            </div>
+            <p class="ps-pack-pass-note">P.S. You will top up before it runs out.</p>
+            <a class="ps-pack-pass-link" href="pack-enquiry.html?pack=starter">Get The Starter Pack →</a>
           </div>
         </article>
 
-        <article class="ps-pack-card">
-          <div class="ps-pack-card-media">
-            <img class="ps-pack-card-bg" src="assets/photos/ps-pass-habit.webp" alt="The Habit Pack twenty classic coffees decided in one go">
-            <div class="ps-pack-card-overlay">
-              <div class="ps-pack-card-overlay-top">
-                <div class="ps-pack-card-overlay-title"><h4>The Habit Pack.</h4><p>Same habit. Fewer decisions.</p></div>
-                <span class="ps-pack-card-validity">30 days</span>
-              </div>
-              <div></div>
-              <div class="ps-pack-card-overlay-bottom">
-                <div class="ps-pack-card-price"><strong>₹1,899</strong><span>Avail 20 items</span></div>
-                <p class="ps-pack-card-math">₹94.95 per item</p>
-              </div>
+        <article class="ps-pack-pass-item" data-pack-pass-card>
+          <div class="ps-pack-pass-card">
+            <img src="assets/photos/site/ps-pass-habit.webp" alt="The Habit Pack vertical pass placeholder">
+            <div class="ps-pack-pass-card-top"><strong><span class="ps-pack-pass-title-kicker">The</span><span class="ps-pack-pass-title-main">Habit Pack.</span></strong></div>
+            <div class="ps-pack-pass-card-bottom">
+              <em>₹1,899</em>
+              <ul class="ps-pack-pass-tags" aria-label="The Habit Pack. quick details"><li>20 cups</li><li>30 days</li><li>₹95 per item</li></ul>
             </div>
           </div>
-          <div class="ps-pack-card-body">
-            <div class="ps-pack-card-meta"><span class="ps-pack-included"><strong>Included</strong>All Classic coffee hot &amp; iced</span></div>
-            <ul>
-              <li>Redeem any 20 Classic coffees of your choice, hot or iced.</li>
-              <li>Same range as the Starter Pack, decided in one go.</li>
-            </ul>
-            <p class="ps-pack-exclusions"><strong>Exclusions</strong>Matcha, retail beans, merchandise, packaged items.</p>
-            <p class="ps-pack-tax-note">Prices mentioned are exclusive of GST. GST will be applicable on all subscription card purchase.</p>
-            <p class="ps-pack-card-note">P.S. Same habit. Fewer decisions.</p>
-            <a class="ps-pack-card-link" href="pack-enquiry.html?pack=habit">Get The Habit Pack</a>
+          <div class="ps-pack-pass-detail">
+            <h4>The Habit Pack.</h4>
+            <p>For the daily cup. Fewer decisions.</p>
+            <div class="ps-pack-pass-detail-grid">
+              <details class="ps-pack-pass-detail-row"><summary>Included</summary><div class="ps-pack-pass-detail-body"><p>All Classic coffee hot &amp; iced</p></div></details>
+              <details class="ps-pack-pass-detail-row"><summary>Use it for</summary><div class="ps-pack-pass-detail-body"><ul><li>Redeem any 20 Classic coffees of your choice, hot or iced.</li><li>Same range as the Starter Pack, decided in one go.</li></ul></div></details>
+              <details class="ps-pack-pass-detail-row"><summary>Exclusions</summary><div class="ps-pack-pass-detail-body"><p>Matcha, retail beans, merchandise, packaged items.</p></div></details>
+              <details class="ps-pack-pass-detail-row"><summary>GST</summary><div class="ps-pack-pass-detail-body"><p class="ps-pack-pass-tax">Prices are exclusive of GST. GST applies at purchase.</p></div></details>
+            </div>
+            <p class="ps-pack-pass-note">P.S. Same habit. Fewer decisions.</p>
+            <a class="ps-pack-pass-link" href="pack-enquiry.html?pack=habit">Get The Habit Pack →</a>
           </div>
         </article>
 
-        <article class="ps-pack-card">
-          <div class="ps-pack-card-media">
-            <img class="ps-pack-card-bg" src="assets/photos/ps-pass-full-pour.webp" alt="The Full Pour twenty drinks across the entire P.S. menu">
-            <div class="ps-pack-card-overlay">
-              <div class="ps-pack-card-overlay-top">
-                <div class="ps-pack-card-overlay-title"><h4>The Full Pour.</h4><p>The whole menu, poured.</p></div>
-                <span class="ps-pack-card-validity">30 days</span>
-              </div>
-              <div></div>
-              <div class="ps-pack-card-overlay-bottom">
-                <div class="ps-pack-card-price"><strong>₹2,899</strong><span>Avail 20 items</span></div>
-                <p class="ps-pack-card-math">₹144.95 per item</p>
-              </div>
+        <article class="ps-pack-pass-item" data-pack-pass-card>
+          <div class="ps-pack-pass-card">
+            <img src="assets/photos/site/ps-pass-full-pour.webp" alt="The Full Pour vertical pass placeholder">
+            <div class="ps-pack-pass-card-top"><strong><span class="ps-pack-pass-title-kicker">The</span><span class="ps-pack-pass-title-main">Full Pour.</span></strong></div>
+            <div class="ps-pack-pass-card-bottom">
+              <em>₹2,899</em>
+              <ul class="ps-pack-pass-tags" aria-label="The Full Pour. quick details"><li>20 cups</li><li>30 days</li><li>₹145 per item</li></ul>
             </div>
           </div>
-          <div class="ps-pack-card-body">
-            <div class="ps-pack-card-meta"><span class="ps-pack-included"><strong>Included</strong>Everything in The Habit Pack, plus all Matcha</span></div>
-            <ul>
-              <li>Redeem any 20 items from the entire menu every Coffee and every Matcha.</li>
-              <li>The complete P.S. range. Nothing on the menu is off-limits.</li>
-            </ul>
-            <p class="ps-pack-exclusions"><strong>Exclusions</strong>Retail beans, merchandise, packaged items.</p>
-            <p class="ps-pack-tax-note">Prices mentioned are exclusive of GST. GST will be applicable on all subscription card purchase.</p>
-            <p class="ps-pack-card-note">P.S. The whole menu, poured. For people who drink both.</p>
-            <a class="ps-pack-card-link" href="pack-enquiry.html?pack=full-pour">Get The Full Pour</a>
+          <div class="ps-pack-pass-detail">
+            <h4>The Full Pour.</h4>
+            <p>Coffee and Matcha. The full range.</p>
+            <div class="ps-pack-pass-detail-grid">
+              <details class="ps-pack-pass-detail-row"><summary>Included</summary><div class="ps-pack-pass-detail-body"><p>Everything in The Habit Pack, plus all Matcha</p></div></details>
+              <details class="ps-pack-pass-detail-row"><summary>Use it for</summary><div class="ps-pack-pass-detail-body"><ul><li>Redeem any 20 items from the entire menu every Coffee and every Matcha.</li><li>The complete P.S. range. Nothing on the menu is off-limits.</li></ul></div></details>
+              <details class="ps-pack-pass-detail-row"><summary>Exclusions</summary><div class="ps-pack-pass-detail-body"><p>Retail beans, merchandise, packaged items.</p></div></details>
+              <details class="ps-pack-pass-detail-row"><summary>GST</summary><div class="ps-pack-pass-detail-body"><p class="ps-pack-pass-tax">Prices are exclusive of GST. GST applies at purchase.</p></div></details>
+            </div>
+            <p class="ps-pack-pass-note">P.S. The whole menu, poured. For people who drink both.</p>
+            <a class="ps-pack-pass-link" href="pack-enquiry.html?pack=full-pour">Get The Full Pour →</a>
           </div>
         </article>
+        </div>
+      </div>
+      <div class="ps-pack-pass-dots" aria-label="The Core Packs. progress">
+        <button type="button" aria-current="true" data-pack-pass-go="0" aria-label="Show The Black Pack."></button>
+        <button type="button" aria-current="false" data-pack-pass-go="1" aria-label="Show The Starter Pack."></button>
+        <button type="button" aria-current="false" data-pack-pass-go="2" aria-label="Show The Habit Pack."></button>
+        <button type="button" aria-current="false" data-pack-pass-go="3" aria-label="Show The Full Pour."></button>
       </div>
     </section>
 
-    <section class="ps-pack-category">
+    <section class="ps-pack-category ps-pack-category-pass" data-pack-pass-category>
       <header class="ps-pack-category-head">
-        <h3>Unlimited days.</h3>
+        <div>
+          <h3>Unlimited days.</h3>
+          <p>For people who already know the cup is daily.</p>
+        </div>
         <p>2 Packs</p>
       </header>
-      <div class="ps-pack-grid">
-        <article class="ps-pack-card">
-          <div class="ps-pack-card-media">
-            <img class="ps-pack-card-bg" src="assets/photos/ps-pass-daily.webp" alt="The Daily one classic coffee every day for thirty days">
-            <div class="ps-pack-card-overlay">
-              <div class="ps-pack-card-overlay-top">
-                <div class="ps-pack-card-overlay-title"><h4>The Daily.</h4><p>One a day. Already paid for.</p></div>
-                <span class="ps-pack-card-validity">30 days</span>
-              </div>
-              <div></div>
-              <div class="ps-pack-card-overlay-bottom">
-                <div class="ps-pack-card-price"><strong>₹1,299</strong><span>One Classic coffee daily</span></div>
-                <p class="ps-pack-card-math">1 coffee every day</p>
-              </div>
+      <div class="ps-pack-pass-stage">
+        <div class="ps-pack-pass-tabs" role="tablist" aria-label="Choose from Unlimited days.">
+        <button type="button" role="tab" aria-selected="true" data-pack-pass-go="0">Daily</button>
+        <button type="button" role="tab" aria-selected="false" data-pack-pass-go="1">Open Tab</button>
+        </div>
+        <div class="ps-pack-pass-rail" tabindex="0" aria-label="Unlimited days. pass cards">
+        <article class="ps-pack-pass-item is-active" data-pack-pass-card>
+          <div class="ps-pack-pass-card">
+            <img src="assets/photos/site/ps-pass-daily.webp" alt="The Daily vertical pass placeholder">
+            <div class="ps-pack-pass-card-top"><strong><span class="ps-pack-pass-title-kicker">The</span><span class="ps-pack-pass-title-main">Daily.</span></strong></div>
+            <div class="ps-pack-pass-card-bottom">
+              <em>₹1,299</em>
+              <ul class="ps-pack-pass-tags" aria-label="The Daily. quick details"><li>1 daily</li><li>30 days</li><li>Classic coffee</li></ul>
             </div>
           </div>
-          <div class="ps-pack-card-body">
-            <div class="ps-pack-card-meta"><span class="ps-pack-included"><strong>Included</strong>One Classic coffee per day</span></div>
-            <ul>
-              <li>One Classic coffee, every day, for 30 days.</li>
-              <li>No counting cups. Just show up.</li>
-            </ul>
-            <p class="ps-pack-exclusions"><strong>Exclusions</strong>Second same-day cup, Matcha, retail / packaged items.</p>
-            <p class="ps-pack-tax-note">Prices mentioned are exclusive of GST. GST will be applicable on all subscription card purchase.</p>
-            <p class="ps-pack-card-note">P.S. One a day. Already paid for.</p>
-            <a class="ps-pack-card-link" href="pack-enquiry.html?pack=daily">Get The Daily</a>
+          <div class="ps-pack-pass-detail">
+            <h4>The Daily.</h4>
+            <p>One a day. Already paid for.</p>
+            <div class="ps-pack-pass-detail-grid">
+              <details class="ps-pack-pass-detail-row"><summary>Included</summary><div class="ps-pack-pass-detail-body"><p>One Classic coffee per day</p></div></details>
+              <details class="ps-pack-pass-detail-row"><summary>Use it for</summary><div class="ps-pack-pass-detail-body"><ul><li>One Classic coffee, every day, for 30 days.</li><li>No counting cups. Just show up.</li></ul></div></details>
+              <details class="ps-pack-pass-detail-row"><summary>Exclusions</summary><div class="ps-pack-pass-detail-body"><p>Second same-day cup, Matcha, retail / packaged items.</p></div></details>
+              <details class="ps-pack-pass-detail-row"><summary>GST</summary><div class="ps-pack-pass-detail-body"><p class="ps-pack-pass-tax">Prices are exclusive of GST. GST applies at purchase.</p></div></details>
+            </div>
+            <p class="ps-pack-pass-note">P.S. One a day. Already paid for.</p>
+            <a class="ps-pack-pass-link" href="pack-enquiry.html?pack=daily">Get The Daily →</a>
           </div>
         </article>
 
-        <article class="ps-pack-card">
-          <div class="ps-pack-card-media">
-            <img class="ps-pack-card-bg" src="assets/photos/ps-pass-open-tab.webp" alt="The Open Tab two classic coffees every day for thirty days">
-            <div class="ps-pack-card-overlay">
-              <div class="ps-pack-card-overlay-top">
-                <div class="ps-pack-card-overlay-title"><h4>The Open Tab.</h4><p>Two cups. Zero decisions.</p></div>
-                <span class="ps-pack-card-validity">30 days</span>
-              </div>
-              <div></div>
-              <div class="ps-pack-card-overlay-bottom">
-                <div class="ps-pack-card-price"><strong>₹2,499</strong><span>Two Classic coffees daily</span></div>
-                <p class="ps-pack-card-math">2 coffees every day</p>
-              </div>
+        <article class="ps-pack-pass-item" data-pack-pass-card>
+          <div class="ps-pack-pass-card">
+            <img src="assets/photos/site/ps-pass-open-tab.webp" alt="The Open Tab vertical pass placeholder">
+            <div class="ps-pack-pass-card-top"><strong><span class="ps-pack-pass-title-kicker">The</span><span class="ps-pack-pass-title-main">Open Tab.</span></strong></div>
+            <div class="ps-pack-pass-card-bottom">
+              <em>₹2,499</em>
+              <ul class="ps-pack-pass-tags" aria-label="The Open Tab. quick details"><li>2 daily</li><li>30 days</li><li>Classic coffee</li></ul>
             </div>
           </div>
-          <div class="ps-pack-card-body">
-            <div class="ps-pack-card-meta"><span class="ps-pack-included"><strong>Included</strong>Two Classic coffees per day</span></div>
-            <ul>
-              <li>Two Classic coffees, every day, for 30 days.</li>
-              <li>The morning cup and the afternoon one, both sorted.</li>
-            </ul>
-            <p class="ps-pack-exclusions"><strong>Exclusions</strong>Third same-day cup, Matcha, retail / packaged items.</p>
-            <p class="ps-pack-tax-note">Prices mentioned are exclusive of GST. GST will be applicable on all subscription card purchase.</p>
-            <p class="ps-pack-card-note">P.S. Two cups. Zero decisions.</p>
-            <a class="ps-pack-card-link" href="pack-enquiry.html?pack=open-tab">Get The Open Tab</a>
+          <div class="ps-pack-pass-detail">
+            <h4>The Open Tab.</h4>
+            <p>Two cups. Zero decisions.</p>
+            <div class="ps-pack-pass-detail-grid">
+              <details class="ps-pack-pass-detail-row"><summary>Included</summary><div class="ps-pack-pass-detail-body"><p>Two Classic coffees per day</p></div></details>
+              <details class="ps-pack-pass-detail-row"><summary>Use it for</summary><div class="ps-pack-pass-detail-body"><ul><li>Two Classic coffees, every day, for 30 days.</li><li>The morning cup and the afternoon one, both sorted.</li></ul></div></details>
+              <details class="ps-pack-pass-detail-row"><summary>Exclusions</summary><div class="ps-pack-pass-detail-body"><p>Third same-day cup, Matcha, retail / packaged items.</p></div></details>
+              <details class="ps-pack-pass-detail-row"><summary>GST</summary><div class="ps-pack-pass-detail-body"><p class="ps-pack-pass-tax">Prices are exclusive of GST. GST applies at purchase.</p></div></details>
+            </div>
+            <p class="ps-pack-pass-note">P.S. Two cups. Zero decisions.</p>
+            <a class="ps-pack-pass-link" href="pack-enquiry.html?pack=open-tab">Get The Open Tab →</a>
           </div>
         </article>
+        </div>
+      </div>
+      <div class="ps-pack-pass-dots" aria-label="Unlimited days. progress">
+        <button type="button" aria-current="true" data-pack-pass-go="0" aria-label="Show The Daily."></button>
+        <button type="button" aria-current="false" data-pack-pass-go="1" aria-label="Show The Open Tab."></button>
       </div>
     </section>
 
-    <section class="ps-pack-category">
+    <section class="ps-pack-category ps-pack-category-pass" data-pack-pass-category>
       <header class="ps-pack-category-head">
-        <h3>Short &amp; specific.</h3>
+        <div>
+          <h3>Short &amp; specific.</h3>
+          <p>For trial, one-week use, and the green habit.</p>
+        </div>
         <p>3 Packs</p>
       </header>
-      <div class="ps-pack-grid">
-        <article class="ps-pack-card">
-          <div class="ps-pack-card-media">
-            <img class="ps-pack-card-bg" src="assets/photos/ps-pass-first-sip.webp" alt="The First Sip Pack five cups to explore the full P.S. menu">
-            <div class="ps-pack-card-overlay">
-              <div class="ps-pack-card-overlay-top">
-                <div class="ps-pack-card-overlay-title"><h4>The First Sip.</h4><p>Five cups. The whole menu.</p></div>
-                <span class="ps-pack-card-validity">7 days</span>
-              </div>
-              <div></div>
-              <div class="ps-pack-card-overlay-bottom">
-                <div class="ps-pack-card-price"><strong>₹599</strong><span>Avail any 5 items</span></div>
-                <p class="ps-pack-card-math">₹119.80 per item</p>
-              </div>
+      <div class="ps-pack-pass-stage">
+        <div class="ps-pack-pass-tabs" role="tablist" aria-label="Choose from Short &amp; specific.">
+        <button type="button" role="tab" aria-selected="true" data-pack-pass-go="0">First Sip</button>
+        <button type="button" role="tab" aria-selected="false" data-pack-pass-go="1">Week</button>
+        <button type="button" role="tab" aria-selected="false" data-pack-pass-go="2">Green</button>
+        </div>
+        <div class="ps-pack-pass-rail" tabindex="0" aria-label="Short &amp; specific. pass cards">
+        <article class="ps-pack-pass-item is-active" data-pack-pass-card>
+          <div class="ps-pack-pass-card">
+            <img src="assets/photos/site/ps-pass-first-sip.webp" alt="The First Sip vertical pass placeholder">
+            <div class="ps-pack-pass-card-top"><strong><span class="ps-pack-pass-title-kicker">The</span><span class="ps-pack-pass-title-main">First Sip.</span></strong></div>
+            <div class="ps-pack-pass-card-bottom">
+              <em>₹599</em>
+              <ul class="ps-pack-pass-tags" aria-label="The First Sip. quick details"><li>5 items</li><li>7 days</li><li>₹120 per item</li></ul>
             </div>
           </div>
-          <div class="ps-pack-card-body">
-            <div class="ps-pack-card-meta"><span class="ps-pack-included"><strong>Included</strong>All Coffee · All Matcha</span></div>
-            <ul>
-              <li>Redeem any 5 items any Coffee or any Matcha.</li>
-              <li>The whole menu is open. Ceremonial-grade Matcha included.</li>
-            </ul>
-            <p class="ps-pack-exclusions"><strong>Exclusions</strong>Retail beans, merchandise, packaged items.</p>
-            <p class="ps-pack-tax-note">Prices mentioned are exclusive of GST. GST will be applicable on all subscription card purchase.</p>
-            <p class="ps-pack-card-note">P.S. Five cups to find your usual. That is all this is.</p>
-            <a class="ps-pack-card-link" href="pack-enquiry.html?pack=first-sip">Get The First Sip</a>
+          <div class="ps-pack-pass-detail">
+            <h4>The First Sip.</h4>
+            <p>Five cups. The whole menu.</p>
+            <div class="ps-pack-pass-detail-grid">
+              <details class="ps-pack-pass-detail-row"><summary>Included</summary><div class="ps-pack-pass-detail-body"><p>All Coffee · All Matcha</p></div></details>
+              <details class="ps-pack-pass-detail-row"><summary>Use it for</summary><div class="ps-pack-pass-detail-body"><ul><li>Redeem any 5 items any Coffee or any Matcha.</li><li>The whole menu is open. Ceremonial-grade Matcha included.</li></ul></div></details>
+              <details class="ps-pack-pass-detail-row"><summary>Exclusions</summary><div class="ps-pack-pass-detail-body"><p>Retail beans, merchandise, packaged items.</p></div></details>
+              <details class="ps-pack-pass-detail-row"><summary>GST</summary><div class="ps-pack-pass-detail-body"><p class="ps-pack-pass-tax">Prices are exclusive of GST. GST applies at purchase.</p></div></details>
+            </div>
+            <p class="ps-pack-pass-note">P.S. Five cups to find your usual. That is all this is.</p>
+            <a class="ps-pack-pass-link" href="pack-enquiry.html?pack=first-sip">Get The First Sip →</a>
           </div>
         </article>
 
-        <article class="ps-pack-card">
-          <div class="ps-pack-card-media">
-            <img class="ps-pack-card-bg" src="assets/photos/ps-pass-week.webp" alt="The Week seven classic coffees across seven days">
-            <div class="ps-pack-card-overlay">
-              <div class="ps-pack-card-overlay-top">
-                <div class="ps-pack-card-overlay-title"><h4>The Week.</h4><p>Seven days. Seven cups.</p></div>
-                <span class="ps-pack-card-validity">7 days</span>
-              </div>
-              <div></div>
-              <div class="ps-pack-card-overlay-bottom">
-                <div class="ps-pack-card-price"><strong>₹549</strong><span>Avail 7 items</span></div>
-                <p class="ps-pack-card-math">₹78.43 per item</p>
-              </div>
+        <article class="ps-pack-pass-item" data-pack-pass-card>
+          <div class="ps-pack-pass-card">
+            <img src="assets/photos/site/ps-pass-week.webp" alt="The Week vertical pass placeholder">
+            <div class="ps-pack-pass-card-top"><strong><span class="ps-pack-pass-title-kicker">The</span><span class="ps-pack-pass-title-main">Week.</span></strong></div>
+            <div class="ps-pack-pass-card-bottom">
+              <em>₹549</em>
+              <ul class="ps-pack-pass-tags" aria-label="The Week. quick details"><li>7 cups</li><li>7 days</li><li>₹78 per item</li></ul>
             </div>
           </div>
-          <div class="ps-pack-card-body">
-            <div class="ps-pack-card-meta"><span class="ps-pack-included"><strong>Included</strong>7 Classic coffees</span></div>
-            <ul>
-              <li>Seven Classic coffees to use across seven days.</li>
-              <li>The low-commitment way into the habit.</li>
-            </ul>
-            <p class="ps-pack-exclusions"><strong>Exclusions</strong>Matcha, retail beans, merchandise.</p>
-            <p class="ps-pack-tax-note">Prices mentioned are exclusive of GST. GST will be applicable on all subscription card purchase.</p>
-            <p class="ps-pack-card-note">P.S. One less thing to think about, for one whole week.</p>
-            <a class="ps-pack-card-link" href="pack-enquiry.html?pack=week">Get The Week</a>
+          <div class="ps-pack-pass-detail">
+            <h4>The Week.</h4>
+            <p>Seven days. Seven cups.</p>
+            <div class="ps-pack-pass-detail-grid">
+              <details class="ps-pack-pass-detail-row"><summary>Included</summary><div class="ps-pack-pass-detail-body"><p>7 Classic coffees</p></div></details>
+              <details class="ps-pack-pass-detail-row"><summary>Use it for</summary><div class="ps-pack-pass-detail-body"><ul><li>Seven Classic coffees to use across seven days.</li><li>The low-commitment way into the habit.</li></ul></div></details>
+              <details class="ps-pack-pass-detail-row"><summary>Exclusions</summary><div class="ps-pack-pass-detail-body"><p>Matcha, retail beans, merchandise.</p></div></details>
+              <details class="ps-pack-pass-detail-row"><summary>GST</summary><div class="ps-pack-pass-detail-body"><p class="ps-pack-pass-tax">Prices are exclusive of GST. GST applies at purchase.</p></div></details>
+            </div>
+            <p class="ps-pack-pass-note">P.S. One less thing to think about, for one whole week.</p>
+            <a class="ps-pack-pass-link" href="pack-enquiry.html?pack=week">Get The Week →</a>
           </div>
         </article>
 
-        <article class="ps-pack-card">
-          <div class="ps-pack-card-media">
-            <img class="ps-pack-card-bg" src="assets/photos/ps-pass-green.webp" alt="The Green Pack ten ceremonial-grade Matcha and Hojicha drinks">
-            <div class="ps-pack-card-overlay">
-              <div class="ps-pack-card-overlay-top">
-                <div class="ps-pack-card-overlay-title"><h4>The Green Pack.</h4><p>Ceremonial grade. Ten times over.</p></div>
-                <span class="ps-pack-card-validity">30 days</span>
-              </div>
-              <div></div>
-              <div class="ps-pack-card-overlay-bottom">
-                <div class="ps-pack-card-price"><strong>₹1,399</strong><span>Avail 10 items</span></div>
-                <p class="ps-pack-card-math">₹139.90 per item</p>
-              </div>
+        <article class="ps-pack-pass-item" data-pack-pass-card>
+          <div class="ps-pack-pass-card">
+            <img src="assets/photos/site/ps-pass-green.webp" alt="The Green Pack vertical pass placeholder">
+            <div class="ps-pack-pass-card-top"><strong><span class="ps-pack-pass-title-kicker">The</span><span class="ps-pack-pass-title-main">Green Pack.</span></strong></div>
+            <div class="ps-pack-pass-card-bottom">
+              <em>₹1,399</em>
+              <ul class="ps-pack-pass-tags" aria-label="The Green Pack. quick details"><li>10 items</li><li>30 days</li><li>₹140 per item</li></ul>
             </div>
           </div>
-          <div class="ps-pack-card-body">
-            <div class="ps-pack-card-meta"><span class="ps-pack-included"><strong>Included</strong>Matcha &amp; Hojicha Matcha Latte, Iced Matcha, Hojicha, Matcha Shot</span></div>
-            <ul>
-              <li>Redeem any 10 Matcha or Hojicha drinks.</li>
-              <li>Ceremonial-grade. Not culinary powder. Not even close.</li>
-            </ul>
-            <p class="ps-pack-exclusions"><strong>Exclusions</strong>Coffee, retail beans, merchandise.</p>
-            <p class="ps-pack-tax-note">Prices mentioned are exclusive of GST. GST will be applicable on all subscription card purchase.</p>
-            <p class="ps-pack-card-note">P.S. Not a trend. A second habit.</p>
-            <a class="ps-pack-card-link" href="pack-enquiry.html?pack=green">Get The Green Pack</a>
+          <div class="ps-pack-pass-detail">
+            <h4>The Green Pack.</h4>
+            <p>Ceremonial grade. Ten times over.</p>
+            <div class="ps-pack-pass-detail-grid">
+              <details class="ps-pack-pass-detail-row"><summary>Included</summary><div class="ps-pack-pass-detail-body"><p>Matcha &amp; Hojicha Matcha Latte, Iced Matcha, Hojicha, Matcha Shot</p></div></details>
+              <details class="ps-pack-pass-detail-row"><summary>Use it for</summary><div class="ps-pack-pass-detail-body"><ul><li>Redeem any 10 Matcha or Hojicha drinks.</li><li>Ceremonial-grade. Not culinary powder. Not even close.</li></ul></div></details>
+              <details class="ps-pack-pass-detail-row"><summary>Exclusions</summary><div class="ps-pack-pass-detail-body"><p>Coffee, retail beans, merchandise.</p></div></details>
+              <details class="ps-pack-pass-detail-row"><summary>GST</summary><div class="ps-pack-pass-detail-body"><p class="ps-pack-pass-tax">Prices are exclusive of GST. GST applies at purchase.</p></div></details>
+            </div>
+            <p class="ps-pack-pass-note">P.S. Not a trend. A second habit.</p>
+            <a class="ps-pack-pass-link" href="pack-enquiry.html?pack=green">Get The Green Pack →</a>
           </div>
         </article>
+        </div>
+      </div>
+      <div class="ps-pack-pass-dots" aria-label="Short &amp; specific. progress">
+        <button type="button" aria-current="true" data-pack-pass-go="0" aria-label="Show The First Sip."></button>
+        <button type="button" aria-current="false" data-pack-pass-go="1" aria-label="Show The Week."></button>
+        <button type="button" aria-current="false" data-pack-pass-go="2" aria-label="Show The Green Pack."></button>
       </div>
     </section>
 
-    <section class="ps-pack-category">
+    <section class="ps-pack-category ps-pack-category-pass" data-pack-pass-category>
       <header class="ps-pack-category-head">
-        <h3>Teams &amp; gifting.</h3>
+        <div>
+          <h3>Teams &amp; gifting.</h3>
+          <p>For offices, shared coffee, and coffee with a note attached.</p>
+        </div>
         <p>3 Packs</p>
       </header>
-      <div class="ps-pack-grid">
-        <article class="ps-pack-card">
-          <div class="ps-pack-card-media">
-            <img class="ps-pack-card-bg" src="assets/photos/ps-pass-team.webp" alt="The Team Pack two hundred classic coffees pooled for your team">
-            <div class="ps-pack-card-overlay">
-              <div class="ps-pack-card-overlay-top">
-                <div class="ps-pack-card-overlay-title"><h4>The Team Pack.</h4><p>Better than the vending machine.</p></div>
-                <span class="ps-pack-card-validity">60 days</span>
-              </div>
-              <div></div>
-              <div class="ps-pack-card-overlay-bottom">
-                <div class="ps-pack-card-price"><strong>₹14,999</strong><span>Avail 200 items</span></div>
-                <p class="ps-pack-card-math">₹75 per item</p>
-              </div>
+      <div class="ps-pack-pass-stage">
+        <div class="ps-pack-pass-tabs" role="tablist" aria-label="Choose from Teams &amp; gifting.">
+        <button type="button" role="tab" aria-selected="true" data-pack-pass-go="0">Team</button>
+        <button type="button" role="tab" aria-selected="false" data-pack-pass-go="1">Office Tab</button>
+        <button type="button" role="tab" aria-selected="false" data-pack-pass-go="2">P.S. Note</button>
+        </div>
+        <div class="ps-pack-pass-rail" tabindex="0" aria-label="Teams &amp; gifting. pass cards">
+        <article class="ps-pack-pass-item is-active" data-pack-pass-card>
+          <div class="ps-pack-pass-card">
+            <img src="assets/photos/site/ps-pass-team.webp" alt="The Team Pack vertical pass placeholder">
+            <div class="ps-pack-pass-card-top"><strong><span class="ps-pack-pass-title-kicker">The</span><span class="ps-pack-pass-title-main">Team Pack.</span></strong></div>
+            <div class="ps-pack-pass-card-bottom">
+              <em>₹14,999</em>
+              <ul class="ps-pack-pass-tags" aria-label="The Team Pack. quick details"><li>200 items</li><li>60 days</li><li>₹75 per item</li></ul>
             </div>
           </div>
-          <div class="ps-pack-card-body">
-            <div class="ps-pack-card-meta"><span class="ps-pack-included"><strong>Included</strong>200 Classic coffees, shared across a team</span></div>
-            <ul>
-              <li>200 Classic coffees, pooled for your whole team.</li>
-              <li>60-day validity. Redeemable at any P.S. Pod.</li>
-            </ul>
-            <p class="ps-pack-exclusions"><strong>Exclusions</strong>Matcha, retail beans, merchandise.</p>
-            <p class="ps-pack-tax-note">Prices mentioned are exclusive of GST. GST will be applicable on all subscription card purchase.</p>
-            <p class="ps-pack-card-note">P.S. Pretty serious about your team's coffee.</p>
-            <a class="ps-pack-card-link" href="pack-enquiry.html?pack=team&type=business">Get The Team Pack</a>
+          <div class="ps-pack-pass-detail">
+            <h4>The Team Pack.</h4>
+            <p>Better than the vending machine.</p>
+            <div class="ps-pack-pass-detail-grid">
+              <details class="ps-pack-pass-detail-row"><summary>Included</summary><div class="ps-pack-pass-detail-body"><p>200 Classic coffees, shared across a team</p></div></details>
+              <details class="ps-pack-pass-detail-row"><summary>Use it for</summary><div class="ps-pack-pass-detail-body"><ul><li>200 Classic coffees, pooled for your whole team.</li><li>60-day validity. Redeemable at any P.S. Pod.</li></ul></div></details>
+              <details class="ps-pack-pass-detail-row"><summary>Exclusions</summary><div class="ps-pack-pass-detail-body"><p>Matcha, retail beans, merchandise.</p></div></details>
+              <details class="ps-pack-pass-detail-row"><summary>GST</summary><div class="ps-pack-pass-detail-body"><p class="ps-pack-pass-tax">Prices are exclusive of GST. GST applies at purchase.</p></div></details>
+            </div>
+            <p class="ps-pack-pass-note">P.S. Pretty serious about your team&#x27;s coffee.</p>
+            <a class="ps-pack-pass-link" href="pack-enquiry.html?pack=team&type=business">Get The Team Pack →</a>
           </div>
         </article>
 
-        <article class="ps-pack-card">
-          <div class="ps-pack-card-media">
-            <img class="ps-pack-card-bg" src="assets/photos/ps-pass-office-tab.webp" alt="The Office Tab monthly-invoiced per-cup billing for a corporate Pod">
-            <div class="ps-pack-card-overlay">
-              <div class="ps-pack-card-overlay-top">
-                <div class="ps-pack-card-overlay-title"><h4>The Office Tab.</h4><p>For the Pod inside your building.</p></div>
-                <span class="ps-pack-card-validity">Rolling</span>
-              </div>
-              <div></div>
-              <div class="ps-pack-card-overlay-bottom">
-                <div class="ps-pack-card-price"><strong>Custom</strong><span>Monthly invoiced</span></div>
-                <p class="ps-pack-card-math">Monthly terms</p>
-              </div>
+        <article class="ps-pack-pass-item" data-pack-pass-card>
+          <div class="ps-pack-pass-card">
+            <img src="assets/photos/site/ps-pass-office-tab.webp" alt="The Office Tab vertical pass placeholder">
+            <div class="ps-pack-pass-card-top"><strong><span class="ps-pack-pass-title-kicker">The</span><span class="ps-pack-pass-title-main">Office Tab.</span></strong></div>
+            <div class="ps-pack-pass-card-bottom">
+              <em>Custom</em>
+              <ul class="ps-pack-pass-tags" aria-label="The Office Tab. quick details"><li>Monthly</li><li>Rolling</li><li>Invoiced</li></ul>
             </div>
           </div>
-          <div class="ps-pack-card-body">
-            <div class="ps-pack-card-meta"><span class="ps-pack-included"><strong>Included</strong>Monthly-invoiced, per-cup billing for a corporate or co-working Pod</span></div>
-            <ul>
-              <li>Per-cup billing, invoiced monthly. No upfront pack.</li>
-              <li>For a Pod embedded in your office or co-working space.</li>
-            </ul>
-            <p class="ps-pack-exclusions"><strong>Exclusions</strong>Retail, packaged items, and custom requests unless agreed.</p>
-            <p class="ps-pack-tax-note">Prices mentioned are exclusive of GST. GST will be applicable on all subscription card purchase.</p>
-            <p class="ps-pack-card-note">P.S. The team deserves better than the vending machine.</p>
-            <a class="ps-pack-card-link" href="pack-enquiry.html?pack=office-tab&type=business">Talk to us</a>
+          <div class="ps-pack-pass-detail">
+            <h4>The Office Tab.</h4>
+            <p>For the Pod inside your building.</p>
+            <div class="ps-pack-pass-detail-grid">
+              <details class="ps-pack-pass-detail-row"><summary>Included</summary><div class="ps-pack-pass-detail-body"><p>Monthly-invoiced, per-cup billing for a corporate or co-working Pod</p></div></details>
+              <details class="ps-pack-pass-detail-row"><summary>Use it for</summary><div class="ps-pack-pass-detail-body"><ul><li>Per-cup billing, invoiced monthly. No upfront pack.</li><li>For a Pod embedded in your office or co-working space.</li></ul></div></details>
+              <details class="ps-pack-pass-detail-row"><summary>Exclusions</summary><div class="ps-pack-pass-detail-body"><p>Retail, packaged items, and custom requests unless agreed.</p></div></details>
+              <details class="ps-pack-pass-detail-row"><summary>GST</summary><div class="ps-pack-pass-detail-body"><p class="ps-pack-pass-tax">Prices are exclusive of GST. GST applies at purchase.</p></div></details>
+            </div>
+            <p class="ps-pack-pass-note">P.S. The team deserves better than the vending machine.</p>
+            <a class="ps-pack-pass-link" href="pack-enquiry.html?pack=office-tab&type=business">Talk to us →</a>
           </div>
         </article>
 
-        <article class="ps-pack-card">
-          <div class="ps-pack-card-media">
-            <img class="ps-pack-card-bg" src="assets/photos/ps-pass-note.webp" alt="The P.S. Note eight classic coffees with a personalised gift message">
-            <div class="ps-pack-card-overlay">
-              <div class="ps-pack-card-overlay-top">
-                <div class="ps-pack-card-overlay-title"><h4>The P.S. Note.</h4><p>A coffee, with a note attached.</p></div>
-                <span class="ps-pack-card-validity">60 days</span>
-              </div>
-              <div></div>
-              <div class="ps-pack-card-overlay-bottom">
-                <div class="ps-pack-card-price"><strong>₹899</strong><span>Avail 8 items</span></div>
-                <p class="ps-pack-card-math">₹112.38 per item</p>
-              </div>
+        <article class="ps-pack-pass-item" data-pack-pass-card>
+          <div class="ps-pack-pass-card">
+            <img src="assets/photos/site/ps-pass-note.webp" alt="The P.S. Note vertical pass placeholder">
+            <div class="ps-pack-pass-card-top"><strong><span class="ps-pack-pass-title-kicker">The</span><span class="ps-pack-pass-title-main">P.S. Note.</span></strong></div>
+            <div class="ps-pack-pass-card-bottom">
+              <em>₹899</em>
+              <ul class="ps-pack-pass-tags" aria-label="The P.S. Note. quick details"><li>8 items</li><li>60 days</li><li>₹112 per item</li></ul>
             </div>
           </div>
-          <div class="ps-pack-card-body">
-            <div class="ps-pack-card-meta"><span class="ps-pack-included"><strong>Included</strong>8 Classic coffees + a personalised message</span></div>
-            <ul>
-              <li>8 Classic coffees, loaded and ready to gift.</li>
-              <li>Add a personalised message to the card.</li>
-            </ul>
-            <p class="ps-pack-exclusions"><strong>Exclusions</strong>Matcha, retail beans, merchandise.</p>
-            <p class="ps-pack-tax-note">Prices mentioned are exclusive of GST. GST will be applicable on all subscription card purchase.</p>
-            <p class="ps-pack-card-note">P.S. A coffee, with a note attached. The whole point of us.</p>
-            <a class="ps-pack-card-link" href="pack-enquiry.html?pack=ps-note">Send The P.S. Note</a>
+          <div class="ps-pack-pass-detail">
+            <h4>The P.S. Note.</h4>
+            <p>A coffee, with a note attached.</p>
+            <div class="ps-pack-pass-detail-grid">
+              <details class="ps-pack-pass-detail-row"><summary>Included</summary><div class="ps-pack-pass-detail-body"><p>8 Classic coffees + a personalised message</p></div></details>
+              <details class="ps-pack-pass-detail-row"><summary>Use it for</summary><div class="ps-pack-pass-detail-body"><ul><li>8 Classic coffees, loaded and ready to gift.</li><li>Add a personalised message to the card.</li></ul></div></details>
+              <details class="ps-pack-pass-detail-row"><summary>Exclusions</summary><div class="ps-pack-pass-detail-body"><p>Matcha, retail beans, merchandise.</p></div></details>
+              <details class="ps-pack-pass-detail-row"><summary>GST</summary><div class="ps-pack-pass-detail-body"><p class="ps-pack-pass-tax">Prices are exclusive of GST. GST applies at purchase.</p></div></details>
+            </div>
+            <p class="ps-pack-pass-note">P.S. A coffee, with a note attached. The whole point of us.</p>
+            <a class="ps-pack-pass-link" href="pack-enquiry.html?pack=ps-note">Send The P.S. Note →</a>
           </div>
         </article>
+        </div>
+      </div>
+      <div class="ps-pack-pass-dots" aria-label="Teams &amp; gifting. progress">
+        <button type="button" aria-current="true" data-pack-pass-go="0" aria-label="Show The Team Pack."></button>
+        <button type="button" aria-current="false" data-pack-pass-go="1" aria-label="Show The Office Tab."></button>
+        <button type="button" aria-current="false" data-pack-pass-go="2" aria-label="Show The P.S. Note."></button>
       </div>
     </section>
   </section>
@@ -1482,6 +2037,74 @@
 <script src="assets/image-slot.js?v=3"></script>
 <script src="assets/ps.js?v=40"></script>
 <script src="assets/mobile.js?v=3"></script>
+<script>
+(function(){
+  var categories = Array.from(document.querySelectorAll('[data-pack-pass-category]'));
+  categories.forEach(function(root){
+    var rail = root.querySelector('.ps-pack-pass-rail');
+    var cards = Array.from(root.querySelectorAll('[data-pack-pass-card]'));
+    var controls = Array.from(root.querySelectorAll('[data-pack-pass-go]'));
+    if(!rail || !cards.length) return;
+    var mobileDetail = document.createElement('div');
+    mobileDetail.className = 'ps-pack-pass-mobile-detail';
+    mobileDetail.setAttribute('aria-live', 'polite');
+    rail.insertAdjacentElement('afterend', mobileDetail);
+    var active = 0;
+    var ticking = false;
+
+    function setActive(index){
+      active = Math.max(0, Math.min(cards.length - 1, index));
+      cards.forEach(function(card, cardIndex){
+        card.classList.toggle('is-active', cardIndex === active);
+      });
+      controls.forEach(function(control){
+        var on = parseInt(control.getAttribute('data-pack-pass-go'), 10) === active;
+        if(control.getAttribute('role') === 'tab') control.setAttribute('aria-selected', on ? 'true' : 'false');
+        if(control.closest('.ps-pack-pass-dots')) control.setAttribute('aria-current', on ? 'true' : 'false');
+      });
+      var detail = cards[active].querySelector('.ps-pack-pass-detail');
+      if(detail) mobileDetail.innerHTML = detail.outerHTML;
+    }
+
+    function scrollToCard(index){
+      var card = cards[index];
+      if(!card) return;
+      card.scrollIntoView({behavior:'smooth', inline:'center', block:'nearest'});
+      setActive(index);
+    }
+
+    function syncFromScroll(){
+      ticking = false;
+      var railBox = rail.getBoundingClientRect();
+      var center = railBox.left + railBox.width / 2;
+      var nearest = 0;
+      var distance = Infinity;
+      cards.forEach(function(card, cardIndex){
+        var box = card.getBoundingClientRect();
+        var cardDistance = Math.abs((box.left + box.width / 2) - center);
+        if(cardDistance < distance){
+          distance = cardDistance;
+          nearest = cardIndex;
+        }
+      });
+      setActive(nearest);
+    }
+
+    controls.forEach(function(control){
+      control.addEventListener('click', function(){
+        scrollToCard(parseInt(control.getAttribute('data-pack-pass-go'), 10));
+      });
+    });
+
+    rail.addEventListener('scroll', function(){
+      if(ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(syncFromScroll);
+    }, {passive:true});
+    setActive(0);
+  });
+})();
+</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
