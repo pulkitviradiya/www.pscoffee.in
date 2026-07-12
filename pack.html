@@ -18,8 +18,8 @@
 <meta name="twitter:description" content="The P.S. Pass settles your daily coffee in advance. Save on the habit. Pay once, drink daily, repeat.">
 <meta name="twitter:image" content="https://www.pscoffee.in/assets/photos/ps-pass-full-pour.webp">
 <link rel="stylesheet" href="assets/ps.css">
-<link rel="stylesheet" href="assets/wh.css?v=79">
-<link rel="stylesheet" href="assets/mobile.css?v=36">
+<link rel="stylesheet" href="assets/wh.css?v=95">
+<link rel="stylesheet" href="assets/mobile.css?v=45">
 <style>
   .ps-pack-explorer {
     padding: 0 26px 44px;
@@ -466,71 +466,6 @@
     }
   }
 
-  body[data-page="pack"] .wh-page-hero-copy footer p.wh-page-ps-note {
-    margin-top: 10px !important;
-    font-family: var(--font-accent) !important;
-    font-size: clamp(24px, 2vw, 30px) !important;
-    line-height: 1.25 !important;
-    color: var(--color-steam-cream) !important;
-    font-style: italic !important;
-    font-weight: 400 !important;
-  }
-
-  body[data-page="pack"] .wh-page-hero-copy {
-    color: var(--color-steam-cream) !important;
-  }
-
-  body[data-page="pack"] .wh-page-hero-copy .wh-page-kicker {
-    display: inline-flex !important;
-    align-items: center !important;
-    width: max-content !important;
-    max-width: min(100%, 34ch) !important;
-    padding: 6px 10px !important;
-    border-radius: var(--radius-sm) !important;
-    background: var(--color-steam-cream) !important;
-    color: var(--color-dark-roast) !important;
-    font-family: var(--font-body) !important;
-    font-size: 11px !important;
-    font-weight: 800 !important;
-    letter-spacing: 0.14em !important;
-    line-height: 1 !important;
-    text-transform: uppercase !important;
-  }
-
-  body[data-page="pack"] .wh-page-hero-copy h1 {
-    max-width: 12ch;
-    color: var(--color-steam-cream) !important;
-    font-family: var(--font-display) !important;
-    font-size: clamp(42px, 4vw, 56px) !important;
-    font-weight: 800 !important;
-    letter-spacing: -1px !important;
-    line-height: 1.02 !important;
-    text-wrap: balance;
-  }
-
-  body[data-page="pack"] .wh-page-hero-copy footer {
-    align-items: end;
-    gap: clamp(16px, 2.2vw, 28px);
-  }
-
-  body[data-page="pack"] .wh-page-hero-copy footer p:not(.wh-page-ps-note) {
-    max-width: 28ch;
-    color: var(--color-steam-cream) !important;
-    font-family: var(--font-body) !important;
-    font-size: clamp(19px, 1.35vw, 22px) !important;
-    font-weight: 700 !important;
-    letter-spacing: -0.01em !important;
-    line-height: 1.45 !important;
-  }
-
-  body[data-page="pack"] .wh-page-hero-copy footer a {
-    color: var(--color-steam-cream) !important;
-    font-family: var(--font-body) !important;
-    font-size: clamp(19px, 1.35vw, 22px) !important;
-    font-weight: 800 !important;
-    letter-spacing: 0 !important;
-  }
-
   .ps-how-it-works {
     padding: 28px 26px 44px;
     border-top: 1px solid rgba(66, 37, 24, 0.1);
@@ -706,9 +641,12 @@
 
   .ps-welcome-ladder-step strong {
     display: block;
-    font-size: clamp(28px, 3vw, 44px);
-    line-height: 1.0;
-    color: #E8400C;
+    color: var(--color-terracotta);
+    font-family: var(--font-display);
+    font-size: clamp(28px, 2.5vw, 38px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.02;
   }
 
   .ps-welcome-offer-close {
@@ -813,15 +751,17 @@
 
   .ps-coming-soon-consolidated {
     margin: 0 26px;
-    padding: 18px 0 30px;
+    padding: 16px 0 28px;
     text-align: center;
     border-bottom: 1px solid var(--color-linen);
-    color: var(--color-terracotta) !important;
-    font-family: var(--font-body) !important;
-    font-size: clamp(12px, 1vw, 14px) !important;
-    font-weight: 800 !important;
-    letter-spacing: 0.16em !important;
-    line-height: 1.2 !important;
+    color: var(--color-dark-roast) !important;
+    font-family: var(--font-accent) !important;
+    font-size: clamp(18px, 1.4vw, 22px) !important;
+    font-style: italic;
+    font-weight: 400 !important;
+    letter-spacing: 0 !important;
+    line-height: 1.3 !important;
+    text-transform: none;
   }
 
   /* ── Dedicated Pass category selector ── */
@@ -1236,7 +1176,9 @@
   @media (max-width: 720px) {
     .ps-coming-soon-consolidated {
       margin: 0 16px;
-      padding: 12px 0 24px;
+      padding: 14px 0 24px;
+      font-size: 18px !important;
+      line-height: 1.3 !important;
     }
   }
 
@@ -1313,7 +1255,15 @@
 
     body[data-page="pack"] .wh-page-list-copy h2 {
       font-size: 36px !important;
-      line-height: 0.94 !important;
+      line-height: 1.06 !important;
+    }
+
+    .ps-pack-explorer-head h2 .nectar-highlight,
+    body[data-page="pack"] .wh-page-list-copy h2 .nectar-highlight {
+      padding: 2px 6px 3px;
+      border-radius: var(--radius-sm);
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
     }
 
     body[data-page="pack"] .wh-page-list-rows p {
