@@ -18,8 +18,8 @@
 <meta name="twitter:description" content="100% Arabica specialty coffee, ground fresh at every order, from compact Pods inside the buildings your day already happens in.">
 <meta name="twitter:image" content="https://www.pscoffee.in/assets/photos/site/menu-hero-cups-cropped-desktop.webp">
 <link rel="stylesheet" href="assets/ps.css">
-<link rel="stylesheet" href="assets/wh.css?v=95">
-<link rel="stylesheet" href="assets/mobile.css?v=45">
+<link rel="stylesheet" href="assets/wh.css?v=96">
+<link rel="stylesheet" href="assets/mobile.css?v=46">
 <style>
 /* ── P.S. Pass interactive showcase ─────────────────────── */
 .ps-pass-showcase{position:relative;display:block;background:var(--paper,#FAF6EE);padding:clamp(28px,5vw,72px);margin-bottom:clamp(48px,7vw,96px);border-radius:14px;overflow:hidden}
@@ -82,7 +82,7 @@
 .ps-app-visual img{width:100%;height:100%;object-fit:contain;display:block}
 @media(max-width:760px){.ps-app-callout .wrap{grid-template-columns:1fr}.ps-app-visual{display:none}}
 
-/* ── Page callouts — slim editorial grid ─────────────────── */
+/* ── Page callouts, slim editorial grid ─────────────────── */
 .ps-callout-strip{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(42,26,14,.1);border-left:1px solid rgba(42,26,14,.1)}
 .ps-callout{padding:clamp(20px,2.8vw,34px) clamp(20px,3.5vw,48px);display:flex;flex-direction:column;gap:.55rem;border-right:1px solid rgba(42,26,14,.1);border-bottom:1px solid rgba(42,26,14,.1);background:#FAF6EE;transition:background .18s}
 .ps-callout:hover{background:var(--linen,#f5f0e8)}
@@ -119,7 +119,7 @@
 /* ── Homepage story cards 1:1 ─────────────────────────────── */
 body[data-page="home"] .wh-ms-card{height:auto;min-height:unset;aspect-ratio:1/1}
 
-/* ── House favourites — align price + CTA row ─────────────── */
+/* ── House favourites, align price + CTA row ─────────────── */
 body[data-page="home"] .wh-product-card{display:flex;flex-direction:column}
 body[data-page="home"] .wh-product-card>div:last-child{
   border-top:1px solid rgba(42,26,14,.15);
@@ -437,7 +437,7 @@ body[data-page="home"] .ps-pass-showcase{
   <div class="ps-feedback-body">
     <span class="kicker">Be there when it opens.</span>
     <h3>New Pods. <span class="nectar-highlight">New menus.</span> First to know.</h3>
-    <p>And first access when your building gets a Pod. P.S. — We send maybe four emails a year. Your inbox is safe.</p>
+    <p>And first access when your building gets a Pod. P.S.: We send maybe four emails a year. Your inbox is safe.</p>
     <a href="feedback.html" class="ps-feedback-cta">Join the list →</a>
   </div>
   <div class="ps-feedback-marquee" aria-hidden="true">
@@ -583,7 +583,7 @@ body[data-page="home"] .ps-pass-showcase{
       cards.forEach(function(c){c.hidden=c.dataset.wtabContent!==t;});
     });
   });
-  /* house favourites — fetch live from menu.html */
+  /* house favourites, fetch live from menu.html */
   (function(){
     var row=document.getElementById('js-fav-row');
     if(!row)return;

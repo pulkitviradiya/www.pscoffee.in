@@ -1,4 +1,4 @@
-/* P.S. Coffee — <image-slot> custom element (production build)
+/* P.S. Coffee, <image-slot> custom element (production build)
  *
  * Replaces the omelette design-canvas scaffold with a minimal version
  * that covers the only production requirements:
@@ -8,7 +8,7 @@
  *   - Shape / mask attributes accepted but handled by parent CSS (no shadow DOM)
  *
  * The original component fired fetch('.image-slots.state.json') on every
- * connectedCallback — a guaranteed 404 in production. This version does not.
+ * connectedCallback, a guaranteed 404 in production. This version does not.
  */
 (() => {
   const MQ_MOBILE = window.matchMedia ? window.matchMedia('(max-width: 760px)') : null;

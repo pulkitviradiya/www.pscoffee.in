@@ -1,7 +1,7 @@
 import { getSheetsClient, getSheetTitles, getSpreadsheetMeta } from './google-sheets.js';
 
 export default async function handler(req, res) {
-  // Debug-only endpoint — must be called with the admin key
+  // Debug-only endpoint, must be called with the admin key
   if (req.method !== 'GET') return res.status(405).json({ error: 'Method not allowed' });
 
   const adminKey = process.env.ADMIN_KEY;

@@ -1,5 +1,5 @@
 /* ============================================================
-   P.S. Coffee — Shared Design System  · Brand Kit 2A
+   P.S. Coffee - Shared Design System  · Brand Kit 2A
    Cream-led canvas · Bricolage display · Space Grotesk UI
    Terracotta for coffee, Ceremonial green for matcha, Nectar as highlight
    ============================================================ */
@@ -33,14 +33,14 @@
   font-display:swap;
 }
 
-/* ---- tokens · canonical design-system layer (P.S. Coffee — Design system) ---- */
+/* ---- tokens · canonical design-system layer (P.S. Coffee - Design system) ---- */
 :root{
   /* Primary: Coffee & Bakery profile */
   --color-terracotta:#E8400C;       /* hero fills, CTAs, primary brand colour */
-  --color-terracotta-hover:#B8300A; /* Brick Deep — hover/pressed, also Error */
+  --color-terracotta-hover:#B8300A; /* Brick Deep - hover/pressed, also Error */
 
   /* Neutrals (shared across both profiles) */
-  --color-steam-cream:#FAF6EE;  /* default page background — never pure white */
+  --color-steam-cream:#FAF6EE;  /* default page background - never pure white */
   --color-oat:#F2EBD9;          /* cards, panels, alternating rows */
   --color-linen:#E8DCC8;        /* borders, dividers only */
 
@@ -52,23 +52,23 @@
   --color-ceremonial:#3D6B4A;   /* matcha hero fills */
   --color-ceremonial-deep:#2C4F37; /* footer body row, solid-button pressed shade */
   --color-shade-grove:#5A8C5E;  /* matcha hover / mid-tone */
-  --color-bright-whisk:#8FB87A; /* accent ONLY — tags, badges, never a large fill */
+  --color-bright-whisk:#8FB87A; /* accent ONLY - tags, badges, never a large fill */
   --color-light-pour:#C8DDB8;   /* matcha card backgrounds */
   --color-pale-froth:#EAF2E0;   /* matcha section wash */
-  --color-sage-cream:#DBDDD2;   /* footer wordmark/links — a real mixed tone, never Steam Cream at an opacity */
+  --color-sage-cream:#DBDDD2;   /* footer wordmark/links - a real mixed tone, never Steam Cream at an opacity */
 
   /* Nectar: the cross-profile highlight family */
-  --color-nectar-gold:#D98F1F;   /* core accent — secondary CTAs, warning state */
+  --color-nectar-gold:#D98F1F;   /* core accent - secondary CTAs, warning state */
   --color-toffee-deep:#A66815;   /* nectar hover / pressed */
   --color-honey-bright:#F0B44A;  /* badges */
   --color-nectar-cream:#F6D998;  /* card wash */
   --color-nectar-wash:#FBEFD4;   /* section wash */
 
   /* Semantic states */
-  --color-success:#7A8B3E;       /* Sprout — olive, never ceremonial green */
+  --color-success:#7A8B3E;       /* Sprout - olive, never ceremonial green */
   --color-success-bg:#EAF2E0;
   --color-warning:var(--color-nectar-gold);
-  --color-chilli:#A81C2E;        /* Error — deliberately shifted off pressed-Terracotta so a thumb resting on "Order" never flashes danger red */
+  --color-chilli:#A81C2E;        /* Error - deliberately shifted off pressed-Terracotta so a thumb resting on "Order" never flashes danger red */
   --color-error:var(--color-chilli);
   --color-info-text:var(--color-espresso);
   --color-info-bg:var(--color-oat);
@@ -76,7 +76,7 @@
   /* Nav hover washes (sec-23: rounded top-corner wash, no underline until active) */
   --color-terracotta-wash:#F6DCD2; /* coffee-profile tab hover background */
 
-  /* Spacing — 4px scale */
+  /* Spacing - 4px scale */
   --space-1:4px;
   --space-2:8px;
   --space-3:12px;
@@ -124,7 +124,7 @@
   --line:var(--color-linen);
   --line-2:#E4D9C4;
 
-  /* matcha sub-palette — matcha contexts only */
+  /* matcha sub-palette - matcha contexts only */
   --roast:var(--color-dark-roast);
   --linen:var(--color-linen);
 
@@ -146,8 +146,8 @@
   --maxw:1240px;
   --gut:clamp(20px,5vw,72px);
   --type-scale:1;                 /* tweakable */
-  --radius:var(--radius-lg);      /* card radius — 14px per design system */
-  --btn-radius:var(--radius-md);  /* button radius — 9px per design system */
+  --radius:var(--radius-lg);      /* card radius - 14px per design system */
+  --btn-radius:var(--radius-md);  /* button radius - 9px per design system */
   --nav-h:84px;
   --shadow:0 30px 70px -28px rgba(22,20,15,.30);
   --shadow-sm:0 12px 34px -18px rgba(22,20,15,.24);
@@ -252,7 +252,7 @@ a{color:inherit;text-decoration:none}
   border-bottom:1px solid var(--line);transition:transform .35s ease;
 }
 .nav.hide{transform:translateY(-100%)}
-/* nav "pack" pill — hero-positioned subscription link */
+/* nav "pack" pill - hero-positioned subscription link */
 .nav-links a.pack-link{color:var(--tc)}
 .nav-links a.pack-link::after{background:var(--tc)}
 .nav-logo{justify-self:start;display:inline-flex;align-items:center}

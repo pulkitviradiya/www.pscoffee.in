@@ -499,7 +499,7 @@
   }
 
   /* Bold (non-light) heroes and the menu hero are a full-bleed
-     Terracotta/Ceremonial block per sec-11 — they stay edge-to-edge
+     Terracotta/Ceremonial block per sec-11 - they stay edge-to-edge
      on mobile, never inset like a card. Light heroes above keep the
      side gutter. */
   .menu-hero-wh,
@@ -2009,5 +2009,49 @@
     background: transparent !important;
     border: 1px solid rgba(250, 246, 238, .72) !important;
     color: var(--color-steam-cream) !important;
+  }
+}
+
+/* App caffeine tracker: one product screen and compact, scannable context. */
+@media (max-width: 760px) {
+  body[data-page="app"] .app-caffeine-tracker {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+    margin: 48px var(--mobile-gut) !important;
+    padding: 24px !important;
+  }
+
+  body[data-page="app"] .app-caffeine-tracker-media {
+    order: -1;
+  }
+
+  body[data-page="app"] .app-caffeine-tracker-media picture {
+    width: min(100%, 320px) !important;
+  }
+
+  body[data-page="app"] .app-caffeine-tracker h2 {
+    font-size: clamp(38px, 11vw, 54px) !important;
+  }
+
+  body[data-page="app"] .app-caffeine-tracker-intro {
+    margin-top: 16px !important;
+    font-size: 15px !important;
+    line-height: 1.5 !important;
+  }
+
+  body[data-page="app"] .app-caffeine-tracker-points {
+    grid-template-columns: 1fr !important;
+    margin-top: 24px !important;
+  }
+
+  body[data-page="app"] .app-caffeine-tracker-points div,
+  body[data-page="app"] .app-caffeine-tracker-points div + div {
+    padding: 14px 0 !important;
+    border-left: 0 !important;
+    border-bottom: 1px solid rgba(61, 32, 16, .14) !important;
+  }
+
+  body[data-page="app"] .app-caffeine-tracker-cta {
+    margin-top: 24px !important;
   }
 }

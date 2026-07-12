@@ -1,5 +1,5 @@
 /* ============================================================
-   P.S. Coffee — Shared behaviour  ·  v5
+   P.S. Coffee, Shared behaviour  ·  v5
    ============================================================ */
 (function(){
   "use strict";
@@ -280,8 +280,8 @@
     }
     return t;
   }
-  // showToast(boldText, dimSuffix) — two text-only args, no HTML accepted
-  // showToast(plainText)           — single plain string
+  // showToast(boldText, dimSuffix), two text-only args, no HTML accepted
+  // showToast(plainText)          , single plain string
   function showToast(boldPart, dimPart){
     var t = ensureToast();
     var msg = t.querySelector("#ps-toast-msg");
@@ -304,7 +304,7 @@
         cartN++;
         if(count){ count.textContent = cartN; count.classList.add("show"); }
         var name = btn.getAttribute("data-add") || "Item";
-        showToast(name, ' added — visual demo, not live yet');
+        showToast(name, ' added. Visual demo, not live yet');
       });
     });
   }
@@ -353,7 +353,7 @@
         var wrap = form.closest("[data-form-wrap]");
         var success = wrap ? wrap.querySelector(".form-success") : null;
         if(success){ form.style.display="none"; success.classList.add("show"); }
-        else { showToast('Thank you.', ' Noted — genuinely.'); form.reset(); }
+        else { showToast('Thank you.', ' Noted. Genuinely.'); form.reset(); }
       });
       form.querySelectorAll("input,textarea,select").forEach(function(input){
         input.addEventListener("input", function(){ var f=input.closest(".field"); if(f) f.classList.remove("invalid"); });
@@ -466,7 +466,7 @@
   // No curated phrase matched: fall back to the sentence's last clause
   // (after the final comma/period), since the trade-off or twist a
   // headline is "really about" tends to land in the second half of a
-  // two-part sentence, not the opening word — see sec-10.
+  // two-part sentence, not the opening word, see sec-10.
   function highlightLeadPhrase(el){
     var walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, {
       acceptNode: function(node){
@@ -497,7 +497,7 @@
     "rgb(184, 48, 10)",  // Brick Deep / Terracotta hover
     "rgb(61, 107, 74)",  // Deep Ceremonial
     "rgb(44, 79, 55)",   // Ceremonial deep (footer body row)
-    "rgb(61, 32, 16)"    // Dark Roast — type-only, never a real fill, guarded anyway
+    "rgb(61, 32, 16)"    // Dark Roast, type-only, never a real fill, guarded anyway
   ];
   function sitsOnBoldGround(el){
     var node = el;
@@ -547,7 +547,7 @@
   }
 
   /* ============================================================
-     TWEAKS PANEL (vanilla) — host protocol + localStorage
+     TWEAKS PANEL (vanilla), host protocol + localStorage
      ============================================================ */
   var TW_KEY = "ps-tweaks";
   var TW_DEFAULT = { tc:"#E8400C", paper:"#FAF6EE", scale:1, btn:"9px" };
@@ -602,7 +602,7 @@
         '<div class="tw-row"><label>Canvas tone</label><div class="tw-seg" id="tw-canvas"></div></div>'+
         '<div class="tw-row"><label>Button shape</label><div class="tw-seg" id="tw-shape"></div></div>'+
         '<div class="tw-row"><label>Type scale · <span id="tw-scaleval">100%</span></label><input type="range" id="tw-scale" min="0.9" max="1.15" step="0.01"></div>'+
-        '<div class="tw-note">P.S. — applies across every page.</div>'+
+        '<div class="tw-note">P.S.: Applies across every page.</div>'+
       '</div>';
     document.body.appendChild(panel);
 

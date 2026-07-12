@@ -1,5 +1,5 @@
 /* ============================================================
-   P.S. Coffee — WatchHouse-style Design System
+   P.S. Coffee - WatchHouse-style Design System
    Heading font: Cormorant Garamond (≈ Tiempos Headline)
    Body font:    DM Sans (≈ Balto)
    ============================================================ */
@@ -377,7 +377,7 @@ h1,h2,h3,h4,
 .nav-links a.pack-link { color: var(--wh-ink) !important; }
 .nav-links a.pack-link::after { background: var(--wh-ink) !important; width: auto !important; }
 
-/* Right tool links — WatchHouse text style */
+/* Right tool links - WatchHouse text style */
 .nav-tools {
   display: flex;
   align-items: stretch;
@@ -437,7 +437,7 @@ h1,h2,h3,h4,
 @media(max-width:760px){ .ntool-text { display: none; } }
 @media(max-width:960px){ .nav-burger { display: flex; } }
 
-/* Drawer — right-side slide panel */
+/* Drawer - right-side slide panel */
 .drawer {
   position: fixed !important;
   top: 0 !important;
@@ -531,7 +531,7 @@ body:has(.drawer.open)::before {
   max-width: 28ch;
   margin-bottom: 20px;
 }
-/* Large heading banner (right) — WatchHouse "Our Houses." style */
+/* Large heading banner (right) - WatchHouse "Our Houses." style */
 .wh-banner-heading {
   font-family: var(--wh-serif);
   font-size: clamp(38px,5vw,76px);
@@ -676,7 +676,7 @@ body:has(.drawer.open)::before {
   position: fixed;
   bottom: 24px; left: 50%;
   transform: translateX(-50%) translateY(14px);
-  background: var(--color-oat);
+  background: var(--color-oat) !important;
   color: var(--color-dark-roast);
   font-family: var(--wh-sans);
   font-size: 13px;
@@ -695,7 +695,7 @@ body:has(.drawer.open)::before {
 #ps-toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 
 /* ============================================================
-   HARD WATCHHOUSE REPLICA PASS — home page
+   HARD WATCHHOUSE REPLICA PASS - home page
    Matches the supplied reference screenshots: black announce bar,
    shallow white nav, compact split hero, sparse statement band,
    and right-aligned at-home product cards.
@@ -5983,7 +5983,7 @@ body[data-page="matcha"] .wh-page-card button,
   border-color: transparent !important;
 }
 
-/* Routine nutritional info, not a promotional tag — kept off the
+/* Routine nutritional info, not a promotional tag - kept off the
    Nectar ramp per sec-15 (Nectar reserved for moments that earn an
    accent, not every card in a 40+ item grid). */
 .menu-kcal {
@@ -6555,7 +6555,7 @@ dt,
   color: var(--ps-espresso) !important;
 }
 
-/* .wh-loc-list sits on a dark photo scrim (homepage locations module) —
+/* .wh-loc-list sits on a dark photo scrim (homepage locations module) -
    the blanket p{color:espresso} rule above would otherwise make its
    text unreadable against the photo. */
 .wh-loc-list p,
@@ -6977,10 +6977,10 @@ body[data-page="menu"] .menu-kcal {
 }
 
 /* ============================================================
-   Design-system contrast layer (P.S. Coffee — Design system)
+   Design-system contrast layer (P.S. Coffee - Design system)
    Rule 1: any text on a Terracotta/Ceremonial fill is Steam
-           Cream — never pure white, never Espresso/Dark Roast.
-   Rule 2: a button fill never matches the section fill — on a
+           Cream - never pure white, never Espresso/Dark Roast.
+   Rule 2: a button fill never matches the section fill - on a
            coloured section, primary buttons flip to Steam Cream.
    Rule 3: radii come from the token scale (sm 6 / md 9 / lg 14).
    ============================================================ */
@@ -6998,7 +6998,7 @@ body[data-page="menu"] .menu-kcal {
   background: var(--color-steam-cream) !important;
 }
 
-/* App callout — terracotta section */
+/* App callout - terracotta section */
 .ps-app-callout,
 .ps-app-copy h2,
 .ps-app-copy p.kicker,
@@ -7020,7 +7020,7 @@ body[data-page="menu"] .menu-kcal {
   border-radius: var(--radius-md, 9px) !important;
 }
 
-/* Our story — terracotta section */
+/* Our story - terracotta section */
 .ps-our-story h2,
 .ps-our-story p,
 .ps-our-story a,
@@ -7033,7 +7033,7 @@ body[data-page="menu"] .menu-kcal {
   border-bottom-color: rgba(250, 246, 238, .5) !important;
 }
 
-/* Page callout strip — light ground */
+/* Page callout strip - light ground */
 .ps-callout {
   background: var(--color-steam-cream) !important;
 }
@@ -7057,7 +7057,7 @@ body[data-page="menu"] .menu-kcal {
   border-radius: var(--radius-md, 9px) !important;
 }
 
-/* Plan cards — photo cards with scrim */
+/* Plan cards - photo cards with scrim */
 .ps-plan-card {
   border-radius: var(--radius-lg, 14px) !important;
 }
@@ -7074,7 +7074,7 @@ body[data-page="menu"] .menu-kcal {
   color: var(--color-dark-roast) !important;
 }
 
-/* Matcha hero — subline and link sit on the Ceremonial fill.
+/* Matcha hero - subline and link sit on the Ceremonial fill.
    The hero keeps the .is-light class from its oat-background days,
    so the is-light -> Dark Roast text mapping must be beaten here. */
 body[data-page="matcha"] .wh-page-hero .wh-page-hero-copy,
@@ -7087,7 +7087,7 @@ body[data-page="matcha"] .wh-page-hero.is-light .wh-page-hero-copy footer a {
   border-bottom-color: rgba(250, 246, 238, .6) !important;
 }
 
-/* Pack cards — card tokens: radius-lg, Linen border, Steam Cream ground */
+/* Pack cards - card tokens: radius-lg, Linen border, Steam Cream ground */
 .ps-pack-card {
   border-radius: var(--radius-lg, 14px) !important;
   border-color: var(--color-linen) !important;
@@ -7122,7 +7122,7 @@ body[data-page="pack"] .ps-pack-card-overlay .ps-pack-card-validity {
    Colour-system completion layer
    Announce bar: Nectar-wash surface takes Espresso type (the
    earlier cream text was invisible on the wash).
-   Footer (sec-31): Deep Ceremonial ground site-wide — coffee
+   Footer (sec-31): Deep Ceremonial ground site-wide - coffee
    and matcha pages alike. Sage Cream wordmark/links/headings
    (a real mixed tone, never Steam Cream at an opacity). Terracotta
    never appears in the footer. The .f-email newsletter panel
@@ -8666,4 +8666,136 @@ body[data-page="pods"] .pods-hero footer .wh-page-ps-note {
   font-weight: 400 !important;
   letter-spacing: 0 !important;
   line-height: 1.3 !important;
+}
+
+/* App caffeine tracker: a clear product moment for the daily routine. */
+body[data-page="app"] .app-caffeine-tracker {
+  display: grid;
+  grid-template-columns: minmax(0, 1.02fr) minmax(360px, .78fr);
+  gap: clamp(36px, 5vw, 88px);
+  align-items: center;
+  margin: clamp(56px, 7vw, 104px) var(--wh-gut);
+  padding: clamp(30px, 4vw, 64px);
+  border: 1px solid rgba(61, 32, 16, .14);
+  background: var(--color-oat);
+}
+
+body[data-page="app"] .app-caffeine-tracker-copy {
+  max-width: 640px;
+}
+
+body[data-page="app"] .app-caffeine-tracker-kicker {
+  margin: 0 0 14px;
+  color: var(--color-terracotta) !important;
+  font-family: var(--font-body) !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  letter-spacing: .18em !important;
+  line-height: 1.2 !important;
+  text-transform: uppercase !important;
+}
+
+body[data-page="app"] .app-caffeine-tracker h2 {
+  margin: 0;
+  color: var(--color-dark-roast) !important;
+  font-family: var(--font-display) !important;
+  font-size: clamp(44px, 5.2vw, 82px) !important;
+  font-weight: 800 !important;
+  letter-spacing: -.045em !important;
+  line-height: .92 !important;
+}
+
+body[data-page="app"] .app-caffeine-tracker-intro {
+  max-width: 52ch;
+  margin: 22px 0 0;
+  color: var(--color-espresso) !important;
+  font-family: var(--font-body) !important;
+  font-size: clamp(16px, 1.3vw, 19px) !important;
+  font-weight: 400 !important;
+  line-height: 1.5 !important;
+}
+
+body[data-page="app"] .app-caffeine-tracker-points {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+  margin: clamp(28px, 3vw, 40px) 0 0;
+  border-top: 1px solid rgba(61, 32, 16, .16);
+}
+
+body[data-page="app"] .app-caffeine-tracker-points div {
+  min-width: 0;
+  padding: 16px clamp(12px, 1.5vw, 20px) 0 0;
+}
+
+body[data-page="app"] .app-caffeine-tracker-points div + div {
+  padding-left: clamp(12px, 1.5vw, 20px);
+  border-left: 1px solid rgba(61, 32, 16, .16);
+}
+
+body[data-page="app"] .app-caffeine-tracker-points dt {
+  margin: 0 0 7px;
+  color: var(--color-dark-roast) !important;
+  font-family: var(--font-body) !important;
+  font-size: 14px !important;
+  font-weight: 800 !important;
+  line-height: 1.2 !important;
+}
+
+body[data-page="app"] .app-caffeine-tracker-points dd {
+  margin: 0;
+  color: var(--color-espresso) !important;
+  font-family: var(--font-body) !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  line-height: 1.45 !important;
+}
+
+body[data-page="app"] .app-caffeine-tracker-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: clamp(28px, 3vw, 40px);
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--color-terracotta);
+  color: var(--color-terracotta) !important;
+  font-family: var(--font-body) !important;
+  font-size: 14px !important;
+  font-weight: 800 !important;
+  line-height: 1.2 !important;
+  text-decoration: none;
+}
+
+body[data-page="app"] .app-caffeine-tracker-cta span {
+  font-size: 19px;
+  line-height: 1;
+}
+
+body[data-page="app"] .app-caffeine-tracker-ps {
+  margin: 18px 0 0;
+  color: var(--color-espresso) !important;
+  font-family: var(--font-accent) !important;
+  font-size: clamp(18px, 1.5vw, 22px) !important;
+  font-style: italic !important;
+  font-weight: 400 !important;
+  line-height: 1.3 !important;
+}
+
+body[data-page="app"] .app-caffeine-tracker-media {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+body[data-page="app"] .app-caffeine-tracker-media picture {
+  display: block;
+  width: min(100%, 440px);
+}
+
+body[data-page="app"] .app-caffeine-tracker-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: clamp(26px, 3vw, 44px);
+  box-shadow: 0 22px 42px rgba(61, 32, 16, .18);
 }

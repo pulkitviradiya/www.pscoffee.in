@@ -86,8 +86,8 @@ h1{font-size:28px;font-weight:700;line-height:1.15;margin-bottom:6px}
   </div>
 
   <div id="details" style="display:none">
-    <p class="detail">Spreadsheet: <strong id="sheetName">—</strong></p>
-    <p class="detail">Form tabs found: <strong id="tabCount">—</strong></p>
+    <p class="detail">Spreadsheet: <strong id="sheetName">Not available</strong></p>
+    <p class="detail">Form tabs found: <strong id="tabCount">Not available</strong></p>
     <div class="tabs" id="tabsWrap" style="display:none">
       <div class="tabs-label">Tabs in spreadsheet</div>
       <div id="tabsList"></div>
@@ -98,7 +98,7 @@ h1{font-size:28px;font-weight:700;line-height:1.15;margin-bottom:6px}
 
   <div class="url-row">
     <strong>Endpoint</strong>
-    <span id="endpointUrl">—</span>
+    <span id="endpointUrl">Not available</span>
   </div>
 
   <button class="recheck" onclick="check()">
@@ -126,8 +126,8 @@ function check(){
     .then(function(data){
       if(data.status === 'connected'){
         row.className = 'status-row ok';
-        text.textContent = 'Connected — Google Sheets is receiving data';
-        document.getElementById('sheetName').textContent = data.spreadsheet || '—';
+        text.textContent = 'Connected. Google Sheets is receiving data';
+        document.getElementById('sheetName').textContent = data.spreadsheet || 'Not available';
         document.getElementById('tabCount').textContent = (data.tabs||[]).length;
         det.style.display = 'block';
         var tabs = data.tabs || [];
@@ -142,14 +142,14 @@ function check(){
         }
       } else {
         row.className = 'status-row error';
-        text.textContent = 'Error — could not reach Google Sheets';
+        text.textContent = 'Error. Could not reach Google Sheets';
         err.style.display = 'block';
         err.textContent = data.message || 'Unknown error';
       }
     })
     .catch(function(e){
       row.className = 'status-row error';
-      text.textContent = 'Error — API not reachable';
+      text.textContent = 'Error. API not reachable';
       err.style.display = 'block';
       err.textContent = e.message || 'Check Vercel env vars and deployment.';
     });
