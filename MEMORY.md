@@ -10,7 +10,7 @@ Read this at the start of every session. Use silently to inform work.
 |---|---|
 | `assets/ps.js` | v40 |
 | `assets/image-slot.js` | v3 |
-| `assets/wh.css` | v96 |
+| `assets/wh.css` | v97 |
 | `assets/mobile.css` | v46 |
 
 Always read the current version from any `*.html` before bumping.
