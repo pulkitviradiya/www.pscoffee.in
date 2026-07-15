@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <link rel="icon" type="image/png" href="assets/icons/ps-coffee_icon_terracotta_32.png">
 <link rel="apple-touch-icon" href="assets/icons/ps-coffee_icon_terracotta_180.png">
 <title>P.S. Coffee | Specialty Coffee Pods, Ahmedabad</title>
@@ -18,8 +18,8 @@
 <meta name="twitter:description" content="100% Arabica specialty coffee, ground fresh at every order, from compact Pods inside the buildings your day already happens in.">
 <meta name="twitter:image" content="https://www.pscoffee.in/assets/photos/site/menu-hero-cups-cropped-desktop.webp">
 <link rel="stylesheet" href="assets/ps.css">
-<link rel="stylesheet" href="assets/wh.css?v=97">
-<link rel="stylesheet" href="assets/mobile.css?v=46">
+<link rel="stylesheet" href="assets/wh.css?v=102">
+<link rel="stylesheet" href="assets/mobile.css?v=66">
 <style>
 /* ── P.S. Pass interactive showcase ─────────────────────── */
 .ps-pass-showcase{position:relative;display:block;background:var(--paper,#FAF6EE);padding:clamp(28px,5vw,72px);margin-bottom:clamp(48px,7vw,96px);border-radius:14px;overflow:hidden}
@@ -36,22 +36,23 @@
 .ps-pass-tabs{display:grid;gap:8px;align-self:stretch;align-content:center}
 .ps-pass-tabs button{appearance:none;border:1px solid rgba(61,32,16,.18);border-radius:999px;background:transparent;color:var(--roast,#2a1a0e);font-family:var(--font-body,"Space Grotesk",sans-serif);font-size:12px;font-weight:800;letter-spacing:.03em;text-align:left;padding:11px 14px;cursor:pointer;transition:background .18s,color .18s,border-color .18s}
 .ps-pass-tabs button[aria-selected="true"]{background:var(--tc,#E8400C);border-color:var(--tc,#E8400C);color:var(--paper,#FAF6EE)}
-.ps-pass-rail{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(230px,25vw);gap:clamp(14px,2vw,24px);overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scrollbar-width:none;padding:4px clamp(24px,3vw,42px) 10px}
+.ps-pass-rail{display:grid;grid-auto-flow:column;grid-auto-columns:300px;gap:clamp(14px,2vw,24px);overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scrollbar-width:none;padding:4px clamp(24px,3vw,42px) 10px}
 .ps-pass-rail::-webkit-scrollbar{display:none}
-.ps-pass-item{scroll-snap-align:center;display:grid;gap:12px;min-width:0;text-decoration:none;color:inherit}
-.ps-pass-card{position:relative;aspect-ratio:9/15;min-height:430px;border-radius:26px;overflow:hidden;background:var(--roast,#2a1a0e);box-shadow:0 18px 52px rgba(42,26,14,.18);transform:scale(.94);opacity:.68;transition:transform .24s ease,opacity .24s ease,box-shadow .24s ease}
+.ps-pass-item{scroll-snap-align:center;display:grid;gap:12px;width:300px;min-width:0;text-decoration:none;color:inherit}
+.ps-pass-card{--pass-rgb:232,64,12;--pass-ink:#E8400C;position:relative;box-sizing:border-box;width:300px;height:476px;min-height:0;border:7px solid #E8DCC8;border-radius:22px;overflow:hidden;background:var(--roast,#2a1a0e);box-shadow:0 18px 46px rgba(42,26,14,.18)}
 .ps-pass-card img{width:100%;height:100%;object-fit:cover;display:block}
-.ps-pass-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,11,6,.42) 0%,rgba(20,11,6,.12) 38%,rgba(20,11,6,.86) 100%)}
-.ps-pass-item.is-active .ps-pass-card{transform:scale(1);opacity:1;box-shadow:0 24px 68px rgba(42,26,14,.26)}
-.ps-pass-card-top,.ps-pass-card-bottom{position:absolute;z-index:1;left:18px;right:18px;color:var(--paper,#FAF6EE)}
-.ps-pass-card-top{top:clamp(26px,4vw,56px);min-height:32%;display:flex;align-items:center;justify-content:center;text-align:center}
-.ps-pass-card-top strong{width:100%;font-family:var(--font-display,"Bricolage Grotesque",sans-serif);font-size:clamp(58px,5.4vw,116px);font-weight:900;letter-spacing:-.065em;line-height:.78}
-.ps-pass-title-kicker{display:block;font-size:.34em;letter-spacing:-.04em;line-height:.9}
-.ps-pass-title-main{display:block}
+.ps-pass-card::before{content:"";position:absolute;z-index:3;inset:0;border:2px solid rgba(var(--pass-rgb),.55);border-radius:15px;pointer-events:none}
+.ps-pass-card::after{content:"";position:absolute;z-index:1;inset:0;background:linear-gradient(180deg,rgba(var(--pass-rgb),0) 0%,rgba(var(--pass-rgb),0) 74%,rgba(var(--pass-rgb),.4) 92%,rgba(var(--pass-rgb),.6) 100%);pointer-events:none}
+.ps-pass-item.is-active .ps-pass-card{box-shadow:0 18px 46px rgba(42,26,14,.18)}
+.ps-pass-card-top,.ps-pass-card-bottom{position:absolute;z-index:2;left:18px;right:18px;color:var(--pass-ink)}
+.ps-pass-card-top{top:30px;display:flex;align-items:flex-start;justify-content:center;text-align:center}
+.ps-pass-card-top strong{display:grid;justify-items:center;width:100%;max-width:7ch;color:var(--pass-ink)!important;font-family:var(--font-display,"Bricolage Grotesque",sans-serif)!important;font-size:46px!important;font-weight:800!important;letter-spacing:-.055em!important;line-height:.8!important;text-wrap:balance;-webkit-text-stroke:2.5px #FAF6EE!important;paint-order:stroke fill}
+.ps-pass-title-kicker{display:block;font-size:26px!important;font-weight:800!important;letter-spacing:-.055em!important;line-height:.8!important}
+.ps-pass-title-main{display:block;font-size:46px!important;font-weight:800!important;letter-spacing:-.055em!important;line-height:.8!important}
 .ps-pass-card-bottom{bottom:18px;display:grid;justify-items:center;text-align:center;gap:8px}
-.ps-pass-card-bottom em{display:block;margin:0;font-style:normal;font-family:var(--font-display,"Bricolage Grotesque",sans-serif);font-size:clamp(48px,5.6vw,78px);font-weight:900;letter-spacing:-.06em;line-height:.86}
-.ps-pass-card-tags{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:start;gap:6px;width:min(100%,340px);margin:0 auto;padding:0;list-style:none}
-.ps-pass-card-tags li{display:flex;align-items:center;justify-content:center;height:28px;min-height:0;border:1px solid rgba(250,246,238,.76);border-radius:6px;background:var(--paper,#FAF6EE);padding:0 8px;color:var(--roast,#2a1a0e);font-size:9px!important;font-weight:900!important;letter-spacing:.04em;line-height:1!important;text-align:center;text-transform:uppercase;white-space:nowrap}
+.ps-pass-card-bottom em{display:block;margin:0;color:var(--pass-ink)!important;font-family:var(--font-accent,"Instrument Serif",Georgia,serif)!important;font-size:46px!important;font-style:italic!important;font-weight:400!important;letter-spacing:-.01em!important;line-height:.86!important;-webkit-text-stroke:2px #FAF6EE!important;paint-order:stroke fill}
+.ps-pass-card-tags{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:start;gap:6px;width:100%;margin:0 auto;padding:0;list-style:none}
+.ps-pass-card-tags li{display:flex;align-items:center;justify-content:center;height:28px;min-height:0;border:0;border-radius:6px;background:#FAF6EE!important;padding:0 8px;color:var(--pass-ink)!important;font-family:var(--font-body,"Space Grotesk",sans-serif)!important;font-size:8.5px!important;font-weight:800!important;letter-spacing:.04em!important;line-height:1.05!important;text-align:center;text-transform:uppercase;white-space:nowrap}
 .ps-pass-caption{display:grid;gap:5px;padding-inline:2px}
 .ps-pass-caption h3{margin:0;color:var(--roast,#2a1a0e);font-size:17px;font-weight:900;letter-spacing:-.02em;line-height:1.05}
 .ps-pass-caption p{margin:0;color:rgba(61,32,16,.72);font-size:12px;font-weight:600;line-height:1.35}
@@ -61,7 +62,7 @@
 .ps-pass-dots button{width:8px;height:8px;padding:0;border:0;border-radius:999px;background:rgba(61,32,16,.24);cursor:pointer}
 .ps-pass-dots button[aria-current="true"]{width:28px;background:var(--tc,#E8400C)}
 .ps-pass-link{color:var(--tc,#E8400C);font-size:14px;font-weight:900;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:3px}
-@media(max-width:860px){.ps-pass-showcase{padding:32px var(--mobile-gut,16px);border-radius:0}.ps-pass-head{grid-template-columns:1fr;gap:16px}.ps-pass-copy h2{font-size:clamp(38px,10.5vw,58px)}.ps-pass-line{white-space:normal}.ps-pass-stage{grid-template-columns:1fr}.ps-pass-tabs{display:flex;overflow-x:auto;scrollbar-width:none}.ps-pass-tabs::-webkit-scrollbar{display:none}.ps-pass-tabs button{white-space:nowrap}.ps-pass-rail{grid-auto-columns:minmax(238px,74vw);padding-inline:0}.ps-pass-card{min-height:398px;border-radius:22px}.ps-pass-card-top{top:30px}.ps-pass-card-top strong{font-size:clamp(52px,16vw,76px)}.ps-pass-card-bottom{left:24px;right:24px;bottom:20px}.ps-pass-card-bottom em{font-size:clamp(48px,14vw,64px)}.ps-pass-card-tags{gap:6px;width:min(100%,270px)}.ps-pass-card-tags li{height:21px;padding:0 7px;border-radius:5px;font-size:10px!important;letter-spacing:-.01em;font-weight:800!important;line-height:1!important}.ps-pass-actions{align-items:flex-start}.ps-pass-link{font-size:13px}}
+@media(max-width:860px){.ps-pass-showcase{padding:32px var(--mobile-gut,16px);border-radius:0}.ps-pass-head{grid-template-columns:1fr;gap:16px}.ps-pass-copy h2{font-size:clamp(38px,10.5vw,58px)}.ps-pass-line{white-space:normal}.ps-pass-stage{grid-template-columns:1fr}.ps-pass-tabs{display:flex;overflow-x:auto;scrollbar-width:none}.ps-pass-tabs::-webkit-scrollbar{display:none}.ps-pass-tabs button{white-space:nowrap}.ps-pass-rail{grid-auto-columns:300px;padding-inline:0}.ps-pass-card-bottom{left:18px;right:18px}.ps-pass-actions{align-items:flex-start}.ps-pass-link{font-size:13px}}
 
 /* ── Cream buffer between bold Terracotta blocks (sec-11: bold blocks
    touch neutral, never each other) ──────────────────────── */
@@ -85,7 +86,6 @@
 /* ── Page callouts, slim editorial grid ─────────────────── */
 .ps-callout-strip{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(42,26,14,.1);border-left:1px solid rgba(42,26,14,.1)}
 .ps-callout{padding:clamp(20px,2.8vw,34px) clamp(20px,3.5vw,48px);display:flex;flex-direction:column;gap:.55rem;border-right:1px solid rgba(42,26,14,.1);border-bottom:1px solid rgba(42,26,14,.1);background:#FAF6EE;transition:background .18s}
-.ps-callout:hover{background:var(--linen,#f5f0e8)}
 .ps-callout p.kicker{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--tc,#E8400C);margin:0}
 .ps-callout h2{font-size:clamp(17px,1.9vw,24px);font-weight:800;margin:0;line-height:1.2;color:var(--roast,#2a1a0e)}
 .ps-callout p.sub{font-size:13px;color:var(--muted,#7a6a5a);margin:0;line-height:1.55}
@@ -247,7 +247,7 @@ body[data-page="home"] .ps-pass-showcase{
     <div class="ps-pass-rail" tabindex="0" aria-label="P.S. Pass cards">
       <a class="ps-pass-item is-active" href="pack.html" data-pass-card>
         <div class="ps-pass-card">
-          <img src="assets/photos/site/home-the-black-pack-desktop.webp" alt="The Black Pack vertical pass placeholder">
+          <img src="assets/photos/site/home-pass-black-card-v2-desktop.webp" alt="The Black Pack illustrated pass card" loading="lazy" decoding="async">
           <div class="ps-pass-card-top"><strong><span class="ps-pass-title-kicker">The</span><span class="ps-pass-title-main">Black Pack.</span></strong></div>
           <div class="ps-pass-card-bottom">
             <em>₹749</em>
@@ -265,7 +265,7 @@ body[data-page="home"] .ps-pass-showcase{
 
       <a class="ps-pass-item" href="pack.html" data-pass-card>
         <div class="ps-pass-card">
-          <img src="assets/photos/site/home-the-starter-pack-desktop.webp" alt="The Starter Pack vertical pass placeholder">
+          <img src="assets/photos/site/home-pass-starter-card-v2-desktop.webp" alt="The Starter Pack illustrated pass card" loading="lazy" decoding="async">
           <div class="ps-pass-card-top"><strong><span class="ps-pass-title-kicker">The</span><span class="ps-pass-title-main">Starter Pack.</span></strong></div>
           <div class="ps-pass-card-bottom">
             <em>₹1,099</em>
@@ -283,7 +283,7 @@ body[data-page="home"] .ps-pass-showcase{
 
       <a class="ps-pass-item" href="pack.html" data-pass-card>
         <div class="ps-pass-card">
-          <img src="assets/photos/site/home-the-habit-pack-desktop.webp" alt="The Habit Pack vertical pass placeholder">
+          <img src="assets/photos/site/home-pass-habit-card-v2-desktop.webp" alt="The Habit Pack illustrated pass card" loading="lazy" decoding="async">
           <div class="ps-pass-card-top"><strong><span class="ps-pass-title-kicker">The</span><span class="ps-pass-title-main">Habit Pack.</span></strong></div>
           <div class="ps-pass-card-bottom">
             <em>₹1,899</em>
@@ -301,7 +301,7 @@ body[data-page="home"] .ps-pass-showcase{
 
       <a class="ps-pass-item" href="pack.html" data-pass-card>
         <div class="ps-pass-card">
-          <img src="assets/photos/site/home-the-full-pour-desktop.webp" alt="The Full Pour vertical pass placeholder">
+          <img src="assets/photos/site/home-pass-full-pour-card-v2-desktop.webp" alt="The Full Pour illustrated pass card" loading="lazy" decoding="async">
           <div class="ps-pass-card-top"><strong><span class="ps-pass-title-kicker">The</span><span class="ps-pass-title-main">Full Pour.</span></strong></div>
           <div class="ps-pass-card-bottom">
             <em>₹2,899</em>
@@ -366,7 +366,7 @@ body[data-page="home"] .ps-pass-showcase{
       </div>
     </div>
     <div class="ps-app-visual">
-      <img src="assets/photos/home-p-s-coffee-app-desktop.gif" alt="P.S. Coffee app">
+      <img src="assets/photos/home-p-s-coffee-app-desktop.gif" alt="P.S. Coffee app" loading="lazy" decoding="async">
     </div>
   </div>
 </section>
@@ -482,8 +482,8 @@ body[data-page="home"] .ps-pass-showcase{
 
 <div id="ps-footer"></div>
 <script src="assets/image-slot.js?v=3"></script>
-<script src="assets/ps.js?v=40"></script>
-<script src="assets/mobile.js?v=3"></script>
+<script src="assets/ps.js?v=42"></script>
+<script src="assets/mobile.js?v=4"></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",

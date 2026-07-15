@@ -259,12 +259,13 @@ App icon: Terracotta ground, cream monogram, nothing else, no wordmark/cup/gradi
 ## Product & Content (36–38)
 
 ### 36 · P.S. Pass: Subscription Tiers
-Replaces the loyalty card entirely — app/digital only, never printed or stamped. A Pass is told apart by background colour/image, never a badge alone.
-- **Daily Pass** (Coffee & Bakery) — 30 cups/month, ₹1,499, solid Terracotta background.
-- **Ceremonial Pass** (Matcha only) — 20 cups/month, ₹1,699, solid Deep Ceremonial background.
-- **All-Access Pass** (Coffee + Matcha) — 45 cups/month, ₹2,999, full-bleed photography background.
-- **Starter Pass** (Coffee & Bakery) — 10 cups/month, ₹599, Oat Off-white background — the one Pass without a bold fill, priced to try the habit.
-**Adding a new tier**: background carries the identity (solid profile colour, full-bleed photo for mixed-category, or Oat for entry-tier) — never invent a new accent colour. Card copy always states beverage category → cup count/month → price, in that order, no fourth stat.
+`pack.html` is the source of truth for active Pass categories, names, prices, cup counts, and validity. Current categories are **Core Packs** (Black, Starter, Habit, Full Pour), **Unlimited days** (Daily, Open Tab), and the additional First Sip, Week, Green, Team, Office Tab, and P.S. Note offers represented there.
+
+Homepage previews the four Core Packs using fixed `300 × 476px` vertical cards with minimal captions. Every card uses a `22px` outer radius, `7px` Pale Oat frame, `15px` inner radius, `2px` profile-colour inner frame, and `0 18px 46px rgba(42,26,14,.18)` shadow. Coffee and bakery profiles use Terracotta (`#E8400C`); the Matcha/Green Pack alone uses Deep Ceremonial (`#3D6B4A`). The profile colour also owns the bottom photo scrim, outlined title and price, and tag text.
+
+On every card, “The” is a 26px/800 label above a balanced 46px/800 Bricolage name, both profile-coloured with a 2.5px Steam Cream stroke. Price uses 46px italic Instrument Serif with a 2px Steam Cream stroke. Steam Cream tags use profile-coloured 8.5px/800 uppercase Space Grotesk text and a 6px radius. The dedicated Pass page reuses this exact card language and places Included, Use It For, Exclusions, and GST inside semantic collapsed `<details>` elements. Savings and per-item arithmetic stay in Pass contexts only.
+
+Background carries each Pass identity through the approved photography or colour profile; never invent a new accent colour or identify a Pass by badge alone.
 
 ### 37 · Blog Section Types
 - **Index hero row**: the one place two featured cards may sit side by side, hard edge (no gap) between them.

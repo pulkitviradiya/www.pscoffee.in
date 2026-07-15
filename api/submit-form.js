@@ -10,6 +10,7 @@ const ALLOWED_ORIGINS = new Set([
 const ALLOWED_FORMS = new Set([
   'newsletter',
   'app-waitlist',
+  'feedback',
   'event-enquiry',
   'join-barista',
   'join-ops',

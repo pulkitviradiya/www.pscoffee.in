@@ -1,7 +1,8 @@
 # P.S. Coffee — Contributor Guide (Claude & Codex)
 
 This file is the source of truth for both Claude Code and Codex when working on this repo.
-Both agents push directly to `main` on the same GitHub repo → Vercel auto-deploy.
+Both agents push directly to `main` on the same GitHub repo. Vercel normally auto-deploys, but use
+the documented direct-deploy fallback while the GitHub integration is unhealthy.
 
 P.S. Coffee (pscoffee.in) is a pre-launch specialty-coffee "Pod" brand's marketing website: a
 static, framework-free multi-page HTML/CSS/JS site with two Vercel serverless functions handling
@@ -21,7 +22,9 @@ fonts · 2 Vercel serverless functions (Node ESM) · Google Sheets as the form-s
 git pull origin main     # ALWAYS run first — Codex also pushes here, local can be behind
 python3 -m http.server 8080   # local preview, http://localhost:8080
 npm install               # only dependency is googleapis
-git push origin main       # → triggers Vercel auto-deploy, no manual deploy step exists
+git push origin main       # push the committed source
+vercel --prod --yes        # current fallback while GitHub-to-Vercel sync is unhealthy
+vercel inspect <url>       # deployment is complete only when status is Ready
 ```
 No test, lint, format, or build command exists in this repo.
 
@@ -33,6 +36,7 @@ No test, lint, format, or build command exists in this repo.
 - Naming and code conventions → @docs/conventions.md
 - Current tasks and open items → @docs/tasks.md
 - Session history and decisions → @MEMORY.md
+- Brand voice, copy hierarchy, punctuation, pricing, and savings rules → @docs/copy-system.md
 - Design System and typography (as implemented in this codebase) → @docs/design.md
 - Full brand-kit reference, all 45 sections (voice, colour, type, logo, photography, digital,
   print) → @docs/design-system.md — audit against this directly; it does not need to be

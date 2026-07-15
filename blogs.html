@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <link rel="icon" type="image/png" href="assets/icons/ps-coffee_icon_terracotta_32.png">
 <link rel="apple-touch-icon" href="assets/icons/ps-coffee_icon_terracotta_180.png">
 <title>P.S. Coffee. | The P.S. Blog.</title>
@@ -18,8 +18,8 @@
 <meta name="twitter:description" content="Coffee, sourcing, habits, Pods, and why Ahmedabad deserved specialty before now. Short reads. Honest takes.">
 <meta name="twitter:image" content="https://www.pscoffee.in/assets/photos/site/menu-hero-cups-cropped-desktop.webp">
 <link rel="stylesheet" href="assets/ps.css">
-<link rel="stylesheet" href="assets/wh.css?v=97">
-<link rel="stylesheet" href="assets/mobile.css?v=46">
+<link rel="stylesheet" href="assets/wh.css?v=102">
+<link rel="stylesheet" href="assets/mobile.css?v=66">
 </head>
 <body data-page="blogs">
 <div id="ps-nav"></div>
@@ -177,7 +177,7 @@
       </a>
     </article>
 
-    <article class="journal-mini-card" id="pods">
+    <article class="journal-mini-card" id="pods-archive">
       <a href="blog/building-specialty-coffee-brand-without-cafe.html">
         <div class="journal-mini-media">
           <image-slot id="journal-mini-02" shape="rect" src="assets/photos/site/blogs-journal-mini-02-desktop.webp" placeholder="P.S. Coffee Pod counter" fit="cover"></image-slot>
@@ -210,7 +210,7 @@
       </a>
     </article>
 
-    <article class="journal-mini-card" id="coffee">
+    <article class="journal-mini-card" id="coffee-archive">
       <a href="blog/what-is-arabica-coffee-india.html">
         <div class="journal-mini-media">
           <image-slot id="journal-mini-04" shape="rect" src="assets/photos/site/blog-coffee-spotlight-desktop.webp" mobile-src="assets/photos/site/blog-coffee-spotlight-mobile.webp" placeholder="Arabica coffee beans India" fit="cover"></image-slot>
@@ -275,8 +275,8 @@
 
 <div id="ps-footer"></div>
 <script src="assets/image-slot.js?v=3"></script>
-<script src="assets/ps.js?v=40"></script>
-<script src="assets/mobile.js?v=3"></script>
+<script src="assets/ps.js?v=42"></script>
+<script src="assets/mobile.js?v=4"></script>
 <script>
 (function(){
   var slider = document.querySelector("[data-journal-slider]");
@@ -285,14 +285,24 @@
   var buttons = Array.from(slider.querySelectorAll("[data-journal-go]"));
   var index = 0;
   var timer = null;
+  var mobile = window.matchMedia("(max-width: 760px)");
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
   function show(next){
     index = (next + slides.length) % slides.length;
-    slides.forEach(function(slide, i){ slide.classList.toggle("is-active", i === index); });
-    buttons.forEach(function(button, i){ button.classList.toggle("is-active", i === index); });
+    slides.forEach(function(slide, i){
+      slide.classList.toggle("is-active", i === index);
+      slide.setAttribute("aria-hidden", i === index ? "false" : "true");
+    });
+    buttons.forEach(function(button, i){
+      button.classList.toggle("is-active", i === index);
+      if(i === index) button.setAttribute("aria-current", "true");
+      else button.removeAttribute("aria-current");
+    });
   }
 
   function start(){
+    if(mobile.matches || reduceMotion.matches) return;
     timer = window.setInterval(function(){ show(index + 1); }, 5200);
   }
 
@@ -310,6 +320,22 @@
 
   slider.addEventListener("mouseenter", function(){ if(timer) window.clearInterval(timer); });
   slider.addEventListener("mouseleave", restart);
+  var touchStartX = 0;
+  var touchStartY = 0;
+  slider.addEventListener("touchstart", function(e){
+    if(!e.touches || !e.touches[0]) return;
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+  }, {passive:true});
+  slider.addEventListener("touchend", function(e){
+    if(!e.changedTouches || !e.changedTouches[0]) return;
+    var dx = e.changedTouches[0].clientX - touchStartX;
+    var dy = e.changedTouches[0].clientY - touchStartY;
+    if(Math.abs(dx) < 44 || Math.abs(dx) <= Math.abs(dy) * 1.15) return;
+    show(index + (dx < 0 ? 1 : -1));
+    restart();
+  }, {passive:true});
+  show(0);
   start();
 })();
 </script>

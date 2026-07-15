@@ -16,6 +16,11 @@ observed, established pattern in the codebase — not aspirational.
 - **Images**: `assets/photos/site/{page}-{description}-{desktop|mobile}.webp`. Every image added
   must be referenced in an HTML file — no orphan images. When replacing a hero image with a
   cropped version, delete the old file rather than adding a new one alongside it.
+  Every image, GIF, and video slot outside the Menu and House Favourites must have a unique
+  page-and-section-specific slot ID, placeholder name, and asset filename. House Favourites may
+  reuse Menu assets because it is populated directly from the Menu. When the mobile crop or ratio
+  differs, desktop and mobile assets must also have distinct names. Never reuse one generic asset
+  across unrelated live slots.
   `assets/photos/*.webp` (root level, no `/site/` subfolder) is reserved for P.S. Pass product
   images used on `pack.html` only.
   Images in `assets/photos/site/` are cached immutably by Vercel for 1 year — if you replace a
@@ -104,6 +109,12 @@ when adding a new form.
   be overridden later in `wh.css`. Use narrowly page-scoped final-layer selectors such as
   `body[data-page="about"] ...` and verify the exact selected elements with computed styles before
   declaring the slice done.
+- **Shared page heroes**: all marketing-page heroes, including `pack.html`, use the shared
+  `.wh-page-hero` typography contract: W1 display heading, W3 Space Grotesk Body at the standard
+  body size/weight/line-height, and W4 CTA plus P.S. line grouped in the hero footer. Page-specific
+  rules may change layout, imagery, and colour profile, but must not redefine body typography.
+  Where the hero has sufficient height, the CTA and P.S. line sit at the bottom. Do not create a
+  separate Pack hero typography system.
 
 ### Asset version bumping
 `wh.css`, `mobile.css`, `ps.js`, and `image-slot.js` are each cache-busted independently with

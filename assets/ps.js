@@ -31,7 +31,7 @@
     var links = PAGES.filter(function(p){return p.primary;}).map(function(p){
       var act = (p.href === here) ? " active" : "";
       var cls = p.cls ? (" "+p.cls) : "";
-      return '<a href="'+localHref(p.href)+'" class="'+(act+cls).trim()+'">'+p.label+'.</a>';
+      return '<a href="'+localHref(p.href)+'" class="'+(act+cls).trim()+'"'+(act?' aria-current="page"':'')+'>'+p.label+'.</a>';
     }).join("");
     return '<div class="wh-announce">'+
         '<div class="wh-announce-track">'+
@@ -48,11 +48,11 @@
         '<div class="nav-tools">'+
           '<a href="'+localHref("join.html")+'" class="ntool ntool-text'+(here==='join.html'?' active':'')+'" title="Join us">Join us.</a>'+
           '<a href="'+localHref("partnership.html")+'" class="ntool ntool-text'+(here==='partnership.html'?' active':'')+'" title="Partner">Partner.</a>'+
-          '<button class="nav-burger" id="psBurger" aria-label="Menu"><span></span><span></span><span></span></button>'+
+          '<button class="nav-burger" id="psBurger" aria-label="Open menu" aria-controls="psDrawer" aria-expanded="false"><span></span><span></span><span></span></button>'+
         '</div>'+
       '</nav>'+
-      '<div class="drawer" id="psDrawer">'+
-        PAGES.map(function(p){var dc=p.cls?' class="'+p.cls+'"':'';return '<a href="'+localHref(p.href)+'"'+dc+'><span>'+p.label+'.</span><span class="n">'+p.n+'</span></a>';}).join("")+
+      '<div class="drawer" id="psDrawer" aria-label="Mobile navigation" aria-hidden="true">'+
+        PAGES.map(function(p){var active=p.href===here;var classes=[p.cls||'',active?'active':''].filter(Boolean).join(' ');var dc=classes?' class="'+classes+'"':'';return '<a href="'+localHref(p.href)+'"'+dc+(active?' aria-current="page"':'')+'><span>'+p.label+'.</span><span class="n">'+p.n+'</span></a>';}).join("")+
       '</div>';
   }
 
@@ -80,8 +80,9 @@
           '<div class="f-col f-email"><h4>P.S. See you in the morning.</h4>'+
             '<p>New Pods. Usual orders. Pack reminders. No theatre, no daily friction.</p>'+
             '<form class="news" data-ps-form="newsletter">'+
-              '<input name="email" type="email" required placeholder="Email address">'+
-              '<button class="btn accent sm" type="submit">&rarr;</button>'+
+              '<label class="visually-hidden" for="psFooterEmail">Email address</label>'+
+              '<input id="psFooterEmail" name="email" type="email" required placeholder="Email address" autocomplete="email" inputmode="email" autocapitalize="none">'+
+              '<button class="btn accent sm" type="submit" aria-label="Subscribe by email">&rarr;</button>'+
             '</form>'+
           '</div>'+
         '</div>'+
@@ -121,15 +122,41 @@
     var burger = document.getElementById("psBurger");
     var drawer = document.getElementById("psDrawer");
     if(burger && drawer){
+      function closeDrawer(restoreFocus){
+        drawer.classList.remove("open");
+        drawer.setAttribute("aria-hidden", "true");
+        burger.classList.remove("open");
+        burger.setAttribute("aria-expanded", "false");
+        burger.setAttribute("aria-label", "Open menu");
+        document.body.style.overflow = "";
+        if(restoreFocus) burger.focus();
+      }
       burger.addEventListener("click", function(){
         var open = drawer.classList.toggle("open");
         burger.classList.toggle("open", open);
+        burger.setAttribute("aria-expanded", open ? "true" : "false");
+        burger.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+        drawer.setAttribute("aria-hidden", open ? "false" : "true");
         document.body.style.overflow = open ? "hidden" : "";
+        if(open){
+          window.setTimeout(function(){ var first=drawer.querySelector("a"); if(first) first.focus(); }, 0);
+        }
       });
       drawer.querySelectorAll("a").forEach(function(a){
-        a.addEventListener("click", function(){
-          drawer.classList.remove("open"); burger.classList.remove("open"); document.body.style.overflow="";
-        });
+        a.addEventListener("click", function(){ closeDrawer(false); });
+      });
+      document.addEventListener("keydown", function(e){
+        if(!drawer.classList.contains("open")) return;
+        if(e.key === "Escape"){
+          closeDrawer(true);
+          return;
+        }
+        if(e.key !== "Tab") return;
+        var items = Array.prototype.slice.call(drawer.querySelectorAll("a[href]"));
+        if(!items.length) return;
+        var first = items[0], lastItem = items[items.length-1];
+        if(e.shiftKey && document.activeElement === first){ e.preventDefault(); lastItem.focus(); }
+        else if(!e.shiftKey && document.activeElement === lastItem){ e.preventDefault(); first.focus(); }
       });
     }
     if(nav && wrap){
@@ -200,11 +227,23 @@
 
   /* ---------- FAQ accordion ---------- */
   function faq(){
-    document.querySelectorAll(".faq-item").forEach(function(item){
+    document.querySelectorAll(".faq-item").forEach(function(item, idx){
       var q = item.querySelector(".faq-q");
       if(!q) return;
+      var answer = item.querySelector(".faq-a");
+      var qId = q.id || "psFaqQuestion" + idx;
+      var aId = answer && (answer.id || "psFaqAnswer" + idx);
+      q.id = qId;
+      q.setAttribute("aria-expanded", item.classList.contains("open") ? "true" : "false");
+      if(answer){
+        answer.id = aId;
+        answer.setAttribute("role", "region");
+        answer.setAttribute("aria-labelledby", qId);
+        q.setAttribute("aria-controls", aId);
+      }
       q.addEventListener("click", function(){
         item.classList.toggle("open");
+        q.setAttribute("aria-expanded", item.classList.contains("open") ? "true" : "false");
       });
     });
   }
@@ -222,6 +261,7 @@
   /* ---------- menu filter tabs ---------- */
   function filters(){
     document.querySelectorAll("[data-filter-tabs]").forEach(function(tabs){
+      tabs.setAttribute("role", "tablist");
       var targetSel = tabs.getAttribute("data-target");
       var target = targetSel ? document.querySelector(targetSel) : tabs.nextElementSibling;
       if(!target) return;
@@ -229,7 +269,9 @@
       function applyFilter(f){
         f = f || "all";
         tabs.querySelectorAll("[data-filter]").forEach(function(p){
-          p.classList.toggle("active", p.getAttribute("data-filter")===f);
+          var selected = p.getAttribute("data-filter")===f;
+          p.classList.toggle("active", selected);
+          p.setAttribute("aria-selected", selected ? "true" : "false");
         });
         items.forEach(function(it){
           var show = (f==="all") || it.getAttribute("data-cat")===f;
@@ -237,6 +279,8 @@
         });
       }
       tabs.querySelectorAll("[data-filter]").forEach(function(pill){
+        pill.setAttribute("role", "tab");
+        pill.setAttribute("aria-selected", pill.classList.contains("active") ? "true" : "false");
         pill.addEventListener("click", function(){
           var f = pill.getAttribute("data-filter");
           applyFilter(f);
@@ -255,9 +299,14 @@
       if(requested) applyFilter(requested);
     });
     document.querySelectorAll("[data-menu-link]").forEach(function(card){
+      card.setAttribute("role", "link");
+      card.setAttribute("tabindex", "0");
       card.addEventListener("click", function(e){
         if(e.target.closest("button,a")) return;
         location.href = card.getAttribute("data-menu-link");
+      });
+      card.addEventListener("keydown", function(e){
+        if(e.key === "Enter") location.href = card.getAttribute("data-menu-link");
       });
     });
   }
@@ -265,7 +314,102 @@
   /* ---------- chips (multi-select) ---------- */
   function chips(){
     document.querySelectorAll(".chip").forEach(function(c){
-      c.addEventListener("click", function(){ c.classList.toggle("on"); });
+      c.setAttribute("role", "button");
+      c.setAttribute("tabindex", "0");
+      c.setAttribute("aria-pressed", c.classList.contains("on") ? "true" : "false");
+      function toggle(){
+        c.classList.toggle("on");
+        c.setAttribute("aria-pressed", c.classList.contains("on") ? "true" : "false");
+      }
+      c.addEventListener("click", toggle);
+      c.addEventListener("keydown", function(e){
+        if(e.key === "Enter" || e.key === " "){ e.preventDefault(); toggle(); }
+      });
+    });
+  }
+
+  /* ---------- shared accessibility and mobile input hints ---------- */
+  function accessibility(){
+    document.querySelectorAll("form").forEach(function(form, formIndex){
+      form.querySelectorAll("input:not([type='hidden']),textarea,select").forEach(function(input, inputIndex){
+        if(!input.id) input.id = "psField" + formIndex + "_" + inputIndex;
+        var field = input.closest(".field");
+        var label = field && field.querySelector("label");
+        if(label && !label.getAttribute("for")) label.setAttribute("for", input.id);
+        if(input.required) input.setAttribute("aria-required", "true");
+
+        var name = (input.name || "").toLowerCase();
+        if(input.type === "email" || name.indexOf("email") !== -1){
+          input.setAttribute("autocomplete", "email");
+          input.setAttribute("inputmode", "email");
+          input.setAttribute("autocapitalize", "none");
+        }else if(input.type === "tel" || /(mobile|phone|whatsapp)/.test(name)){
+          input.setAttribute("autocomplete", "tel");
+          input.setAttribute("inputmode", "tel");
+        }else if(name === "name"){
+          input.setAttribute("autocomplete", "name");
+        }else if(/(city|location)/.test(name)){
+          input.setAttribute("autocomplete", "address-level2");
+        }else if(/(company|organisation|organization)/.test(name)){
+          input.setAttribute("autocomplete", "organization");
+        }
+
+        var error = field && field.querySelector(".err");
+        if(error){
+          if(!error.id) error.id = input.id + "Error";
+          error.setAttribute("role", "alert");
+          error.setAttribute("aria-live", "polite");
+          input.setAttribute("aria-describedby", error.id);
+        }
+      });
+    });
+  }
+
+  /* ---------- modal focus, dismissal, and scroll restoration ---------- */
+  function modalAccessibility(){
+    var dialogs = Array.prototype.slice.call(document.querySelectorAll('[role="dialog"][aria-modal="true"]'));
+    if(!dialogs.length) return;
+    var activeDialog = null;
+    var returnFocus = null;
+
+    function focusables(dialog){
+      return Array.prototype.slice.call(dialog.querySelectorAll('button,[href],input,select,textarea,[tabindex]:not([tabindex="-1"])'))
+        .filter(function(el){ return !el.disabled && el.getClientRects().length; });
+    }
+
+    function sync(dialog){
+      var open = dialog.classList.contains("on");
+      dialog.setAttribute("aria-hidden", open ? "false" : "true");
+      if(open){
+        activeDialog = dialog;
+        returnFocus = document.activeElement;
+        document.body.style.overflow = "hidden";
+        window.setTimeout(function(){ var items=focusables(dialog); if(items[0]) items[0].focus(); }, 0);
+      }else if(activeDialog === dialog){
+        activeDialog = null;
+        document.body.style.overflow = "";
+        if(returnFocus && returnFocus.focus) returnFocus.focus();
+        returnFocus = null;
+      }
+    }
+
+    dialogs.forEach(function(dialog){
+      dialog.setAttribute("aria-hidden", dialog.classList.contains("on") ? "false" : "true");
+      new MutationObserver(function(){ sync(dialog); }).observe(dialog,{attributes:true,attributeFilter:["class"]});
+    });
+
+    document.addEventListener("keydown", function(e){
+      if(!activeDialog) return;
+      if(e.key === "Escape"){
+        activeDialog.classList.remove("on");
+        return;
+      }
+      if(e.key !== "Tab") return;
+      var items = focusables(activeDialog);
+      if(!items.length){ e.preventDefault(); return; }
+      var first = items[0], last = items[items.length-1];
+      if(e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
+      else if(!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
     });
   }
 
@@ -311,10 +455,28 @@
 
   /* ---------- forms ---------- */
   function forms(){
+    function setSubmitting(form, submitting){
+      form.dataset.submitting = submitting ? "true" : "false";
+      form.setAttribute("aria-busy", submitting ? "true" : "false");
+      form.querySelectorAll('button[type="submit"],input[type="submit"]').forEach(function(control){
+        if(submitting){
+          control.dataset.psSubmitLabel = control.tagName === "INPUT" ? control.value : control.textContent;
+          if(control.tagName === "INPUT") control.value = "Sending...";
+          else control.textContent = "Sending...";
+        }else if(control.dataset.psSubmitLabel){
+          if(control.tagName === "INPUT") control.value = control.dataset.psSubmitLabel;
+          else control.textContent = control.dataset.psSubmitLabel;
+          delete control.dataset.psSubmitLabel;
+        }
+        control.disabled = submitting;
+      });
+    }
+
     document.querySelectorAll("form[data-ps-form]").forEach(function(form){
       form.setAttribute("novalidate","");
-      form.addEventListener("submit", function(e){
+      form.addEventListener("submit", async function(e){
         e.preventDefault();
+        if(form.dataset.submitting === "true") return;
         var ok = true;
         form.querySelectorAll("[required]").forEach(function(input){
           var field = input.closest(".field");
@@ -322,6 +484,7 @@
           var good = !!val;
           if(input.type==="email"){ good = good && /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(val); }
           if(field){ field.classList.toggle("invalid", !good); }
+          input.setAttribute("aria-invalid", good ? "false" : "true");
           if(!good) ok = false;
         });
         if(!ok){ var bad = form.querySelector(".field.invalid input,.field.invalid textarea,.field.invalid select"); if(bad) bad.focus(); return; }
@@ -331,33 +494,53 @@
           form.reset();
           return;
         }
-                // Save to localStorage as before
-        try{
-          var key="ps-submissions";
-          var arr=JSON.parse(localStorage.getItem(key)||"[]");
-          arr.push({form:form.getAttribute("data-ps-form")||"form",t:Date.now()});
-          localStorage.setItem(key,JSON.stringify(arr));
-        }catch(err){}
-        // POST to Google Sheets via Vercel API
+
+        setSubmitting(form, true);
+        var controller = typeof AbortController === "function" ? new AbortController() : null;
+        var timeout = controller ? setTimeout(function(){ controller.abort(); }, 15000) : null;
         try{
           var payload = { form_name: form.getAttribute('data-ps-form') || 'form' };
           new FormData(form).forEach(function(val, key){
             if(typeof val === 'string') payload[key] = val;
           });
-          fetch('/api/submit-form', {
+          var response = await fetch('/api/submit-form', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(payload)
+            body: JSON.stringify(payload),
+            signal: controller ? controller.signal : undefined
           });
-        }catch(err){}
-        var wrap = form.closest("[data-form-wrap]");
-        var success = wrap ? wrap.querySelector(".form-success") : null;
-        if(success){ form.style.display="none"; success.classList.add("show"); }
-        else { showToast('Thank you.', ' Noted. Genuinely.'); form.reset(); }
+          var result = await response.json().catch(function(){ return {}; });
+          if(!response.ok || result.status !== "ok") throw new Error(result.error || result.message || "Submission failed");
+
+          try{
+            var key="ps-submissions";
+            var arr=JSON.parse(localStorage.getItem(key)||"[]");
+            arr.push({form:form.getAttribute("data-ps-form")||"form",t:Date.now()});
+            localStorage.setItem(key,JSON.stringify(arr));
+          }catch(storageError){}
+
+          var wrap = form.closest("[data-form-wrap]");
+          var success = wrap ? wrap.querySelector(".form-success") : null;
+          if(success){
+            form.style.display="none";
+            success.classList.add("show");
+            success.setAttribute("role", "status");
+            success.setAttribute("tabindex", "-1");
+            success.focus();
+          }else{
+            showToast('Thank you.', ' Noted. Genuinely.');
+            form.reset();
+          }
+        }catch(err){
+          showToast('Could not send.', ' Please try again or email hello@pscoffee.in.');
+        }finally{
+          if(timeout) clearTimeout(timeout);
+          setSubmitting(form, false);
+        }
       });
       form.querySelectorAll("input,textarea,select").forEach(function(input){
-        input.addEventListener("input", function(){ var f=input.closest(".field"); if(f) f.classList.remove("invalid"); });
-        input.addEventListener("change", function(){ var f=input.closest(".field"); if(f) f.classList.remove("invalid"); });
+        input.addEventListener("input", function(){ var f=input.closest(".field"); if(f) f.classList.remove("invalid"); input.setAttribute("aria-invalid","false"); });
+        input.addEventListener("change", function(){ var f=input.closest(".field"); if(f) f.classList.remove("invalid"); input.setAttribute("aria-invalid","false"); });
       });
     });
   }
@@ -653,7 +836,7 @@
   /* ---------- boot ---------- */
   twApply(twRead());
   function init(){
-    inject(); navBehaviour(); heroSlider(); faq(); reveal();
+    inject(); accessibility(); modalAccessibility(); navBehaviour(); heroSlider(); faq(); reveal();
     filters(); chips(); cart(); forms(); anchors();
     onIdle(nectarSignature, 1200);
     // Tweaks panel is only useful inside an edit/preview parent frame.

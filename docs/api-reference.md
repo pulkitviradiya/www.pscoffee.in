@@ -28,7 +28,7 @@ Allowed origins: `https://pscoffee.in`, `https://www.pscoffee.in` (falls back to
 ```
 
 Allowlisted `form_name` values (adding a new form requires adding it here):
-`newsletter`, `app-waitlist`, `event-enquiry`, `join-barista`, `join-ops`, `join-craft`,
+`newsletter`, `app-waitlist`, `feedback`, `event-enquiry`, `join-barista`, `join-ops`, `join-craft`,
 `join-trade`, `join-founders`, `join-investor`, `pack-enquiry`, `partnership-enquiry`.
 
 Input caps enforced server-side: max 30 fields per submission, field keys truncated to 64 chars,

@@ -22,6 +22,7 @@
     slides.forEach(function(slide, idx){
       slide.classList.toggle("is-active", idx === firstIdx);
       slide.setAttribute("data-mobile-slide", String(idx));
+      slide.setAttribute("aria-hidden", idx === firstIdx ? "false" : "true");
     });
 
     var count = document.createElement("div");
@@ -34,6 +35,7 @@
       button.textContent = String(idx + 1).padStart(2, "0");
       button.className = idx === firstIdx ? "is-active" : "";
       button.setAttribute("aria-label", "Show slide " + (idx + 1));
+      if(idx === firstIdx) button.setAttribute("aria-current", "true");
       button.addEventListener("click", function(){ show(idx, true); });
       count.appendChild(button);
     });
@@ -45,7 +47,6 @@
     wrap.appendChild(progress);
 
     var active = firstIdx;
-    var timer = null;
 
     function setProgress(){
       var bar = progress.querySelector("span");
@@ -55,27 +56,32 @@
 
     function show(next, manual){
       slides[active].classList.remove("is-active");
+      slides[active].setAttribute("aria-hidden", "true");
       count.children[active].classList.remove("is-active");
+      count.children[active].removeAttribute("aria-current");
       active = (next + slides.length) % slides.length;
       slides[active].classList.add("is-active");
+      slides[active].setAttribute("aria-hidden", "false");
       count.children[active].classList.add("is-active");
+      count.children[active].setAttribute("aria-current", "true");
       setProgress();
-      if(manual) restart();
-    }
-
-    function restart(){
-      clearInterval(timer);
-      if(isMobile()){
-        timer = setInterval(function(){ show(active + 1, false); }, 5200);
-      }
     }
 
     setProgress();
-    restart();
-
-    if(mobileMQ && mobileMQ.addEventListener){
-      mobileMQ.addEventListener("change", restart);
-    }
+    var touchStartX = 0;
+    var touchStartY = 0;
+    wrap.addEventListener("touchstart", function(e){
+      if(!e.touches || !e.touches[0]) return;
+      touchStartX = e.touches[0].clientX;
+      touchStartY = e.touches[0].clientY;
+    }, {passive:true});
+    wrap.addEventListener("touchend", function(e){
+      if(!e.changedTouches || !e.changedTouches[0]) return;
+      var dx = e.changedTouches[0].clientX - touchStartX;
+      var dy = e.changedTouches[0].clientY - touchStartY;
+      if(Math.abs(dx) < 44 || Math.abs(dx) <= Math.abs(dy) * 1.15) return;
+      show(active + (dx < 0 ? 1 : -1), true);
+    }, {passive:true});
   }
 
   function compactMobileLabels(){

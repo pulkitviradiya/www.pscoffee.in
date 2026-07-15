@@ -8,10 +8,11 @@ Read this at the start of every session. Use silently to inform work.
 
 | File | Version |
 |---|---|
-| `assets/ps.js` | v40 |
+| `assets/ps.js` | v42 |
 | `assets/image-slot.js` | v3 |
-| `assets/wh.css` | v97 |
-| `assets/mobile.css` | v46 |
+| `assets/wh.css` | v102 |
+| `assets/mobile.css` | v66 |
+| `assets/mobile.js` | v4 |
 
 Always read the current version from any `*.html` before bumping.
 
@@ -52,6 +53,12 @@ Always read the current version from any `*.html` before bumping.
 ---
 
 ## Session Decisions
+
+### Current deployment state (2026-07-13)
+- GitHub-to-Vercel integration is not confirmed healthy. Until it is restored, production completion requires `git push origin main`, `vercel --prod --yes`, and `vercel inspect <deployment-url>` showing `Ready`; a successful GitHub push alone is not proof of deployment.
+
+### 2026-07-13 (copy and component contracts)
+- Added `docs/copy-system.md` as the repository copy authority for Master Copy v3 plus approved website amendments, and documented unique media-slot naming, the shared hero typography contract, and the current Pass-card system.
 
 ### 2026-07-08 (design-system polish slices)
 - Applied browser-reviewed design-system slices across home/menu/pack/app/about/footer: `wh.css` is now v71, `ps.js` v40 hardens Nectar highlights at runtime, menu/home prices wrap the `₹` glyph, and final page-scoped CSS layers are required when fixing late-cascade typography/colour bugs.
