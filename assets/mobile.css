@@ -2702,6 +2702,139 @@
   }
 }
 
+@media (max-width: 760px) {
+  body[data-page="blogs"] .journal-index-hero {
+    display: block !important;
+    padding: 32px var(--mobile-gut) 24px !important;
+  }
+
+  body[data-page="blogs"] .journal-index-title {
+    min-height: 0 !important;
+    margin-bottom: 22px !important;
+  }
+
+  body[data-page="blogs"] .journal-index-title h1 {
+    max-width: 9ch !important;
+    font-size: clamp(42px, 13vw, 58px) !important;
+    line-height: .9 !important;
+  }
+
+  body[data-page="blogs"] .journal-index-title > p:last-of-type {
+    font-size: 16px !important;
+    line-height: 1.45 !important;
+  }
+
+  body[data-page="blogs"] .journal-index-actions {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+    margin-top: 18px !important;
+  }
+
+  body[data-page="blogs"] .journal-index-actions a {
+    min-height: 46px !important;
+    font-size: 14px !important;
+  }
+
+  body[data-page="blogs"] .journal-hero-feature-media {
+    aspect-ratio: 1 / .82 !important;
+  }
+
+  body[data-page="blogs"] .journal-hero-feature-copy h2 {
+    font-size: clamp(30px, 9vw, 42px) !important;
+    line-height: .95 !important;
+  }
+
+  body[data-page="blogs"] .journal-topic-bar {
+    position: static !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 0 !important;
+    padding: 0 var(--mobile-gut) 18px !important;
+    border-bottom: 1px solid var(--color-linen) !important;
+    background: var(--color-steam-cream) !important;
+  }
+
+  body[data-page="blogs"] .journal-topic-bar span {
+    grid-column: 1 / -1 !important;
+    padding: 0 0 8px !important;
+  }
+
+  body[data-page="blogs"] .journal-topic-bar a {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    min-height: 42px !important;
+    padding: 0 12px !important;
+    border: 1px solid var(--color-linen) !important;
+    border-bottom: 0 !important;
+    border-radius: 0 !important;
+    font-size: 15px !important;
+  }
+
+  body[data-page="blogs"] .journal-topic-bar a::after {
+    content: "→";
+  }
+
+  body[data-page="blogs"] .journal-section-head,
+  body[data-page="blogs"] .journal-index-note {
+    display: block !important;
+    margin: 0 var(--mobile-gut) !important;
+    padding: 28px 0 16px !important;
+  }
+
+  body[data-page="blogs"] .journal-section-head h2,
+  body[data-page="blogs"] .journal-index-note h2 {
+    font-size: clamp(32px, 9.5vw, 44px) !important;
+    line-height: .95 !important;
+  }
+
+  body[data-page="blogs"] .journal-feature-grid,
+  body[data-page="blogs"] .journal-card-grid {
+    padding-inline: var(--mobile-gut) !important;
+    gap: 18px !important;
+  }
+
+  body[data-page="blogs"] .journal-card-media,
+  body[data-page="blogs"] .journal-mini-media {
+    aspect-ratio: 1 / .82 !important;
+  }
+
+  body[data-page="blogs"] .journal-card-copy h2,
+  body[data-page="blogs"] .journal-mini-card h3 {
+    font-size: clamp(28px, 8vw, 38px) !important;
+    line-height: .95 !important;
+  }
+
+  body[data-page="blogs"] .journal-signup-band {
+    margin: 0 var(--mobile-gut) 44px !important;
+  }
+
+  body[data-page="blogs"] .journal-signup-band .journal-signup-card {
+    display: block !important;
+    padding: 22px !important;
+  }
+
+  body[data-page="blogs"] .journal-signup-card h3 {
+    font-size: clamp(30px, 9vw, 40px) !important;
+    line-height: .94 !important;
+  }
+
+  body[data-page="blogs"] .journal-signup-form {
+    grid-template-columns: 1fr 52px !important;
+    margin-top: 18px !important;
+  }
+
+  body[data-page="blogs"] .journal-signup-form input,
+  body[data-page="blogs"] .journal-signup-form button {
+    height: 52px !important;
+  }
+
+  body[data-page="blogs"] .journal-signup-form button {
+    width: 52px !important;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   #psDrawer a.pack-link::after,
   .mobile-hero-progress span {

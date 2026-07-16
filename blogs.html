@@ -18,72 +18,40 @@
 <meta name="twitter:description" content="Coffee, sourcing, habits, Pods, and why Ahmedabad deserved specialty before now. Short reads. Honest takes.">
 <meta name="twitter:image" content="https://www.pscoffee.in/assets/photos/site/menu-hero-cups-cropped-desktop.webp">
 <link rel="stylesheet" href="assets/ps.css">
-<link rel="stylesheet" href="assets/wh.css?v=102">
-<link rel="stylesheet" href="assets/mobile.css?v=66">
+<link rel="stylesheet" href="assets/wh.css?v=106">
+<link rel="stylesheet" href="assets/mobile.css?v=67">
 </head>
 <body data-page="blogs">
 <div id="ps-nav"></div>
 <div class="page-top"></div>
 
-<main class="wh-page">
-  <section class="journal-index-hero">
+<main class="wh-page journal-index">
+  <section class="journal-index-hero" id="latest">
     <div class="journal-index-title">
       <p>THE P.S. BLOG.</p>
-      <h1>The P.S. Blog.</h1>
-      <p>Where we write about coffee, sourcing, habits, and why Ahmedabad deserved specialty before now. Short reads. Honest takes. No content-marketing cheerfulness.</p>
-    </div>
-    <div class="journal-hero-slider" data-journal-slider>
-      <a class="journal-hero-slide is-active" href="blog/why-specialty-coffee-costs-300-rupees-india.html" data-slide="0">
-        <image-slot id="journal-hero-01" shape="rect" src="assets/photos/site/blog-pricing-hero-desktop.webp" mobile-src="assets/photos/site/blog-pricing-hero-mobile.webp" placeholder="Arabica beans for The P.S. Blog" fit="cover"></image-slot>
-        <div class="journal-hero-overlay">
-          <h2>The cafe price is carrying the room.</h2>
-          <div>
-            <strong>Coffee economics.</strong>
-            <p>A plain look at what a cafe bill usually carries, and what a Pod removes.</p>
-          </div>
-        </div>
-      </a>
-      <a class="journal-hero-slide" href="blog/building-specialty-coffee-brand-without-cafe.html" data-slide="1">
-        <image-slot id="journal-hero-02" shape="rect" src="assets/photos/site/blog-pods-without-cafe-placeholder-1.webp" placeholder="P.S. Coffee Pod inside co-working space building without a cafe blog hero" fit="cover"></image-slot>
-        <div class="journal-hero-overlay">
-          <h2>Why we built Pods, not cafes.</h2>
-          <div>
-            <strong>Pod thesis.</strong>
-            <p>The Pod is not a smaller cafe. It is a different format for the daily cup.</p>
-          </div>
-        </div>
-      </a>
-      <a class="journal-hero-slide" href="blog/what-is-arabica-coffee-india.html" data-slide="2">
-        <image-slot id="journal-hero-03" shape="rect" src="assets/photos/site/blog-coffee-hero-desktop.webp" mobile-src="assets/photos/site/blog-coffee-hero-mobile.webp" placeholder="100% Arabica coffee beans" fit="cover"></image-slot>
-        <div class="journal-hero-overlay">
-          <h2>What is 100% Arabica and why does it matter?</h2>
-          <div>
-            <strong>Coffee education.</strong>
-            <p>India grows world-class Arabica. Here is why the bean standard is non-negotiable.</p>
-          </div>
-        </div>
-      </a>
-      <a class="journal-hero-slide" href="blog/india-coffee-market-2030-opportunity.html" data-slide="3">
-        <image-slot id="journal-hero-04" shape="rect" src="assets/photos/site/blog-market-hero-desktop.webp" mobile-src="assets/photos/site/blog-market-hero-mobile.webp" placeholder="India coffee market analysis" fit="cover"></image-slot>
-        <div class="journal-hero-overlay">
-          <h2>Where Indian coffee is going next.</h2>
-          <div>
-            <strong>City and market.</strong>
-            <p>The three waves of Indian coffee, the funding signal, and the Gujarat white space.</p>
-          </div>
-        </div>
-      </a>
-      <div class="journal-hero-count" aria-label="Featured blog slider">
-        <button class="is-active" type="button" data-journal-go="0" aria-label="Show first blog feature">01</button>
-        <button type="button" data-journal-go="1" aria-label="Show second blog feature">02</button>
-        <button type="button" data-journal-go="2" aria-label="Show third blog feature">03</button>
-        <button type="button" data-journal-go="3" aria-label="Show fourth blog feature">04</button>
+      <h1>Coffee, Pods, and the daily habit.</h1>
+      <p>Short reads on the bean, the format, the city, and the habit we are building around.</p>
+      <div class="journal-index-actions">
+        <a href="blog/what-is-cold-brew-coffee-india.html">Read latest →</a>
+        <a href="#archive">Browse archive →</a>
       </div>
     </div>
+    <article class="journal-hero-feature">
+      <a href="blog/what-is-cold-brew-coffee-india.html" aria-label="Read the latest P.S. Coffee blog post">
+        <div class="journal-hero-feature-media">
+          <image-slot id="journal-hero-latest" shape="rect" src="assets/photos/site/blogs-journal-card-05-desktop.webp" mobile-src="assets/photos/site/blogs-journal-card-05-mobile.webp" placeholder="Cold brew coffee steeped for 12 hours" fit="cover"></image-slot>
+        </div>
+        <div class="journal-hero-feature-copy">
+          <p><span>Latest</span><span>5 min read</span></p>
+          <h2>What is cold brew coffee, and why is India finally ready for it?</h2>
+          <small>12-hour cold extraction. Naturally smoother. Ready for the daily cup.</small>
+        </div>
+      </a>
+    </article>
   </section>
 
   <section class="journal-topic-bar" aria-label="Blog topics">
-    <span>Topics:</span>
+    <span>Browse:</span>
     <a href="#latest" class="is-active">All</a>
     <a href="#coffee">Coffee</a>
     <a href="#pods">Pods</a>
@@ -93,14 +61,23 @@
     <a href="#fitness">Fitness</a>
   </section>
 
-  <section class="journal-feature-grid" id="latest" aria-label="Featured blog posts">
+  <section class="journal-section-head" aria-labelledby="journal-featured-heading">
+    <p>Featured reads.</p>
+    <h2 id="journal-featured-heading">Start with the ideas that explain the format.</h2>
+  </section>
+
+  <section class="journal-feature-grid" aria-label="Featured blog posts">
     <article class="journal-feature-card is-large" id="coffee">
       <a href="blog/why-specialty-coffee-costs-300-rupees-india.html" aria-label="Read what a cafe price carries">
         <div class="journal-card-media">
           <image-slot id="journal-card-01" shape="rect" src="assets/photos/site/blog-pricing-grid-desktop.webp" mobile-src="assets/photos/site/blog-pricing-grid-mobile.webp" placeholder="Arabica beans under soft morning light" fit="cover"></image-slot>
         </div>
         <div class="journal-card-copy">
-          <p><span>01</span><span>Coffee economics</span><span>8 min read</span></p>
+          <ul class="journal-card-meta" aria-label="Post details">
+            <li class="journal-meta-index">01</li>
+            <li class="journal-meta-category">Coffee economics</li>
+            <li class="journal-meta-read">8 min read</li>
+          </ul>
           <h2>The cafe price is carrying more than the cup.</h2>
           <small>A plain cost teardown of the room, rent, service, and overhead around specialty coffee.</small>
         </div>
@@ -113,7 +90,11 @@
           <image-slot id="journal-card-02" shape="rect" src="assets/photos/site/blog-pods-without-cafe-placeholder-2.webp" placeholder="P.S. Coffee Pod counter specialty brand without a cafe feature card" fit="cover"></image-slot>
         </div>
         <div class="journal-card-copy">
-          <p><span>02</span><span>Pods</span><span>7 min read</span></p>
+          <ul class="journal-card-meta" aria-label="Post details">
+            <li class="journal-meta-index">02</li>
+            <li class="journal-meta-category">Pods</li>
+            <li class="journal-meta-read">7 min read</li>
+          </ul>
           <h2>Why we built Pods, not cafes.</h2>
           <small>A Pod is not a smaller cafe. It is a different format for the daily cup.</small>
         </div>
@@ -126,7 +107,11 @@
           <image-slot id="journal-card-03" shape="rect" src="assets/photos/site/blog-coffee-grid-desktop.webp" mobile-src="assets/photos/site/blog-coffee-grid-mobile.webp" placeholder="100% Arabica coffee beans India" fit="cover"></image-slot>
         </div>
         <div class="journal-card-copy">
-          <p><span>03</span><span>Coffee</span><span>6 min read</span></p>
+          <ul class="journal-card-meta" aria-label="Post details">
+            <li class="journal-meta-index">03</li>
+            <li class="journal-meta-category">Coffee</li>
+            <li class="journal-meta-read">6 min read</li>
+          </ul>
           <h2>What is 100% Arabica coffee and why does it matter?</h2>
           <small>India grows world-class Arabica. Here is what that means in your cup.</small>
         </div>
@@ -139,33 +124,24 @@
           <image-slot id="journal-card-04" shape="rect" src="assets/photos/site/blog-market-grid-desktop.webp" mobile-src="assets/photos/site/blog-market-grid-mobile.webp" placeholder="India coffee market growth" fit="cover"></image-slot>
         </div>
         <div class="journal-card-copy">
-          <p><span>04</span><span>Market</span><span>9 min read</span></p>
+          <ul class="journal-card-meta" aria-label="Post details">
+            <li class="journal-meta-index">04</li>
+            <li class="journal-meta-category">Market</li>
+            <li class="journal-meta-read">9 min read</li>
+          </ul>
           <h2>Where Indian coffee is going next.</h2>
           <small>Three waves of Indian coffee, the funding signal, and the Gujarat white space.</small>
         </div>
       </a>
     </article>
-
-    <article class="journal-feature-card" id="coldbrew-feature">
-      <a href="blog/what-is-cold-brew-coffee-india.html" aria-label="Read what cold brew coffee is and why India is ready for it">
-        <div class="journal-card-media">
-          <image-slot id="journal-card-05" shape="rect" src="assets/photos/site/blogs-journal-card-05-desktop.webp" mobile-src="assets/photos/site/blogs-journal-card-05-mobile.webp" placeholder="Cold brew coffee steeped for 12 hours" fit="cover"></image-slot>
-        </div>
-        <div class="journal-card-copy">
-          <p><span>05</span><span>Coffee</span><span>5 min read</span></p>
-          <h2>What is cold brew coffee, and why is India finally ready for it?</h2>
-          <small>12-hour cold extraction. Naturally smoother. 60-70% less acidic than hot coffee.</small>
-        </div>
-      </a>
-    </article>
   </section>
 
-  <section class="journal-index-note">
-    <p>What we write about.</p>
-    <h2>The bean. The habit. The Pod. The city. Written for the curious, not the expert.</h2>
+  <section class="journal-index-note" aria-labelledby="journal-archive-heading">
+    <p>Read by topic.</p>
+    <h2 id="journal-archive-heading">Coffee science, daily behaviour, city notes, and the business of Pods.</h2>
   </section>
 
-  <section class="journal-card-grid" aria-label="Blog archive">
+  <section class="journal-card-grid" id="archive" aria-label="Blog archive">
     <article class="journal-mini-card" id="habit">
       <a href="blog/morning-coffee-ritual-vs-routine.html">
         <div class="journal-mini-media">
@@ -186,17 +162,6 @@
         <h3>Behind the scenes. The Pod is small because the cup is the point.</h3>
         <small>Read more <span>→</span></small>
       </a>
-    </article>
-
-    <article class="journal-signup-card">
-      <div>
-        <p>Never miss a new post.</p>
-        <h3>P.S.: We write when we have something worth saying. Which is not often. Which is why it is worth reading when we do.</h3>
-      </div>
-      <form class="journal-signup-form" data-ps-form="newsletter">
-        <input name="email" type="email" required placeholder="Email address" aria-label="Email address">
-        <button type="submit" aria-label="Subscribe">→</button>
-      </form>
     </article>
 
     <article class="journal-mini-card" id="city">
@@ -266,10 +231,17 @@
     </article>
   </section>
 
-  <section class="journal-pagination" aria-label="Blog pagination">
-    <span>01</span>
-    <span>02</span>
-    <a href="#latest">Next →</a>
+  <section class="journal-signup-band" aria-label="Newsletter signup">
+    <article class="journal-signup-card">
+      <div>
+        <p>Never miss a new post.</p>
+        <h3>P.S.: We write when we have something worth saying. Which is not often. Which is why it is worth reading when we do.</h3>
+      </div>
+      <form class="journal-signup-form" data-ps-form="newsletter">
+        <input name="email" type="email" required placeholder="Email address" aria-label="Email address">
+        <button type="submit" aria-label="Subscribe">→</button>
+      </form>
+    </article>
   </section>
 </main>
 
@@ -277,68 +249,6 @@
 <script src="assets/image-slot.js?v=3"></script>
 <script src="assets/ps.js?v=42"></script>
 <script src="assets/mobile.js?v=4"></script>
-<script>
-(function(){
-  var slider = document.querySelector("[data-journal-slider]");
-  if(!slider) return;
-  var slides = Array.from(slider.querySelectorAll(".journal-hero-slide"));
-  var buttons = Array.from(slider.querySelectorAll("[data-journal-go]"));
-  var index = 0;
-  var timer = null;
-  var mobile = window.matchMedia("(max-width: 760px)");
-  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-
-  function show(next){
-    index = (next + slides.length) % slides.length;
-    slides.forEach(function(slide, i){
-      slide.classList.toggle("is-active", i === index);
-      slide.setAttribute("aria-hidden", i === index ? "false" : "true");
-    });
-    buttons.forEach(function(button, i){
-      button.classList.toggle("is-active", i === index);
-      if(i === index) button.setAttribute("aria-current", "true");
-      else button.removeAttribute("aria-current");
-    });
-  }
-
-  function start(){
-    if(mobile.matches || reduceMotion.matches) return;
-    timer = window.setInterval(function(){ show(index + 1); }, 5200);
-  }
-
-  function restart(){
-    if(timer) window.clearInterval(timer);
-    start();
-  }
-
-  buttons.forEach(function(button){
-    button.addEventListener("click", function(){
-      show(parseInt(button.getAttribute("data-journal-go"), 10));
-      restart();
-    });
-  });
-
-  slider.addEventListener("mouseenter", function(){ if(timer) window.clearInterval(timer); });
-  slider.addEventListener("mouseleave", restart);
-  var touchStartX = 0;
-  var touchStartY = 0;
-  slider.addEventListener("touchstart", function(e){
-    if(!e.touches || !e.touches[0]) return;
-    touchStartX = e.touches[0].clientX;
-    touchStartY = e.touches[0].clientY;
-  }, {passive:true});
-  slider.addEventListener("touchend", function(e){
-    if(!e.changedTouches || !e.changedTouches[0]) return;
-    var dx = e.changedTouches[0].clientX - touchStartX;
-    var dy = e.changedTouches[0].clientY - touchStartY;
-    if(Math.abs(dx) < 44 || Math.abs(dx) <= Math.abs(dy) * 1.15) return;
-    show(index + (dx < 0 ? 1 : -1));
-    restart();
-  }, {passive:true});
-  show(0);
-  start();
-})();
-</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
