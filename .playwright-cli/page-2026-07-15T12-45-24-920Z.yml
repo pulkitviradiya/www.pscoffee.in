@@ -1,0 +1,480 @@
+- generic [active] [ref=f2e1]:
+  - generic [ref=f2e2]:
+    - generic [ref=f2e4]:
+      - generic [ref=f2e5]:
+        - text: 100% Arabica
+        - generic [ref=f2e6]: ✦
+        - text: From ₹89
+        - generic [ref=f2e7]: ✦
+        - text: Ready before you arrive
+        - generic [ref=f2e8]: ✦
+        - text: New Pods every month
+        - generic [ref=f2e9]: ✦
+      - generic [ref=f2e10]:
+        - text: 100% Arabica
+        - generic [ref=f2e11]: ✦
+        - text: From ₹89
+        - generic [ref=f2e12]: ✦
+        - text: Ready before you arrive
+        - generic [ref=f2e13]: ✦
+        - text: New Pods every month
+        - generic [ref=f2e14]: ✦
+    - navigation [ref=f2e15]:
+      - link "P.S. Coffee home" [ref=f2e16] [cursor=pointer]:
+        - /url: index.html
+        - img "P.S. Coffee" [ref=f2e17]
+      - button "Open menu" [ref=f2e19] [cursor=pointer]
+    - generic [ref=f2e23]:
+      - link [ref=f2e24] [cursor=pointer]:
+        - /url: pack.html
+        - generic [ref=f2e25]: P.S. Pass.
+        - generic [ref=f2e26]: "01"
+      - link [ref=f2e27] [cursor=pointer]:
+        - /url: menu.html
+        - generic [ref=f2e28]: Menu.
+        - generic [ref=f2e29]: "02"
+      - link [ref=f2e30] [cursor=pointer]:
+        - /url: app.html
+        - generic [ref=f2e31]: App.
+        - generic [ref=f2e32]: "03"
+      - link [ref=f2e33] [cursor=pointer]:
+        - /url: events.html
+        - generic [ref=f2e34]: Events.
+        - generic [ref=f2e35]: "04"
+      - link [ref=f2e36] [cursor=pointer]:
+        - /url: blogs.html
+        - generic [ref=f2e37]: Blogs.
+        - generic [ref=f2e38]: "05"
+      - link [ref=f2e39] [cursor=pointer]:
+        - /url: about.html
+        - generic [ref=f2e40]: About.
+        - generic [ref=f2e41]: "06"
+      - link [ref=f2e42] [cursor=pointer]:
+        - /url: partnership.html
+        - generic [ref=f2e43]: Partner.
+        - generic [ref=f2e44]: "07"
+      - link [ref=f2e45] [cursor=pointer]:
+        - /url: pods.html#pods
+        - generic [ref=f2e46]: Pods.
+        - generic [ref=f2e47]: "08"
+      - link [ref=f2e48] [cursor=pointer]:
+        - /url: join.html
+        - generic [ref=f2e49]: Join us.
+        - generic [ref=f2e50]: "09"
+  - generic [ref=f2e52]:
+    - link:
+      - /url: menu.html
+      - generic:
+        - generic: Cappuccino starts from ₹89 only.
+        - paragraph: 100% Arabica specialty coffee. Ground fresh at every order. Ready when you walk up.
+        - generic: See the menu →
+    - link "P.S. Pod compact terracotta coffee deck inside a modern co-working lobby, barista, warm light The thought you add at the end. Now at the beginning. Find your nearest Pod →" [ref=f2e53] [cursor=pointer]:
+      - /url: pods.html#pods
+      - img "P.S. Pod compact terracotta coffee deck inside a modern co-working lobby, barista, warm light" [ref=f2e56]
+      - generic [ref=f2e57]:
+        - heading "The thought you add at the end. Now at the beginning." [level=2] [ref=f2e58]
+        - generic [ref=f2e59]: Find your nearest Pod →
+    - generic "Home hero slides" [ref=f2e60]:
+      - button "Show slide 1" [ref=f2e61]: "01"
+      - button "Show slide 2" [ref=f2e62]: "02"
+  - generic [ref=f2e65]:
+    - paragraph [ref=f2e66]: Plain & Simple.
+    - heading "P.S. = Precisely what coffee should be. Same beans as the cafe. Minus the cafe." [level=1] [ref=f2e67]
+  - generic [ref=f2e68]:
+    - heading "Specialty coffee built for every day, not the occasional visit." [level=2] [ref=f2e69]
+    - generic [ref=f2e70]:
+      - link "Coffee beans 100% Arabica. Discover →" [ref=f2e71] [cursor=pointer]:
+        - /url: menu.html
+        - img "Coffee beans" [ref=f2e73]
+        - strong [ref=f2e74]: 100% Arabica.
+        - generic [ref=f2e75]: Discover →
+      - link "P.S. Pack prepaid specialty coffee subscription P.S. Pack. Discover →" [ref=f2e76] [cursor=pointer]:
+        - /url: pack.html
+        - img "P.S. Pack prepaid specialty coffee subscription" [ref=f2e78]
+        - strong [ref=f2e79]: P.S. Pack.
+        - generic [ref=f2e80]: Discover →
+      - link "P.S. Matcha ceremonial grade, home page category Matcha tonight. Discover →" [ref=f2e81] [cursor=pointer]:
+        - /url: menu.html?cat=matcha#menu-matcha
+        - img "P.S. Matcha ceremonial grade, home page category" [ref=f2e83]
+        - strong [ref=f2e84]: Matcha tonight.
+        - generic [ref=f2e85]: Discover →
+      - link "App Three taps. Discover →" [ref=f2e86] [cursor=pointer]:
+        - /url: app.html
+        - img "App" [ref=f2e88]
+        - strong [ref=f2e89]: Three taps.
+        - generic [ref=f2e90]: Discover →
+      - link "P.S. Pods compact coffee stations, home page Pods. Discover →" [ref=f2e91] [cursor=pointer]:
+        - /url: pods.html#pods
+        - img "P.S. Pods compact coffee stations, home page" [ref=f2e93]
+        - strong [ref=f2e94]: Pods.
+        - generic [ref=f2e95]: Discover →
+  - generic [ref=f2e96]:
+    - generic [ref=f2e97]:
+      - heading "A menu with nothing to hide." [level=2] [ref=f2e98]
+      - navigation "House favourites categories" [ref=f2e99]:
+        - link "Coffee." [ref=f2e100] [cursor=pointer]:
+          - /url: menu.html?cat=coffee#menu-coffee
+        - link "Matcha." [ref=f2e101] [cursor=pointer]:
+          - /url: menu.html?cat=matcha#menu-matcha
+        - link "Protein." [ref=f2e102] [cursor=pointer]:
+          - /url: menu.html?cat=protein#menu-protein
+        - link "Food." [ref=f2e103] [cursor=pointer]:
+          - /url: menu.html?cat=food#menu-food
+      - link "View all" [ref=f2e104] [cursor=pointer]:
+        - /url: menu.html
+    - generic [ref=f2e105]:
+      - article [ref=f2e106] [cursor=pointer]:
+        - generic [ref=f2e107]:
+          - text: Brew / Filter
+          - img "Espresso/Doppio." [ref=f2e108]
+          - text: ♡
+        - heading "Espresso/Doppio." [level=3] [ref=f2e109]
+        - paragraph [ref=f2e110]: "P.S.: The original P.S. Short, honest, final."
+        - generic [ref=f2e111]:
+          - strong [ref=f2e112]: ₹99
+          - link "View on menu →" [ref=f2e113]:
+            - /url: menu.html?cat=coffee#menu-coffee
+      - article [ref=f2e114] [cursor=pointer]:
+        - generic [ref=f2e115]:
+          - text: Brew / Filter
+          - img "Americano." [ref=f2e116]
+          - text: ♡
+        - heading "Americano." [level=3] [ref=f2e117]
+        - paragraph [ref=f2e118]: "P.S.: Espresso, long. For people who take their time."
+        - generic [ref=f2e119]:
+          - strong [ref=f2e120]: ₹119
+          - link "View on menu →" [ref=f2e121]:
+            - /url: menu.html?cat=coffee#menu-coffee
+      - article [ref=f2e122] [cursor=pointer]:
+        - generic [ref=f2e123]:
+          - text: Brew / Filter
+          - img "Macchiato." [ref=f2e124]
+          - text: ♡
+        - heading "Macchiato." [level=3] [ref=f2e125]
+        - paragraph [ref=f2e126]: "P.S.: Small. Assertive. The espresso leads."
+        - generic [ref=f2e127]:
+          - strong [ref=f2e128]: ₹139
+          - link "View on menu →" [ref=f2e129]:
+            - /url: menu.html?cat=coffee#menu-coffee
+      - article [ref=f2e130] [cursor=pointer]:
+        - generic [ref=f2e131]:
+          - text: Brew / Filter
+          - img "Iced Americano." [ref=f2e132]
+          - text: ♡
+        - heading "Iced Americano." [level=3] [ref=f2e133]
+        - paragraph [ref=f2e134]: "P.S.: Cold, clean, Arabica. The afternoon anchor."
+        - generic [ref=f2e135]:
+          - strong [ref=f2e136]: ₹129
+          - link "View on menu →" [ref=f2e137]:
+            - /url: menu.html?cat=coffee#menu-coffee
+      - article [ref=f2e138] [cursor=pointer]:
+        - generic [ref=f2e139]:
+          - text: Brew / Filter
+          - img "Cold Brew." [ref=f2e140]
+          - text: ♡
+        - heading "Cold Brew." [level=3] [ref=f2e141]
+        - paragraph [ref=f2e142]: "P.S.: Twelve hours. Slow. Smoother than you expect."
+        - generic [ref=f2e143]:
+          - strong [ref=f2e144]: ₹169
+          - link "View on menu →" [ref=f2e145]:
+            - /url: menu.html?cat=coffee#menu-coffee
+      - article [ref=f2e146] [cursor=pointer]:
+        - generic [ref=f2e147]:
+          - text: Brew / Filter
+          - img "Cola Coffee." [ref=f2e148]
+          - text: ♡
+        - heading "Cola Coffee." [level=3] [ref=f2e149]
+        - paragraph [ref=f2e150]: "P.S.: A crisp coffee soda for the curious."
+        - generic [ref=f2e151]:
+          - strong [ref=f2e152]: ₹169
+          - link "View on menu →" [ref=f2e153]:
+            - /url: menu.html?cat=coffee#menu-coffee
+      - text: Brew / Filter ♡ Brew / Filter ♡ Brew / Filter ♡ Brew / Filter ♡ Brew / Filter ♡ Brew / Filter ♡ Brew / Filter ♡ Brew / Filter ♡ Brew / Filter ♡ Brew / Filter ♡ Brew / Filter ♡ Brew / Filter ♡ Brew / Filter ♡ Brew / Filter ♡ Brew / Filter ♡
+  - generic [ref=f2e154]:
+    - text: P.S.
+    - generic [ref=f2e155]:
+      - generic [ref=f2e156]:
+        - paragraph [ref=f2e157]: The P.S. Pass.
+        - heading "Decide once. Drink daily. Repeat. Your coffee is already settled, which means the morning has one less decision in it." [level=2] [ref=f2e158]:
+          - generic [ref=f2e159]: Decide once. Drink daily. Repeat.
+          - generic [ref=f2e160]: Your coffee is already settled,
+          - generic [ref=f2e161]: which means the morning has
+          - generic [ref=f2e162]: one less decision in it.
+      - list "P.S. Pass basics" [ref=f2e163]:
+        - listitem [ref=f2e164]: The decision is already made.
+        - listitem [ref=f2e165]: The payment is already done.
+        - listitem [ref=f2e166]: The cup is ready when you are.
+    - generic [ref=f2e167]:
+      - tablist "Choose a P.S. Pass" [ref=f2e168]:
+        - tab "Black" [selected] [ref=f2e169] [cursor=pointer]
+        - tab "Starter" [ref=f2e170] [cursor=pointer]
+        - tab "Habit" [ref=f2e171] [cursor=pointer]
+        - tab "Full Pour" [ref=f2e172] [cursor=pointer]
+      - generic "P.S. Pass cards" [ref=f2e173]:
+        - link "The Black Pack illustrated pass card The Black Pack. ₹749 The Black Pack quick details The Black Pack. Black coffee only. Minimal. Direct." [ref=f2e174] [cursor=pointer]:
+          - /url: pack.html
+          - generic [ref=f2e175]:
+            - img "The Black Pack illustrated pass card" [ref=f2e176]
+            - strong [ref=f2e178]:
+              - generic [ref=f2e179]: The
+              - generic [ref=f2e180]: Black Pack.
+            - generic [ref=f2e181]:
+              - emphasis [ref=f2e182]: ₹749
+              - list "The Black Pack quick details" [ref=f2e183]:
+                - listitem [ref=f2e184]: 10 cups
+                - listitem [ref=f2e185]: 30 days
+                - listitem [ref=f2e186]: ₹74.90
+          - generic [ref=f2e187]:
+            - heading "The Black Pack." [level=3] [ref=f2e188]
+            - paragraph [ref=f2e189]: Black coffee only. Minimal. Direct.
+        - link "The Starter Pack illustrated pass card The Starter Pack. ₹1,099 The Starter Pack quick details The Starter Pack. Classic coffee. A simple way to begin." [ref=f2e190] [cursor=pointer]:
+          - /url: pack.html
+          - generic [ref=f2e191]:
+            - img "The Starter Pack illustrated pass card" [ref=f2e192]
+            - strong [ref=f2e194]:
+              - generic [ref=f2e195]: The
+              - generic [ref=f2e196]: Starter Pack.
+            - generic [ref=f2e197]:
+              - emphasis [ref=f2e198]: ₹1,099
+              - list "The Starter Pack quick details" [ref=f2e199]:
+                - listitem [ref=f2e200]: 10 cups
+                - listitem [ref=f2e201]: 30 days
+                - listitem [ref=f2e202]: ₹109.90
+          - generic [ref=f2e203]:
+            - heading "The Starter Pack." [level=3] [ref=f2e204]
+            - paragraph [ref=f2e205]: Classic coffee. A simple way to begin.
+        - link "The Habit Pack illustrated pass card The Habit Pack. ₹1,899 The Habit Pack quick details The Habit Pack. For the daily cup. Fewer decisions." [ref=f2e206] [cursor=pointer]:
+          - /url: pack.html
+          - generic [ref=f2e207]:
+            - img "The Habit Pack illustrated pass card" [ref=f2e208]
+            - strong [ref=f2e210]:
+              - generic [ref=f2e211]: The
+              - generic [ref=f2e212]: Habit Pack.
+            - generic [ref=f2e213]:
+              - emphasis [ref=f2e214]: ₹1,899
+              - list "The Habit Pack quick details" [ref=f2e215]:
+                - listitem [ref=f2e216]: 20 cups
+                - listitem [ref=f2e217]: 30 days
+                - listitem [ref=f2e218]: ₹94.95
+          - generic [ref=f2e219]:
+            - heading "The Habit Pack." [level=3] [ref=f2e220]
+            - paragraph [ref=f2e221]: For the daily cup. Fewer decisions.
+        - link "The Full Pour illustrated pass card The Full Pour. ₹2,899 The Full Pour quick details The Full Pour. Coffee and Matcha. The full range." [ref=f2e222] [cursor=pointer]:
+          - /url: pack.html
+          - generic [ref=f2e223]:
+            - img "The Full Pour illustrated pass card" [ref=f2e224]
+            - strong [ref=f2e226]:
+              - generic [ref=f2e227]: The
+              - generic [ref=f2e228]: Full Pour.
+            - generic [ref=f2e229]:
+              - emphasis [ref=f2e230]: ₹2,899
+              - list "The Full Pour quick details" [ref=f2e231]:
+                - listitem [ref=f2e232]: 20 cups
+                - listitem [ref=f2e233]: 30 days
+                - listitem [ref=f2e234]: ₹144.95
+          - generic [ref=f2e235]:
+            - heading "The Full Pour." [level=3] [ref=f2e236]
+            - paragraph [ref=f2e237]: Coffee and Matcha. The full range.
+    - generic [ref=f2e238]:
+      - generic "P.S. Pass progress" [ref=f2e239]:
+        - button "Show The Black Pack" [ref=f2e240] [cursor=pointer]
+        - button "Show The Starter Pack" [ref=f2e241] [cursor=pointer]
+        - button "Show The Habit Pack" [ref=f2e242] [cursor=pointer]
+        - button "Show The Full Pour" [ref=f2e243] [cursor=pointer]
+      - link "See all Pass details →" [ref=f2e244] [cursor=pointer]:
+        - /url: pack.html
+  - generic [ref=f2e245]:
+    - img "P.S. Coffee highlighted pods" [ref=f2e247]
+    - generic [ref=f2e248]:
+      - heading "Find a P.S. Pod." [level=2] [ref=f2e249]
+      - paragraph [ref=f2e250]:
+        - text: ○
+        - generic [ref=f2e251]: Prahladnagar.
+        - generic [ref=f2e252]: Ahmedabad
+      - paragraph [ref=f2e253]:
+        - text: ○
+        - generic [ref=f2e254]: SG Highway.
+        - generic [ref=f2e255]: Ahmedabad
+      - paragraph [ref=f2e256]:
+        - text: ○
+        - generic [ref=f2e257]: Gift City.
+        - generic [ref=f2e258]: Gandhinagar
+      - paragraph [ref=f2e259]:
+        - text: ○
+        - generic [ref=f2e260]: TCS.
+        - generic [ref=f2e261]: Gandhinagar
+      - paragraph [ref=f2e262]:
+        - text: ○
+        - generic [ref=f2e263]: SBR.
+        - generic [ref=f2e264]: Ahmedabad
+      - paragraph [ref=f2e265]:
+        - text: ○
+        - generic [ref=f2e266]: Makarba.
+        - generic [ref=f2e267]: Ahmedabad
+      - link "Show me Pods near me →" [ref=f2e268] [cursor=pointer]:
+        - /url: pods.html#pods
+  - generic [ref=f2e270]:
+    - generic [ref=f2e271]:
+      - paragraph [ref=f2e272]: The P.S. App.
+      - heading "Three taps. Your coffee." [level=2] [ref=f2e273]
+      - list [ref=f2e274]:
+        - listitem [ref=f2e275]: → Open the app. Pick your drink. Choose your pick-up time.
+        - listitem [ref=f2e276]: "→ Smart favourites: by day two, it already knows."
+        - listitem [ref=f2e277]: "→ Nearest Pod finder: walk time, not driving time."
+        - listitem [ref=f2e278]: → Fresh on arrival, not cold on wait.
+      - generic [ref=f2e279]:
+        - link "Explore App →" [ref=f2e280] [cursor=pointer]:
+          - /url: app.html
+        - link "How it works" [ref=f2e281] [cursor=pointer]:
+          - /url: app.html
+    - img "P.S. Coffee app" [ref=f2e283]
+  - generic [ref=f2e286]:
+    - generic [ref=f2e287]: Our Story
+    - heading "P.S. Story." [level=2] [ref=f2e288]
+    - paragraph [ref=f2e289]: We took the specialty cafe and removed everything that was not the coffee. The seating. The Wi-Fi. The dining room. The address. What is left is a small Pod, a serious machine, fresh Arabica, and a price that only has to carry the cup.
+    - link "Read the full story →" [ref=f2e290] [cursor=pointer]:
+      - /url: about.html
+  - generic [ref=f2e291]:
+    - link "Our menu The P.S. Menu. Nothing to hide →" [ref=f2e292] [cursor=pointer]:
+      - /url: menu.html
+      - img "Our menu" [ref=f2e294]
+      - generic [ref=f2e295]: The P.S. Menu.
+      - emphasis [ref=f2e296]: Nothing to hide →
+    - link "Matcha, ceremonial grade Matcha, ceremonial grade. Not the powder →" [ref=f2e297] [cursor=pointer]:
+      - /url: menu.html?cat=matcha#menu-matcha
+      - img "Matcha, ceremonial grade" [ref=f2e299]
+      - generic [ref=f2e300]: Matcha, ceremonial grade.
+      - emphasis [ref=f2e301]: Not the powder →
+  - generic [ref=f2e302]:
+    - generic [ref=f2e303]:
+      - paragraph [ref=f2e304]: Events & Collaborations
+      - heading "Bring P.S. to your next event." [level=2] [ref=f2e305]
+      - link "Enquire now →" [ref=f2e307] [cursor=pointer]:
+        - /url: events.html#event-types
+    - generic [ref=f2e308]:
+      - paragraph [ref=f2e309]: Host a Pod
+      - heading "Specialty coffee, inside your building." [level=2] [ref=f2e310]
+      - link "Become a host →" [ref=f2e312] [cursor=pointer]:
+        - /url: partnership.html#host
+    - generic [ref=f2e313]:
+      - paragraph [ref=f2e314]: Join the Build
+      - heading "Join the P.S. team." [level=2] [ref=f2e315]
+      - link "Join us →" [ref=f2e317] [cursor=pointer]:
+        - /url: join.html
+  - generic [ref=f2e318]:
+    - text: P.S.
+    - generic [ref=f2e319]:
+      - paragraph [ref=f2e320]: New Pods. New menus.
+      - heading [level=2] [ref=f2e321]:
+        - text: Firstto know.
+        - emphasis [ref=f2e322]: P.S.
+    - generic [ref=f2e323]:
+      - generic [ref=f2e324]: Be there when it opens.
+      - heading "New Pods. New menus. First to know." [level=3] [ref=f2e325]
+      - paragraph [ref=f2e326]: "And first access when your building gets a Pod. P.S.: We send maybe four emails a year. Your inbox is safe."
+      - link "Join the list →" [ref=f2e327] [cursor=pointer]:
+        - /url: feedback.html
+    - generic [ref=f2e329]:
+      - generic [ref=f2e330]: Menu ideas
+      - generic [ref=f2e331]: Pod locations
+      - generic [ref=f2e332]: First cup notes
+      - generic [ref=f2e333]: Pod requests
+      - generic [ref=f2e334]: Habit rituals
+      - generic [ref=f2e335]: Menu ideas
+      - generic [ref=f2e336]: Pod locations
+      - generic [ref=f2e337]: First cup notes
+      - generic [ref=f2e338]: Pod requests
+      - generic [ref=f2e339]: Habit rituals
+      - generic [ref=f2e340]: Menu ideas
+      - generic [ref=f2e341]: Pod locations
+      - generic [ref=f2e342]: First cup notes
+      - generic [ref=f2e343]: Pod requests
+      - generic [ref=f2e344]: Habit rituals
+      - generic [ref=f2e345]: Menu ideas
+      - generic [ref=f2e346]: Pod locations
+      - generic [ref=f2e347]: First cup notes
+      - generic [ref=f2e348]: Pod requests
+      - generic [ref=f2e349]: Habit rituals
+      - generic [ref=f2e350]: Menu ideas
+      - generic [ref=f2e351]: Pod locations
+      - generic [ref=f2e352]: First cup notes
+      - generic [ref=f2e353]: Pod requests
+      - generic [ref=f2e354]: Habit rituals
+      - generic [ref=f2e355]: Menu ideas
+      - generic [ref=f2e356]: Pod locations
+      - generic [ref=f2e357]: First cup notes
+      - generic [ref=f2e358]: Pod requests
+      - generic [ref=f2e359]: Habit rituals
+  - contentinfo [ref=f2e364]:
+    - generic [ref=f2e365]:
+      - generic [ref=f2e366]:
+        - generic [ref=f2e367]:
+          - img "P.S. Coffee" [ref=f2e369]
+          - link "Story" [ref=f2e370] [cursor=pointer]:
+            - /url: about.html
+          - link "Blogs" [ref=f2e371] [cursor=pointer]:
+            - /url: blogs.html
+          - link "Events" [ref=f2e372] [cursor=pointer]:
+            - /url: events.html
+          - link "Join Us" [ref=f2e373] [cursor=pointer]:
+            - /url: join.html
+          - link "Careers" [ref=f2e374] [cursor=pointer]:
+            - /url: join.html
+          - link "Partner" [ref=f2e375] [cursor=pointer]:
+            - /url: partnership.html
+          - link "Barista School ↗" [ref=f2e376] [cursor=pointer]:
+            - /url: https://www.thebarista.school
+        - generic [ref=f2e377]:
+          - heading "Pods." [level=4] [ref=f2e378]
+          - link "Visit us" [ref=f2e379] [cursor=pointer]:
+            - /url: pods.html#pods
+          - link "Order ahead" [ref=f2e380] [cursor=pointer]:
+            - /url: app.html
+          - link "Host a Pod" [ref=f2e381] [cursor=pointer]:
+            - /url: partnership.html#host
+        - generic [ref=f2e382]:
+          - heading "Help & Info." [level=4] [ref=f2e383]
+          - link "FAQ" [ref=f2e384] [cursor=pointer]:
+            - /url: faq.html
+          - link "Contact" [ref=f2e385] [cursor=pointer]:
+            - /url: mailto:hello@pscoffee.in
+          - link "Terms of Use" [ref=f2e386] [cursor=pointer]:
+            - /url: terms.html
+          - link "Privacy Policy" [ref=f2e387] [cursor=pointer]:
+            - /url: privacy.html
+          - link "General Disclaimer" [ref=f2e388] [cursor=pointer]:
+            - /url: disclaimer.html
+          - link "Survey Notice" [ref=f2e389] [cursor=pointer]:
+            - /url: survey-disclosure.html
+          - link "Copyright" [ref=f2e390] [cursor=pointer]:
+            - /url: copyright.html
+        - generic "P.S. Coffee imagery" [ref=f2e391]: "@pscoffee"
+        - generic [ref=f2e397]:
+          - heading "P.S. See you in the morning." [level=4] [ref=f2e398]
+          - paragraph [ref=f2e399]: New Pods. Usual orders. Pack reminders. No theatre, no daily friction.
+          - generic [ref=f2e400]:
+            - generic [ref=f2e401]: Email address
+            - textbox "Email address" [ref=f2e402]
+            - button "Subscribe by email" [ref=f2e403] [cursor=pointer]: → →
+      - generic [ref=f2e404]:
+        - generic [ref=f2e405]: © P.S. Coffee 2026
+        - generic [ref=f2e406]:
+          - link "FAQ" [ref=f2e407] [cursor=pointer]:
+            - /url: faq.html
+          - link "Terms" [ref=f2e408] [cursor=pointer]:
+            - /url: terms.html
+          - link "Privacy" [ref=f2e409] [cursor=pointer]:
+            - /url: privacy.html
+          - link "Disclaimer" [ref=f2e410] [cursor=pointer]:
+            - /url: disclaimer.html
+          - link "Survey" [ref=f2e411] [cursor=pointer]:
+            - /url: survey-disclosure.html
+          - link "Copyright" [ref=f2e412] [cursor=pointer]:
+            - /url: copyright.html
+        - generic [ref=f2e413]:
+          - link "Facebook" [ref=f2e414] [cursor=pointer]:
+            - /url: https://www.facebook.com/pscoffee
+          - link "Instagram" [ref=f2e417] [cursor=pointer]:
+            - /url: https://www.instagram.com/pscoffee_pods
+          - link "LinkedIn" [ref=f2e420] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/pscoffee

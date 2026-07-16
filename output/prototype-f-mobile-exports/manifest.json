@@ -1,0 +1,128 @@
+{
+  "inputPath": "/Users/pulkit/Downloads/P.S. Coffee App Prototype_F (standalone).html",
+  "pngCount": 19,
+  "gifCount": 6,
+  "pngs": [
+    {
+      "label": "Journal A Month view",
+      "group": "Journal row",
+      "png": "/Users/pulkit/Code/pscoffee-repo/output/prototype-f-mobile-exports/01-journal-a-month-view.png"
+    },
+    {
+      "label": "Journal B Week view",
+      "group": "Journal row",
+      "png": "/Users/pulkit/Code/pscoffee-repo/output/prototype-f-mobile-exports/02-journal-b-week-view.png"
+    },
+    {
+      "label": "Journal C Add a cup sheet",
+      "group": "Journal row",
+      "png": "/Users/pulkit/Code/pscoffee-repo/output/prototype-f-mobile-exports/03-journal-c-add-a-cup-sheet.png"
+    },
+    {
+      "label": "Journal D Stats",
+      "group": "Journal row",
+      "png": "/Users/pulkit/Code/pscoffee-repo/output/prototype-f-mobile-exports/04-journal-d-stats.png"
+    },
+    {
+      "label": "Home A The Usual",
+      "group": "Home variations row",
+      "png": "/Users/pulkit/Code/pscoffee-repo/output/prototype-f-mobile-exports/05-home-a-the-usual.png"
+    },
+    {
+      "label": "Home B The Board",
+      "group": "Home variations row",
+      "png": "/Users/pulkit/Code/pscoffee-repo/output/prototype-f-mobile-exports/06-home-b-the-board.png"
+    },
+    {
+      "label": "Home C The Tab",
+      "group": "Home variations row",
+      "png": "/Users/pulkit/Code/pscoffee-repo/output/prototype-f-mobile-exports/07-home-c-the-tab.png"
+    },
+    {
+      "label": "S7 Product detail",
+      "group": "Order loop row",
+      "png": "/Users/pulkit/Code/pscoffee-repo/output/prototype-f-mobile-exports/08-s7-product-detail.png"
+    },
+    {
+      "label": "S6 Customise sheet",
+      "group": "Order loop row",
+      "png": "/Users/pulkit/Code/pscoffee-repo/output/prototype-f-mobile-exports/09-s6-customise-sheet.png"
+    },
+    {
+      "label": "S8 Confirm",
+      "group": "Order loop row",
+      "png": "/Users/pulkit/Code/pscoffee-repo/output/prototype-f-mobile-exports/10-s8-confirm.png"
+    },
+    {
+      "label": "S9 On it",
+      "group": "Order loop row",
+      "png": "/Users/pulkit/Code/pscoffee-repo/output/prototype-f-mobile-exports/11-s9-on-it.png"
+    },
+    {
+      "label": "S9 Ready",
+      "group": "Order loop row",
+      "png": "/Users/pulkit/Code/pscoffee-repo/output/prototype-f-mobile-exports/12-s9-ready.png"
+    },
+    {
+      "label": "S1 Welcome",
+      "group": "Onboarding row",
+      "png": "/Users/pulkit/Code/pscoffee-repo/output/prototype-f-mobile-exports/13-s1-welcome.png"
+    },
+    {
+      "label": "S2 Phone",
+      "group": "Onboarding row",
+      "png": "/Users/pulkit/Code/pscoffee-repo/output/prototype-f-mobile-exports/14-s2-phone.png"
+    },
+    {
+      "label": "S3 OTP",
+      "group": "Onboarding row",
+      "png": "/Users/pulkit/Code/pscoffee-repo/output/prototype-f-mobile-exports/15-s3-otp.png"
+    },
+    {
+      "label": "S4 Your Pod",
+      "group": "Onboarding row",
+      "png": "/Users/pulkit/Code/pscoffee-repo/output/prototype-f-mobile-exports/16-s4-your-pod.png"
+    },
+    {
+      "label": "S11 Buy a Pack",
+      "group": "Money and places row",
+      "png": "/Users/pulkit/Code/pscoffee-repo/output/prototype-f-mobile-exports/17-s11-buy-a-pack.png"
+    },
+    {
+      "label": "S12 Pods",
+      "group": "Money and places row",
+      "png": "/Users/pulkit/Code/pscoffee-repo/output/prototype-f-mobile-exports/18-s12-pods.png"
+    },
+    {
+      "label": "S13 You",
+      "group": "Money and places row",
+      "png": "/Users/pulkit/Code/pscoffee-repo/output/prototype-f-mobile-exports/19-s13-you.png"
+    }
+  ],
+  "gifs": [
+    {
+      "label": "all-mobile-frames",
+      "gif": "/Users/pulkit/Code/pscoffee-repo/output/prototype-f-mobile-exports/all-mobile-frames.gif"
+    },
+    {
+      "label": "Journal row",
+      "gif": "/Users/pulkit/Code/pscoffee-repo/output/prototype-f-mobile-exports/journal-row.gif"
+    },
+    {
+      "label": "Home variations row",
+      "gif": "/Users/pulkit/Code/pscoffee-repo/output/prototype-f-mobile-exports/home-variations-row.gif"
+    },
+    {
+      "label": "Order loop row",
+      "gif": "/Users/pulkit/Code/pscoffee-repo/output/prototype-f-mobile-exports/order-loop-row.gif"
+    },
+    {
+      "label": "Onboarding row",
+      "gif": "/Users/pulkit/Code/pscoffee-repo/output/prototype-f-mobile-exports/onboarding-row.gif"
+    },
+    {
+      "label": "Money and places row",
+      "gif": "/Users/pulkit/Code/pscoffee-repo/output/prototype-f-mobile-exports/money-and-places-row.gif"
+    }
+  ]
+}

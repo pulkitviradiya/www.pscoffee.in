@@ -1,0 +1,302 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - text: 100% Arabica
+        - generic [ref=e6]: ✦
+        - text: From ₹89
+        - generic [ref=e7]: ✦
+        - text: Ready before you arrive
+        - generic [ref=e8]: ✦
+        - text: New Pods every month
+        - generic [ref=e9]: ✦
+      - generic [ref=e10]:
+        - text: 100% Arabica
+        - generic [ref=e11]: ✦
+        - text: From ₹89
+        - generic [ref=e12]: ✦
+        - text: Ready before you arrive
+        - generic [ref=e13]: ✦
+        - text: New Pods every month
+        - generic [ref=e14]: ✦
+    - navigation [ref=e15]:
+      - link "P.S. Coffee home" [ref=e16] [cursor=pointer]:
+        - /url: index.html
+        - img "P.S. Coffee" [ref=e17]
+      - generic [ref=e18]:
+        - link "P.S. Pass." [ref=e19] [cursor=pointer]:
+          - /url: pack.html
+        - link "Menu." [ref=e20] [cursor=pointer]:
+          - /url: menu.html
+        - link "App." [ref=e21] [cursor=pointer]:
+          - /url: app.html
+        - link "About." [ref=e22] [cursor=pointer]:
+          - /url: about.html
+        - link "Pods." [ref=e23] [cursor=pointer]:
+          - /url: pods.html#pods
+      - generic [ref=e24]:
+        - link "Join us." [ref=e25] [cursor=pointer]:
+          - /url: join.html
+        - link "Partner." [ref=e26] [cursor=pointer]:
+          - /url: partnership.html
+    - generic [ref=e27]:
+      - link "P.S. Pass. 01" [ref=e28] [cursor=pointer]:
+        - /url: pack.html
+        - generic [ref=e29]: P.S. Pass.
+        - generic [ref=e30]: "01"
+      - link "Menu. 02" [ref=e31] [cursor=pointer]:
+        - /url: menu.html
+        - generic [ref=e32]: Menu.
+        - generic [ref=e33]: "02"
+      - link "App. 03" [ref=e34] [cursor=pointer]:
+        - /url: app.html
+        - generic [ref=e35]: App.
+        - generic [ref=e36]: "03"
+      - link "Events. 04" [ref=e37] [cursor=pointer]:
+        - /url: events.html
+        - generic [ref=e38]: Events.
+        - generic [ref=e39]: "04"
+      - link "Blogs. 05" [ref=e40] [cursor=pointer]:
+        - /url: blogs.html
+        - generic [ref=e41]: Blogs.
+        - generic [ref=e42]: "05"
+      - link "About. 06" [ref=e43] [cursor=pointer]:
+        - /url: about.html
+        - generic [ref=e44]: About.
+        - generic [ref=e45]: "06"
+      - link "Partner. 07" [ref=e46] [cursor=pointer]:
+        - /url: partnership.html
+        - generic [ref=e47]: Partner.
+        - generic [ref=e48]: "07"
+      - link "Pods. 08" [ref=e49] [cursor=pointer]:
+        - /url: pods.html#pods
+        - generic [ref=e50]: Pods.
+        - generic [ref=e51]: "08"
+      - link "Join us. 09" [ref=e52] [cursor=pointer]:
+        - /url: join.html
+        - generic [ref=e53]: Join us.
+        - generic [ref=e54]: "09"
+  - main [ref=e56]:
+    - generic [ref=e57]:
+      - generic [ref=e58]:
+        - paragraph [ref=e59]: App.
+        - heading "Three taps. That is all." [level=1] [ref=e60]
+        - generic [ref=e61]:
+          - paragraph [ref=e62]: Open the app. Pick your drink. Choose your pick-up time. Your coffee is made fresh to your arrival. Not queued. Not cold. Done.
+          - link "How it works →" [ref=e63] [cursor=pointer]:
+            - /url: "#features"
+          - paragraph [ref=e64]: "P.S.: We remembered your order. You did not have to."
+      - img "P.S. Coffee app" [ref=e67]
+    - generic [ref=e68]:
+      - paragraph [ref=e69]: Spot On Technology.
+      - heading "The technology at P.S. Coffee is invisible when it works. Which is why we obsess over it." [level=2] [ref=e70]
+    - generic [ref=e71]:
+      - generic [ref=e72]:
+        - heading "Built for habit." [level=2] [ref=e73]
+        - paragraph [ref=e74]: Daily coffee should not require daily friction.
+      - generic [ref=e75]:
+        - article [ref=e76]:
+          - generic [ref=e77]:
+            - text: P.S.
+            - img "Three tap order" [ref=e79]
+          - heading "3-tap ordering." [level=3] [ref=e80]
+          - paragraph [ref=e81]: Open. Pick. Confirm. No account needed for your first order. No points to calculate. No size names to memorise.
+          - link "Pick a drink →" [ref=e82] [cursor=pointer]:
+            - /url: menu.html
+        - article [ref=e83]:
+          - generic [ref=e84]:
+            - text: P.S.
+            - img "Pickup time" [ref=e86]
+          - heading "Pick-up time." [level=3] [ref=e87]
+          - paragraph [ref=e88]: You choose when your coffee is ready. It is made fresh to your arrival, not sitting on a counter going cold.
+          - link "Find a Pod →" [ref=e89] [cursor=pointer]:
+            - /url: pods.html#pods
+        - article [ref=e90]:
+          - generic [ref=e91]:
+            - text: P.S.
+            - img "Smart favourites" [ref=e93]
+          - heading "Smart favourites." [level=3] [ref=e94]
+          - paragraph [ref=e95]: After your third order, the app suggests your usual. After your tenth, it is the first thing on screen. It learns. You do not repeat yourself.
+          - link "Make it official →" [ref=e96] [cursor=pointer]:
+            - /url: pack.html
+        - article [ref=e97]:
+          - generic [ref=e98]:
+            - text: P.S.
+            - img "Nearest Pod" [ref=e100]
+          - heading "Nearest Pod finder." [level=3] [ref=e101]
+          - paragraph [ref=e102]: Real-time. Walk time, not driving time, because the Pod is in your building or one floor down.
+          - link "All Pods →" [ref=e103] [cursor=pointer]:
+            - /url: pods.html#pods
+        - article [ref=e104]:
+          - generic [ref=e105]:
+            - text: P.S.
+            - img "Caffeine tracker app card" [ref=e107]
+          - heading "Caffeine tracker." [level=3] [ref=e108]
+          - paragraph [ref=e109]: Know what you have already had today. Coffee stays a habit, not a guess, with your cups counted quietly in the app.
+          - link "Track my cups →" [ref=e110] [cursor=pointer]:
+            - /url: "#app-waitlist"
+    - region [ref=e111]:
+      - generic [ref=e112]:
+        - paragraph [ref=e113]: App flows.
+        - heading "The app in motion." [level=2] [ref=e114]
+      - generic [ref=e115]:
+        - figure "App home" [ref=e116]:
+          - img "P.S. app home screen flow" [ref=e119]
+        - figure "Pay once" [ref=e120]:
+          - img "P.S. Pass payment and pack selection flow" [ref=e123]
+        - figure "Onboarding" [ref=e124]:
+          - img "P.S. Coffee app onboarding flow" [ref=e127]
+        - figure "Order loop" [ref=e128]:
+          - img "P.S. Coffee app order loop flow" [ref=e131]
+        - figure "Your usual" [ref=e132]:
+          - img "P.S. Coffee app usual order flow" [ref=e135]
+    - region [ref=e136]:
+      - generic [ref=e137]:
+        - paragraph [ref=e138]: Caffeine tracker.
+        - heading "Your coffee. Counted." [level=2] [ref=e139]: Your coffee.Counted.
+        - paragraph [ref=e140]: "Your usual should be easy to enjoy. The app keeps the tally in view: every cup, the caffeine behind it, and the shape of your routine."
+        - generic [ref=e141]:
+          - generic [ref=e142]:
+            - term [ref=e143]: Cups, not guesses.
+            - definition [ref=e144]: See what you have had today without doing the maths.
+          - generic [ref=e145]:
+            - term [ref=e146]: Your daily context.
+            - definition [ref=e147]: Track caffeine against a clear 400 mg daily reference.
+          - generic [ref=e148]:
+            - term [ref=e149]: The habit, clearly.
+            - definition [ref=e150]: See your rhythm over the week, alongside your Pack status.
+        - link "Track my cups →" [ref=e151] [cursor=pointer]:
+          - /url: "#app-waitlist"
+          - text: Track my cups
+          - generic [ref=e152]: →
+        - paragraph [ref=e153]: "P.S.: A tally, not a lecture."
+      - figure:
+        - generic:
+          - img "P.S. Coffee app caffeine tracker showing cups, daily caffeine, and weekly coffee activity"
+    - generic [ref=e155]:
+      - heading "Your coffee is ready before you arrive." [level=2] [ref=e157]
+      - generic [ref=e158]:
+        - paragraph [ref=e159]:
+          - generic [ref=e160]: Fresh at your time.
+          - generic [ref=e161]: That is the product. The app is just how you get it.
+        - paragraph [ref=e162]:
+          - generic [ref=e163]: Your pick-up time.
+          - generic [ref=e164]: Your cup is made fresh at the moment you scheduled, not sitting on a counter going cold.
+        - paragraph [ref=e165]:
+          - generic [ref=e166]: Your usual.
+          - generic [ref=e167]: We remembered your order. You did not have to.
+        - paragraph [ref=e168]:
+          - generic [ref=e169]: No queue culture.
+          - generic [ref=e170]: Walk in, pick up, leave with the cup that is already yours.
+    - generic [ref=e171]:
+      - heading "Download the P.S. App." [level=2] [ref=e173]: Download theP.S. App.
+      - generic [ref=e174]:
+        - generic "App download options" [ref=e175]:
+          - link "Coming soon on the App Store" [disabled]:
+            - /url: "#"
+            - generic:
+              - generic: Coming soon on the
+              - text: App Store
+          - link "Coming soon on Google Play" [disabled]:
+            - /url: "#"
+            - generic:
+              - generic: Coming soon on
+              - text: Google Play
+        - generic [ref=e176]:
+          - generic [ref=e177]:
+            - generic [ref=e178]: Email address
+            - textbox "Email address" [ref=e179]:
+              - /placeholder: you@example.com
+          - generic [ref=e180]:
+            - generic [ref=e181]: WhatsApp number
+            - textbox "WhatsApp number" [ref=e182]:
+              - /placeholder: +91 98765 43210
+          - button "Notify me →" [ref=e183] [cursor=pointer]:
+            - text: Notify me
+            - generic [ref=e184]: →
+    - generic [ref=e185]:
+      - 'link "P.S. Pass pay once drink daily, app page CTA P.S.: Decide once. Your Pass applies automatically. Nothing to do at the counter. Subscribe →" [ref=e186] [cursor=pointer]':
+        - /url: pack.html
+        - img "P.S. Pass pay once drink daily, app page CTA" [ref=e188]
+        - 'heading "P.S.: Decide once." [level=2] [ref=e189]'
+        - paragraph [ref=e190]: Your Pass applies automatically. Nothing to do at the counter.
+        - generic [ref=e191]: Subscribe →
+      - link "Menu The P.S. Menu. 100% Arabica. Every drink. No exceptions. View menu →" [ref=e192] [cursor=pointer]:
+        - /url: menu.html
+        - img "Menu" [ref=e194]
+        - heading "The P.S. Menu." [level=2] [ref=e195]
+        - paragraph [ref=e196]: 100% Arabica. Every drink. No exceptions.
+        - generic [ref=e197]: View menu →
+  - contentinfo [ref=e199]:
+    - generic [ref=e200]:
+      - generic [ref=e201]:
+        - generic [ref=e202]:
+          - img "P.S. Coffee" [ref=e204]
+          - link "Story" [ref=e205] [cursor=pointer]:
+            - /url: about.html
+          - link "Blogs" [ref=e206] [cursor=pointer]:
+            - /url: blogs.html
+          - link "Events" [ref=e207] [cursor=pointer]:
+            - /url: events.html
+          - link "Join Us" [ref=e208] [cursor=pointer]:
+            - /url: join.html
+          - link "Careers" [ref=e209] [cursor=pointer]:
+            - /url: join.html
+          - link "Partner" [ref=e210] [cursor=pointer]:
+            - /url: partnership.html
+          - link "Barista School ↗" [ref=e211] [cursor=pointer]:
+            - /url: https://www.thebarista.school
+        - generic [ref=e212]:
+          - heading "Pods." [level=4] [ref=e213]
+          - link "Visit us" [ref=e214] [cursor=pointer]:
+            - /url: pods.html#pods
+          - link "Order ahead" [ref=e215] [cursor=pointer]:
+            - /url: app.html
+          - link "Host a Pod" [ref=e216] [cursor=pointer]:
+            - /url: partnership.html#host
+        - generic [ref=e217]:
+          - heading "Help & Info." [level=4] [ref=e218]
+          - link "FAQ" [ref=e219] [cursor=pointer]:
+            - /url: faq.html
+          - link "Contact" [ref=e220] [cursor=pointer]:
+            - /url: mailto:hello@pscoffee.in
+          - link "Terms of Use" [ref=e221] [cursor=pointer]:
+            - /url: terms.html
+          - link "Privacy Policy" [ref=e222] [cursor=pointer]:
+            - /url: privacy.html
+          - link "General Disclaimer" [ref=e223] [cursor=pointer]:
+            - /url: disclaimer.html
+          - link "Survey Notice" [ref=e224] [cursor=pointer]:
+            - /url: survey-disclosure.html
+          - link "Copyright" [ref=e225] [cursor=pointer]:
+            - /url: copyright.html
+        - generic "P.S. Coffee imagery" [ref=e226]: "@pscoffee"
+        - generic [ref=e232]:
+          - heading "P.S. See you in the morning." [level=4] [ref=e233]
+          - paragraph [ref=e234]: New Pods. Usual orders. Pack reminders. No theatre, no daily friction.
+          - generic [ref=e235]:
+            - textbox "Email address" [ref=e236]
+            - button "→ →" [ref=e237] [cursor=pointer]
+      - generic [ref=e238]: "|| राधे राधे ||"
+      - generic [ref=e239]:
+        - generic [ref=e240]: © P.S. Coffee 2026
+        - generic [ref=e241]:
+          - link "FAQ" [ref=e242] [cursor=pointer]:
+            - /url: faq.html
+          - link "Terms" [ref=e243] [cursor=pointer]:
+            - /url: terms.html
+          - link "Privacy" [ref=e244] [cursor=pointer]:
+            - /url: privacy.html
+          - link "Disclaimer" [ref=e245] [cursor=pointer]:
+            - /url: disclaimer.html
+          - link "Survey" [ref=e246] [cursor=pointer]:
+            - /url: survey-disclosure.html
+          - link "Copyright" [ref=e247] [cursor=pointer]:
+            - /url: copyright.html
+        - generic [ref=e248]:
+          - link "Facebook" [ref=e249] [cursor=pointer]:
+            - /url: https://www.facebook.com/pscoffee
+          - link "Instagram" [ref=e252] [cursor=pointer]:
+            - /url: https://www.instagram.com/pscoffee_pods
+          - link "LinkedIn" [ref=e255] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/pscoffee
