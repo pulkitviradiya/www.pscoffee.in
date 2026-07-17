@@ -19,8 +19,8 @@
 <meta name="twitter:description" content="100% Arabica specialty coffee, ground fresh at every order, from compact Pods inside the buildings your day already happens in.">
 <meta name="twitter:image" content="https://www.pscoffee.in/assets/photos/site/menu-hero-cups-cropped-desktop.webp">
 <link rel="stylesheet" href="assets/ps.css">
-<link rel="stylesheet" href="assets/wh.css?v=106">
-<link rel="stylesheet" href="assets/mobile.css?v=67">
+<link rel="stylesheet" href="assets/wh.css?v=108">
+<link rel="stylesheet" href="assets/mobile.css?v=76">
 <style>
 /* ── P.S. Pass interactive showcase ─────────────────────── */
 .ps-pass-showcase{position:relative;display:block;background:var(--paper,#FAF6EE);padding:clamp(28px,5vw,72px);margin-bottom:clamp(48px,7vw,96px);border-radius:14px;overflow:hidden}
@@ -80,9 +80,10 @@
 .ps-app-btns{display:flex;gap:12px;flex-wrap:wrap}
 .ps-app-btns a.primary{background:var(--tc,#E8400C);color:#FAF6EE;padding:12px 24px;border-radius:4px;font-weight:700;font-size:14px;text-decoration:none}
 .ps-app-btns a.outline{border:1.5px solid rgba(250,246,238,.4);color:#FAF6EE;padding:12px 24px;border-radius:4px;font-weight:600;font-size:14px;text-decoration:none}
-.ps-app-visual{border-radius:10px;overflow:hidden;aspect-ratio:804/1750;height:clamp(520px,72vh,760px);max-width:100%;justify-self:center}
-.ps-app-visual img{width:100%;height:100%;object-fit:contain;display:block}
-@media(max-width:760px){.ps-app-callout .wrap{grid-template-columns:1fr}.ps-app-visual{display:none}}
+.ps-app-visual{position:relative;box-sizing:border-box;overflow:hidden;aspect-ratio:390/844;height:clamp(520px,72vh,760px);max-width:min(100%,390px);justify-self:center;border:10px solid #1f130d;border-radius:42px;background:#1f130d;box-shadow:0 28px 70px rgba(61,32,16,.28)}
+.ps-app-visual::before{content:"";position:absolute;z-index:2;top:10px;left:50%;width:34%;height:28px;border-radius:999px;background:#1f130d;transform:translateX(-50%);pointer-events:none}
+.ps-app-visual img{width:100%;height:100%;object-fit:cover;display:block;border-radius:30px;background:var(--tc,#E8400C)}
+@media(max-width:760px){.ps-app-callout .wrap{grid-template-columns:1fr}.ps-app-visual{display:block;width:min(78vw,300px);height:auto;margin-inline:auto}}
 
 /* ── Page callouts, slim editorial grid ─────────────────── */
 .ps-callout-strip{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(42,26,14,.1);border-left:1px solid rgba(42,26,14,.1)}
@@ -347,7 +348,7 @@ body[data-page="home"] .ps-pass-showcase{
     <a href="pods.html#pods">Show me Pods</a>
   </div>
   <div class="wh-loc-list">
-    <h2>Find a P.S. Pod.</h2>
+    <h2>Wait to see P.S. Pods at these locations.</h2>
     <p><span>Prahladnagar.</span><span>Ahmedabad</span></p>
     <p><span>SG Highway.</span><span>Ahmedabad</span></p>
     <p><span>Gift City.</span><span>Gandhinagar</span></p>
@@ -493,7 +494,7 @@ body[data-page="home"] .ps-pass-showcase{
 <div id="ps-footer"></div>
 <script src="assets/image-slot.js?v=3"></script>
 <script src="assets/ps.js?v=43"></script>
-<script src="assets/mobile.js?v=4"></script>
+<script src="assets/mobile.js?v=5"></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",

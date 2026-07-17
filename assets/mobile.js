@@ -3,6 +3,7 @@
   "use strict";
 
   var mobileMQ = window.matchMedia ? window.matchMedia("(max-width: 760px)") : null;
+  var reduceMotionMQ = window.matchMedia ? window.matchMedia("(prefers-reduced-motion: reduce)") : null;
 
   function isMobile(){
     return !mobileMQ || mobileMQ.matches;
@@ -47,6 +48,7 @@
     wrap.appendChild(progress);
 
     var active = firstIdx;
+    var timer = null;
 
     function setProgress(){
       var bar = progress.querySelector("span");
@@ -65,6 +67,15 @@
       count.children[active].classList.add("is-active");
       count.children[active].setAttribute("aria-current", "true");
       setProgress();
+      if(manual) restart();
+    }
+
+    function restart(){
+      if(timer) window.clearInterval(timer);
+      if(reduceMotionMQ && reduceMotionMQ.matches) return;
+      timer = window.setInterval(function(){
+        show(active + 1, false);
+      }, 5600);
     }
 
     setProgress();
@@ -82,6 +93,7 @@
       if(Math.abs(dx) < 44 || Math.abs(dx) <= Math.abs(dy) * 1.15) return;
       show(active + (dx < 0 ? 1 : -1), true);
     }, {passive:true});
+    restart();
   }
 
   function compactMobileLabels(){

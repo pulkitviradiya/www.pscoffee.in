@@ -10,9 +10,9 @@ Read this at the start of every session. Use silently to inform work.
 |---|---|
 | `assets/ps.js` | v43 |
 | `assets/image-slot.js` | v3 |
-| `assets/wh.css` | v106 |
-| `assets/mobile.css` | v67 |
-| `assets/mobile.js` | v4 |
+| `assets/wh.css` | v108 |
+| `assets/mobile.css` | v76 |
+| `assets/mobile.js` | v5 |
 
 Always read the current version from any `*.html` before bumping.
 
@@ -49,6 +49,15 @@ Always read the current version from any `*.html` before bumping.
 - Categories fetched (order matters): `['coffee', 'matcha', 'protein', 'food']`
 - Shows first 6 items per category
 - Nav tabs live in `.wh-favourites nav` — one `<a data-fav-cat="X">` per category
+
+---
+
+## Analytics State
+
+- GA4 is live sitewide with measurement ID `G-5TS0QMZ55W`; every new public HTML page must include
+  the standard Google tag before `</head>`.
+- New forms must be added to the server allowlist and to `PS_CONVERSION_EVENTS` in `assets/ps.js`;
+  conversion payloads must stay privacy-safe and avoid PII/free-text fields.
 
 ---
 

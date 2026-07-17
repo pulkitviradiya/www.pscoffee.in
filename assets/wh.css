@@ -9355,3 +9355,105 @@ body[data-page="blogs"] .journal-signup-form button {
     width: 58px;
   }
 }
+
+/* Events page: current design-system CTA contrast and hover states. */
+body[data-page="events"] .events-type-grid .wh-page-card > a,
+body[data-page="events"] .events-type-grid .wh-page-card > button {
+  min-height: 42px !important;
+  padding: 0 14px !important;
+  border: 1.5px solid var(--ps-terracotta) !important;
+  border-radius: var(--radius-md, 9px) !important;
+  background: var(--ps-terracotta) !important;
+  color: var(--ps-steam) !important;
+  font-family: var(--font-body, "Space Grotesk", sans-serif) !important;
+  font-size: 14px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0 !important;
+  line-height: 1 !important;
+  transition: background-color 150ms cubic-bezier(.2,0,0,1), border-color 150ms cubic-bezier(.2,0,0,1), transform 150ms cubic-bezier(.2,0,0,1);
+}
+
+body[data-page="events"] .events-type-grid .wh-page-card > a::after,
+body[data-page="events"] .events-type-grid .wh-page-card > button::after {
+  color: inherit !important;
+}
+
+body[data-page="events"] .events-type-grid .wh-page-card > a:hover,
+body[data-page="events"] .events-type-grid .wh-page-card > a:active,
+body[data-page="events"] .events-type-grid .wh-page-card > a:focus-visible,
+body[data-page="events"] .events-type-grid .wh-page-card > button:hover,
+body[data-page="events"] .events-type-grid .wh-page-card > button:active,
+body[data-page="events"] .events-type-grid .wh-page-card > button:focus-visible {
+  border-color: var(--ps-terracotta-pressed, #B8300A) !important;
+  background: var(--ps-terracotta-pressed, #B8300A) !important;
+  color: var(--ps-steam) !important;
+  transform: translateY(-1px);
+}
+
+body[data-page="events"] .events-cta a,
+body[data-page="events"] .events-cta article {
+  border-radius: var(--radius-xl, 16px);
+  color: var(--ps-steam) !important;
+}
+
+body[data-page="events"] .events-cta a::after,
+body[data-page="events"] .events-cta article::after,
+body[data-page="events"] .events-cta a:first-child::after {
+  background: linear-gradient(180deg, rgba(61,32,16,.76) 0%, rgba(61,32,16,.42) 42%, rgba(61,32,16,.86) 100%) !important;
+}
+
+body[data-page="events"] .events-cta h2 {
+  color: var(--ps-steam) !important;
+  font-family: var(--font-display, "Bricolage Grotesque", sans-serif) !important;
+  font-size: clamp(34px, 3.6vw, 52px) !important;
+  font-weight: 800 !important;
+  letter-spacing: -.035em !important;
+  line-height: .98 !important;
+}
+
+body[data-page="events"] .events-cta p {
+  color: rgba(250, 246, 238, .9) !important;
+  font-family: var(--font-body, "Space Grotesk", sans-serif) !important;
+  font-size: clamp(15px, 1.1vw, 17px) !important;
+  font-weight: 400 !important;
+  letter-spacing: 0 !important;
+  line-height: 1.5 !important;
+}
+
+body[data-page="events"] .events-cta span {
+  display: inline-flex !important;
+  align-items: center !important;
+  width: fit-content !important;
+  min-height: 34px !important;
+  padding-bottom: 6px !important;
+  border-bottom: 1px solid rgba(250, 246, 238, .76) !important;
+  color: var(--ps-steam) !important;
+  font-family: var(--font-body, "Space Grotesk", sans-serif) !important;
+  font-size: 13px !important;
+  font-weight: 800 !important;
+  letter-spacing: .12em !important;
+  line-height: 1 !important;
+  text-transform: uppercase !important;
+}
+
+/* Blog index: align featured card copy rows when meta chips wrap. */
+@media (min-width: 761px) {
+  body[data-page="blogs"] .journal-feature-card .journal-card-copy {
+    display: grid;
+    grid-template-rows: 95px 126px auto;
+    align-content: stretch;
+  }
+
+  body[data-page="blogs"] .journal-feature-card .journal-card-meta {
+    align-content: start;
+  }
+
+  body[data-page="blogs"] .journal-feature-card h2 {
+    align-self: start;
+  }
+
+  body[data-page="blogs"] .journal-feature-card small {
+    align-self: start;
+    margin-top: 0;
+  }
+}
