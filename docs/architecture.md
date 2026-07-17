@@ -90,7 +90,9 @@ See [api-reference.md](api-reference.md) for the full request/response contract.
   `/story`→`/about`, plus 3 legacy `/journal/*`→`/blog/*` redirects) — see `vercel.json`.
 - **Google Sheets API** (`googleapis` npm package) — the form-submission datastore. Auth via a
   base64-encoded service-account JSON in `GOOGLE_CREDENTIALS_B64`.
-- No analytics, CMS, payment, or auth provider is wired into the codebase at this time.
+- **Google Analytics 4** — sitewide Google tag `G-5TS0QMZ55W` in every HTML `<head>`. Form
+  success conversions are emitted from `assets/ps.js` via `dataLayer` and `gtag` when available.
+- No CMS, payment, or auth provider is wired into the codebase at this time.
 
 ## Load order (every page)
 
@@ -98,6 +100,7 @@ See [api-reference.md](api-reference.md) for the full request/response contract.
 <link rel="stylesheet" href="assets/ps.css">
 <link rel="stylesheet" href="assets/wh.css?v=N">
 <link rel="stylesheet" href="assets/mobile.css?v=N">
+<!-- Google tag (gtag.js) is loaded in <head> on every public HTML page. -->
 <script src="assets/image-slot.js?v=N"></script> <!-- only on pages using <image-slot> -->
 <script src="assets/ps.js?v=N"></script>
 ```

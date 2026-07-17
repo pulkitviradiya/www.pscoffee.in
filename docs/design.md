@@ -144,3 +144,72 @@ _(empty — fill in once native app design work begins)_
 > this website, not the app — see [README.md](../README.md#pages) for that page's description.
 > Don't confuse the two: "Mobile" above = this site's small-viewport responsive layout; "App"
 > here = the separate native product that doesn't exist in this codebase yet.
+
+## Audit Lock Rules
+
+### Mobile Footer
+
+The canonical mobile footer is the older July 14 reference: a Deep Ceremonial rounded container,
+P.S. Coffee wordmark, brand links balanced in two compact columns, Pods and Help & Info as two
+compact columns, four-thumbnail strip, `@pscoffee`, email capture, and compact legal/social bottom
+row. Keep list gaps tight and symmetrical. Do not convert the lists into large evenly spaced grids,
+do not add oversized bottom padding, and do not stretch legal links into sparse rows.
+
+### Pass/Packs Card Placeholder
+
+The same pass placeholder visual system applies on the homepage pass showcase and the Pack page pass
+explorer. Pack-page details may be collapsible below the placeholder, but the placeholder itself does
+not change.
+
+Card base: `300px x 476px`, `border-radius: 22px`, `border: 7px solid #E8DCC8`, and
+`box-shadow: 0 18px 46px rgba(42,26,14,.18)`.
+Inner frame: `position: absolute; inset: 0; border-radius: 15px; border: 2px solid rgba({rgb},.55)`.
+Default pass colour is Terracotta `rgb(232,64,12)` / `#E8400C`. Matcha/photoGreen uses Deep
+Ceremonial `rgb(61,107,74)` / `#3D6B4A`.
+
+Bottom gradient scrim:
+
+```css
+linear-gradient(180deg,
+  rgba({rgb},0) 0%,
+  rgba({rgb},0) 74%,
+  rgba({rgb},.4) 92%,
+  rgba({rgb},.6) 100%)
+```
+
+Pack name: label `26px/800` plus name text with
+`font: 800 46px/.8 'Bricolage Grotesque'`, `letter-spacing: -.055em`, `color: {hex}`,
+`-webkit-text-stroke: 2.5px #FAF6EE`, `paint-order: stroke fill`, `max-width: 7ch`, and
+`text-wrap: balance`.
+Price: `font: 400 italic 46px/.86 'Instrument Serif'`, `letter-spacing: -.01em`, `color: {hex}`,
+`-webkit-text-stroke: 2px #FAF6EE`, and `paint-order: stroke fill`.
+Tags stay compact: `background: #FAF6EE`, `color: {hex}`,
+`font: 800 8.5px/1.05 'Space Grotesk'`, uppercase, `border-radius: 6px`.
+
+### Blog Index Cards
+
+Blog index metadata is semantic and compact: serial number on the left corner, category on the right
+corner, and read time as a slim chip/ribbon below. CTAs sit in a fixed bottom row with the arrow far
+right, aligned across every card. Section headings stay on one line on desktop; tablet and mobile
+may wrap. The newsletter/signup headline is constrained to two or three lines on desktop and wraps
+naturally on smaller screens. Email fields and arrow buttons use shared button sizing, centred text,
+and documented hover/focus states.
+
+### Homepage Favourites Mobile Menu
+
+The homepage favourites header must reuse the Menu page mobile category/filter pattern. It needs the
+same type scale, compact rows, active/hover/focus colours, and no broken word wrapping. If space is
+tight, use a separate full-width `View all` row instead of inventing a second category grid.
+
+### Hero and Overlay Body Copy
+
+Hero and overlay body paragraphs across all `.wh-page` pages use the shared Body scale and weight.
+Page-specific oversized or bold body copy is not allowed unless it is a display heading. Where a hero
+or overlay has a PS line and CTA, keep them in the shared bottom-anchored layout for that component
+family.
+
+### Visible Copy Punctuation
+
+Visible site copy uses English UK punctuation and avoids em dashes. P.S. lines should use
+`P.S.: ...` or another colon-based construction. Replace em dashes with a colon, comma, semicolon,
+or full stop as appropriate for the sentence.

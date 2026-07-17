@@ -84,6 +84,35 @@ All forms POST to `/api/submit-form` with a `form_name` field — see
 [api-reference.md](api-reference.md) for the exact contract and the allowlist you must extend
 when adding a new form.
 
+### Analytics and GA4
+GA4 is live sitewide with measurement ID `G-5TS0QMZ55W`. Every new public HTML page, including
+every new blog post, landing page, legal page, enquiry page, or utility page that can be opened in
+a browser, must include the standard Google tag in `<head>` before `</head>`:
+
+```html
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5TS0QMZ55W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+
+  gtag("config", "G-5TS0QMZ55W");
+</script>
+```
+
+When creating a new form or conversion path:
+- Add the `form_name` to the server allowlist in `api/submit-form.js` and document it in
+  [api-reference.md](api-reference.md).
+- Add the same `form_name` to `PS_CONVERSION_EVENTS` in `assets/ps.js` with a sensible
+  `event`, `type`, and estimated `value`; then bump `ps.js?v=N` across every HTML file.
+- Keep analytics payloads privacy-safe. Do not send names, email addresses, phone numbers,
+  message text, addresses, company names, or any free-text user input to `dataLayer`, `gtag`, or
+  third-party pixels. Only send the form name, conversion type, value, currency, page path, and
+  non-PII context keys already allowlisted in `PS_CONVERSION_CONTEXT_KEYS`.
+- Existing successful submissions push `ps_form_submit_success` to `dataLayer`; if `gtag` is
+  available, they also fire the configured GA4 event (`generate_lead` or `sign_up`).
+
 ---
 
 ## CSS cascade conventions — read before editing `wh.css`
@@ -216,3 +245,19 @@ On light neutral grounds (`#FAF6EE`, `#F2EBD9`, or equivalent), the glyph is Dee
 `#3D6B4A`. On dark or bold grounds (`#3D2010`, `#E8400C`, `#3D6B4A`, or equivalent), the glyph is
 Steam Cream `#FAF6EE`. If the entire price line is already Steam Cream on a dark background, leave
 it unchanged.
+
+## Mobile QA completion gate
+
+A mobile audit is not complete until the touched pages have been checked at both the normal mobile
+width (around 393px) and the narrow mobile width (336-360px). Verify the rendered header/nav,
+category/filter bars, hero body copy, CTA alignment and hover/focus states, horizontal overflow,
+footer columns/legal row, and every annotated section. If one visible mobile section is still
+broken, do not mark the audit or rectification as complete.
+
+## Pack page shared-rule ownership
+
+`pack.html` is a standard `.wh-page` page like Menu, App, About, Pods, Join, and Partnership.
+Pack-specific CSS may define only the pass/pack explorer cards and collapsible pass details; shared
+hero/body typography, PS-note styling, CTA behaviour, hover/focus colour, mobile Body scale, and
+section spacing must come from the shared page rules unless `docs/design.md` records an explicit
+component exception. This prevents Pack from drifting into its own typography system.

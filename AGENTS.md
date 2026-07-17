@@ -14,7 +14,8 @@ form submissions into Google Sheets. There is no build step — every page is de
 Static HTML (one file per page, flat at repo root) · plain CSS (`ps.css` tokens, `wh.css` layout,
 `mobile.css` responsive) · vanilla JS (`ps.js`, `mobile.js`, `image-slot.js`) · self-hosted woff2
 fonts · 2 Vercel serverless functions (Node ESM) · Google Sheets as the form-submission datastore
-(`googleapis` npm package, the only dependency) · Vercel hosting/deploy. Full detail in
+(`googleapis` npm package, the only dependency) · GA4 sitewide analytics (`G-5TS0QMZ55W`) ·
+Vercel hosting/deploy. Full detail in
 [docs/architecture.md](docs/architecture.md).
 
 ## Commands
@@ -86,6 +87,9 @@ only, never read at session start).
 - Asset versions (`ps.js`/`wh.css`/`mobile.css` cache-bust numbers) are tracked in MEMORY.md —
   always re-read the current N from a live HTML file before bumping; see
   [docs/conventions.md](docs/conventions.md) for the bump procedure.
+- **When creating any new HTML page or form**, preserve the GA4 contract in
+  [docs/conventions.md](docs/conventions.md): new pages need the `G-5TS0QMZ55W` Google tag in
+  `<head>`, and new forms need a matching privacy-safe conversion entry in `assets/ps.js`.
 - **When a new or updated design-system/brand-kit file is shared** (a `.dc.html` export, docx,
   zip, or anything described as "the design system"/"brand kit"), don't just use it for the
   current task — merge it into `docs/design-system.md`: diff section by section, update what

@@ -31,6 +31,11 @@ Allowlisted `form_name` values (adding a new form requires adding it here):
 `newsletter`, `app-waitlist`, `feedback`, `event-enquiry`, `join-barista`, `join-ops`, `join-craft`,
 `join-trade`, `join-founders`, `join-investor`, `pack-enquiry`, `partnership-enquiry`.
 
+Adding a new conversion form also requires updating `PS_CONVERSION_EVENTS` in `assets/ps.js` and
+bumping `ps.js?v=N` across every HTML page. The client-side success handler pushes a privacy-safe
+`ps_form_submit_success` object to `window.dataLayer`; when GA4 is available, it also fires the
+configured `gtag` event. Never add PII or free-text field values to analytics payloads.
+
 Input caps enforced server-side: max 30 fields per submission, field keys truncated to 64 chars,
 field values truncated to 2000 chars. The `form_name` key itself is dropped before the row is
 written (it only selects the destination tab).
@@ -47,6 +52,9 @@ written (it only selects the destination tab).
 - Creates the sheet tab on first use if it doesn't already exist (`addSheet`).
 - Writes a header row (`Timestamp`, then each field key) only if the tab is currently empty.
 - Every row's first column is `new Date().toISOString()`.
+- Analytics is client-side only: successful form submissions are tracked in `assets/ps.js`, not in
+  this serverless function. Server-side Sheets writes must remain independent from GA4 so form
+  capture still works if analytics is blocked.
 
 ### Required environment variables
 - `GOOGLE_CREDENTIALS_B64` — base64-encoded Google service-account JSON credentials
