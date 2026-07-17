@@ -454,6 +454,49 @@
   }
 
   /* ---------- forms ---------- */
+  var PS_CONVERSION_EVENTS = {
+    "newsletter": { event: "sign_up", type: "newsletter", value: 1 },
+    "pack-enquiry": { event: "generate_lead", type: "ps_pass", value: 25 },
+    "partnership-enquiry": { event: "generate_lead", type: "host_pod", value: 250 },
+    "event-enquiry": { event: "generate_lead", type: "events", value: 100 },
+    "join-barista": { event: "generate_lead", type: "careers", value: 10 },
+    "join-ops": { event: "generate_lead", type: "careers", value: 10 },
+    "join-craft": { event: "generate_lead", type: "careers", value: 10 },
+    "join-trade": { event: "generate_lead", type: "careers", value: 10 },
+    "join-founders": { event: "generate_lead", type: "founding_team", value: 50 },
+    "join-investor": { event: "generate_lead", type: "investor", value: 100 }
+  };
+  var PS_CONVERSION_CONTEXT_KEYS = ["pack", "type", "event_type", "category", "space_type", "partnership_type"];
+  function trackConversion(form, payload){
+    var formName = form && form.getAttribute("data-ps-form") || payload && payload.form_name || "form";
+    var cfg = PS_CONVERSION_EVENTS[formName] || { event: "generate_lead", type: formName, value: 1 };
+    var detail = {
+      event: "ps_form_submit_success",
+      form_name: formName,
+      conversion_event: cfg.event,
+      conversion_type: cfg.type,
+      conversion_value: cfg.value,
+      currency: "INR",
+      page_path: window.location.pathname
+    };
+    PS_CONVERSION_CONTEXT_KEYS.forEach(function(key){
+      if(payload && payload[key]) detail[key] = payload[key];
+    });
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push(detail);
+    if(typeof window.gtag === "function"){
+      window.gtag("event", cfg.event, {
+        event_category: "lead",
+        event_label: formName,
+        value: cfg.value,
+        currency: "INR"
+      });
+    }
+    if(typeof window.fbq === "function"){
+      window.fbq("track", "Lead", { content_name: formName, content_category: cfg.type });
+    }
+  }
+
   function forms(){
     function setSubmitting(form, submitting){
       form.dataset.submitting = submitting ? "true" : "false";
@@ -490,6 +533,7 @@
         if(!ok){ var bad = form.querySelector(".field.invalid input,.field.invalid textarea,.field.invalid select"); if(bad) bad.focus(); return; }
         if(form.getAttribute('data-ps-form')==='newsletter'){
           var emailInput = form.querySelector('input[name="email"]');
+          trackConversion(form, { form_name: "newsletter" });
           if(emailInput) window.location.href='mailto:hello@pscoffee.in?subject=Subscribe&body='+encodeURIComponent(emailInput.value);
           form.reset();
           return;
@@ -511,6 +555,7 @@
           });
           var result = await response.json().catch(function(){ return {}; });
           if(!response.ok || result.status !== "ok") throw new Error(result.error || result.message || "Submission failed");
+          trackConversion(form, payload);
 
           try{
             var key="ps-submissions";
