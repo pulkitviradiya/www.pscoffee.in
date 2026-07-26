@@ -93,9 +93,10 @@ h3.sub{font-size:18px;font-weight:600;color:var(--terracotta);margin:1.7rem 0 .7
 .ctab tr:last-child td{border-bottom:none}
 .ctab td strong{color:var(--roast)}
 
-.imgph{background:var(--oat);border:1.5px dashed var(--linen);border-radius:var(--radius-lg);padding:3rem 1.5rem;margin:1.8rem 0;text-align:center}
+.imgph{display:block;overflow:hidden;background:var(--oat);border:1px solid rgba(83,47,32,.12);border-radius:var(--radius-lg);margin:1.8rem 0;aspect-ratio:16/10}
 .imgph .ico{font-family:var(--font-body);font-size:13px;font-weight:700;letter-spacing:.1em;color:var(--terracotta);margin-bottom:.5rem;text-transform:uppercase}
 .imgph .cap{font-size:13px;color:var(--muted);max-width:380px;margin:0 auto;line-height:1.5}
+@media (max-width:760px){.imgph{aspect-ratio:9/11}}
 
 .who{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin:1.2rem 0}
 .whoc{background:var(--steam);border:.5px solid var(--border);border-radius:var(--radius-lg);padding:1.1rem 1.2rem}
@@ -214,7 +215,7 @@ h3.sub{font-size:18px;font-weight:600;color:var(--terracotta);margin:1.7rem 0 .7
   <p>The people who drink coffee every day in India are being asked to pay for the people who drink it once a week. The ₹300 latte works as a weekend treat, a destination, an occasion, something planned around. It does not work for a Tuesday morning before a 9am stand-up and a 3pm follow-up call.</p>
   <p>The specialty cafe model, high rent, high labour, high ticket size, was built for an occasion. Every cost in that model assumes the customer is visiting once, maybe twice a week, and is willing to pay for the ambiance along with the cup. <strong>We built nothing for the people drinking coffee daily, because nothing in the model was designed for daily.</strong></p>
   <p>That gap is not a coincidence. It is a structural consequence of how Indian specialty coffee scaled, cafe first, daily habit second, if at all. We are building P.S. Coffee in the opposite order.</p>
-  <div class="imgph"><div class="ico">Image Placeholder</div><div class="cap">Visual: a daily commuter's morning, calendar, 9am meeting, coffee Pod, walking into office</div></div>
+  <image-slot class="imgph" id="what-we-are-building-ps-coffee-gujarat-body-01" shape="rect" src="../assets/photos/site/what-we-are-building-ps-coffee-gujarat-body-01-desktop.webp" mobile-src="../assets/photos/site/what-we-are-building-ps-coffee-gujarat-body-01-mobile.webp" placeholder="Morning commuter walking past a P.S. Coffee Pod on the way into work" fit="cover"></image-slot>
 </div>
 
 <div class="div-ps"><div class="line"></div><div class="mark">P . S .</div><div class="line"></div></div>

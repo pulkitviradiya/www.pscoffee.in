@@ -90,9 +90,10 @@ h3.sub{font-size:18px;font-weight:700;color:var(--terracotta);margin:1.7rem 0 .7
 .ctab tr:last-child td{border-bottom:none}
 .ctab td strong{color:var(--roast)}
 
-.imgph{background:var(--oat);border:1.5px dashed var(--linen);border-radius:var(--radius-lg);padding:3rem 1.5rem;margin:1.8rem 0;text-align:center}
+.imgph{display:block;overflow:hidden;background:var(--oat);border:1px solid rgba(83,47,32,.12);border-radius:var(--radius-lg);margin:1.8rem 0;aspect-ratio:16/10}
 .imgph .ico{font-family:var(--font-display);font-size:13px;font-weight:700;letter-spacing:.1em;color:var(--terracotta);margin-bottom:.5rem;text-transform:uppercase}
 .imgph .cap{font-size:13px;color:var(--muted);max-width:380px;margin:0 auto;line-height:1.5}
+@media (max-width:760px){.imgph{aspect-ratio:9/11}}
 
 .psline{background:var(--oat);border-top:3px solid var(--terracotta);border-bottom:3px solid var(--terracotta);padding:1.6rem 1.4rem;margin:2.6rem 0;text-align:center;font-family:var(--font-accent);font-style:italic;font-size:18px;font-weight:600;color:var(--terracotta);letter-spacing:.2px;line-height:1.5}
 
@@ -214,7 +215,7 @@ h3.sub{font-size:18px;font-weight:700;color:var(--terracotta);margin:1.7rem 0 .7
     <div class="stat-card"><span class="stat-num">60–70%</span><div class="stat-label">Less acidity than hot-brewed espresso</div></div>
     <div class="stat-card"><span class="stat-num">7–10 days</span><div class="stat-label">Shelf life refrigerated, no fresh extraction required per serving</div></div>
   </div>
-  <div class="imgph"><div class="ico">Image Placeholder</div><div class="cap">Visual: cold brew in a tall clear glass, ice, dark amber concentrate, clean, minimal, cold morning light</div></div>
+  <image-slot class="imgph" id="what-is-cold-brew-coffee-india-body-01" shape="rect" src="../assets/photos/site/what-is-cold-brew-coffee-india-body-01-desktop.webp" mobile-src="../assets/photos/site/what-is-cold-brew-coffee-india-body-01-mobile.webp" placeholder="Cold brew in a tall clear glass with ice and dark amber coffee" fit="cover"></image-slot>
 </div>
 
 <div class="div-ps"><div class="line"></div><div class="mark">P . S .</div><div class="line"></div></div>

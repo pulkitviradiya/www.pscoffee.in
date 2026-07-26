@@ -138,9 +138,10 @@ h3.sub{font-size:18px;font-weight:600;color:var(--terracotta);margin:1.7rem 0 .7
 .ctab td strong{color:var(--roast)}
 
 /* ---- Image placeholder ---- */
-.imgph{background:var(--oat);border:1.5px dashed var(--linen);border-radius:var(--radius-lg);padding:3rem 1.5rem;margin:1.8rem 0;text-align:center}
+.imgph{display:block;overflow:hidden;background:var(--oat);border:1px solid rgba(83,47,32,.12);border-radius:var(--radius-lg);margin:1.8rem 0;aspect-ratio:16/10}
 .imgph .ico{font-family:var(--font-body);font-size:13px;font-weight:700;letter-spacing:.1em;color:var(--terracotta);margin-bottom:.5rem;text-transform:uppercase}
 .imgph .cap{font-size:13px;color:var(--muted);max-width:380px;margin:0 auto;line-height:1.5}
+@media (max-width:760px){.imgph{aspect-ratio:9/11}}
 
 /* ---- Who-this-is-for grid ---- */
 .who{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin:1.2rem 0}
@@ -264,14 +265,14 @@ h3.sub{font-size:18px;font-weight:600;color:var(--terracotta);margin:1.7rem 0 .7
 <tr><td>Wholesale price (approx.)</td><td>₹400–600 / kg</td><td>₹180–250 / kg</td></tr>
 <tr><td>Best brewed as</td><td>Espresso, pour-over, cold brew</td><td>Instant, strong commercial blends</td></tr>
 </tbody>
-</table><div class="imgph"><div class="ico">Image Placeholder</div><div class="cap">Visual: side-by-side bean photo Arabica (oval, curved crease) vs Robusta (round, straight crease)</div></div>
+</table><image-slot class="imgph" id="what-is-arabica-coffee-india-body-01" shape="rect" src="../assets/photos/site/what-is-arabica-coffee-india-body-01-desktop.webp" mobile-src="../assets/photos/site/what-is-arabica-coffee-india-body-01-mobile.webp" placeholder="Side-by-side Arabica and Robusta coffee bean comparison" fit="cover"></image-slot>
 </div><div class="div-ps"><div class="line"></div><div class="mark">P . S .</div><div class="line"></div></div>
 <div class="section" id="s2">
   <div class="sec-label">Section 02 · Origin</div>
   <h2 class="st">India grows some of the world's best Arabica</h2>
   <p>Most people do not know this. <strong>Indian Arabica from Chikmagalur in Karnataka and Coorg grows at 900–1,800 metres, shade-grown alongside spices like cardamom and pepper.</strong> This intercropping adds subtle spice notes that are genuinely unique to Indian-origin coffee you cannot grow this anywhere else, because no one else grows coffee next to cardamom at altitude.</p>
 
-<p>India exports premium Arabica to European specialty roasters. Then, in a strange round trip, the country imports blended instant coffee powder made by the same companies. The best Indian Arabica is shipped out. The everyday Indian cup is mostly Robusta.</p><div class="stat-grid"><div class="stat-card"><span class="stat-num">3.5L+ kg</span><div class="stat-label">Indian Arabica exported annually</div></div><div class="stat-card"><span class="stat-num">Chikmagalur</span><div class="stat-label">Karnataka · 900–1,500m altitude</div></div><div class="stat-card"><span class="stat-num">Coorg</span><div class="stat-label">Karnataka · 1,000–1,800m altitude</div></div><div class="stat-card"><span class="stat-num">Shade-grown</span><div class="stat-label">Beside cardamom &amp; pepper</div></div></div><div class="imgph"><div class="ico">Image Placeholder</div><div class="cap">Visual: shade-grown Arabica plantation in Chikmagalur / Coorg, intercropped with cardamom</div></div><div class="hl"><p><strong>P.S. Coffee will use 100% Indian Arabica.</strong> Locally sourced, freshly roasted, ground at the moment of order. The coffee in the cup will have been grown in the same country it is being served in which should not be a differentiator, but somehow is.</p></div>
+<p>India exports premium Arabica to European specialty roasters. Then, in a strange round trip, the country imports blended instant coffee powder made by the same companies. The best Indian Arabica is shipped out. The everyday Indian cup is mostly Robusta.</p><div class="stat-grid"><div class="stat-card"><span class="stat-num">3.5L+ kg</span><div class="stat-label">Indian Arabica exported annually</div></div><div class="stat-card"><span class="stat-num">Chikmagalur</span><div class="stat-label">Karnataka · 900–1,500m altitude</div></div><div class="stat-card"><span class="stat-num">Coorg</span><div class="stat-label">Karnataka · 1,000–1,800m altitude</div></div><div class="stat-card"><span class="stat-num">Shade-grown</span><div class="stat-label">Beside cardamom &amp; pepper</div></div></div><image-slot class="imgph" id="what-is-arabica-coffee-india-body-02" shape="rect" src="../assets/photos/site/what-is-arabica-coffee-india-body-02-desktop.webp" mobile-src="../assets/photos/site/what-is-arabica-coffee-india-body-02-mobile.webp" placeholder="Shade-grown Arabica plantation in Chikmagalur and Coorg" fit="cover"></image-slot><div class="hl"><p><strong>P.S. Coffee will use 100% Indian Arabica.</strong> Locally sourced, freshly roasted, ground at the moment of order. The coffee in the cup will have been grown in the same country it is being served in which should not be a differentiator, but somehow is.</p></div>
 </div><div class="div-ps"><div class="line"></div><div class="mark">P . S .</div><div class="line"></div></div>
 <div class="section" id="s3">
   <div class="sec-label">Section 03 · Why 100% matters</div>

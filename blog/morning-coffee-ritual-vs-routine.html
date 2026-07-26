@@ -134,9 +134,10 @@ h3.sub{font-size:18px;font-weight:600;color:var(--terracotta);margin:1.7rem 0 .7
 .ctab td strong{color:var(--roast)}
 
 /* ---- Image placeholder ---- */
-.imgph{background:var(--oat);border:1.5px dashed var(--linen);border-radius:var(--radius-lg);padding:3rem 1.5rem;margin:1.8rem 0;text-align:center}
+.imgph{display:block;overflow:hidden;background:var(--oat);border:1px solid rgba(83,47,32,.12);border-radius:var(--radius-lg);margin:1.8rem 0;aspect-ratio:16/10}
 .imgph .ico{font-family:var(--font-body);font-size:13px;font-weight:700;letter-spacing:.1em;color:var(--terracotta);margin-bottom:.5rem;text-transform:uppercase}
 .imgph .cap{font-size:13px;color:var(--muted);max-width:380px;margin:0 auto;line-height:1.5}
+@media (max-width:760px){.imgph{aspect-ratio:9/11}}
 
 /* ---- Who-this-is-for grid ---- */
 .who{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin:1.2rem 0}
@@ -244,7 +245,7 @@ h3.sub{font-size:18px;font-weight:600;color:var(--terracotta);margin:1.7rem 0 .7
 
 <p>For a daily coffee drinker, the loop looks something like this. The <strong>cue</strong> is the 9am meeting sitting in your calendar. The <strong>craving</strong> is the mental preparation not just for caffeine, but for ownership of the next three hours. The <strong>response</strong> is ordering, or walking to the Pod. The <strong>reward</strong> is the cup itself, and everything it quietly enables.</p>
 
-<p>What makes coffee different from most consumer habits is that the reward is genuinely pleasurable <em>and</em> functionally useful at the same time. A habit built on pleasure alone fades when the novelty does. A habit built on utility alone feels like a chore. Coffee does both which is exactly why a coffee habit forms faster and lasts longer than almost any other daily purchase.</p><div class="imgph"><div class="ico">Image Placeholder</div><div class="cap">Visual: the four-stage habit loop cue, craving, response, reward mapped to a morning coffee order</div></div><div class="stat-grid"><div class="stat-card"><span class="stat-num">4</span><div class="stat-label">Stages in the habit loop</div></div><div class="stat-card"><span class="stat-num">66 days</span><div class="stat-label">Average time to form a daily habit</div></div><div class="stat-card"><span class="stat-num">2×</span><div class="stat-label">Reward strength when pleasure + utility combine</div></div><div class="stat-card"><span class="stat-num">Daily</span><div class="stat-label">Frequency that turns a product into a ritual</div></div></div>
+<p>What makes coffee different from most consumer habits is that the reward is genuinely pleasurable <em>and</em> functionally useful at the same time. A habit built on pleasure alone fades when the novelty does. A habit built on utility alone feels like a chore. Coffee does both which is exactly why a coffee habit forms faster and lasts longer than almost any other daily purchase.</p><image-slot class="imgph" id="morning-coffee-ritual-vs-routine-body-01" shape="rect" src="../assets/photos/site/morning-coffee-ritual-vs-routine-body-01-desktop.webp" mobile-src="../assets/photos/site/morning-coffee-ritual-vs-routine-body-01-mobile.webp" placeholder="Four-stage morning coffee habit loop mapped to a P.S. Coffee order" fit="cover"></image-slot><div class="stat-grid"><div class="stat-card"><span class="stat-num">4</span><div class="stat-label">Stages in the habit loop</div></div><div class="stat-card"><span class="stat-num">66 days</span><div class="stat-label">Average time to form a daily habit</div></div><div class="stat-card"><span class="stat-num">2×</span><div class="stat-label">Reward strength when pleasure + utility combine</div></div><div class="stat-card"><span class="stat-num">Daily</span><div class="stat-label">Frequency that turns a product into a ritual</div></div></div>
 </div><div class="div-ps"><div class="line"></div><div class="mark">P . S .</div><div class="line"></div></div>
 <div class="section" id="s2">
   <div class="sec-label">Section 02 · Brand philosophy</div>

@@ -139,9 +139,10 @@ h3.sub{font-size:18px;font-weight:600;color:var(--terracotta);margin:1.7rem 0 .7
 .ctab-vs th:last-child,.ctab-vs td:last-child{border-top:2px solid var(--terracotta) !important}
 
 /* ---- Image placeholder ---- */
-.imgph{background:var(--oat);border:1.5px dashed var(--linen);border-radius:var(--radius-lg);padding:3rem 1.5rem;margin:1.8rem 0;text-align:center}
+.imgph{display:block;overflow:hidden;background:var(--oat);border:1px solid rgba(83,47,32,.12);border-radius:var(--radius-lg);margin:1.8rem 0;aspect-ratio:16/10}
 .imgph .ico{font-family:var(--font-body);font-size:13px;font-weight:700;letter-spacing:.1em;color:var(--terracotta);margin-bottom:.5rem;text-transform:uppercase}
 .imgph .cap{font-size:13px;color:var(--muted);max-width:380px;margin:0 auto;line-height:1.5}
+@media (max-width:760px){.imgph{aspect-ratio:9/11}}
 
 /* ---- Who-this-is-for grid ---- */
 .who{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin:1.2rem 0}
@@ -254,7 +255,7 @@ h3.sub{font-size:18px;font-weight:600;color:var(--terracotta);margin:1.7rem 0 .7
 
 <p>Yours, not ours. No rent premium. No ambient lighting invoice. No Wi-Fi bill. No furniture line item. The overhead disappears. The coffee stays.</p>
 
-<p>The Pods we are designing will live inside <strong>co-working spaces, corporate campuses, gym networks, university precincts, and large residential complexes</strong> places where 400 to 2,000 people already pass through daily. The coffee meets the customer where they already are.</p><div class="imgph"><div class="ico">Image Placeholder</div><div class="cap">Visual: render of a 50–200 sq ft P.S. Pod inside a co-working lobby</div></div><div class="stat-grid"><div class="stat-card"><span class="stat-num">50–200</span><div class="stat-label">Square feet · footprint</div></div><div class="stat-card"><span class="stat-num">100% Arabica</span><div class="stat-label">Bean standard · no blend</div></div><div class="stat-card"><span class="stat-num">90 sec</span><div class="stat-label">Service time · app-sequenced</div></div><div class="stat-card"><span class="stat-num">₹89</span><div class="stat-label">Starting price · daily-habit</div></div></div>
+<p>The Pods we are designing will live inside <strong>co-working spaces, corporate campuses, gym networks, university precincts, and large residential complexes</strong> places where 400 to 2,000 people already pass through daily. The coffee meets the customer where they already are.</p><image-slot class="imgph" id="building-specialty-coffee-brand-without-cafe-body-01" shape="rect" src="../assets/photos/site/building-specialty-coffee-brand-without-cafe-body-01-desktop.webp" mobile-src="../assets/photos/site/building-specialty-coffee-brand-without-cafe-body-01-mobile.webp" placeholder="P.S. Coffee Pod inside a co-working lobby" fit="cover"></image-slot><div class="stat-grid"><div class="stat-card"><span class="stat-num">50–200</span><div class="stat-label">Square feet · footprint</div></div><div class="stat-card"><span class="stat-num">100% Arabica</span><div class="stat-label">Bean standard · no blend</div></div><div class="stat-card"><span class="stat-num">90 sec</span><div class="stat-label">Service time · app-sequenced</div></div><div class="stat-card"><span class="stat-num">₹89</span><div class="stat-label">Starting price · daily-habit</div></div></div>
 </div><div class="div-ps"><div class="line"></div><div class="mark">P . S .</div><div class="line"></div></div>
 <div class="section" id="s2">
   <div class="sec-label">Section 02 · Asset-light</div>
@@ -306,7 +307,7 @@ h3.sub{font-size:18px;font-weight:600;color:var(--terracotta);margin:1.7rem 0 .7
 <li><strong>Choose your pick-up time</strong> 8:42, 8:45, 8:48. Pick the minute that works.</li>
 <li><strong>Barista pulls to that minute</strong> coffee is fresh when you arrive, not made when you order and then waiting.</li>
 <li><strong>Walk up, pick up, walk out.</strong> 90 seconds from app open to cup in hand.</li>
-</ul><div class="imgph"><div class="ico">Image Placeholder</div><div class="cap">Visual: app screen mockup pick-up time selection &amp; order sequencing</div></div><p>The barista is not idle. They are serving a continuous, sequenced queue that exists in the system, not in the physical space. Throughput goes up. Wait time goes to zero. Coffee quality stays where it needs to be because the cup is pulled to a real time, not pre-made and reheated.</p>
+</ul><image-slot class="imgph" id="building-specialty-coffee-brand-without-cafe-body-02" shape="rect" src="../assets/photos/site/building-specialty-coffee-brand-without-cafe-body-02-desktop.webp" mobile-src="../assets/photos/site/building-specialty-coffee-brand-without-cafe-body-02-mobile.webp" placeholder="P.S. Coffee app pickup-time selection and order sequencing" fit="cover"></image-slot><p>The barista is not idle. They are serving a continuous, sequenced queue that exists in the system, not in the physical space. Throughput goes up. Wait time goes to zero. Coffee quality stays where it needs to be because the cup is pulled to a real time, not pre-made and reheated.</p>
 </div><div class="div-ps"><div class="line"></div><div class="mark">P . S .</div><div class="line"></div></div>
 <div class="section" id="s6">
   <div class="sec-label">Section 06 · Who this is for</div>

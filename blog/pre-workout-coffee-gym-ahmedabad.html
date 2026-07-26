@@ -93,9 +93,10 @@ h3.sub{font-size:18px;font-weight:600;color:var(--terracotta);margin:1.7rem 0 .7
 .ctab tr:last-child td{border-bottom:none}
 .ctab td strong{color:var(--roast)}
 
-.imgph{background:var(--oat);border:1.5px dashed var(--linen);border-radius:var(--radius-lg);padding:3rem 1.5rem;margin:1.8rem 0;text-align:center}
+.imgph{display:block;overflow:hidden;background:var(--oat);border:1px solid rgba(83,47,32,.12);border-radius:var(--radius-lg);margin:1.8rem 0;aspect-ratio:16/10}
 .imgph .ico{font-family:var(--font-body);font-size:13px;font-weight:700;letter-spacing:.1em;color:var(--terracotta);margin-bottom:.5rem;text-transform:uppercase}
 .imgph .cap{font-size:13px;color:var(--muted);max-width:380px;margin:0 auto;line-height:1.5}
+@media (max-width:760px){.imgph{aspect-ratio:9/11}}
 
 .who{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin:1.2rem 0}
 .whoc{background:var(--steam);border:.5px solid var(--border);border-radius:var(--radius-lg);padding:1.1rem 1.2rem}
@@ -237,7 +238,7 @@ h3.sub{font-size:18px;font-weight:600;color:var(--terracotta);margin:1.7rem 0 .7
     <div class="stat-card"><span class="stat-num">3–6 mg/kg</span><div class="stat-label">Optimal performance dose per bodyweight</div></div>
     <div class="stat-card"><span class="stat-num">₹89</span><div class="stat-label">Cost of a P.S. double espresso</div></div>
   </div>
-  <div class="imgph"><div class="ico">Image Placeholder</div><div class="cap">Visual: a gym bag next to a P.S. Coffee cup, early morning, conveying the pre-workout ritual</div></div>
+  <image-slot class="imgph" id="pre-workout-coffee-gym-ahmedabad-body-01" shape="rect" src="../assets/photos/site/pre-workout-coffee-gym-ahmedabad-body-01-desktop.webp" mobile-src="../assets/photos/site/pre-workout-coffee-gym-ahmedabad-body-01-mobile.webp" placeholder="P.S. Coffee cup next to a gym bag before a workout" fit="cover"></image-slot>
 </div>
 
 <div class="div-ps"><div class="line"></div><div class="mark">P . S .</div><div class="line"></div></div>
@@ -300,7 +301,7 @@ h3.sub{font-size:18px;font-weight:600;color:var(--terracotta);margin:1.7rem 0 .7
   <p>Post-workout, your body needs hydration first. But for the afternoon that follows a 6am session, work by 9am, back-to-back meetings until lunch, a second caffeine hit is usually required, and the timing actually works.</p>
   <p>Cold brew is the right tool for this moment. <strong>Cold brew is naturally lower in acid than hot espresso</strong>: the 12-hour cold extraction process draws less of the acidic compounds out of the bean. That makes it significantly gentler on a stomach that has just been put through an hour of physical stress. The caffeine is still there. The smoothness is better. The stomach does not object.</p>
   <p>P.S. Cold Brew will be 12-hour steeped, 100% Arabica, served cold. For anyone running a morning gym session before a full work day, the pattern is simple: espresso pre-workout, cold brew post-workout. You have covered both the performance window and the afternoon focus without touching anything artificial.</p>
-  <div class="imgph"><div class="ico">Image Placeholder</div><div class="cap">Visual: cold brew in a clear cup on a gym bag, post-workout recovery, clean and cold</div></div>
+  <image-slot class="imgph" id="pre-workout-coffee-gym-ahmedabad-body-02" shape="rect" src="../assets/photos/site/pre-workout-coffee-gym-ahmedabad-body-02-desktop.webp" mobile-src="../assets/photos/site/pre-workout-coffee-gym-ahmedabad-body-02-mobile.webp" placeholder="Cold brew in a clear P.S. Coffee cup on a gym bag" fit="cover"></image-slot>
   <div class="hl"><p><strong>On acidity:</strong> Cold brew typically tests 60–70% lower in acidity than hot-brewed espresso. For daily gym users training fasted or semi-fasted, this is a meaningful difference in how the stomach responds in the two hours that follow.</p></div>
 </div>
 
