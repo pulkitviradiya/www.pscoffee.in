@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<link rel="icon" type="image/png" href="../assets/icons/ps-coffee_icon_terracotta_32.png">
+<link rel="apple-touch-icon" href="../assets/icons/ps-coffee_icon_terracotta_180.png">
+<title>Specialty Coffee vs Regular Coffee: The Difference, No Jargon | P.S. Coffee.</title>
+<meta name="description" content="What actually makes coffee 'specialty' instead of regular? No cupping-score lecture. Here is the plain-language difference, and why it changes what's in your cup.">
+<link rel="canonical" href="https://www.pscoffee.in/blog/specialty-vs-regular-coffee-no-jargon">
+<meta property="og:title" content="Specialty Coffee vs Regular Coffee: The Difference, No Jargon">
+<meta property="og:description" content="No cupping-score lecture. Here is the plain-language difference between specialty and regular coffee, and why it changes what's in your cup.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.pscoffee.in/blog/specialty-vs-regular-coffee-no-jargon">
+<meta property="og:image" content="../assets/photos/site/blog-coffee-hero-desktop.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Specialty Coffee vs Regular Coffee: The Difference, No Jargon">
+<meta name="twitter:description" content="No cupping-score lecture. Here is the plain-language difference between specialty and regular coffee, and why it changes what's in your cup.">
+<meta name="twitter:image" content="../assets/photos/site/blog-coffee-hero-desktop.webp">
+<link rel="stylesheet" href="../assets/ps.css">
+<link rel="stylesheet" href="../assets/wh.css?v=108">
+<link rel="stylesheet" href="../assets/mobile.css?v=76">
+<style>
+:root{
+  --terracotta:#E8400C; --brick:#B8300A; --brick-deep:#7A1F08;
+  --steam:#FAF6EE; --oat:#F2EBD9; --linen:#E8DCC8;
+  --espresso:#5C3518; --roast:#3D2010;
+  --matcha:#3D6B4A; --matcha-mid:#5A8C5E; --matcha-wash:#EAF2E0; --matcha-light:#C8DDB8;
+  --muted:rgba(60,35,18,.62);
+  --border:rgba(60,35,18,.10);
+  --radius:8px; --radius-lg:14px;
+}
+
+/* ---- Verdict strip ---- */
+.vstrip{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:var(--border);border-radius:var(--radius-lg);overflow:hidden;margin-bottom:2.5rem;border:.5px solid var(--border)}
+.vcell{background:var(--steam);padding:1.2rem 1.3rem;text-align:center}
+.vcell .vl{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.vcell .vv{font-size:21px;font-weight:600;font-family:var(--font-display)}
+.vv-t{color:var(--terracotta)} .vv-g{color:var(--matcha)} .vv-d{color:var(--roast)}
+
+/* ---- TOC ---- */
+.toc{background:var(--oat);border:.5px solid var(--border);border-radius:var(--radius-lg);padding:.9rem 1.2rem;margin-bottom:2.5rem}
+.toc h3{font-size:10.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:.55rem}
+.toc-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:2px 1.6rem}
+.toc-list li{display:flex;align-items:baseline;gap:7px;padding:3px 0}
+.toc-list li a{font-size:13.5px;color:var(--terracotta);text-decoration:none;border-bottom:none}
+.toc-list li a:hover{text-decoration:underline}
+.toc-num{font-size:10.5px;font-weight:700;color:var(--muted);font-family:var(--font-body);flex-shrink:0;display:inline-block}
+
+/* ---- Quick answer ---- */
+.qa{background:var(--oat);border-left:4px solid var(--terracotta);border-radius:0 var(--radius-lg) var(--radius-lg) 0;padding:1rem 1.4rem;margin-bottom:1.4rem}
+.qa h3{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--brick);margin-bottom:.5rem}
+.qa p{font-size:15.5px;color:var(--roast);line-height:1.65;margin:0}
+
+/* ---- Key takeaways ---- */
+.kt{background:var(--oat);border-left:4px solid var(--terracotta);border-radius:0 var(--radius-lg) var(--radius-lg) 0;padding:1.2rem 1.5rem;margin:1rem 0 1.5rem}
+.kt h3{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:.9rem}
+.kti{display:flex;gap:10px;padding:5px 0;align-items:flex-start}
+.kti .dot{width:7px;height:7px;border-radius:50%;background:var(--terracotta);margin-top:9px;flex-shrink:0}
+.kti p{font-size:14.5px;margin:0;color:var(--roast);line-height:1.55}
+
+/* ---- Section divider with centered P.S. mark ---- */
+.div-ps{display:flex;align-items:center;gap:14px;margin:.7rem 0}
+.div-ps .line{flex:1;height:2px;background:var(--linen)}
+.div-ps .mark{font-family:var(--font-accent);font-style:italic;font-size:12px;font-weight:700;letter-spacing:.16em;color:var(--terracotta);white-space:nowrap}
+
+.section{margin-bottom:1rem;padding:0}
+.sec-label{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:.6rem}
+h2.st{font-family:var(--font-display);font-size:26px;font-weight:600;color:var(--terracotta);margin:0 0 .6rem;line-height:1.28;letter-spacing:-.2px}
+h3.sub{font-size:18px;font-weight:600;color:var(--terracotta);margin:1.7rem 0 .7rem;font-family:var(--font-display)}
+.section p{margin-bottom:1.05rem;color:var(--espresso);font-size:16px;line-height:1.75}
+.section p strong{color:var(--roast);font-weight:600}
+.section ul,.section ol{margin:0 0 1.1rem 1.4rem}
+.section li{margin-bottom:.45rem;color:var(--espresso)}
+
+/* ---- Pros / Cons ---- */
+.proscons{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.4rem 0}
+.prob,.conb{border-radius:var(--radius-lg);padding:1.2rem 1.3rem}
+.prob{background:var(--matcha-wash);border:.5px solid var(--matcha-light)}
+.conb{background:#FAEEDA;border:.5px solid rgba(186,117,23,.3)}
+.prob h4,.conb h4{font-size:13px;font-weight:700;margin-bottom:.7rem;display:flex;align-items:center;gap:7px;letter-spacing:.02em}
+.prob h4{color:var(--matcha)}
+.conb h4{color:#854F0B}
+.prob ul,.conb ul{list-style:none;padding:0;margin:0}
+.prob li,.conb li{font-size:13.5px;padding:5px 0;display:flex;align-items:flex-start;gap:8px;line-height:1.5;border-bottom:.5px solid rgba(60,35,18,.06)}
+.prob li:last-child,.conb li:last-child{border-bottom:none}
+.prob li{color:var(--matcha)}
+.conb li{color:#633806}
+.tick{flex-shrink:0;font-weight:700;margin-top:1px}
+
+/* ---- Highlight box ---- */
+.hl{background:var(--oat);border:.5px solid var(--border);border-radius:var(--radius-lg);padding:1.3rem 1.6rem;margin:1.5rem 0}
+.hl p{font-size:15px;color:var(--roast);margin:0;line-height:1.65}
+.hl strong{color:var(--terracotta)}
+
+/* ---- Comparison table ---- */
+.ctab{width:100%;border-collapse:collapse;margin:1.4rem 0;font-size:14px;background:var(--steam);border-radius:var(--radius-lg);overflow:hidden;border:.5px solid var(--border)}
+.ctab th{background:var(--roast);color:#FFB89A;padding:11px 14px;text-align:left;font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.ctab td{padding:11px 14px;border-bottom:.5px solid var(--border);color:var(--espresso);vertical-align:top}
+.ctab tr:nth-child(even) td{background:var(--oat)}
+.ctab tr:last-child td{border-bottom:none}
+.ctab td strong{color:var(--roast)}
+
+/* ---- Image placeholder ---- */
+.imgph{display:block;overflow:hidden;background:var(--oat);border:1px solid rgba(83,47,32,.12);border-radius:var(--radius-lg);margin:1.8rem 0;aspect-ratio:16/10;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:1.4rem}
+.imgph .ico{font-family:var(--font-body);font-size:13px;font-weight:700;letter-spacing:.1em;color:var(--terracotta);margin-bottom:.5rem;text-transform:uppercase}
+.imgph .cap{font-size:13px;color:var(--muted);max-width:380px;margin:0 auto;line-height:1.5}
+@media (max-width:760px){.imgph{aspect-ratio:9/11}}
+
+/* ---- P.S. line ---- */
+.psline{background:var(--oat);border-top:3px solid var(--terracotta);border-bottom:3px solid var(--terracotta);padding:1.6rem 1.4rem;margin:2.6rem 0;text-align:center;font-family:var(--font-accent);font-style:italic;font-size:18px;font-weight:600;color:var(--terracotta);letter-spacing:.2px;line-height:1.5}
+
+/* ---- FAQ ---- */
+.faqs{margin:1rem 0}
+.faqs h2{font-family:var(--font-display);font-size:18px;color:var(--roast);margin:1rem 0 .3rem}
+.faq-item{border-bottom:.5px solid var(--border);padding:.2rem 0;cursor:pointer}
+.faq-q{font-size:15px;font-weight:600;color:var(--roast);display:flex;justify-content:space-between;align-items:flex-start;gap:.8rem;line-height:1.35}
+.faq-a{font-size:14px;color:var(--espresso);margin-top:.25rem;line-height:1.6;display:none!important}
+.faq-item.open .faq-a{display:block!important}
+.faq-icon{font-size:22px;color:var(--terracotta);transition:transform .2s;flex-shrink:0;line-height:1;font-weight:300}
+.faq-item.open .faq-icon{transform:rotate(45deg)}
+
+/* ---- Keyword tag pills ---- */
+.tags{display:flex;flex-wrap:wrap;gap:7px;margin:2rem 0 1.5rem}
+.tags-label{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);width:100%;margin-bottom:.6rem}
+.tag{background:var(--oat);border:.5px solid var(--linen);border-radius:50px;padding:5px 13px;font-size:12px;color:var(--espresso);font-weight:500}
+
+/* ---- Prev / Next ---- */
+.pnnav{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:2.5rem 0}
+.pncard{background:var(--steam);border:.5px solid var(--border);border-radius:var(--radius-lg);padding:1.2rem 1.4rem;text-decoration:none;color:inherit;display:block;transition:background .15s,border-color .15s}
+.pncard:hover{background:var(--oat);border-color:var(--terracotta);text-decoration:none}
+.pncard .pn-lbl{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem;display:flex;align-items:center;gap:6px}
+.pncard.next{text-align:right}
+.pncard.next .pn-lbl{justify-content:flex-end}
+.pncard .pn-title{font-family:var(--font-display);font-size:16px;color:var(--roast);font-weight:600;line-height:1.35}
+.pncard.disabled{opacity:.4;pointer-events:none}
+
+/* ---- CTA box ---- */
+.ctab-box{background:var(--terracotta);border-radius:var(--radius-lg);padding:2.6rem 2.2rem;text-align:center;margin:2.5rem 0 1rem;position:relative;overflow:hidden}
+.ctab-box::before{content:'';position:absolute;top:-50px;right:-50px;width:200px;height:200px;border-radius:50%;background:rgba(250,246,238,.06)}
+.ctab-box .cta-tag{display:inline-block;background:rgba(250,246,238,.16);color:var(--steam);font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:5px 14px;border-radius:50px;margin-bottom:1rem;position:relative;z-index:1}
+.ctab-box h2{font-family:var(--font-display);font-size:26px;color:var(--steam);margin-bottom:.7rem;line-height:1.3;font-weight:600;position:relative;z-index:1}
+.ctab-box p{color:rgba(250,246,238,.82);font-size:15px;margin-bottom:1.5rem;max-width:520px;margin-left:auto;margin-right:auto;line-height:1.6;position:relative;z-index:1}
+.cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;position:relative;z-index:1}
+.cta-btn{display:inline-block;font-size:14.5px;font-weight:600;padding:13px 28px;border-radius:50px;text-decoration:none;letter-spacing:.3px;transition:transform .12s,box-shadow .12s;border:2px solid transparent}
+.cta-btn.primary{background:var(--steam);color:var(--brick)}
+.cta-btn.primary:hover{transform:scale(1.03);text-decoration:none}
+.cta-btn.outline{background:transparent;color:var(--steam);border-color:rgba(250,246,238,.5)}
+.cta-btn.outline:hover{background:rgba(250,246,238,.1);text-decoration:none}
+.cta-sub{font-size:12px;color:rgba(250,246,238,.5);margin-top:14px;margin-bottom:0;position:relative;z-index:1}
+
+/* ---- Responsive ---- */
+@media(max-width:640px){
+  .toc-list{grid-template-columns:1fr}
+  .vstrip{grid-template-columns:1fr}
+  .proscons{grid-template-columns:1fr}
+  .pnnav{grid-template-columns:1fr}
+  .pncard.next{text-align:left}
+  .pncard.next .pn-lbl{justify-content:flex-start}
+  .ctab-box{padding:2rem 1.4rem}
+  .ctab-box h2{font-size:22px}
+  h2.st{font-size:22px}
+  .ctab{font-size:13px}
+  .ctab th,.ctab td{padding:9px 10px}
+}
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5TS0QMZ55W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+
+  gtag("config", "G-5TS0QMZ55W");
+</script>
+</head>
+<body data-page="blog-post">
+<div id="ps-nav"></div>
+<div class="page-top"></div>
+
+<main class="journal-post">
+  <article>
+    <header class="journal-post-hero">
+      <p>The P.S. Blog. · Coffee education · Specialty vs regular</p>
+      <h1>What Is the Difference Between <span class="acc">Specialty and Regular Coffee</span>? No Jargon.</h1>
+      <div class="journal-post-meta">
+        <span>By P.S. Coffee</span>
+        <span>August 2026</span>
+        <span>6 min read</span>
+      </div>
+    </header>
+
+    <div class="journal-post-body">
+<div class="vstrip">
+  <div class="vcell"><div class="vv vv-t">The bean</div><div class="vl">Species, not marketing</div></div>
+  <div class="vcell"><div class="vv vv-g">The score</div><div class="vl">Tasted, not guessed</div></div>
+  <div class="vcell"><div class="vv vv-d">The clock</div><div class="vl">Freshness, not age</div></div>
+</div>
+<div class="toc">
+  <h3>In this guide</h3>
+  <ul class="toc-list"><li><span class="toc-num">01</span><a href="#definition">What "specialty" actually means</a></li><li><span class="toc-num">02</span><a href="#regular">What's usually in "regular" coffee</a></li><li><span class="toc-num">03</span><a href="#three">The three things that explain the gap</a></li><li><span class="toc-num">04</span><a href="#doesnt">What specialty coffee is not</a></li><li><span class="toc-num">05</span><a href="#worth">Is it worth the price, in India</a></li><li><span class="toc-num">06</span><a href="#faq">Questions, answered</a></li></ul>
+</div>
+<div class="qa"><h3>The short version</h3><p>Specialty coffee is coffee that scores highly with a professional taster on a standard grading scale, and that can usually be traced back to a specific farm or region. Regular commercial coffee is a blend built to hit a price and a consistent taste at scale, often cutting Arabica with cheaper Robusta beans. The practical difference in your cup comes down to three things: which bean, how it was grown and processed, and how fresh it is when you drink it.</p></div>
+<div class="kt"><h3>What to take away</h3><div class="kti"><div class="dot"></div><p>"Specialty" is a quality classification with a scoring process behind it, not a marketing adjective. Not everything called specialty on a cafe menu has actually earned the word.</p></div><div class="kti"><div class="dot"></div><p>Arabica and Robusta are different plant species with different flavour chemistry. Most specialty coffee is Arabica, but Arabica alone does not make a bean specialty.</p></div><div class="kti"><div class="dot"></div><p>Freshness does as much work as the bean itself. Coffee starts losing flavour within weeks of roasting and within minutes of grinding.</p></div><div class="kti"><div class="dot"></div><p>A lot of what you pay for at a specialty cafe is the cafe, not the coffee. The bean and the grind are only part of the bill.</p></div></div>
+
+<div class="div-ps"><div class="line"></div><div class="mark">P . S .</div><div class="line"></div></div>
+<div class="section" id="definition">
+  <div class="sec-label">Section 01 · The definition</div>
+  <h2 class="st">What "specialty" actually means</h2>
+  <p class="lead">Skip the tasting-room vocabulary for a second. Specialty coffee means two concrete things, and neither of them is a feeling.</p>
+  <p>First, it has been tasted and scored by a professional using a standardised scoring method, and it cleared a high bar on that scale. We would recommend checking the exact current threshold with the Specialty Coffee Association directly if you want the precise number, since grading standards get refined over time, but the principle holds: specialty coffee is coffee that a trained palate rated as clean, flavourful, and free of defects, not coffee that a label calls premium.</p>
+  <p>Second, it is traceable. A specialty bag can usually tell you where the coffee came from, sometimes down to the farm or the specific lot, rather than "a blend of origins." That traceability is not romance for its own sake. It is what lets a roaster be accountable for quality, because you cannot hide a bad batch inside an anonymous blend.</p>
+  <p>Put plainly: specialty coffee is coffee that earned the word through a test, not through packaging.</p>
+
+  <div class="imgph"><div class="ico">Image placeholder</div><div class="cap">Cupping table with tasting bowls and a scoring sheet, specialty coffee grading process</div></div>
+</div>
+
+<div class="div-ps"><div class="line"></div><div class="mark">P . S .</div><div class="line"></div></div>
+<div class="section" id="regular">
+  <div class="sec-label">Section 02 · The other side</div>
+  <h2 class="st">What is usually in "regular" coffee</h2>
+  <p>Regular commercial coffee, the kind in most instant jars and a lot of QSR cups, is built to a different goal: hit a price point and taste the same in every batch, at massive scale. That goal is not wrong, it is just a different problem than flavour.</p>
+  <p>To get there, it is common to blend in Robusta, a coffee species that grows more easily, yields more per plant, and costs less than Arabica. Robusta has roughly double the caffeine of Arabica but a harsher, more bitter, sometimes rubbery flavour profile, so it is usually blended rather than served on its own. The blend gets roasted dark enough to mask inconsistency, and the beans may sit ground, or pre-ground and bagged, for a long time before they reach a cup. None of this is a scandal. It is how you make coffee cheap and consistent at national scale. It is just not the same goal as flavour.</p>
+
+  <table class="ctab">
+    <thead><tr><th></th><th>Regular / commercial coffee</th><th>Specialty coffee</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Bean</strong></td><td>Often Arabica blended with Robusta</td><td>Usually 100% Arabica</td></tr>
+      <tr><td>Sourcing</td><td>Anonymous blend, mixed origins</td><td>Traceable to farm or region</td></tr>
+      <tr><td>Quality check</td><td>Consistency at scale</td><td>Tasted and scored by a professional</td></tr>
+      <tr><td>Roast</td><td>Often darker, masks inconsistency</td><td>Roasted to show the bean's own flavour</td></tr>
+      <tr><td>Grind timing</td><td>Often pre-ground, held for a while</td><td>Usually ground close to serving</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="div-ps"><div class="line"></div><div class="mark">P . S .</div><div class="line"></div></div>
+<div class="section" id="three">
+  <div class="sec-label">Section 03 · Why it tastes different</div>
+  <h2 class="st">The three things that actually explain the gap</h2>
+  <p>If you strip away the vocabulary, the taste difference between a specialty cup and a regular one comes down to three variables, and you can check all three yourself without any training.</p>
+
+  <h3 class="sub">1. The bean itself</h3>
+  <p>Arabica beans generally carry more natural sugar and more acidity than Robusta, which reads on the tongue as smoother, sweeter, and more complex, with less of the flat bitterness people associate with cheap coffee. This is a fairly well-established distinction in the coffee trade, though exact sugar and acid figures vary by source, so treat any single specific percentage you see quoted online with some caution unless it cites a primary source.</p>
+
+  <h3 class="sub">2. How it was grown and handled</h3>
+  <p>Altitude, how ripe the cherry was when picked, and how the bean was processed after picking all shape the final flavour. A bean picked at the right ripeness and processed carefully will taste different from one picked in bulk regardless of ripeness. This is the part that traceability protects, because a farm or lot that is named and accountable has a reason to get this right.</p>
+
+  <h3 class="sub">3. Freshness, which most people underrate</h3>
+  <p>This is the variable almost nobody talks about, and it may matter as much as the bean. Roasted coffee starts losing its aromatic compounds within weeks, and ground coffee loses flavour within minutes of grinding as it is exposed to air. A specialty-grade bean that was ground hours or days before your cup will taste noticeably flatter than a decent bean ground at the moment of order. Freshness is not a nice-to-have on top of quality. For flavour, it is close to being quality.</p>
+
+  <div class="hl"><p><strong>The honest bit:</strong> a great bean, badly timed, will lose to a decent bean, freshly ground. If you only remember one thing from this piece, it should be that the clock matters as much as the label.</p></div>
+</div>
+
+<div class="div-ps"><div class="line"></div><div class="mark">P . S .</div><div class="line"></div></div>
+<div class="section" id="doesnt">
+  <div class="sec-label">Section 04 · The myths</div>
+  <h2 class="st">What specialty coffee is not</h2>
+  <p>The word gets stretched on menus more than almost any other in the category, so it is worth being clear about what it does not mean.</p>
+
+  <div class="proscons">
+    <div class="prob"><h4>✓ Actually means</h4><ul><li><span class="tick">✓</span>Scored by a professional taster against a standard</li><li><span class="tick">✓</span>Traceable to a farm, region, or specific lot</li><li><span class="tick">✓</span>Almost always 100% Arabica, no Robusta cut in</li><li><span class="tick">✓</span>Roasted and handled to preserve flavour, not just shelf life</li></ul></div>
+    <div class="conb"><h4>! Does not automatically mean</h4><ul><li><span class="tick">✕</span>Expensive, or served in a certain kind of room</li><li><span class="tick">✕</span>Single-origin only, blends can be specialty grade too</li><li><span class="tick">✕</span>Pour-over or a specific brew method</li><li><span class="tick">✕</span>Automatically fresh, unless it is actually ground close to serving</li></ul></div>
+  </div>
+
+  <p>That last point in the second column is the one worth sitting with. A cafe can serve a genuinely specialty-grade bean and still hand you a stale cup if it was ground that morning for the whole day's orders. The grade of the bean and the freshness of the grind are two separate promises. Both need to be kept.</p>
+
+  <div class="imgph"><div class="ico">Image placeholder</div><div class="cap">Fresh Arabica beans ground to order at a P.S. Pod counter</div></div>
+</div>
+
+<div class="div-ps"><div class="line"></div><div class="mark">P . S .</div><div class="line"></div></div>
+<div class="section" id="worth">
+  <div class="sec-label">Section 05 · The price question</div>
+  <h2 class="st">Is it worth the price, in India</h2>
+  <p>This is usually the real question underneath "what's the difference," so it is worth answering directly. A specialty-grade cup at an Indian cafe can run considerably more than a cup of instant or QSR coffee, and a fair amount of that gap has nothing to do with the bean.</p>
+  <p>Consider what a cafe's price is actually carrying: the seating, the air-conditioning across a room you occupy one chair of, the table service, the rent on a high-footfall address. The bean and the fresh grind are genuinely part of the cost, but they are not the whole bill. A format that removes the room and keeps the bean and the freshness standard can bring the price a lot closer to what the coffee itself actually costs to make well.</p>
+  <p>That is the gap we are building P.S. Coffee to close: 100% Arabica, ground fresh at every order, out of compact Pods placed where your day already happens, with none of the cafe's overhead sitting in the price.</p>
+</div>
+
+<div class="psline">P.S.: We did not lower the bean standard. We lowered the overhead.</div>
+
+<section class="faqs" id="faq">
+  <h2>Questions, answered</h2>
+  <div class="faq-item open"><div class="faq-q">What is specialty coffee, in plain language?<span class="faq-icon">+</span></div><div class="faq-a">Specialty coffee is coffee that a professional taster has scored highly for taste, using a standard scale run by coffee grading bodies, and that can be traced back to a specific farm or region instead of an anonymous blend. In practice, it usually means 100% Arabica beans, sourced and roasted with care, rather than a mass-market blend cut with cheaper beans for cost.</div></div>
+  <div class="faq-item"><div class="faq-q">What is the difference between specialty coffee and regular coffee?<span class="faq-icon">+</span></div><div class="faq-a">Regular commercial coffee is usually a blend built to hit a price point and a consistent flavour at scale, often mixing Arabica with cheaper Robusta beans, roasted long before it reaches your cup. Specialty coffee is graded for quality first, is more often single-origin or traceable, uses 100% Arabica, and is usually roasted and ground much closer to the moment you drink it.</div></div>
+  <div class="faq-item"><div class="faq-q">Is Arabica always specialty coffee?<span class="faq-icon">+</span></div><div class="faq-a">No. Arabica is a species of coffee plant, not a quality grade. Most specialty coffee is Arabica because Arabica has the flavour complexity to score well, but not every Arabica bean qualifies as specialty. Poor growing, poor processing, or a stale roast can still let a bean down. Arabica is close to a prerequisite for specialty coffee, not a guarantee of it.</div></div>
+  <div class="faq-item"><div class="faq-q">Why does specialty coffee taste different from regular coffee?<span class="faq-icon">+</span></div><div class="faq-a">Three things usually explain the gap: the bean itself (Arabica has more sugar and acidity than Robusta, which reads as smoother and more flavourful), how it was grown and processed (altitude, ripeness at picking, and processing method all shape flavour), and freshness (coffee loses flavour within weeks of roasting and within minutes of grinding, so how recently your cup was ground matters as much as the bean did).</div></div>
+  <div class="faq-item"><div class="faq-q">Is specialty coffee worth it in India?<span class="faq-icon">+</span></div><div class="faq-a">It depends what you are paying for. A lot of what makes specialty coffee expensive in Indian cafes is the cafe itself: the seating, the Wi-Fi, the address. The bean and the grind are only part of the bill. Formats that remove the cafe overhead and keep the specialty-grade bean can bring the price down closer to what the coffee itself actually costs.</div></div>
+</section>
+
+<div class="tags">
+  <div class="tags-label">SEO keyword tags · this post</div>
+  <div class="tag">specialty coffee vs regular coffee</div>
+  <div class="tag">what is specialty coffee</div>
+  <div class="tag">specialty coffee meaning</div>
+  <div class="tag">what makes coffee specialty</div>
+  <div class="tag">Arabica vs Robusta India</div>
+  <div class="tag">is specialty coffee worth it India</div>
+  <div class="tag">specialty coffee explained</div>
+  <div class="tag">100% Arabica coffee</div>
+  <div class="tag">specialty coffee Ahmedabad</div>
+  <div class="tag">Gujarat specialty coffee</div>
+  <div class="tag">grab and go specialty coffee</div>
+  <div class="tag">fresh ground coffee India</div>
+</div>
+
+<div class="pnnav">
+  <a href="../blog/what-is-arabica-coffee-india.html" class="pncard"><div class="pn-lbl">← Previous</div><div class="pn-title">What Is 100% Arabica Coffee And Why Does It Actually Matter for Your Daily Cup?</div></a>
+  <a href="../blog/why-specialty-coffee-costs-300-rupees-india.html" class="pncard next"><div class="pn-lbl">Next →</div><div class="pn-title">The cafe price is carrying more than the cup</div></a>
+</div>
+
+<div class="ctab-box">
+  <div class="cta-tag">Taste it for yourself</div>
+  <h2>Same standard. None of the overhead.</h2>
+  <p>100% Arabica, ground fresh at every order, from a Pod inside the buildings you already use. Join the founding list to hear when the first Pod opens in Ahmedabad.</p>
+  <div class="cta-row"><a href="../pack.html" class="cta-btn primary">Join the founding list →</a><a href="../menu.html" class="cta-btn outline">See the menu</a></div>
+  <p class="cta-sub">Pre-launch · 100% Arabica · Ahmedabad first · pscoffee.in</p>
+</div>
+
+<div class="footer">
+  <span>&copy; 2026 P.S. Coffee · Pre-launch</span>
+  <span><a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a><a href="mailto:hello@pscoffee.in">Contact</a></span>
+</div>
+    </div>
+  </article>
+</main>
+
+<div id="ps-footer"></div>
+<script src="../assets/image-slot.js?v=3"></script>
+<script src="../assets/ps.js?v=43"></script>
+<script src="../assets/mobile.js?v=5"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Specialty Coffee vs Regular Coffee: The Difference, No Jargon",
+  "description": "What actually makes coffee 'specialty' instead of regular? No cupping-score lecture. Here is the plain-language difference, and why it changes what's in your cup.",
+  "author": {"@type": "Organization", "name": "P.S. Coffee"},
+  "publisher": {"@type": "Organization", "name": "P.S. Coffee", "logo": {"@type": "ImageObject", "url": "https://www.pscoffee.in/assets/icons/ps-coffee_square_terracotta_framed.png"}},
+  "datePublished": "2026-08-15",
+  "dateModified": "2026-08-15",
+  "mainEntityOfPage": "https://www.pscoffee.in/blog/specialty-vs-regular-coffee-no-jargon",
+  "image": "../assets/photos/site/blog-coffee-hero-desktop.webp"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is specialty coffee, in plain language?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Specialty coffee is coffee that a professional taster has scored highly for taste, using a standard scale run by coffee grading bodies, and that can be traced back to a specific farm or region instead of an anonymous blend. In practice, it usually means 100% Arabica beans, sourced and roasted with care, rather than a mass-market blend cut with cheaper beans for cost."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between specialty coffee and regular coffee?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Regular commercial coffee is usually a blend built to hit a price point and a consistent flavour at scale, often mixing Arabica with cheaper Robusta beans, roasted long before it reaches your cup. Specialty coffee is graded for quality first, is more often single-origin or traceable, uses 100% Arabica, and is usually roasted and ground much closer to the moment you drink it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Arabica always specialty coffee?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Arabica is a species of coffee plant, not a quality grade. Most specialty coffee is Arabica because Arabica has the flavour complexity to score well, but not every Arabica bean qualifies as specialty. Poor growing, poor processing, or a stale roast can still let a bean down. Arabica is close to a prerequisite for specialty coffee, not a guarantee of it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does specialty coffee taste different from regular coffee?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Three things usually explain the gap: the bean itself (Arabica has more sugar and acidity than Robusta, which reads as smoother and more flavourful), how it was grown and processed (altitude, ripeness at picking, and processing method all shape flavour), and freshness (coffee loses flavour within weeks of roasting and within minutes of grinding, so how recently your cup was ground matters as much as the bean did)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is specialty coffee worth it in India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends what you are paying for. A lot of what makes specialty coffee expensive in Indian cafes is the cafe itself: the seating, the Wi-Fi, the address. The bean and the grind are only part of the bill. Formats that remove the cafe overhead and keep the specialty-grade bean can bring the price down closer to what the coffee itself actually costs."
+      }
+    }
+  ]
+}
+</script>
+</body>
+</html>
