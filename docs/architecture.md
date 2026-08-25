@@ -13,7 +13,7 @@ by Vercel, plus two serverless functions for form submission.
 | Styling | Plain CSS, 3 files, no preprocessor | `assets/ps.css` (tokens), `assets/wh.css` (layout, inherited from a "WatchHouse" template), `assets/mobile.css` (responsive overrides) — see below |
 | Behaviour | Vanilla JS, no framework | `assets/ps.js` (nav/footer/forms/highlight system), `assets/mobile.js`, `assets/image-slot.js` |
 | Fonts | Self-hosted `.woff2`, `@font-face` in `ps.css` | Bricolage Grotesque, Space Grotesk, Instrument Serif — avoids a Google Fonts network request |
-| Backend | 2 Vercel serverless functions (Node ESM) | `api/submit-form.js`, `api/form-status.js` — see [api-reference.md](api-reference.md) |
+| Backend | 2 Vercel serverless functions (Node ESM) plus Vercel middleware | `api/submit-form.js`, `api/form-status.js`, `middleware.js` — see [api-reference.md](api-reference.md) |
 | Data store | Google Sheets (via `googleapis` npm package) | Free, human-readable form-submission store for a pre-launch site with no real database needs |
 | Hosting/deploy | Vercel, auto-deploy on push to `main` | `vercel.json` sets `cleanUrls:true`, `trailingSlash:false`, cache headers, and legacy redirects |
 | Dependencies | `googleapis` only (`package.json`) | No test runner, no bundler, no lint config exist in this repo |
@@ -23,6 +23,7 @@ by Vercel, plus two serverless functions for form submission.
 ```
 /                       Every page as a flat .html file (index, menu, pack, about, join, etc.)
 api/                    Vercel serverless functions (Node ESM) — form submission + admin status
+  abuse-controls.js      Pre-Sheets abuse controls for the public form endpoint.
   google-sheets.js       Shared Google Sheets client/meta helpers used by the API routes.
 assets/
   ps.css                Canonical design-system layer: :root tokens (colour/spacing/radius/type),
@@ -80,6 +81,12 @@ There is no database. Form submissions are appended as rows to a Google Sheet, o
   is written once, on the tab's first submission.
 - No fixed schema beyond that — whatever keys the submitting HTML form sends become columns,
   up to a 30-field / 64-char-key / 2000-char-value cap enforced in `api/submit-form.js`.
+- Before any Google Sheets API call, submissions pass `api/abuse-controls.js`: body-size cap,
+  IP/fingerprint rate limits, honeypot, timestamp/token verification, optional CAPTCHA checks for
+  high-value forms, and abnormal per-form logging/alerting.
+- `middleware.js` rejects oversized `/api/submit-form` requests at the platform edge when
+  `Content-Length` exceeds `PS_MAX_FORM_BODY_BYTES` (64KB by default); the function rechecks the
+  cap for requests without a trustworthy length header.
 
 See [api-reference.md](api-reference.md) for the full request/response contract.
 

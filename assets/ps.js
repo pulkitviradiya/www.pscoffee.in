@@ -467,6 +467,55 @@
     "join-investor": { event: "generate_lead", type: "investor", value: 100 }
   };
   var PS_CONVERSION_CONTEXT_KEYS = ["pack", "type", "event_type", "category", "space_type", "partnership_type"];
+  function toHex(buffer){
+    return Array.prototype.map.call(new Uint8Array(buffer), function(b){
+      return b.toString(16).padStart(2, "0");
+    }).join("");
+  }
+  async function sha256(text){
+    var data = new TextEncoder().encode(text);
+    var digest = await crypto.subtle.digest("SHA-256", data);
+    return toHex(digest);
+  }
+  function ensureAbuseFields(form){
+    if(!form) return;
+    if(!form.dataset.psStartedAt) form.dataset.psStartedAt = String(Date.now());
+    if(!form.querySelector('input[name="ps_company_url"]')){
+      var hp = document.createElement("input");
+      hp.type = "text";
+      hp.name = "ps_company_url";
+      hp.tabIndex = -1;
+      hp.autocomplete = "off";
+      hp.setAttribute("aria-hidden", "true");
+      hp.style.position = "absolute";
+      hp.style.left = "-10000px";
+      hp.style.width = "1px";
+      hp.style.height = "1px";
+      hp.style.opacity = "0";
+      form.appendChild(hp);
+    }
+  }
+  async function prepareAbusePayload(form, payload){
+    ensureAbuseFields(form);
+    var startedAt = form && form.dataset.psStartedAt || String(Date.now());
+    var screenBits = window.screen ? [screen.width, screen.height, screen.colorDepth].join("x") : "";
+    var fingerprint = await sha256([
+      navigator.userAgent,
+      navigator.language,
+      Intl.DateTimeFormat().resolvedOptions().timeZone,
+      screenBits
+    ].join("|"));
+    var formName = payload.form_name || form && form.getAttribute("data-ps-form") || "form";
+    payload.ps_company_url = form && form.querySelector('input[name="ps_company_url"]') ? form.querySelector('input[name="ps_company_url"]').value : "";
+    payload.ps_started_at = startedAt;
+    payload.ps_fingerprint = fingerprint;
+    payload.ps_form_token = await sha256([formName, startedAt, fingerprint, navigator.userAgent].join("|"));
+    return payload;
+  }
+  window.PSAbuseControls = {
+    ensureFields: ensureAbuseFields,
+    preparePayload: prepareAbusePayload
+  };
   function trackConversion(form, payload){
     var formName = form && form.getAttribute("data-ps-form") || payload && payload.form_name || "form";
     var cfg = PS_CONVERSION_EVENTS[formName] || { event: "generate_lead", type: formName, value: 1 };
@@ -516,6 +565,7 @@
     }
 
     document.querySelectorAll("form[data-ps-form]").forEach(function(form){
+      ensureAbuseFields(form);
       form.setAttribute("novalidate","");
       form.addEventListener("submit", async function(e){
         e.preventDefault();
@@ -547,6 +597,7 @@
           new FormData(form).forEach(function(val, key){
             if(typeof val === 'string') payload[key] = val;
           });
+          await prepareAbusePayload(form, payload);
           var response = await fetch('/api/submit-form', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },

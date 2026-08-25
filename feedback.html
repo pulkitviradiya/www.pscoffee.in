@@ -545,7 +545,7 @@
 
 <div id="ps-footer"></div>
 <script src="assets/image-slot.js?v=3"></script>
-<script src="assets/ps.js?v=43"></script>
+<script src="assets/ps.js?v=44"></script>
 <script src="assets/mobile.js?v=5"></script>
 <script>
 (function(){
@@ -656,6 +656,7 @@
   /* ── Submit ─────────────────────────────────────────────── */
   var form = document.getElementById('psFbForm');
   var submitBtn = document.getElementById('fbSubmitBtn');
+  if(window.PSAbuseControls && window.PSAbuseControls.ensureFields) window.PSAbuseControls.ensureFields(form);
 
   form.addEventListener('submit', function(e){
     e.preventDefault();
@@ -691,10 +692,15 @@
     var payload = { form_name: 'feedback' };
     data.forEach(function(v, k){ if(v) payload[k] = v; });
 
-    fetch('/api/submit-form', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
+    (window.PSAbuseControls && window.PSAbuseControls.preparePayload
+      ? window.PSAbuseControls.preparePayload(form, payload)
+      : Promise.resolve(payload)
+    ).then(function(guardedPayload){
+      return fetch('/api/submit-form', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(guardedPayload)
+      });
     })
     .then(function(r){ return r.json(); })
     .then(function(d){

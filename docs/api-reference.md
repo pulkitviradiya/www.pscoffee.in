@@ -23,6 +23,10 @@ Allowed origins: `https://pscoffee.in`, `https://www.pscoffee.in` (falls back to
 ```jsonc
 {
   "form_name": "pack-enquiry",   // required — must be one of the allowlisted form names below
+  "ps_company_url": "",          // honeypot — must be empty
+  "ps_started_at": "1787654321000",
+  "ps_fingerprint": "<sha256 browser fingerprint>",
+  "ps_form_token": "<sha256 form token>",
   "...":  "...any other fields the HTML form sends, become sheet columns"
 }
 ```
@@ -36,15 +40,32 @@ bumping `ps.js?v=N` across every HTML page. The client-side success handler push
 `ps_form_submit_success` object to `window.dataLayer`; when GA4 is available, it also fires the
 configured `gtag` event. Never add PII or free-text field values to analytics payloads.
 
-Input caps enforced server-side: max 30 fields per submission, field keys truncated to 64 chars,
-field values truncated to 2000 chars. The `form_name` key itself is dropped before the row is
-written (it only selects the destination tab).
+Input caps enforced server-side: max 30 stored fields per submission, field keys truncated to 64
+chars, field values truncated to 2000 chars. The `form_name` key and anti-abuse fields are dropped
+before the row is written; `form_name` only selects the destination tab.
+
+Abuse controls run before any Google Sheets client is created:
+- request body size is capped at 64KB by default in `middleware.js` and rechecked in the function;
+- submission identity is rate-limited by IP plus browser fingerprint and by aggregate `form_name`;
+- `ps_company_url` honeypot must be empty;
+- `ps_started_at` must be within the accepted form-age window;
+- `ps_form_token` must match the request's form name, timestamp, fingerprint, and user agent;
+- abnormal per-`form_name` submission rates are logged and can optionally be posted to an alert
+  webhook.
+
+High-value forms (`event-enquiry`, `join-founders`, `join-investor`, `pack-enquiry`,
+`partnership-enquiry`) can require Cloudflare Turnstile and/or reCAPTCHA verification by setting
+the corresponding secret environment variable. If the secret is unset, the CAPTCHA check is
+skipped so the current static forms continue to work without visible challenge widgets.
 
 ### Response
 | Status | Body | Meaning |
 |---|---|---|
 | 200 | `{"status":"ok"}` | Row appended successfully |
 | 400 | `{"error":"Unknown form"}` | Missing or non-allowlisted `form_name` |
+| 400 | `{"error":"Invalid submission"}` | Honeypot, timestamp, token, or optional CAPTCHA verification failed |
+| 413 | `{"error":"Request too large"}` | JSON body exceeds the configured request-size cap |
+| 429 | `{"error":"Too many submissions"}` | Rate limit exceeded for the identity or form |
 | 405 | `{"error":"Method not allowed"}` | Non-POST, non-OPTIONS request |
 | 500 | `{"status":"error","message":"Internal server error"}` | Google Sheets API call failed (see server logs — error is never leaked to the client) |
 
@@ -59,6 +80,15 @@ written (it only selects the destination tab).
 ### Required environment variables
 - `GOOGLE_CREDENTIALS_B64` — base64-encoded Google service-account JSON credentials
 - `GOOGLE_SHEETS_ID` — target spreadsheet ID
+- `PS_MAX_FORM_BODY_BYTES` — optional request-body cap, default `65536`
+- `PS_MIN_FORM_AGE_MS` / `PS_MAX_FORM_AGE_MS` — optional form timestamp window, defaults `2000`
+  and `7200000`
+- `PS_RATE_WINDOW_MS`, `PS_RATE_MAX_BY_IDENTITY`, `PS_RATE_MAX_BY_FORM` — optional rate-limit
+  tuning, defaults `600000`, `8`, and `40`
+- `PS_ABUSE_ALERT_WINDOW_MS`, `PS_ABUSE_ALERT_THRESHOLD_BY_FORM`,
+  `PS_ABUSE_ALERT_WEBHOOK_URL` — optional abnormal-rate alert tuning and webhook
+- `TURNSTILE_SECRET_KEY`, `RECAPTCHA_SECRET_KEY` — optional verification secrets for high-value
+  forms
 
 ---
 

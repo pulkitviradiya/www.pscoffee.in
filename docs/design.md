@@ -110,12 +110,15 @@ Transition durations are capped at 400ms.
   for that first manifesto mark.
 
 ## Tablet
-- No dedicated tablet-specific stylesheet or systematic breakpoint exists. A small number of
-  ad-hoc `@media (max-width:1024px)` rules are scattered in `wh.css` for specific components, but
-  the site has not been audited section-by-section for a 768-1024px range. **Consolidating these
-  ad-hoc breakpoints to a documented 768/1024/1280 grid was evaluated and explicitly deferred**
-  (2026-07-06) — high regression risk for a purely cosmetic-consistency gain, no live defect
-  found. Flag this to the user before doing tablet-specific work; it may need fresh audit first.
+- Portrait tablet is an active QA surface, especially the 820x1180 browser-review viewport and the
+  wider 768-1024px range. When a browser annotation says tablet or tablet portrait, verify the
+  affected section at that size and use targeted page/component rules instead of assuming desktop or
+  the 760px mobile breakpoint covers it.
+- No dedicated tablet-specific stylesheet exists. A small number of ad-hoc
+  `@media (max-width:1024px)` rules are scattered in `wh.css` for specific components.
+  Consolidating these ad-hoc breakpoints to a documented 768/1024/1280 grid was evaluated and
+  explicitly deferred (2026-07-06); keep tablet fixes targeted unless a fresh audit justifies a
+  broader breakpoint system.
 
 ## Mobile
 - Single primary breakpoint: `@media (max-width:760px)`, entirely in `assets/mobile.css`.
@@ -154,6 +157,12 @@ P.S. Coffee wordmark, brand links balanced in two compact columns, Pods and Help
 compact columns, four-thumbnail strip, `@pscoffee`, email capture, and compact legal/social bottom
 row. Keep list gaps tight and symmetrical. Do not convert the lists into large evenly spaced grids,
 do not add oversized bottom padding, and do not stretch legal links into sparse rows.
+
+### Tablet Footer
+
+Tablet portrait footer should use the compact all-page footer layout: balanced brand links, Pods,
+Help & Info, image strip, email capture, compact legal/social row, reduced vertical height, and
+`|| राधे राधे ||` shown at the right-side/footer-corner position where space allows.
 
 ### Pass/Packs Card Placeholder
 

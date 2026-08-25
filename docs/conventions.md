@@ -16,6 +16,8 @@ observed, established pattern in the codebase — not aspirational.
 - **Images**: `assets/photos/site/{page}-{description}-{desktop|mobile}.webp`. Every image added
   must be referenced in an HTML file — no orphan images. When replacing a hero image with a
   cropped version, delete the old file rather than adding a new one alongside it.
+  Before committing a deleted image asset, search the repo for its filename; do not commit the
+  deletion if any live HTML, CSS, or JS still references it.
   Every image, GIF, and video slot outside the Menu and House Favourites must have a unique
   page-and-section-specific slot ID, placeholder name, and asset filename. House Favourites may
   reuse Menu assets because it is populated directly from the Menu. When the mobile crop or ratio

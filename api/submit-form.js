@@ -1,4 +1,5 @@
 import { getSheetsClient, getSheetTitles, getSpreadsheetMeta } from './google-sheets.js';
+import { ABUSE_FIELD_NAMES, enforceAbuseControls } from './abuse-controls.js';
 
 const ALLOWED_ORIGINS = new Set([
   'https://pscoffee.in',
@@ -48,10 +49,15 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: 'Unknown form' });
   }
 
+  const abuseCheck = await enforceAbuseControls(req, data, formName);
+  if (!abuseCheck.ok) {
+    return res.status(abuseCheck.status).json({ error: abuseCheck.error });
+  }
+
   // Sanitise: drop form_name key, cap field count and value length
   const fields = Object.fromEntries(
     Object.entries(data)
-      .filter(([k]) => k !== 'form_name')
+      .filter(([k]) => k !== 'form_name' && !ABUSE_FIELD_NAMES.has(k))
       .slice(0, MAX_FIELDS)
       .map(([k, v]) => [String(k).slice(0, 64), String(v ?? '').slice(0, MAX_VALUE_LENGTH)])
   );

@@ -78,8 +78,9 @@ only, never read at session start).
 - **Always check docs/conventions.md before adding new files, folders, modules, or components.**
 - **Always `git pull origin main` before starting any work** — the other agent may have pushed
   since your last session.
-- **Never commit:** `.claude/`/`.codex/` (session config), `.image-slots.state.json`, `.DS_Store`,
-  `node_modules/`, or a `*.xlsx` workbook (delete temporary copies before committing) — all
+- **Never commit:** `.claude/`/`.codex/` (session config), `.playwright-cli/`,
+  `.image-slots.state.json`, `.DS_Store`, `node_modules/`, or a `*.xlsx` workbook (delete temporary
+  copies before committing) — all
   already in `.gitignore`, don't force-add them.
 - `output/prototype-exports/` and `output/prototype-mobile-exports/` are committed prototype
   reference artifacts, not normal page source. Do not regenerate or edit them unless the user

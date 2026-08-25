@@ -10,6 +10,7 @@
 
 # Tool-generated state files
 .image-slots.state.json
+.playwright-cli/
 
 # Vercel
 .vercel
