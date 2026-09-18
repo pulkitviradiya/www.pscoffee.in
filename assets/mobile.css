@@ -3550,3 +3550,19 @@
     transition: opacity 150ms linear !important;
   }
 }
+
+/* Pre-launch waitlist forms retain the shared field scale on narrow screens. */
+@media (max-width: 760px) {
+  .launch-signup { margin: var(--space-8) var(--space-6); padding: var(--space-5); }
+  .launch-form { width: 100%; }
+  .launch-form input, .launch-form select { font-size: 16px !important; }
+  body[data-page="app"] .app-waitlist-form { padding: var(--space-4); }
+  body[data-page="home"] .ps-launch-caption { font-size: 14px !important; }
+  .launch-form button[type="submit"] { width: 100%; }
+}
+
+@media (max-width: 760px) {
+  .footer .f-bot { display: flex !important; flex-direction: column !important; align-items: flex-start !important; gap: 12px !important; }
+  .footer .f-bot .f-legal { display: flex !important; flex-wrap: wrap !important; gap: 8px 14px !important; max-width: 100%; }
+  .footer .f-bot .f-legal a { display: inline-flex !important; align-items: center; min-height: 32px; }
+}

@@ -9457,3 +9457,64 @@ body[data-page="events"] .events-cta span {
     margin-top: 0;
   }
 }
+
+/* Pre-launch signup: one contact channel, explicit launch status and accessible controls. */
+.launch-signup {
+  max-width: 760px;
+  margin: var(--space-16) auto;
+  padding: var(--space-8);
+  background: var(--color-oat) !important;
+  border-radius: var(--radius-xl);
+  scroll-margin-top: 110px;
+}
+.launch-signup > p { margin-block: var(--space-4); }
+.launch-form { display: grid !important; grid-template-columns: 1fr !important; gap: var(--space-4) !important; }
+.launch-form [hidden] { display: none !important; }
+form[data-ps-form][hidden] { display: none !important; }
+.launch-form .field { display: grid; gap: var(--space-2); }
+.launch-form label { font-family: var(--font-body); font-size: 14px; color: var(--color-dark-roast) !important; }
+.launch-form input, .launch-form select, .launch-form textarea {
+  width: 100%; min-width: 0; min-height: 48px; padding: 12px;
+  font-family: var(--font-body); font-size: 16px;
+  color: var(--color-dark-roast) !important; background: var(--color-steam-cream, #FAF6EE) !important;
+  border: 1px solid var(--color-linen, #E8DCC8); border-radius: var(--radius-md);
+}
+.launch-form-note, .launch-form-note a { color: var(--color-dark-roast) !important; font-size: 14px !important; line-height: 1.5; }
+.launch-form-note { grid-column: 1 / -1; }
+.launch-form .err, .form-error { color: var(--color-chilli) !important; font-size: 14px !important; }
+.launch-form .err { display: none; }
+.launch-form .field.invalid .err { display: block; }
+.launch-form .field.invalid input, .launch-form .field.invalid select { border-color: var(--color-chilli) !important; }
+.launch-form button[type="submit"] { min-height: 48px; white-space: normal; line-height: 1.4; }
+body[data-page="app"] .app-waitlist-form {
+  background: var(--color-steam-cream, #FAF6EE) !important; padding: var(--space-6); border-radius: var(--radius-lg);
+}
+body[data-page="app"] .app-waitlist-form input, body[data-page="app"] .app-waitlist-form select { color: var(--color-dark-roast) !important; }
+body[data-page="app"] .app-waitlist-form .field .err { color: var(--color-chilli) !important; opacity: 1 !important; }
+body[data-page="app"] .app-waitlist-form button,
+.launch-signup button[type="submit"] { background: var(--color-terracotta-hover) !important; color: var(--color-steam-cream, #FAF6EE) !important; }
+body[data-page="feedback"] .fb-hero { background: var(--color-terracotta-hover) !important; }
+body[data-page="feedback"] .fb-hero p { color: var(--color-steam-cream, #FAF6EE) !important; opacity: 1 !important; }
+#app-waitlist, #waitlist, #pods { scroll-margin-top: 110px; }
+body[data-page="home"] .ps-launch-caption { color: var(--color-steam-cream, #FAF6EE) !important; font-size: 16px !important; line-height: 1.45 !important; margin: var(--space-4) 0 !important; }
+body[data-page="home"] .ps-launch-note { font-size: 14px !important; line-height: 1.5 !important; }
+.pods-page #pods small { display: inline-block; font-size: 12px; }
+.pods-page #pods a { text-decoration: underline; text-underline-offset: 3px; }
+.nav-burger { min-width: 44px !important; min-height: 44px !important; }
+.mobile-hero-count button { min-width: 44px !important; min-height: 44px !important; }
+.ps-pass-dots, .ps-pack-pass-dots { gap: 0 !important; }
+.ps-pass-dots button, .ps-pack-pass-dots button {
+  position: relative !important; width: 44px !important; height: 44px !important;
+  padding: 0 !important; background: transparent !important;
+}
+.ps-pass-dots button::after, .ps-pack-pass-dots button::after {
+  content: ""; position: absolute; left: 50%; top: 50%; width: 8px; height: 8px;
+  border-radius: var(--radius-pill); background: var(--color-dark-roast); transform: translate(-50%, -50%);
+}
+.ps-pass-dots button[aria-current="true"]::after, .ps-pack-pass-dots button[aria-current="true"]::after { width: 24px; background: var(--color-terracotta-hover); }
+.launch-form :focus-visible, .ps-pass-dots button:focus-visible, .ps-pack-pass-dots button:focus-visible, .mobile-hero-count button:focus-visible, .nav-burger:focus-visible {
+  outline: 2px solid var(--color-dark-roast) !important; outline-offset: 3px;
+}
+.footer .form-error { grid-column: 1 / -1; color: var(--color-steam-cream, #FAF6EE) !important; }
+.footer .news { flex-wrap: wrap; }
+.footer .form-success { color: var(--color-steam-cream, #FAF6EE) !important; }

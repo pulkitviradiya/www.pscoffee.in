@@ -35,8 +35,8 @@
     }).join("");
     return '<div class="wh-announce">'+
         '<div class="wh-announce-track">'+
-          '<span class="wh-announce-msg">100% Arabica<span class="sep">&#10022;</span>From &#8377;89<span class="sep">&#10022;</span>Ready before you arrive<span class="sep">&#10022;</span>New Pods every month<span class="sep">&#10022;</span></span>'+
-          '<span class="wh-announce-msg" aria-hidden="true">100% Arabica<span class="sep">&#10022;</span>From &#8377;89<span class="sep">&#10022;</span>Ready before you arrive<span class="sep">&#10022;</span>New Pods every month<span class="sep">&#10022;</span></span>'+
+          '<span class="wh-announce-msg">100% Arabica<span class="sep">&#10022;</span>Menu preview from &#8377;89<span class="sep">&#10022;</span>Launching soon in Gujarat<span class="sep">&#10022;</span>Join the launch waitlist<span class="sep">&#10022;</span></span>'+
+          '<span class="wh-announce-msg" aria-hidden="true">100% Arabica<span class="sep">&#10022;</span>Menu preview from &#8377;89<span class="sep">&#10022;</span>Launching soon in Gujarat<span class="sep">&#10022;</span>Join the launch waitlist<span class="sep">&#10022;</span></span>'+
         '</div>'+
       '</div>'+
       '<nav class="nav" id="psNav">'+
@@ -68,7 +68,7 @@
             '<a href="https://www.thebarista.school" target="_blank" rel="noopener">Barista School ↗</a>'+
           '</div>'+
           '<div class="f-col"><h4>Pods.</h4>'+
-            '<a href="'+localHref("pods.html#pods")+'">Visit us</a><a href="'+localHref("app.html")+'">Order ahead</a><a href="'+localHref("partnership.html#host")+'">Host a Pod</a>'+
+            '<a href="'+localHref("pods.html#pods")+'">Planned locations</a><a href="'+localHref("app.html")+'">App preview</a><a href="'+localHref("partnership.html#host")+'">Host a Pod</a>'+
           '</div>'+
           '<div class="f-col"><h4>Help & Info.</h4>'+
             '<a href="'+localHref("faq.html")+'">FAQ</a><a href="mailto:hello@pscoffee.in">Contact</a><a href="'+localHref("terms.html")+'">Terms of Use</a><a href="'+localHref("privacy.html")+'">Privacy Policy</a><a href="'+localHref("disclaimer.html")+'">General Disclaimer</a><a href="'+localHref("survey-disclosure.html")+'">Survey Notice</a><a href="'+localHref("copyright.html")+'">Copyright</a>'+
@@ -77,19 +77,20 @@
             '<span></span><span></span><span></span><span></span>'+
             '<small>@pscoffee</small>'+
           '</div>'+
-          '<div class="f-col f-email"><h4>P.S. See you in the morning.</h4>'+
-            '<p>New Pods. Usual orders. Pack reminders. No theatre, no daily friction.</p>'+
+          '<div class="f-col f-email" data-form-wrap><h4>P.S. Be first to know.</h4>'+
+            '<p>News from the build. Planned Pods. Launch updates.</p>'+
             '<form class="news" data-ps-form="newsletter">'+
+              '<input type="hidden" name="interest_type" value="launch">'+
               '<label class="visually-hidden" for="psFooterEmail">Email address</label>'+
               '<input id="psFooterEmail" name="email" type="email" required placeholder="Email address" autocomplete="email" inputmode="email" autocapitalize="none">'+
               '<button class="btn accent sm" type="submit" aria-label="Subscribe by email">&rarr;</button>'+
-            '</form>'+
+            '</form><p class="form-success" role="status">You are on the list. We will email you with launch news.</p>'+
           '</div>'+
         '</div>'+
         '<div class="f-radhe">|| राधे राधे ||</div>'+
         '<div class="f-bot">'+
           '<span>&copy; P.S. Coffee 2026</span>'+
-          '<span><a href="'+localHref("faq.html")+'">FAQ</a>&nbsp;&nbsp;&nbsp;<a href="'+localHref("terms.html")+'">Terms</a>&nbsp;&nbsp;&nbsp;<a href="'+localHref("privacy.html")+'">Privacy</a>&nbsp;&nbsp;&nbsp;<a href="'+localHref("disclaimer.html")+'">Disclaimer</a>&nbsp;&nbsp;&nbsp;<a href="'+localHref("survey-disclosure.html")+'">Survey</a>&nbsp;&nbsp;&nbsp;<a href="'+localHref("copyright.html")+'">Copyright</a></span>'+
+          '<span class="f-legal"><a href="'+localHref("faq.html")+'">FAQ</a> <a href="'+localHref("terms.html")+'">Terms</a> <a href="'+localHref("privacy.html")+'">Privacy</a> <a href="'+localHref("disclaimer.html")+'">Disclaimer</a> <a href="'+localHref("survey-disclosure.html")+'">Survey</a> <a href="'+localHref("copyright.html")+'">Copyright</a></span>'+
           '<span class="f-socials">'+
             '<a href="https://www.facebook.com/pscoffee" target="_blank" rel="noopener" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07"/></svg></a>'+
             '<a href="https://www.instagram.com/pscoffee_pods" target="_blank" rel="noopener" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>'+
@@ -186,7 +187,7 @@
     o.id = "ps-loader";
     o.innerHTML = '<div class="psl-mark">P.<span class="tc">S.</span></div>'+
                   '<div class="psl-line"><span></span></div>'+
-                  '<div class="psl-cap">Your coffee is almost ready.</div>';
+                  '<div class="psl-cap">Something good is brewing.</div>';
     document.body.appendChild(o);
     document.body.style.overflow = "hidden";
     requestAnimationFrame(function(){ o.classList.add("go"); });
@@ -268,6 +269,7 @@
       var items = target.querySelectorAll("[data-cat]");
       function applyFilter(f){
         f = f || "all";
+        if(!Array.from(tabs.querySelectorAll("[data-filter]")).some(function(p){ return p.getAttribute("data-filter") === f; })) f = "all";
         tabs.querySelectorAll("[data-filter]").forEach(function(p){
           var selected = p.getAttribute("data-filter")===f;
           p.classList.toggle("active", selected);
@@ -277,6 +279,12 @@
           var show = (f==="all") || it.getAttribute("data-cat")===f;
           it.style.display = show ? "" : "none";
         });
+        var total = target.querySelectorAll('.menu-product-wh').length;
+        var count = Array.from(items).filter(function(it){return f === 'all' || it.getAttribute('data-cat') === f;}).reduce(function(n,it){return n + it.querySelectorAll('.menu-product-wh').length;},0);
+        var label = tabs.querySelector('[data-menu-count]');
+        if(label) label.textContent = (f === 'all' ? total + ' items' : count + ' of ' + total + ' items') + '. Menu preview. Proposed prices shown.';
+        var heroLink = document.querySelector('body[data-page="menu"] .menu-hero-copy a');
+        if(heroLink) heroLink.setAttribute('href', '#menu-' + (f === 'all' ? 'coffee' : f));
       }
       tabs.querySelectorAll("[data-filter]").forEach(function(pill){
         pill.setAttribute("role", "tab");
@@ -294,9 +302,9 @@
       var requested = new URLSearchParams(location.search).get("cat");
       if(!requested && location.hash){
         var h = location.hash.replace("#menu-","");
-        if(h==="coffee" || h==="matcha" || h==="food") requested = h;
+        if(h==="coffee" || h==="matcha" || h==="protein" || h==="food") requested = h;
       }
-      if(requested) applyFilter(requested);
+      applyFilter(requested || "all");
     });
     document.querySelectorAll("[data-menu-link]").forEach(function(card){
       card.setAttribute("role", "link");
@@ -453,9 +461,44 @@
     });
   }
 
+  function launchForms(){
+    document.querySelectorAll('[data-launch-form]').forEach(function(form){
+      var method = form.elements.contact_method;
+      var area = form.elements.area;
+      function sync(){
+        form.querySelectorAll('[data-contact]').forEach(function(field){
+          var active = field.getAttribute('data-contact') === method.value;
+          field.hidden = !active;
+          var input = field.querySelector('input');
+          input.disabled = !active;
+          input.required = active;
+          input.setAttribute('aria-required', active ? 'true' : 'false');
+          if(!active){ input.value = ''; input.removeAttribute('aria-invalid'); field.classList.remove('invalid'); }
+        });
+        var other = form.querySelector('[data-other-area]');
+        if(other){
+          var active = area.value === 'other';
+          other.hidden = !active;
+          var input = other.querySelector('input');
+          input.disabled = !active;
+          input.required = active;
+          input.setAttribute('aria-required', active ? 'true' : 'false');
+          if(!active){ input.value = ''; input.removeAttribute('aria-invalid'); other.classList.remove('invalid'); }
+        }
+      }
+      method.addEventListener('change', sync);
+      if(area) area.addEventListener('change', sync);
+      var requested = new URLSearchParams(location.search).get('area');
+      if(area && requested && Array.from(area.options).some(function(option){return option.value === requested;})) area.value = requested;
+      sync();
+    });
+  }
+
   /* ---------- forms ---------- */
   var PS_CONVERSION_EVENTS = {
-    "newsletter": { event: "sign_up", type: "newsletter", value: 1 },
+    "newsletter": { event: "sign_up", type: "launch_updates", value: 1 },
+    "pod-waitlist": { event: "sign_up", type: "pods", value: 1 },
+    "app-waitlist": { event: "sign_up", type: "app", value: 1 },
     "pack-enquiry": { event: "generate_lead", type: "ps_pass", value: 25 },
     "partnership-enquiry": { event: "generate_lead", type: "host_pod", value: 250 },
     "event-enquiry": { event: "generate_lead", type: "events", value: 100 },
@@ -531,6 +574,9 @@
     PS_CONVERSION_CONTEXT_KEYS.forEach(function(key){
       if(payload && payload[key]) detail[key] = payload[key];
     });
+    // Only fixed choices can enter analytics; contact and suggested-area text stay in Sheets.
+    if(payload && ['pods','app','pass','launch'].indexOf(payload.interest_type) !== -1) detail.interest_type = payload.interest_type;
+    if(payload && ['prahladnagar','sg-highway','gift-city','tcs','sbr','makarba','other'].indexOf(payload.area) !== -1) detail.area = payload.area;
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push(detail);
     if(typeof window.gtag === "function"){
@@ -538,7 +584,9 @@
         event_category: "lead",
         event_label: formName,
         value: cfg.value,
-        currency: "INR"
+        currency: "INR",
+        interest_type: detail.interest_type,
+        area: detail.area
       });
     }
     if(typeof window.fbq === "function"){
@@ -574,21 +622,15 @@
         form.querySelectorAll("[required]").forEach(function(input){
           var field = input.closest(".field");
           var val = (input.value||"").trim();
-          var good = !!val;
+          var good = input.disabled || (!!val && input.checkValidity());
           if(input.type==="email"){ good = good && /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(val); }
           if(field){ field.classList.toggle("invalid", !good); }
           input.setAttribute("aria-invalid", good ? "false" : "true");
           if(!good) ok = false;
         });
-        if(!ok){ var bad = form.querySelector(".field.invalid input,.field.invalid textarea,.field.invalid select"); if(bad) bad.focus(); return; }
-        if(form.getAttribute('data-ps-form')==='newsletter'){
-          var emailInput = form.querySelector('input[name="email"]');
-          trackConversion(form, { form_name: "newsletter" });
-          if(emailInput) window.location.href='mailto:hello@pscoffee.in?subject=Subscribe&body='+encodeURIComponent(emailInput.value);
-          form.reset();
-          return;
-        }
-
+        if(!ok){ var bad = form.querySelector('[aria-invalid="true"]'); if(bad) bad.focus(); return; }
+        var previousError = form.querySelector(".form-error");
+        if(previousError) previousError.remove();
         setSubmitting(form, true);
         var controller = typeof AbortController === "function" ? new AbortController() : null;
         var timeout = controller ? setTimeout(function(){ controller.abort(); }, 15000) : null;
@@ -618,6 +660,7 @@
           var wrap = form.closest("[data-form-wrap]");
           var success = wrap ? wrap.querySelector(".form-success") : null;
           if(success){
+            form.hidden = true;
             form.style.display="none";
             success.classList.add("show");
             success.setAttribute("role", "status");
@@ -628,7 +671,9 @@
             form.reset();
           }
         }catch(err){
-          showToast('Could not send.', ' Please try again or email hello@pscoffee.in.');
+          var error = form.querySelector('.form-error');
+          if(!error){ error = document.createElement('p'); error.className = 'form-error'; error.setAttribute('role', 'alert'); form.appendChild(error); }
+          error.textContent = 'Could not send. Your details are still here. Please try again or email hello@pscoffee.in.';
         }finally{
           if(timeout) clearTimeout(timeout);
           setSubmitting(form, false);
@@ -932,7 +977,7 @@
   /* ---------- boot ---------- */
   twApply(twRead());
   function init(){
-    inject(); accessibility(); modalAccessibility(); navBehaviour(); heroSlider(); faq(); reveal();
+    inject(); launchForms(); accessibility(); modalAccessibility(); navBehaviour(); heroSlider(); faq(); reveal();
     filters(); chips(); cart(); forms(); anchors();
     onIdle(nectarSignature, 1200);
     // Tweaks panel is only useful inside an edit/preview parent frame.

@@ -7,3 +7,4 @@ node_modules/
 output/prototype-exports/
 output/prototype-mobile-exports/
 output/prototype-f-mobile-exports/
+tests/

@@ -1,4 +1,5 @@
 import { getSheetsClient, getSheetTitles, getSpreadsheetMeta } from './google-sheets.js';
+import { alignSheetRow, validateLaunchForm } from './launch-forms.js';
 import { ABUSE_FIELD_NAMES, enforceAbuseControls } from './abuse-controls.js';
 
 const ALLOWED_ORIGINS = new Set([
@@ -10,6 +11,7 @@ const ALLOWED_ORIGINS = new Set([
 // strings from becoming arbitrary Google Sheet tab names.
 const ALLOWED_FORMS = new Set([
   'newsletter',
+  'pod-waitlist',
   'app-waitlist',
   'feedback',
   'event-enquiry',
@@ -54,6 +56,10 @@ export default async function handler(req, res) {
     return res.status(abuseCheck.status).json({ error: abuseCheck.error });
   }
 
+  if (!validateLaunchForm(formName, data)) {
+    return res.status(400).json({ error: 'Please check the required fields' });
+  }
+
   // Sanitise: drop form_name key, cap field count and value length
   const fields = Object.fromEntries(
     Object.entries(data)
@@ -76,22 +82,22 @@ export default async function handler(req, res) {
       });
     }
 
-    const keys = Object.keys(fields);
-
     const check = await sheets.spreadsheets.values.get({
       spreadsheetId,
-      range: `${formName}!A1`,
+      range: `'${formName}'!1:1`,
     });
-    if (!check.data.values || check.data.values.length === 0) {
-      await sheets.spreadsheets.values.append({
+    const existingHeaders = check.data.values?.[0] || [];
+    const { headers, row } = alignSheetRow(existingHeaders, fields, formName, new Date().toISOString());
+    if (headers.length !== existingHeaders.length) {
+      // New forms have a complete, deterministic header even when optional fields are absent.
+      await sheets.spreadsheets.values.update({
         spreadsheetId,
-        range: `${formName}!A1`,
+        range: `'${formName}'!A1`,
         valueInputOption: 'RAW',
-        requestBody: { values: [['Timestamp', ...keys]] },
+        requestBody: { values: [headers] },
       });
     }
 
-    const row = [new Date().toISOString(), ...keys.map(k => fields[k])];
     await sheets.spreadsheets.values.append({
       spreadsheetId,
       range: `${formName}!A1`,

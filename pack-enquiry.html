@@ -5,18 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <link rel="icon" type="image/png" href="assets/icons/ps-coffee_icon_terracotta_32.png">
 <link rel="apple-touch-icon" href="assets/icons/ps-coffee_icon_terracotta_180.png">
-<title>P.S. Coffee. | Get Your Pack.</title>
-<meta name="description" content="Tell us which Pack you want and we will sort it. Individual, team, or a customised corporate plan. Your coffee, already paid for.">
+<title>P.S. Coffee. | Pass Launch Interest.</title>
+<meta name="description" content="Register interest in a future P.S. Pass for yourself or your team. No payment is taken. We will share launch details when ready.">
 <link rel="canonical" href="https://www.pscoffee.in/pack-enquiry">
 <meta property="og:title" content="Get Your P.S. Pack. | P.S. Coffee.">
-<meta property="og:description" content="Pick your Pack. Individual or team. No auto-renew, no lock-in. Specialty coffee, already paid for.">
+<meta property="og:description" content="Register interest in a future P.S. Pass for yourself or your team. No payment is taken. We will share launch details when ready.">
 <meta property="og:url" content="https://www.pscoffee.in/pack-enquiry">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://www.pscoffee.in/assets/photos/pack-pass-full-pour-card-v2.webp">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="assets/ps.css">
-<link rel="stylesheet" href="assets/wh.css?v=108">
-<link rel="stylesheet" href="assets/mobile.css?v=76">
+<link rel="stylesheet" href="assets/wh.css?v=110">
+<link rel="stylesheet" href="assets/mobile.css?v=78">
 <style>
 body[data-page="pack-enquiry"] {
   background: var(--ps-steam);
@@ -306,16 +306,16 @@ body[data-page="pack-enquiry"] .pe-page {
   <section class="pe-hero">
     <div class="pe-copy">
       <p class="pe-kicker">P.S. Pack.</p>
-      <h1>Your coffee, already paid for.</h1>
-      <p class="pe-sub">Individual habit or company-wide perk. Tell us which Pack you want and we will sort it. No auto-renew. No lock-in. No bad coffee mornings.</p>
-      <div class="pe-note"><strong>P.S.:</strong> Teams and co-working spaces get a customised plan. Prepay, pool, and skip the reimbursement headache.</div>
+      <h1>Your future coffee habit.</h1>
+      <p class="pe-sub">The P.S. Pass is still in development. Tell us which Pass interests you and we will share launch news. No purchase or payment is taken here.</p>
+      <div class="pe-note"><strong>P.S.:</strong> Planning for a team? Share your needs below so we can shape the options.</div>
     </div>
 
     <div class="pe-form-card" data-form-wrap>
-      <h2>Get your Pack.</h2>
-      <p>Tell us which Pack you are after and whether it is for you personally or your team. We will come back with the next step.</p>
+      <h2>Register your interest.</h2>
+      <p>Choose a Pass and one way to reach you. We will contact you when launch details are ready. Prices and terms are previews, subject to confirmation.</p>
       <p class="pe-direct-email">Prefer email? <a href="mailto:hello@pscoffee.in?subject=P.S.%20Pack%20Enquiry">hello@pscoffee.in</a></p>
-      <form class="form" data-ps-form="pack-enquiry">
+      <form class="form launch-form" data-ps-form="pack-enquiry" data-launch-form>
 
         <p class="pe-section-label">The Pack</p>
         <div class="row-2">
@@ -351,31 +351,10 @@ body[data-page="pack-enquiry"] .pe-page {
           </div>
         </div>
 
-        <p class="pe-section-label">About You</p>
-        <div class="row-2">
-          <div class="field">
-            <label>Your name</label>
-            <input type="text" name="name" required placeholder="Full name">
-            <span class="err">Required</span>
-          </div>
-          <div class="field">
-            <label>Mobile</label>
-            <input type="tel" name="mobile" required placeholder="+91 98765 43210">
-            <span class="err">Required</span>
-          </div>
-        </div>
-        <div class="row-2">
-          <div class="field">
-            <label>Email</label>
-            <input type="email" name="email" required placeholder="you@company.com">
-            <span class="err">Valid email required</span>
-          </div>
-          <div class="field">
-            <label>City / Location</label>
-            <input type="text" name="city" required placeholder="Ahmedabad, Surat…">
-            <span class="err">Required</span>
-          </div>
-        </div>
+        <input type="hidden" name="interest_type" value="pass">
+        <p class="pe-section-label">Launch updates</p>
+        <div class="field"><label>Preferred area</label><select name="area" required><option value="">Choose your area</option><option value="prahladnagar">Prahladnagar, Ahmedabad</option><option value="sg-highway">SG Highway, Ahmedabad</option><option value="gift-city">Gift City, Gandhinagar</option><option value="tcs">TCS area, Gandhinagar</option><option value="sbr">SBR, Ahmedabad</option><option value="makarba">Makarba, Ahmedabad</option><option value="other">Suggest another area</option></select><span class="err">Choose an area.</span></div><div class="field" data-other-area hidden><label>Your area and city</label><input name="area_other" maxlength="120" disabled placeholder="Area, city"><span class="err">Tell us your area and city.</span></div><div class="field"><label>How should we notify you?</label><select name="contact_method"><option value="email">Email</option><option value="whatsapp">WhatsApp</option></select></div><div class="field" data-contact="email"><label>Email address</label><input name="email" type="email" autocomplete="email" required placeholder="you@example.com"><span class="err">Enter a valid email address.</span></div><div class="field" data-contact="whatsapp" hidden><label>WhatsApp number, including country code</label><input name="mobile" type="tel" autocomplete="tel" disabled placeholder="+91 98765 43210" pattern="[+0-9() .-]{8,24}"><span class="err">Enter a valid number with country code.</span></div>
+        <div class="field"><label>Your name (optional)</label><input name="name" autocomplete="name" placeholder="Your name"></div>
 
         <div class="pe-business-fields" id="peBusinessFields">
           <p class="pe-section-label">Team &amp; Company Details</p>
@@ -419,17 +398,17 @@ body[data-page="pack-enquiry"] .pe-page {
           <textarea name="notes" placeholder="Questions about the Pack, specific requests, or anything that helps us get back to you faster."></textarea>
         </div>
 
-        <button class="form-submit" type="submit">Get my Pack &nbsp;→</button>
+        <button class="form-submit" type="submit">I am interested in this Pass →</button>
       </form>
       <div class="form-success" role="status">
-        <h3>We are on it.</h3>
-        <p>We have your details. We will get back to you with the next step. For anything urgent, write directly to <a href="mailto:hello@pscoffee.in">hello@pscoffee.in</a>.</p>
+        <h3>Your interest is registered.</h3>
+        <p>We have saved your Pass preference. No payment has been taken. We will share launch details when ready. Questions? Write to <a href="mailto:hello@pscoffee.in">hello@pscoffee.in</a>.</p>
       </div>
       <div class="pe-meta">
-        <span>No auto-renew</span>
-        <span>No lock-in</span>
-        <span>Save up to 25%</span>
-        <span>Team plans available</span>
+        <span>Pre-launch interest</span>
+        <span>No payment taken</span>
+        <span>Proposed pricing</span>
+        <span>Team plans in development</span>
       </div>
     </div>
 
@@ -442,20 +421,9 @@ body[data-page="pack-enquiry"] .pe-page {
   </div>
 </main>
 
-<!-- ── Success modal ── -->
-<div class="pe-modal-overlay" id="peModal" role="dialog" aria-modal="true" aria-labelledby="peModalTitle">
-  <div class="pe-modal-card">
-    <button class="pe-modal-x" id="peModalX" aria-label="Close">✕</button>
-    <span class="pe-modal-icon">☕</span>
-    <h2 id="peModalTitle">Your Pack is on its way.</h2>
-    <p>We have your details. We will be in touch with the next step shortly. Your coffee is basically already paid for.</p>
-    <button class="pe-modal-close-btn" id="peModalClose">Got it →</button>
-  </div>
-</div>
-
 <div id="ps-footer"></div>
 <script src="assets/image-slot.js?v=3"></script>
-<script src="assets/ps.js?v=44"></script>
+<script src="assets/ps.js?v=46"></script>
 <script src="assets/mobile.js?v=5"></script>
 <script>
 (function(){
@@ -468,7 +436,7 @@ body[data-page="pack-enquiry"] .pe-page {
   var bizFields = document.getElementById('peBusinessFields');
 
   if(packParam && packSelect){
-    var opt = packSelect.querySelector('option[value="' + packParam + '"]');
+    var opt = Array.from(packSelect.options).find(function(option){ return option.value === packParam; });
     if(opt) packSelect.value = packParam;
   }
   if(typeParam === 'business' && typeSelect){
@@ -485,24 +453,6 @@ body[data-page="pack-enquiry"] .pe-page {
     }
   });
 
-  /* ── Modal ── */
-  var modal = document.getElementById('peModal');
-  function open(){ modal.classList.add('on'); }
-  function close(){ modal.classList.remove('on'); }
-  document.getElementById('peModalClose').addEventListener('click', close);
-  document.getElementById('peModalX').addEventListener('click', close);
-  modal.addEventListener('click', function(e){ if(e.target === modal) close(); });
-  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') close(); });
-  document.querySelectorAll('.form-success').forEach(function(el){
-    new MutationObserver(function(){
-      if(el.classList.contains('show')) open();
-    }).observe(el, { attributes: true, attributeFilter: ['class'] });
-  });
-
-  /* suppress inline success banner */
-  var s = document.createElement('style');
-  s.textContent = 'body[data-page="pack-enquiry"] .form-success.show{display:none!important}';
-  document.head.appendChild(s);
 })();
 </script>
 <script type="application/ld+json">

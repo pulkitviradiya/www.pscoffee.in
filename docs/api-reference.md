@@ -32,7 +32,7 @@ Allowed origins: `https://pscoffee.in`, `https://www.pscoffee.in` (falls back to
 ```
 
 Allowlisted `form_name` values (adding a new form requires adding it here):
-`newsletter`, `app-waitlist`, `feedback`, `event-enquiry`, `join-barista`, `join-ops`, `join-craft`,
+`newsletter`, `pod-waitlist`, `app-waitlist`, `feedback`, `event-enquiry`, `join-barista`, `join-ops`, `join-craft`,
 `join-trade`, `join-founders`, `join-investor`, `pack-enquiry`, `partnership-enquiry`.
 
 Adding a new conversion form also requires updating `PS_CONVERSION_EVENTS` in `assets/ps.js` and
@@ -58,12 +58,19 @@ High-value forms (`event-enquiry`, `join-founders`, `join-investor`, `pack-enqui
 the corresponding secret environment variable. If the secret is unset, the CAPTCHA check is
 skipped so the current static forms continue to work without visible challenge widgets.
 
+### Launch form contract
+
+`pod-waitlist`, `app-waitlist`, and `pack-enquiry` accept a fixed `area` choice, optional `area_other` (required for `other`, max 120 characters), and `contact_method` (`email` or `whatsapp`). Only the selected contact channel is required. Pass uses `mobile` for WhatsApp to preserve its historical column. Pass choice and enquiry type are validated against fixed options. Newsletter requires a valid email. Validation runs after abuse checks and before Sheets access. Cached original App/Pass forms without `contact_method` remain supported with a valid email.
+
+`interest_type` is set by each form (`pods`, `app`, `pass`, or `launch`). Analytics includes only fixed area codes and fixed interest values; suggested areas and contact details remain out of analytics. Successful submission hides the form, announces an inline confirmation, and does not redirect to the feedback survey.
+
 ### Response
 | Status | Body | Meaning |
 |---|---|---|
 | 200 | `{"status":"ok"}` | Row appended successfully |
 | 400 | `{"error":"Unknown form"}` | Missing or non-allowlisted `form_name` |
 | 400 | `{"error":"Invalid submission"}` | Honeypot, timestamp, token, or optional CAPTCHA verification failed |
+| 400 | `{"error":"Please check the required fields"}` | Launch form contact, area or Pass choice is invalid |
 | 413 | `{"error":"Request too large"}` | JSON body exceeds the configured request-size cap |
 | 429 | `{"error":"Too many submissions"}` | Rate limit exceeded for the identity or form |
 | 405 | `{"error":"Method not allowed"}` | Non-POST, non-OPTIONS request |
@@ -71,7 +78,8 @@ skipped so the current static forms continue to work without visible challenge w
 
 ### Behaviour notes
 - Creates the sheet tab on first use if it doesn't already exist (`addSheet`).
-- Writes a header row (`Timestamp`, then each field key) only if the tab is currently empty.
+- Reads the existing header row and maps values by field name, preserving historical column positions. New fields are appended to the header without shifting existing rows.
+- Launch forms use deterministic headers in `api/launch-forms.js`, including both contact channels even when one is blank.
 - Every row's first column is `new Date().toISOString()`.
 - Analytics is client-side only: successful form submissions are tracked in `assets/ps.js`, not in
   this serverless function. Server-side Sheets writes must remain independent from GA4 so form
