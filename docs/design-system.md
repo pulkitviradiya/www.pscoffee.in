@@ -17,36 +17,24 @@ one-time snapshot, it's meant to be updated in place when a newer brand kit expo
 
 ## Brand Foundation (01–05)
 
-### 01 · Five Pillars, in order
-Quality and pricing come before reach, tech, and presence.
-1. **Spot On Quality** — 100% Arabica specialty-grade, no Robusta cut, no chicory. Same standard for milk/water temp/grind/pull time. "P.S. = Perfectly Sourced."
-2. **Spot On Pricing** — entry ₹89, range ₹89–189, up to 40% below high-end cafés. "We lowered the overhead, not the standard."
-3. **Spot On Reachability** — Pods live inside co-working spaces, corporate campuses, universities, gyms — not standalone cafés hoping to be found.
-4. **Spot On Technology** — 3-tap ordering, pick-up time selection, smart favourites, nearest-Pod finder.
-5. **Spot On Presence** — built for every hour awake: 6am gym crowd → 9am rush → 3pm slump → post-dinner matcha.
+### 01 · Brand positioning and pillars
+Updated from Master Copy System v4. The positioning line is “We take coffee very seriously, as well as the drama.” Use it on Home and About. Quality, range and reachability lead customer copy; pricing arguments do not.
 
-**The long game:** price wins the first cup, craft wins the thousandth. Lead with price at Trial, lead with craft by Anchored (see 02). Price is easy for a competitor to copy; loyalty is built on feeling, not savings.
+The menu has two layers: The Letter, with Black, White, Green and Strong, and The P.S., the numbered variants behind them. Existing website menu items and prices are retained at the user's instruction; examples in the copy document are not new confirmed products.
 
-### 02 · Brand Psychology
-P.S. Coffee is in the **habit business**, not the coffee business.
-- **Habit architecture**: Week 1 Trial (curious, first-cup honesty) → Week 2–3 Forming (app friction near-zero, favourites learned) → Month 1 Established (subscription converts) → Month 3+ Anchored ("P.S. is infrastructure, like Wi-Fi").
-- **Postscript psychology**: P.S. is the thought added after you think you're done — the cup you almost skipped that changed the morning. "We are not trying to be the headline. We are trying to be the P.S."
-- **Anti-pretense contract**: specialty grade, grab-and-go, honest price, no origin-story theatre required before you can drink.
+### 02 · Brand psychology
+Build for the daily cup: a familiar usual with a range worth returning to. Pods are planned in and around workplaces, campuses, gyms and nearby corners. Ahmedabad first. Do not imply the Pods, app or Pass are live.
 
-### 03 · Voice & Tone — six principles
-Direct · Warm · Witty (dry, earned, never forced) · Honest (states facts, no overselling) · Confident (no apologising for being a QSR) · Personal (like a letter to one person).
-**The P.S. Test**: "Read it out loud. If it sounds like a brand, rewrite it. If it sounds like someone you trust talking directly to you, publish it."
+### 03 · Voice and tone
+Two registers: plain functional information and a brief, dry postscript. Direct, warm and specific. No price defence, competitor comparisons, species-based quality claims or invented operational proof. Use “honest specialty coffee” where stronger sourcing claims are not substantiated.
 
-### 04 · Naming & Brand Language
-- **"Pods"**, always capitalised — never "outlets," "cafes," "kiosks," "branches." A pod is the smallest self-sufficient unit; each Pod is a complete operation in 50–200 sq ft.
-- **Three pillars, in order, everywhere**: Spot On Quality · Spot On Pricing · Spot On Reachability.
-- **Layered meaning of "P.S."** (context-dependent, letters never change): Postscript (core identity) · Perfectly Sourced (beans page) · Pour Slowly (craft) · Proudly Specialty (menu/quality) · Plain & Simple (anti-pretense copy) · Pretty Serious (B2B/corporate) · Precisely Steeped (matcha-only) · Personal sign-off (emails/notifications).
+### 04 · Naming and brand language
+Always Pods. The permitted P.S. readings are Postscript, Pretty Serious and Plain & Simple. Retire Perfectly Sourced, Pour Slowly, Proudly Specialty, Precisely Steeped and Personal sign-off. The app uses The Usual; the three-tap phrase is withdrawn. The Pass is still taking shape. Editorial is The P.S. Journal; existing URLs and classes stay intact.
 
-### 05 · Signature Copy System
-Every piece of copy ends with or contains a P.S. line.
-- **Flagship lines**: "P.S. Your coffee is ready." / "P.S. You deserve this break." / "P.S. Tomorrow starts now." / "P.S. One more coffee?" / "P.S. See you in the morning."
-- **Non-negotiables**: always end with a P.S. line where possible; address the reader as "you"; state quality facts plainly ("100% Arabica," not "crafted"); always "Pods"; price honestly alongside any quality claim.
-- **Never**: "crafted," "artisanal," "curated," "journey," "passionate about coffee," "premium"; a product description over two lines; apologising for being a QSR; exclamation marks in serious copy.
+### 05 · Signature copy system
+P.S. followed by a space, with no colon or dash. At most three sign-offs per page, at the end of a section. Never force a sign-off onto every card. Family names such as P.S. Black are product labels, not sign-offs. Prices belong on the Menu as data, not in homepage headlines.
+
+Full source: [Master Copy System v4](master-copy-system-v4.md). Website amendments: [copy-system.md](copy-system.md). The visual sections below are unchanged.
 
 ---
 
@@ -277,7 +265,7 @@ Background carries each Pass identity through the approved photography or colour
 - **FAQ accordion**: active category Terracotta fill, inactive Cream + Linen outline — categories never switch to Ceremonial on the FAQ page even for a matcha question. Collapsed chevron: plain outline circle, no tint. Expanded: filled Terracotta circle (rotated), Terracotta left border, Nectar Wash background — the state change is the colour, not just the chevron.
 
 ### 38 · Applied: Sample Layouts
-Reference compositions showing the system in practice — one website hero in Terracotta mood (home hero: wordmark nav, "100% Arabica · From ₹89," find-a-Pod CTA), one app screen in Ceremonial mood (matcha order screen) — same bold-colour logic, two different chapters.
+Reference compositions showing the system in practice — one website hero in Terracotta mood (home hero: wordmark nav, "Honest specialty coffee," opening-waitlist CTA), one app screen in Ceremonial mood (matcha order screen) — same bold-colour logic, two different chapters.
 
 ---
 

@@ -1583,7 +1583,7 @@ body[data-page="menu"] .page-top {
   top: var(--wh-header-h);
   z-index: 20;
   display: grid;
-  grid-template-columns: auto auto auto auto auto 1fr;
+  grid-template-columns: auto auto auto auto 1fr;
   gap: 2rem;
   align-items: center;
   padding: .8rem var(--wh-gut);
@@ -9518,3 +9518,19 @@ body[data-page="home"] .ps-launch-note { font-size: 14px !important; line-height
 .footer .form-error { grid-column: 1 / -1; color: var(--color-steam-cream, #FAF6EE) !important; }
 .footer .news { flex-wrap: wrap; }
 .footer .form-success { color: var(--color-steam-cream, #FAF6EE) !important; }
+
+/* Opening updates retain the announcement strip typography. */
+.wh-announce a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+
+/* Matcha retains its ceremonial accent within the new menu layers. */
+#menu-green, .menu-product-wh[data-family="green"] .menu-product-price strong { color: var(--color-ceremonial, #3D6B4A) !important; }
+
+/* Editable prelaunch app concepts: keep preview copy in the same audit surface as page copy. */
+.ps-concept-phone{box-sizing:border-box;width:min(100%,320px);min-height:380px;margin:auto;padding:var(--space-6);display:flex;flex-direction:column;gap:var(--space-5);background:var(--color-steam-cream);border:2px solid var(--color-linen);border-radius:var(--radius-xl);font-family:var(--font-body);color:var(--color-espresso)!important;text-align:left;}
+.ps-concept-phone>strong{font-family:var(--font-display);font-size:clamp(24px,3vw,36px);line-height:1.1;color:var(--color-terracotta)!important;}
+.ps-concept-label{font-size:11px;text-transform:uppercase;letter-spacing:.06em;}
+.ps-concept-rows{display:grid;gap:var(--space-3);}
+.ps-concept-rows>div{padding:var(--space-4);border-radius:var(--radius-md);background:var(--color-oat);color:var(--color-espresso)!important;}
+.ps-concept-status{margin-top:auto;padding:var(--space-3);border-radius:var(--radius-md);background:var(--color-terracotta);color:var(--color-steam-cream)!important;text-align:center;font-size:12px;}
+body[data-page="app"] .app-motion-media .ps-concept-phone{width:100%;min-height:350px;padding:var(--space-4);}
+body[data-page="app"] .app-motion-media .ps-concept-phone>strong{font-size:24px;}

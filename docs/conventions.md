@@ -28,8 +28,7 @@ observed, established pattern in the codebase — not aspirational.
   Images in `assets/photos/site/` are cached immutably by Vercel for 1 year — if you replace a
   file's contents, **rename it** (Vercel will keep serving the old cached bytes at the old name).
 - **CSS classes**: blog/journal components keep the `journal-` prefix internally
-  (`.journal-post-body`, `.journal-faq`) even though nothing user-visible says "Journal" anymore
-  (renamed to "Blog"/"Blogs" everywhere user-facing) — do not rename these classes, it would break
+  (`.journal-post-body`, `.journal-faq`) with "The P.S. Journal" as the user-visible name under Master Copy v4 — do not rename these classes, it would break
   styling across wh.css, mobile.css, and every blog HTML file.
 - **Branches**: single `main` branch only at present; both Claude and Codex push directly to it.
 
@@ -65,7 +64,7 @@ Every file in `blog/` follows:
 - The FAQ toggle is handled centrally by `ps.js`'s `faq()` function (adds/removes `.open` on
   `.faq-item`). **Never add an inline `<script>` in a blog post to handle FAQ clicks** — it will
   fire twice and break the toggle (this bug shipped once already).
-- Kicker line reads `The P.S. Blog. · [category] · [topic]` — always "Blog", never "Journal".
+- Kicker line reads `The P.S. Journal. · [category] · [topic]` under Master Copy v4.
 
 ### Menu — adding or removing a filter category
 Do all steps in one commit:
@@ -74,7 +73,7 @@ Do all steps in one commit:
 3. Update `grid-template-columns` on `.menu-filter-wh` in `wh.css` — one `auto` per button, plus
    `1fr` at the end (5 buttons = `auto auto auto auto auto 1fr`).
 4. Add/remove the `<a data-fav-cat="X">` tab in `.wh-favourites nav` in `index.html`.
-5. Add/remove `'X'` in the `['coffee','matcha','protein','food']` fetch array in `index.html`.
+5. Add/remove `'X'` in the `['letter','ps','food']` fetch array in `index.html`.
 6. Add a colour rule for `button[data-filter="X"]` and `#menu-X h2` in the theme block in `wh.css`.
 
 Menu card layout rule: `margin-top:auto` must be on `.menu-product-note`, **not**

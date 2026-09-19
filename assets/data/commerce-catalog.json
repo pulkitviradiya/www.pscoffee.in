@@ -18,104 +18,70 @@
   },
   "products": [
     {
-      "id": "ps-pass-black",
-      "title": "The Black Pack",
-      "category": "P.S. Pass",
-      "price": 749,
-      "currency": "INR",
-      "url": "https://www.pscoffee.in/pack-enquiry?pack=black",
-      "availability": "preorder",
-      "description": "10 black coffees. Espresso, Americano, and Iced Americano."
-    },
-    {
-      "id": "ps-pass-starter",
-      "title": "The Starter Pack",
-      "category": "P.S. Pass",
-      "price": 1099,
-      "currency": "INR",
-      "url": "https://www.pscoffee.in/pack-enquiry?pack=starter",
-      "availability": "preorder",
-      "description": "10 full-menu coffee redemptions, built for a light daily habit."
-    },
-    {
-      "id": "ps-pass-habit",
-      "title": "The Habit Pack",
-      "category": "P.S. Pass",
-      "price": 1899,
-      "currency": "INR",
-      "url": "https://www.pscoffee.in/pack-enquiry?pack=habit",
-      "availability": "preorder",
-      "description": "20 full-menu coffee redemptions for a regular P.S. Coffee habit."
-    },
-    {
-      "id": "ps-pass-full-pour",
-      "title": "The Full Pour",
-      "category": "P.S. Pass",
-      "price": 2899,
-      "currency": "INR",
-      "url": "https://www.pscoffee.in/pack-enquiry?pack=full-pour",
-      "availability": "preorder",
-      "description": "20 redemptions across the full coffee and matcha range."
-    },
-    {
       "id": "menu-espresso-doppio",
       "title": "Espresso/Doppio",
-      "category": "Coffee",
+      "category": "P.S. Black",
       "price": 99,
       "currency": "INR",
-      "url": "https://www.pscoffee.in/menu#menu-coffee",
-      "availability": "in_store_only",
-      "description": "Double shot. Freshly ground, freshly pulled espresso."
+      "url": "https://www.pscoffee.in/menu",
+      "availability": "planned",
+      "description": "Double shot. Freshly ground, freshly pulled espresso.",
+      "price_status": "proposed"
     },
     {
       "id": "menu-americano",
       "title": "Americano",
-      "category": "Coffee",
+      "category": "P.S. Black",
       "price": 119,
       "currency": "INR",
-      "url": "https://www.pscoffee.in/menu#menu-coffee",
-      "availability": "in_store_only",
-      "description": "Espresso topped up with hot water."
+      "url": "https://www.pscoffee.in/menu",
+      "availability": "planned",
+      "description": "Espresso topped up with hot water.",
+      "price_status": "proposed"
     },
     {
       "id": "menu-iced-americano",
       "title": "Iced Americano",
-      "category": "Coffee",
+      "category": "P.S. Black",
       "price": 129,
       "currency": "INR",
-      "url": "https://www.pscoffee.in/menu#menu-coffee",
-      "availability": "in_store_only",
-      "description": "Espresso poured over ice and chilled water."
+      "url": "https://www.pscoffee.in/menu",
+      "availability": "planned",
+      "description": "Espresso poured over ice and chilled water.",
+      "price_status": "proposed"
     },
     {
       "id": "menu-cold-brew",
       "title": "Cold Brew",
-      "category": "Coffee",
+      "category": "P.S. Black",
       "price": 169,
       "currency": "INR",
-      "url": "https://www.pscoffee.in/menu#menu-coffee",
-      "availability": "in_store_only",
-      "description": "Slow-steeped cold coffee, clean and strong."
+      "url": "https://www.pscoffee.in/menu",
+      "availability": "planned",
+      "description": "Slow-steeped cold coffee, clean and strong.",
+      "price_status": "proposed"
     },
     {
       "id": "menu-hot-matcha-latte",
       "title": "Hot Matcha Latte",
-      "category": "Matcha",
+      "category": "P.S. Green",
       "price": 199,
       "currency": "INR",
-      "url": "https://www.pscoffee.in/menu#menu-matcha",
-      "availability": "in_store_only",
-      "description": "Ceremonial-grade matcha whisked with steamed milk."
+      "url": "https://www.pscoffee.in/menu",
+      "availability": "planned",
+      "description": "Ceremonial-grade matcha whisked with steamed milk.",
+      "price_status": "proposed"
     },
     {
       "id": "menu-iced-matcha",
       "title": "Iced Matcha",
-      "category": "Matcha",
+      "category": "P.S. Green",
       "price": 189,
       "currency": "INR",
-      "url": "https://www.pscoffee.in/menu#menu-matcha",
-      "availability": "in_store_only",
-      "description": "Ceremonial-grade matcha over cold milk and ice."
+      "url": "https://www.pscoffee.in/menu",
+      "availability": "planned",
+      "description": "Ceremonial-grade matcha over cold milk and ice.",
+      "price_status": "proposed"
     }
   ],
   "services": [
@@ -149,11 +115,6 @@
   ],
   "conversion_events": [
     {
-      "form_name": "pack-enquiry",
-      "event": "generate_lead",
-      "conversion_type": "ps_pass"
-    },
-    {
       "form_name": "partnership-enquiry",
       "event": "generate_lead",
       "conversion_type": "host_pod"
@@ -168,5 +129,7 @@
       "event": "sign_up",
       "conversion_type": "newsletter"
     }
-  ]
+  ],
+  "status": "pre-launch",
+  "pass_status": "In development. Plans, prices and terms are not confirmed."
 }

@@ -9,7 +9,7 @@
     {href:"menu.html",        label:"Menu",        n:"02", primary:true},
     {href:"app.html",         label:"App",         n:"03", primary:true},
     {href:"events.html",      label:"Events",      n:"04", primary:false},
-    {href:"blogs.html",       label:"Blogs",       n:"05", primary:false},
+    {href:"blogs.html",       label:"Journal",       n:"05", primary:false},
     {href:"about.html",       label:"About",       n:"06", primary:true},
     {href:"partnership.html", label:"Partner",     n:"07", primary:false},
     {href:"pods.html#pods",   label:"Pods",        n:"08", primary:true},
@@ -35,8 +35,8 @@
     }).join("");
     return '<div class="wh-announce">'+
         '<div class="wh-announce-track">'+
-          '<span class="wh-announce-msg">100% Arabica<span class="sep">&#10022;</span>Menu preview from &#8377;89<span class="sep">&#10022;</span>Launching soon in Gujarat<span class="sep">&#10022;</span>Join the launch waitlist<span class="sep">&#10022;</span></span>'+
-          '<span class="wh-announce-msg" aria-hidden="true">100% Arabica<span class="sep">&#10022;</span>Menu preview from &#8377;89<span class="sep">&#10022;</span>Launching soon in Gujarat<span class="sep">&#10022;</span>Join the launch waitlist<span class="sep">&#10022;</span></span>'+
+          '<span class="wh-announce-msg">Ahmedabad first.<span class="sep">&#10022;</span>Honest specialty coffee.<span class="sep">&#10022;</span>The menu is taking shape.<span class="sep">&#10022;</span><a href="'+localHref("pods.html#waitlist")+'">Be first in line →</a><span class="sep">&#10022;</span></span>'+
+          '<span class="wh-announce-msg" aria-hidden="true">Ahmedabad first.<span class="sep">&#10022;</span>Honest specialty coffee.<span class="sep">&#10022;</span>The menu is taking shape.<span class="sep">&#10022;</span>Be first in line →<span class="sep">&#10022;</span></span>'+
         '</div>'+
       '</div>'+
       '<nav class="nav" id="psNav">'+
@@ -64,7 +64,7 @@
             '<div class="display ps-wordmark">'+
               '<img class="ps-logo-img ps-logo-footer" src="'+localHref("assets/icons/ps-coffee_wordmark_steam%20cream.png")+'" alt="P.S. Coffee">'+
             '</div>'+
-            '<a href="'+localHref("about.html")+'">Story</a><a href="'+localHref("blogs.html")+'">Blogs</a><a href="'+localHref("events.html")+'">Events</a><a href="'+localHref("join.html")+'">Join Us</a><a href="'+localHref("join.html")+'">Careers</a><a href="'+localHref("partnership.html")+'">Partner</a>'+
+            '<a href="'+localHref("about.html")+'">Story</a><a href="'+localHref("blogs.html")+'">Journal</a><a href="'+localHref("events.html")+'">Events</a><a href="'+localHref("join.html")+'">Join Us</a><a href="'+localHref("join.html")+'">Careers</a><a href="'+localHref("partnership.html")+'">Partner</a>'+
             '<a href="https://www.thebarista.school" target="_blank" rel="noopener">Barista School ↗</a>'+
           '</div>'+
           '<div class="f-col"><h4>Pods.</h4>'+
@@ -77,14 +77,14 @@
             '<span></span><span></span><span></span><span></span>'+
             '<small>@pscoffee</small>'+
           '</div>'+
-          '<div class="f-col f-email" data-form-wrap><h4>P.S. Be first to know.</h4>'+
-            '<p>News from the build. Planned Pods. Launch updates.</p>'+
+          '<div class="f-col f-email" data-form-wrap><h4>Be there when the first Pod opens.</h4>'+
+            '<p>First access and opening news.</p>'+
             '<form class="news" data-ps-form="newsletter">'+
               '<input type="hidden" name="interest_type" value="launch">'+
               '<label class="visually-hidden" for="psFooterEmail">Email address</label>'+
               '<input id="psFooterEmail" name="email" type="email" required placeholder="Email address" autocomplete="email" inputmode="email" autocapitalize="none">'+
               '<button class="btn accent sm" type="submit" aria-label="Subscribe by email">&rarr;</button>'+
-            '</form><p class="form-success" role="status">You are on the list. We will email you with launch news.</p>'+
+            '</form><p class="form-success" role="status">You are on the list. We will email you with opening news.</p>'+
           '</div>'+
         '</div>'+
         '<div class="f-radhe">|| राधे राधे ||</div>'+
@@ -269,6 +269,7 @@
       var items = target.querySelectorAll("[data-cat]");
       function applyFilter(f){
         f = f || "all";
+        if(["coffee","matcha","protein"].indexOf(f)!==-1) f="letter";
         if(!Array.from(tabs.querySelectorAll("[data-filter]")).some(function(p){ return p.getAttribute("data-filter") === f; })) f = "all";
         tabs.querySelectorAll("[data-filter]").forEach(function(p){
           var selected = p.getAttribute("data-filter")===f;
@@ -282,9 +283,9 @@
         var total = target.querySelectorAll('.menu-product-wh').length;
         var count = Array.from(items).filter(function(it){return f === 'all' || it.getAttribute('data-cat') === f;}).reduce(function(n,it){return n + it.querySelectorAll('.menu-product-wh').length;},0);
         var label = tabs.querySelector('[data-menu-count]');
-        if(label) label.textContent = (f === 'all' ? total + ' items' : count + ' of ' + total + ' items') + '. Menu preview. Proposed prices shown.';
+        if(label) label.textContent = (f === 'all' ? total + ' items' : count + ' of ' + total + ' items') + '. Menu in development.';
         var heroLink = document.querySelector('body[data-page="menu"] .menu-hero-copy a');
-        if(heroLink) heroLink.setAttribute('href', '#menu-' + (f === 'all' ? 'coffee' : f));
+        if(heroLink) heroLink.setAttribute('href', '#menu-' + (f === 'all' ? 'letter' : f));
       }
       tabs.querySelectorAll("[data-filter]").forEach(function(pill){
         pill.setAttribute("role", "tab");
@@ -302,7 +303,8 @@
       var requested = new URLSearchParams(location.search).get("cat");
       if(!requested && location.hash){
         var h = location.hash.replace("#menu-","");
-        if(h==="coffee" || h==="matcha" || h==="protein" || h==="food") requested = h;
+        if(h==="letter" || h==="ps" || h==="food") requested = h;
+        else if(h==="coffee" || h==="matcha" || h==="protein") requested = "letter";
       }
       applyFilter(requested || "all");
     });
@@ -706,7 +708,7 @@
     "Nothing to hide",
     "the surprise",
     "a question",
-    "Three taps",
+    "The Usual",
     "the office vending machine",
     "closer than you think",
     "Matcha tonight",
@@ -717,7 +719,7 @@
     "Spot On Quality",
     "Spot On Pricing",
     "Spot On Reachability",
-    "100% Arabica",
+    "Ahmedabad first.",
     "P.S. Coffee",
     "P.S. Pack",
     "P.S. Pass",
@@ -733,7 +735,7 @@
     "Pod",
     "App",
     "Events",
-    "Blogs",
+    "Journal",
     "Story",
     "Partner",
     "Feedback",
@@ -926,7 +928,7 @@
         '<div class="tw-row"><label>Canvas tone</label><div class="tw-seg" id="tw-canvas"></div></div>'+
         '<div class="tw-row"><label>Button shape</label><div class="tw-seg" id="tw-shape"></div></div>'+
         '<div class="tw-row"><label>Type scale · <span id="tw-scaleval">100%</span></label><input type="range" id="tw-scale" min="0.9" max="1.15" step="0.01"></div>'+
-        '<div class="tw-note">P.S.: Applies across every page.</div>'+
+        '<div class="tw-note">P.S. Applies across every page.</div>'+
       '</div>';
     document.body.appendChild(panel);
 

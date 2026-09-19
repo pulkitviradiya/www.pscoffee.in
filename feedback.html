@@ -10,7 +10,7 @@
 <link rel="canonical" href="https://www.pscoffee.in/feedback">
 <meta name="robots" content="noindex, nofollow">
 <link rel="stylesheet" href="assets/ps.css">
-<link rel="stylesheet" href="assets/wh.css?v=110">
+<link rel="stylesheet" href="assets/wh.css?v=113">
 <link rel="stylesheet" href="assets/mobile.css?v=78">
 <style>
 
@@ -247,7 +247,7 @@
 <section class="fb-hero">
   <span class="kicker">Before the first Pod opens</span>
   <h1>Help us get<br>this right.</h1>
-  <p>Your feedback shapes what goes on the menu, how it is priced, and how the whole P.S. experience works. If we love your input, your first cup is on us.</p>
+  <p>Tell us what you would drink, where a Pod would fit and what would make you return. We are using your feedback to plan the first Pods.</p>
 </section>
 
 <!-- ══ FORM ══════════════════════════════════════════════════════ -->
@@ -305,13 +305,13 @@
         <div class="fb-field" style="grid-column:1/-1">
           <label class="fb-label" for="fb-area">Area / Neighbourhood <span class="req">*</span></label>
           <input class="fb-input" type="text" id="fb-area" name="area"
-            placeholder="e.g. Prahladnagar, Bandra West, Koramangala" required>
+            placeholder="e.g. Prahladnagar or Makarba" required>
         </div>
 
         <div class="fb-field">
           <label class="fb-label" for="fb-city">City <span class="req">*</span></label>
           <input class="fb-input" type="text" id="fb-city" name="city"
-            placeholder="e.g. Ahmedabad, Mumbai, Bengaluru" required>
+            placeholder="e.g. Ahmedabad or Gandhinagar" required>
         </div>
 
         <div class="fb-field">
@@ -373,8 +373,8 @@
           <select class="fb-select" id="fb-cat" name="feedback_topic" required>
             <option value="">Select a topic</option>
             <option value="menu">Menu &amp; What I Want to Drink</option>
-            <option value="pricing">Pricing Policy</option>
-            <option value="subscription">Subscription Plans: The P.S. Pack</option>
+            <option value="pricing">Menu prices</option>
+            <option value="subscription">The P.S. Pass: coming soon</option>
             <option value="app">App Features</option>
             <option value="recipe">Recipes, Add-ons &amp; Customisation</option>
             <option value="food">Food Items</option>
@@ -409,13 +409,13 @@
 
         <!-- Conditional: Subscription plan interest ──── -->
         <div class="fb-field fb-cond" id="cond-subscription">
-          <label class="fb-label">Which Pack tier interests you most?</label>
+          <label class="fb-label">Would you like to hear more about the Pass?</label>
           <div class="fb-opts">
-            <div class="fb-opt"><input type="radio" id="p-black" name="pack_interest" value="The Black Pack: ₹749 / 10 cups"><label for="p-black">The Black Pack: ₹749</label></div>
-            <div class="fb-opt"><input type="radio" id="p-starter" name="pack_interest" value="The Starter Pack: ₹1,099 / 10 cups"><label for="p-starter">The Starter Pack: ₹1,099</label></div>
-            <div class="fb-opt"><input type="radio" id="p-habit" name="pack_interest" value="The Habit Pack: ₹1,899 / 20 cups"><label for="p-habit">The Habit Pack: ₹1,899</label></div>
-            <div class="fb-opt"><input type="radio" id="p-full" name="pack_interest" value="The Full Pour: ₹2,899 / 20 cups"><label for="p-full">The Full Pour: ₹2,899</label></div>
-            <div class="fb-opt"><input type="radio" id="p-none" name="pack_interest" value="None: pricing feels off"><label for="p-none">None: pricing feels off</label></div>
+            <div class="fb-opt"><input type="radio" id="p-black" name="pack_interest" value="Interested in the Pass"><label for="p-black">Interested in the Pass</label></div>
+            <div class="fb-opt"><input type="radio" id="p-starter" name="pack_interest" value="Show me the details first"><label for="p-starter">Show me the details first</label></div>
+            <div class="fb-opt"><input type="radio" id="p-habit" name="pack_interest" value="Maybe after I try a cup"><label for="p-habit">Maybe after I try a cup</label></div>
+            <div class="fb-opt"><input type="radio" id="p-full" name="pack_interest" value="I would rather order individually"><label for="p-full">I would rather order individually</label></div>
+            <div class="fb-opt"><input type="radio" id="p-none" name="pack_interest" value="Not sure yet"><label for="p-none">Not sure yet</label></div>
           </div>
         </div>
 
@@ -425,7 +425,7 @@
           <div class="fb-opts">
             <div class="fb-opt"><input type="checkbox" id="a-oa" name="app_features" value="Order ahead"><label for="a-oa">App preview</label></div>
             <div class="fb-opt"><input type="checkbox" id="a-su" name="app_features" value="Save your usual"><label for="a-su">Save your usual</label></div>
-            <div class="fb-opt"><input type="checkbox" id="a-pb" name="app_features" value="Pack balance management"><label for="a-pb">Pack balance management</label></div>
+            <div class="fb-opt"><input type="checkbox" id="a-pb" name="app_features" value="The current drink slate"><label for="a-pb">The current drink slate</label></div>
             <div class="fb-opt"><input type="checkbox" id="a-pn" name="app_features" value="Pod nearby notifications"><label for="a-pn">Pod nearby alerts</label></div>
             <div class="fb-opt"><input type="checkbox" id="a-lo" name="app_features" value="Loyalty rewards"><label for="a-lo">Loyalty rewards</label></div>
             <div class="fb-opt"><input type="checkbox" id="a-sc" name="app_features" value="Schedule ahead"><label for="a-sc">Schedule for tomorrow morning</label></div>
@@ -452,7 +452,7 @@
           <label class="fb-label" for="fb-pod-loc">Where should the Pod be? <span class="req">*</span></label>
           <input class="fb-input" type="text" id="fb-pod-loc" name="pod_location"
             placeholder="Building name, street, area, city. Be as specific as you can">
-          <p class="fb-hint">We use this directly when choosing Pod placements. A specific address is gold.</p>
+          <p class="fb-hint">Tell us the area, nearby landmark or building you have in mind.</p>
         </div>
 
         <!-- Conditional: Other ──────────────────────────── -->
@@ -513,10 +513,10 @@
         <label class="fb-label" for="fb-rating-hidden">How would you rate the P.S. Coffee concept?</label>
         <div class="fb-rating-btns" id="fbRatingRow" role="group" aria-label="Rating 1 to 10"></div>
         <div class="fb-rating-key">
-          <span style="color:#d32f2f">😬 1: Bad idea</span>
-          <span style="color:#fb8c00">😐 5: Neutral</span>
-          <span style="color:#43a047">🙌 8: Great idea</span>
-          <span style="color:#1b5e20">🤩 10: Much needed!</span>
+          <span style="color:#d32f2f">1: Not for me</span>
+          <span style="color:#fb8c00">5: Neutral</span>
+          <span style="color:#43a047">8: Interested</span>
+          <span style="color:#1b5e20">10: Very interested</span>
         </div>
         <input type="hidden" id="fb-rating-hidden" name="rating" value="">
       </div>
@@ -525,7 +525,7 @@
     <!-- ── Submit ──────────────────────────────────────────── -->
     <div class="fb-actions">
       <button type="submit" class="fb-btn" id="fbSubmitBtn">Share my feedback →</button>
-      <p class="fb-actions-note">We read every note. Your contact details are used only for P.S. Coffee planning, never shared.</p>
+      <p class="fb-actions-note">We read every note. We use your details as explained in our <a href="privacy.html">privacy policy</a>.</p>
     </div>
 
   </form>
@@ -536,16 +536,16 @@
 <div class="fb-modal-overlay" id="fbModal" role="dialog" aria-modal="true" aria-labelledby="fbModalTitle">
   <div class="fb-modal-card">
     <button class="fb-modal-close" id="fbModalClose" aria-label="Close">✕</button>
-    <span class="fb-modal-stamp">☕</span>
-    <h2 id="fbModalTitle">Stay tuned for<br>your first coffee on us.</h2>
-    <p>Thanks for sharing your feedback. We read every note, and if yours inspires something we build, that first cup is waiting for you.</p>
+    <span class="fb-modal-stamp" aria-hidden="true">P.S.</span>
+    <h2 id="fbModalTitle">Your feedback<br>is received.</h2>
+    <p>Thank you for sharing it. Your note will help us plan the first Pods.</p>
     <a href="/" class="fb-modal-home">Back to P.S. Coffee →</a>
   </div>
 </div>
 
 <div id="ps-footer"></div>
 <script src="assets/image-slot.js?v=3"></script>
-<script src="assets/ps.js?v=46"></script>
+<script src="assets/ps.js?v=49"></script>
 <script src="assets/mobile.js?v=5"></script>
 <script>
 (function(){
@@ -583,7 +583,7 @@
   var placeholders = {
     menu:         'Which drinks do you want every day? What is missing from the menu right now?',
     pricing:      'What pricing feels right for daily specialty coffee? What would make it a no-brainer?',
-    subscription: 'What would make the P.S. Pack more appealing: size, validity, price, or something else?',
+    subscription: 'What would you want to know about the P.S. Pass before considering it?',
     app:          'What would you use every single day? What would make you install it immediately?',
     recipe:       'What customisations, syrups, or recipe tweaks would you want?',
     food:         'What food items would pair perfectly with your P.S. coffee?',
