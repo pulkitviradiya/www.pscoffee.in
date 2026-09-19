@@ -28,3 +28,18 @@ test('all 43 existing menu names and price markup are preserved',()=>{
  const actual=[...readFileSync('menu.html','utf8').matchAll(/<h3>(.*?)<\/h3>[\s\S]*?<div class="menu-product-price">([\s\S]*?)<\/div>/g)].map(m=>[m[1],m[2]]).sort((a,b)=>a[0]<b[0]?-1:a[0]>b[0]?1:0);
  assert.deepEqual(actual,expected);
 });
+
+test('Pass preview retains its complete structure and proposed pricing',()=>{
+ const source=readFileSync('pack.html','utf8');
+ assert.match(source,/<h1>Still taking shape\.<\/h1>/);
+ assert.equal((source.match(/data-pack-pass-category>/g)||[]).length,4);
+ assert.equal((source.match(/data-pack-pass-card>/g)||[]).length,12);
+ assert.equal((source.match(/<details class="ps-pack-pass-detail-row">/g)||[]).length,48);
+ assert.deepEqual([...source.matchAll(/<em>(.*?)<\/em>/g)].map(m=>m[1]),['₹749','₹1,099','₹1,899','₹2,899','₹1,299','₹2,499','₹599','₹549','₹1,399','₹14,999','Custom','₹899']);
+ const enquiry=readFileSync('pack-enquiry.html','utf8');
+ assert.match(enquiry,/data-ps-form="pack-enquiry"/);
+ for(const slug of ['black','starter','habit','full-pour','daily','open-tab','first-sip','week','green','team','office-tab','ps-note']){
+  assert.ok(source.includes('pack='+slug));
+  assert.ok(enquiry.includes('value="'+slug+'"'));
+ }
+});

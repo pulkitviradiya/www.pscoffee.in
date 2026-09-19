@@ -15,7 +15,7 @@ serving the earlier release at the start of this audit.
 | Pods | Hero, four location types, compact format, future locations, host enquiry and waitlist |
 | App | Prelaunch hero, features, editable concept previews, routine tracker concept, ordering plan and waitlist |
 | Matcha | Green family, recipe language, preparation, app and menu links |
-| Pass and Pass enquiry | Coming-soon positioning, terms unconfirmed, interest waitlist |
+| Pass and Pass enquiry | User correction: restored all 12 proposed options, original groups, prices, validity, details and Pass-specific interest form; retained Still taking shape headline |
 | Partners and enquiry | Site fit, in-and-around location language, planned operations, enquiry labels and success messages |
 | Events and enquiry | Future enquiry language, format cards, enquiry and success messages |
 | Join | Ahmedabad-first team brief, role descriptions, supplier and contact copy, success states |

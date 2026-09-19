@@ -8,7 +8,7 @@ The website follows [Master Copy System v4](master-copy-system-v4.md), supplied 
 - Black, White, Green and Strong organise the drinks. The Letter has a familiar starting point in each family; The P.S. contains the existing remaining recipes with numbered labels. Original drink names remain visible for recognition. Numbering describes this website draft, not a confirmed opening rotation.
 - Use pre-launch wording throughout. Ahmedabad first; no confirmed Pod addresses, dates, live ordering or downloads.
 - Keep prices on the Menu as data. Do not invent prices, ingredients, nutrition, provenance, guaranteed timings or operational promises from illustrative source examples.
-- The Pass is coming soon; plans, prices, terms and purchase forms are unpublished. Preserve existing backend form compatibility for older clients.
+- User correction: preserve the existing Pass page structure, all 12 options, prices, cup counts, validity, inclusions/exclusions and terms. Keep “Still taking shape” as its headline; describe the options as a prelaunch proposal and retain the interest form without taking payment. This overrides the source document’s parked-Pass direction.
 - Use honest specialty coffee until stronger lot-specific claims can be substantiated. No species-based quality promise or criticism of another species.
 - P.S. sign-offs have no colon or dash, and appear at most three times per page. A sign-off finishes a section; family names are not sign-offs.
 - Journal is the visible editorial name. Keep existing URLs and journal CSS classes.

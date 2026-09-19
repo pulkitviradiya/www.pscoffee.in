@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <link rel="icon" type="image/png" href="assets/icons/ps-coffee_icon_terracotta_32.png">
 <link rel="apple-touch-icon" href="assets/icons/ps-coffee_icon_terracotta_180.png">
-<title>The P.S. Pass | Still Taking Shape</title>
-<meta name="description" content="The P.S. Pass is coming soon. No plans are available to buy yet. Join the opening waitlist for updates.">
+<title>Register Pass interest | P.S. Coffee</title>
+<meta name="description" content="Tell us which proposed P.S. Pass interests you. Individual, team and gifting enquiries. No purchase or payment is taken.">
 <link rel="canonical" href="https://www.pscoffee.in/pack-enquiry">
-<meta property="og:title" content="The P.S. Pass | Still Taking Shape">
-<meta property="og:description" content="The P.S. Pass is coming soon. No plans are available to buy yet. Join the opening waitlist for updates.">
+<meta property="og:title" content="Register Pass interest | P.S. Coffee">
+<meta property="og:description" content="Tell us which proposed P.S. Pass interests you. Individual, team and gifting enquiries. No purchase or payment is taken.">
 <meta property="og:url" content="https://www.pscoffee.in/pack-enquiry">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://www.pscoffee.in/assets/photos/pack-pass-full-pour-card-v2.webp">
@@ -302,13 +302,159 @@ body[data-page="pack-enquiry"] .pe-page {
 <body data-page="pack-enquiry">
 <div id="ps-nav"></div>
 
-<main class="wh-page"><section class="wh-page-hero"><div class="wh-page-hero-copy"><p class="wh-page-kicker">The P.S. Pass.</p><h1>Still taking shape.</h1><footer><p>The Pass is in development. Plans, prices and terms are not confirmed. We will share details when they are ready.</p><a href="pods.html#waitlist">Be first in line →</a><p class="wh-page-ps-note">P.S. The cup comes first.</p></footer></div><div class="wh-page-hero-media"><image-slot id="pack-enquiry-coming-soon" shape="rect" src="assets/photos/site/home-cat-pack-desktop.webp" placeholder="P.S. Coffee Pass in development" fit="cover"></image-slot></div></section></main>
+<main class="pe-page">
+  <section class="pe-hero">
+    <div class="pe-copy">
+      <p class="pe-kicker">The P.S. Pass.</p>
+      <h1>Your Pass. Your usual.</h1>
+      <p class="pe-sub">The P.S. Pass is still in development. Tell us which Pass interests you and we will share opening news. No purchase or payment is taken here.</p>
+      <div class="pe-note">Planning for a team? Tell us how the cups would be shared.</div>
+    </div>
+
+    <div class="pe-form-card" data-form-wrap>
+      <h2>Register your interest.</h2>
+      <p>Choose a Pass and one way to reach you. We will contact you when opening details are ready. Prices and terms are previews, subject to confirmation.</p>
+      <p class="pe-direct-email">Prefer email? <a href="mailto:hello@pscoffee.in?subject=P.S.%20Pack%20Enquiry">hello@pscoffee.in</a></p>
+      <form class="form launch-form" data-ps-form="pack-enquiry" data-launch-form>
+
+        <p class="pe-section-label">The Pass</p>
+        <div class="row-2">
+          <div class="field">
+            <label>Which Pass interests you?</label>
+            <select name="pack" id="pe-pack-select" required>
+              <option value="">Select a Pass</option>
+              <option value="black">The Black Pack: ₹749 · 10 cups</option>
+              <option value="starter">The Starter Pack: ₹1,099 · 10 cups</option>
+              <option value="habit">The Habit Pack: ₹1,899 · 20 cups</option>
+              <option value="full-pour">The Full Pour: ₹2,899 · 20 cups</option>
+              <option value="daily">The Daily: ₹1,299 · 1 cup/day</option>
+              <option value="open-tab">The Open Tab: ₹2,499 · 2 cups/day</option>
+              <option value="first-sip">The First Sip: ₹599 · 5 cups</option>
+              <option value="week">The Week: ₹549 · 7 cups</option>
+              <option value="green">The Green Pack: ₹1,399 · 10 Matcha</option>
+              <option value="team">The Team Pack: ₹14,999 · 200 cups</option>
+              <option value="office-tab">The Office Tab: Custom · monthly billing</option>
+              <option value="ps-note">The P.S. Note: ₹899 · 8 cups (gift)</option>
+              <option value="not-sure">Not sure yet, help me choose</option>
+            </select>
+            <span class="err">Required</span>
+          </div>
+          <div class="field">
+            <label>This Pass is for</label>
+            <select name="enquiry_type" id="pe-type-select" required>
+              <option value="">Select one</option>
+              <option value="individual">Just me, personal use</option>
+              <option value="business">My team / company / co-working space</option>
+              <option value="gift">A gift for someone</option>
+            </select>
+            <span class="err">Required</span>
+          </div>
+        </div>
+
+        <input type="hidden" name="interest_type" value="pass">
+        <p class="pe-section-label">Launch updates</p>
+        <div class="field"><label>Preferred area</label><select name="area" required><option value="">Choose your area</option><option value="prahladnagar">Prahladnagar, Ahmedabad</option><option value="sg-highway">SG Highway, Ahmedabad</option><option value="gift-city">Gift City, Gandhinagar</option><option value="tcs">TCS area, Gandhinagar</option><option value="sbr">SBR, Ahmedabad</option><option value="makarba">Makarba, Ahmedabad</option><option value="other">Suggest another area</option></select><span class="err">Choose an area.</span></div><div class="field" data-other-area hidden><label>Your area and city</label><input name="area_other" maxlength="120" disabled placeholder="Area, city"><span class="err">Tell us your area and city.</span></div><div class="field"><label>How should we notify you?</label><select name="contact_method"><option value="email">Email</option><option value="whatsapp">WhatsApp</option></select></div><div class="field" data-contact="email"><label>Email address</label><input name="email" type="email" autocomplete="email" required placeholder="you@example.com"><span class="err">Enter a valid email address.</span></div><div class="field" data-contact="whatsapp" hidden><label>WhatsApp number, including country code</label><input name="mobile" type="tel" autocomplete="tel" disabled placeholder="+91 98765 43210" pattern="[+0-9() .-]{8,24}"><span class="err">Enter a valid number with country code.</span></div>
+        <div class="field"><label>Your name (optional)</label><input name="name" autocomplete="name" placeholder="Your name"></div>
+
+        <div class="pe-business-fields" id="peBusinessFields">
+          <p class="pe-section-label">Team &amp; Company Details</p>
+          <div class="row-2">
+            <div class="field">
+              <label>Company / Organisation name</label>
+              <input type="text" name="company_name" placeholder="Your company or co-working name">
+            </div>
+            <div class="field">
+              <label>Team size</label>
+              <select name="team_size">
+                <option value="">Select team size</option>
+                <option>Under 10 people</option>
+                <option>10 – 25 people</option>
+                <option>25 – 50 people</option>
+                <option>50 – 100 people</option>
+                <option>100 – 250 people</option>
+                <option>250+ people</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label>Office / Building address</label>
+            <input type="text" name="company_address" placeholder="Street, area, city">
+          </div>
+          <div class="field">
+            <label>What would work best for your team?</label>
+            <select name="business_need">
+              <option value="">Select one</option>
+              <option>Prepaid team pack (shared pool of cups)</option>
+              <option>Per-cup monthly billing (The Office Tab)</option>
+              <option>Individual packs for each employee</option>
+              <option>Not sure, open to a recommendation</option>
+            </select>
+          </div>
+        </div>
+
+        <p class="pe-section-label">Anything else?</p>
+        <div class="field">
+          <label>Notes (optional)</label>
+          <textarea name="notes" placeholder="Questions about a Pass or anything else you would like us to know."></textarea>
+        </div>
+
+        <button class="form-submit" type="submit">I am interested in this Pass →</button>
+      </form>
+      <div class="form-success" role="status">
+        <h3>Your interest is registered.</h3>
+        <p>Your Pass preference is recorded. No payment has been taken. We will share opening details when they are ready. You can reach us at <a href="mailto:hello@pscoffee.in">hello@pscoffee.in</a>.</p>
+      </div>
+      <div class="pe-meta">
+        <span>Pre-launch interest</span>
+        <span>No payment taken</span>
+        <span>Proposed pricing</span>
+        <span>Team plans in development</span>
+      </div>
+    </div>
+
+  </section>
+
+  <div class="pe-photo-strip" aria-label="P.S. Pack: prepaid specialty coffee">
+    <image-slot id="pe-photo-1" shape="rect" src="assets/photos/site/pack-enquiry-pe-photo-1-desktop.webp" placeholder="P.S. Pack: The Full Pour" fit="cover"></image-slot>
+    <image-slot id="pe-photo-2" shape="rect" src="assets/photos/site/pack-enquiry-pe-photo-2-desktop.webp" placeholder="P.S. Pack: The Team Pack" fit="cover"></image-slot>
+    <image-slot id="pe-photo-3" shape="rect" src="assets/photos/site/pack-enquiry-pe-photo-3-desktop.webp" placeholder="P.S. Pack: The Habit Pack" fit="cover"></image-slot>
+  </div>
+</main>
 
 <div id="ps-footer"></div>
 <script src="assets/image-slot.js?v=3"></script>
 <script src="assets/ps.js?v=49"></script>
 <script src="assets/mobile.js?v=5"></script>
+<script>
+(function(){
+  /* ── URL param pre-fill ── */
+  var params = new URLSearchParams(window.location.search);
+  var packParam = params.get('pack');
+  var typeParam = params.get('type');
+  var packSelect = document.getElementById('pe-pack-select');
+  var typeSelect = document.getElementById('pe-type-select');
+  var bizFields = document.getElementById('peBusinessFields');
 
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ContactPage", "name": "The P.S. Pass", "url": "https://www.pscoffee.in/pack-enquiry", "description": "The P.S. Pass is coming soon. No plans are available to buy yet. Join the opening waitlist for updates.", "about": {"@type": "Service", "name": "The P.S. Pass", "provider": {"@type": "Organization", "name": "P.S. Coffee", "url": "https://www.pscoffee.in", "logo": "https://www.pscoffee.in/assets/icons/ps-coffee_square_terracotta_framed.png"}}}</script>
+  if(packParam && packSelect){
+    var opt = Array.from(packSelect.options).find(function(option){ return option.value === packParam; });
+    if(opt) packSelect.value = packParam;
+  }
+  if(typeParam === 'business' && typeSelect){
+    typeSelect.value = 'business';
+    bizFields.classList.add('on');
+  }
+
+  /* ── Show / hide business fields ── */
+  typeSelect.addEventListener('change', function(){
+    if(this.value === 'business'){
+      bizFields.classList.add('on');
+    } else {
+      bizFields.classList.remove('on');
+    }
+  });
+
+})();
+</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ContactPage", "name": "P.S. Pass interest", "url": "https://www.pscoffee.in/pack-enquiry", "description": "Tell us which proposed P.S. Pass interests you. Individual, team and gifting enquiries. No purchase or payment is taken.", "about": {"@type": "Service", "name": "The P.S. Pack", "provider": {"@type": "Organization", "name": "P.S. Coffee", "url": "https://www.pscoffee.in", "logo": "https://www.pscoffee.in/assets/icons/ps-coffee_square_terracotta_framed.png"}}}</script>
 </body>
 </html>
