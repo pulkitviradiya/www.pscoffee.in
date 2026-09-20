@@ -18,3 +18,5 @@ The website follows [Master Copy System v4](master-copy-system-v4.md), supplied 
 ## Review before publishing
 
 Check the page title, visible copy, CTA destination and structured data together. Confirm that product inventories and prices match the existing Menu, that planned features read as plans, and that changed text fits both desktop and mobile layouts.
+
+- User correction: retain the original App-page and landing-page prototype GIFs and photos. Keep updated surrounding brand copy; do not replace the prototypes to enforce current copy inside historic mockups.

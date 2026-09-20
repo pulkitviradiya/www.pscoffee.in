@@ -4,6 +4,16 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/home-letter",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/home-letter.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
       "source": "/careers",
       "destination": "/join",
       "permanent": true

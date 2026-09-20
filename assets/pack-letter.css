@@ -1,0 +1,106 @@
+/* P.S. Pass letter preview. Existing pack data and interactions remain intact. */
+body[data-page="letter-concept"] .plp-main{background:var(--color-steam-cream);overflow:hidden}
+.plp-main :is(h1,h2,h3,h4,p,figure){margin:0}
+.plp-main section{scroll-margin-top:90px}
+
+/* Opening chapter: a folded note about the habit still being formed. */
+body[data-page="letter-concept"] .wh-page-hero{position:relative;display:grid;grid-template-columns:.92fr 1.08fr;min-height:740px;padding:56px var(--lc-gutter) 72px;gap:7vw;align-items:center;background:linear-gradient(180deg,var(--lc-opening),var(--color-steam-cream) 82%)}
+body[data-page="letter-concept"] .wh-page-hero::before{content:"PASS / PRE-LAUNCH / 01";position:absolute;top:26px;left:var(--lc-gutter);font:700 9px var(--font-body);letter-spacing:.15em;color:var(--lc-accent)}
+body[data-page="letter-concept"] .wh-page-hero-copy{padding-top:26px}
+body[data-page="letter-concept"] .wh-page-kicker{display:inline-block;padding:9px 13px;background:var(--lc-accent);color:var(--color-steam-cream)!important;font:700 10px var(--font-body)!important;letter-spacing:.12em;text-transform:uppercase;transform:rotate(-2deg)}
+body[data-page="letter-concept"] .wh-page-hero h1{max-width:7ch;margin:28px 0!important;font:800 clamp(72px,9vw,142px)/.84 var(--font-display)!important;letter-spacing:-.075em;color:var(--color-dark-roast)!important}
+body[data-page="letter-concept"] .wh-page-hero h1::after{content:"अभी बन रहा है।";display:block;width:max-content;margin-top:24px;font:500 25px/1.3 "Kohinoor Devanagari","Nirmala UI",sans-serif;letter-spacing:0;color:var(--lc-accent);transform:rotate(-5deg);border-bottom:2px solid currentColor}
+body[data-page="letter-concept"] .wh-page-hero-copy footer{display:block;max-width:500px!important;margin:0!important;padding:0!important;border:0!important}
+body[data-page="letter-concept"] .wh-page-hero-copy footer>p:first-child{font-size:15px!important;line-height:1.65!important}
+body[data-page="letter-concept"] .wh-page-hero-copy footer>a{display:inline-flex;margin-top:24px;padding-bottom:7px;border-bottom:1px solid;font-weight:700;color:var(--lc-accent)!important}
+body[data-page="letter-concept"] .wh-page-ps-note{margin-top:26px!important;font:italic 22px var(--font-accent)!important;color:var(--lc-accent)!important}
+body[data-page="letter-concept"] .wh-page-hero-media{height:620px;overflow:hidden;border-radius:50% 50% 4px 4px;box-shadow:18px 18px 0 var(--color-nectar-cream)}
+body[data-page="letter-concept"] .wh-page-hero-media image-slot,body[data-page="letter-concept"] .wh-page-hero-media img{width:100%!important;height:100%!important;object-fit:cover!important}
+
+.plp-ticker{overflow:hidden;background:var(--lc-accent);color:var(--color-steam-cream);border-block:4px double var(--color-steam-cream);transform:rotate(-1deg);margin:-18px 0 26px}.plp-ticker>div{display:flex;width:max-content;animation:plp-ticker 30s linear infinite}.plp-ticker span{flex:none;padding:15px 30px 15px 0;font:700 22px/1.2 var(--font-display);word-spacing:9px}
+
+body[data-page="letter-concept"] .wh-page-statement{display:grid;grid-template-columns:.7fr 1.3fr;gap:8vw;align-items:end;padding:110px var(--lc-gutter);background:var(--color-oat)!important}
+body[data-page="letter-concept"] .wh-page-statement>p{font:700 10px var(--font-body)!important;letter-spacing:.14em;text-transform:uppercase;color:var(--lc-accent)!important}
+body[data-page="letter-concept"] .wh-page-statement h2{font:800 clamp(54px,7vw,104px)/.92 var(--font-display)!important;letter-spacing:-.06em;color:var(--color-dark-roast)!important}
+body[data-page="letter-concept"] .nectar-highlight{background:linear-gradient(transparent 53%,var(--color-nectar-cream) 53%);padding:0!important;color:inherit!important}
+
+body[data-page="letter-concept"] .ps-how-it-works{padding:100px var(--lc-gutter)!important;border:0!important}
+body[data-page="letter-concept"] .ps-how-it-works>h2{font:800 clamp(52px,6vw,90px)/.94 var(--font-display)!important;letter-spacing:-.055em;margin-bottom:48px!important}
+body[data-page="letter-concept"] .ps-how-it-works-steps{gap:0!important;border-block:1px solid var(--color-linen)}
+body[data-page="letter-concept"] .ps-how-it-works-step{position:relative;min-height:280px;padding:34px 28px!important;border:0!important;background:transparent!important}
+body[data-page="letter-concept"] .ps-how-it-works-step+.ps-how-it-works-step{border-left:1px solid var(--color-linen)!important}
+body[data-page="letter-concept"] .ps-how-it-works-step-num{color:var(--lc-accent)!important}
+body[data-page="letter-concept"] .ps-how-it-works-step h3{font:800 clamp(30px,3vw,48px)/.96 var(--font-display)!important;letter-spacing:-.045em;margin:34px 0 20px!important}
+
+body[data-page="letter-concept"] .ps-cap89-banner{padding:76px var(--lc-gutter)!important;grid-template-columns:.7fr 1.3fr!important;background:var(--lc-accent)!important}
+body[data-page="letter-concept"] .ps-cap89-price{font-size:clamp(150px,23vw,340px)!important;line-height:.72!important}
+body[data-page="letter-concept"] .ps-cap89-copy{align-self:center;gap:18px!important}
+body[data-page="letter-concept"] .ps-cap89-copy h2{font-size:clamp(42px,5vw,78px)!important}
+body[data-page="letter-concept"] .ps-welcome-offer{padding:86px var(--lc-gutter)!important;background:var(--color-pale-froth)!important;border:0!important}
+body[data-page="letter-concept"] .ps-welcome-offer>h2{max-width:16ch;font:800 clamp(48px,6vw,90px)/.94 var(--font-display)!important;letter-spacing:-.055em}
+body[data-page="letter-concept"] .ps-welcome-ladder{margin-top:42px!important}
+
+/* The 12 existing passes become the central ledger. */
+body[data-page="letter-concept"] .ps-pack-explorer{padding:110px var(--lc-gutter)!important;background:var(--color-steam-cream)}
+body[data-page="letter-concept"] .ps-pack-explorer-head{grid-template-columns:.9fr 1.1fr!important;padding-bottom:48px!important;border-bottom:3px solid var(--lc-accent)!important}
+body[data-page="letter-concept"] .ps-pack-explorer-head h2{font:800 clamp(62px,8vw,118px)/.88 var(--font-display)!important;letter-spacing:-.065em}
+body[data-page="letter-concept"] .ps-pack-category-pass{padding-top:76px!important}
+body[data-page="letter-concept"] .ps-pack-category-pass+.ps-pack-category-pass{margin-top:76px!important;padding-top:76px!important;border-top:1px solid var(--color-linen)!important}
+body[data-page="letter-concept"] .ps-pack-category-pass .ps-pack-category-head h3{font:800 clamp(40px,4vw,64px)/.94 var(--font-display)!important;letter-spacing:-.05em}
+body[data-page="letter-concept"] .ps-pack-pass-tabs button{border-radius:999px!important;border:1px solid var(--color-dark-roast)!important;background:transparent!important}
+body[data-page="letter-concept"] .ps-pack-pass-tabs button[aria-selected="true"]{background:var(--lc-accent)!important;border-color:var(--lc-accent)!important;color:var(--color-steam-cream)!important}
+body[data-page="letter-concept"] .ps-pack-pass-card{border-radius:22px!important;background:var(--color-steam-cream)!important;box-shadow:12px 12px 0 var(--color-oat)!important;transition:transform .35s cubic-bezier(.2,0,0,1),box-shadow .35s}
+body[data-page="letter-concept"] .ps-pack-pass-card img{width:100%!important;height:100%!important;object-fit:contain!important;object-position:center!important}
+body[data-page="letter-concept"] .ps-pack-pass-card::before{border-radius:15px!important}
+body[data-page="letter-concept"] .ps-pack-pass-item.is-active .ps-pack-pass-card,body[data-page="letter-concept"] .ps-pack-pass-item:hover .ps-pack-pass-card{transform:translateY(-7px) rotate(-1deg);box-shadow:17px 18px 0 var(--color-nectar-cream)!important}
+body[data-page="letter-concept"] .ps-pack-pass-link{color:var(--lc-accent)!important}
+@media(min-width:721px){
+  body[data-page="letter-concept"] .ps-pack-pass-stage{display:grid!important;grid-template-columns:1fr!important;gap:22px!important}
+  body[data-page="letter-concept"] .ps-pack-pass-tabs{display:flex!important;flex-wrap:wrap;justify-content:center;gap:8px!important}
+  body[data-page="letter-concept"] .ps-pack-pass-tabs button{min-width:112px;text-align:center!important}
+  body[data-page="letter-concept"] .ps-pack-pass-rail{display:grid!important;grid-auto-flow:row!important;grid-template-columns:repeat(auto-fit,minmax(220px,300px))!important;justify-content:center;gap:42px 20px!important;overflow:visible!important;padding:8px 0 18px!important}
+  body[data-page="letter-concept"] .ps-pack-pass-item{width:100%!important}
+  body[data-page="letter-concept"] .ps-pack-pass-card{width:100%!important;height:auto!important;aspect-ratio:600/952!important}
+  body[data-page="letter-concept"] .ps-pack-pass-dots{display:none!important}
+}
+
+body[data-page="letter-concept"] .ps-benefits-pair{margin:0!important;grid-template-columns:1fr 1fr!important;background:var(--color-dark-roast);color:var(--color-steam-cream)}
+body[data-page="letter-concept"] .ps-benefit-block{padding:88px var(--lc-gutter)!important;border:0!important}
+body[data-page="letter-concept"] .ps-benefit-block+.ps-benefit-block{background:var(--color-ceremonial-deep)}
+body[data-page="letter-concept"] .ps-benefit-block :is(h2,p,li,.eyebrow){color:var(--color-steam-cream)!important}
+body[data-page="letter-concept"] .ps-benefit-block h2{font:800 clamp(44px,5vw,74px)/.94 var(--font-display)!important;letter-spacing:-.05em;margin:22px 0!important}
+body[data-page="letter-concept"] .ps-coming-soon-consolidated{margin:0!important;padding:42px var(--lc-gutter)!important;background:var(--color-ceremonial);color:var(--color-steam-cream)!important;text-align:center}
+body[data-page="letter-concept"] .wh-page-list{margin:0!important;padding:100px var(--lc-gutter)!important;background:var(--color-oat)!important}
+body[data-page="letter-concept"] .wh-page-list-copy h2{font:800 clamp(48px,6vw,86px)/.94 var(--font-display)!important;letter-spacing:-.055em}
+body[data-page="letter-concept"] .ps-pack-end{padding:100px var(--lc-gutter)!important;background:linear-gradient(var(--color-oat),var(--color-pale-froth))}
+body[data-page="letter-concept"] .ps-pack-end h2{max-width:15ch;font:800 clamp(52px,7vw,100px)/.92 var(--font-display)!important;letter-spacing:-.06em}
+body[data-page="letter-concept"] .ps-pack-fineprint{margin:0!important;padding:80px var(--lc-gutter)!important;background:var(--color-pale-froth);border:0!important}
+body[data-page="letter-concept"] .ps-pack-fineprint h2{font:800 clamp(38px,4vw,62px)/.96 var(--font-display)!important;letter-spacing:-.045em;margin:12px 0 24px!important}
+body[data-page="letter-concept"] .lc-footer,body[data-page="letter-concept"] .lc-footer :is(h2,h3,p,span,a,.lc-section-label){color:var(--color-steam-cream)!important}
+body[data-page="letter-concept"] .lc-footer a.lc-footer-signup{background:var(--color-steam-cream);color:var(--color-ceremonial-deep)!important}
+body.lc-motion-paused .plp-ticker>div{animation-play-state:paused!important}
+@keyframes plp-ticker{to{transform:translateX(-50%)}}
+
+@media(max-width:850px){
+  body[data-page="letter-concept"] .wh-page-hero{grid-template-columns:1fr;min-height:0;padding:48px 24px 70px}
+  body[data-page="letter-concept"] .wh-page-hero::before{left:24px}
+  body[data-page="letter-concept"] .wh-page-hero h1{font-size:clamp(68px,20vw,96px)!important}
+  body[data-page="letter-concept"] .wh-page-hero-media{height:500px;margin-top:18px}
+  body[data-page="letter-concept"] .wh-page-statement{grid-template-columns:1fr;padding:78px 24px}
+  body[data-page="letter-concept"] .wh-page-statement h2{font-size:clamp(48px,14vw,68px)!important;margin-top:24px!important}
+  body[data-page="letter-concept"] .ps-how-it-works{padding:76px 24px!important}
+  body[data-page="letter-concept"] .ps-how-it-works-steps{grid-template-columns:1fr!important}
+  body[data-page="letter-concept"] .ps-how-it-works-step{min-height:0;padding:28px 0!important}
+  body[data-page="letter-concept"] .ps-how-it-works-step+.ps-how-it-works-step{border-left:0!important;border-top:1px solid var(--color-linen)!important}
+  body[data-page="letter-concept"] .ps-cap89-banner{grid-template-columns:1fr!important;padding:66px 24px!important}
+  body[data-page="letter-concept"] .ps-cap89-price{font-size:150px!important}
+  body[data-page="letter-concept"] .ps-welcome-offer{padding:70px 24px!important}
+  body[data-page="letter-concept"] .ps-pack-explorer{padding:82px 24px!important}
+  body[data-page="letter-concept"] .ps-pack-explorer-head{grid-template-columns:1fr!important}
+  body[data-page="letter-concept"] .ps-pack-explorer-head p{justify-self:start!important;margin-top:24px!important}
+  body[data-page="letter-concept"] .ps-pack-pass-card{box-shadow:8px 9px 0 var(--color-oat)!important}
+  body[data-page="letter-concept"] .ps-benefits-pair{grid-template-columns:1fr!important}
+  body[data-page="letter-concept"] .ps-benefit-block{padding:68px 24px!important}
+  body[data-page="letter-concept"] .wh-page-list,body[data-page="letter-concept"] .ps-pack-end,body[data-page="letter-concept"] .ps-pack-fineprint{padding:76px 24px!important}
+}
+@media(prefers-reduced-motion:reduce){.plp-ticker>div{animation:none}.wh-page-hero h1::after{transform:none!important}.ps-pack-pass-card{transform:none!important}}

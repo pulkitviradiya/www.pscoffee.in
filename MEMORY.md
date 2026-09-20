@@ -8,13 +8,17 @@ Read this at the start of every session. Use silently to inform work.
 
 | File | Version |
 |---|---|
-| `assets/ps.js` | v44 |
+| `assets/ps.js` | v50 |
 | `assets/image-slot.js` | v3 |
-| `assets/wh.css` | v108 |
-| `assets/mobile.css` | v76 |
+| `assets/wh.css` | v118 |
+| `assets/mobile.css` | v88 |
 | `assets/mobile.js` | v5 |
 
 Always read the current version from any `*.html` before bumping.
+
+## Homepage State (2026-09-20)
+
+- The letter-led Coffee/Matcha concept is now `index.html`; the previous homepage is retained as the no-indexed `home-legacy.html` backup. `/home-letter` redirects to `/`, and promotion remains local until the user approves push and deployment.
 
 ---
 

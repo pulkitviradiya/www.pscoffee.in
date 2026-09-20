@@ -1,543 +1,109 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<link rel="icon" type="image/png" href="assets/icons/ps-coffee_icon_terracotta_32.png">
-<link rel="apple-touch-icon" href="assets/icons/ps-coffee_icon_terracotta_180.png">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>P.S. Coffee | Specialty Coffee Pods, Ahmedabad</title>
-<meta name="description" content="Specialty daily coffee. The Letter and The P.S., from Pods planned in and around your day. Ahmedabad first. Join the opening waitlist.">
+<meta name="description" content="Honest specialty coffee for the everyday. Discover The Letter, The P.S., and Pods planned in and around Ahmedabad. Join the opening waitlist.">
 <link rel="canonical" href="https://www.pscoffee.in/">
 <link rel="alternate" type="application/json" href="https://www.pscoffee.in/assets/data/commerce-catalog.json" title="P.S. Coffee commerce catalog">
-<meta property="og:title" content="P.S. Coffee | Specialty Coffee Pods, Ahmedabad">
-<meta property="og:description" content="Specialty daily coffee. The Letter and The P.S., from Pods planned in and around your day. Ahmedabad first. Join the opening waitlist.">
+<meta property="og:title" content="P.S. Coffee | The day is the letter. The coffee is the P.S.">
+<meta property="og:description" content="Honest specialty coffee for the everyday. Ahmedabad first. Join the opening waitlist.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.pscoffee.in/">
-<meta property="og:image" content="https://www.pscoffee.in/assets/photos/site/menu-hero-cups-cropped-desktop.webp">
+<meta property="og:image" content="https://www.pscoffee.in/assets/photos/site/home-hero-coffee-desktop.webp">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="P.S. Coffee | Specialty Coffee Pods, Ahmedabad">
-<meta name="twitter:description" content="Specialty daily coffee. The Letter and The P.S., from Pods planned in and around your day. Ahmedabad first. Join the opening waitlist.">
-<meta name="twitter:image" content="https://www.pscoffee.in/assets/photos/site/menu-hero-cups-cropped-desktop.webp">
-<link rel="stylesheet" href="assets/ps.css">
-<link rel="stylesheet" href="assets/wh.css?v=113">
-<link rel="stylesheet" href="assets/mobile.css?v=78">
-<style>
-/* ── P.S. Pass interactive showcase ─────────────────────── */
-.ps-pass-showcase{position:relative;display:block;background:var(--paper,#FAF6EE);padding:clamp(28px,5vw,72px);margin-bottom:clamp(48px,7vw,96px);border-radius:14px;overflow:hidden}
-.ps-pass-showcase::before{content:"P.S.";position:absolute;right:clamp(16px,4vw,52px);top:clamp(8px,2vw,20px);color:rgba(232,64,12,.08);font-family:var(--font-display,"Bricolage Grotesque",sans-serif);font-size:clamp(96px,18vw,260px);font-weight:900;line-height:.8;letter-spacing:-.08em;pointer-events:none}
-.ps-pass-head{position:relative;z-index:1;display:grid;grid-template-columns:1fr;gap:clamp(18px,2.2vw,30px);align-items:start;margin-bottom:clamp(22px,4vw,44px)}
-.ps-pass-copy .kicker{margin:0 0 .7rem;color:var(--color-terracotta,#E8400C)!important;font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
-.ps-pass-copy h2{max-width:1120px;margin:0;color:var(--roast,#2a1a0e);font-family:var(--font-display,"Bricolage Grotesque",sans-serif);font-size:clamp(40px,3.9vw,72px);font-weight:900;letter-spacing:-.055em;line-height:.94}
-.ps-pass-line{display:block;white-space:nowrap}
-.ps-pass-highlight{display:inline;background:var(--nectar,#D98F1F);padding:3px 10px;border-radius:6px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
-.ps-pass-points{display:grid;gap:9px;justify-self:end;max-width:420px;margin:0;padding:0;list-style:none}
-.ps-pass-points li{display:flex;gap:10px;align-items:center;color:var(--roast,#2a1a0e);font-size:14px;font-weight:700;line-height:1.25}
-.ps-pass-points li::before{content:"";width:8px;height:8px;border:1.5px solid var(--tc,#E8400C);border-radius:999px;flex:0 0 auto}
-.ps-pass-stage{position:relative;z-index:1;display:grid;grid-template-columns:minmax(130px,180px) minmax(0,1fr);gap:clamp(14px,2.2vw,28px);align-items:center}
-.ps-pass-tabs{display:grid;gap:8px;align-self:stretch;align-content:center}
-.ps-pass-tabs button{appearance:none;border:1px solid rgba(61,32,16,.18);border-radius:999px;background:transparent;color:var(--roast,#2a1a0e);font-family:var(--font-body,"Space Grotesk",sans-serif);font-size:12px;font-weight:800;letter-spacing:.03em;text-align:left;padding:11px 14px;cursor:pointer;transition:background .18s,color .18s,border-color .18s}
-.ps-pass-tabs button[aria-selected="true"]{background:var(--tc,#E8400C);border-color:var(--tc,#E8400C);color:var(--paper,#FAF6EE)}
-.ps-pass-rail{display:grid;grid-auto-flow:column;grid-auto-columns:300px;gap:clamp(14px,2vw,24px);overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scrollbar-width:none;padding:4px clamp(24px,3vw,42px) 10px}
-.ps-pass-rail::-webkit-scrollbar{display:none}
-.ps-pass-item{scroll-snap-align:center;display:grid;gap:12px;width:300px;min-width:0;text-decoration:none;color:inherit}
-.ps-pass-card{--pass-rgb:232,64,12;--pass-ink:#E8400C;position:relative;box-sizing:border-box;width:300px;height:476px;min-height:0;border:7px solid #E8DCC8;border-radius:22px;overflow:hidden;background:var(--roast,#2a1a0e);box-shadow:0 18px 46px rgba(42,26,14,.18)}
-.ps-pass-card img{width:100%;height:100%;object-fit:cover;display:block}
-.ps-pass-card::before{content:"";position:absolute;z-index:3;inset:0;border:2px solid rgba(var(--pass-rgb),.55);border-radius:15px;pointer-events:none}
-.ps-pass-card::after{content:"";position:absolute;z-index:1;inset:0;background:linear-gradient(180deg,rgba(var(--pass-rgb),0) 0%,rgba(var(--pass-rgb),0) 74%,rgba(var(--pass-rgb),.4) 92%,rgba(var(--pass-rgb),.6) 100%);pointer-events:none}
-.ps-pass-item.is-active .ps-pass-card{box-shadow:0 18px 46px rgba(42,26,14,.18)}
-.ps-pass-card-top,.ps-pass-card-bottom{position:absolute;z-index:2;left:18px;right:18px;color:var(--pass-ink)}
-.ps-pass-card-top{top:30px;display:flex;align-items:flex-start;justify-content:center;text-align:center}
-.ps-pass-card-top strong{display:grid;justify-items:center;width:100%;max-width:7ch;color:var(--pass-ink)!important;font-family:var(--font-display,"Bricolage Grotesque",sans-serif)!important;font-size:46px!important;font-weight:800!important;letter-spacing:-.055em!important;line-height:.8!important;text-wrap:balance;-webkit-text-stroke:2.5px #FAF6EE!important;paint-order:stroke fill}
-.ps-pass-title-kicker{display:block;font-size:26px!important;font-weight:800!important;letter-spacing:-.055em!important;line-height:.8!important}
-.ps-pass-title-main{display:block;font-size:46px!important;font-weight:800!important;letter-spacing:-.055em!important;line-height:.8!important}
-.ps-pass-card-bottom{bottom:18px;display:grid;justify-items:center;text-align:center;gap:8px}
-.ps-pass-card-bottom em{display:block;margin:0;color:var(--pass-ink)!important;font-family:var(--font-accent,"Instrument Serif",Georgia,serif)!important;font-size:46px!important;font-style:italic!important;font-weight:400!important;letter-spacing:-.01em!important;line-height:.86!important;-webkit-text-stroke:2px #FAF6EE!important;paint-order:stroke fill}
-.ps-pass-card-tags{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:start;gap:6px;width:100%;margin:0 auto;padding:0;list-style:none}
-.ps-pass-card-tags li{display:flex;align-items:center;justify-content:center;height:28px;min-height:0;border:0;border-radius:6px;background:#FAF6EE!important;padding:0 8px;color:var(--pass-ink)!important;font-family:var(--font-body,"Space Grotesk",sans-serif)!important;font-size:8.5px!important;font-weight:800!important;letter-spacing:.04em!important;line-height:1.05!important;text-align:center;text-transform:uppercase;white-space:nowrap}
-.ps-pass-caption{display:grid;gap:5px;padding-inline:2px}
-.ps-pass-caption h3{margin:0;color:var(--roast,#2a1a0e);font-size:17px;font-weight:900;letter-spacing:-.02em;line-height:1.05}
-.ps-pass-caption p{margin:0;color:rgba(61,32,16,.72);font-size:12px;font-weight:600;line-height:1.35}
-.ps-pass-duration[hidden]{display:none!important}
-.ps-pass-actions{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:18px;margin-top:clamp(18px,3vw,30px)}
-.ps-pass-dots{display:flex;gap:8px}
-.ps-pass-dots button{width:8px;height:8px;padding:0;border:0;border-radius:999px;background:rgba(61,32,16,.24);cursor:pointer}
-.ps-pass-dots button[aria-current="true"]{width:28px;background:var(--tc,#E8400C)}
-.ps-pass-link{color:var(--tc,#E8400C);font-size:14px;font-weight:900;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:3px}
-@media(max-width:860px){.ps-pass-showcase{padding:32px var(--mobile-gut,16px);border-radius:0}.ps-pass-head{grid-template-columns:1fr;gap:16px}.ps-pass-copy h2{font-size:clamp(38px,10.5vw,58px)}.ps-pass-line{white-space:normal}.ps-pass-stage{grid-template-columns:1fr}.ps-pass-tabs{display:flex;overflow-x:auto;scrollbar-width:none}.ps-pass-tabs::-webkit-scrollbar{display:none}.ps-pass-tabs button{white-space:nowrap}.ps-pass-rail{grid-auto-columns:300px;padding-inline:0}.ps-pass-card-bottom{left:18px;right:18px}.ps-pass-actions{align-items:flex-start}.ps-pass-link{font-size:13px}}
-
-/* ── Cream buffer between bold Terracotta blocks (sec-11: bold blocks
-   touch neutral, never each other) ──────────────────────── */
-.ps-section-buffer{height:clamp(40px,6vw,72px);background:var(--paper)}
-
-/* ── App callout (restored 2-col) ────────────────────────── */
-.ps-app-callout{padding:clamp(48px,7vw,96px) 0;background:var(--roast,#2a1a0e);color:#FAF6EE}
-.ps-app-callout .wrap{max-width:1200px;margin-inline:auto;padding-inline:clamp(20px,4vw,48px);display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,80px);align-items:center}
-.ps-app-copy p.kicker{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--tc,#E8400C);margin:0 0 .6rem}
-.ps-app-copy h2{font-size:clamp(26px,3.5vw,44px);font-weight:800;margin:0 0 1.25rem;line-height:1.15;color:#FAF6EE}
-.ps-app-features{list-style:none;padding:0;margin:0 0 2rem;display:flex;flex-direction:column;gap:.6rem}
-.ps-app-features li{font-size:15px;color:rgba(250,246,238,.75);padding-left:1.25rem;position:relative}
-.ps-app-features li::before{content:"→";position:absolute;left:0;color:var(--tc,#E8400C)}
-.ps-app-btns{display:flex;gap:12px;flex-wrap:wrap}
-.ps-app-btns a.primary{background:var(--tc,#E8400C);color:#FAF6EE;padding:12px 24px;border-radius:4px;font-weight:700;font-size:14px;text-decoration:none}
-.ps-app-btns a.outline{border:1.5px solid rgba(250,246,238,.4);color:#FAF6EE;padding:12px 24px;border-radius:4px;font-weight:600;font-size:14px;text-decoration:none}
-.ps-app-visual{position:relative;box-sizing:border-box;overflow:hidden;aspect-ratio:390/844;height:clamp(520px,72vh,760px);max-width:min(100%,390px);justify-self:center;border:10px solid #1f130d;border-radius:42px;background:#1f130d;box-shadow:0 28px 70px rgba(61,32,16,.28)}
-.ps-app-visual::before{content:"";position:absolute;z-index:2;top:10px;left:50%;width:34%;height:28px;border-radius:999px;background:#1f130d;transform:translateX(-50%);pointer-events:none}
-.ps-app-visual img{width:100%;height:100%;object-fit:cover;display:block;border-radius:30px;background:var(--tc,#E8400C)}
-@media(max-width:760px){.ps-app-callout .wrap{grid-template-columns:1fr}.ps-app-visual{display:block;width:min(78vw,300px);height:auto;margin-inline:auto}}
-
-/* ── Page callouts, slim editorial grid ─────────────────── */
-.ps-callout-strip{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(42,26,14,.1);border-left:1px solid rgba(42,26,14,.1)}
-.ps-callout{padding:clamp(20px,2.8vw,34px) clamp(20px,3.5vw,48px);display:flex;flex-direction:column;gap:.55rem;border-right:1px solid rgba(42,26,14,.1);border-bottom:1px solid rgba(42,26,14,.1);background:#FAF6EE;transition:background .18s}
-.ps-callout p.kicker{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--tc,#E8400C);margin:0}
-.ps-callout h2{font-size:clamp(17px,1.9vw,24px);font-weight:800;margin:0;line-height:1.2;color:var(--roast,#2a1a0e)}
-.ps-callout p.sub{font-size:13px;color:var(--muted,#7a6a5a);margin:0;line-height:1.55}
-.ps-callout-btns{display:flex;gap:7px;flex-wrap:wrap;margin-top:.35rem}
-.ps-callout-btns a.btn-filled{background:var(--roast,#2a1a0e);color:#FAF6EE;padding:7px 16px;border-radius:3px;font-weight:700;font-size:12px;text-decoration:none;white-space:nowrap}
-.ps-callout-btns a.btn-outline{border:1px solid rgba(42,26,14,.3);color:var(--roast,#2a1a0e);padding:6px 15px;border-radius:3px;font-weight:600;font-size:12px;text-decoration:none;white-space:nowrap}
-@media(max-width:640px){.ps-callout-strip{grid-template-columns:1fr;border-left:none}.ps-callout{border-left:1px solid rgba(42,26,14,.1)}}
-
-/* ── Our Story bold section ───────────────────────────────── */
-.ps-our-story{background:var(--roast,#2a1a0e);padding:clamp(56px,8vw,100px) clamp(20px,4vw,48px);text-align:center;margin-bottom:clamp(48px,7vw,96px)}
-.ps-our-story-inner{max-width:880px;margin-inline:auto}
-.ps-our-story .kicker{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--tc,#E8400C);margin:0 0 .9rem;display:block}
-.ps-our-story h2{font-size:clamp(52px,8vw,108px);font-weight:900;color:#FAF6EE;margin:0 0 1.5rem;line-height:.9;letter-spacing:-.03em;text-transform:uppercase}
-.ps-our-story p{font-size:clamp(15px,1.4vw,19px);color:rgba(250,246,238,.65);margin:0 auto 2.25rem;line-height:1.65;max-width:58ch}
-.ps-our-story a{display:inline-block;font-size:14px;font-weight:700;color:#FAF6EE;text-decoration:none;border-bottom:1px solid rgba(250,246,238,.35);padding-bottom:3px;letter-spacing:.04em}
-
-/* ── Feedback / list signup hero ─────────────────────────── */
-.ps-feedback{background:var(--tc,#E8400C);display:grid;grid-template-columns:auto 1fr;margin-bottom:clamp(48px,7vw,96px)}
-.ps-feedback-ticket{padding:clamp(36px,5.5vw,72px) clamp(28px,4vw,56px);display:flex;flex-direction:column;justify-content:center;align-items:flex-start;border-right:2px dashed rgba(250,246,238,.4);min-width:220px;background:rgba(184,48,10,.3)}
-.ps-feedback-eyebrow{font-size:11px;color:rgba(250,246,238,.75);letter-spacing:.08em;margin:0 0 .35rem;text-transform:uppercase}
-.ps-feedback-hero{font-size:clamp(52px,8vw,108px);font-weight:900;color:#FAF6EE;line-height:.88;margin:0;letter-spacing:-.04em;text-transform:uppercase}
-.ps-feedback-hero em{font-style:normal;color:rgba(250,246,238,.55);font-size:.55em;display:block;letter-spacing:.02em;font-weight:700;margin-top:.25em}
-.ps-feedback-body{padding:clamp(36px,5.5vw,72px) clamp(24px,4vw,56px);display:flex;flex-direction:column;justify-content:center}
-.ps-feedback-body .kicker{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(250,246,238,.65);margin:0 0 .6rem;display:block}
-.ps-feedback-body h3{font-size:clamp(20px,2.4vw,34px);font-weight:800;color:#FAF6EE;margin:0 0 .85rem;line-height:1.1}
-.ps-feedback-body p{font-size:14px;color:rgba(250,246,238,.85);margin:0 0 1.75rem;line-height:1.65;max-width:46ch}
-.ps-feedback-cta{display:inline-block;background:#FAF6EE;color:var(--tc,#E8400C);font-size:15px;font-weight:800;padding:14px 30px;border-radius:9px;text-decoration:none;letter-spacing:-.01em;transition:opacity .15s}
-.ps-feedback-cta:hover{opacity:.88}
-@media(max-width:700px){.ps-feedback{grid-template-columns:1fr}.ps-feedback-ticket{border-right:none;border-bottom:2px dashed rgba(250,246,238,.28)}}
-
-/* ── Homepage story cards 1:1 ─────────────────────────────── */
-body[data-page="home"] .wh-ms-card{height:auto;min-height:unset;aspect-ratio:1/1}
-
-/* ── House favourites, align price + CTA row ─────────────── */
-body[data-page="home"] .wh-product-card{display:flex;flex-direction:column}
-body[data-page="home"] .wh-product-card>div:last-child{
-  border-top:1px solid rgba(42,26,14,.15);
-  padding-top:10px !important
-}
-body[data-page="home"] .wh-product-card>div:last-child strong{
-  border-right:1px solid rgba(42,26,14,.15);
-  padding-right:10px
-}
-
-/* ── Homepage Pass section final scope ───────────────────── */
-body[data-page="home"] .ps-pass-showcase{
-  min-height:0;
-  margin-bottom:clamp(48px,7vw,96px)
-}
-</style>
-<script>(function(){try{var t=JSON.parse(localStorage.getItem('ps-tweaks')||'{}');var r=document.documentElement;if(t.tc&&/^#[0-9a-fA-F]{3,8}$/.test(t.tc)){r.style.setProperty('--tc',t.tc);r.style.setProperty('--wh-tc',t.tc);}}catch(e){}})()</script>
-<!-- Google tag (gtag.js) -->
+<meta name="twitter:title" content="P.S. Coffee | The day is the letter. The coffee is the P.S.">
+<meta name="twitter:description" content="Honest specialty coffee for the everyday. Ahmedabad first. Join the opening waitlist.">
+<meta name="twitter:image" content="https://www.pscoffee.in/assets/photos/site/home-hero-coffee-desktop.webp">
+<link rel="icon" href="assets/icons/ps-coffee_icon_terracotta_32.png">
+<link rel="stylesheet" href="assets/ps.css"><link rel="stylesheet" href="assets/home-letter.css?v=11"><link rel="stylesheet" href="assets/mobile.css?v=88">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-5TS0QMZ55W"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag("js", new Date());
-
-  gtag("config", "G-5TS0QMZ55W");
-</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-5TS0QMZ55W');</script>
 </head>
-<body data-page="home">
-
-<div id="ps-nav"></div>
-<div class="page-top"></div>
-
-<!-- ══ HERO BANNERS  (WatchHouse split-panel style) ══ -->
-<div class="wh-banners">
-
-  <!-- Left: caption panel body copy over dark image -->
-  <a class="wh-banner" href="menu.html">
-    <div class="wh-banner-img">
-      <image-slot id="home-hero-coffee" shape="rect" src="assets/photos/site/home-hero-coffee-desktop.webp" placeholder="P.S. Coffee hero terracotta cup sleeve, specialty espresso on Steam Cream counter, editorial" fit="cover"></image-slot>
-    </div>
-    <div class="wh-banner-body">
-      <span class="wh-banner-price">Ahmedabad first.</span>
-      <p class="wh-banner-caption">Honest specialty coffee. Ground at order. Pods are being planned in and around your day.</p>
-      <span class="wh-banner-cta-btn">See the menu &nbsp;→</span>
-    </div>
-  </a>
-
-  <!-- Right: large-heading panel WatchHouse "Our Houses." style -->
-  <a class="wh-banner" href="pods.html#pods" data-mobile-first>
-    <div class="wh-banner-img">
-      <image-slot id="home-hero-pod" shape="rect" src="assets/photos/site/home-hero-pod-desktop.webp" mobile-src="assets/photos/site/home-hero-pod-mobile.webp" placeholder="P.S. Pod compact terracotta coffee deck inside a modern co-working lobby, barista, warm light" fit="cover"></image-slot>
-    </div>
-    <div class="wh-banner-body">
-      <h2 class="wh-banner-heading">The thought you add at the end.<br>Now at the beginning.</h2>
-      <p class="wh-banner-caption ps-launch-caption">Pods in and around your day. Ahmedabad first.</p><span class="wh-banner-cta-btn">See where we are heading &nbsp;→</span>
-    </div>
-  </a>
-
+<body data-page="letter-concept" data-mood="coffee">
+<a class="lc-skip" href="#letter">Skip to the letter</a>
+<header class="lc-nav"><a href="index.html" aria-label="P.S. Coffee home"><img src="assets/icons/ps-coffee_wordmark_steam cream.png" alt="P.S. Coffee" width="140"></a><div class="lc-mood" role="group" aria-label="Website colour mood"><button type="button" data-mood-choice="coffee" aria-pressed="true">Coffee</button><button type="button" data-mood-choice="matcha" aria-pressed="false">Matcha</button></div><nav aria-label="Main navigation"><a href="#range">The coffee</a><a href="#pods">The Pods</a><a href="about.html">Our story</a></nav><a class="lc-button lc-small" href="pods.html#waitlist">Be first in line <span aria-hidden="true">↗</span></a></header>
+<main id="letter">
+<div class="lc-commute-wrap"><div class="lc-commute-strip" role="img" aria-label="Grab and go: illustrated people walk to a Pod, collect a coffee and carry on."><div class="lc-commute-track" aria-hidden="true"><div class="lc-commute-unit"><span class="lc-commute-words">STEP UP. <i>GRAB A CUP.</i> CARRY ON. ↗</span><svg class="lc-commute-scene" viewBox="0 0 460 104" aria-hidden="true" focusable="false">
+<path class="lc-commute-ground" d="M8 94H452"/>
+<g class="lc-commute-pod"><path d="M191 91V30H260V91M183 30H268V16H183ZM200 40H251V66H200M190 72H261"/><text x="225" y="26" text-anchor="middle">POD</text><path d="M239 62l2-12h-10l2 12zM230 49h12"/></g>
+<g class="lc-commuter"><g class="lc-walker-body"><circle cx="0" cy="-48" r="7"/><path class="lc-walker-torso" d="M-1-39L-5-16"/><path class="lc-walker-leg lc-leg-front" d="M-5-17L5-2L14 0"/><path class="lc-walker-leg lc-leg-back" d="M-5-17L-14-4L-20 0"/><path class="lc-walker-arm" d="M-1-35L10-25L22-30"/><path d="M-5-34L-15-22"/><path class="lc-walker-bag" d="M-10-35L-21-32L-24-18L-14-17Z"/>
+<g class="lc-carried-cup"><path d="M18-41h12l-2 14h-8z"/><path d="M17-42h14"/></g></g></g>
+<g class="lc-commuter lc-commuter-second"><g class="lc-walker-body"><circle cx="0" cy="-48" r="7"/><path class="lc-walker-torso" d="M-1-39L-5-16"/><path class="lc-walker-leg lc-leg-front" d="M-5-17L5-2L14 0"/><path class="lc-walker-leg lc-leg-back" d="M-5-17L-14-4L-20 0"/><path class="lc-walker-arm" d="M-1-35L10-25L22-30"/><path d="M-5-34L-15-22"/><path class="lc-walker-bag" d="M-10-35L-21-32L-24-18L-14-17Z"/>
+<g class="lc-carried-cup"><path d="M18-41h12l-2 14h-8z"/><path d="M17-42h14"/></g></g></g>
+<g class="lc-commute-spark"><path d="M275 43l8-5m-7 12h10m-12 7 7 5"/></g>
+</svg><span class="lc-commute-hindi" lang="hi">चलो, कॉफ़ी।</span></div><div class="lc-commute-unit"><span class="lc-commute-words">STEP UP. <i>GRAB A CUP.</i> CARRY ON. ↗</span><svg class="lc-commute-scene" viewBox="0 0 460 104" aria-hidden="true" focusable="false">
+<path class="lc-commute-ground" d="M8 94H452"/>
+<g class="lc-commute-pod"><path d="M191 91V30H260V91M183 30H268V16H183ZM200 40H251V66H200M190 72H261"/><text x="225" y="26" text-anchor="middle">POD</text><path d="M239 62l2-12h-10l2 12zM230 49h12"/></g>
+<g class="lc-commuter"><g class="lc-walker-body"><circle cx="0" cy="-48" r="7"/><path class="lc-walker-torso" d="M-1-39L-5-16"/><path class="lc-walker-leg lc-leg-front" d="M-5-17L5-2L14 0"/><path class="lc-walker-leg lc-leg-back" d="M-5-17L-14-4L-20 0"/><path class="lc-walker-arm" d="M-1-35L10-25L22-30"/><path d="M-5-34L-15-22"/><path class="lc-walker-bag" d="M-10-35L-21-32L-24-18L-14-17Z"/>
+<g class="lc-carried-cup"><path d="M18-41h12l-2 14h-8z"/><path d="M17-42h14"/></g></g></g>
+<g class="lc-commuter lc-commuter-second"><g class="lc-walker-body"><circle cx="0" cy="-48" r="7"/><path class="lc-walker-torso" d="M-1-39L-5-16"/><path class="lc-walker-leg lc-leg-front" d="M-5-17L5-2L14 0"/><path class="lc-walker-leg lc-leg-back" d="M-5-17L-14-4L-20 0"/><path class="lc-walker-arm" d="M-1-35L10-25L22-30"/><path d="M-5-34L-15-22"/><path class="lc-walker-bag" d="M-10-35L-21-32L-24-18L-14-17Z"/>
+<g class="lc-carried-cup"><path d="M18-41h12l-2 14h-8z"/><path d="M17-42h14"/></g></g></g>
+<g class="lc-commute-spark"><path d="M275 43l8-5m-7 12h10m-12 7 7 5"/></g>
+</svg><span class="lc-commute-hindi" lang="hi">चलो, कॉफ़ी।</span></div></div></div></div>
+<button class="lc-motion-toggle" type="button" aria-pressed="false">Pause motion <span aria-hidden="true">Ⅱ</span></button>
+<section class="lc-hero">
+<div class="lc-address"><span>FROM P.S. COFFEE<br>TO YOUR EVERYDAY</span><span>AHMEDABAD, FIRST.<br>A BRAND IN THE MAKING.</span><span class="lc-version">THE LETTER IS LIVE ↗<br>KEEP READING BELOW</span></div>
+<div class="lc-hero-layout"><div class="lc-hero-copy"><p class="lc-dear">Dear ordinary day,</p><span class="lc-hindi-note" lang="hi">थोड़ा ठहरो।</span><h1>The day is<br>the letter.<br><span>The coffee<br>is the P.S.</span></h1><div class="lc-intro"><p>Honest specialty coffee.<br>From Pods planned in and around your day.</p><a class="lc-text-link" href="#range">Find your starting point <span aria-hidden="true">↓</span></a></div><div class="lc-hero-signoff"><p><em>We take coffee very seriously, as well as the drama.</em></p><span lang="hi">थोड़ा ड्रामा तो बनता है।</span></div></div>
+<figure class="lc-cover"><div class="lc-photo"><img src="assets/photos/site/home-hero-coffee-desktop.webp" alt="A cup of P.S. Coffee, ready for a pause in the day" fetchpriority="high"><span class="lc-photo-number">FIG. 01 / THE EVERYDAY CUP</span></div><figcaption><span>A small addition.<br>A different kind of day.</span><span class="lc-scribble">Yours, P.S.</span></figcaption><span class="lc-stamp"><span lang="hi">कॉफ़ी तो बनती है।</span><small>COFFEE IS CALLED FOR.</small></span></figure></div>
+<div class="lc-letter-bottom"><span>01 — A NOTE TO BEGIN</span><span>KEEP READING. THE GOOD PART FOLLOWS. ↓</span></div>
+</section>
+<div class="lc-ribbon" aria-label="Grab a coffee. Carry on. Ahmedabad first."><div class="lc-ribbon-track"><span>GRAB A COFFEE. CARRY ON. ↗ <i lang="hi">चलो, कॉफ़ी।</i> ✳ AHMEDABAD FIRST. ✳ </span><span aria-hidden="true">GRAB A COFFEE. CARRY ON. ↗ <i lang="hi">चलो, कॉफ़ी।</i> ✳ AHMEDABAD FIRST. ✳ </span></div></div>
+<section class="lc-day lc-reveal" aria-labelledby="day-title"><div class="lc-section-label">THE LETTER / YOUR DAY</div><h2 id="day-title">The meeting.<br>The missed alarm.<br>The <em class="lc-pencil-mark">one more thing.</em></h2><div class="lc-day-aside"><span class="lc-asterisk" aria-hidden="true">✳</span><p>Your day already has a plot.<br>We are making a little room<br>for the part you look forward to.</p><a href="#postscript" class="lc-text-link">And then, coffee. ↓</a></div></section>
+<section id="postscript" class="lc-postscript"><div class="lc-postscript-top"><span>THE POSTSCRIPT / OUR PART</span><span>SMALL CUP. FULL CHARACTER.</span></div><div class="lc-ps-layout"><div class="lc-ps-type" aria-hidden="true">P.S.</div><div class="lc-ps-copy"><h2>Your usual.<br>With something<br><em>behind it.</em></h2><p>Four familiar starting points. A changing range behind them. Specialty coffee that can become part of the everyday.</p><a class="lc-button lc-inverse" href="menu.html">Meet the menu <span aria-hidden="true">↗</span></a></div></div><div class="lc-postscript-bottom"><span>BLACK. WHITE. GREEN. STRONG.</span><span>ONE FAMILIAR PLACE TO START.</span></div></section>
+<section id="range" class="lc-range lc-reveal"><div class="lc-section-heading"><div><p class="lc-section-label">THE COFFEE</p><h2>Four families.<br><em>Your kind of familiar.</em></h2></div><p>The Letter is the familiar four.<br>The P.S. is the changing range behind them.<br>Start anywhere. Stay curious.</p></div>
+<div class="lc-tabs" role="tablist" aria-label="Coffee range"><button type="button" role="tab" id="letter-tab" aria-selected="true" aria-controls="letter-panel" tabindex="0">The Letter <span>The familiar four</span></button><button type="button" role="tab" id="ps-tab" aria-selected="false" aria-controls="ps-panel" tabindex="-1">The P.S. <span>A little more to discover</span></button></div>
+<div id="letter-panel" role="tabpanel" aria-labelledby="letter-tab" class="lc-drinks">
+<a class="lc-drink" href="menu.html#menu-letter"><div class="lc-drink-meta"><span>01 / BLACK</span><span>↗</span></div><img src="assets/photos/site/menu-coffee-americano-desktop.webp" alt="Americano" loading="lazy"><h3>Americano.</h3><p>The familiar beginning.</p></a>
+<a class="lc-drink" href="menu.html#menu-letter"><div class="lc-drink-meta"><span>02 / WHITE</span><span>↗</span></div><img src="assets/photos/site/menu-coffee-cappuccino-desktop.webp" alt="Cappuccino" loading="lazy"><h3>Cappuccino.</h3><p>A softer landing.</p></a>
+<a class="lc-drink" href="menu.html#menu-letter"><div class="lc-drink-meta"><span>03 / GREEN</span><span>↗</span></div><img src="assets/photos/site/menu-matcha-hot-desktop.webp" alt="Hot Matcha Latte" loading="lazy"><h3>Hot Matcha Latte.</h3><p>A change of pace.</p></a>
+<a class="lc-drink" href="menu.html#menu-letter"><div class="lc-drink-meta"><span>04 / STRONG</span><span>↗</span></div><img src="assets/photos/site/menu-coffee-protein-coffee-desktop.webp" alt="Protein Cold Coffee" loading="lazy"><h3>Protein Cold Coffee.</h3><p>Keep the day moving.</p></a>
 </div>
-
-<section class="wh-modern">
-  <p>Plain & Simple.</p>
-  <h1>We take coffee very seriously, as well as the drama.</h1>
+<div id="ps-panel" role="tabpanel" aria-labelledby="ps-tab" class="lc-discover" hidden><span class="lc-discover-number">+</span><div><h3>There is more<br>after the familiar.</h3><p>Explore the existing recipes and numbered variants across Black, White, Green and Strong. The opening range is still taking shape.</p><a class="lc-button" href="menu.html#menu-ps">Explore The P.S. ↗</a></div><img src="assets/photos/site/menu-coffee-cold-brew-desktop.webp" alt="Cold brew coffee from the wider range" loading="lazy"></div>
+<div class="lc-range-foot"><span>THE MENU IS TAKING SHAPE.</span><a href="menu.html" class="lc-text-link">The full menu, recipes and prices ↗</a></div></section>
+<section class="lc-go" id="grab-and-go" aria-labelledby="go-title">
+<div class="lc-go-heading"><div><p class="lc-section-label">A SMALL STOP / THEN ON WITH IT</p><h2 id="go-title">Grab.<br>Go.<br><em>Good day.</em></h2></div><div class="lc-go-note"><span lang="hi">चलते हैं।</span><p>Specialty coffee, made for the way your day moves. Our Pods are being designed around a simple idea: pick up your cup and carry on.</p></div></div>
+<div class="lc-go-stage">
+<svg viewBox="0 0 1000 420" role="img" aria-labelledby="go-art-title go-art-desc">
+<title id="go-art-title">From the Pod to the rest of your day</title><desc id="go-art-desc">An illustrated takeaway cup travels from a compact coffee Pod, through pick-up, towards your day. A concept of the planned grab-and-go experience.</desc>
+<defs><pattern id="go-lines" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 0 40 H 40" fill="none" stroke="var(--color-linen)" stroke-width="1"/></pattern></defs>
+<rect width="1000" height="420" fill="url(#go-lines)"/>
+<path class="lc-route" d="M110 340 H890" fill="none" stroke="var(--lc-accent)" stroke-width="2" stroke-dasharray="6 10"/>
+<g class="lc-pod-drawing" fill="none" stroke="var(--lc-accent)" stroke-width="3"><path d="M65 315V85H300V315M48 85H317V55H48ZM84 112H281V239H84ZM65 261H300M196 262V315M84 133H281"/><path d="M110 200V180H160V219H110ZM160 188H178V211H160M202 175V214M218 167V214M234 180V214"/><path d="M65 315H300" stroke-width="8"/></g>
+<text x="183" y="77" text-anchor="middle" class="lc-svg-label">THE POD</text>
+<g fill="none" stroke="var(--lc-accent)" stroke-width="3"><path d="M447 290H592M455 291V315M584 291V315"/><path class="lc-go-hand" d="M555 237h64l19-10h36m-122 10-23-10q-12-4-16 3l27 22h61l24 12h49"/></g>
+<text x="520" y="277" text-anchor="middle" class="lc-svg-small">YOUR CUP, READY TO GO.</text>
+<g fill="none" stroke="var(--lc-accent)" stroke-width="3"><path d="M765 305V151H809V116H850V305M862 305V183H914V305M783 172v18m0 14v18m0 14v18m45-117v20m0 15v20m0 15v20m0 15v20m53-45v20m17-20v20m-17 15v20m17-20v20"/><path d="M754 305h174" stroke-width="7"/></g>
+<g class="lc-travel-cup"><path d="M-34-12L-26 66H26L34-12Z" fill="var(--color-steam-cream)" stroke="var(--lc-accent)" stroke-width="3"/><path d="M-31 11H31L28 46H-28Z" fill="var(--lc-accent)"/><path d="M-40-12V-22H40V-12ZM-30-22V-29H30V-22" fill="var(--lc-accent)" stroke="var(--lc-accent)" stroke-width="3"/><path d="M-12 0H12M-8 55H8" stroke="var(--lc-accent)" stroke-width="2"/><g class="lc-steam" fill="none" stroke="var(--lc-accent)" stroke-width="2"><path d="M-10-46q-8-10 0-19t0-19M10-42q-8-10 0-19t0-19"/></g></g>
+<g class="lc-svg-label" text-anchor="middle"><text x="180" y="385">01 / STEP UP</text><text x="520" y="385">02 / PICK UP</text><text x="835" y="385">03 / CARRY ON ↗</text></g>
+</svg>
+<ol class="lc-go-steps"><li>Step up.</li><li>Pick up.</li><li>Carry on.</li></ol>
+<div class="lc-go-controls"><span>THE GRAB-AND-GO IDEA / CONCEPT IN MOTION</span><button class="lc-go-replay" type="button">Play the journey again ↻</button></div></div>
+<div class="lc-go-bottom"><p>A coffee stop.<br><strong>Not a change of plans.</strong></p><a class="lc-button" href="pods.html#waitlist">Be there for the first Pod ↗</a></div>
 </section>
 
-<section class="wh-home-shop">
-  <h2>The serious part is the cup. The drama is the range.</h2>
-  <div class="wh-home-cards">
-    <a class="wh-home-card" href="menu.html#menu-letter">
-      <image-slot id="home-cat-coffee" shape="rect" src="assets/photos/site/home-cat-coffee-desktop.webp" placeholder="Coffee beans" fit="cover"></image-slot>
-      <strong>Honest specialty coffee.</strong>
-      <span>Discover</span>
-    </a>
-    <a class="wh-home-card" href="menu.html#menu-letter">
-      <image-slot id="home-cat-pack" shape="rect" src="assets/photos/site/home-cat-pack-desktop.webp" placeholder="The Letter menu preview" fit="cover"></image-slot>
-      <strong>The Letter.</strong>
-      <span>Discover</span>
-    </a>
-    <a class="wh-home-card" href="menu.html#menu-ps">
-      <image-slot id="home-cat-matcha" shape="rect" src="assets/photos/site/home-cat-matcha-desktop.webp" placeholder="P.S. Matcha ceremonial grade, home page category" fit="cover"></image-slot>
-      <strong>The P.S.</strong>
-      <span>Discover</span>
-    </a>
-    <a class="wh-home-card" href="app.html">
-      <image-slot id="home-cat-app" shape="rect" src="assets/photos/site/home-cat-app-v4-desktop.jpg" placeholder="App" fit="cover"></image-slot>
-      <strong>It already knows.</strong>
-      <span>Discover</span>
-    </a>
-    <a class="wh-home-card" href="pods.html#waitlist">
-      <image-slot id="home-place-small-1" shape="rect" src="assets/photos/site/home-place-small-1-desktop.webp" mobile-src="assets/photos/site/home-place-small-1-mobile.webp" placeholder="P.S. Pods compact coffee stations, home page" fit="cover"></image-slot>
-      <strong>The first Pods.</strong>
-      <span>Discover</span>
-    </a>
-  </div>
+<section id="pods" class="lc-pods lc-reveal"><div class="lc-section-heading"><div><p class="lc-section-label">THE PLACE</p><h2>In the middle<br>of <em>your day.</em></h2></div><div><p>A Pod is our compact coffee format. We are exploring workplaces, campuses, gyms and nearby corners. Ahmedabad first.</p><a class="lc-text-link" href="pods.html#waitlist">Tell us where you would like a Pod ↗</a></div></div><figure class="lc-pod-photo"><img src="assets/photos/site/home-hero-pod-desktop.webp" alt="Concept visual of a P.S. Coffee Pod in a shared workspace" loading="lazy"><figcaption><span>POD STUDY / AHMEDABAD</span><span>CONCEPT VISUAL. LOCATIONS AND DATES UNCONFIRMED.</span></figcaption></figure><div class="lc-pod-notes"><span>COFFEE, IN CONTEXT.</span><p>A small footprint.<br>A place in the daily routine.</p><a href="partnership.html#host" class="lc-button">Have a space in mind? ↗</a></div></section>
+<section class="lc-daylight" aria-labelledby="daylight-title">
+<div class="lc-daylight-sky" aria-hidden="true"><span class="lc-setting-sun"></span><span class="lc-horizon"></span></div>
+<div class="lc-daylight-intro"><p class="lc-section-label">FROM THE FIRST LIGHT / TO THE LAST LETTER</p><h2 id="daylight-title">The day changes.<br><em>So can your cup.</em></h2><p>A coffee kind of morning.<br>A matcha kind of evening.<br>Two moods. Your own rhythm.</p><span lang="hi" class="lc-daylight-hindi">सुबह से शाम तक।</span></div>
+<div class="lc-daylight-cups"><a class="lc-daylight-coffee" href="menu.html#menu-letter"><span class="lc-section-label">SUNRISE / P.S. BLACK & WHITE</span><img src="assets/photos/site/menu-coffee-cappuccino-desktop.webp" alt="Cappuccino for the coffee chapter" loading="lazy"><h3>Hello, day.</h3><span>Find your coffee ↗</span></a><span class="lc-daylight-thread" aria-hidden="true">↓</span><a class="lc-daylight-matcha" href="matcha.html"><span class="lc-section-label">DUSK / P.S. GREEN</span><img src="assets/photos/site/menu-matcha-hot-desktop.webp" alt="Matcha latte for the green chapter" loading="lazy"><h3>A greener turn.</h3><span>Meet P.S. Green ↗</span></a></div>
+<div class="lc-dusk"><div><p class="lc-section-label">A DIFFERENT SHADE OF EVERYDAY</p><h2>As the light softens,<br><em>the story turns green.</em></h2></div><div><p>Precisely whisked matcha. A familiar latte and more to discover in P.S. Green.</p><a class="lc-button lc-dusk-button" href="matcha.html">Explore the matcha chapter ↗</a><small>Coffee and matcha both contain caffeine. Choose your own time.</small></div></div>
 </section>
 
-<section class="wh-favourites">
-  <header>
-    <h2>The menu we are building.</h2>
-    <nav aria-label="House favourites categories"><a class="on" href="menu.html#menu-letter" data-fav-cat="letter">The Letter.</a><a href="menu.html#menu-ps" data-fav-cat="ps">The P.S.</a><a href="menu.html#menu-food" data-fav-cat="food">Food.</a></nav>
-    <a href="menu.html">View all</a>
-  </header>
-  <div class="wh-fav-row" id="js-fav-row">
-    <!-- populated from menu.html via JS -->
-  </div>
-</section>
-
-
-
-<section class="wh-locations">
-  <image-slot id="home-locations-bg" shape="rect" src="assets/photos/site/home-locations-bg-desktop.webp" mobile-src="assets/photos/site/home-locations-bg-mobile.webp" placeholder="P.S. Coffee highlighted pods" fit="cover"></image-slot>
-  <div class="wh-loc-card">
-    <image-slot id="home-locations-card" shape="rect" src="assets/photos/site/home-locations-card-desktop.webp" mobile-src="assets/photos/site/home-locations-card-mobile.webp" placeholder="P.S. Coffee pod exterior" fit="cover"></image-slot>
-    <a href="pods.html#pods">See planned locations</a>
-  </div>
-  <div class="wh-loc-list">
-    <h2>The first Pods.</h2><p class="ps-launch-note">The first P.S. Pods are planned for co-working floors, campuses, gyms and corners across Ahmedabad. Locations and dates are not confirmed.</p>
-    <p><span>Prahladnagar.</span><span>Ahmedabad</span></p>
-    <p><span>SG Highway.</span><span>Ahmedabad</span></p>
-    <p><span>Gift City.</span><span>Gandhinagar</span></p>
-    <p><span>TCS.</span><span>Gandhinagar</span></p>
-    <p><span>SBR.</span><span>Ahmedabad</span></p>
-    <p><span>Makarba.</span><span>Ahmedabad</span></p>
-    <a class="wh-line-cta" href="pods.html#waitlist">Explore the areas we are considering</a>
-  </div>
-</section>
-
-<!-- ══ APP CALLOUT ══ -->
-<section class="ps-app-callout">
-  <div class="wrap">
-    <div class="ps-app-copy">
-      <p class="kicker">The P.S. App. Coming soon.</p>
-      <h2>It already knows.</h2>
-      <ul class="ps-app-features"><li>The app arrives with our first Pods.</li><li>The Usual: your daily choice, easier to find.</li><li>The P.S. brings a changing slate behind the four.</li><li>Pick your drink. Choose your pick-up time.</li></ul>
-      <div class="ps-app-btns">
-        <a href="app.html" class="primary">Preview the app →</a>
-        <a href="app.html" class="outline">What we are building</a>
-      </div>
-    </div>
-    <div class="ps-app-visual"><div class="ps-concept-phone"><span class="ps-concept-label">P.S. Coffee · Concept preview</span><strong>It already knows.</strong><span>The Usual. Coming soon.</span><div class="ps-concept-rows"><div>Your daily choice</div><div>The current slate</div><div>Your pick-up time</div></div><span class="ps-concept-status">App in development</span></div></div>
-  </div>
-</section>
-
-<div class="ps-section-buffer"></div>
-
-<!-- ══ OUR STORY ══ -->
-<section class="ps-our-story">
-  <div class="ps-our-story-inner">
-    <span class="kicker">Our Story</span>
-    <h2>The day is the letter. The coffee is the P.S.</h2>
-    <p>We are building for the person who comes twice on a Tuesday. Four drinks that will stay on the board. A rotating handful behind them. A daily cup is allowed to be interesting.</p>
-    <a href="about.html">Read the full story →</a>
-  </div>
-</section>
-
-<section class="wh-menu-story">
-  <a class="wh-ms-card" href="menu.html">
-    <image-slot id="home-menu-card" shape="rect" src="assets/photos/site/home-menu-card-desktop.webp" placeholder="Our menu" fit="cover"></image-slot>
-    <span>The P.S. Menu.</span>
-    <em>Nothing to hide →</em>
-  </a>
-  <a class="wh-ms-card" href="menu.html?cat=all#menu-green">
-    <image-slot id="home-matcha-card" shape="rect" src="assets/photos/site/home-matcha-card-desktop.webp" placeholder="Matcha, ceremonial grade" fit="cover"></image-slot>
-    <span>Matcha, ceremonial grade.</span>
-    <em>See P.S. Green →</em>
-  </a>
-</section>
-
-<!-- ══ PAGE CALLOUTS ══ -->
-<div class="ps-callout-strip">
-
-  <div class="ps-callout">
-    <p class="kicker">Events & Collaborations</p>
-    <h2>Plan a P.S. moment at your event.</h2>
-    <p class="sub">We are exploring pop-up Pods, brand events and corporate offsites. Tell us about the occasion.</p>
-    <div class="ps-callout-btns">
-      <a href="events.html#event-types" class="btn-filled">Enquire now →</a>
-    </div>
-  </div>
-
-  <div class="ps-callout">
-    <p class="kicker">Host a Pod</p>
-    <h2>Specialty coffee, inside your day.</h2>
-    <p class="sub">We are exploring spaces in and around workplaces, campuses, gyms and nearby corners.</p>
-    <div class="ps-callout-btns">
-      <a href="partnership.html#host" class="btn-filled">Become a host →</a>
-    </div>
-  </div>
-
-  <div class="ps-callout">
-    <p class="kicker">Join the Build</p>
-    <h2>Join the P.S. team.</h2>
-    <p class="sub">Baristas, operators, growth people, and product builders building Gujarat's daily coffee habit.</p>
-    <div class="ps-callout-btns">
-      <a href="join.html" class="btn-filled">Join us →</a>
-    </div>
-  </div>
-
+<section class="lc-app lc-reveal"><div><p class="lc-section-label">THE NEXT CHAPTER</p><h2>A little less<br>between you<br>and <em>your usual.</em></h2><p>The P.S. App is being planned around finding a Pod, exploring the current slate and choosing a pick-up time when we open.</p><a class="lc-text-link" href="app.html">Inside the app prototype ↗</a><span class="lc-caption">PROTOTYPE / NOT YET AVAILABLE TO DOWNLOAD</span></div><figure><picture><source media="(prefers-reduced-motion: reduce)" srcset="assets/photos/site/app-range-panel-desktop.webp"><img src="assets/photos/home-p-s-coffee-app-desktop.gif" alt="P.S. Coffee app prototype" loading="lazy"></picture><img class="lc-app-context" src="assets/photos/site/home-cat-app-desktop.webp" alt="P.S. Coffee App ordering prototype in context" loading="lazy"><figcaption>A glimpse of what is taking shape.</figcaption></figure></section>
+<section class="lc-invitation lc-reveal"><p class="lc-section-label">THE LETTER IS STILL BEING WRITTEN.</p><h2>Be part of<br><em>the first chapter.</em></h2><p>Hear when the first Pod takes shape.<br>Opening updates, straight from P.S.</p><a class="lc-button" href="pods.html#waitlist">Join the opening waitlist <span aria-hidden="true">↗</span></a><span class="lc-signature">See you in the everyday.</span><span class="lc-closing-hindi" lang="hi">फिर मिलेंगे।</span></section>
+<div class="lc-paths"><a href="partnership.html">Bring a Pod to your space <span>Partnerships ↗</span></a><a href="join.html">Build the next chapter with us <span>Team & investor conversations ↗</span></a></div>
+</main>
+<footer class="lc-footer lc-footer-full" aria-label="P.S. Coffee footer">
+<div class="lc-footer-signoff"><span class="lc-footer-ps" aria-hidden="true">P.S.</span><div><p class="lc-section-label">ONE LAST THING, BEFORE YOU GO.</p><p class="lc-footer-lastline">There is always room<br>for <em>a little more coffee.</em></p><span class="lc-footer-yours">Yours, in the everyday.</span></div><a href="#letter" class="lc-footer-top">Back to the letter ↑</a></div>
+<div class="lc-footer-directory">
+<div class="lc-footer-brand"><a href="index.html" aria-label="P.S. Coffee home"><img src="assets/icons/ps-coffee_wordmark_steam cream.png" alt="P.S. Coffee" width="220"></a><p>The day is the letter.<br>The coffee is the P.S.</p><span>AHMEDABAD FIRST.<br>STILL TAKING SHAPE.</span><a href="mailto:hello@pscoffee.in">hello@pscoffee.in ↗</a></div>
+<nav aria-label="Explore P.S. Coffee"><h3>Explore.</h3><a href="menu.html">The Menu</a><a href="matcha.html">P.S. Green</a><a href="pack.html">P.S. Pass</a><a href="about.html">Our Story</a><a href="blogs.html">The Journal</a><a href="events.html">Events</a></nav>
+<nav aria-label="Pods and opportunities"><h3>Pods & people.</h3><a href="pods.html#pods">Planned locations</a><a href="app.html">App preview</a><a href="partnership.html#host">Host a Pod</a><a href="partnership.html">Partner with us</a><a href="join.html">Join us</a><a href="https://www.thebarista.school" target="_blank" rel="noopener">Barista School ↗</a></nav>
+<nav aria-label="Help and information"><h3>Help & info.</h3><a href="faq.html">FAQ</a><a href="mailto:hello@pscoffee.in">Contact</a><a href="feedback.html">Leave a note</a><a href="terms.html">Terms of Use</a><a href="privacy.html">Privacy Policy</a><a href="disclaimer.html">General Disclaimer</a><a href="survey-disclosure.html">Survey Notice</a><a href="copyright.html">Copyright</a></nav>
 </div>
-
-<!-- ══ FEEDBACK ══ -->
-<section class="ps-feedback">
-  <div class="ps-feedback-ticket">
-    <p class="ps-feedback-eyebrow">New Pods. New menus.</p>
-    <h2 class="ps-feedback-hero">First<br>to know.<em>P.S.</em></h2>
-  </div>
-  <div class="ps-feedback-body">
-    <span class="kicker">Be there when it opens.</span>
-    <h3>Be there when the first Pod opens.</h3>
-    <p>Opening news, when there is news. Leave your email to hear about the first Pods.</p>
-    <a href="pods.html#waitlist" class="ps-feedback-cta">Join the list →</a>
-  </div>
-  <div class="ps-feedback-marquee" aria-hidden="true">
-    <div class="ps-feedback-marquee-track">
-      <span>Menu ideas</span>
-      <span>Pod locations</span>
-      <span>First cup notes</span>
-      <span>Pod requests</span>
-      <span>Habit rituals</span>
-      <span>Menu ideas</span>
-      <span>Pod locations</span>
-      <span>First cup notes</span>
-      <span>Pod requests</span>
-      <span>Habit rituals</span>
-      <span>Menu ideas</span>
-      <span>Pod locations</span>
-      <span>First cup notes</span>
-      <span>Pod requests</span>
-      <span>Habit rituals</span>
-      <span>Menu ideas</span>
-      <span>Pod locations</span>
-      <span>First cup notes</span>
-      <span>Pod requests</span>
-      <span>Habit rituals</span>
-      <span>Menu ideas</span>
-      <span>Pod locations</span>
-      <span>First cup notes</span>
-      <span>Pod requests</span>
-      <span>Habit rituals</span>
-      <span>Menu ideas</span>
-      <span>Pod locations</span>
-      <span>First cup notes</span>
-      <span>Pod requests</span>
-      <span>Habit rituals</span>
-    </div>
-  </div>
-</section>
-
-<section class="wh-footer-banner" aria-hidden="true">
-  <image-slot id="home-footer-banner" shape="rect" src="assets/photos/site/home-footer-banner-desktop.webp" placeholder="P.S. Coffee footer banner" fit="cover"></image-slot>
-</section>
-
-<div id="ps-footer"></div>
-<script src="assets/image-slot.js?v=3"></script>
-<script src="assets/ps.js?v=49"></script>
-<script src="assets/mobile.js?v=5"></script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "DataFeed", "name": "P.S. Coffee Commerce Catalog", "url": "https://www.pscoffee.in/assets/data/commerce-catalog.json", "description": "Specialty daily coffee. The Letter and The P.S., from Pods planned in and around your day. Ahmedabad first. Join the opening waitlist.", "provider": {"@type": "Organization", "name": "P.S. Coffee", "url": "https://www.pscoffee.in"}, "about": ["Specialty coffee", "Daily coffee", "Matcha", "Coffee Pods", "Events"]}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "P.S. Coffee", "alternateName": "PS Coffee", "url": "https://www.pscoffee.in", "logo": "https://www.pscoffee.in/assets/icons/ps-coffee_square_terracotta_framed.png", "description": "Specialty daily coffee. The Letter and The P.S., from Pods planned in and around your day. Ahmedabad first. Join the opening waitlist.", "address": {"@type": "PostalAddress", "addressLocality": "Ahmedabad", "addressRegion": "Gujarat", "addressCountry": "IN"}, "areaServed": {"@type": "State", "name": "Gujarat, India"}, "knowsAbout": ["Specialty Coffee", "Coffee", "Matcha", "Coffee Subscription"], "sameAs": ["https://www.instagram.com/pscoffee_pods", "https://www.facebook.com/pscoffee", "https://www.linkedin.com/company/pscoffee"]}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "P.S. Coffee", "url": "https://www.pscoffee.in", "potentialAction": {"@type": "SearchAction", "target": {"@type": "EntryPoint", "urlTemplate": "https://www.pscoffee.in/blogs?q={search_term_string}"}, "query-input": "required name=search_term_string"}}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CafeOrCoffeeShop", "name": "P.S. Coffee", "url": "https://www.pscoffee.in", "logo": "https://www.pscoffee.in/assets/icons/ps-coffee_square_terracotta_framed.png", "description": "Specialty daily coffee. The Letter and The P.S., from Pods planned in and around your day. Ahmedabad first. Join the opening waitlist.", "servesCuisine": ["Coffee", "Specialty Coffee", "Matcha"], "hasMenu": "https://www.pscoffee.in/menu", "address": {"@type": "PostalAddress", "addressLocality": "Ahmedabad", "addressRegion": "Gujarat", "addressCountry": "IN"}, "areaServed": {"@type": "State", "name": "Gujarat, India"}, "sameAs": ["https://www.instagram.com/pscoffee_pods", "https://www.facebook.com/pscoffee", "https://www.linkedin.com/company/pscoffee"]}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SiteNavigationElement", "name": ["Menu", "The P.S. Pass", "Pods", "Matcha", "Journal", "About", "App"], "url": ["https://www.pscoffee.in/menu", "https://www.pscoffee.in/pack", "https://www.pscoffee.in/pods", "https://www.pscoffee.in/matcha", "https://www.pscoffee.in/blogs", "https://www.pscoffee.in/about", "https://www.pscoffee.in/app"]}</script>
-<script>
-(function(){
-  /* tab switcher */
-  var tabs  = document.querySelectorAll('.wh-tab');
-  var cards = document.querySelectorAll('.wh-fav-card');
-  tabs.forEach(function(tab){
-    tab.addEventListener('click',function(){
-      var t=tab.dataset.wtab;
-      tabs.forEach(function(x){x.classList.remove('on');x.setAttribute('aria-selected','false');});
-      tab.classList.add('on');tab.setAttribute('aria-selected','true');
-      cards.forEach(function(c){c.hidden=c.dataset.wtabContent!==t;});
-    });
-  });
-  /* house favourites, fetch live from menu.html */
-  (function(){
-    var row=document.getElementById('js-fav-row');
-    if(!row)return;
-    var navLinks=document.querySelectorAll('.wh-favourites nav a[data-fav-cat]');
-    function onIdle(fn){
-      if('requestIdleCallback' in window){window.requestIdleCallback(fn,{timeout:1600});}
-      else{window.setTimeout(fn,220);}
-    }
-    function filterCat(cat){
-      row.querySelectorAll('.wh-product-card').forEach(function(c){
-        c.style.display=c.dataset.favCat===cat?'':'none';
-      });
-      navLinks.forEach(function(l){
-        l.classList.toggle('on',l.dataset.favCat===cat);
-      });
-    }
-    navLinks.forEach(function(l){
-      l.addEventListener('click',function(e){
-        e.preventDefault();
-        filterCat(l.dataset.favCat);
-      });
-    });
-    function loadFavourites(){
-      fetch('menu.html')
-      .then(function(r){return r.text();})
-      .then(function(html){
-        var doc=new DOMParser().parseFromString(html,'text/html');
-        var frag=document.createDocumentFragment();
-        ['letter','ps','food'].forEach(function(cat){
-          var sec=doc.querySelector('[data-cat="'+cat+'"]');
-          if(!sec)return;
-          var items=sec.querySelectorAll('.menu-product-wh');
-          var n=0;
-          items.forEach(function(item){
-            if(n>=6)return;
-            var nameEl=item.querySelector('h3');
-            var noteEl=item.querySelector('.menu-product-note');
-            var priceEl=item.querySelector('.menu-product-price strong');
-            var imgEl=item.querySelector('image-slot');
-            if(!nameEl)return;
-            var name=nameEl.textContent.trim();
-            var note=noteEl?noteEl.textContent.trim():'';
-            var price=''; // Prices belong on the Menu, never the landing page.
-            var img=imgEl?imgEl.getAttribute('src'):'';
-            var link='menu.html?cat='+cat+'#menu-'+cat;
-
-            var card=document.createElement('article');
-            card.className='wh-product-card'; card.dataset.favCat=cat; card.dataset.menuLink=link; card.style.display='none';
-
-            var imgWrap=document.createElement('div'); imgWrap.className='wh-product-img';
-            var imgTag=document.createElement('img'); imgTag.src=img; imgTag.alt=name; imgTag.loading='lazy';
-            imgTag.style.cssText='width:100%;height:100%;object-fit:cover;display:block';
-            imgWrap.appendChild(imgTag); card.appendChild(imgWrap);
-
-            var h3=document.createElement('h3'); h3.textContent=name; card.appendChild(h3);
-
-            if(note){var p=document.createElement('p'); p.style.cssText='font-size:13px;color:#7a6a5a;margin:4px 0 0'; p.textContent=note; card.appendChild(p);}
-
-            var foot=document.createElement('div'); foot.style.cssText='margin-top:auto;padding-top:10px;display:flex;align-items:center;justify-content:space-between;gap:10px';
-            if(price){
-              var strong=document.createElement('strong');
-              strong.innerHTML=price;
-              foot.appendChild(strong);
-            }
-            var a=document.createElement('a'); a.href=link; a.style.cssText='font-size:12px;font-weight:600;color:#E8400C;text-decoration:none'; a.textContent='View on menu →';
-            foot.appendChild(a); card.appendChild(foot);
-
-            frag.appendChild(card); n++;
-          });
-        });
-        if(frag.childNodes.length){row.appendChild(frag);filterCat('letter');}
-      })
-      .catch(function(){});
-    }
-    onIdle(loadFavourites);
-  })();
-
-  /* pass showcase */
-  (function(){
-    var root=document.querySelector('[data-pass-showcase]');
-    if(!root)return;
-    var rail=root.querySelector('.ps-pass-rail');
-    var cards=Array.from(root.querySelectorAll('[data-pass-card]'));
-    var controls=Array.from(root.querySelectorAll('[data-pass-go]'));
-    if(!rail||!cards.length)return;
-    var active=0;
-    var ticking=false;
-
-    function setActive(i){
-      active=Math.max(0,Math.min(cards.length-1,i));
-      cards.forEach(function(card,idx){card.classList.toggle('is-active',idx===active);});
-      controls.forEach(function(control){
-        var on=parseInt(control.getAttribute('data-pass-go'),10)===active;
-        if(control.getAttribute('role')==='tab')control.setAttribute('aria-selected',on?'true':'false');
-        if(control.closest('.ps-pass-dots'))control.setAttribute('aria-current',on?'true':'false');
-      });
-    }
-
-    function scrollToCard(i){
-      var card=cards[i];
-      if(!card)return;
-      card.scrollIntoView({behavior:'smooth',inline:'center',block:'nearest'});
-      setActive(i);
-    }
-
-    function syncFromScroll(){
-      ticking=false;
-      var railBox=rail.getBoundingClientRect();
-      var center=railBox.left+railBox.width/2;
-      var nearest=0;
-      var nearestDistance=Infinity;
-      cards.forEach(function(card,idx){
-        var box=card.getBoundingClientRect();
-        var distance=Math.abs((box.left+box.width/2)-center);
-        if(distance<nearestDistance){nearestDistance=distance;nearest=idx;}
-      });
-      setActive(nearest);
-    }
-
-    controls.forEach(function(control){
-      control.addEventListener('click',function(){
-        scrollToCard(parseInt(control.getAttribute('data-pass-go'),10));
-      });
-    });
-    rail.addEventListener('scroll',function(){
-      if(ticking)return;
-      ticking=true;
-      window.requestAnimationFrame(syncFromScroll);
-    },{passive:true});
-    setActive(0);
-  })();
-
-  /* drag scroll pods */
-  var sc=document.getElementById('podsScroller');
-  if(sc){
-    var down=false,sx,sl;
-    sc.addEventListener('mousedown',function(e){down=true;sx=e.pageX-sc.offsetLeft;sl=sc.scrollLeft;sc.style.cursor='grabbing';});
-    document.addEventListener('mouseup',function(){down=false;if(sc)sc.style.cursor='grab';});
-    sc.addEventListener('mousemove',function(e){if(!down)return;e.preventDefault();sc.scrollLeft=sl-(e.pageX-sc.offsetLeft-sx);});
-  }
-})();
-</script>
-</body>
-</html>
+<div class="lc-footer-connect"><div><h3>Be there when the first Pod opens.</h3><p>First access and opening news.</p><a class="lc-button lc-footer-signup" href="pods.html#waitlist">Get opening updates ↗</a></div><nav aria-label="Follow P.S. Coffee"><h3>Keep in touch.</h3><a href="https://www.instagram.com/pscoffee_pods" target="_blank" rel="noopener">Instagram ↗</a><a href="https://www.facebook.com/pscoffee" target="_blank" rel="noopener">Facebook ↗</a><a href="https://www.linkedin.com/company/pscoffee" target="_blank" rel="noopener">LinkedIn ↗</a></nav><span class="lc-footer-blessing" lang="hi">॥ राधे राधे ॥</span></div>
+<div class="lc-footer-bottom"><span>© P.S. Coffee 2026</span><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="copyright.html">Copyright</a></div>
+</footer>
+<script src="assets/home-letter.js?v=4"></script>
+</body></html>

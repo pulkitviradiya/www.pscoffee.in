@@ -5,14 +5,14 @@
   "use strict";
 
   var PAGES = [
-    {href:"pack.html",        label:"P.S. Pass",   n:"01", primary:true, cls:"pack-link"},
-    {href:"menu.html",        label:"Menu",        n:"02", primary:true},
+    {href:"menu.html",        label:"Menu",        n:"01", primary:true},
+    {href:"pods.html#pods",   label:"Pods",        n:"02", primary:true},
     {href:"app.html",         label:"App",         n:"03", primary:true},
-    {href:"events.html",      label:"Events",      n:"04", primary:false},
-    {href:"blogs.html",       label:"Journal",       n:"05", primary:false},
-    {href:"about.html",       label:"About",       n:"06", primary:true},
-    {href:"partnership.html", label:"Partner",     n:"07", primary:false},
-    {href:"pods.html#pods",   label:"Pods",        n:"08", primary:true},
+    {href:"pack.html",        label:"P.S. Pass",   n:"04", primary:true, cls:"pack-link"},
+    {href:"about.html",       label:"About",       n:"05", primary:true},
+    {href:"events.html",      label:"Events",      n:"06", primary:false},
+    {href:"blogs.html",       label:"Journal",     n:"07", primary:false},
+    {href:"partnership.html", label:"Partner",     n:"08", primary:false},
     {href:"join.html",        label:"Join us",     n:"09", primary:false}
   ];
   var here = (location.pathname.split("/").pop() || "index.html").toLowerCase();
@@ -64,7 +64,7 @@
             '<div class="display ps-wordmark">'+
               '<img class="ps-logo-img ps-logo-footer" src="'+localHref("assets/icons/ps-coffee_wordmark_steam%20cream.png")+'" alt="P.S. Coffee">'+
             '</div>'+
-            '<a href="'+localHref("about.html")+'">Story</a><a href="'+localHref("blogs.html")+'">Journal</a><a href="'+localHref("events.html")+'">Events</a><a href="'+localHref("join.html")+'">Join Us</a><a href="'+localHref("join.html")+'">Careers</a><a href="'+localHref("partnership.html")+'">Partner</a>'+
+            '<a href="'+localHref("about.html")+'">Story</a><a href="'+localHref("blogs.html")+'">Journal</a><a href="'+localHref("events.html")+'">Events</a><a href="'+localHref("join.html")+'">Join Us</a><a href="'+localHref("partnership.html")+'">Partner</a>'+
             '<a href="https://www.thebarista.school" target="_blank" rel="noopener">Barista School ↗</a>'+
           '</div>'+
           '<div class="f-col"><h4>Pods.</h4>'+

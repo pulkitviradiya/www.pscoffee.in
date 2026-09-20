@@ -58,3 +58,7 @@ no location pins or announced addresses; Opening dates and addresses are not con
 - Menu filters verified: Letter 4, P.S. 33, Food 6.
 - About and App reviewed visually on desktop/mobile. Raster and Pod illustrations remain concepts.
 - Form tests verify Sheets mapping with mocked Sheets calls. This copy audit did not create fresh production test submissions.
+
+## App media correction
+
+At the user’s request, the original six App-page GIFs, app photographs and landing-page app GIF/photo are restored. Updated surrounding copy remains; the prototypes retain their original in-image copy. This supersedes the editable concept-screen replacement described above. Restoration is local pending approval to publish.
