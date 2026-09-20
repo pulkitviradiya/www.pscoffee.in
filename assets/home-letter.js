@@ -1,4 +1,27 @@
 (() => {
+  const header = document.querySelector('.lc-nav');
+  const toggle = header?.querySelector('.lc-menu-toggle');
+  const menu = header?.querySelector('nav[aria-label="Main navigation"]');
+  if (!header || !toggle || !menu) return;
+
+  function closeMenu({ restoreFocus = false } = {}) {
+    header.dataset.menuOpen = 'false';
+    toggle.setAttribute('aria-expanded', 'false');
+    if (restoreFocus) toggle.focus();
+  }
+
+  toggle.addEventListener('click', () => {
+    const open = header.dataset.menuOpen !== 'true';
+    header.dataset.menuOpen = String(open);
+    toggle.setAttribute('aria-expanded', String(open));
+  });
+  menu.addEventListener('click', event => { if (event.target.closest('a')) closeMenu(); });
+  document.addEventListener('click', event => { if (!header.contains(event.target)) closeMenu(); });
+  document.addEventListener('keydown', event => { if (event.key === 'Escape' && header.dataset.menuOpen === 'true') closeMenu({restoreFocus:true}); });
+  matchMedia('(min-width: 1025px)').addEventListener('change', event => { if (event.matches) closeMenu(); });
+})();
+
+(() => {
   const tabs = [...document.querySelectorAll('.lc-tabs [role="tab"]')];
   function activate(tab) {
     tabs.forEach(item => {
