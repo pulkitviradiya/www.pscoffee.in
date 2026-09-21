@@ -3833,3 +3833,30 @@
  body[data-page="letter-concept"] .lc-footer-connect{grid-template-columns:1fr;gap:32px}
  body[data-page="letter-concept"] .lc-footer-blessing{grid-column:1}
 }
+
+/* Long-form Journal articles share the current site chrome. */
+@media(max-width:760px){
+ body.journal-article .journal-breadcrumb{padding:20px 24px;font-size:11px;gap:16px}
+ body.journal-article .journal-breadcrumb span{max-width:110px;text-align:right}
+ body.journal-article .journal-post>article{padding:0 24px 32px}
+ body.journal-article .journal-post .journal-post-hero{padding:32px 0;margin-bottom:32px}
+ body.journal-article .journal-post .journal-post-hero h1{font-size:clamp(36px,9vw,56px)!important;line-height:1.12!important;overflow-wrap:break-word}
+ body.journal-article .journal-post .journal-post-meta{gap:10px 14px;margin-top:24px;font-size:12px}
+ body.journal-article .journal-post .journal-post-meta span:not(:last-child)::after{margin-left:12px}
+ body.journal-article .journal-post :is(p,li){font-size:16px!important;line-height:1.75!important}
+ body.journal-article .journal-post-body :is(h2,h2.st){font-size:28px!important;line-height:1.2!important}
+ body.journal-article .journal-post-body :is(.toc,.qa,.kt,.hl){padding:20px}
+ body.journal-article .journal-post-body .toc-list{grid-template-columns:1fr}
+ body.journal-article .journal-post-body :is(.stat-grid,.proscons,.passgrid,.vstrip){grid-template-columns:1fr;gap:12px}
+ body.journal-article .journal-post-body table{display:block;max-width:100%;overflow-x:auto;font-size:13px}
+ body.journal-article .journal-post-body table :is(th,td){min-width:110px;padding:12px}
+ body.journal-article .journal-post-body .psline{font-size:25px!important}
+ body.journal-article .pnnav{grid-template-columns:1fr;margin:32px 0}
+ body.journal-article .pnnav .pncard{padding:24px;text-align:left}
+ body.journal-article .pnnav .pncard+.pncard{border-left:0;border-top:1px solid var(--color-linen)}
+ body.journal-article .pnnav .pn-lbl{justify-content:flex-start}
+ body.journal-article .journal-series-nav{margin:0 24px 32px}
+ body.journal-article .journal-post-body .ctab-box{padding:24px}
+ body.journal-article .journal-post-body .cta-btn{width:100%}
+ body.journal-article .journal-post-body .tag{max-width:100%;white-space:normal;overflow-wrap:anywhere}
+}
