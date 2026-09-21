@@ -70,29 +70,23 @@ Always read the current version from any `*.html` before bumping.
 ### Current deployment state (2026-07-13)
 - GitHub-to-Vercel integration is not confirmed healthy. Until it is restored, production completion requires `git push origin main`, `vercel --prod --yes`, and `vercel inspect <deployment-url>` showing `Ready`; a successful GitHub push alone is not proof of deployment.
 
-### 2026-07-13 (copy and component contracts)
-- Added `docs/copy-system.md` as the repository copy authority for Master Copy v3 plus approved website amendments, and documented unique media-slot naming, the shared hero typography contract, and the current Pass-card system.
-
 ### 2026-09-21 (blog post content/structure rollback)
-- User reported "content issue" and "structure issue" on all internal blog posts. Root cause: commit `3a0d21f` ("Apply Master Copy v4 across pages, metadata and artwork") gutted 14 blog files by ~3,000 lines total, stripping the rich TOC/key-takeaways/stat-grid/pros-cons/comparison-table/FAQ+schema/keyword-tags structure down to a bare 6-paragraph skeleton per post, while leaving all the now-unused CSS classes in place.
-- Restored the 10 pre-existing posts (excluded the 4 written fresh after `3a0d21f` with no old version to restore: `join-ps-coffee-team-cofounder`, `ps-pass-coffee-subscription-india`, `specialty-vs-regular-coffee-no-jargon`, `what-is-a-barista-history-word-craft`) to their full pre-`3a0d21f` body content (commit `27b7444`), per explicit user decision: **kept current title/H1/kicker branding** ("The P.S. Journal.") so posts stay in sync with `blogs.html` (left untouched per instruction), but **restored old date/read-time** (they describe the restored, longer body) and the full old body/FAQ/schema. Kept all current image `src`/`mobile-src` values (the in-progress `-v4-*.jpg` refresh) spliced into the old `<image-slot>` structure by matching `id` — verified 1:1 id parity between old and current on every file. Rebuilt each restored post's FAQPage JSON-LD from the old FAQ content (some old files nested it inside the Article schema; normalized all to a standalone FAQPage script) since the current files had none. `why-we-built-pods-not-cafes.html` used an older, structurally distinct template (no inline `<style>`, `<details>`-based FAQ) and was restored by hand rather than via the shared script. Verified: JSON-LD validity, div/section/article tag balance, image-slot id parity, and every internal link/anchor referenced by the restored content still resolves on the live site. No CSS/JS files touched, so no asset-version bump needed. `blogs.html` and the 4 new-since-v4 posts were left untouched, matching the user's explicit scope.
+- Commit `3a0d21f` ("Apply Master Copy v4") had gutted 14 blog posts by ~3,000 lines, stripping
+  the TOC/key-takeaways/stat-grid/comparison-table/FAQ+schema structure down to a 6-paragraph
+  skeleton while leaving the CSS in place. Restored the 10 pre-v4 posts to their full pre-`3a0d21f`
+  body (commit `27b7444`), keeping current title/H1/kicker branding so they stay in sync with
+  `blogs.html`, keeping current images spliced in by matching `<image-slot>` id, and rebuilding
+  each post's FAQPage JSON-LD. The 4 posts written after v4 have no old version and were untouched.
 
 ### 2026-09-21 (Brand Language Handbook captured)
-- User shared two files: `PS_Coffee_Master_Copy_System_v4.md` and `P.S. Coffee Brand Language
-  Handbook.md`, describing them as an update to brand language/tone/direction. Diffed the first
-  against the already-stored `docs/master-copy-system-v4.md` — byte-identical, no change needed.
-  The Handbook was genuinely new (not in the repo), so added it verbatim as
-  `docs/brand-language-handbook.md`: the reasoning/voice guide behind the Master Copy System
-  (the letter/P.S. idea, the two registers — serious vs. drama, never mixed in one sentence — the
-  P.S. sign-off rules, quality/price claim rules, channel playbooks, worked rewrites, common
-  failure modes). Wired it into `docs/copy-system.md` (now points to both the Master Copy System
-  for exact wording and the Handbook for reasoning/anything not covered verbatim) and into the
-  Reference Map + a new "keep it current" standing instruction in `CLAUDE.md`/`AGENTS.md`,
-  mirroring the pattern already used for `docs/design-system.md`. No conflicts found between the
-  Handbook and `docs/copy-system.md`'s existing website-specific decisions. Did not re-audit the
-  live site's copy against it — the site was already fully migrated to Master Copy v4 per
-  `docs/brand-copy-v4-audit.md` (2026-09-19), and the Handbook elaborates the same v4 rules rather
-  than introducing new ones; a copy audit is separate, explicit work if wanted.
+- User shared Master Copy System v4 (byte-identical to the stored copy, no change needed) and a
+  genuinely new Brand Language Handbook, added verbatim as `docs/brand-language-handbook.md`:
+  the reasoning behind the copy system (the letter/P.S. idea, the two registers that never mix in
+  one sentence, P.S. sign-off rules, quality/price claim doctrine, channel playbooks, worked
+  rewrites, failure modes). Wired into `docs/copy-system.md`, the Reference Map, and a new
+  "keep it current" standing instruction in `CLAUDE.md`/`AGENTS.md`. No conflicts with existing
+  website decisions. Did not re-audit live copy: the site was already migrated to v4 per
+  `docs/brand-copy-v4-audit.md`, and the Handbook explains those same rules rather than changing them.
 
 ### 2026-09-21 (SEO/GEO keyword strategy — phase 1 research)
 - Ran an SEO/GEO keyword research pass (grab-and-go coffee category, Ahmedabad/Gandhinagar/GIFT
@@ -136,9 +130,20 @@ Always read the current version from any `*.html` before bumping.
   Copy v4 retires — recommended softening the copy while keeping the slug's search equity;
   (2) `matcha.html`'s H1 is a flagship P.S. line used as a headline, which the Handbook says a
   P.S. line must never be. Both need a call from the brand owner, not an agent.
-- Deferred pending approval: FAQ expansion, 8 new blog posts, Partnership-page FAQ block, and
-  Tier-2 "indexed but not in nav" landing pages — the last carries real doorway-page risk if
-  shipped thin or all at once, so the plan phases it two pages at a time.
+- Then executed steps 3-4 of the plan: added 10 FAQ questions to `faq.html` (25→35) and 20 across
+  the 10 blog posts that have FAQ blocks, all 40-60 words for AI extraction, all brand-voice
+  checked (no banned words, no em dashes, no species claims, no price arguments, pre-launch
+  framing). **Method worth reusing: the FAQPage JSON-LD is regenerated from the visible HTML
+  rather than hand-maintained as a second list** — schema that disagrees with visible text is
+  penalised, and two hand-kept copies always drift. Sitewide FAQ schema now carries 116 questions.
+- Found and parked: the four posts written after Master Copy v4
+  (`join-ps-coffee-team-cofounder`, `ps-pass-coffee-subscription-india`,
+  `specialty-vs-regular-coffee-no-jargon`, `what-is-a-barista-history-word-craft`) have **no FAQ
+  block and no FAQPage schema at all**, so they are invisible to the AI-citation path. Adding one
+  is a new visible section on v4-spec pages, so it needs review rather than a silent add.
+- Still deferred pending approval: 8 new blog posts, Partnership-page FAQ block, and Tier-2
+  "indexed but not in nav" landing pages — the last carries real doorway-page risk if shipped
+  thin or all at once, so the plan phases it two pages at a time.
 
 Older entries (2026-06-29 through 2026-07-08) moved to [ARCHIVE.md](ARCHIVE.md) to stay under the
 150-line hygiene limit.

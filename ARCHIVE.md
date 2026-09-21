@@ -4,6 +4,9 @@ Reference-only. Never read at session start — only pulled up when asked about 
 historical. Holds MEMORY.md entries that have become outdated or whose project/decision has
 completed, moved here to keep MEMORY.md under its 150-line hygiene limit.
 
+## 2026-07-13 (copy and component contracts)
+- Added `docs/copy-system.md` as the repository copy authority for Master Copy v3 plus approved website amendments, and documented unique media-slot naming, the shared hero typography contract, and the current Pass-card system.
+
 ## 2026-07-08 (design-system polish slices)
 - Applied browser-reviewed design-system slices across home/menu/pack/app/about/footer: `wh.css` is now v71, `ps.js` v40 hardens Nectar highlights at runtime, menu/home prices wrap the `₹` glyph, and final page-scoped CSS layers are required when fixing late-cascade typography/colour bugs.
 - Added the served footer wordmark `assets/icons/ps-coffee_wordmark_steam cream.png`, the about manifesto monogram `assets/icons/ps-coffee_monogram_terracotta_Circle-outline.png`, and committed desktop/mobile app prototype exports under `output/` as reference artifacts.

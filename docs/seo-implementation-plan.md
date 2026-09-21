@@ -257,10 +257,10 @@ order (speed). Keep them clean.
 
 | Step | Scope | Risk | Status |
 | --- | --- | --- | --- |
-| 1 | Title + meta description rewrites, 15 live pages (§1) | Low — metadata only, no visible copy, no voice conflict | Ready |
-| 2 | Add missing blog post to `sitemap.xml` | None — bug fix | Ready |
-| 3 | FAQ expansion on `faq.html` + matching JSON-LD (§2) | Low | Ready |
-| 4 | FAQ additions to 13 existing blog posts (§3) | Low | Ready |
+| 1 | Title rewrites, 15 live pages (§1) | Low — metadata only, no visible copy, no voice conflict | **Done** 2026-09-21 |
+| 2 | Add missing blog post to `sitemap.xml` | None — bug fix | **Done** 2026-09-21 |
+| 3 | FAQ expansion on `faq.html` + matching JSON-LD (§2) | Low | **Done** — 10 questions added (25→35), schema regenerated from visible HTML |
+| 4 | FAQ additions to existing blog posts (§3) | Low | **Done** — 20 questions across the 10 posts that have FAQ blocks. See note below on the other 4 |
 | 5 | `partnership.html` FAQ block + complementary-vendor line + internal links (§6) | Low-medium — touches approved page copy, needs voice review | Needs review |
 | 6 | Two Tier-2 pages: `/coffee-for-offices`, `/coffee-for-coworking-spaces` (§5) | Medium — new pages, doorway risk if thin | Needs approval |
 | 7 | Eight new blog posts (§4) | Medium — volume of new copy, each needs voice review | Needs approval |
@@ -268,3 +268,23 @@ order (speed). Keep them clean.
 
 Steps 1-4 are safe to execute immediately. Steps 5-8 involve new or changed visible copy and
 should go through brand-owner review, per the Handbook's escalation rule.
+
+### Note from the step 4 build: four posts have no FAQ block at all
+
+`join-ps-coffee-team-cofounder`, `ps-pass-coffee-subscription-india`,
+`specialty-vs-regular-coffee-no-jargon` and `what-is-a-barista-history-word-craft` — the four
+written fresh after Master Copy v4 — carry **no FAQ section and no FAQPage schema**. The other ten
+posts all have both.
+
+Since FAQPage schema is the single most-cited structure by AI systems (§4 of the research), these
+four are currently invisible to that entire citation path. Adding a FAQ block to them is worth
+doing, but it is a **new visible section** on pages written to v4 spec rather than an addition to
+an existing block — so it is a step 5-class change needing review, not a step 4 one. Parked here
+deliberately rather than done silently.
+
+### Method note worth keeping
+
+For both step 3 and step 4, the FAQPage JSON-LD was **regenerated from the visible HTML** rather
+than maintained as a second hand-written list. Schema that disagrees with visible text is
+penalised, and hand-maintaining two copies guarantees drift. Reuse this approach for any future
+FAQ work.
