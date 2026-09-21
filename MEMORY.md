@@ -136,11 +136,12 @@ Always read the current version from any `*.html` before bumping.
   framing). **Method worth reusing: the FAQPage JSON-LD is regenerated from the visible HTML
   rather than hand-maintained as a second list** — schema that disagrees with visible text is
   penalised, and two hand-kept copies always drift. Sitewide FAQ schema now carries 116 questions.
-- Found and parked: the four posts written after Master Copy v4
+- Then added FAQ blocks + FAQPage schema to the four v4-era posts that had neither
   (`join-ps-coffee-team-cofounder`, `ps-pass-coffee-subscription-india`,
-  `specialty-vs-regular-coffee-no-jargon`, `what-is-a-barista-history-word-craft`) have **no FAQ
-  block and no FAQPage schema at all**, so they are invisible to the AI-citation path. Adding one
-  is a new visible section on v4-spec pages, so it needs review rather than a silent add.
+  `specialty-vs-regular-coffee-no-jargon`, `what-is-a-barista-history-word-craft`), 3 questions
+  each, placed between `.psline` and `.ctab-box` to match the rich template's block order. FAQ CSS
+  already existed globally in `wh.css`, so markup alone renders correctly. **All 14 blog posts now
+  carry FAQPage schema** (94 questions across blogs, 128 sitewide including `faq.html`).
 - Still deferred pending approval: 8 new blog posts, Partnership-page FAQ block, and Tier-2
   "indexed but not in nav" landing pages — the last carries real doorway-page risk if shipped
   thin or all at once, so the plan phases it two pages at a time.

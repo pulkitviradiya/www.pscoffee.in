@@ -269,18 +269,20 @@ order (speed). Keep them clean.
 Steps 1-4 are safe to execute immediately. Steps 5-8 involve new or changed visible copy and
 should go through brand-owner review, per the Handbook's escalation rule.
 
-### Note from the step 4 build: four posts have no FAQ block at all
+### Step 4b — the four posts that had no FAQ block (done 2026-09-21)
 
 `join-ps-coffee-team-cofounder`, `ps-pass-coffee-subscription-india`,
 `specialty-vs-regular-coffee-no-jargon` and `what-is-a-barista-history-word-craft` — the four
-written fresh after Master Copy v4 — carry **no FAQ section and no FAQPage schema**. The other ten
-posts all have both.
+written fresh after Master Copy v4 — carried **no FAQ section and no FAQPage schema**, leaving
+them invisible to the entire AI-citation path.
 
-Since FAQPage schema is the single most-cited structure by AI systems (§4 of the research), these
-four are currently invisible to that entire citation path. Adding a FAQ block to them is worth
-doing, but it is a **new visible section** on pages written to v4 spec rather than an addition to
-an existing block — so it is a step 5-class change needing review, not a step 4 one. Parked here
-deliberately rather than done silently.
+Each now has a 3-question FAQ block plus its own FAQPage schema, placed between `.psline` and
+`.ctab-box` to match the rich template's block order (`psline → faqs → tags → pnnav → ctab-box`).
+No CSS was needed: `.journal-post-body .faqs` and `.faq-item` already exist globally in `wh.css`,
+and `ps.js` binds `.faq-item` at load, so the accordion works with markup alone.
+
+**All 14 blog posts now carry FAQPage schema** — 94 questions across the blog, 128 sitewide
+including `faq.html`.
 
 ### Method note worth keeping
 
