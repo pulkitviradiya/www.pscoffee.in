@@ -1,0 +1,102 @@
+/* Pass preview: a ticket collection with all proposal details available in place. */
+.pst-main{background:var(--color-steam-cream);color:var(--color-dark-roast)}
+.pst-hero{background:var(--color-terracotta);color:var(--color-steam-cream);padding:28px 5vw 24px;overflow:hidden}
+.pst-hero-top,.pst-hero-bottom{display:flex;justify-content:space-between;gap:20px;font-size:10px;letter-spacing:.13em}
+.pst-hero-top{border-bottom:1px solid currentColor;padding-bottom:20px}
+.pst-hero-heading{display:grid;grid-template-columns:1.4fr 1fr;gap:8vw;align-items:center;padding-top:38px}
+body[data-page="letter-concept"] .pst-hero h1{font:800 clamp(70px,9vw,140px)/.88 var(--font-display)!important;letter-spacing:-.06em;color:var(--color-steam-cream)!important}
+.pst-hero h1 em{font-family:var(--font-accent);font-weight:400}
+body[data-page="letter-concept"] .pst-hero p{color:var(--color-steam-cream)!important;font-size:17px!important;margin:20px 0!important;max-width:30ch}
+.pst-hero a{color:var(--color-steam-cream)!important;display:flex;justify-content:space-between;max-width:300px;padding:15px 0;border-bottom:1px solid}
+.pst-preview-stack{display:flex;justify-content:center;align-items:center;padding:54px 0 32px;min-height:310px}
+.pst-preview-ticket{width:330px;flex-shrink:0;padding:24px;background:var(--color-steam-cream);color:var(--color-dark-roast);box-shadow:0 10px 30px rgba(61,32,16,.15);transform:rotate(-9deg);border-bottom:7px double var(--color-linen)}
+.pst-preview-ticket:nth-child(2){transform:translateY(-18px) rotate(4deg);z-index:2;margin:0 -45px;background:var(--color-oat)}
+.pst-preview-ticket:nth-child(3){transform:rotate(12deg)}
+.pst-preview-ticket>span{font-size:9px;letter-spacing:.1em;display:block}
+.pst-preview-ticket>strong{font:800 35px var(--font-display);display:block;margin:24px 0 12px;letter-spacing:-.04em}
+.pst-preview-ticket>em{font:700 32px var(--font-display)}
+.pst-preview-ticket ul{display:flex;gap:10px;font-size:10px;list-style:none;padding:14px 0 0;margin:12px 0 0;border-top:1px dashed var(--color-dark-roast)}
+.pst-hero-bottom{padding-top:18px;border-top:1px solid rgba(250,246,238,.4)}
+.pst-bridge{padding:56px 5vw;display:flex;justify-content:space-between;align-items:center;gap:32px}
+.pst-bridge>span{font-size:10px;letter-spacing:.12em}
+body[data-page="letter-concept"] .pst-bridge>p{font:700 clamp(28px,3vw,44px)/1.1 var(--font-display)!important;margin:0!important}
+.pst-bridge em{font-family:var(--font-accent);font-weight:400}.pst-bridge>a{font-size:12px;border-bottom:1px solid;padding-bottom:8px}
+.pst-explorer{padding:64px 5vw;background:var(--color-oat);scroll-margin-top:110px}
+.pst-explorer-head{display:grid;grid-template-columns:1.3fr 1fr;gap:8vw;align-items:end;margin-bottom:36px}
+body[data-page="letter-concept"] .pst-explorer-head h2{font:800 clamp(40px,5vw,74px)/1 var(--font-display)!important;letter-spacing:-.04em}
+.pst-explorer-head h2 em{font-family:var(--font-accent);font-weight:400}.pst-explorer-head p{max-width:42ch}
+.pst-tabs{display:flex;gap:10px;flex-wrap:wrap;padding:20px 0;border-top:1px solid var(--color-linen);border-bottom:1px solid var(--color-linen)}
+.pst-tabs button{cursor:pointer;padding:13px 20px;font:500 13px var(--font-body);border:1px solid var(--color-terracotta);border-radius:0;background:transparent;color:var(--color-terracotta)}
+.pst-tabs button[aria-pressed="true"],.pst-tabs button:hover{background:var(--color-terracotta);color:var(--color-steam-cream)}
+.pst-group{padding-top:42px}.pst-group[hidden]{display:none!important}
+.pst-group>header{display:grid;grid-template-columns:1fr 1fr;gap:12px 32px;align-items:end;margin-bottom:24px}
+.pst-group>header>span{grid-column:1/-1;font-size:10px;letter-spacing:.12em}
+body[data-page="letter-concept"] .pst-group h2{font:800 38px/1.1 var(--font-display)!important;letter-spacing:-.04em}
+.pst-group>header p{font-size:13px!important}
+.pst-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+.pst-pass{min-width:0;background:var(--color-steam-cream);border:1px solid var(--color-linen)}
+.pst-ticket{position:relative;padding:28px 32px;background:var(--color-steam-cream);border-bottom:1px dashed var(--color-terracotta)}
+.pst-ticket-top{display:flex;justify-content:space-between;font-size:9px;letter-spacing:.12em;color:var(--color-terracotta)}
+body[data-page="letter-concept"] .pst-ticket h3{font:800 clamp(28px,3vw,44px)/1.05 var(--font-display)!important;margin:28px 0 12px!important;letter-spacing:-.035em}
+.pst-ticket>p{font-size:14px!important;min-height:2.8em}
+.pst-ticket-value{display:flex;align-items:baseline;justify-content:space-between;margin:24px 0}
+.pst-ticket-value strong{font:800 46px var(--font-display);letter-spacing:-.04em}.pst-ticket-value>span{font-size:9px}
+.pst-ticket .ps-pack-pass-tags{display:grid;grid-template-columns:repeat(3,1fr);list-style:none;margin:0;padding:16px 0 0;border-top:1px solid var(--color-linen);gap:12px}
+.pst-ticket .ps-pack-pass-tags li{font:600 13px var(--font-body)}
+.pst-pass-body{padding:24px 32px}.pst-pass-body>p{font-size:13px!important;min-height:3.2em}
+.pst-details details{border-top:1px solid var(--color-linen);padding:0!important}
+.pst-details summary{cursor:pointer;font-size:13px;font-weight:600;padding:14px 0}
+.pst-details details :is(p,li){font-size:12px!important;line-height:1.6!important}.pst-details ul{padding-left:18px}
+.pst-pass-body>a{display:flex;justify-content:space-between;border-top:1px solid var(--color-terracotta);padding:20px 0 0;margin-top:20px;color:var(--color-terracotta)!important;font-size:13px!important}
+.pst-main .ps-how-it-works{padding:72px 5vw;margin:0;background:var(--color-steam-cream)}
+body[data-page="letter-concept"] .pst-main .ps-how-it-works h2{font:800 clamp(36px,4vw,60px)/1.05 var(--font-display)!important}
+.pst-main .ps-how-it-works-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:40px}
+.pst-main .ps-how-it-works-step{border-top:2px solid var(--color-terracotta);padding-top:20px}
+.pst-main .ps-how-it-works-step-num{font-size:11px!important;color:var(--color-terracotta)!important}
+body[data-page="letter-concept"] .pst-main .ps-how-it-works h3{font:700 26px var(--font-display)!important;margin:20px 0!important}
+.pst-close{display:grid;grid-template-columns:1fr 2fr;gap:5vw;padding:60px 5vw;background:var(--color-oat)}
+.pst-close>span{font:800 150px/.9 var(--font-display);color:var(--color-terracotta);letter-spacing:-.09em}
+body[data-page="letter-concept"] .pst-close h2{font:800 clamp(36px,4vw,60px)/1 var(--font-display)!important;margin-bottom:24px!important}
+.pst-close h2 em{font-family:var(--font-accent);font-weight:400}.pst-close a{display:inline-block;margin-top:24px;border-bottom:1px solid;padding-bottom:10px;color:var(--color-terracotta)!important}
+.pst-main .ps-pack-fineprint{padding:64px 5vw;background:var(--color-steam-cream);margin:0}
+body[data-page="letter-concept"] .pst-main .ps-pack-fineprint h2{font:700 32px var(--font-display)!important;margin:20px 0!important}
+.pst-main .ps-pack-fineprint :is(p,li){font-size:13px!important;line-height:1.8!important;max-width:90ch}
+.pst-main :is(a,button,summary):focus-visible{outline:2px solid var(--color-terracotta);outline-offset:4px}
+.pst-arrive{animation:pst-arrive .8s ease both}
+@keyframes pst-arrive{from{transform:translateY(28px);opacity:.3}to{transform:translateY(0);opacity:1}}
+body.lc-motion-paused .pst-main *{animation-play-state:paused!important}
+@media(max-width:850px){.pst-hero-heading{grid-template-columns:1fr;gap:12px}.pst-hero{padding:24px}.pst-preview-stack{transform:scale(.75);transform-origin:center;min-height:260px;padding:20px 0}.pst-preview-ticket{width:270px}.pst-hero-top,.pst-hero-bottom{font-size:8px;letter-spacing:.05em}.pst-bridge{padding:40px 24px;align-items:start;flex-direction:column;gap:24px}.pst-explorer{padding:40px 24px}.pst-explorer-head,.pst-group>header{grid-template-columns:1fr;gap:20px}.pst-tabs{gap:8px}.pst-tabs button{padding:10px;font-size:12px}.pst-grid{grid-template-columns:1fr}.pst-main .ps-how-it-works{padding:48px 24px}.pst-main .ps-how-it-works-steps{grid-template-columns:1fr;gap:28px}.pst-close{padding:48px 24px;grid-template-columns:1fr;gap:28px}.pst-main .ps-pack-fineprint{padding:48px 24px}}
+@media(max-width:440px){.pst-preview-stack{transform:scale(.55);height:230px;min-height:0;margin:0 -100px}.pst-preview-ticket{width:260px}.pst-ticket,.pst-pass-body{padding:24px}.pst-ticket-value strong{font-size:40px}.pst-ticket .ps-pack-pass-tags{gap:8px}.pst-ticket .ps-pack-pass-tags li{font-size:11px}.pst-hero-bottom span{max-width:45%}}
+@media(prefers-reduced-motion:reduce){.pst-main *{animation:none!important;transition:none!important}}
+/* Compact illustrated passes: artwork remains fully visible beside live data. */
+.pst-explorer{padding-top:44px;padding-bottom:44px}
+.pst-group{padding-top:30px}.pst-grid{gap:20px}
+.pst-ticket{display:grid;grid-template-columns:125px minmax(0,1fr);gap:20px;padding:20px}
+.pst-art{align-self:stretch;background:var(--color-steam-cream);display:flex;align-items:center}
+.pst-art img{display:block;width:100%;height:220px;object-fit:contain}
+.pst-ticket-info{min-width:0}
+.pst-ticket-top{font-size:8px;gap:8px}
+body[data-page="letter-concept"] .pst-ticket h3{font-size:28px!important;margin:18px 0 10px!important}
+.pst-ticket-info>p{font-size:12px!important;line-height:1.5!important;min-height:3em}
+.pst-ticket-value{margin:16px 0}
+.pst-ticket-value strong{font-size:34px}
+.pst-ticket .ps-pack-pass-tags{gap:8px;padding-top:12px}
+.pst-ticket .ps-pack-pass-tags li{font-size:11px}
+.pst-pass-body{padding:16px 20px}
+.pst-pass-body>p{min-height:0;margin-bottom:14px!important;font-size:12px!important}
+.pst-more{border-top:1px solid var(--color-linen)}
+.pst-more>summary{display:flex;justify-content:space-between;cursor:pointer;padding:13px 0;font-size:12px;font-weight:600;list-style:none}
+.pst-more>summary::-webkit-details-marker{display:none}
+.pst-more[open]>summary span{transform:rotate(45deg)}
+.pst-pass-body>a{margin-top:10px;padding-top:14px;font-size:12px!important}
+@media(min-width:851px) and (max-width:1150px){.pst-ticket{grid-template-columns:95px minmax(0,1fr);gap:14px}.pst-ticket-top>span:last-child{display:none}}
+@media(max-width:440px){.pst-ticket{grid-template-columns:88px minmax(0,1fr);padding:16px;gap:12px}.pst-art img{height:200px}.pst-ticket-top>span:last-child{display:none}body[data-page="letter-concept"] .pst-ticket h3{font-size:23px!important}.pst-ticket-value{flex-wrap:wrap;gap:6px}.pst-ticket-value strong{font-size:30px}.pst-ticket .ps-pack-pass-tags{grid-template-columns:1fr;gap:4px;padding-top:8px}.pst-pass-body{padding:14px 16px}}
+.pst-terms-link{display:flex;justify-content:space-between;gap:20px;padding:26px 5vw;background:var(--color-steam-cream);font-size:12px}
+.pst-terms-link>a{color:var(--color-terracotta)!important;text-decoration:underline;text-underline-offset:4px}
+@media(max-width:650px){.pst-terms-link{padding:24px;flex-direction:column;gap:12px}}
+/* Larger transparent artwork, with compact live Pass information alongside. */
+.pst-ticket{grid-template-columns:minmax(170px,.9fr) minmax(0,1.1fr);gap:20px}
+.pst-art{background:transparent;justify-content:center}
+.pst-art img{height:290px;object-fit:contain}
+@media(min-width:851px) and (max-width:1150px){.pst-ticket{grid-template-columns:145px minmax(0,1fr);gap:14px}.pst-art img{height:260px}}
+@media(max-width:440px){.pst-ticket{grid-template-columns:115px minmax(0,1fr);gap:12px}.pst-art img{height:240px}body[data-page="letter-concept"] .pst-ticket h3{font-size:21px!important}.pst-ticket-value strong{font-size:27px}}
