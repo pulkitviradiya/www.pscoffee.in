@@ -4,6 +4,29 @@ Reference-only. Never read at session start — only pulled up when asked about 
 historical. Holds MEMORY.md entries that have become outdated or whose project/decision has
 completed, moved here to keep MEMORY.md under its 150-line hygiene limit.
 
+## 2026-07-08 (design-system polish slices)
+- Applied browser-reviewed design-system slices across home/menu/pack/app/about/footer: `wh.css` is now v71, `ps.js` v40 hardens Nectar highlights at runtime, menu/home prices wrap the `₹` glyph, and final page-scoped CSS layers are required when fixing late-cascade typography/colour bugs.
+- Added the served footer wordmark `assets/icons/ps-coffee_wordmark_steam cream.png`, the about manifesto monogram `assets/icons/ps-coffee_monogram_terracotta_Circle-outline.png`, and committed desktop/mobile app prototype exports under `output/` as reference artifacts.
+
+## 2026-07-08 (wh.css cleanup)
+- Cleaned `assets/wh.css` in safe, computed-style-verified slices: removed dead legacy WatchHouse sections plus redundant legal/blog, homepage banner, menu-card, and about-pillar duplicate rules without changing rendered computed styles.
+- Bumped `wh.css` through v57 and verified brace balance plus exact duplicate scan (`exactDuplicateRuleGroups: 0`); `docs/architecture.md` and `docs/tasks.md` now reflect the cleanup.
+
+## 2026-07-07 (full design-system reference doc)
+- User had attached the "P.S. Coffee - Design system" brand kit (a 45-section Claude Design export: `.dc.html` + `guidelines/`/`tokens/`/`components/`/`ui_kits/` folders, session-local under scratchpad) at the start of a session and asked for it to be permanently captured in the repo's docs so future sessions never need it re-attached. Extracted all 45 numbered sections into a new `docs/design-system.md`, organized by the source kit's own section numbers, condensed to the actionable rule per section. Sections 39–44 (print/signage/packaging/social/stationery/decks) flagged out of scope for this repo rather than fully documented. `docs/design.md` (the shorter "as-implemented" doc) now points to `docs/design-system.md` as the full spec. Added a standing instruction to `CLAUDE.md`/`AGENTS.md`: when a new design-system export is shared, merge it into `docs/design-system.md` section-by-section rather than overwriting wholesale.
+
+## 2026-07-07 (font source provenance)
+- User supplied a Google Fonts zip (Bricolage Grotesque, Instrument Serif, Space Grotesk) and asked for it to be kept in `assets/` and mapped into docs. Confirmed the production site already self-hosts optimised `.woff2` subsets of exactly these 3 families in `assets/fonts/brand/` — no CSS change needed. Added `assets/fonts/source/` holding each family's variable `.ttf` + `OFL.txt` licence + `README.txt`, deliberately dropping ~120 unused static per-weight `.ttf` instances to keep the source drop lean (712KB).
+
+## 2026-07-07 (docs-flagged cleanup)
+- Fixed 3 items flagged in a documentation audit: removed 4 dead legacy font files (`Balto-*.otf`, `TiemposHeadline-Medium.otf`, `WatchHouseSerif-Medium.otf`) and their now-dead `wh.css` token declarations (confirmed dead via full cascade grep first); removed the dead, unreachable `.wh-btn.matcha` rule (never applied by any HTML, fully superseded by a working `body[data-page="matcha"] .wh-btn.dark:hover` rule); committed 12 previously-untracked, live-referenced `ps-pass-*.webp` files. Bumped `wh.css` v51→v52.
+
+## 2026-07-07 (documentation restructure)
+- Split the single 371-line `CLAUDE.md`/`AGENTS.md` into the standard `docs/` set (architecture/api-reference/conventions/tasks/design) plus `ARCHIVE.md` (previously referenced but never created), and slimmed the two contributor guides down to lean pointer files with an `@`-syntax reference map.
+
+## 2026-07-07
+- Audited Content & Layout (kit sections 37-38) across the 8 blog posts sharing an identical inline-`<style>` structure. Fixed: `.kt` "Key Takeaway" box rebuilt to match the `.qa` pattern (Oat fill + 4px Terracotta left border); added a `.ctab-vs` marker class + Terracotta top-border to the 2 posts with a genuine head-to-head comparison table; replaced 11 hardcoded `'Lora'`/`'Inter'` font-family declarations with the correct design tokens per component. Investigated `.pnnav`/`.pncard` prev/next nav reported as "unstyled" — false alarm, already fully styled.
+
 ## 2026-07-06
 - Received an updated "P.S. Coffee Brand Kit.zip" (a newer export of the same Claude Design "P.S. Coffee - Design system" project) and audited it against the live site — supersedes the 2026-07-05 footer/announce-bar decision below. Fixed: footer bg → Deep Ceremonial site-wide (not Oat, not Dark Roast) with new `--color-sage-cream` (#DBDDD2) and `--color-ceremonial-deep` (#2C4F37) tokens; `.f-radhe` now Bright Whisk italic Instrument Serif (the kit's "one italic P.S. line"); added distinct `--color-chilli` (#A81C2E) error token so error state no longer collides with pressed-Terracotta; `.marquee` default fill Terracotta (was Dark Roast); nav tabs now get a rounded hover wash (`--color-terracotta-wash` coffee / pale-froth matcha) instead of growing the underline on hover; all custom `cubic-bezier` curves site-wide consolidated to the kit's one curve `cubic-bezier(.2,0,0,1)`, all transition durations capped at 400ms; `.wh-announce` rebuilt as a true continuously-scrolling ribbon (was a static bar) with Terracotta/Ceremonial profile fill, pausing on hover — bumped ps.js v34, wh.css v39, mobile.css v28 in the same commit.
 - Deferred: consolidating ps.css/wh.css's ~14 ad-hoc breakpoints down to the kit's documented 768/1024/1280 grid — high regression risk for a purely cosmetic-consistency gain, no live defect, left as-is.
