@@ -227,3 +227,11 @@ body[data-page="letter-concept"] .lc-hero-signoff p{font-size:clamp(22px,2.1vw,3
 /* Preserve the original App still as an editorial inset beside the animated prototype. */
 body[data-page="letter-concept"] .lc-app figure{position:relative}
 body[data-page="letter-concept"] .lc-app-context{position:absolute;right:-56px;bottom:44px;width:170px;height:124px;object-fit:cover;border:8px solid var(--color-steam-cream);transform:rotate(5deg)}
+
+/* FAQ section on letter-concept pages (pods, partnership, menu). The accordion itself
+   is already styled globally in ps.css (.faq / .faq-item / .faq-q .pm / .faq-a); this
+   only supplies the section frame so it sits with the rest of the letter layout. */
+body[data-page="letter-concept"] .lc-faq{padding:clamp(56px,7vw,104px) var(--wh-gut);background:var(--color-steam-cream)}
+body[data-page="letter-concept"] .lc-faq>p,body[data-page="letter-concept"] .lc-faq>h2{max-width:860px;margin-inline:auto}
+body[data-page="letter-concept"] .lc-faq>h2{margin:10px auto clamp(24px,3vw,40px);font:700 clamp(28px,3.4vw,44px)/1.12 var(--font-display);letter-spacing:-.02em;color:var(--color-dark-roast)}
+body[data-page="letter-concept"] .lc-faq .faq-item:last-child{border-bottom:0}
