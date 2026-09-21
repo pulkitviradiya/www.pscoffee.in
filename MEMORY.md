@@ -104,15 +104,15 @@ Always read the current version from any `*.html` before bumping.
 - `docs/seo-implementation-plan.md` (phase 2): category-wise keyword placement across FAQ, blogs,
   footer, Partnership page, schema, and a visible/"invisible" page architecture. **Rule that
   governs all future SEO work:** Master Copy v4 locks the W1 headline on every page but says
-  nothing about meta titles, descriptions or slugs — so SEO lives in metadata, FAQ question text,
+  nothing about meta titles, descriptions or slugs — SEO lives in metadata, FAQ question text,
   schema and new pages; brand voice keeps the H1 and body copy. Never rewrite an approved H1.
-- Rewrote `<title>` on all 15 live indexed root pages (41-55 chars, no banned words, no H1 or
-  visible-copy change); biggest win was `partnership.html`, which had zero B2B keywords. Left
-  `og:title`/`twitter:title` alone — social cards are a brand-voice surface. Fixed a real bug:
-  the co-working blog post was indexable but missing from `sitemap.xml`.
+- Rewrote `<title>` on all 15 live indexed root pages; later front-loaded keywords into the
+  menu/pods/partnership meta descriptions (first 65 chars is all a sitelink shows) and added the
+  `og:title`/`og:description` that `partnership.html` was missing entirely. Fixed the co-working
+  blog post being indexable but absent from `sitemap.xml`.
 - Flagged for the brand owner, not silently fixed: `blog/what-is-arabica-coffee-india` carries a
-  species claim v4 retires (keep the slug's equity, soften the copy), and `matcha.html`'s H1 is a
-  flagship P.S. line used as a headline, which the Handbook forbids.
+  species claim v4 retires, and `matcha.html`'s H1 is a flagship P.S. line used as a headline,
+  which the Handbook forbids.
 
 ### 2026-09-22 (homepage brand schema — sitelinks groundwork)
 - User asked how to get Google sitelinks (the sub-page list under a brand result, as abCoffee and
@@ -133,6 +133,22 @@ Always read the current version from any `*.html` before bumping.
 - Still deferred pending approval: 8 new blog posts, Partnership-page FAQ block, and Tier-2
   "indexed but not in nav" landing pages — the last carries real doorway-page risk if shipped
   thin or all at once, so the plan phases it two pages at a time.
+
+### 2026-09-22 (FAQ expansion to money pages + first content briefs)
+- Added FAQ sections + FAQPage schema to `pods`, `partnership` and `menu` (the three highest-intent
+  pages that had none). Questions written per page rather than copied from `faq.html`, since a
+  host evaluating a site asks different things than a general visitor. Sitewide FAQ schema now
+  **145 questions across 18 pages**. No new accordion CSS needed: `ps.css` already styles
+  `.faq`/`.faq-item`/`.faq-q .pm`/`.faq-a` globally and `ps.js` binds `.faq-item` at load;
+  `home-letter.css` gained only the section frame (v13→v14 across 39 files).
+- **Resolved the kiosk conflict** at the user's direction: `kiosk` is on the brand's never-say
+  list, but it is the term people search. Put it on `pods.html` as an FAQ *question* ("Is a P.S.
+  Pod a coffee kiosk?") whose answer never adopts the word as self-description — the same
+  contrastive construction v4 itself uses in B3.02. Keyword indexed, voice intact.
+- Started `docs/briefs/`: GIFT City locality page and "The Letter and The P.S., explained".
+  House format set (see plan §8b). Key rule: every constraint cites its v4/Handbook source, and
+  locality briefs must answer "what makes this page different" in four concrete points or not
+  ship — that section is what separates a locality page from a doorway page.
 
 Older entries (2026-06-29 through 2026-07-08) moved to [ARCHIVE.md](ARCHIVE.md) to stay under the
 150-line hygiene limit.
