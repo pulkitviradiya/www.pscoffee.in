@@ -238,6 +238,45 @@ order (speed). Keep them clean.
 
 ---
 
+## 6b. Google sitelinks — what is and isn't controllable
+
+The expanded list of sub-pages under a brand search result (the thing abCoffee and First Coffee
+both have) is called **sitelinks**. Worth stating plainly, because it is easy to promise:
+
+**Sitelinks cannot be forced.** Google generates them algorithmically. There is no markup that
+creates them, no tag that nominates a page, and no Search Console setting that adds one. They also
+tend to require established brand-search volume, which a pre-launch brand does not yet have.
+
+What *is* controllable, and was implemented 2026-09-21:
+
+| Lever | Why it matters |
+| --- | --- |
+| `Organization` + `WebSite` + `SiteNavigationElement` schema on the **homepage** | How Google builds the brand entity and understands site structure |
+| Unique, front-loaded `<title>` per page | Becomes the sitelink's visible label |
+| Unique `<meta name="description">` per page | **Becomes the sitelink's description.** Sitelinks truncate around 65 characters, so the first sentence has to work standalone |
+| Clean internal nav with descriptive anchor text | Already in place via `ps.js` `PAGES` and the footer |
+| Accurate `sitemap.xml` | Already in place |
+
+### The bug this surfaced
+
+All five brand schema blocks (`Organization`, `WebSite`, `SiteNavigationElement`,
+`CafeOrCoffeeShop`, `DataFeed`) were sitting on **`home-legacy.html`, which is
+`noindex,nofollow`** — while the live `index.html` had **zero structured data**. When the
+letter-led redesign replaced the homepage, the schema did not come with it, so Google could not
+see any of it. Fixed by adding a consolidated `@graph` to `index.html`.
+
+### Two things deliberately not ported
+
+- **`SearchAction` / sitelinks searchbox** — the legacy markup claimed a site search at
+  `/blogs?q=`. No such search exists; `blogs.html` has no query handling at all. Claiming a
+  search feature that does not work is false markup, so it was dropped. Add it back only if a
+  real search results page is built.
+- **`CafeOrCoffeeShop`** — a `LocalBusiness` subtype with no street address, no hours and no open
+  location. Consistent with §6's rule: `LocalBusiness` schema ships per Pod, once addresses
+  exist. Thin LocalBusiness markup on a pre-launch brand is a liability, not a win.
+
+---
+
 ## 7. Two conflicts to resolve before implementing
 
 1. **`blog/what-is-arabica-coffee-india.html`** — the slug, title and content carry a species
