@@ -70,14 +70,6 @@ Always read the current version from any `*.html` before bumping.
 ### Current deployment state (2026-07-13)
 - GitHub-to-Vercel integration is not confirmed healthy. Until it is restored, production completion requires `git push origin main`, `vercel --prod --yes`, and `vercel inspect <deployment-url>` showing `Ready`; a successful GitHub push alone is not proof of deployment.
 
-### 2026-09-21 (blog post content/structure rollback)
-- Commit `3a0d21f` ("Apply Master Copy v4") had gutted 14 blog posts by ~3,000 lines, stripping
-  the TOC/key-takeaways/stat-grid/comparison-table/FAQ+schema structure down to a 6-paragraph
-  skeleton while leaving the CSS in place. Restored the 10 pre-v4 posts to their full pre-`3a0d21f`
-  body (commit `27b7444`), keeping current title/H1/kicker branding so they stay in sync with
-  `blogs.html`, keeping current images spliced in by matching `<image-slot>` id, and rebuilding
-  each post's FAQPage JSON-LD. The 4 posts written after v4 have no old version and were untouched.
-
 ### 2026-09-21 (Brand Language Handbook captured)
 - User shared Master Copy System v4 (byte-identical to the stored copy, no change needed) and a
   genuinely new Brand Language Handbook, added verbatim as `docs/brand-language-handbook.md`:

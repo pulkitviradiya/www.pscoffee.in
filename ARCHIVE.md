@@ -4,6 +4,14 @@ Reference-only. Never read at session start — only pulled up when asked about 
 historical. Holds MEMORY.md entries that have become outdated or whose project/decision has
 completed, moved here to keep MEMORY.md under its 150-line hygiene limit.
 
+## 2026-09-21 (blog post content/structure rollback)
+- Commit `3a0d21f` ("Apply Master Copy v4") had gutted 14 blog posts by ~3,000 lines, stripping
+  the TOC/key-takeaways/stat-grid/comparison-table/FAQ+schema structure down to a 6-paragraph
+  skeleton while leaving the CSS in place. Restored the 10 pre-v4 posts to their full pre-`3a0d21f`
+  body (commit `27b7444`), keeping current title/H1/kicker branding so they stay in sync with
+  `blogs.html`, keeping current images spliced in by matching `<image-slot>` id, and rebuilding
+  each post's FAQPage JSON-LD. The 4 posts written after v4 have no old version and were untouched.
+
 ## 2026-07-13 (copy and component contracts)
 - Added `docs/copy-system.md` as the repository copy authority for Master Copy v3 plus approved website amendments, and documented unique media-slot naming, the shared hero typography contract, and the current Pass-card system.
 
