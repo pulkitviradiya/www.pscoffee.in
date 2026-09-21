@@ -1,6 +1,8 @@
 # P.S. Coffee Copy System
 
-The website follows [Master Copy System v4](master-copy-system-v4.md), supplied September 2026. This replaces v3 copy guidance. The visual language, colours, typography and existing page components remain governed by [design.md](design.md) and [design-system.md](design-system.md).
+The website follows [Master Copy System v4](master-copy-system-v4.md), supplied September 2026 — the exact approved wording for every surface. For anything the Master Copy System does not cover verbatim (new campaign copy, captions, notifications, staff language, or *why* a rule exists), use the [Brand Language Handbook](brand-language-handbook.md), supplied 2026-09-19 — where the two disagree on wording, the Handbook explicitly defers to the Master Copy System. The visual language, colours, typography and existing page components remain governed by [design.md](design.md) and [design-system.md](design-system.md).
+
+**The core idea (from the Handbook):** the day is the letter, the coffee is the P.S. — a postscript is always short, always last, always chosen, never the headline. The voice runs in two registers that never mix inside one sentence: **serious** (beans, dose, price, hours — flat declaratives, no wordplay) and **drama** (sign-offs, captions, notifications — dry, deadpan, gossipy). Governing rule: dramatic content, deadpan delivery. See the Handbook for the full precedence order (speed → price legibility → first-timer clarity → voice consistency → cleverness), the P.S. line tests, and the quality/price claim rules — this file only tracks *website-specific* implementation decisions layered on top.
 
 ## Website implementation decisions
 

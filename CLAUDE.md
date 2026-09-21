@@ -36,7 +36,13 @@ No test, lint, format, or build command exists in this repo.
 - Naming and code conventions → @docs/conventions.md
 - Current tasks and open items → @docs/tasks.md
 - Session history and decisions → @MEMORY.md
-- Brand voice, copy hierarchy, punctuation, pricing, and savings rules → @docs/copy-system.md
+- Brand voice, copy hierarchy, punctuation, pricing, and savings rules (website-specific
+  implementation decisions) → @docs/copy-system.md
+- Exact approved wording for every surface (web, app, email, social, physical, pitch) →
+  @docs/master-copy-system-v4.md
+- The reasoning behind the copy rules — voice registers, the P.S. sign-off system, naming,
+  channel playbooks, worked rewrites — for writing anything the Master Copy System doesn't cover
+  verbatim → @docs/brand-language-handbook.md
 - Design System and typography (as implemented in this codebase) → @docs/design.md
 - Full brand-kit reference, all 45 sections (voice, colour, type, logo, photography, digital,
   print) → @docs/design-system.md — audit against this directly; it does not need to be
@@ -92,3 +98,12 @@ only, never read at session start).
   changed, append what's new, leave what's unchanged alone. Never blindly overwrite that file.
   See its own "Keeping this file current" section for the exact procedure, and log the update in
   MEMORY.md.
+- **When a new or updated brand-voice/copy document is shared** ("Master Copy System",
+  "Brand Language Handbook", or anything described as updated voice/tone/copy direction), diff it
+  against `docs/master-copy-system-v4.md` and `docs/brand-language-handbook.md` before touching
+  anything else — if the file is identical to what's already stored, say so and stop; if it's new
+  or changed, update the matching stored doc (new version → replace/version it; a genuinely new
+  document → add it and wire it into `docs/copy-system.md` and this Reference Map). Don't
+  re-audit the live site's copy against it unless asked — capturing the doc and flagging any
+  conflict with `docs/copy-system.md`'s existing website-specific decisions is the default; a
+  full copy audit is separate, explicit work. Log the update in MEMORY.md.
