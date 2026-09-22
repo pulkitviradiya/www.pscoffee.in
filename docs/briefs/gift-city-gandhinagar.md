@@ -124,10 +124,10 @@ kill the page and fold the content into `pods.html` instead.
 
 ## 9. Note for the writer: spelling
 
-The site currently writes **"Gift City"** in the waitlist dropdown and **"GIFT City"** elsewhere.
-The official name is GIFT City (Gujarat International Finance Tec-City), an acronym. Use
-**GIFT City** in prose. The dropdown value stays `gift-city` and its label is not in scope for
-this page — flag the inconsistency to the brand owner rather than changing the form.
+**Resolved 2026-09-22.** The site previously wrote **"Gift City"** in the waitlist dropdowns and
+**"GIFT City"** elsewhere. The official name is GIFT City (Gujarat International Finance Tec-City),
+an acronym, and every visible label now uses it. The form option value stays `gift-city`, and so
+does the `?area=gift-city` deep link — only the label changed.
 
 ---
 

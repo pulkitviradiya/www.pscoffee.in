@@ -28,8 +28,6 @@ _(none open)_
 - **Brand-owner read** on the visible copy added to `coffee-for-offices`,
   `coffee-for-coworking-spaces`, `coffee-gift-city-gandhinagar` and the Partnership page's
   complementary-vendor line.
-- **`gift-city` dropdown label** on the Pods waitlist still reads "Gift City"; the official name is
-  GIFT City. Flagged in the brief, not changed — the form's option value must stay `gift-city`.
 - **Two brand-owner decisions still open:** `blog/what-is-arabica-coffee-india` carries a species
   claim Master Copy v4 retires, and `matcha.html`'s H1 is a flagship P.S. line used as a headline,
   which the Handbook forbids.
