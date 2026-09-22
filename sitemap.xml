@@ -28,6 +28,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.pscoffee.in/feedback</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://www.pscoffee.in/faq</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
