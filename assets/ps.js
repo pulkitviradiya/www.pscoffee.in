@@ -68,7 +68,7 @@
             '<a href="https://www.thebarista.school" target="_blank" rel="noopener">Barista School ↗</a>'+
           '</div>'+
           '<div class="f-col"><h4>Pods.</h4>'+
-            '<a href="'+localHref("pods.html#pods")+'">Planned locations</a><a href="'+localHref("app.html")+'">App preview</a><a href="'+localHref("partnership.html#host")+'">Host a Pod</a><a href="'+localHref("coffee-for-offices.html")+'">Coffee for offices</a><a href="'+localHref("coffee-for-coworking-spaces.html")+'">Coffee for co-working</a>'+
+            '<a href="'+localHref("pods.html#pods")+'">Planned locations</a><a href="'+localHref("app.html")+'">App preview</a><a href="'+localHref("partnership.html#host")+'">Host a Pod</a><a href="'+localHref("coffee-for-offices.html")+'">Coffee for offices</a><a href="'+localHref("coffee-for-coworking-spaces.html")+'">Coffee for co-working</a><a href="'+localHref("coffee-gift-city-gandhinagar.html")+'">Coffee in GIFT City</a>'+
           '</div>'+
           '<div class="f-col"><h4>Help & Info.</h4>'+
             '<a href="'+localHref("faq.html")+'">FAQ</a><a href="mailto:hello@pscoffee.in">Contact</a><a href="'+localHref("terms.html")+'">Terms of Use</a><a href="'+localHref("privacy.html")+'">Privacy Policy</a><a href="'+localHref("disclaimer.html")+'">General Disclaimer</a><a href="'+localHref("survey-disclosure.html")+'">Survey Notice</a><a href="'+localHref("copyright.html")+'">Copyright</a>'+
