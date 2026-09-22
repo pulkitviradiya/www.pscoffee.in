@@ -67,6 +67,16 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.pscoffee.in/coffee-for-offices</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.pscoffee.in/coffee-for-coworking-spaces</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.pscoffee.in/partnership-enquiry</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
