@@ -124,6 +124,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.pscoffee.in/blog/the-letter-and-the-ps-explained</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.pscoffee.in/blog/specialty-vs-regular-coffee-no-jargon</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

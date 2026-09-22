@@ -705,6 +705,7 @@
 
   /* ---------- Brand Kit 2A: Nectar signature move ---------- */
   var NECTAR_PHRASES = [
+    "The Letter and The P.S.",
     "Nothing to hide",
     "the surprise",
     "a question",
@@ -805,7 +806,13 @@
     var node = walker.nextNode();
     if(!node) return false;
     var text = node.nodeValue;
-    var clauses = text.split(/[.,;]+/).map(function(s){ return s.trim(); }).filter(Boolean);
+    // A headline like "What are The Letter and The P.S.?" splits on the
+    // abbreviation's own full stops, leaving "?" as the last clause. Marking
+    // punctuation is never the argument of a sentence, so require a real word
+    // before a clause can be chosen, and fall back to the whole line if none
+    // qualifies.
+    var clauses = text.split(/[.,;]+/).map(function(s){ return s.trim(); })
+      .filter(function(s){ return /[A-Za-z]{3,}/.test(s); });
     var clause = clauses.length ? clauses[clauses.length - 1] : text.trim();
     var words = clause.split(/\s+/).filter(Boolean);
     var phrase = words.slice(-4).join(" ");

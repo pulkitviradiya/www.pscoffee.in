@@ -31,6 +31,10 @@ _(none open)_
   which the Handbook forbids.
 - **Deferred until Pod addresses exist:** `LocalBusiness` schema per Pod.
 - **Re-score the keyword database** once Search Console has 90 days of real data.
+- **Journal card image missing.** `blogs.html`'s card for `the-letter-and-the-ps-explained` uses an
+  `<image-slot>` with a placeholder and no `src`, because no asset exists for it yet. It renders as
+  a grey slot beside neighbours that have photos. Needs
+  `assets/photos/site/blog-letter-and-ps-{desktop,mobile}.webp`, then the slot wired to them.
 
 ## Completed (recent, for context — see MEMORY.md for full history)
 - Tier-2 landing pages `/coffee-for-offices` and `/coffee-for-coworking-spaces`, the
