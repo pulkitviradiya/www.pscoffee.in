@@ -154,3 +154,24 @@ markup. Those are handled separately and are deliberately not brand-voice territ
 **If §7 point 2 cannot be researched:** say so in the handover rather than filling the gap. The
 brief's own permitted fallback is to describe the category gap instead of inventing specifics,
 and a flagged gap is fixable. An invented detail about a real building is not.
+
+---
+
+## 11. Note on the GIFT City Journal post (plan §4, post 6)
+
+The implementation plan lists **both** this Tier-2 page and a Journal post,
+"Coffee in GIFT City and Gandhinagar: what's there, what isn't", on almost the same keyword set.
+**Do not write both at the same time.** Two pages on `coffee GIFT City`, published together, by
+the same site, is self-competition at best and the doorway-page pattern at worst.
+
+The split, if both ever ship:
+
+| | This page | The Journal post |
+| --- | --- | --- |
+| Job | Convert. What a Pod there would be, and how to ask for one | Explain. What the coffee situation in GIFT City actually is today |
+| Voice | Locality page, salutation H1, CTA-led | Journal, observational, no CTA beyond a link |
+| Keyword | `coffee GIFT City`, `specialty coffee Gandhinagar` | `what's there, what isn't` long-tail and question forms |
+
+**Sequence:** ship this page first, leave it four to six weeks, and write the post only if the
+page indexes and the research in §7 turned up enough real material to say something the page did
+not. If §7 came back thin, the post should not exist at all.
