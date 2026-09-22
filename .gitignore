@@ -24,3 +24,5 @@ node_modules/
 
 # Source image drops; optimized site images live in assets/photos/site/
 assets/photos/*.png
+__pycache__/
+*.pyc
