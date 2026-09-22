@@ -296,7 +296,7 @@ see any of it. Fixed by adding a consolidated `@graph` to `index.html`.
 
 | Step | Scope | Risk | Status |
 | --- | --- | --- | --- |
-| 1 | Title rewrites, 15 live pages (§1) | Low — metadata only, no visible copy, no voice conflict | **Done** 2026-09-21 |
+| 1 | Title rewrites, 15 live pages (§1) | Low — metadata only, no visible copy, no voice conflict | **Done** 2026-09-21; the 15 Journal posts were missed at the time and were rewritten keyword-led on 2026-09-22 |
 | 2 | Add missing blog post to `sitemap.xml` | None — bug fix | **Done** 2026-09-21 |
 | 3 | FAQ expansion on `faq.html` + matching JSON-LD (§2) | Low | **Done** — 10 questions added (25→35), schema regenerated from visible HTML |
 | 4 | FAQ additions to existing blog posts (§3) | Low | **Done** — 20 questions across the 10 posts that have FAQ blocks. See note below on the other 4 |
