@@ -1,4 +1,30 @@
 User-agent: *
 Allow: /
 
+# AI and answer-engine crawlers are allowed explicitly, so the policy is
+# legible rather than inherited from the wildcard above.
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
 Sitemap: https://www.pscoffee.in/sitemap.xml

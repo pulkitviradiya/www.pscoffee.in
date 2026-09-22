@@ -18,7 +18,24 @@ matches as of 2026-07-07.
 ## Housekeeping / loose ends (not code TODOs, but worth a decision)
 _(none open)_
 
+## Current SEO/GEO workstream — open items
+- **Step 7: eight new Journal posts.** Briefed, not written. With the writer. See `docs/briefs/`.
+- **Step 8: remaining four Tier-2 pages** (`/coffee-for-campus`, `/coffee-for-gyms`,
+  `/coffee-catering-ahmedabad`, `/coffee-gift-city-gandhinagar`). Deliberately held for 4-6 weeks
+  until the first two index and hold — shipping six thin locality pages at once is the
+  doorway-page pattern.
+- **Brand-owner read** on the visible copy added to `coffee-for-offices`,
+  `coffee-for-coworking-spaces` and the Partnership page's complementary-vendor line.
+- **Two brand-owner decisions still open:** `blog/what-is-arabica-coffee-india` carries a species
+  claim Master Copy v4 retires, and `matcha.html`'s H1 is a flagship P.S. line used as a headline,
+  which the Handbook forbids.
+- **Deferred until Pod addresses exist:** `LocalBusiness` schema per Pod.
+- **Re-score the keyword database** once Search Console has 90 days of real data.
+
 ## Completed (recent, for context — see MEMORY.md for full history)
+- Tier-2 landing pages `/coffee-for-offices` and `/coffee-for-coworking-spaces`, the
+  complementary-vendor line and Tier-2 footer links, the 336-row keyword database, the ecosystem
+  outreach angle, and an explicit AI-crawler policy in `robots.txt` — 2026-09-22.
 - Browser-reviewed design-system polish pass across homepage/menu/pack/app/about/footer: rupee
   glyph colour rule, Nectar highlight clone hardening, footer wordmark/monogram assets, pack/app/
   about typography and CTA hover computed-style fixes — 2026-07-08.

@@ -1,0 +1,337 @@
+Keyword,Cluster,Intent,Demand,Competition,Opportunity,Commercial value,Geography,Audience,Funnel stage,Competitor ownership,SEO target,GEO/AEO target,Recommended page,Schema type,Brand-voice check,Priority
+P.S. Coffee,Consumer,Navigational,Low,Low,High,High,India,Consumer,TOFU,None,Yes,Yes,Homepage,Organization,Clear,P0
+PS Coffee,Consumer,Navigational,Low,Low,High,High,India,Consumer,TOFU,None,Yes,Yes,Homepage,Organization,Clear,P0
+P.S. Coffee Ahmedabad,Consumer,Navigational,Low,Low,High,High,India,Consumer,TOFU,None,Yes,Yes,Homepage,Organization,Clear,P0
+pscoffee.in,Consumer,Navigational,Low,Low,High,High,India,Consumer,TOFU,None,Yes,Yes,Homepage,Organization,Clear,P1
+P.S. Coffee menu,Consumer,Navigational,Low,Low,High,High,India,Consumer,TOFU,None,Yes,Yes,Homepage,Organization,Clear,P0
+P.S. Coffee Pods,Consumer,Navigational,Low,Low,High,High,India,Consumer,TOFU,None,Yes,Yes,Homepage,Organization,Clear,P0
+P.S. Coffee pass,Consumer,Navigational,Low,Low,Medium,Medium,India,Consumer,TOFU,None,Yes,Yes,Homepage,Organization,Clear,P2
+P.S. Coffee app,Consumer,Navigational,Low,Low,Medium,Medium,India,Consumer,TOFU,None,Yes,Yes,Homepage,Organization,Clear,P2
+P.S. Coffee partnership,Consumer,Navigational,Low,Low,High,High,India,Consumer,TOFU,None,Yes,Yes,Homepage,Organization,Clear,P1
+P.S. Coffee careers,Consumer,Navigational,Low,Low,Low,Low,India,Consumer,TOFU,None,Yes,Yes,Homepage,Organization,Clear,P3
+P.S. Coffee franchise,Consumer,Navigational,Low,Low,Medium,High,India,Consumer,TOFU,None,Yes,Yes,Homepage,Organization,Clear,P2
+what does P.S. stand for coffee,Consumer,Informational,Low,Low,High,Low,India,Consumer,TOFU,None,Yes,Yes,Homepage,Organization,Clear,P1
+The Letter The P.S. menu,Consumer,Informational,Low,Low,High,Medium,India,Consumer,TOFU,None,Yes,Yes,Homepage,Organization,Clear,P0
+P.S. Black coffee,Consumer,Informational,Low,Low,High,Medium,India,Consumer,TOFU,None,Yes,Yes,Homepage,Organization,Clear,P1
+P.S. White coffee,Consumer,Informational,Low,Low,High,Medium,India,Consumer,TOFU,None,Yes,Yes,Homepage,Organization,Clear,P1
+P.S. Green matcha,Consumer,Informational,Low,Low,High,Medium,India,Consumer,TOFU,None,Yes,Yes,Homepage,Organization,Clear,P1
+P.S. Strong protein coffee,Consumer,Informational,Low,Low,High,Medium,India,Consumer,TOFU,None,Yes,Yes,Homepage,Organization,Clear,P1
+P.S. Coffee waitlist,Consumer,Transactional,Low,Low,High,High,India,Consumer,BOFU,None,Yes,Yes,Homepage,Organization,Clear,P1
+P.S. Coffee opening date,Consumer,Informational,Low,Low,High,Medium,India,Consumer,TOFU,None,Yes,Yes,Homepage,Organization,Clear,P1
+P.S. Coffee host a Pod,Consumer,Transactional,Low,Low,High,High,India,Consumer,BOFU,None,Yes,Yes,Homepage,Organization,Clear,P0
+grab and go coffee,Consumer,Informational,Medium,Medium,Medium,Medium,India,Consumer,TOFU,Chains and aggregators,Yes,Yes,FAQ,FAQPage,Clear,P0
+grab and go coffee India,Consumer,Informational,Medium,Medium,Medium,Medium,India,Consumer,TOFU,Chains and aggregators,Yes,Yes,FAQ,FAQPage,Clear,P0
+grab and go specialty coffee,Consumer,Informational,Low,Low,High,Medium,India,Consumer,TOFU,Chains and aggregators,Yes,Yes,FAQ,FAQPage,Clear,P0
+specialty coffee India,Consumer,Informational,High,High,Low,Medium,India,Consumer,TOFU,Chains and aggregators,Yes,Yes,FAQ,FAQPage,Clear,P2
+what is specialty coffee,Consumer,Informational,High,High,Low,Medium,India,Consumer,TOFU,Chains and aggregators,Yes,Yes,Journal post,FAQPage,Clear,P1
+specialty grade coffee meaning,Consumer,Informational,Medium,Medium,Medium,Medium,India,Consumer,TOFU,Chains and aggregators,Yes,Yes,FAQ,FAQPage,Clear,P1
+daily coffee habit,Consumer,Informational,Low,Low,Medium,Medium,India,Consumer,TOFU,Chains and aggregators,Yes,Yes,FAQ,FAQPage,Clear,P1
+everyday coffee India,Consumer,Informational,Low,Low,Medium,Medium,India,Consumer,TOFU,Chains and aggregators,Yes,Yes,FAQ,FAQPage,Clear,P2
+coffee without queue,Consumer,Informational,Low,Low,Medium,Medium,India,Consumer,TOFU,Chains and aggregators,Yes,Yes,FAQ,FAQPage,Clear,P2
+quick coffee before work,Consumer,Informational,Medium,Low,High,Medium,India,Consumer,TOFU,Chains and aggregators,Yes,Yes,FAQ,FAQPage,Clear,P1
+coffee to go near me,Consumer,Informational,High,High,Low,Medium,India,Consumer,TOFU,Chains and aggregators,Yes,Yes,FAQ,FAQPage,Clear,P2
+takeaway coffee India,Consumer,Informational,Medium,Medium,Medium,Medium,India,Consumer,TOFU,Chains and aggregators,Yes,Yes,FAQ,FAQPage,Clear,P2
+compact coffee format,Consumer,Informational,Low,Low,High,Medium,India,Consumer,TOFU,Chains and aggregators,Yes,Yes,FAQ,FAQPage,Clear,P1
+coffee counter vs cafe,Consumer,Informational,Low,Low,High,Medium,India,Consumer,TOFU,Chains and aggregators,Yes,Yes,FAQ,FAQPage,Clear,P1
+what is a coffee pod shop,Consumer,Informational,Low,Low,High,Medium,India,Consumer,TOFU,Chains and aggregators,Yes,Yes,Journal post,FAQPage,Clear,P0
+coffee kiosk,Consumer,Informational,Medium,Medium,Medium,Medium,India,Consumer,TOFU,Chains and aggregators,Yes,Yes,FAQ,FAQPage,Meta and FAQ question text only,P0
+coffee kiosk India,Consumer,Informational,Medium,Low,High,Medium,India,Consumer,TOFU,Chains and aggregators,Yes,Yes,FAQ,FAQPage,Meta and FAQ question text only,P0
+small format coffee shop,Consumer,Informational,Low,Low,High,Medium,India,Consumer,TOFU,Chains and aggregators,Yes,Yes,FAQ,FAQPage,Clear,P1
+coffee shop without seating,Consumer,Informational,Low,Low,High,Medium,India,Consumer,TOFU,Chains and aggregators,Yes,Yes,FAQ,FAQPage,Clear,P1
+ground at order coffee,Consumer,Informational,Low,Low,Medium,Medium,India,Consumer,TOFU,Chains and aggregators,Yes,Yes,FAQ,FAQPage,Clear,P2
+fresh ground coffee vs pre ground,Consumer,Informational,Medium,Medium,Medium,Medium,India,Consumer,TOFU,Chains and aggregators,Yes,Yes,FAQ,FAQPage,Clear,P2
+ordering coffee ahead app,Consumer,Informational,Medium,Medium,Medium,Medium,India,Consumer,TOFU,Chains and aggregators,Yes,Yes,FAQ,FAQPage,Clear,P2
+coffee subscription India,Consumer,Informational,Medium,Medium,Medium,Medium,India,Consumer,TOFU,Chains and aggregators,Yes,Yes,FAQ,FAQPage,Clear,P2
+coffee pass India,Consumer,Informational,Low,Low,Medium,Medium,India,Consumer,TOFU,Chains and aggregators,Yes,Yes,FAQ,FAQPage,Clear,P3
+affordable specialty coffee,Consumer,Informational,Medium,Medium,Medium,Medium,India,Consumer,TOFU,Chains and aggregators,Yes,Yes,FAQ,FAQPage,Meta and FAQ question text only,P1
+specialty coffee price India,Consumer,Informational,Medium,Medium,Medium,Medium,India,Consumer,TOFU,Chains and aggregators,Yes,Yes,FAQ,FAQPage,Meta and FAQ question text only,P1
+why is specialty coffee expensive,Consumer,Informational,Medium,Medium,Medium,Medium,India,Consumer,TOFU,Chains and aggregators,Yes,Yes,Journal post,FAQPage,Meta and FAQ question text only,P1
+coffee for people who drink it daily,Consumer,Informational,Low,Low,High,Medium,India,Consumer,TOFU,Chains and aggregators,Yes,Yes,FAQ,FAQPage,Clear,P1
+best grab and go coffee brand India,Consumer,Informational,Medium,Medium,Medium,Medium,India,Consumer,TOFU,Chains and aggregators,Yes,Yes,FAQ,FAQPage,Meta and FAQ question text only,P1
+Indian coffee brands 2026,Consumer,Informational,Medium,High,Low,Medium,India,Consumer,TOFU,Chains and aggregators,Yes,Yes,FAQ,FAQPage,Clear,P2
+coffee market India 2030,Consumer,Informational,Medium,Medium,Medium,Medium,India,Consumer,TOFU,Chains and aggregators,Yes,Yes,FAQ,FAQPage,Clear,P3
+coffee culture Gujarat,Consumer,Informational,Low,Low,High,Medium,India,Consumer,TOFU,Chains and aggregators,Yes,Yes,FAQ,FAQPage,Clear,P1
+specialty coffee Gujarat,Consumer,Informational,Low,Low,High,Medium,India,Consumer,TOFU,Chains and aggregators,Yes,Yes,FAQ,FAQPage,Clear,P0
+third wave coffee India,Consumer,Informational,Medium,High,Low,Medium,India,Consumer,TOFU,Chains and aggregators,Yes,Yes,FAQ,FAQPage,Clear,P3
+what is a barista,Consumer,Informational,High,High,Low,Medium,India,Consumer,TOFU,Chains and aggregators,Yes,Yes,Journal post,FAQPage,Clear,P2
+coffee near Prahlad Nagar,Consumer,Commercial,Medium,Medium,Medium,Medium,Ahmedabad,Consumer,MOFU,Local cafes and Zomato listings,Yes,Yes,Locality landing,LocalBusiness,Clear,P1
+specialty coffee Prahlad Nagar,Consumer,Commercial,Low,Low,High,Medium,Ahmedabad,Consumer,MOFU,Thin,Yes,Yes,Locality landing,LocalBusiness,Clear,P1
+grab and go coffee Prahlad Nagar,Consumer,Commercial,Low,Low,High,Medium,Ahmedabad,Consumer,MOFU,None,Yes,Yes,Locality landing,LocalBusiness,Clear,P2
+coffee near SG Highway,Consumer,Commercial,Medium,Medium,Medium,Medium,Ahmedabad,Consumer,MOFU,Local cafes and Zomato listings,Yes,Yes,Locality landing,LocalBusiness,Clear,P1
+specialty coffee SG Highway,Consumer,Commercial,Low,Low,High,Medium,Ahmedabad,Consumer,MOFU,Thin,Yes,Yes,Locality landing,LocalBusiness,Clear,P1
+grab and go coffee SG Highway,Consumer,Commercial,Low,Low,High,Medium,Ahmedabad,Consumer,MOFU,None,Yes,Yes,Locality landing,LocalBusiness,Clear,P2
+coffee near Satellite,Consumer,Commercial,Medium,Medium,Medium,Medium,Ahmedabad,Consumer,MOFU,Local cafes and Zomato listings,Yes,Yes,Locality landing,LocalBusiness,Clear,P1
+specialty coffee Satellite,Consumer,Commercial,Low,Low,High,Medium,Ahmedabad,Consumer,MOFU,Thin,Yes,Yes,Locality landing,LocalBusiness,Clear,P1
+grab and go coffee Satellite,Consumer,Commercial,Low,Low,High,Medium,Ahmedabad,Consumer,MOFU,None,Yes,Yes,Locality landing,LocalBusiness,Clear,P2
+coffee near Bodakdev,Consumer,Commercial,Medium,Medium,Medium,Medium,Ahmedabad,Consumer,MOFU,Local cafes and Zomato listings,Yes,Yes,Locality landing,LocalBusiness,Clear,P1
+specialty coffee Bodakdev,Consumer,Commercial,Low,Low,High,Medium,Ahmedabad,Consumer,MOFU,Thin,Yes,Yes,Locality landing,LocalBusiness,Clear,P1
+grab and go coffee Bodakdev,Consumer,Commercial,Low,Low,High,Medium,Ahmedabad,Consumer,MOFU,None,Yes,Yes,Locality landing,LocalBusiness,Clear,P2
+coffee near Vastrapur,Consumer,Commercial,Medium,Medium,Medium,Medium,Ahmedabad,Consumer,MOFU,Local cafes and Zomato listings,Yes,Yes,Locality landing,LocalBusiness,Clear,P1
+specialty coffee Vastrapur,Consumer,Commercial,Low,Low,High,Medium,Ahmedabad,Consumer,MOFU,Thin,Yes,Yes,Locality landing,LocalBusiness,Clear,P1
+grab and go coffee Vastrapur,Consumer,Commercial,Low,Low,High,Medium,Ahmedabad,Consumer,MOFU,None,Yes,Yes,Locality landing,LocalBusiness,Clear,P2
+coffee near Thaltej,Consumer,Commercial,Medium,Medium,Medium,Medium,Ahmedabad,Consumer,MOFU,Local cafes and Zomato listings,Yes,Yes,Locality landing,LocalBusiness,Clear,P1
+specialty coffee Thaltej,Consumer,Commercial,Low,Low,High,Medium,Ahmedabad,Consumer,MOFU,Thin,Yes,Yes,Locality landing,LocalBusiness,Clear,P1
+grab and go coffee Thaltej,Consumer,Commercial,Low,Low,High,Medium,Ahmedabad,Consumer,MOFU,None,Yes,Yes,Locality landing,LocalBusiness,Clear,P2
+coffee near Makarba,Consumer,Commercial,Medium,Medium,Medium,Medium,Ahmedabad,Consumer,MOFU,Local cafes and Zomato listings,Yes,Yes,Locality landing,LocalBusiness,Clear,P1
+specialty coffee Makarba,Consumer,Commercial,Low,Low,High,Medium,Ahmedabad,Consumer,MOFU,Thin,Yes,Yes,Locality landing,LocalBusiness,Clear,P1
+grab and go coffee Makarba,Consumer,Commercial,Low,Low,High,Medium,Ahmedabad,Consumer,MOFU,None,Yes,Yes,Locality landing,LocalBusiness,Clear,P2
+coffee near Sindhu Bhavan Road,Consumer,Commercial,Medium,Medium,Medium,Medium,Ahmedabad,Consumer,MOFU,Local cafes and Zomato listings,Yes,Yes,Locality landing,LocalBusiness,Clear,P1
+specialty coffee Sindhu Bhavan Road,Consumer,Commercial,Low,Low,High,Medium,Ahmedabad,Consumer,MOFU,Thin,Yes,Yes,Locality landing,LocalBusiness,Clear,P1
+grab and go coffee Sindhu Bhavan Road,Consumer,Commercial,Low,Low,High,Medium,Ahmedabad,Consumer,MOFU,None,Yes,Yes,Locality landing,LocalBusiness,Clear,P2
+coffee near Navrangpura,Consumer,Commercial,Medium,Medium,Medium,Medium,Ahmedabad,Consumer,MOFU,Local cafes and Zomato listings,Yes,Yes,Locality landing,LocalBusiness,Clear,P1
+specialty coffee Navrangpura,Consumer,Commercial,Low,Low,High,Medium,Ahmedabad,Consumer,MOFU,Thin,Yes,Yes,Locality landing,LocalBusiness,Clear,P1
+grab and go coffee Navrangpura,Consumer,Commercial,Low,Low,High,Medium,Ahmedabad,Consumer,MOFU,None,Yes,Yes,Locality landing,LocalBusiness,Clear,P2
+coffee near CG Road,Consumer,Commercial,Medium,Medium,Medium,Medium,Ahmedabad,Consumer,MOFU,Local cafes and Zomato listings,Yes,Yes,Locality landing,LocalBusiness,Clear,P1
+specialty coffee CG Road,Consumer,Commercial,Low,Low,High,Medium,Ahmedabad,Consumer,MOFU,Thin,Yes,Yes,Locality landing,LocalBusiness,Clear,P1
+grab and go coffee CG Road,Consumer,Commercial,Low,Low,High,Medium,Ahmedabad,Consumer,MOFU,None,Yes,Yes,Locality landing,LocalBusiness,Clear,P2
+coffee near Ashram Road,Consumer,Commercial,Medium,Medium,Medium,Medium,Ahmedabad,Consumer,MOFU,Local cafes and Zomato listings,Yes,Yes,Locality landing,LocalBusiness,Clear,P1
+specialty coffee Ashram Road,Consumer,Commercial,Low,Low,High,Medium,Ahmedabad,Consumer,MOFU,Thin,Yes,Yes,Locality landing,LocalBusiness,Clear,P1
+grab and go coffee Ashram Road,Consumer,Commercial,Low,Low,High,Medium,Ahmedabad,Consumer,MOFU,None,Yes,Yes,Locality landing,LocalBusiness,Clear,P2
+coffee near Science City,Consumer,Commercial,Medium,Medium,Medium,Medium,Ahmedabad,Consumer,MOFU,Local cafes and Zomato listings,Yes,Yes,Locality landing,LocalBusiness,Clear,P1
+specialty coffee Science City,Consumer,Commercial,Low,Low,High,Medium,Ahmedabad,Consumer,MOFU,Thin,Yes,Yes,Locality landing,LocalBusiness,Clear,P1
+grab and go coffee Science City,Consumer,Commercial,Low,Low,High,Medium,Ahmedabad,Consumer,MOFU,None,Yes,Yes,Locality landing,LocalBusiness,Clear,P2
+coffee near Shela,Consumer,Commercial,Medium,Medium,Medium,Medium,Ahmedabad,Consumer,MOFU,Local cafes and Zomato listings,Yes,Yes,Locality landing,LocalBusiness,Clear,P1
+specialty coffee Shela,Consumer,Commercial,Low,Low,High,Medium,Ahmedabad,Consumer,MOFU,Thin,Yes,Yes,Locality landing,LocalBusiness,Clear,P1
+grab and go coffee Shela,Consumer,Commercial,Low,Low,High,Medium,Ahmedabad,Consumer,MOFU,None,Yes,Yes,Locality landing,LocalBusiness,Clear,P2
+coffee near South Bopal,Consumer,Commercial,Medium,Medium,Medium,Medium,Ahmedabad,Consumer,MOFU,Local cafes and Zomato listings,Yes,Yes,Locality landing,LocalBusiness,Clear,P1
+specialty coffee South Bopal,Consumer,Commercial,Low,Low,High,Medium,Ahmedabad,Consumer,MOFU,Thin,Yes,Yes,Locality landing,LocalBusiness,Clear,P1
+grab and go coffee South Bopal,Consumer,Commercial,Low,Low,High,Medium,Ahmedabad,Consumer,MOFU,None,Yes,Yes,Locality landing,LocalBusiness,Clear,P2
+coffee near Gota,Consumer,Commercial,Medium,Medium,Medium,Medium,Ahmedabad,Consumer,MOFU,Local cafes and Zomato listings,Yes,Yes,Locality landing,LocalBusiness,Clear,P1
+specialty coffee Gota,Consumer,Commercial,Low,Low,High,Medium,Ahmedabad,Consumer,MOFU,Thin,Yes,Yes,Locality landing,LocalBusiness,Clear,P1
+grab and go coffee Gota,Consumer,Commercial,Low,Low,High,Medium,Ahmedabad,Consumer,MOFU,None,Yes,Yes,Locality landing,LocalBusiness,Clear,P2
+coffee near Chandkheda,Consumer,Commercial,Medium,Medium,Medium,Medium,Ahmedabad,Consumer,MOFU,Local cafes and Zomato listings,Yes,Yes,Locality landing,LocalBusiness,Clear,P1
+specialty coffee Chandkheda,Consumer,Commercial,Low,Low,High,Medium,Ahmedabad,Consumer,MOFU,Thin,Yes,Yes,Locality landing,LocalBusiness,Clear,P1
+grab and go coffee Chandkheda,Consumer,Commercial,Low,Low,High,Medium,Ahmedabad,Consumer,MOFU,None,Yes,Yes,Locality landing,LocalBusiness,Clear,P2
+coffee near Maninagar,Consumer,Commercial,Medium,Medium,Medium,Medium,Ahmedabad,Consumer,MOFU,Local cafes and Zomato listings,Yes,Yes,Locality landing,LocalBusiness,Clear,P1
+specialty coffee Maninagar,Consumer,Commercial,Low,Low,High,Medium,Ahmedabad,Consumer,MOFU,Thin,Yes,Yes,Locality landing,LocalBusiness,Clear,P1
+grab and go coffee Maninagar,Consumer,Commercial,Low,Low,High,Medium,Ahmedabad,Consumer,MOFU,None,Yes,Yes,Locality landing,LocalBusiness,Clear,P2
+coffee near Nikol,Consumer,Commercial,Medium,Medium,Medium,Medium,Ahmedabad,Consumer,MOFU,Local cafes and Zomato listings,Yes,Yes,Locality landing,LocalBusiness,Clear,P1
+specialty coffee Nikol,Consumer,Commercial,Low,Low,High,Medium,Ahmedabad,Consumer,MOFU,Thin,Yes,Yes,Locality landing,LocalBusiness,Clear,P1
+grab and go coffee Nikol,Consumer,Commercial,Low,Low,High,Medium,Ahmedabad,Consumer,MOFU,None,Yes,Yes,Locality landing,LocalBusiness,Clear,P2
+coffee near Bopal,Consumer,Commercial,Medium,Medium,Medium,Medium,Ahmedabad,Consumer,MOFU,Local cafes and Zomato listings,Yes,Yes,Locality landing,LocalBusiness,Clear,P1
+specialty coffee Bopal,Consumer,Commercial,Low,Low,High,Medium,Ahmedabad,Consumer,MOFU,Thin,Yes,Yes,Locality landing,LocalBusiness,Clear,P1
+grab and go coffee Bopal,Consumer,Commercial,Low,Low,High,Medium,Ahmedabad,Consumer,MOFU,None,Yes,Yes,Locality landing,LocalBusiness,Clear,P2
+coffee near Ambli,Consumer,Commercial,Medium,Medium,Medium,Medium,Ahmedabad,Consumer,MOFU,Local cafes and Zomato listings,Yes,Yes,Locality landing,LocalBusiness,Clear,P1
+specialty coffee Ambli,Consumer,Commercial,Low,Low,High,Medium,Ahmedabad,Consumer,MOFU,Thin,Yes,Yes,Locality landing,LocalBusiness,Clear,P1
+grab and go coffee Ambli,Consumer,Commercial,Low,Low,High,Medium,Ahmedabad,Consumer,MOFU,None,Yes,Yes,Locality landing,LocalBusiness,Clear,P2
+coffee GIFT City,Consumer,Commercial,Low,Low,High,High,Gandhinagar / GIFT City,Consumer,MOFU,Almost none,Yes,Yes,GIFT City locality page,LocalBusiness,Clear,P0
+specialty coffee Gandhinagar,Consumer,Commercial,Low,Low,High,High,Gandhinagar / GIFT City,Consumer,MOFU,Almost none,Yes,Yes,GIFT City locality page,LocalBusiness,Clear,P0
+coffee near GIFT City,Consumer,Commercial,Low,Low,High,High,Gandhinagar / GIFT City,Consumer,MOFU,Almost none,Yes,Yes,GIFT City locality page,LocalBusiness,Clear,P0
+grab and go coffee GIFT City,Consumer,Commercial,Low,Low,High,High,Gandhinagar / GIFT City,Consumer,MOFU,Almost none,Yes,Yes,GIFT City locality page,LocalBusiness,Clear,P1
+coffee for offices GIFT City,Consumer,Commercial,Low,Low,High,High,Gandhinagar / GIFT City,Consumer,MOFU,Almost none,Yes,Yes,GIFT City locality page,LocalBusiness,Clear,P0
+cafe in GIFT City,Consumer,Commercial,Low,Low,High,High,Gandhinagar / GIFT City,Consumer,MOFU,Almost none,Yes,Yes,GIFT City locality page,LocalBusiness,Clear,P1
+GIFT City food court coffee,Consumer,Commercial,Low,Low,High,High,Gandhinagar / GIFT City,Consumer,MOFU,Almost none,Yes,Yes,GIFT City locality page,LocalBusiness,Clear,P1
+coffee Infocity Gandhinagar,Consumer,Commercial,Low,Low,High,High,Gandhinagar / GIFT City,Consumer,MOFU,Almost none,Yes,Yes,GIFT City locality page,LocalBusiness,Clear,P1
+coffee near TCS Gandhinagar,Consumer,Commercial,Low,Low,High,High,Gandhinagar / GIFT City,Consumer,MOFU,Almost none,Yes,Yes,GIFT City locality page,LocalBusiness,Clear,P1
+coffee Sector 21 Gandhinagar,Consumer,Commercial,Low,Low,Medium,High,Gandhinagar / GIFT City,Consumer,MOFU,Almost none,Yes,Yes,GIFT City locality page,LocalBusiness,Clear,P2
+best coffee Gandhinagar,Consumer,Commercial,Low,Low,Medium,High,Gandhinagar / GIFT City,Consumer,MOFU,Almost none,Yes,Yes,GIFT City locality page,LocalBusiness,Meta and FAQ question text only,P2
+coffee delivery GIFT City,Consumer,Commercial,Low,Low,Medium,High,Gandhinagar / GIFT City,Consumer,MOFU,Almost none,Yes,Yes,GIFT City locality page,LocalBusiness,Clear,P2
+GCC amenities coffee partner,Consumer,Commercial,Low,Low,High,High,Gandhinagar / GIFT City,Consumer,MOFU,Almost none,Yes,Yes,GIFT City locality page,LocalBusiness,Clear,P1
+coffee kiosk tech park Gujarat,Consumer,Commercial,Low,Low,High,High,Gandhinagar / GIFT City,Consumer,MOFU,Almost none,Yes,Yes,GIFT City locality page,LocalBusiness,Meta and FAQ question text only,P1
+coffee vendor GIFT City tower,Consumer,Commercial,Low,Low,High,High,Gandhinagar / GIFT City,Consumer,MOFU,Almost none,Yes,Yes,GIFT City locality page,LocalBusiness,Clear,P1
+where can I get coffee in GIFT City,Consumer,Informational,Low,Low,High,High,Gandhinagar / GIFT City,Consumer,MOFU,Almost none,Yes,Yes,GIFT City locality page,FAQPage,Clear,P0
+is there specialty coffee in Gandhinagar,Consumer,Informational,Low,Low,High,High,Gandhinagar / GIFT City,Consumer,MOFU,Almost none,Yes,Yes,GIFT City locality page,FAQPage,Clear,P0
+coffee options GIFT City offices,Consumer,Commercial,Low,Low,High,High,Gandhinagar / GIFT City,Consumer,MOFU,Almost none,Yes,Yes,GIFT City locality page,LocalBusiness,Clear,P1
+Gandhinagar coffee shop list,Consumer,Commercial,Low,Low,Medium,High,Gandhinagar / GIFT City,Consumer,MOFU,Almost none,Yes,Yes,GIFT City locality page,LocalBusiness,Clear,P2
+Gandhinagar grab and go coffee,Consumer,Commercial,Low,Low,High,High,Gandhinagar / GIFT City,Consumer,MOFU,Almost none,Yes,Yes,GIFT City locality page,LocalBusiness,Clear,P2
+ceremonial grade matcha,Consumer,Informational,Medium,Medium,High,Medium,India,Consumer,TOFU,Thin in Gujarat,Yes,Yes,Journal post,FAQPage,Clear,P0
+what is ceremonial grade matcha,Consumer,Informational,Medium,Medium,High,Medium,India,Consumer,TOFU,Thin in Gujarat,Yes,Yes,Journal post,FAQPage,Clear,P0
+ceremonial vs culinary matcha,Consumer,Informational,Medium,Medium,High,Medium,India,Consumer,TOFU,Thin in Gujarat,Yes,Yes,Journal post,FAQPage,Clear,P0
+matcha Ahmedabad,Consumer,Commercial,Medium,Medium,High,Medium,India,Consumer,TOFU,Thin in Gujarat,Yes,Yes,Journal post,FAQPage,Clear,P0
+matcha latte India,Consumer,Informational,Medium,Medium,Medium,Medium,India,Consumer,TOFU,Thin in Gujarat,Yes,Yes,Journal post,FAQPage,Clear,P1
+whisked matcha vs powder mix,Consumer,Informational,Medium,Medium,High,Medium,India,Consumer,TOFU,Thin in Gujarat,Yes,Yes,Journal post,FAQPage,Clear,P1
+hojicha India,Consumer,Informational,Medium,Medium,High,Medium,India,Consumer,TOFU,Thin in Gujarat,Yes,Yes,Journal post,FAQPage,Clear,P2
+iced matcha Ahmedabad,Consumer,Commercial,Medium,Medium,High,Medium,India,Consumer,TOFU,Thin in Gujarat,Yes,Yes,Journal post,FAQPage,Clear,P1
+matcha near me Ahmedabad,Consumer,Commercial,Medium,Medium,High,Medium,India,Consumer,TOFU,Thin in Gujarat,Yes,Yes,Journal post,FAQPage,Clear,P1
+is matcha better than coffee,Consumer,Informational,Medium,Medium,Medium,Medium,India,Consumer,TOFU,Thin in Gujarat,Yes,Yes,Journal post,FAQPage,Clear,P2
+protein coffee,Consumer,Informational,Medium,Medium,Medium,Medium,India,Consumer,TOFU,Thin in Gujarat,Yes,Yes,Journal post,FAQPage,Clear,P0
+protein coffee India,Consumer,Informational,Medium,Medium,High,Medium,India,Consumer,TOFU,Thin in Gujarat,Yes,Yes,Journal post,FAQPage,Clear,P0
+20g protein coffee,Consumer,Informational,Medium,Medium,High,Medium,India,Consumer,TOFU,Thin in Gujarat,Yes,Yes,Journal post,FAQPage,Clear,P1
+post workout coffee,Consumer,Informational,Medium,Medium,Medium,Medium,India,Consumer,TOFU,Thin in Gujarat,Yes,Yes,Journal post,FAQPage,Clear,P1
+pre workout coffee,Consumer,Informational,Medium,Medium,Medium,Medium,India,Consumer,TOFU,Thin in Gujarat,Yes,Yes,Journal post,FAQPage,Clear,P1
+gym coffee drink,Consumer,Informational,Medium,Medium,Medium,Medium,India,Consumer,TOFU,Thin in Gujarat,Yes,Yes,Journal post,FAQPage,Clear,P1
+protein shake vs protein coffee,Consumer,Informational,Medium,Medium,High,Medium,India,Consumer,TOFU,Thin in Gujarat,Yes,Yes,Journal post,FAQPage,Clear,P2
+cold brew India,Consumer,Informational,Medium,Medium,Medium,Medium,India,Consumer,TOFU,Thin in Gujarat,Yes,Yes,Journal post,FAQPage,Clear,P1
+what is cold brew coffee,Consumer,Informational,Medium,Medium,Low,Medium,India,Consumer,TOFU,Thin in Gujarat,Yes,Yes,Journal post,FAQPage,Clear,P2
+cold brew vs iced coffee,Consumer,Informational,Medium,Medium,Medium,Medium,India,Consumer,TOFU,Thin in Gujarat,Yes,Yes,Journal post,FAQPage,Clear,P2
+americano vs long black,Consumer,Informational,Medium,Medium,Medium,Medium,India,Consumer,TOFU,Thin in Gujarat,Yes,Yes,Journal post,FAQPage,Clear,P2
+flat white vs latte vs cappuccino,Consumer,Informational,Medium,Medium,Low,Medium,India,Consumer,TOFU,Thin in Gujarat,Yes,Yes,Journal post,FAQPage,Clear,P2
+how many ways to make an americano,Consumer,Informational,Medium,Medium,High,Medium,India,Consumer,TOFU,Thin in Gujarat,Yes,Yes,Journal post,FAQPage,Clear,P1
+rotating coffee menu,Consumer,Informational,Medium,Medium,High,Medium,India,Consumer,TOFU,Thin in Gujarat,Yes,Yes,Journal post,FAQPage,Clear,P1
+numbered coffee variants,Consumer,Informational,Medium,Medium,High,Medium,India,Consumer,TOFU,Thin in Gujarat,Yes,Yes,Journal post,FAQPage,Clear,P2
+oat milk coffee India,Consumer,Informational,Medium,Medium,Medium,Medium,India,Consumer,TOFU,Thin in Gujarat,Yes,Yes,Journal post,FAQPage,Clear,P2
+coffee with oat milk no surcharge,Consumer,Informational,Medium,Medium,High,Medium,India,Consumer,TOFU,Thin in Gujarat,Yes,Yes,Journal post,FAQPage,Clear,P3
+filter coffee vs americano,Consumer,Informational,Medium,Medium,Medium,Medium,India,Consumer,TOFU,Thin in Gujarat,Yes,Yes,Journal post,FAQPage,Clear,P3
+espresso dose 18 grams,Consumer,Informational,Medium,Medium,Low,Medium,India,Consumer,TOFU,Thin in Gujarat,Yes,Yes,Journal post,FAQPage,Clear,P3
+best matcha in Gujarat,Consumer,Commercial,Medium,Medium,High,Medium,India,Consumer,TOFU,Thin in Gujarat,Yes,Yes,Journal post,FAQPage,Meta and FAQ question text only,P2
+specialty matcha India,Consumer,Commercial,Medium,Medium,High,Medium,India,Consumer,TOFU,Thin in Gujarat,Yes,Yes,Journal post,FAQPage,Clear,P1
+coffee and food pairing grab and go,Consumer,Informational,Medium,Medium,High,Medium,India,Consumer,TOFU,Thin in Gujarat,Yes,Yes,Journal post,FAQPage,Clear,P3
+healthy coffee options office,Consumer,Informational,Medium,Medium,Medium,Medium,India,Consumer,TOFU,Thin in Gujarat,Yes,Yes,Journal post,FAQPage,Clear,P2
+decaf coffee India,Consumer,Informational,Medium,Medium,Low,Medium,India,Consumer,TOFU,Thin in Gujarat,Yes,Yes,Journal post,FAQPage,Clear,P3
+coffee menu for daily drinkers,Consumer,Informational,Medium,Medium,High,Medium,India,Consumer,TOFU,Thin in Gujarat,Yes,Yes,Journal post,FAQPage,Clear,P2
+what is The P.S. menu,Consumer,Informational,Medium,Medium,High,Medium,India,Consumer,TOFU,Thin in Gujarat,Yes,Yes,Journal post,FAQPage,Clear,P0
+sugar free coffee options India,Consumer,Informational,Medium,Medium,Medium,Medium,India,Consumer,TOFU,Thin in Gujarat,Yes,Yes,Journal post,FAQPage,Clear,P3
+high protein cold coffee,Consumer,Informational,Medium,Medium,Medium,Medium,India,Consumer,TOFU,Thin in Gujarat,Yes,Yes,Journal post,FAQPage,Clear,P2
+matcha for people who dislike matcha,Consumer,Informational,Medium,Medium,High,Medium,India,Consumer,TOFU,Thin in Gujarat,Yes,Yes,Journal post,FAQPage,Clear,P3
+coffee that is interesting every day,Consumer,Informational,Medium,Medium,High,Medium,India,Consumer,TOFU,Thin in Gujarat,Yes,Yes,Journal post,FAQPage,Clear,P3
+coffee for offices,B2B,Commercial,Medium,Low,High,High,India / Ahmedabad,Corporate,MOFU,Vending and cafeteria vendors,Yes,Yes,Coffee for offices,Service,Clear,P0
+office coffee solution,B2B,Commercial,Medium,Low,High,High,India / Ahmedabad,Corporate,MOFU,Vending and cafeteria vendors,Yes,Yes,Coffee for offices,Service,Clear,P0
+corporate coffee service India,B2B,Commercial,Medium,Low,High,High,India / Ahmedabad,Corporate,MOFU,Vending and cafeteria vendors,Yes,Yes,Coffee for offices,Service,Clear,P0
+coffee kiosk for corporate office,B2B,Commercial,Medium,Low,High,High,India / Ahmedabad,Corporate,MOFU,Vending and cafeteria vendors,Yes,Yes,Coffee for offices,Service,Meta and FAQ question text only,P0
+office coffee counter,B2B,Commercial,Medium,Low,High,High,India / Ahmedabad,Corporate,MOFU,Vending and cafeteria vendors,Yes,Yes,Coffee for offices,Service,Clear,P0
+coffee vendor for office,B2B,Commercial,Medium,Low,High,High,India / Ahmedabad,Corporate,MOFU,Vending and cafeteria vendors,Yes,Yes,Coffee for offices,Service,Clear,P0
+office pantry coffee upgrade,B2B,Commercial,Medium,Low,High,High,India / Ahmedabad,Corporate,MOFU,Vending and cafeteria vendors,Yes,Yes,Coffee for offices,Service,Clear,P1
+vending machine alternative office,B2B,Commercial,Medium,Low,High,High,India / Ahmedabad,Corporate,MOFU,Vending and cafeteria vendors,Yes,Yes,Coffee for offices,Service,Clear,P1
+corporate coffee machine vs barista,B2B,Informational,Medium,Low,High,High,India / Ahmedabad,Corporate,MOFU,Vending and cafeteria vendors,Yes,Yes,Coffee for offices,Service,Clear,P1
+coffee amenity for employees,B2B,Commercial,Medium,Low,High,High,India / Ahmedabad,Corporate,MOFU,Vending and cafeteria vendors,Yes,Yes,Coffee for offices,Service,Clear,P1
+how to get a coffee counter in our office,B2B,Informational,Medium,Low,High,High,India / Ahmedabad,Corporate,MOFU,Vending and cafeteria vendors,Yes,Yes,Coffee for offices,Service,Clear,P0
+office coffee vendor Ahmedabad,B2B,Commercial,Medium,Low,High,High,India / Ahmedabad,Corporate,MOFU,Vending and cafeteria vendors,Yes,Yes,Coffee for offices,Service,Clear,P0
+corporate coffee Ahmedabad,B2B,Commercial,Medium,Low,High,High,India / Ahmedabad,Corporate,MOFU,Vending and cafeteria vendors,Yes,Yes,Coffee for offices,Service,Clear,P0
+coffee service for corporate campus,B2B,Commercial,Medium,Low,High,High,India / Ahmedabad,Corporate,MOFU,Vending and cafeteria vendors,Yes,Yes,Coffee for offices,Service,Clear,P1
+employee coffee benefit India,B2B,Commercial,Medium,Low,Medium,High,India / Ahmedabad,Corporate,MOFU,Vending and cafeteria vendors,Yes,Yes,Coffee for offices,Service,Clear,P2
+facilities manager coffee vendor,B2B,Commercial,Medium,Low,High,High,India / Ahmedabad,Corporate,MOFU,Vending and cafeteria vendors,Yes,Yes,Coffee for offices,Service,Clear,P1
+coffee counter 50 sq ft,B2B,Informational,Medium,Low,High,High,India / Ahmedabad,Corporate,MOFU,Vending and cafeteria vendors,Yes,Yes,Coffee for offices,Service,Clear,P2
+in-office barista service India,B2B,Commercial,Medium,Low,High,High,India / Ahmedabad,Corporate,MOFU,Vending and cafeteria vendors,Yes,Yes,Coffee for offices,Service,Clear,P1
+managed coffee service office,B2B,Commercial,Medium,Low,High,High,India / Ahmedabad,Corporate,MOFU,Vending and cafeteria vendors,Yes,Yes,Coffee for offices,Service,Clear,P1
+coffee bar in office building,B2B,Commercial,Medium,Low,High,High,India / Ahmedabad,Corporate,MOFU,Vending and cafeteria vendors,Yes,Yes,Coffee for offices,Service,Clear,P1
+tower lobby coffee counter,B2B,Commercial,Medium,Low,High,High,India / Ahmedabad,Corporate,MOFU,Vending and cafeteria vendors,Yes,Yes,Coffee for offices,Service,Clear,P2
+multi tenant building coffee,B2B,Commercial,Medium,Low,High,High,India / Ahmedabad,Corporate,MOFU,Vending and cafeteria vendors,Yes,Yes,Coffee for offices,Service,Clear,P2
+office coffee without capex,B2B,Commercial,Medium,Low,High,High,India / Ahmedabad,Corporate,MOFU,Vending and cafeteria vendors,Yes,Yes,Coffee for offices,Service,Clear,P2
+outsourced office coffee India,B2B,Commercial,Medium,Low,High,High,India / Ahmedabad,Corporate,MOFU,Vending and cafeteria vendors,Yes,Yes,Coffee for offices,Service,Clear,P2
+coffee for IT park offices,B2B,Commercial,Medium,Low,High,High,India / Ahmedabad,Corporate,MOFU,Vending and cafeteria vendors,Yes,Yes,Coffee for offices,Service,Clear,P1
+coffee for GCC offices India,B2B,Commercial,Medium,Low,High,High,India / Ahmedabad,Corporate,MOFU,Vending and cafeteria vendors,Yes,Yes,Coffee for offices,Service,Clear,P1
+workplace coffee experience,B2B,Commercial,Medium,Low,Medium,High,India / Ahmedabad,Corporate,MOFU,Vending and cafeteria vendors,Yes,Yes,Coffee for offices,Service,Clear,P2
+office coffee cost per cup,B2B,Commercial,Medium,Low,Medium,High,India / Ahmedabad,Corporate,MOFU,Vending and cafeteria vendors,Yes,Yes,Coffee for offices,Service,Clear,P3
+coffee machine rental vs coffee counter,B2B,Informational,Medium,Low,High,High,India / Ahmedabad,Corporate,MOFU,Vending and cafeteria vendors,Yes,Yes,Coffee for offices,Service,Clear,P2
+best office coffee setup India,B2B,Commercial,Medium,Low,Medium,High,India / Ahmedabad,Corporate,MOFU,Vending and cafeteria vendors,Yes,Yes,Coffee for offices,Service,Meta and FAQ question text only,P2
+coffee for startup office,B2B,Commercial,Medium,Low,High,High,India / Ahmedabad,Corporate,MOFU,Vending and cafeteria vendors,Yes,Yes,Coffee for offices,Service,Clear,P2
+corporate coffee partner Gujarat,B2B,Commercial,Medium,Low,High,High,India / Ahmedabad,Corporate,MOFU,Vending and cafeteria vendors,Yes,Yes,Coffee for offices,Service,Clear,P1
+coffee counter for business park,B2B,Commercial,Medium,Low,High,High,India / Ahmedabad,Corporate,MOFU,Vending and cafeteria vendors,Yes,Yes,Coffee for offices,Service,Clear,P2
+office coffee RFP India,B2B,Commercial,Medium,Low,Medium,High,India / Ahmedabad,Corporate,MOFU,Vending and cafeteria vendors,Yes,Yes,Coffee for offices,Service,Clear,P3
+who provides office coffee in Ahmedabad,B2B,Informational,Medium,Low,High,High,India / Ahmedabad,Corporate,MOFU,Vending and cafeteria vendors,Yes,Yes,Coffee for offices,Service,Clear,P1
+coffee for coworking space,B2B,Commercial,Low,Low,High,High,Ahmedabad,Coworking,MOFU,Thin,Yes,Yes,Coffee for co-working,Service,Clear,P0
+coworking coffee amenity,B2B,Commercial,Low,Low,High,High,Ahmedabad,Coworking,MOFU,Thin,Yes,Yes,Coffee for co-working,Service,Clear,P0
+coffee kiosk for coworking space,B2B,Commercial,Low,Low,High,High,Ahmedabad,Coworking,MOFU,Thin,Yes,Yes,Coffee for co-working,Service,Meta and FAQ question text only,P0
+coworking space coffee vendor,B2B,Commercial,Low,Low,High,High,Ahmedabad,Coworking,MOFU,Thin,Yes,Yes,Coffee for co-working,Service,Clear,P1
+coworking amenities list India,B2B,Commercial,Low,Low,Medium,High,Ahmedabad,Coworking,MOFU,Thin,Yes,Yes,Coffee for co-working,Service,Clear,P2
+specialty coffee coworking,B2B,Commercial,Low,Low,High,High,Ahmedabad,Coworking,MOFU,Thin,Yes,Yes,Coffee for co-working,Service,Clear,P1
+coworking space Ahmedabad coffee,B2B,Commercial,Low,Low,High,High,Ahmedabad,Coworking,MOFU,Thin,Yes,Yes,Coffee for co-working,Service,Clear,P0
+member amenity coffee,B2B,Commercial,Low,Low,High,High,Ahmedabad,Coworking,MOFU,Thin,Yes,Yes,Coffee for co-working,Service,Clear,P1
+coworking coffee without hiring baristas,B2B,Commercial,Low,Low,High,High,Ahmedabad,Coworking,MOFU,Thin,Yes,Yes,Coffee for co-working,Service,Clear,P1
+coffee bar for coworking floor,B2B,Commercial,Low,Low,High,High,Ahmedabad,Coworking,MOFU,Thin,Yes,Yes,Coffee for co-working,Service,Clear,P2
+coworking operator coffee partner,B2B,Commercial,Low,Low,High,High,Ahmedabad,Coworking,MOFU,Thin,Yes,Yes,Coffee for co-working,Service,Clear,P1
+how do coworking spaces handle coffee,B2B,Commercial,Low,Low,High,High,Ahmedabad,Coworking,MOFU,Thin,Yes,Yes,Coffee for co-working,Service,Clear,P1
+coffee for flexible workspace,B2B,Commercial,Low,Low,High,High,Ahmedabad,Coworking,MOFU,Thin,Yes,Yes,Coffee for co-working,Service,Clear,P2
+managed workspace coffee service,B2B,Commercial,Low,Low,High,High,Ahmedabad,Coworking,MOFU,Thin,Yes,Yes,Coffee for co-working,Service,Clear,P2
+coworking tour amenities that matter,B2B,Commercial,Low,Low,Medium,High,Ahmedabad,Coworking,MOFU,Thin,Yes,Yes,Coffee for co-working,Service,Clear,P3
+day pass coworking coffee,B2B,Commercial,Low,Low,Medium,High,Ahmedabad,Coworking,MOFU,Thin,Yes,Yes,Coffee for co-working,Service,Clear,P3
+coffee for hot desk members,B2B,Commercial,Low,Low,High,High,Ahmedabad,Coworking,MOFU,Thin,Yes,Yes,Coffee for co-working,Service,Clear,P3
+coworking retention amenity,B2B,Commercial,Low,Low,Medium,High,Ahmedabad,Coworking,MOFU,Thin,Yes,Yes,Coffee for co-working,Service,Clear,P3
+coffee counter coworking lobby,B2B,Commercial,Low,Low,High,High,Ahmedabad,Coworking,MOFU,Thin,Yes,Yes,Coffee for co-working,Service,Clear,P2
+coworking Ahmedabad SG Highway coffee,B2B,Commercial,Low,Low,High,High,Ahmedabad,Coworking,MOFU,Thin,Yes,Yes,Coffee for co-working,Service,Clear,P2
+coffee for university campus,Campus,Commercial,Low,Low,High,Medium,Gujarat,Campus,MOFU,Thin,Yes,Yes,"Coffee for campuses (Tier-2, phase 2)",Service,Clear,P1
+campus coffee vendor,Campus,Commercial,Low,Low,High,Medium,Gujarat,Campus,MOFU,Thin,Yes,Yes,"Coffee for campuses (Tier-2, phase 2)",Service,Clear,P1
+college coffee counter,Campus,Commercial,Low,Low,High,Medium,Gujarat,Campus,MOFU,Thin,Yes,Yes,"Coffee for campuses (Tier-2, phase 2)",Service,Clear,P1
+coffee kiosk for university,Campus,Commercial,Low,Low,High,Medium,Gujarat,Campus,MOFU,Thin,Yes,Yes,"Coffee for campuses (Tier-2, phase 2)",Service,Meta and FAQ question text only,P1
+student coffee India,Campus,Commercial,Low,Low,Medium,Medium,Gujarat,Campus,MOFU,Thin,Yes,Yes,"Coffee for campuses (Tier-2, phase 2)",Service,Clear,P2
+coffee in college food court,Campus,Commercial,Low,Low,High,Medium,Gujarat,Campus,MOFU,Thin,Yes,Yes,"Coffee for campuses (Tier-2, phase 2)",Service,Clear,P2
+campus cafe alternative,Campus,Commercial,Low,Low,High,Medium,Gujarat,Campus,MOFU,Thin,Yes,Yes,"Coffee for campuses (Tier-2, phase 2)",Service,Clear,P2
+university coffee partner India,Campus,Commercial,Low,Low,High,Medium,Gujarat,Campus,MOFU,Thin,Yes,Yes,"Coffee for campuses (Tier-2, phase 2)",Service,Clear,P2
+coffee for hostel campus,Campus,Commercial,Low,Low,Medium,Medium,Gujarat,Campus,MOFU,Thin,Yes,Yes,"Coffee for campuses (Tier-2, phase 2)",Service,Clear,P3
+coffee between lectures,Campus,Commercial,Low,Low,High,Medium,Gujarat,Campus,MOFU,Thin,Yes,Yes,"Coffee for campuses (Tier-2, phase 2)",Service,Clear,P3
+coffee for business school campus,Campus,Commercial,Low,Low,High,Medium,Gujarat,Campus,MOFU,Thin,Yes,Yes,"Coffee for campuses (Tier-2, phase 2)",Service,Clear,P2
+campus coffee Ahmedabad,Campus,Commercial,Low,Low,High,Medium,Gujarat,Campus,MOFU,Thin,Yes,Yes,"Coffee for campuses (Tier-2, phase 2)",Service,Clear,P1
+coffee vendor for college Gujarat,Campus,Commercial,Low,Low,High,Medium,Gujarat,Campus,MOFU,Thin,Yes,Yes,"Coffee for campuses (Tier-2, phase 2)",Service,Clear,P2
+student friendly coffee Ahmedabad,Campus,Commercial,Low,Low,Medium,Medium,Gujarat,Campus,MOFU,Thin,Yes,Yes,"Coffee for campuses (Tier-2, phase 2)",Service,Clear,P2
+coffee for university library,Campus,Commercial,Low,Low,Medium,Medium,Gujarat,Campus,MOFU,Thin,Yes,Yes,"Coffee for campuses (Tier-2, phase 2)",Service,Clear,P3
+campus food court coffee operator,Campus,Commercial,Low,Low,High,Medium,Gujarat,Campus,MOFU,Thin,Yes,Yes,"Coffee for campuses (Tier-2, phase 2)",Service,Clear,P2
+how can a college add a coffee counter,Campus,Commercial,Low,Low,High,Medium,Gujarat,Campus,MOFU,Thin,Yes,Yes,"Coffee for campuses (Tier-2, phase 2)",Service,Clear,P1
+coffee for exam season campus,Campus,Commercial,Low,Low,Low,Medium,Gujarat,Campus,MOFU,Thin,Yes,Yes,"Coffee for campuses (Tier-2, phase 2)",Service,Clear,P3
+gym coffee partner,High-footfall,Commercial,Low,Low,High,Medium,Ahmedabad,Corporate,MOFU,Thin,Yes,No,Partnership,Service,Clear,P2
+pre workout coffee counter,High-footfall,Commercial,Low,Low,High,Medium,Ahmedabad,Corporate,MOFU,Thin,Yes,No,Partnership,Service,Clear,P2
+coffee in gym lobby,High-footfall,Commercial,Low,Low,High,Medium,Ahmedabad,Corporate,MOFU,Thin,Yes,No,Partnership,Service,Clear,P2
+fitness centre coffee vendor,High-footfall,Commercial,Low,Low,High,Medium,Ahmedabad,Corporate,MOFU,Thin,Yes,No,Partnership,Service,Clear,P2
+coffee for gym members,High-footfall,Commercial,Low,Low,High,Medium,Ahmedabad,Corporate,MOFU,Thin,Yes,No,Partnership,Service,Clear,P3
+protein coffee gym India,High-footfall,Commercial,Low,Low,High,Medium,Ahmedabad,Corporate,MOFU,Thin,Yes,No,Partnership,Service,Clear,P2
+coffee for hospital lobby,High-footfall,Commercial,Low,Low,High,Medium,Ahmedabad,Corporate,MOFU,Thin,Yes,No,Partnership,Service,Clear,P3
+coffee counter in hospital,High-footfall,Commercial,Low,Low,High,Medium,Ahmedabad,Corporate,MOFU,Thin,Yes,No,Partnership,Service,Clear,P3
+coffee for airport lounge India,High-footfall,Commercial,Low,Low,Medium,Medium,Ahmedabad,Corporate,MOFU,Thin,Yes,No,Partnership,Service,Clear,P3
+coffee for metro station India,High-footfall,Commercial,Low,Low,Medium,Medium,Ahmedabad,Corporate,MOFU,Thin,Yes,No,Partnership,Service,Clear,P3
+coffee counter in mall,High-footfall,Commercial,Low,Low,Medium,Medium,Ahmedabad,Corporate,MOFU,Thin,Yes,No,Partnership,Service,Clear,P3
+coffee for residential tower lobby,High-footfall,Commercial,Low,Low,High,Medium,Ahmedabad,Corporate,MOFU,Thin,Yes,No,Partnership,Service,Clear,P3
+coffee for gated community clubhouse,High-footfall,Commercial,Low,Low,High,Medium,Ahmedabad,Corporate,MOFU,Thin,Yes,No,Partnership,Service,Clear,P3
+coffee counter high footfall location,High-footfall,Commercial,Low,Low,High,Medium,Ahmedabad,Corporate,MOFU,Thin,Yes,No,Partnership,Service,Clear,P3
+coffee for hotel lobby India,High-footfall,Commercial,Low,Low,Medium,Medium,Ahmedabad,Corporate,MOFU,Thin,Yes,No,Partnership,Service,Clear,P3
+coffee for coaching centre,High-footfall,Commercial,Low,Low,Medium,Medium,Ahmedabad,Corporate,MOFU,Thin,Yes,No,Partnership,Service,Clear,P3
+coffee for event venue Ahmedabad,High-footfall,Commercial,Low,Low,High,Medium,Ahmedabad,Events,MOFU,Thin,Yes,No,Partnership,Service,Clear,P2
+corporate coffee catering Ahmedabad,High-footfall,Commercial,Low,Low,High,Medium,Ahmedabad,Events,MOFU,Thin,Yes,No,Partnership,Service,Clear,P1
+MealPe corporate cafeteria,Ecosystem,Commercial,Low,Medium,Medium,High,Gujarat,Corporate,MOFU,Owned by the named vendor,No,Yes,Partnership,Service,Never name a third-party brand in visible copy,P1
+GoKhana corporate food,Ecosystem,Commercial,Low,Medium,Medium,High,Gujarat,Corporate,MOFU,Owned by the named vendor,No,Yes,Partnership,Service,Never name a third-party brand in visible copy,P2
+HungerBox cafeteria partner,Ecosystem,Commercial,Low,Medium,Medium,High,Gujarat,Corporate,MOFU,Owned by the named vendor,No,Yes,Partnership,Service,Never name a third-party brand in visible copy,P2
+SmartQ corporate dining,Ecosystem,Commercial,Low,Medium,Medium,High,Gujarat,Corporate,MOFU,Owned by the named vendor,No,Yes,Partnership,Service,Never name a third-party brand in visible copy,P2
+Pluxee meal card vendor,Ecosystem,Commercial,Low,Medium,Medium,High,Gujarat,Corporate,MOFU,Owned by the named vendor,No,Yes,Partnership,Service,Never name a third-party brand in visible copy,P2
+KhanePe catering Ahmedabad,Ecosystem,Commercial,Low,Medium,Medium,High,Gujarat,Corporate,MOFU,Owned by the named vendor,No,Yes,Partnership,Service,Never name a third-party brand in visible copy,P1
+RoomPe Ahmedabad,Ecosystem,Commercial,Low,Medium,Medium,High,Gujarat,Corporate,MOFU,Owned by the named vendor,No,Yes,Partnership,Service,Never name a third-party brand in visible copy,P2
+Petpooja POS coffee,Ecosystem,Commercial,Low,Medium,Medium,High,Gujarat,Corporate,MOFU,Owned by the named vendor,No,Yes,Partnership,Service,Never name a third-party brand in visible copy,P3
+Sodexo meal card coffee,Ecosystem,Commercial,Low,Medium,Medium,High,Gujarat,Corporate,MOFU,Owned by the named vendor,No,Yes,Partnership,Service,Never name a third-party brand in visible copy,P2
+corporate cafeteria vendor Ahmedabad,Ecosystem,Commercial,Low,Medium,Medium,High,Gujarat,Corporate,MOFU,Owned by the named vendor,No,Yes,Partnership,Service,Never name a third-party brand in visible copy,P1
+cafeteria management company Gujarat,Ecosystem,Commercial,Low,Medium,Medium,High,Gujarat,Corporate,MOFU,Owned by the named vendor,No,Yes,Partnership,Service,Never name a third-party brand in visible copy,P2
+meal card accepted coffee counter,Ecosystem,Commercial,Low,Medium,Medium,High,Gujarat,Corporate,MOFU,Owned by the named vendor,No,Yes,Partnership,Service,Never name a third-party brand in visible copy,P2
+corporate food tech partner India,Ecosystem,Commercial,Low,Medium,Medium,High,Gujarat,Corporate,MOFU,Owned by the named vendor,No,Yes,Partnership,Service,Never name a third-party brand in visible copy,P2
+does a coffee Pod replace the cafeteria,Ecosystem,Commercial,Low,Medium,Medium,High,Gujarat,Corporate,MOFU,Owned by the named vendor,No,Yes,Partnership,Service,Never name a third-party brand in visible copy,P1
+coffee vendor alongside cafeteria,Ecosystem,Commercial,Low,Medium,Medium,High,Gujarat,Corporate,MOFU,Owned by the named vendor,No,Yes,Partnership,Service,Never name a third-party brand in visible copy,P1
+office cafeteria plus coffee counter,Ecosystem,Commercial,Low,Medium,Medium,High,Gujarat,Corporate,MOFU,Owned by the named vendor,No,Yes,Partnership,Service,Never name a third-party brand in visible copy,P2
+complementary vendor corporate cafeteria,Ecosystem,Commercial,Low,Medium,Medium,High,Gujarat,Corporate,MOFU,Owned by the named vendor,No,Yes,Partnership,Service,Never name a third-party brand in visible copy,P2
+food court operator coffee brand partnership,Ecosystem,Commercial,Low,Medium,Medium,High,Gujarat,Corporate,MOFU,Owned by the named vendor,No,Yes,Partnership,Service,Never name a third-party brand in visible copy,P2
+corporate catering partner coffee,Ecosystem,Commercial,Low,Medium,Medium,High,Gujarat,Corporate,MOFU,Owned by the named vendor,No,Yes,Partnership,Service,Never name a third-party brand in visible copy,P2
+workplace food and beverage partner Gujarat,Ecosystem,Commercial,Low,Medium,Medium,High,Gujarat,Corporate,MOFU,Owned by the named vendor,No,Yes,Partnership,Service,Never name a third-party brand in visible copy,P2
+coffee franchise India,Franchise,Commercial,Medium,High,High,Medium,India,Franchise,TOFU,Franchise aggregators,No,No,Join us / investor conversation,Organization,Do not publish franchise claims without brand-owner sign-off,P2
+coffee kiosk franchise cost,Franchise,Commercial,Medium,High,High,Medium,India,Franchise,TOFU,Franchise aggregators,No,No,Join us / investor conversation,Organization,Do not publish franchise claims without brand-owner sign-off,P2
+low investment coffee franchise,Franchise,Commercial,Medium,High,Medium,Medium,India,Franchise,TOFU,Franchise aggregators,No,No,Join us / investor conversation,Organization,Do not publish franchise claims without brand-owner sign-off,P3
+coffee franchise Gujarat,Franchise,Commercial,Medium,High,High,Medium,India,Franchise,TOFU,Franchise aggregators,No,No,Join us / investor conversation,Organization,Do not publish franchise claims without brand-owner sign-off,P2
+grab and go coffee franchise,Franchise,Commercial,Medium,High,High,Medium,India,Franchise,TOFU,Franchise aggregators,No,No,Join us / investor conversation,Organization,Do not publish franchise claims without brand-owner sign-off,P2
+coffee business investment India,Franchise,Commercial,Medium,High,Medium,Medium,India,Franchise,TOFU,Franchise aggregators,No,No,Join us / investor conversation,Organization,Do not publish franchise claims without brand-owner sign-off,P3
+coffee brand investor India,Franchise,Commercial,Medium,High,Medium,Medium,India,Franchise,TOFU,Franchise aggregators,No,No,Join us / investor conversation,Organization,Do not publish franchise claims without brand-owner sign-off,P3
+open a coffee counter business,Franchise,Commercial,Medium,High,Medium,Medium,India,Franchise,TOFU,Franchise aggregators,No,No,Join us / investor conversation,Organization,Do not publish franchise claims without brand-owner sign-off,P3
+coffee shop startup cost India,Franchise,Commercial,Medium,High,Medium,Medium,India,Franchise,TOFU,Franchise aggregators,No,No,Join us / investor conversation,Organization,Do not publish franchise claims without brand-owner sign-off,P3
+coffee franchise vs own brand,Franchise,Commercial,Medium,High,Medium,Medium,India,Franchise,TOFU,Franchise aggregators,No,No,Join us / investor conversation,Organization,Do not publish franchise claims without brand-owner sign-off,P3
+small coffee business India,Franchise,Commercial,Medium,High,Medium,Medium,India,Franchise,TOFU,Franchise aggregators,No,No,Join us / investor conversation,Organization,Do not publish franchise claims without brand-owner sign-off,P3
+coffee kiosk business model,Franchise,Commercial,Medium,High,High,Medium,India,Franchise,TOFU,Franchise aggregators,No,No,Join us / investor conversation,Organization,Do not publish franchise claims without brand-owner sign-off,P3
+specialty coffee unit economics,Franchise,Commercial,Medium,High,High,Medium,India,Franchise,TOFU,Franchise aggregators,No,No,Join us / investor conversation,Organization,Do not publish franchise claims without brand-owner sign-off,P3
+coffee pod business format,Franchise,Commercial,Medium,High,High,Medium,India,Franchise,TOFU,Franchise aggregators,No,No,Join us / investor conversation,Organization,Do not publish franchise claims without brand-owner sign-off,P3
+invest in coffee startup India,Franchise,Commercial,Medium,High,Medium,Medium,India,Franchise,TOFU,Franchise aggregators,No,No,Join us / investor conversation,Organization,Do not publish franchise claims without brand-owner sign-off,P3
+what is P.S. Coffee,GEO/AEO,Informational,Low,Low,High,Medium,India / Ahmedabad,Consumer,TOFU,AI answers currently cite nobody local,No,Yes,Homepage,FAQPage,Clear,P0
+who makes grab and go specialty coffee in Ahmedabad,GEO/AEO,Informational,Low,Low,High,Medium,India / Ahmedabad,Consumer,TOFU,AI answers currently cite nobody local,No,Yes,Homepage,FAQPage,Clear,P0
+is a P.S. Pod a coffee kiosk,GEO/AEO,Informational,Low,Low,High,Medium,India / Ahmedabad,Corporate,TOFU,AI answers currently cite nobody local,No,Yes,Pods,FAQPage,"FAQ question text only, never self-description",P0
+how is a Pod different from a cafe,GEO/AEO,Informational,Low,Low,High,Medium,India / Ahmedabad,Corporate,TOFU,AI answers currently cite nobody local,No,Yes,Pods,FAQPage,Clear,P0
+where can I get specialty coffee in Ahmedabad,GEO/AEO,Informational,Low,Low,High,Medium,India / Ahmedabad,Consumer,TOFU,AI answers currently cite nobody local,No,Yes,FAQ,FAQPage,Clear,P0
+what coffee brands are opening in Ahmedabad,GEO/AEO,Informational,Low,Low,High,Medium,India / Ahmedabad,Consumer,TOFU,AI answers currently cite nobody local,No,Yes,FAQ,FAQPage,Clear,P1
+can my office get a coffee counter,GEO/AEO,Informational,Low,Low,High,Medium,India / Ahmedabad,Corporate,TOFU,AI answers currently cite nobody local,No,Yes,Coffee for offices,FAQPage,Clear,P0
+how much space does a coffee Pod need,GEO/AEO,Informational,Low,Low,High,Medium,India / Ahmedabad,Corporate,TOFU,AI answers currently cite nobody local,No,Yes,Coffee for offices,FAQPage,Clear,P0
+who runs the coffee counter in an office Pod,GEO/AEO,Informational,Low,Low,High,Medium,India / Ahmedabad,Corporate,TOFU,AI answers currently cite nobody local,No,Yes,Coffee for offices,FAQPage,Clear,P1
+can a coworking space add specialty coffee,GEO/AEO,Informational,Low,Low,High,Medium,India / Ahmedabad,Corporate,TOFU,AI answers currently cite nobody local,No,Yes,Coffee for co-working,FAQPage,Clear,P0
+do we need to hire baristas for office coffee,GEO/AEO,Informational,Low,Low,High,Medium,India / Ahmedabad,Corporate,TOFU,AI answers currently cite nobody local,No,Yes,Coffee for co-working,FAQPage,Clear,P1
+what is ceremonial grade matcha and why does it matter,GEO/AEO,Informational,Low,Low,High,Medium,India / Ahmedabad,Consumer,TOFU,AI answers currently cite nobody local,No,Yes,Journal post,FAQPage,Clear,P0
+what is protein coffee and does it work,GEO/AEO,Informational,Low,Low,High,Medium,India / Ahmedabad,Consumer,TOFU,AI answers currently cite nobody local,No,Yes,Journal post,FAQPage,Clear,P1
+what are The Letter and The P.S.,GEO/AEO,Informational,Low,Low,High,Medium,India / Ahmedabad,Consumer,TOFU,AI answers currently cite nobody local,No,Yes,Journal post,FAQPage,Clear,P0
+why are coffee variants numbered not named,GEO/AEO,Informational,Low,Low,High,Medium,India / Ahmedabad,Consumer,TOFU,AI answers currently cite nobody local,No,Yes,Journal post,FAQPage,Clear,P1
+is specialty coffee worth it every day,GEO/AEO,Informational,Low,Low,High,Medium,India / Ahmedabad,Consumer,TOFU,AI answers currently cite nobody local,No,Yes,Journal post,FAQPage,Clear,P1
+what does specialty grade mean,GEO/AEO,Informational,Low,Low,High,Medium,India / Ahmedabad,Consumer,TOFU,AI answers currently cite nobody local,No,Yes,FAQ,FAQPage,Clear,P1
+is P.S. Coffee open yet,GEO/AEO,Informational,Low,Low,High,Medium,India / Ahmedabad,Consumer,TOFU,AI answers currently cite nobody local,No,Yes,FAQ,FAQPage,Clear,P0
+when will P.S. Coffee open in Ahmedabad,GEO/AEO,Informational,Low,Low,High,Medium,India / Ahmedabad,Consumer,TOFU,AI answers currently cite nobody local,No,Yes,FAQ,FAQPage,Clear,P0
+does P.S. Coffee deliver,GEO/AEO,Informational,Low,Low,High,Medium,India / Ahmedabad,Consumer,TOFU,AI answers currently cite nobody local,No,Yes,FAQ,FAQPage,Clear,P2
+does P.S. Coffee do events,GEO/AEO,Informational,Low,Low,High,Medium,India / Ahmedabad,Consumer,TOFU,AI answers currently cite nobody local,No,Yes,FAQ,FAQPage,Clear,P2
+can P.S. Coffee cater a corporate event,GEO/AEO,Informational,Low,Low,High,Medium,India / Ahmedabad,Consumer,TOFU,AI answers currently cite nobody local,No,Yes,FAQ,FAQPage,Clear,P1
+what is the P.S. Pass,GEO/AEO,Informational,Low,Low,High,Medium,India / Ahmedabad,Consumer,TOFU,AI answers currently cite nobody local,No,Yes,FAQ,FAQPage,Clear,P2
+does P.S. Coffee have an app,GEO/AEO,Informational,Low,Low,High,Medium,India / Ahmedabad,Consumer,TOFU,AI answers currently cite nobody local,No,Yes,FAQ,FAQPage,Clear,P2
+is there good coffee in GIFT City,GEO/AEO,Informational,Low,Low,High,Medium,India / Ahmedabad,Corporate,TOFU,AI answers currently cite nobody local,No,Yes,GIFT City locality page,FAQPage,Clear,P0
+what is the best coffee near SG Highway,GEO/AEO,Informational,Low,Low,High,Medium,India / Ahmedabad,Corporate,TOFU,AI answers currently cite nobody local,No,Yes,Locality landing,FAQPage,Meta and FAQ question text only,P2
+which coffee brands serve offices in Ahmedabad,GEO/AEO,Informational,Low,Low,High,Medium,India / Ahmedabad,Corporate,TOFU,AI answers currently cite nobody local,No,Yes,Coffee for offices,FAQPage,Clear,P1
+how do I get coffee for my coworking members,GEO/AEO,Informational,Low,Low,High,Medium,India / Ahmedabad,Corporate,TOFU,AI answers currently cite nobody local,No,Yes,Coffee for co-working,FAQPage,Clear,P1
+what is the difference between ceremonial and culinary matcha,GEO/AEO,Informational,Low,Low,High,Medium,India / Ahmedabad,Consumer,TOFU,AI answers currently cite nobody local,No,Yes,Journal post,FAQPage,Clear,P1
+how long does a grab and go coffee take,GEO/AEO,Informational,Low,Low,High,Medium,India / Ahmedabad,Consumer,TOFU,AI answers currently cite nobody local,No,Yes,FAQ,FAQPage,Clear,P2
+does a coffee Pod need a kitchen,GEO/AEO,Informational,Low,Low,High,Medium,India / Ahmedabad,Corporate,TOFU,AI answers currently cite nobody local,No,Yes,Coffee for offices,FAQPage,Clear,P2
+can one coffee counter serve a whole tower,GEO/AEO,Informational,Low,Low,High,Medium,India / Ahmedabad,Corporate,TOFU,AI answers currently cite nobody local,No,Yes,Coffee for offices,FAQPage,Clear,P2
+what does a coffee Pod cost a building,GEO/AEO,Informational,Low,Low,High,Medium,India / Ahmedabad,Corporate,TOFU,AI answers currently cite nobody local,No,Yes,Partnership,FAQPage,Clear,P2
+is P.S. Coffee hiring baristas,GEO/AEO,Informational,Low,Low,High,Medium,India / Ahmedabad,Consumer,TOFU,AI answers currently cite nobody local,No,Yes,FAQ,FAQPage,Clear,P3
+what makes a coffee habit stick,GEO/AEO,Informational,Low,Low,High,Medium,India / Ahmedabad,Consumer,TOFU,AI answers currently cite nobody local,No,Yes,Journal post,FAQPage,Clear,P3

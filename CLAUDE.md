@@ -43,6 +43,12 @@ No test, lint, format, or build command exists in this repo.
 - The reasoning behind the copy rules — voice registers, the P.S. sign-off system, naming,
   channel playbooks, worked rewrites — for writing anything the Master Copy System doesn't cover
   verbatim → @docs/brand-language-handbook.md
+- SEO/GEO keyword research and the strategic thesis → @docs/seo-keyword-strategy.md
+- The implementation plan that governs all SEO work (which layer is keyword-free, which is
+  locked) → @docs/seo-implementation-plan.md
+- The tracked keyword sheet → @docs/seo-keyword-database.md (CSV in `docs/data/`)
+- Corporate food-tech ecosystem outreach angle → @docs/partner-ecosystem-outreach.md
+- Content briefs for writers → `docs/briefs/`
 - Design System and typography (as implemented in this codebase) → @docs/design.md
 - Full brand-kit reference, all 45 sections (voice, colour, type, logo, photography, digital,
   print) → @docs/design-system.md — audit against this directly; it does not need to be

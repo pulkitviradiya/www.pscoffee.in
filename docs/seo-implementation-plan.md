@@ -300,13 +300,27 @@ see any of it. Fixed by adding a consolidated `@graph` to `index.html`.
 | 2 | Add missing blog post to `sitemap.xml` | None — bug fix | **Done** 2026-09-21 |
 | 3 | FAQ expansion on `faq.html` + matching JSON-LD (§2) | Low | **Done** — 10 questions added (25→35), schema regenerated from visible HTML |
 | 4 | FAQ additions to existing blog posts (§3) | Low | **Done** — 20 questions across the 10 posts that have FAQ blocks. See note below on the other 4 |
-| 5 | `partnership.html` FAQ block + complementary-vendor line + internal links (§6) | Low-medium — touches approved page copy, needs voice review | Needs review |
-| 6 | Two Tier-2 pages: `/coffee-for-offices`, `/coffee-for-coworking-spaces` (§5) | Medium — new pages, doorway risk if thin | Needs approval |
-| 7 | Eight new blog posts (§4) | Medium — volume of new copy, each needs voice review | Needs approval |
-| 8 | Remaining four Tier-2 pages, only if step 6 indexes and holds | Medium | Deferred 4-6 weeks |
+| 5 | `partnership.html` FAQ block + complementary-vendor line + internal links (§6) | Low-medium — touches approved page copy, needs voice review | **Done** 2026-09-22 — FAQ block shipped 2026-09-22; complementary-vendor line added under the "Where Pods work" grid, carrying the two Tier-2 links |
+| 6 | Two Tier-2 pages: `/coffee-for-offices`, `/coffee-for-coworking-spaces` (§5) | Medium — new pages, doorway risk if thin | **Done** 2026-09-22 — both live, unique content, 5-question FAQ each, `Service` + `FAQPage` schema, in `sitemap.xml`, linked from the footer and the Partnership page |
+| 7 | Eight new blog posts (§4) | Medium — volume of new copy, each needs voice review | In progress — briefs written for the writer, posts not yet written. See [`briefs/`](briefs/) |
+| 8 | Remaining four Tier-2 pages, only if step 6 indexes and holds | Medium | Deferred — measure step 6 for 4-6 weeks first |
 
-Steps 1-4 are safe to execute immediately. Steps 5-8 involve new or changed visible copy and
-should go through brand-owner review, per the Handbook's escalation rule.
+Steps 1-6 are done. Step 7 is with the writer and step 8 is deliberately held back until step 6
+has been measured. The visible copy added in steps 5 and 6 still wants a brand-owner read, per the
+Handbook's escalation rule — it was written to Master Copy v4 and the Handbook, but it was not
+written by the brand owner.
+
+### Step 9 — supporting artefacts (done 2026-09-22)
+
+- **Keyword database** — 336 rows on the §9 schema: [`seo-keyword-database.md`](seo-keyword-database.md)
+  and [`data/seo-keyword-database.csv`](data/seo-keyword-database.csv). Demand and competition are
+  labelled estimates; the load-bearing columns are Recommended page, Schema type, Brand-voice check
+  and Priority.
+- **Ecosystem outreach angle** — [`partner-ecosystem-outreach.md`](partner-ecosystem-outreach.md):
+  KhanePe/RoomPe first, MealPe/GoKhana after one live Pod, HungerBox/SmartQ/Pluxee later. Plan
+  only, not authorised to send.
+- **`robots.txt`** — AI and answer-engine crawlers (GPTBot, OAI-SearchBot, Google-Extended,
+  ClaudeBot, PerplexityBot, Applebot-Extended) now allowed explicitly rather than by wildcard.
 
 ### Step 4b — the four posts that had no FAQ block (done 2026-09-21)
 
