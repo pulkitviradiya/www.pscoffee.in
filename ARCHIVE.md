@@ -4,6 +4,25 @@ Reference-only. Never read at session start — only pulled up when asked about 
 historical. Holds MEMORY.md entries that have become outdated or whose project/decision has
 completed, moved here to keep MEMORY.md under its 150-line hygiene limit.
 
+## 2026-09-21 (Brand Language Handbook captured)
+- User shared Master Copy System v4 (byte-identical to the stored copy) and a genuinely new Brand
+  Language Handbook, added verbatim as `docs/brand-language-handbook.md` and wired into
+  `docs/copy-system.md`, the Reference Map and a standing "keep it current" instruction. No
+  conflicts with existing website decisions; the live copy was not re-audited, since the site was
+  already migrated to v4.
+
+## 2026-09-22 (homepage brand schema — sitelinks groundwork)
+- Sitelinks cannot be forced: Google generates them algorithmically and they generally need brand
+  search volume a pre-launch site lacks. What is controllable is homepage entity schema and the
+  per-page title and meta description, which become a sitelink's label when one is granted.
+- **Real bug found and fixed:** all five brand schema blocks lived on `home-legacy.html`, which is
+  `noindex,nofollow`, while the live `index.html` had zero structured data — the letter-led redesign
+  replaced the homepage without carrying the schema across. Added a consolidated `@graph`
+  (Organization, WebSite, SiteNavigationElement, WebPage) to `index.html`.
+- Deliberately not ported: the `SearchAction` (it claimed a `/blogs?q=` search that does not exist)
+  and `CafeOrCoffeeShop` (a LocalBusiness subtype with no address, which ships per Pod once real
+  addresses exist).
+
 ## 2026-09-21 (blog post content/structure rollback)
 - Commit `3a0d21f` ("Apply Master Copy v4") had gutted 14 blog posts by ~3,000 lines, stripping
   the TOC/key-takeaways/stat-grid/comparison-table/FAQ+schema structure down to a 6-paragraph

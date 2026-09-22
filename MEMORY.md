@@ -70,27 +70,14 @@ Always read the current version from any `*.html` before bumping.
 ### Current deployment state (2026-07-13)
 - GitHub-to-Vercel integration is not confirmed healthy. Until it is restored, production completion requires `git push origin main`, `vercel --prod --yes`, and `vercel inspect <deployment-url>` showing `Ready`; a successful GitHub push alone is not proof of deployment.
 
-### 2026-09-21 (Brand Language Handbook captured)
-- User shared Master Copy System v4 (byte-identical to the stored copy, no change needed) and a
-  genuinely new Brand Language Handbook, added verbatim as `docs/brand-language-handbook.md`:
-  the reasoning behind the copy system (the letter/P.S. idea, the two registers that never mix in
-  one sentence, P.S. sign-off rules, quality/price claim doctrine, channel playbooks, worked
-  rewrites, failure modes). Wired into `docs/copy-system.md`, the Reference Map, and a new
-  "keep it current" standing instruction in `CLAUDE.md`/`AGENTS.md`. No conflicts with existing
-  website decisions. Did not re-audit live copy: the site was already migrated to v4 per
-  `docs/brand-copy-v4-audit.md`, and the Handbook explains those same rules rather than changing them.
 
-### 2026-09-21 (SEO/GEO keyword strategy — phase 1 research)
-- `docs/seo-keyword-strategy.md`: grab-and-go category, Ahmedabad/Gandhinagar/GIFT City, B2B
-  placement, AI-search visibility. Core thesis, reached twice independently: the defensible
-  territory is grab-and-go + daily habit + workplace/campus + B2B partnership, not generic
-  "best coffee in Ahmedabad" volume. Best partner lead is KhanePe (a RoomPe company) — same two
-  cities, same buildings, complementary category.
-- Merged a second provider's research pass into the same doc (SmartQ/Pluxee, the Pod→"coffee
-  kiosk" translation, high-footfall verticals, franchise cluster, a keyword-DB schema). Did
-  **not** carry over its entity definition ("100% Arabica... accessible pricing") — it predates
-  Master Copy v4 and contradicts the retired species claim and banned price framing. Key rule
-  recorded there: banned words can live in meta/schema for targeting, never in visible copy.
+### 2026-09-21 (SEO/GEO keyword research — phase 1)
+- `docs/seo-keyword-strategy.md`, two research passes merged. Core thesis, reached twice
+  independently: the defensible territory is grab-and-go plus daily habit plus workplace/campus
+  plus B2B partnership, not generic "best coffee in Ahmedabad" volume.
+- Key rule recorded there: banned words can live in meta and schema for targeting, never in
+  visible copy. The second pass's entity definition was not carried over, since it predates
+  Master Copy v4.
 
 ### 2026-09-21 (SEO implementation plan + metadata pass)
 - `docs/seo-implementation-plan.md` (phase 2): category-wise keyword placement across FAQ, blogs,
@@ -106,41 +93,27 @@ Always read the current version from any `*.html` before bumping.
   species claim v4 retires, and `matcha.html`'s H1 is a flagship P.S. line used as a headline,
   which the Handbook forbids.
 
-### 2026-09-22 (homepage brand schema — sitelinks groundwork)
-- User asked how to get Google sitelinks (the sub-page list under a brand result, as abCoffee and
-  First Coffee have). **Sitelinks cannot be forced** — Google generates them algorithmically, no
-  markup nominates a page, and they generally need brand-search volume a pre-launch site lacks.
-  What is controllable: homepage entity schema, and the per-page title/meta description, which
-  become the sitelink's label and description when granted (they truncate near 65 chars).
-- **Real bug found and fixed:** all five brand schema blocks (`Organization`, `WebSite`,
-  `SiteNavigationElement`, `CafeOrCoffeeShop`, `DataFeed`) were on `home-legacy.html`, which is
-  `noindex,nofollow`, while the live `index.html` had **zero structured data**. The letter-led
-  redesign replaced the homepage without carrying the schema across, so Google could see none of
-  it. Added a consolidated `@graph` (Organization + WebSite + SiteNavigationElement + WebPage) to
-  `index.html`, using the corrected entity wording (no species claim, no price framing).
-- Deliberately not ported: the `SearchAction` (it claimed a `/blogs?q=` search that does not
-  exist — false markup) and `CafeOrCoffeeShop` (a LocalBusiness subtype with no address or hours;
-  per plan §6, LocalBusiness ships per Pod once real addresses exist).
 
-- Still deferred pending approval: 8 new blog posts, Partnership-page FAQ block, and Tier-2
-  "indexed but not in nav" landing pages — the last carries real doorway-page risk if shipped
-  thin or all at once, so the plan phases it two pages at a time.
+### 2026-09-22 (FAQ expansion, Tier-2 pages, keyword database)
+- FAQ sections plus FAQPage schema added to `pods`, `partnership` and `menu`. Sitewide FAQ schema
+  is now 155 questions across 20 pages. No new accordion CSS was needed: `ps.css` styles `.faq-item`
+  globally and `ps.js` binds it at load.
+- **The kiosk conflict is resolved** at the user's direction: `kiosk` stays off the never-say list
+  in visible copy, but appears as FAQ *question* text on `pods.html`, with an answer that never
+  adopts the word. Keyword indexed, voice intact. The keyword database records this per row.
+- Shipped the first two Tier-2 pages, `/coffee-for-offices` and `/coffee-for-coworking-spaces`:
+  unique content, 5-question FAQ each, `Service` plus `FAQPage` schema, in `sitemap.xml`, linked
+  from the footer's "Pods & people" column and a new complementary-vendor line on `partnership.html`.
+  The remaining four Tier-2 pages are deliberately held 4-6 weeks — six thin locality pages at once
+  is the doorway-page pattern.
+- `docs/data/seo-keyword-database.csv` (336 rows) plus `docs/seo-keyword-database.md`. Demand and
+  competition are labelled estimates, not tool data; the load-bearing columns are Recommended page,
+  Schema type, Brand-voice check and Priority.
+- `docs/partner-ecosystem-outreach.md`: KhanePe and RoomPe first, MealPe and GoKhana once a Pod is
+  live, enterprise tier later. Plan only, explicitly not authorised to send.
+- `docs/briefs/` now holds 8 briefs and a README with the house format. Writers deliver prose; the
+  markup, schema and link notes in a brief are build instructions, not writing instructions.
 
-### 2026-09-22 (FAQ expansion to money pages + first content briefs)
-- Added FAQ sections + FAQPage schema to `pods`, `partnership` and `menu` (the three highest-intent
-  pages that had none). Questions written per page rather than copied from `faq.html`, since a
-  host evaluating a site asks different things than a general visitor. Sitewide FAQ schema now
-  **145 questions across 18 pages**. No new accordion CSS needed: `ps.css` already styles
-  `.faq`/`.faq-item`/`.faq-q .pm`/`.faq-a` globally and `ps.js` binds `.faq-item` at load;
-  `home-letter.css` gained only the section frame (v13→v14 across 39 files).
-- **Resolved the kiosk conflict** at the user's direction: `kiosk` is on the brand's never-say
-  list, but it is the term people search. Put it on `pods.html` as an FAQ *question* ("Is a P.S.
-  Pod a coffee kiosk?") whose answer never adopts the word as self-description — the same
-  contrastive construction v4 itself uses in B3.02. Keyword indexed, voice intact.
-- Started `docs/briefs/`: GIFT City locality page and "The Letter and The P.S., explained".
-  House format set (see plan §8b). Key rule: every constraint cites its v4/Handbook source, and
-  locality briefs must answer "what makes this page different" in four concrete points or not
-  ship — that section is what separates a locality page from a doorway page.
 
 Older entries (2026-06-29 through 2026-07-08) moved to [ARCHIVE.md](ARCHIVE.md) to stay under the
 150-line hygiene limit.
