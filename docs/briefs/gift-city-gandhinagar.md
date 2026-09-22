@@ -128,3 +128,29 @@ The site currently writes **"Gift City"** in the waitlist dropdown and **"GIFT C
 The official name is GIFT City (Gujarat International Finance Tec-City), an acronym. Use
 **GIFT City** in prose. The dropdown value stays `gift-city` and its label is not in scope for
 this page — flag the inconsistency to the brand owner rather than changing the form.
+
+---
+
+## 10. How to deliver
+
+**Format:** plain prose in whatever you already write in — Google Doc, Word, Markdown, email
+body. Do not write HTML. The markup notes in §4 (`.faq-item`, `FAQPage` JSON-LD, the deep-linked
+CTA URL) are build instructions for whoever ships the page, not for you.
+
+**What to hand over:**
+
+1. The H1, exactly as you want it to read.
+2. The body copy, with the H2s marked so section order is unambiguous.
+3. The FAQ block as five question-and-answer pairs, answers 40-60 words each. Write the answers
+   as standalone paragraphs: they are lifted verbatim into schema, so an answer that only makes
+   sense after reading the section above it will not work.
+4. The P.S. sign-offs, marked where they belong. Maximum three, each last in its section.
+
+**Word count:** 600-900 words, excluding the FAQ block.
+
+**What not to try to write:** meta title, meta description, slug, schema, or internal-link
+markup. Those are handled separately and are deliberately not brand-voice territory.
+
+**If §7 point 2 cannot be researched:** say so in the handover rather than filling the gap. The
+brief's own permitted fallback is to describe the category gap instead of inventing specifics,
+and a flagged gap is fixable. An invented detail about a real building is not.

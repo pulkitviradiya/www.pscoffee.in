@@ -120,3 +120,29 @@ in the Handbook's precedence order, and it beats cleverness, which is rule 5.
 - Demonstrate range only on the americano
 - Argue price, or mention what a cafe charges
 - Carry more than one P.S. sign-off
+
+---
+
+## 9. How to deliver
+
+**Format:** plain prose in whatever you already write in — Google Doc, Word, Markdown, email
+body. Do not write HTML. The markup and schema notes in §4 and §5 are build instructions for
+whoever ships the post, not for you.
+
+**What to hand over:**
+
+1. The H1 and the lede.
+2. The body copy, with the six H2s marked in order.
+3. The FAQ block as six question-and-answer pairs, answers 40-60 words each. Write each answer to
+   stand alone — they are lifted verbatim into schema and read out of context by search engines
+   and AI assistants.
+4. The single P.S. sign-off at the close.
+
+**Word count:** 700-1,000 words, excluding the FAQ block.
+
+**What not to try to write:** meta title, meta description, slug, schema, the kicker line, or
+internal-link markup. Those are handled separately.
+
+**The one thing worth re-reading before you send it:** §7. Could someone who has never heard of
+P.S. Coffee read this and order correctly at a counter? If the answer is no, it does not matter
+how well the piece reads.
