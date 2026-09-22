@@ -8,11 +8,15 @@ Read this at the start of every session. Use silently to inform work.
 
 | File | Version |
 |---|---|
-| `assets/ps.js` | v50 |
+| `assets/ps.js` | v53 |
 | `assets/image-slot.js` | v3 |
-| `assets/wh.css` | v118 |
-| `assets/mobile.css` | v88 |
+| `assets/wh.css` | v120 |
+| `assets/mobile.css` | v90 |
 | `assets/mobile.js` | v5 |
+
+Letter-concept pages also carry `home-letter.css?v=14` plus one per-page stylesheet:
+`solutions-letter.css?v=1` (the Tier-2 solution and locality pages), `pods-letter.css?v=2`,
+`partnership-letter.css?v=3`, and one each for home/menu/about/app/matcha/pack/join/events/blogs.
 
 Always read the current version from any `*.html` before bumping.
 
@@ -114,6 +118,20 @@ Always read the current version from any `*.html` before bumping.
 - `docs/briefs/` now holds 8 briefs and a README with the house format. Writers deliver prose; the
   markup, schema and link notes in a brief are build instructions, not writing instructions.
 
+
+### 2026-09-22 (design language correction)
+- The first three Tier-2 pages were built on the legacy `.wh-page`/`mobile.css` system and looked
+  like legal pages beside the rest of the site. Rebuilt in the **letter concept**, which is the
+  current design language for every primary page: `data-page="letter-concept"`, `lc-nav`,
+  `home-letter.css` plus a per-page stylesheet, `letter-pages.js` reveals, and the
+  letterhead/hero/ticker/statement/rows/note/FAQ/dark-band section vocabulary.
+- New shared stylesheet `assets/solutions-letter.css` with the `slp-` prefix, used by all three
+  solution and locality pages. Reveals piggyback on `plp-reveal` so `letter-pages.js` needs no edit.
+- Recorded in `docs/design.md` (the full scaffold and section vocabulary), `docs/conventions.md`
+  (the seven build steps) and as a standing instruction in `CLAUDE.md`/`AGENTS.md`, so the legacy
+  system is not reached for again. Two honest deviations noted there: letter pages use Dark Roast
+  as a full-bleed fill, and `nectarSignature()` highlights the first clause of a two-line headline
+  sitewide.
 
 Older entries (2026-06-29 through 2026-07-08) moved to [ARCHIVE.md](ARCHIVE.md) to stay under the
 150-line hygiene limit.

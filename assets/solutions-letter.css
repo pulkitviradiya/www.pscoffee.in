@@ -1,0 +1,88 @@
+/* P.S. Coffee — solution and locality pages, letter concept.
+   Shared by coffee-for-offices, coffee-for-coworking-spaces and
+   coffee-gift-city-gandhinagar. Base tokens and the lc-* primitives come from
+   ps.css and home-letter.css; this file only adds the slp-* page furniture. */
+
+.slp-reveal{opacity:0;transform:translateY(18px);transition:opacity .55s cubic-bezier(.2,0,0,1),transform .55s cubic-bezier(.2,0,0,1)}
+.slp-reveal.alp-visible{opacity:1;transform:none}
+body.lc-motion-paused .slp-reveal{opacity:1;transform:none}
+
+/* ---- Hero ---- */
+.slp-hero{padding:0 var(--lc-gutter) 72px;background:linear-gradient(180deg,var(--lc-opening),var(--color-steam-cream) 92%)}
+.slp-letterhead{display:flex;justify-content:space-between;gap:28px;padding:28px 0;border-bottom:var(--lc-rule);font-size:9px;line-height:1.7;letter-spacing:.12em}
+.slp-letterhead span:nth-child(2){margin-left:auto}
+.slp-letterhead span:last-child{text-align:right;color:var(--lc-accent)}
+.slp-hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:6vw;align-items:center;padding-top:54px}
+.slp-hero h1{font:800 clamp(52px,6.4vw,104px)/.9 var(--font-display);letter-spacing:-.06em}
+.slp-hero h1 em,.slp-statement h2 em,.slp-rows h2 em,.slp-note h2 em,.slp-next h2 em{font-weight:400;color:var(--lc-accent)}
+.slp-kicker{font-size:9px;letter-spacing:.14em;color:var(--lc-accent);text-transform:uppercase}
+.slp-sticker{display:inline-block;margin:18px 0 20px;padding:9px 13px;background:var(--lc-accent);color:var(--color-steam-cream);font:700 10px var(--font-body);letter-spacing:.12em;transform:rotate(-2deg)}
+.slp-hero-copy>p{max-width:42ch;margin:28px 0!important}
+.slp-hindi{display:block;margin-top:26px;font:22px/1.4 "Kohinoor Devanagari","Nirmala UI",sans-serif;color:var(--lc-accent);transform:rotate(-3deg)}
+
+/* Type-led aside, used where these pages have no photography of their own. */
+.slp-card{position:relative;padding:38px 34px;background:var(--color-steam-cream);border:1px solid var(--color-linen);border-radius:4px 4px 48px 48px}
+.slp-card h2{font-size:clamp(26px,2.4vw,38px)!important;line-height:1.04!important}
+.slp-card dl{display:grid;gap:0;margin:26px 0 0}
+.slp-card dt{padding-top:16px;border-top:var(--lc-rule);font-size:9px;letter-spacing:.12em;color:var(--lc-accent)}
+.slp-card dd{margin:6px 0 16px;font-size:15px;line-height:1.55}
+.slp-seal{position:absolute;right:-26px;top:-26px;width:116px;height:116px;border-radius:50%;display:grid;place-content:center;text-align:center;background:var(--color-ceremonial-deep);color:var(--color-steam-cream);border:5px double var(--color-steam-cream);font:700 10px/1.5 var(--font-body);transform:rotate(8deg)}
+
+/* ---- Ticker ---- */
+.slp-ticker{overflow:hidden;background:var(--lc-accent);color:var(--color-steam-cream);border-block:4px double var(--color-steam-cream);transform:rotate(-1deg)}
+.slp-ticker>div{display:flex;width:max-content;animation:slp-ticker 28s linear infinite}
+.slp-ticker span{flex:none;padding:15px 30px 15px 0;font:700 22px/1.2 var(--font-display);word-spacing:12px}
+@keyframes slp-ticker{to{transform:translateX(-50%)}}
+body.lc-motion-paused .slp-ticker>div{animation-play-state:paused}
+
+/* ---- Statement ---- */
+.slp-statement{padding:110px var(--lc-gutter);text-align:center;background:var(--color-oat)}
+.slp-statement>p{max-width:56ch;margin:30px auto 0!important}
+
+/* ---- Numbered rows ---- */
+.slp-rows{display:grid;grid-template-columns:.75fr 1.25fr;gap:8vw;padding:104px var(--lc-gutter)}
+.slp-row-list article{display:grid;grid-template-columns:42px 1fr;gap:24px;padding:26px 0;border-top:var(--lc-rule)}
+.slp-row-list span{font-size:9px;letter-spacing:.12em;color:var(--lc-accent)}
+.slp-row-list h3{grid-column:2;font-size:22px}
+.slp-row-list p{grid-column:2;margin-top:8px!important;font-size:14px!important}
+
+/* Prose in the right column, where the source copy is argument rather than list. */
+.slp-prose p{max-width:62ch;font-size:16px}
+.slp-prose p+p{margin-top:18px!important}
+.slp-rows>header>p{max-width:46ch;margin-top:22px!important;font-size:14px!important}
+
+/* ---- Complementary-vendor note band ---- */
+.slp-note{padding:96px var(--lc-gutter);background:var(--color-pale-froth)}
+.slp-note>div{max-width:74ch;margin-inline:auto}
+.slp-note p{margin-top:24px!important}
+.slp-note a{font-weight:700;border-bottom:1px solid;padding-bottom:2px}
+
+/* ---- Closing CTA ---- */
+.slp-next{display:grid;grid-template-columns:1fr 1fr;gap:6vw;align-items:end;padding:104px var(--lc-gutter);background:var(--color-dark-roast);color:var(--color-steam-cream)}
+.slp-next h2{color:var(--color-steam-cream)}
+.slp-next h2 em{color:var(--color-light-pour)}
+.slp-next p{color:var(--color-steam-cream)!important;margin-top:22px!important}
+.slp-next .lc-button{margin-top:26px}
+.slp-next .slp-kicker{color:var(--color-light-pour)}
+.slp-ps{margin-top:26px!important;font-size:13px!important;color:var(--color-steam-cream)!important}
+.slp-ps strong{color:var(--color-light-pour)}
+.slp-also{margin-top:20px!important;font-size:13px!important}
+.slp-ps-light{margin-top:26px!important;font-size:13px!important}
+.slp-ps-light strong{color:var(--lc-accent)}
+.slp-also a{border-bottom:1px solid;padding-bottom:2px;font-weight:700}
+
+@media(max-width:900px){
+  .slp-hero-grid,.slp-rows,.slp-next{grid-template-columns:1fr}
+  .slp-card{margin-top:34px}
+}
+@media(max-width:850px){
+  .slp-hero h1{font-size:clamp(46px,13vw,72px)}
+  .slp-statement{padding:82px 24px}
+  .slp-rows,.slp-note,.slp-next{padding:76px var(--lc-gutter)}
+  .slp-ticker span{font-size:18px}
+  .slp-seal{right:-8px;width:96px;height:96px}
+}
+@media(prefers-reduced-motion:reduce){
+  .slp-ticker>div{animation:none}
+  .slp-reveal{opacity:1;transform:none;transition:none}
+}

@@ -87,6 +87,11 @@ only, never read at session start).
 ## Standing instructions
 
 - **Always check docs/conventions.md before adding new files, folders, modules, or components.**
+- **Every new public page is built in the letter-concept design language** (`data-page="letter-concept"`,
+  `lc-nav`, a per-page `*-letter.css`, `letter-pages.js`), never the legacy `.wh-page`/`mobile.css`
+  system, which is now only for the legal pages, `faq.html`, `404.html` and the enquiry forms. The
+  scaffold and section vocabulary are in [docs/design.md](docs/design.md); the build steps are in
+  [docs/conventions.md](docs/conventions.md).
 - **Always `git pull origin main` before starting any work** — the other agent may have pushed
   since your last session.
 - **Never commit:** `.claude/`/`.codex/` (session config), `.image-slots.state.json`, `.DS_Store`,

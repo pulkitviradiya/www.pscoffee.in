@@ -52,6 +52,28 @@ var PAGES = [
 - Footer-only pages (`faq`, `privacy`, `terms`, `disclaimer`, `copyright`,
   `survey-disclosure`) live in the footer only — never add them to `PAGES`.
 
+### Building a new page — which system
+
+**New public pages are built in the letter concept, not `.wh-page`.** See
+[design.md](design.md)'s "The current page design language" section for the scaffold, the shared
+`lc-*` primitives, the section vocabulary and the reveal mechanism. The `.wh-page` system is
+retained only for the legal pages, `faq.html`, `404.html` and the enquiry forms.
+
+The build steps, in order:
+
+1. Copy the `lc-skip` / `lc-nav` header and the `lc-footer` block from an existing letter page,
+   and **strip the `aria-current="page"` attribute** — it points at whatever page you copied from.
+2. Decide the prefix and stylesheet. Solution and locality pages reuse `slp-` and
+   `assets/solutions-letter.css`. Anything else gets its own `<page>-letter.css` and prefix.
+3. Load `ps.css`, `wh.css?v=N`, `home-letter.css?v=N` and the page stylesheet, in that order. Do
+   **not** load `mobile.css` — letter pages carry their own breakpoints.
+4. Give every revealing section `class="<prefix>-reveal plp-reveal"` and define the reveal CSS in
+   your stylesheet, including the `body.lc-motion-paused` and `prefers-reduced-motion` overrides.
+5. Load `ps.js?v=N` and `letter-pages.js?v=N` at the end of `<body>`.
+6. Add the standard Google tag, the canonical, the OG/Twitter tags, a `sitemap.xml` entry, and at
+   least one inbound internal link. An orphan page does not rank.
+7. Regenerate any `FAQPage` JSON-LD from the visible HTML rather than hand-writing a second copy.
+
 ### Blog post structure
 Every file in `blog/` follows:
 - An inline `<style>` block for post-specific overrides (font sizes, local colour shadow-tokens).

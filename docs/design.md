@@ -12,6 +12,98 @@ against; audit against it directly rather than asking for the brand kit to be re
 
 ---
 
+## The current page design language: the letter concept
+
+**Read this before building any new public page.** Since the 2026-09 redesign, every primary
+marketing page on this site is built in the **letter concept**, not the older `.wh-page` system.
+A new page built on `.wh-page` will look like a legal page next to the rest of the site — this
+happened once already, with the first three Tier-2 pages, and they had to be rebuilt.
+
+### Which system a page uses
+
+| System | Pages | Recognise it by |
+|---|---|---|
+| **Letter concept — current** | `index`, `menu`, `pods`, `partnership`, `about`, `app`, `matcha`, `pack`, `join`, `events`, `blogs`, every blog post, and the Tier-2 solution/locality pages | `<body data-page="letter-concept" data-mood="coffee">`, an `lc-nav` header, a per-page `*-letter.css` |
+| **`.wh-page` — legacy, retained** | `faq`, `privacy`, `terms`, `disclaimer`, `copyright`, `survey-disclosure`, `404`, the enquiry forms | `<body data-page="faq">` etc., `<div id="ps-nav">`, `main.wh-page`, `mobile.css` |
+
+Do not migrate the legacy pages; they are long-form text and the system suits them. Do not build
+anything new on it.
+
+### The letter-concept scaffold
+
+```html
+<link rel="stylesheet" href="assets/ps.css">
+<link rel="stylesheet" href="assets/wh.css?v=N">
+<link rel="stylesheet" href="assets/home-letter.css?v=N">   <!-- shared lc-* base, always -->
+<link rel="stylesheet" href="assets/<page>-letter.css?v=N"> <!-- this page's furniture -->
+...
+<body data-page="letter-concept" data-mood="coffee">
+  <a class="lc-skip" href="#letter">…</a>
+  <header class="lc-nav">…</header>
+  <button class="lc-motion-toggle" …>Pause motion</button>
+  <main id="letter" class="<prefix>-main"> … </main>
+  <div class="lc-paths">…</div>
+  <footer class="lc-footer lc-footer-full">…</footer>
+  <script src="assets/ps.js?v=N"></script>
+  <script src="assets/letter-pages.js?v=N"></script>
+```
+
+`mobile.css` is **not** loaded on letter-concept pages; each `*-letter.css` carries its own
+`@media(max-width:900px)` and `@media(max-width:850px)` blocks. The 850px block is also where the
+nav collapses to the drawer.
+
+### Shared `lc-*` primitives (from `home-letter.css`, never redefine)
+
+`lc-nav` · `lc-mood` (the Coffee/Matcha toggle) · `lc-menu-toggle` · `a.lc-button` / `a.lc-small`
+· `lc-text-link` · `lc-faq` (the FAQ section frame) · `lc-paths` (the two-up closing links) ·
+`lc-footer lc-footer-full` · `lc-motion-toggle` · `lc-section-label`.
+
+Tokens: `--lc-gutter`, `--lc-rule`, `--lc-accent` / `--lc-accent-hover` (these flip to Ceremonial
+under `data-mood="matcha"`), `--lc-opening`.
+
+### Per-page furniture and its prefix
+
+Each page owns a two-to-four letter prefix and one stylesheet: `plp-` (pods), `ptlp-`
+(partnership), `aplp-` (app), `mlp-` (menu), `alp-` (home), `slp-`
+(`assets/solutions-letter.css`, shared by the Tier-2 solution and locality pages). A new page
+either reuses `slp-` if it is a solution or locality page, or gets its own prefix and file.
+
+The recurring section vocabulary, in the order pages tend to use it:
+
+1. **Letterhead** — three small caps spans across the top: from, to, and a section number.
+2. **Hero** — kicker, a rotated sticker, a two-line display `h1` whose second line is in
+   `<em>` (Instrument Serif italic), one paragraph, one `lc-button`, and a photo or a type-led
+   card beside it.
+3. **Ticker** — a rotated marquee band in the accent colour, glyphs separated by `✳`.
+4. **Statement** — a centred full-bleed statement on Oat.
+5. **Numbered rows** — a two-column section, heading left, numbered `article`s right.
+6. **A note band** — a quieter full-width block, usually Pale Froth.
+7. **`lc-faq`** — the shared accordion.
+8. **A closing band** — Dark Roast, cream type, one CTA.
+9. **`lc-paths`** then the footer.
+
+### Motion and reveals
+
+`letter-pages.js` observes `.alp-reveal, .plp-reveal, .aplp-reveal, .mlp-reveal` and adds
+`.alp-visible`. A new prefix must **piggyback on one of those four** — the established pattern is
+`class="<prefix>-reveal plp-reveal"` — and define its own reveal CSS, including the
+`body.lc-motion-paused` and `prefers-reduced-motion` overrides. Editing the JS selector list is
+not necessary and has not been done for any page since pods.
+
+### Two deviations from the sections below, recorded honestly
+
+- **Dark Roast as a fill.** The colour rules below say Dark Roast and Espresso are type-only.
+  Every letter-concept page uses a full-bleed Dark Roast closing band with Steam Cream type, and
+  has since the redesign. Treat the band as the established exception; everything else in the
+  colour system still holds, including never putting Dark Roast type on Terracotta.
+- **Auto-highlights land on the first clause.** `nectarSignature()` marks the first text node of a
+  display `h1`, which on a two-line letter-concept headline means the first line rather than the
+  argument. This is sitewide (`pods.html`'s "Your next" is the same) and is not something a new
+  page should try to fix locally. Where the highlight must be deliberate, author it as
+  `<em class="plp-highlight">` instead.
+
+---
+
 ## Common (all viewports)
 
 ### Colour — two profiles, never mixed
