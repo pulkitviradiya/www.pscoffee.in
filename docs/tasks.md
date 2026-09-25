@@ -19,7 +19,12 @@ matches as of 2026-07-07.
 _(none open)_
 
 ## Current SEO/GEO workstream — open items
-- **Step 7: eight new Journal posts.** Briefed, not written. With the writer. See `docs/briefs/`.
+- **Step 7: eight new Journal posts.** Two delivered and live (`the-letter-and-the-ps-explained`,
+  `pantry-machine-vs-coffee-counter`). Six still with the writer. See `docs/briefs/`.
+- **Brand-owner call on one P.S. line.** `pantry-machine-vs-coffee-counter` closes with a
+  20-word sign-off. Master Copy v4's third test for a P.S. line is "under about ten words". The
+  line is on-message and was shipped as the writer delivered it; trimming it is a voice decision,
+  not a build one.
 - **Step 8: remaining three Tier-2 pages** (`/coffee-for-campus`, `/coffee-for-gyms`,
   `/coffee-catering-ahmedabad`). Held for 4-6 weeks until the live ones index — shipping thin
   locality pages in a batch is the doorway-page pattern. `/coffee-gift-city-gandhinagar` shipped
@@ -33,10 +38,11 @@ _(none open)_
   which the Handbook forbids.
 - **Deferred until Pod addresses exist:** `LocalBusiness` schema per Pod.
 - **Re-score the keyword database** once Search Console has 90 days of real data.
-- **Journal card image missing.** `blogs.html`'s card for `the-letter-and-the-ps-explained` uses an
-  `<image-slot>` with a placeholder and no `src`, because no asset exists for it yet. It renders as
-  a grey slot beside neighbours that have photos. Needs
-  `assets/photos/site/blog-letter-and-ps-{desktop,mobile}.webp`, then the slot wired to them.
+- **Two Journal card images missing.** `blogs.html`'s cards for `the-letter-and-the-ps-explained`
+  and `pantry-machine-vs-coffee-counter` use `<image-slot>` placeholders with no `src`, because no
+  assets exist yet. Both render as grey slots beside neighbours that have photos. Needs
+  `assets/photos/site/blog-letter-and-ps-{desktop,mobile}.webp` and
+  `assets/photos/site/blog-machine-vs-counter-{desktop,mobile}.webp`, then the slots wired to them.
 
 ## Completed (recent, for context — see MEMORY.md for full history)
 - Tier-2 landing pages `/coffee-for-offices` and `/coffee-for-coworking-spaces`, the

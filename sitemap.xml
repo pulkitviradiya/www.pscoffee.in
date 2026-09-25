@@ -109,6 +109,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.pscoffee.in/blog/pantry-machine-vs-coffee-counter</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.pscoffee.in/blog/ps-pass-coffee-subscription-india</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
