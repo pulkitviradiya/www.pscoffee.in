@@ -88,11 +88,12 @@ only, never read at session start).
 ## Standing instructions
 
 - **Always check docs/conventions.md before adding new files, folders, modules, or components.**
-- **Every new public page is built in the letter-concept design language** (`data-page="letter-concept"`,
-  `lc-nav`, a per-page `*-letter.css`, `letter-pages.js`), never the legacy `.wh-page`/`mobile.css`
-  system, which is now only for the legal pages, `faq.html`, `404.html` and the enquiry forms. The
-  scaffold and section vocabulary are in [docs/design.md](docs/design.md); the build steps are in
-  [docs/conventions.md](docs/conventions.md).
+- **Every public page uses the letter-concept design language** (`data-page="letter-concept"`,
+  `lc-nav`, `home-letter.css`, a page/family stylesheet, and `letter-pages.js`), never the legacy
+  generated `.wh-page` navigation/footer. FAQ, legal/disclosure pages, `404.html`, feedback and
+  enquiry forms share `utility-letter.css`; the old shell remains only in no-indexed recovery
+  snapshots. The scaffold and section vocabulary are in [docs/design.md](docs/design.md); the
+  build steps are in [docs/conventions.md](docs/conventions.md).
 - **Always `git pull origin main` before starting any work** — the other agent may have pushed
   since your last session.
 - **Never commit:** `.claude/`/`.codex/` (session config), `.playwright-cli/`,

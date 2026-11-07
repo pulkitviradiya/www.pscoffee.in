@@ -1,0 +1,172 @@
+/* Current letter-concept shell for FAQ, legal and enquiry pages. */
+body.utility-letter {
+  --utility-rule: color-mix(in srgb, var(--color-dark-roast) 16%, transparent);
+  margin: 0;
+  background: var(--color-steam-cream);
+  color: var(--color-dark-roast);
+}
+
+body.utility-letter .utility-main {
+  min-height: 70vh;
+  padding-top: clamp(92px, 9vw, 132px);
+}
+
+body.utility-letter .page-top { display: none; }
+
+body.utility-letter main.wh-page {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding-inline: var(--lc-gutter);
+}
+
+body.utility-letter .legal-hero,
+body.utility-letter .wh-page-hero.legal-hero {
+  min-height: auto;
+  margin: 0 auto clamp(34px, 5vw, 72px);
+  padding: clamp(34px, 5vw, 72px) 0;
+  border-top: 1px solid var(--utility-rule);
+  border-bottom: 1px solid var(--utility-rule);
+  background: transparent;
+}
+
+body.utility-letter .legal-hero .wh-page-hero-copy {
+  padding: 0;
+}
+
+body.utility-letter .legal-hero .wh-page-kicker,
+body.utility-letter .legal-hero-note > p {
+  color: var(--color-terracotta);
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+body.utility-letter .legal-hero h1 {
+  max-width: 12ch;
+  color: var(--color-dark-roast);
+  font-family: var(--font-display);
+  font-size: clamp(48px, 7vw, 104px);
+  font-weight: 800;
+  line-height: .88;
+  letter-spacing: -.065em;
+}
+
+body.utility-letter .legal-hero footer,
+body.utility-letter .legal-hero-note {
+  font-family: var(--font-body);
+}
+
+body.utility-letter .legal-hero footer a {
+  color: var(--color-steam-cream);
+  border-color: currentColor;
+}
+
+body.utility-letter .legal-hero footer a::after { color: currentColor; }
+
+body.utility-letter .legal-hero-note h2 {
+  max-width: 22ch;
+  color: var(--color-dark-roast);
+  font-family: var(--font-accent);
+  font-size: clamp(28px, 3.2vw, 50px);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1;
+}
+
+body.utility-letter .legal-body,
+body.utility-letter .faq-body {
+  max-width: 1120px;
+  margin-inline: auto;
+  padding-inline: 0;
+}
+
+body.utility-letter .legal-section,
+body.utility-letter .faq-section {
+  border-color: var(--utility-rule);
+}
+
+body.utility-letter .legal-section h2,
+body.utility-letter .faq-section h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+}
+
+body.utility-letter .legal-section p,
+body.utility-letter .legal-section li,
+body.utility-letter .faq-a,
+body.utility-letter .faq-q {
+  font-family: var(--font-body);
+}
+
+body.utility-letter .legal-section a,
+body.utility-letter .faq-body a {
+  color: var(--color-terracotta);
+}
+
+/* Enquiry pages retain their purpose-built compositions inside the new shell. */
+body.utility-letter .pq-page,
+body.utility-letter .peq-page,
+body.utility-letter .event-enquiry-page,
+body.utility-letter main[class*="enquiry"] {
+  padding-top: clamp(104px, 10vw, 148px);
+}
+
+body.utility-letter .pq-form-card,
+body.utility-letter .peq-form-card,
+body.utility-letter .event-form-card {
+  border-radius: var(--radius-xl);
+  border-color: var(--utility-rule);
+  background: var(--color-oat);
+  box-shadow: none;
+}
+
+body.utility-letter input,
+body.utility-letter select,
+body.utility-letter textarea {
+  border-radius: var(--radius-md) !important;
+  font-family: var(--font-body) !important;
+}
+
+body.utility-letter .form-submit {
+  border-radius: var(--radius-md);
+  background: var(--color-terracotta);
+  color: var(--color-steam-cream);
+}
+
+body.utility-letter .lc-footer { margin-top: clamp(56px, 8vw, 112px); }
+
+body[data-utility-page="feedback"] .fb-hero,
+body[data-utility-page="feedback"] .fb-hero h1,
+body[data-utility-page="feedback"] .fb-hero p,
+body[data-utility-page="feedback"] .fb-hero .kicker {
+  color: var(--color-steam-cream);
+}
+
+body[data-utility-page="feedback"] .fb-hero > p {
+  color: var(--color-steam-cream) !important;
+}
+
+@media (max-width: 850px) {
+  body.utility-letter .utility-main { padding-top: 78px; }
+  body.utility-letter main.wh-page { padding-inline: 20px; }
+  body.utility-letter .legal-hero,
+  body.utility-letter .wh-page-hero.legal-hero {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding-block: 34px;
+  }
+  body.utility-letter .legal-hero h1 { font-size: clamp(44px, 14vw, 72px); }
+  body.utility-letter .pq-page,
+  body.utility-letter .peq-page,
+  body.utility-letter .event-enquiry-page,
+  body.utility-letter main[class*="enquiry"] { padding-top: 92px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.utility-letter *, body.utility-letter *::before, body.utility-letter *::after {
+    scroll-behavior: auto !important;
+  }
+}

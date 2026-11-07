@@ -56,8 +56,9 @@ var PAGES = [
 
 **New public pages are built in the letter concept, not `.wh-page`.** See
 [design.md](design.md)'s "The current page design language" section for the scaffold, the shared
-`lc-*` primitives, the section vocabulary and the reveal mechanism. The `.wh-page` system is
-retained only for the legal pages, `faq.html`, `404.html` and the enquiry forms.
+`lc-*` primitives, the section vocabulary and the reveal mechanism. FAQ, legal/disclosure pages,
+`404.html`, feedback and enquiry forms use the shared `utility-letter.css` family; `.wh-page`
+navigation and footer generation are retained only inside no-indexed recovery snapshots.
 
 The build steps, in order:
 

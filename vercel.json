@@ -4,6 +4,116 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/home-legacy",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/home-legacy.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/about-legacy",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/about-legacy.html",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/app-legacy",
+      "destination": "/app",
+      "permanent": true
+    },
+    {
+      "source": "/app-legacy.html",
+      "destination": "/app",
+      "permanent": true
+    },
+    {
+      "source": "/blogs-legacy",
+      "destination": "/blogs",
+      "permanent": true
+    },
+    {
+      "source": "/blogs-legacy.html",
+      "destination": "/blogs",
+      "permanent": true
+    },
+    {
+      "source": "/events-legacy",
+      "destination": "/events",
+      "permanent": true
+    },
+    {
+      "source": "/events-legacy.html",
+      "destination": "/events",
+      "permanent": true
+    },
+    {
+      "source": "/join-legacy",
+      "destination": "/join",
+      "permanent": true
+    },
+    {
+      "source": "/join-legacy.html",
+      "destination": "/join",
+      "permanent": true
+    },
+    {
+      "source": "/matcha-legacy",
+      "destination": "/matcha",
+      "permanent": true
+    },
+    {
+      "source": "/matcha-legacy.html",
+      "destination": "/matcha",
+      "permanent": true
+    },
+    {
+      "source": "/menu-legacy",
+      "destination": "/menu",
+      "permanent": true
+    },
+    {
+      "source": "/menu-legacy.html",
+      "destination": "/menu",
+      "permanent": true
+    },
+    {
+      "source": "/pack-legacy",
+      "destination": "/pack",
+      "permanent": true
+    },
+    {
+      "source": "/pack-legacy.html",
+      "destination": "/pack",
+      "permanent": true
+    },
+    {
+      "source": "/partnership-legacy",
+      "destination": "/partnership",
+      "permanent": true
+    },
+    {
+      "source": "/partnership-legacy.html",
+      "destination": "/partnership",
+      "permanent": true
+    },
+    {
+      "source": "/pods-legacy",
+      "destination": "/pods",
+      "permanent": true
+    },
+    {
+      "source": "/pods-legacy.html",
+      "destination": "/pods",
+      "permanent": true
+    },
+    {
       "source": "/home-letter",
       "destination": "/",
       "permanent": true

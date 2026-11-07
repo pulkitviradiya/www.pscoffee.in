@@ -23,11 +23,12 @@ happened once already, with the first three Tier-2 pages, and they had to be reb
 
 | System | Pages | Recognise it by |
 |---|---|---|
-| **Letter concept — current** | `index`, `menu`, `pods`, `partnership`, `about`, `app`, `matcha`, `pack`, `join`, `events`, `blogs`, every blog post, and the Tier-2 solution/locality pages | `<body data-page="letter-concept" data-mood="coffee">`, an `lc-nav` header, a per-page `*-letter.css` |
-| **`.wh-page` — legacy, retained** | `faq`, `privacy`, `terms`, `disclaimer`, `copyright`, `survey-disclosure`, `404`, the enquiry forms | `<body data-page="faq">` etc., `<div id="ps-nav">`, `main.wh-page`, `mobile.css` |
+| **Letter concept — current** | Every indexed public page, all Journal posts, FAQ, legal/disclosure pages, enquiry forms, feedback and `404` | `<body data-page="letter-concept" data-mood="coffee">`, an `lc-nav` header, `home-letter.css`, and a page or family stylesheet |
+| **`.wh-page` — archived only** | No-indexed `*-legacy.html` recovery snapshots | `<div id="ps-nav">`, `main.wh-page`, `mobile.css` |
 
-Do not migrate the legacy pages; they are long-form text and the system suits them. Do not build
-anything new on it.
+The FAQ, legal and enquiry pages share `utility-letter.css`; it preserves their long-form or form
+content while using the current navigation, footer, typography and responsive shell. Do not build
+anything new on `.wh-page` or restore its generated navigation/footer on a live public page.
 
 ### The letter-concept scaffold
 

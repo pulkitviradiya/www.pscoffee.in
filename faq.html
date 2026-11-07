@@ -16,24 +16,25 @@
 <meta name="twitter:image" content="https://www.pscoffee.in/assets/photos/site/menu-hero-cups-cropped-desktop.webp"><meta name="twitter:card" content="summary">
 <link rel="stylesheet" href="assets/ps.css">
 <link rel="stylesheet" href="assets/wh.css?v=120">
-<link rel="stylesheet" href="assets/mobile.css?v=90">
+<link rel="stylesheet" href="assets/home-letter.css?v=16">
+<link rel="stylesheet" href="assets/utility-letter.css?v=1">
 <style>
-body[data-page="faq"] .faq-body {
+body[data-utility-page="faq"] .faq-body {
   max-width: 980px;
   margin: 0 auto clamp(64px, 6vw, 96px);
   padding: 0 var(--wh-gut);
 }
-body[data-page="faq"] .faq-section {
+body[data-utility-page="faq"] .faq-section {
   display: grid;
   grid-template-columns: minmax(150px, .28fr) minmax(0, 1fr);
   gap: clamp(16px, 2vw, 28px);
   padding: 18px 0 20px;
   border-top: 1px solid rgba(61, 32, 16, .12);
 }
-body[data-page="faq"] .faq-section:last-child {
+body[data-utility-page="faq"] .faq-section:last-child {
   border-bottom: 1px solid rgba(61, 32, 16, .12);
 }
-body[data-page="faq"] .faq-section h2 {
+body[data-utility-page="faq"] .faq-section h2 {
   margin: 0;
   color: var(--ps-roast);
   font-family: var(--wh-serif);
@@ -42,60 +43,60 @@ body[data-page="faq"] .faq-section h2 {
   line-height: 1;
   letter-spacing: -.035em;
 }
-body[data-page="faq"] .faq {
+body[data-utility-page="faq"] .faq {
   max-width: none;
 }
-body[data-page="faq"] .faq-q {
+body[data-utility-page="faq"] .faq-q {
   min-height: 0;
   padding: 13px 2px;
   gap: 14px;
   font-size: clamp(14.5px, 1.15vw, 17px);
   line-height: 1.25;
 }
-body[data-page="faq"] .faq-q .pm {
+body[data-utility-page="faq"] .faq-q .pm {
   width: 24px;
   height: 24px;
   border-width: 1px;
 }
-body[data-page="faq"] .faq-q .pm::before {
+body[data-utility-page="faq"] .faq-q .pm::before {
   width: 10px;
   height: 1.5px;
 }
-body[data-page="faq"] .faq-q .pm::after {
+body[data-utility-page="faq"] .faq-q .pm::after {
   width: 1.5px;
   height: 10px;
 }
-body[data-page="faq"] .faq-a .inner {
+body[data-utility-page="faq"] .faq-a .inner {
   max-width: 62ch;
   padding: 0 2px 16px;
   font-size: 14.5px;
   line-height: 1.5;
 }
-body[data-page="faq"] .faq-a .inner a {
+body[data-utility-page="faq"] .faq-a .inner a {
   color: var(--ps-terracotta);
   text-decoration: none;
 }
-body[data-page="faq"] .faq-a .inner a:hover {
+body[data-utility-page="faq"] .faq-a .inner a:hover {
   color: var(--ps-roast);
 }
 @media (max-width: 640px) {
-  body[data-page="faq"] .faq-body {
+  body[data-utility-page="faq"] .faq-body {
     margin-bottom: 52px;
     padding-inline: calc(var(--wh-gut) * .75);
   }
-  body[data-page="faq"] .faq-section {
+  body[data-utility-page="faq"] .faq-section {
     grid-template-columns: 1fr;
     gap: 6px;
     padding: 16px 0 18px;
   }
-  body[data-page="faq"] .faq-section h2 {
+  body[data-utility-page="faq"] .faq-section h2 {
     font-size: clamp(24px, 7vw, 30px);
   }
-  body[data-page="faq"] .faq-q {
+  body[data-utility-page="faq"] .faq-q {
     padding: 12px 0;
     font-size: 14.5px;
   }
-  body[data-page="faq"] .faq-a .inner {
+  body[data-utility-page="faq"] .faq-a .inner {
     padding-bottom: 14px;
     font-size: 14px;
   }
@@ -113,11 +114,12 @@ body[data-page="faq"] .faq-a .inner a:hover {
   gtag("config", "G-5TS0QMZ55W");
 </script>
 </head>
-<body data-page="faq">
-<div id="ps-nav"></div>
-<div class="page-top"></div>
+<body data-page="letter-concept" data-mood="coffee" data-utility-page="faq" class="utility-letter">
+<a class="lc-skip" href="#letter">Skip to page content</a>
+<header class="lc-nav"><a href="index.html" aria-label="P.S. Coffee home"><img src="assets/icons/ps-coffee_wordmark_steam cream.png" alt="P.S. Coffee" width="140"></a><div class="lc-mood" role="group" aria-label="Website colour mood"><button type="button" data-mood-choice="coffee" aria-pressed="true">Coffee</button><button type="button" data-mood-choice="matcha" aria-pressed="false">Matcha</button></div><button class="lc-menu-toggle" type="button" aria-expanded="false" aria-controls="lc-site-menu"><span>Menu</span><span aria-hidden="true">+</span></button><nav id="lc-site-menu" aria-label="Main navigation"><a href="menu.html">Menu</a><a href="pods.html">Pods</a><a href="pack.html">P.S. Pass</a><a href="about.html">About</a><a href="blogs.html">Journal</a></nav><a class="lc-button lc-small" href="pods.html#waitlist">Be first in line <span aria-hidden="true">↗</span></a></header>
+<button class="lc-motion-toggle" type="button" aria-pressed="false">Pause motion <span aria-hidden="true">Ⅱ</span></button>
 
-<main class="wh-page legal-page">
+<main id="letter" class="wh-page legal-page utility-main">
   <section class="wh-page-hero is-light legal-hero">
     <div class="wh-page-hero-copy">
       <p class="wh-page-kicker">FAQ.</p>
@@ -319,9 +321,9 @@ body[data-page="faq"] .faq-a .inner a:hover {
   </section>
 </main>
 
-<div id="ps-footer"></div>
+<footer class="lc-footer lc-footer-full" aria-label="P.S. Coffee footer"><div class="lc-footer-signoff"><span class="lc-footer-ps" aria-hidden="true">P.S.</span><div><p class="lc-section-label">ONE LAST THING, BEFORE YOU GO.</p><p class="lc-footer-lastline">There is always room<br>for <em>a little more coffee.</em></p><span class="lc-footer-yours">Yours, in the everyday.</span></div><a href="#letter" class="lc-footer-top">Back to the letter ↑</a></div><div class="lc-footer-directory"><div class="lc-footer-brand"><a href="index.html" aria-label="P.S. Coffee home"><img src="assets/icons/ps-coffee_wordmark_steam cream.png" alt="P.S. Coffee" width="220"></a><p>The day is the letter.<br>The coffee is the P.S.</p><span>AHMEDABAD FIRST.<br>STILL TAKING SHAPE.</span><a href="mailto:hello@pscoffee.in">hello@pscoffee.in ↗</a></div><nav aria-label="Explore P.S. Coffee"><h3>Explore.</h3><a href="menu.html">The Menu</a><a href="matcha.html">P.S. Green</a><a href="pack.html">P.S. Pass</a><a href="about.html">Our Story</a><a href="blogs.html">The Journal</a><a href="events.html">Events</a></nav><nav aria-label="Pods and opportunities"><h3>Pods &amp; people.</h3><a href="pods.html#pods">Planned locations</a><a href="app.html">App preview</a><a href="partnership.html#host">Host a Pod</a><a href="partnership.html">Partner with us</a><a href="coffee-for-offices.html">Coffee for offices</a><a href="coffee-for-coworking-spaces.html">Coffee for co-working</a><a href="coffee-gift-city-gandhinagar.html">Coffee in GIFT City</a><a href="join.html">Join us</a><a href="https://www.thebarista.school" target="_blank" rel="noopener">Barista School ↗</a></nav><nav aria-label="Help and information"><h3>Help &amp; info.</h3><a href="faq.html">FAQ</a><a href="mailto:hello@pscoffee.in">Contact</a><a href="feedback.html">Leave a note</a><a href="terms.html">Terms of Use</a><a href="privacy.html">Privacy Policy</a><a href="disclaimer.html">General Disclaimer</a><a href="survey-disclosure.html">Survey Notice</a><a href="copyright.html">Copyright</a></nav></div><div class="lc-footer-connect"><div><h3>Be there when the first Pod opens.</h3><p>First access and opening news.</p><a class="lc-button lc-footer-signup" href="pods.html#waitlist">Get opening updates ↗</a></div><nav aria-label="Follow P.S. Coffee"><h3>Keep in touch.</h3><a href="https://www.instagram.com/pscoffee_pods" target="_blank" rel="noopener">Instagram ↗</a><a href="https://www.facebook.com/pscoffee" target="_blank" rel="noopener">Facebook ↗</a><a href="https://www.linkedin.com/company/pscoffee" target="_blank" rel="noopener">LinkedIn ↗</a></nav><span class="lc-footer-blessing" lang="hi">॥ राधे राधे ॥</span></div><div class="lc-footer-bottom"><span>© P.S. Coffee 2026</span><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="copyright.html">Copyright</a></div></footer>
 <script src="assets/ps.js?v=53"></script>
-<script src="assets/mobile.js?v=5"></script>
+<script src="assets/letter-pages.js?v=5"></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is P.S. Coffee?", "acceptedAnswer": {"@type": "Answer", "text": "Specialty daily coffee, being built around Pods in and around workplaces, campuses, gyms and the corners between them. Ahmedabad first. The Letter holds four drink families; The P.S. is the range behind them."}}, {"@type": "Question", "name": "What does P.S. stand for?", "acceptedAnswer": {"@type": "Answer", "text": "Postscript. The thought you add at the end. Pretty Serious and Plain & Simple are the other two readings we use."}}, {"@type": "Question", "name": "Is P.S. Coffee live yet?", "acceptedAnswer": {"@type": "Answer", "text": "Not yet. We are developing the brand, menu, app and first Pods. This website collects interest, feedback and potential locations."}}, {"@type": "Question", "name": "Where is P.S. Coffee starting?", "acceptedAnswer": {"@type": "Answer", "text": "Ahmedabad first. Locations and opening dates are not confirmed. Join the waitlist for opening news."}}, {"@type": "Question", "name": "What is a P.S. Pod?", "acceptedAnswer": {"@type": "Answer", "text": "A compact coffee space designed around fresh preparation and grab-and-go service. A Pod may be inside your building or on the corner outside it."}}, {"@type": "Question", "name": "Why Pods?", "acceptedAnswer": {"@type": "Answer", "text": "We are building around the cup you come back for. A small footprint puts coffee closer to the places your day already runs through."}}, {"@type": "Question", "name": "Where will Pods be placed?", "acceptedAnswer": {"@type": "Answer", "text": "We are exploring locations in and around offices, co-working spaces, campuses and gyms, as well as nearby corners. No location is open yet."}}, {"@type": "Question", "name": "Can my building host a Pod?", "acceptedAnswer": {"@type": "Answer", "text": "We are speaking with potential hosts. Tell us about the space and its daily footfall through Host a Pod."}}, {"@type": "Question", "name": "How is a Pod different from a cafe?", "acceptedAnswer": {"@type": "Answer", "text": "A cafe is built around a room you sit in, and the price of that room is in every cup. A Pod removes the room. The same standard of coffee, ground at order, from a compact counter you walk up to. No seating, no table service, no waiting for one."}}, {"@type": "Question", "name": "Where can I find grab-and-go specialty coffee in Ahmedabad?", "acceptedAnswer": {"@type": "Answer", "text": "Nowhere yet. The first P.S. Pods are planned for areas in and around Ahmedabad, including Prahlad Nagar, SG Highway and Makarba. No address is confirmed and no dates are set. Join the waitlist to hear when a Pod opens near you."}}, {"@type": "Question", "name": "Will there be a Pod in Gandhinagar or GIFT City?", "acceptedAnswer": {"@type": "Answer", "text": "Both are on the list of areas we are exploring, alongside the TCS area in Gandhinagar. Nothing is confirmed. Telling us where you would actually stop helps us plan the first locations, so use the Pods waitlist to suggest an area."}}, {"@type": "Question", "name": "What coffee will P.S. serve?", "acceptedAnswer": {"@type": "Answer", "text": "Our standard is honest specialty coffee, ground at order. We are developing the sourcing and recipes for the first Pods."}}, {"@type": "Question", "name": "What are The Letter and The P.S.?", "acceptedAnswer": {"@type": "Answer", "text": "The Letter is the familiar starting point: Black, White, Green and Strong. The P.S. holds numbered variants across those families. The opening rotation is still being developed."}}, {"@type": "Question", "name": "Where can I see prices?", "acceptedAnswer": {"@type": "Answer", "text": "The Menu lists all planned items and their proposed prices. Final availability will be confirmed before the first Pods open."}}, {"@type": "Question", "name": "Will the menu include more than coffee?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. P.S. Green covers matcha; P.S. Strong covers protein drinks. Food is on the menu too. Each recipe is described on its card."}}, {"@type": "Question", "name": "What is P.S. Green?", "acceptedAnswer": {"@type": "Answer", "text": "Our matcha family. Hot Matcha Latte is the Letter starting point, with iced, cloud foam and other recipes in the planned range."}}, {"@type": "Question", "name": "What is ceremonial grade matcha?", "acceptedAnswer": {"@type": "Answer", "text": "It is the grade of matcha meant to be whisked and drunk on its own, rather than the culinary grade used for baking and flavouring. P.S. Green is being planned around it: whisked properly, not stirred out of a sweetened powder mix."}}, {"@type": "Question", "name": "Is the coffee specialty grade?", "acceptedAnswer": {"@type": "Answer", "text": "That is the standard we are building to: specialty grade, ground at every order rather than in bulk and left sitting. We describe it as honest specialty coffee, and the sourcing is being finalised with the roaster before the first Pods open."}}, {"@type": "Question", "name": "What is the P.S. Pass?", "acceptedAnswer": {"@type": "Answer", "text": "The Pass is still taking shape. It is not available to buy. Details will follow when the plans are ready."}}, {"@type": "Question", "name": "Are Pass plans and prices confirmed?", "acceptedAnswer": {"@type": "Answer", "text": "No. Tiers, prices, validity and redemption terms are not confirmed. See the Pass update."}}, {"@type": "Question", "name": "How will the app work?", "acceptedAnswer": {"@type": "Answer", "text": "We are planning ordering, pick-up time selection, The Usual, the current slate and a nearest-Pod finder. The app is being developed alongside the first Pods."}}, {"@type": "Question", "name": "Is the app available now?", "acceptedAnswer": {"@type": "Answer", "text": "Not yet. Join the app waitlist for opening updates."}}, {"@type": "Question", "name": "Can a company put a Pod inside its office?", "acceptedAnswer": {"@type": "Answer", "text": "That is one of the formats we are planning for. A Pod needs roughly 50 to 100 square feet, and we bring the counter, the barista and the beans. Tell us about your floor, your headcount and the space through Host a Pod."}}, {"@type": "Question", "name": "Can a co-working space add a Pod?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, that is one of the site types we are exploring. It gives members specialty coffee as an amenity without the operator running a cafe, hiring baristas or managing supply. Share your floor plan and daily footfall through Host a Pod."}}, {"@type": "Question", "name": "Can a university or college campus host a Pod?", "acceptedAnswer": {"@type": "Answer", "text": "Campuses are on the list. A Pod fits in a corner of a food court or a busy building lobby, and we handle the operations while you provide the space. Tell us about the campus and its daily footfall through Host a Pod."}}, {"@type": "Question", "name": "Does a Pod replace our cafeteria or catering vendor?", "acceptedAnswer": {"@type": "Answer", "text": "No. A Pod is the coffee counter, not the canteen. It sits alongside whatever cafeteria, catering or meal-card arrangement a building already runs, and covers the one thing those setups rarely do well: specialty coffee, ground at order, in under a minute."}}, {"@type": "Question", "name": "Does P.S. Coffee do coffee catering for events?", "acceptedAnswer": {"@type": "Answer", "text": "That is part of the plan: pop-up Pods and coffee counters for corporate offsites, college festivals, brand activations and functions in and around Ahmedabad. Nothing is bookable yet. Tell us the room and the date through the Events enquiry."}}, {"@type": "Question", "name": "Does P.S. Coffee do events?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, the events direction includes pop-up Pods, collaborations, campus activations, startup events, and other rooms where specialty coffee should be part of the experience."}}, {"@type": "Question", "name": "Can I collaborate with P.S. Coffee?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The site invites collaboration ideas for events, campuses, brand moments, and host locations. Email hello@pscoffee.in or use the relevant page for partnerships and events."}}, {"@type": "Question", "name": "Is P.S. Coffee hiring?", "acceptedAnswer": {"@type": "Answer", "text": "The Join Us page invites interest from baristas, Pod staff, operators, roasters, tech builders, craft specialists, and investors. The brand is still being built, so the page is about early interest and founding-stage fit."}}, {"@type": "Question", "name": "How do I stay updated?", "acceptedAnswer": {"@type": "Answer", "text": "Use the newsletter and waitlist forms across the site, especially the home and app pages. You can also contact hello@pscoffee.in."}}, {"@type": "Question", "name": "Why does the website collect feedback?", "acceptedAnswer": {"@type": "Answer", "text": "Because the brand is pre-launch. Feedback, surveys, waitlists, location suggestions, and partnership inquiries help validate demand, refine the concept, and decide where and how to launch."}}, {"@type": "Question", "name": "Will submitted details be sold?", "acceptedAnswer": {"@type": "Answer", "text": "The privacy policy says personal information submitted through the website is not sold as a business line. It may be used for internal research, launch planning, follow-up, and site operations."}}, {"@type": "Question", "name": "Who should I contact for questions?", "acceptedAnswer": {"@type": "Answer", "text": "For general, partnership, privacy, or policy questions, contact hello@pscoffee.in."}}]}</script>
 </body>
 </html>

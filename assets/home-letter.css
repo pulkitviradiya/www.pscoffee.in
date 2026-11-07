@@ -36,7 +36,13 @@ body[data-page="letter-concept"] .lc-drink h3{line-height:1.1;min-height:2.2em}
 /* Letter experiment: moving marginalia, desi accents and the grab-and-go story. */
 .lc-hero-copy{position:relative}
 .lc-hindi-note,.lc-go-note>span,.lc-closing-hindi,.lc-stamp [lang="hi"],.lc-ribbon i{font-family:"Kohinoor Devanagari","Nirmala UI","Devanagari Sangam MN",sans-serif;font-style:normal}
-.lc-hindi-note{display:inline-block;position:absolute;right:12%;top:-18px;font-size:21px;color:var(--lc-accent);transform:rotate(-9deg);border-bottom:2px solid var(--lc-accent);padding:8px 3px}
+body[data-page="letter-concept"] .lc-ink-stamp{--lc-stamp-rotate:-4deg;--lc-stamp-ink:var(--lc-accent);--lc-stamp-paper:color-mix(in srgb,var(--lc-opening) 88%,transparent);display:inline-grid;place-items:center;position:relative;box-sizing:border-box;width:max-content;max-width:min(100%,38ch);padding:9px 13px 8px;font-family:"Kohinoor Devanagari","Nirmala UI","Devanagari Sangam MN",sans-serif;font-size:var(--lc-stamp-size,clamp(15px,1.55vw,22px));font-style:normal;font-weight:700;line-height:1.25;color:var(--lc-stamp-ink);border:3px double currentColor;background:var(--lc-stamp-paper);box-shadow:inset 0 0 0 1px color-mix(in srgb,currentColor 28%,transparent),2px 3px 0 color-mix(in srgb,currentColor 20%,transparent);transform:rotate(var(--lc-stamp-rotate));transform-origin:55% 65%;animation:lc-stamp-slap .52s cubic-bezier(.17,.89,.32,1.35) .2s both}
+body[data-page="letter-concept"] .lc-ink-stamp:before{content:"";position:absolute;inset:3px;border:1px solid currentColor;opacity:.45;transform:translate(-2px,1px);pointer-events:none}
+body[data-page="letter-concept"] .lc-ink-stamp:after{content:"";position:absolute;inset:-4px;background:radial-gradient(circle at 14% 26%,var(--lc-opening) 0 1px,transparent 2px),radial-gradient(circle at 81% 67%,var(--lc-opening) 0 1px,transparent 2px),radial-gradient(circle at 46% 88%,var(--lc-opening) 0 1px,transparent 2px);background-size:17px 13px,21px 16px,15px 19px;opacity:.5;pointer-events:none}
+body[data-page="letter-concept"] .lc-ink-stamp.lc-hindi-note{--lc-stamp-rotate:-7deg;position:absolute;right:10%;top:-26px;font-size:20px;line-height:1}
+body[data-page="letter-concept"] .lc-go-note .lc-ink-stamp{--lc-stamp-size:clamp(22px,2.6vw,34px);margin-bottom:30px}
+body[data-page="letter-concept"] :is(.plp-why,.lc-invitation) .lc-ink-stamp{--lc-stamp-ink:var(--color-steam-cream);--lc-stamp-paper:transparent}
+@keyframes lc-stamp-slap{0%{opacity:0;transform:translate(18px,-24px) rotate(4deg) scale(1.65)}62%{opacity:1;transform:translate(-2px,2px) rotate(calc(var(--lc-stamp-rotate) - 2deg)) scale(.94)}100%{opacity:1;transform:rotate(var(--lc-stamp-rotate)) scale(1)}}
 .lc-stamp{width:132px;height:132px;right:-12px}.lc-stamp [lang="hi"]{font-size:20px;line-height:1.55;max-width:100px}.lc-stamp small{font-size:7px;letter-spacing:.06em;margin-top:6px}
 .lc-hero{background-image:linear-gradient(90deg,transparent calc(5vw - 14px),var(--color-linen) calc(5vw - 14px),var(--color-linen) calc(5vw - 13px),transparent calc(5vw - 13px))}
 .lc-ribbon{overflow:hidden;background:var(--lc-accent);color:var(--color-steam-cream);padding:18px 0;transform:rotate(-2deg);margin:28px 0 0;max-width:100%;border-block:4px double var(--color-steam-cream)}
@@ -60,7 +66,7 @@ body.lc-motion-paused .lc-reveal.lc-waiting{opacity:1;transform:none}
 body[data-page="letter-concept"] :is(a,button){cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath d='M6 9h20l-3 20H9z' fill='%23FAF6EE' stroke='%23E8400C' stroke-width='2'/%3E%3Cpath d='M4 5h24v5H4zM9 16h14v7H9z' fill='%23E8400C'/%3E%3Cpath d='M12 1v3m7-3v3' stroke='%23E8400C' stroke-width='2'/%3E%3C/svg%3E") 5 5,pointer}
 .lc-button span{transition:transform .25s cubic-bezier(.2,0,0,1)}.lc-button:hover span{transform:translate(3px,-3px) rotate(8deg)}
 }
-@media(prefers-reduced-motion:reduce){.lc-ribbon-track,.lc-travel-cup,.lc-go-hand,.lc-steam{animation:none!important}.lc-travel-cup{transform:translate(520px,218px)}.lc-pencil-mark:after{transform:rotate(-2deg) scaleX(1)}.lc-ribbon-track{transform:none}.lc-hindi-note,.lc-go-note>span,.lc-closing-hindi{transform:none}}
+@media(prefers-reduced-motion:reduce){.lc-ribbon-track,.lc-travel-cup,.lc-go-hand,.lc-steam,.lc-ink-stamp{animation:none!important}.lc-travel-cup{transform:translate(520px,218px)}.lc-pencil-mark:after{transform:rotate(-2deg) scaleX(1)}.lc-ribbon-track{transform:none}}
 body[data-page="letter-concept"] main{overflow-x:clip}
 .lc-go-steps{display:none}
 
@@ -123,28 +129,29 @@ body[data-page="letter-concept"] .lc-paths :focus-visible,body[data-page="letter
 body[data-page="letter-concept"] .lc-invitation{background:linear-gradient(var(--color-pale-froth) 0,var(--color-ceremonial) 120px,var(--color-ceremonial-deep) 100%)}
 body[data-page="letter-concept"] .lc-invitation .lc-section-label{color:var(--color-steam-cream)}
 
-/* A moving street scene below the header: approach, pick up, carry on. */
+/* An observed slice of the morning commute: real Pod, notes from the rush, then carry on. */
 .lc-commute-wrap{padding:18px 0 14px;overflow:hidden;background:var(--lc-opening)}
 .lc-commute-strip{transform:rotate(-1.2deg);background:var(--lc-accent);color:var(--color-steam-cream);border-block:4px double var(--color-steam-cream);overflow:hidden}
 .lc-commute-track{display:flex;width:max-content;animation:lc-commute-scroll 36s linear infinite}
-.lc-commute-unit{display:flex;align-items:center;gap:28px;padding:0 28px;flex-shrink:0}
-.lc-commute-words{font:700 22px/1.1 var(--font-display);white-space:nowrap;letter-spacing:-.025em}.lc-commute-words i{font-family:var(--font-accent);font-size:29px;font-weight:400;margin-inline:8px}
+.lc-commute-unit{display:flex;align-items:center;gap:26px;padding:10px 30px;flex-shrink:0}
+.lc-commute-photo{position:relative;width:154px;height:96px;flex:0 0 auto;margin:0;overflow:hidden;border:4px solid var(--color-steam-cream);transform:rotate(-2deg);box-shadow:6px 6px 0 color-mix(in srgb,var(--color-dark-roast) 22%,transparent)}
+.lc-commute-photo picture,.lc-commute-photo img{display:block;width:100%;height:100%}.lc-commute-photo img{object-fit:cover;object-position:center 58%}.lc-commute-photo figcaption{position:absolute;left:5px;bottom:5px;padding:3px 5px;background:var(--color-steam-cream);color:var(--color-dark-roast);font:700 6px/1.1 var(--font-body);letter-spacing:.1em}
+.lc-commute-moment,.lc-commute-ticket{display:grid;gap:2px;flex:0 0 auto;padding:9px 12px;background:var(--color-steam-cream);color:var(--color-dark-roast);box-shadow:4px 4px 0 color-mix(in srgb,var(--color-dark-roast) 18%,transparent)}
+.lc-commute-moment{transform:rotate(2deg)}.lc-commute-ticket{background:var(--color-oat);transform:rotate(-1.5deg)}
+.lc-commute-moment small,.lc-commute-ticket small{font:700 7px/1 var(--font-body);letter-spacing:.12em}.lc-commute-moment strong,.lc-commute-ticket strong{font:700 17px/1.05 var(--font-display);letter-spacing:-.02em}
+.lc-commute-words{font:700 19px/1.1 var(--font-display);white-space:nowrap;letter-spacing:-.025em}.lc-commute-words i{font-family:var(--font-accent);font-size:27px;font-weight:400;margin-inline:8px}
 .lc-commute-hindi{font:600 23px/1.4 "Kohinoor Devanagari","Nirmala UI",sans-serif;white-space:nowrap}
-.lc-commute-scene{display:block;width:420px;height:96px;flex-shrink:0;overflow:visible;fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
-.lc-commute-ground{stroke-width:1;stroke-dasharray:3 8;opacity:.45}.lc-commute-pod text{stroke:none;fill:currentColor;font:700 8px var(--font-body);letter-spacing:1px}.lc-commute-pod{stroke-width:1.8}
-.lc-commuter{animation:lc-walk-to-pod 9s linear infinite;transform:translate(30px,92px)}
-.lc-walker-body{animation:lc-walk-bob .55s ease-in-out infinite alternate}.lc-walker-body circle{fill:var(--color-steam-cream);stroke:none}.lc-walker-torso{stroke-width:7}.lc-walker-leg{transform-origin:-5px -17px;animation:lc-walk-step .65s ease-in-out infinite alternate}.lc-leg-back{animation-delay:-.65s}.lc-walker-bag{fill:var(--lc-accent);stroke-width:1.8}.lc-carried-cup{fill:var(--color-steam-cream);stroke:var(--lc-accent);stroke-width:1.5;animation:lc-collect-cup 9s linear infinite}.lc-commute-spark{animation:lc-pickup-spark 9s linear infinite}
-body.lc-motion-paused :is(.lc-commute-track,.lc-commuter,.lc-walker-body,.lc-walker-leg,.lc-carried-cup,.lc-commute-spark){animation-play-state:paused!important}
+body.lc-motion-paused .lc-commute-track{animation-play-state:paused!important}
 @keyframes lc-commute-scroll{to{transform:translateX(-50%)}}
-@keyframes lc-walk-to-pod{0%{transform:translate(22px,92px);opacity:0}5%{opacity:1}42%,55%{transform:translate(210px,92px);opacity:1}95%{opacity:1}100%{transform:translate(444px,92px);opacity:0}}
-@keyframes lc-walk-step{from{transform:rotate(-16deg)}to{transform:rotate(16deg)}}
-@keyframes lc-walk-bob{from{transform:translateY(0)}to{transform:translateY(-2px)}}
-@keyframes lc-collect-cup{0%,47%{opacity:0}50%,100%{opacity:1}}
-@keyframes lc-pickup-spark{0%,45%,61%,100%{opacity:0}48%,56%{opacity:1}}
-@media(prefers-reduced-motion:reduce){.lc-commute-track,.lc-commuter,.lc-walker-body,.lc-walker-leg,.lc-carried-cup,.lc-commute-spark{animation:none!important}.lc-commuter{transform:translate(305px,92px)}.lc-carried-cup{opacity:1}.lc-commute-spark{opacity:0}}
-.lc-commute-scene{order:-1}
-.lc-commuter,.lc-carried-cup,.lc-commute-spark{animation-delay:-2s}
-.lc-commuter-second,.lc-commuter-second .lc-carried-cup{animation-delay:-6s}
+@media(prefers-reduced-motion:reduce){.lc-commute-track{animation:none!important}}
+
+@media (min-width:761px) and (max-width:1024px){
+ .lc-daylight{padding-bottom:44px}
+ .lc-daylight-sky{height:120px}.lc-setting-sun{width:100px;height:100px;left:calc(50% - 50px);top:36px}
+ .lc-daylight-intro{padding:16px 0 28px}.lc-daylight-intro h2{font-size:clamp(46px,7vw,64px)!important}.lc-daylight-intro>p:not(.lc-section-label){margin:12px 0!important}
+ .lc-daylight-cups{grid-template-columns:1fr 40px 1fr;gap:16px;max-width:760px;padding-bottom:40px}.lc-daylight-cups img{border-width:6px}.lc-daylight-cups h3{font-size:30px;margin:12px 0 8px!important}.lc-daylight-thread{height:108px;font-size:44px}.lc-daylight-matcha{margin-top:24px}
+ .lc-dusk{gap:36px;padding-top:30px}.lc-dusk h2{font-size:42px!important}.lc-dusk-button{margin-top:16px}.lc-dusk small{margin-top:12px}
+}
 
 /* Full footer directory, signed as the final postscript. */
 body[data-page="letter-concept"] .lc-footer-full{display:block;position:relative;padding-top:48px}
