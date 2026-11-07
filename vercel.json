@@ -155,22 +155,22 @@
     },
     {
       "source": "/journal/why-specialty-coffee-costs-300-rupees-india",
-      "destination": "/blog/why-specialty-coffee-costs-300-rupees-india",
+      "destination": "/blog/grab-and-go-specialty-coffee",
       "permanent": true
     },
     {
       "source": "/journal/why-specialty-coffee-costs-300-rupees-india.html",
-      "destination": "/blog/why-specialty-coffee-costs-300-rupees-india",
+      "destination": "/blog/grab-and-go-specialty-coffee",
       "permanent": true
     },
     {
       "source": "/journal/why-we-built-pods-not-cafes",
-      "destination": "/blog/why-we-built-pods-not-cafes",
+      "destination": "/blog/building-specialty-coffee-brand-without-cafe",
       "permanent": true
     },
     {
       "source": "/journal/why-we-built-pods-not-cafes.html",
-      "destination": "/blog/why-we-built-pods-not-cafes",
+      "destination": "/blog/building-specialty-coffee-brand-without-cafe",
       "permanent": true
     },
     {
@@ -185,12 +185,52 @@
     },
     {
       "source": "/journal/india-coffee-market-2030-opportunity",
-      "destination": "/blog/india-coffee-market-2030-opportunity",
+      "destination": "/blog/dear-ahmedabad-first-pods",
       "permanent": true
     },
     {
       "source": "/journal/morning-coffee-ritual-vs-routine",
       "destination": "/blog/morning-coffee-ritual-vs-routine",
+      "permanent": true
+    },
+    {
+      "source": "/blog/why-specialty-coffee-costs-300-rupees-india",
+      "destination": "/blog/grab-and-go-specialty-coffee",
+      "permanent": true
+    },
+    {
+      "source": "/blog/why-specialty-coffee-costs-300-rupees-india.html",
+      "destination": "/blog/grab-and-go-specialty-coffee",
+      "permanent": true
+    },
+    {
+      "source": "/blog/india-coffee-market-2030-opportunity",
+      "destination": "/blog/dear-ahmedabad-first-pods",
+      "permanent": true
+    },
+    {
+      "source": "/blog/india-coffee-market-2030-opportunity.html",
+      "destination": "/blog/dear-ahmedabad-first-pods",
+      "permanent": true
+    },
+    {
+      "source": "/blog/what-we-are-building-ps-coffee-gujarat",
+      "destination": "/blog/dear-ahmedabad-first-pods",
+      "permanent": true
+    },
+    {
+      "source": "/blog/what-we-are-building-ps-coffee-gujarat.html",
+      "destination": "/blog/dear-ahmedabad-first-pods",
+      "permanent": true
+    },
+    {
+      "source": "/blog/why-we-built-pods-not-cafes",
+      "destination": "/blog/building-specialty-coffee-brand-without-cafe",
+      "permanent": true
+    },
+    {
+      "source": "/blog/why-we-built-pods-not-cafes.html",
+      "destination": "/blog/building-specialty-coffee-brand-without-cafe",
       "permanent": true
     },
     {
