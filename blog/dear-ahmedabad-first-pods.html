@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<link rel="icon" type="image/png" href="../assets/icons/ps-coffee_icon_terracotta_32.png">
+<link rel="apple-touch-icon" href="../assets/icons/ps-coffee_icon_terracotta_180.png">
+<title>Grab-and-Go Specialty Coffee in Ahmedabad | P.S. Coffee</title>
+<meta name="description" content="Is there grab-and-go specialty coffee in Ahmedabad? Not yet. Where the first P.S. Coffee Pods are being explored, and what is confirmed so far.">
+<link rel="canonical" href="https://www.pscoffee.in/blog/dear-ahmedabad-first-pods">
+<meta property="og:title" content="Dear Ahmedabad. We are coming to your building.">
+<meta property="og:description" content="Is there grab-and-go specialty coffee in Ahmedabad? Not yet. Where the first P.S. Coffee Pods are being explored, and what is confirmed so far.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.pscoffee.in/blog/dear-ahmedabad-first-pods">
+<meta property="og:image" content="https://www.pscoffee.in/assets/photos/site/home-hero-pod-desktop.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Dear Ahmedabad. We are coming to your building.">
+<meta name="twitter:description" content="Is there grab-and-go specialty coffee in Ahmedabad? Not yet. Where the first P.S. Coffee Pods are being explored, and what is confirmed so far.">
+<meta name="twitter:image" content="https://www.pscoffee.in/assets/photos/site/home-hero-pod-desktop.webp">
+<link rel="stylesheet" href="../assets/ps.css">
+<link rel="stylesheet" href="../assets/wh.css?v=120">
+<link rel="stylesheet" href="../assets/mobile.css?v=92">
+<style>
+:root{
+  --terracotta:#E8400C; --brick:#B8300A; --brick-deep:#7A1F08;
+  --steam:#FAF6EE; --oat:#F2EBD9; --linen:#E8DCC8;
+  --espresso:#5C3518; --roast:#3D2010;
+  --matcha:#3D6B4A; --matcha-mid:#5A8C5E; --matcha-wash:#EAF2E0; --matcha-light:#C8DDB8;
+  --muted:rgba(60,35,18,.62);
+  --border:rgba(60,35,18,.10);
+  --radius:8px; --radius-lg:14px;
+}
+
+/* ---- Verdict strip ---- */
+.vstrip{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:var(--border);border-radius:var(--radius-lg);overflow:hidden;margin-bottom:2.5rem;border:.5px solid var(--border)}
+.vcell{background:var(--steam);padding:1.2rem 1.3rem;text-align:center}
+.vcell .vl{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.vcell .vv{font-size:21px;font-weight:600;font-family:var(--font-display)}
+.vv-t{color:var(--terracotta)} .vv-g{color:var(--matcha)} .vv-d{color:var(--roast)}
+
+/* ---- TOC ---- */
+.toc{background:var(--oat);border:.5px solid var(--border);border-radius:var(--radius-lg);padding:.9rem 1.2rem;margin-bottom:2.5rem}
+.toc h3{font-size:10.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:.55rem}
+.toc-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:2px 1.6rem}
+.toc-list li{display:flex;align-items:baseline;gap:7px;padding:3px 0}
+.toc-list li a{font-size:13.5px;color:var(--terracotta);text-decoration:none;border-bottom:none}
+.toc-list li a:hover{text-decoration:underline}
+.toc-num{font-size:10.5px;font-weight:700;color:var(--muted);font-family:var(--font-body);flex-shrink:0;display:inline-block}
+
+/* ---- Quick answer ---- */
+.qa{background:var(--oat);border-left:4px solid var(--terracotta);border-radius:0 var(--radius-lg) var(--radius-lg) 0;padding:1rem 1.4rem;margin-bottom:1.4rem}
+.qa h3{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--brick);margin-bottom:.5rem}
+.qa p{font-size:15.5px;color:var(--roast);line-height:1.65;margin:0}
+
+/* ---- Key takeaways ---- */
+.kt{background:var(--oat);border-left:4px solid var(--terracotta);border-radius:0 var(--radius-lg) var(--radius-lg) 0;padding:1.2rem 1.5rem;margin:1rem 0 1.5rem}
+.kt h3{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:.9rem}
+.kti{display:flex;gap:10px;padding:5px 0;align-items:flex-start}
+.kti .dot{width:7px;height:7px;border-radius:50%;background:var(--terracotta);margin-top:9px;flex-shrink:0}
+.kti p{font-size:14.5px;margin:0;color:var(--roast);line-height:1.55}
+
+/* ---- Section divider with centered P.S. mark ---- */
+.div-ps{display:flex;align-items:center;gap:14px;margin:.7rem 0}
+.div-ps .line{flex:1;height:2px;background:var(--linen)}
+.div-ps .mark{font-family:var(--font-accent);font-style:italic;font-size:12px;font-weight:700;letter-spacing:.16em;color:var(--terracotta);white-space:nowrap}
+
+.section{margin-bottom:1rem;padding:0}
+.sec-label{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:.6rem}
+h2.st{font-family:var(--font-display);font-size:26px;font-weight:600;color:var(--terracotta);margin:0 0 .6rem;line-height:1.28;letter-spacing:-.2px}
+h3.sub{font-size:18px;font-weight:600;color:var(--terracotta);margin:1.7rem 0 .7rem;font-family:var(--font-display)}
+.section p{margin-bottom:1.05rem;color:var(--espresso);font-size:16px;line-height:1.75}
+.section p strong{color:var(--roast);font-weight:600}
+.section ul,.section ol{margin:0 0 1.1rem 1.4rem}
+.section li{margin-bottom:.45rem;color:var(--espresso)}
+
+/* ---- Pros / Cons ---- */
+.proscons{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.4rem 0}
+.prob,.conb{border-radius:var(--radius-lg);padding:1.2rem 1.3rem}
+.prob{background:var(--matcha-wash);border:.5px solid var(--matcha-light)}
+.conb{background:#FAEEDA;border:.5px solid rgba(186,117,23,.3)}
+.prob h4,.conb h4{font-size:13px;font-weight:700;margin-bottom:.7rem;display:flex;align-items:center;gap:7px;letter-spacing:.02em}
+.prob h4{color:var(--matcha)}
+.conb h4{color:#854F0B}
+.prob ul,.conb ul{list-style:none;padding:0;margin:0}
+.prob li,.conb li{font-size:13.5px;padding:5px 0;display:flex;align-items:flex-start;gap:8px;line-height:1.5;border-bottom:.5px solid rgba(60,35,18,.06)}
+.prob li:last-child,.conb li:last-child{border-bottom:none}
+.prob li{color:var(--matcha)}
+.conb li{color:#633806}
+.tick{flex-shrink:0;font-weight:700;margin-top:1px}
+
+/* ---- Highlight box ---- */
+.hl{background:var(--oat);border:.5px solid var(--border);border-radius:var(--radius-lg);padding:1.3rem 1.6rem;margin:1.5rem 0}
+.hl p{font-size:15px;color:var(--roast);margin:0 0 .4rem;line-height:1.65}
+.hl p:last-child{margin-bottom:0}
+.hl strong{color:var(--terracotta)}
+
+/* ---- Comparison table ---- */
+.ctab{width:100%;border-collapse:collapse;margin:1.4rem 0;font-size:14px;background:var(--steam);border-radius:var(--radius-lg);overflow:hidden;border:.5px solid var(--border)}
+.ctab th{background:var(--roast);color:#FFB89A;padding:11px 14px;text-align:left;font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.ctab td{padding:11px 14px;border-bottom:.5px solid var(--border);color:var(--espresso);vertical-align:top}
+.ctab tr:nth-child(even) td{background:var(--oat)}
+.ctab tr:last-child td{border-bottom:none}
+.ctab td strong{color:var(--roast)}
+
+/* ---- Image placeholder ---- */
+.imgph{display:block;overflow:hidden;background:var(--oat);border:1px solid rgba(83,47,32,.12);border-radius:var(--radius-lg);margin:1.8rem 0;aspect-ratio:16/10;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:1.4rem}
+.imgph .ico{font-family:var(--font-body);font-size:13px;font-weight:700;letter-spacing:.1em;color:var(--terracotta);margin-bottom:.5rem;text-transform:uppercase}
+.imgph .cap{font-size:13px;color:var(--muted);max-width:380px;margin:0 auto;line-height:1.5}
+@media (max-width:760px){.imgph{aspect-ratio:9/11}}
+
+/* ---- P.S. line ---- */
+.psline{background:var(--oat);border-top:3px solid var(--terracotta);border-bottom:3px solid var(--terracotta);padding:1.6rem 1.4rem;margin:2.6rem 0;text-align:center;font-family:var(--font-accent);font-style:italic;font-size:18px;font-weight:600;color:var(--terracotta);letter-spacing:.2px;line-height:1.5}
+
+/* ---- FAQ ---- */
+.faqs{margin:1rem 0}
+.faqs h2{font-family:var(--font-display);font-size:18px;color:var(--roast);margin:1rem 0 .3rem}
+.faq-item{border-bottom:.5px solid var(--border);padding:.2rem 0;cursor:pointer}
+.faq-q{font-size:15px;font-weight:600;color:var(--roast);display:flex;justify-content:space-between;align-items:flex-start;gap:.8rem;line-height:1.35}
+.faq-a{font-size:14px;color:var(--espresso);margin-top:.25rem;line-height:1.6;display:none!important}
+.faq-item.open .faq-a{display:block!important}
+.faq-icon{font-size:22px;color:var(--terracotta);transition:transform .2s;flex-shrink:0;line-height:1;font-weight:300}
+.faq-item.open .faq-icon{transform:rotate(45deg)}
+
+/* ---- Prev / Next ---- */
+.pnnav{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:2.5rem 0}
+.pncard{background:var(--steam);border:.5px solid var(--border);border-radius:var(--radius-lg);padding:1.2rem 1.4rem;text-decoration:none;color:inherit;display:block;transition:background .15s,border-color .15s}
+.pncard:hover{background:var(--oat);border-color:var(--terracotta);text-decoration:none}
+.pncard .pn-lbl{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem;display:flex;align-items:center;gap:6px}
+.pncard.next{text-align:right}
+.pncard.next .pn-lbl{justify-content:flex-end}
+.pncard .pn-title{font-family:var(--font-display);font-size:16px;color:var(--roast);font-weight:600;line-height:1.35}
+.pncard.disabled{opacity:.4;pointer-events:none}
+
+/* ---- CTA box ---- */
+.ctab-box{background:var(--terracotta);border-radius:var(--radius-lg);padding:2.6rem 2.2rem;text-align:center;margin:2.5rem 0 1rem;position:relative;overflow:hidden}
+.ctab-box::before{content:'';position:absolute;top:-50px;right:-50px;width:200px;height:200px;border-radius:50%;background:rgba(250,246,238,.06)}
+.ctab-box .cta-tag{display:inline-block;background:rgba(250,246,238,.16);color:var(--steam);font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:5px 14px;border-radius:50px;margin-bottom:1rem;position:relative;z-index:1}
+.ctab-box h2{font-family:var(--font-display);font-size:26px;color:var(--steam);margin-bottom:.7rem;line-height:1.3;font-weight:600;position:relative;z-index:1}
+.ctab-box p{color:rgba(250,246,238,.82);font-size:15px;margin-bottom:1.5rem;max-width:520px;margin-left:auto;margin-right:auto;line-height:1.6;position:relative;z-index:1}
+.cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;position:relative;z-index:1}
+.cta-btn{display:inline-block;font-size:14.5px;font-weight:600;padding:13px 28px;border-radius:50px;text-decoration:none;letter-spacing:.3px;transition:transform .12s,box-shadow .12s;border:2px solid transparent}
+.cta-btn.primary{background:var(--steam);color:var(--brick)}
+.cta-btn.primary:hover{transform:scale(1.03);text-decoration:none}
+.cta-btn.outline{background:transparent;color:var(--steam);border-color:rgba(250,246,238,.5)}
+.cta-btn.outline:hover{background:rgba(250,246,238,.1);text-decoration:none}
+
+/* ---- Responsive ---- */
+@media(max-width:640px){
+  .toc-list{grid-template-columns:1fr}
+  .vstrip{grid-template-columns:1fr}
+  .proscons{grid-template-columns:1fr}
+  .pnnav{grid-template-columns:1fr}
+  .pncard.next{text-align:left}
+  .pncard.next .pn-lbl{justify-content:flex-start}
+  .ctab-box{padding:2rem 1.4rem}
+  .ctab-box h2{font-size:22px}
+  h2.st{font-size:22px}
+  .ctab{font-size:13px}
+  .ctab th,.ctab td{padding:9px 10px}
+}
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5TS0QMZ55W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+
+  gtag("config", "G-5TS0QMZ55W");
+</script>
+<link rel="stylesheet" href="../assets/home-letter.css?v=16">
+</head>
+<body data-page="letter-concept" data-mood="coffee" class="journal-article">
+<a class="lc-skip" href="#article-start">Skip to article</a>
+<header class="lc-nav"><a href="../index.html" aria-label="P.S. Coffee home"><img src="../assets/icons/ps-coffee_wordmark_steam cream.png" alt="P.S. Coffee" width="140"></a><div class="lc-mood" role="group" aria-label="Website colour mood"><button type="button" data-mood-choice="coffee" aria-pressed="true">Coffee</button><button type="button" data-mood-choice="matcha" aria-pressed="false">Matcha</button></div><button class="lc-menu-toggle" type="button" aria-expanded="false" aria-controls="lc-site-menu"><span>Menu</span><span aria-hidden="true">+</span></button><nav id="lc-site-menu" aria-label="Main navigation"><a href="../menu.html">Menu</a><a href="../pods.html">Pods</a><a href="../pack.html">P.S. Pass</a><a href="../about.html">About</a><a href="../blogs.html" aria-current="page">Journal</a></nav><a class="lc-button lc-small" href="../blogs.html#archive">Browse the Journal <span aria-hidden="true">↓</span></a></header>
+<nav class="journal-breadcrumb" aria-label="Breadcrumb"><a href="../blogs.html">← The Journal</a><span>Notes from P.S. Coffee</span></nav><div id="article-start"></div>
+
+<main class="journal-post">
+  <article>
+    <header class="journal-post-hero">
+      <p>The P.S. Journal. · The city</p>
+      <h1>Dear Ahmedabad. We are coming to your building.</h1>
+      <div class="journal-post-meta">
+        <span>By P.S. Coffee</span>
+        <span>November 2026</span>
+        <span>6 min read</span>
+      </div>
+    </header>
+
+    <div class="journal-post-body"><div class="vstrip"><div class="vcell"><div class="vv vv-t">0</div><div class="vl">Pods open today</div></div><div class="vcell"><div class="vv vv-g">6</div><div class="vl">Areas being explored</div></div><div class="vcell"><div class="vv vv-d">50 to 200 sq ft</div><div class="vl">The planned Pod footprint</div></div></div><div class="toc"><h3>In this note</h3><ul class="toc-list"><li><span class="toc-num">01</span><a href="#s1">Every Pod is written to the place it sits in</a></li><li><span class="toc-num">02</span><a href="#s2">What is coming</a></li><li><span class="toc-num">03</span><a href="#s3">Where the first Pods are being explored</a></li><li><span class="toc-num">04</span><a href="#s4">Inside, or the corner outside</a></li><li><span class="toc-num">05</span><a href="#s5">What is confirmed, and what is not</a></li><li><span class="toc-num">06</span><a href="#s6">Tell us where you would stop</a></li></ul></div><div class="qa"><h3>The short version</h3><p>Not yet. No P.S. Coffee Pod is open today. P.S. Coffee is a grab-and-go specialty coffee brand building its first Pods in and around Ahmedabad's offices, co-working spaces, campuses and gyms. The areas being explored include Prahlad Nagar, SG Highway, Makarba and SBR, plus GIFT City and the TCS area in Gandhinagar. None is confirmed.</p></div><div class="kt"><h3>Key takeaways</h3><div class="kti"><div class="dot"></div><p>No P.S. Coffee Pod is open yet. Ahmedabad is the first city.</p></div><div class="kti"><div class="dot"></div><p>Areas being explored: Prahlad Nagar, SG Highway, Makarba and SBR in Ahmedabad, plus GIFT City and the TCS area in Gandhinagar. None is confirmed.</p></div><div class="kti"><div class="dot"></div><p>A Pod sits inside a building or on the corner outside it, wherever the day already passes.</p></div><div class="kti"><div class="dot"></div><p>Opening news, with the address, goes to the waitlist first.</p></div></div>
+
+<div class="div-ps"><div class="line"></div><div class="mark">P . S .</div><div class="line"></div></div>
+<div class="section" id="s1">
+  <div class="sec-label">The city · 01</div>
+  <h2 class="st">Every Pod is written to the place it sits in</h2>
+  <p>A postscript needs a letter. The letter is your day: the meetings, the lectures, the commute, the one more thing. The coffee is the line you add after it. That is where the name comes from, and it is why every Pod will be addressed to its building before it opens.</p>
+  <p>This is the first of those letters. It is written to the city rather than to a building, because no building is confirmed yet.</p>
+  <div class="hl"><p><strong>Dear Ahmedabad. We are coming to your building.</strong></p></div>
+</div>
+
+<div class="div-ps"><div class="line"></div><div class="mark">P . S .</div><div class="line"></div></div>
+<div class="section" id="s2">
+  <div class="sec-label">The city · 02</div>
+  <h2 class="st">What is coming: a small format for a daily cup</h2>
+  <p>A P.S. Pod is P.S. Coffee's compact grab-and-go format: 50 to 200 sq ft, specialty coffee ground at every order, placed inside a building or on the corner outside it. It is not a cafe, and it is not a kiosk. There is nowhere to sit, by design.</p>
+  <p>The board will hold four drinks that never change: P.S. Black, P.S. White, P.S. Green and P.S. Strong. Behind them sits a rotating few, numbered rather than named. The planned menu is on the <a href="../menu.html">Menu</a>, and the format has its own post: <a href="grab-and-go-specialty-coffee.html">Grab-and-go specialty coffee, and what it leaves out</a>.</p>
+</div>
+
+<div class="div-ps"><div class="line"></div><div class="mark">P . S .</div><div class="line"></div></div>
+<div class="section" id="s3">
+  <div class="sec-label">The city · 03</div>
+  <h2 class="st">Where the first Pods are being explored</h2>
+  <p>These are the areas on the list. Each is being explored, not confirmed. No address, building or date is set for any of them.</p>
+  <table class="ctab">
+    <thead><tr><th>Area</th><th>City</th><th>Why it is on the list</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr><td>Prahlad Nagar</td><td>Ahmedabad</td><td>Office buildings within walking distance of each other</td><td>Exploring</td></tr>
+      <tr><td>SG Highway</td><td>Ahmedabad</td><td>Office towers along a single corridor</td><td>Exploring</td></tr>
+      <tr><td>Makarba</td><td>Ahmedabad</td><td>Offices near the SG Highway belt</td><td>Exploring</td></tr>
+      <tr><td>SBR (Sindhu Bhavan Road)</td><td>Ahmedabad</td><td>Offices and a busy walking stretch</td><td>Exploring</td></tr>
+      <tr><td>GIFT City</td><td>Gandhinagar</td><td>A planned district of office towers</td><td>Exploring</td></tr>
+      <tr><td>TCS area</td><td>Gandhinagar</td><td>Large technology campuses</td><td>Exploring</td></tr>
+    </tbody>
+  </table>
+  <p>If your building is not on this list, that does not rule it out. The list is short because it is early. GIFT City has its own page: <a href="../coffee-gift-city-gandhinagar.html">Coffee in GIFT City</a>.</p>
+</div>
+
+<div class="div-ps"><div class="line"></div><div class="mark">P . S .</div><div class="line"></div></div>
+<div class="section" id="s4">
+  <div class="sec-label">The city · 04</div>
+  <h2 class="st">Inside your building, or the corner you pass on the way in</h2>
+  <p>Not every Pod will be inside a building. Some sites have the footfall but not the space, or the space but not the permission. There, the Pod sits on the corner outside, on the route people already walk.</p>
+  <p>The rule is the same either way. A Pod goes where the day already passes, so the coffee is a stop and never a detour.</p>
+  <div class="imgph"><div class="ico">Image placeholder</div><div class="cap">Concept visual: a Pod on the corner outside an office building, on the walk in</div></div>
+</div>
+
+<div class="div-ps"><div class="line"></div><div class="mark">P . S .</div><div class="line"></div></div>
+<div class="section" id="s5">
+  <div class="sec-label">The city · 05</div>
+  <h2 class="st">What is confirmed, and what is not</h2>
+  <div class="proscons">
+    <div class="prob"><h4>Confirmed</h4><ul><li><span class="tick">+</span>Ahmedabad is the first city</li><li><span class="tick">+</span>The Pod format: grab-and-go, 50 to 200 sq ft, no seating</li><li><span class="tick">+</span>The Letter: four drinks that never change</li><li><span class="tick">+</span>Specialty grade, every lot, ground at every order</li></ul></div>
+    <div class="conb"><h4>Not yet</h4><ul><li><span class="tick">–</span>Any address or building</li><li><span class="tick">–</span>Any opening date</li><li><span class="tick">–</span>The app, which is a prototype for now</li><li><span class="tick">–</span>The rotating slate for opening week</li></ul></div>
+  </div>
+  <p>A short list of true things beats a long list of hopes. When something moves from the right column to the left, the waitlist hears first.</p>
+</div>
+
+<div class="div-ps"><div class="line"></div><div class="mark">P . S .</div><div class="line"></div></div>
+<div class="section" id="s6">
+  <div class="sec-label">The city · 06</div>
+  <h2 class="st">Tell us where you would stop</h2>
+  <p>The map is built partly from what people tell us. Four kinds of message help most.</p>
+  <p><strong>People who work nearby.</strong> Tell us the building and the time you usually want a cup. That is worth more than any footfall report.</p>
+  <p><strong>Building and facilities teams.</strong> If your building has daily footfall and 50 to 100 sq ft to spare, we bring the counter, the barista and the beans.</p>
+  <p><strong>Campus teams.</strong> Universities and colleges with a long day and a short walk between blocks.</p>
+  <p><strong>Gym owners.</strong> Early peaks, a predictable walk out, and people who know what they want to drink.</p>
+  <div class="imgph"><div class="ico">Image placeholder</div><div class="cap">Map of the areas being explored in Ahmedabad and Gandhinagar, each marked unconfirmed</div></div>
+</div>
+
+<div class="psline">P.S. The map is still being drawn.</div>
+
+<section class="faqs" id="faq">
+  <h2>Frequently asked questions</h2>
+  <div class="faq-item open"><div class="faq-q">Is there grab-and-go specialty coffee in Ahmedabad?<span class="faq-icon">+</span></div><div class="faq-a">P.S. Coffee is building it, but no Pod is open yet. The first Pods are being explored in and around Ahmedabad's offices, co-working spaces, campuses and gyms, with Gandhinagar alongside. Opening news goes to the waitlist first.</div></div>
+  <div class="faq-item"><div class="faq-q">Where will the first P.S. Coffee Pods open?<span class="faq-icon">+</span></div><div class="faq-a">The areas being explored are Prahlad Nagar, SG Highway, Makarba and SBR in Ahmedabad, plus GIFT City and the TCS area in Gandhinagar. None of these is confirmed, and no building or address is set.</div></div>
+  <div class="faq-item"><div class="faq-q">When will the first Pod open?<span class="faq-icon">+</span></div><div class="faq-a">No date is set. The waitlist will get the date and the address before anyone else.</div></div>
+  <div class="faq-item"><div class="faq-q">Will there be a P.S. Pod in GIFT City or Gandhinagar?<span class="faq-icon">+</span></div><div class="faq-a">Both are being explored alongside Ahmedabad, and nothing is confirmed yet. The Coffee in GIFT City page covers what a Pod there would need.</div></div>
+  <div class="faq-item"><div class="faq-q">Can my building host a P.S. Pod?<span class="faq-icon">+</span></div><div class="faq-a">Possibly. A Pod needs a spot with daily footfall and about 50 to 100 sq ft, inside the building or just outside it. P.S. Coffee brings the counter, the barista and the beans. Start through Host a Pod.</div></div>
+  <div class="faq-item"><div class="faq-q">How will I know when a Pod opens near me?<span class="faq-icon">+</span></div><div class="faq-a">Join the opening waitlist and name the area you would actually stop in. News for that area goes to that list first.</div></div>
+</section>
+
+<div class="ctab-box">
+  <h2>Tell us where you would stop for a cup.</h2>
+  <p>Join the opening waitlist and name your area. If you run a building, a campus or a gym, start the conversation about hosting a Pod.</p>
+  <div class="cta-row"><a class="cta-btn primary" href="../pods.html#waitlist">Join the opening waitlist →</a><a class="cta-btn outline" href="../partnership.html#host">Host a Pod in your building →</a></div>
+</div>
+
+<div class="pnnav"><a class="pncard" href="grab-and-go-specialty-coffee.html"><div class="pn-lbl">← Previous</div><div class="pn-title">Grab-and-go specialty coffee, and what it leaves out</div></a><a class="pncard next" href="the-letter-and-the-ps-explained.html"><div class="pn-lbl">Next →</div><div class="pn-title">What are The Letter and The P.S.?</div></a></div></div>
+  </article>
+</main>
+
+<footer class="lc-footer lc-footer-full" aria-label="P.S. Coffee footer"><div class="lc-footer-signoff"><span class="lc-footer-ps" aria-hidden="true">P.S.</span><div><p class="lc-section-label">ONE LAST THING, BEFORE YOU GO.</p><p class="lc-footer-lastline">There is always room<br>for <em>a little more coffee.</em></p><span class="lc-footer-yours">Yours, in the everyday.</span></div><a href="../blogs.html" class="lc-footer-top">Back to the first note ↑</a></div><div class="lc-footer-directory"><div class="lc-footer-brand"><a href="../index.html"><img src="../assets/icons/ps-coffee_wordmark_steam cream.png" alt="P.S. Coffee" width="220"></a><p>The day is the letter.<br>The coffee is the P.S.</p><span>AHMEDABAD FIRST.<br>STILL TAKING SHAPE.</span><a href="mailto:hello@pscoffee.in">hello@pscoffee.in ↗</a></div><nav><h3>Explore.</h3><a href="../menu.html">The Menu</a><a href="../matcha.html">P.S. Green</a><a href="../pack.html">P.S. Pass</a><a href="../about.html">Our Story</a><a href="../blogs.html">The Journal</a><a href="../events.html">Events</a></nav><nav><h3>Pods &amp; people.</h3><a href="../pods.html#pods">Planned locations</a><a href="../app.html">App preview</a><a href="../partnership.html#host">Host a Pod</a><a href="../partnership.html">Partner with us</a><a href="../join.html">Join us</a><a href="https://www.thebarista.school" target="_blank" rel="noopener">Barista School ↗</a></nav><nav><h3>Help &amp; info.</h3><a href="../faq.html">FAQ</a><a href="mailto:hello@pscoffee.in">Contact</a><a href="../feedback.html">Leave a note</a><a href="../terms.html">Terms of Use</a><a href="../privacy.html">Privacy Policy</a><a href="../disclaimer.html">General Disclaimer</a><a href="../survey-disclosure.html">Survey Notice</a><a href="../copyright.html">Copyright</a></nav></div><div class="lc-footer-connect"><div><h3>Be there when the first Pod opens.</h3><p>First access and opening news.</p><a class="lc-button lc-footer-signup" href="../pods.html#waitlist">Get opening updates ↗</a></div><nav><h3>Keep in touch.</h3><a href="https://www.instagram.com/pscoffee_pods" target="_blank" rel="noopener">Instagram ↗</a><a href="https://www.facebook.com/pscoffee" target="_blank" rel="noopener">Facebook ↗</a><a href="https://www.linkedin.com/company/pscoffee" target="_blank" rel="noopener">LinkedIn ↗</a></nav><span class="lc-footer-blessing" lang="hi">॥ राधे राधे ॥</span></div><div class="lc-footer-bottom"><span>© P.S. Coffee 2026</span><a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a><a href="../copyright.html">Copyright</a></div></footer>
+<script src="../assets/image-slot.js?v=3"></script>
+<script src="../assets/ps.js?v=53"></script>
+<script src="../assets/mobile.js?v=5"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Dear Ahmedabad. We are coming to your building.", "description": "Is there grab-and-go specialty coffee in Ahmedabad? Not yet. Where the first P.S. Coffee Pods are being explored, and what is confirmed so far.", "author": {"@type": "Organization", "name": "P.S. Coffee"}, "publisher": {"@type": "Organization", "name": "P.S. Coffee", "logo": {"@type": "ImageObject", "url": "https://www.pscoffee.in/assets/icons/ps-coffee_square_terracotta_framed.png"}}, "datePublished": "2026-11-07", "dateModified": "2026-11-07", "mainEntityOfPage": "https://www.pscoffee.in/blog/dear-ahmedabad-first-pods", "image": "https://www.pscoffee.in/assets/photos/site/home-hero-pod-desktop.webp", "url": "https://www.pscoffee.in/blog/dear-ahmedabad-first-pods"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is there grab-and-go specialty coffee in Ahmedabad?", "acceptedAnswer": {"@type": "Answer", "text": "P.S. Coffee is building it, but no Pod is open yet. The first Pods are being explored in and around Ahmedabad's offices, co-working spaces, campuses and gyms, with Gandhinagar alongside. Opening news goes to the waitlist first."}}, {"@type": "Question", "name": "Where will the first P.S. Coffee Pods open?", "acceptedAnswer": {"@type": "Answer", "text": "The areas being explored are Prahlad Nagar, SG Highway, Makarba and SBR in Ahmedabad, plus GIFT City and the TCS area in Gandhinagar. None of these is confirmed, and no building or address is set."}}, {"@type": "Question", "name": "When will the first Pod open?", "acceptedAnswer": {"@type": "Answer", "text": "No date is set. The waitlist will get the date and the address before anyone else."}}, {"@type": "Question", "name": "Will there be a P.S. Pod in GIFT City or Gandhinagar?", "acceptedAnswer": {"@type": "Answer", "text": "Both are being explored alongside Ahmedabad, and nothing is confirmed yet. The Coffee in GIFT City page covers what a Pod there would need."}}, {"@type": "Question", "name": "Can my building host a P.S. Pod?", "acceptedAnswer": {"@type": "Answer", "text": "Possibly. A Pod needs a spot with daily footfall and about 50 to 100 sq ft, inside the building or just outside it. P.S. Coffee brings the counter, the barista and the beans. Start through Host a Pod."}}, {"@type": "Question", "name": "How will I know when a Pod opens near me?", "acceptedAnswer": {"@type": "Answer", "text": "Join the opening waitlist and name the area you would actually stop in. News for that area goes to that list first."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "The Journal", "item": "https://www.pscoffee.in/blogs"}, {"@type": "ListItem", "position": 2, "name": "The city", "item": "https://www.pscoffee.in/blogs#city"}, {"@type": "ListItem", "position": 3, "name": "Dear Ahmedabad. We are coming to your building.", "item": "https://www.pscoffee.in/blog/dear-ahmedabad-first-pods"}]}</script>
+
+<script src="../assets/letter-pages.js?v=5"></script>
+</body>
+</html>
