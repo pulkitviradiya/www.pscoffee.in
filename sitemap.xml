@@ -104,73 +104,22 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.pscoffee.in/blog/what-is-a-barista-history-word-craft</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.pscoffee.in/blog/pantry-machine-vs-coffee-counter</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.pscoffee.in/blog/ps-pass-coffee-subscription-india</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.pscoffee.in/blog/join-ps-coffee-team-cofounder</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.pscoffee.in/blog/why-specialty-coffee-costs-300-rupees-india</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.pscoffee.in/blog/building-specialty-coffee-brand-without-cafe</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.pscoffee.in/blog/what-is-arabica-coffee-india</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.pscoffee.in/blog/the-letter-and-the-ps-explained</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.pscoffee.in/blog/specialty-vs-regular-coffee-no-jargon</loc>
+    <loc>https://www.pscoffee.in/blog/grab-and-go-specialty-coffee</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.pscoffee.in/blog/india-coffee-market-2030-opportunity</loc>
+    <loc>https://www.pscoffee.in/blog/dear-ahmedabad-first-pods</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.pscoffee.in/blog/why-we-built-pods-not-cafes</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.pscoffee.in/blog/what-is-cold-brew-coffee-india</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.pscoffee.in/blog/morning-coffee-ritual-vs-routine</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://www.pscoffee.in/blog/what-we-are-building-ps-coffee-gujarat</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -183,6 +132,41 @@
     <loc>https://www.pscoffee.in/blog/why-coworking-spaces-ahmedabad-need-better-coffee</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.pscoffee.in/blog/pantry-machine-vs-coffee-counter</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.pscoffee.in/blog/building-specialty-coffee-brand-without-cafe</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.pscoffee.in/blog/what-is-arabica-coffee-india</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.pscoffee.in/blog/specialty-vs-regular-coffee-no-jargon</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.pscoffee.in/blog/what-is-cold-brew-coffee-india</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.pscoffee.in/blog/what-is-a-barista-history-word-craft</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.pscoffee.in/blog/join-ps-coffee-team-cofounder</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 
 </urlset>
